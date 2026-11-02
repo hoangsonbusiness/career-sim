@@ -7,8 +7,8 @@
 | [SPEC-001](SPEC-001-content-validation.md) Kiểm tra tự động nội dung nghề (schema + luật trích nguồn) | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 14/14 |
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
 | [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | implemented | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
-| [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | draft | — | [F2, F5] | 0/13 |
-| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | draft | — | [F3] | 0/16 |
+| [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | approved | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
+| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | approved | ✓ Son 2026-11-02 | [F3] | 0/16 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -76,19 +76,19 @@
 
 | AC | Test |
 |---|---|
-| AC-004-01 | ❌ chưa có |
-| AC-004-02 | ❌ chưa có |
-| AC-004-03 | ❌ chưa có |
-| AC-004-04 | ❌ chưa có |
-| AC-004-05 | ❌ chưa có |
-| AC-004-06 | ❌ chưa có |
-| AC-004-07 | ❌ chưa có |
-| AC-004-08 | ❌ chưa có |
-| AC-004-09 | ❌ chưa có |
-| AC-004-10 | ❌ chưa có |
-| AC-004-11 | ❌ chưa có |
-| AC-004-12 | ❌ chưa có |
-| AC-004-13 | ❌ chưa có |
+| AC-004-01 | tests\spec-004\view.test.mjs — "AC-004-01 bỏ nhóm rỗng và mục không tồn tại" |
+| AC-004-02 | tests\spec-004\view.test.mjs — "AC-004-02 heading mục và nhóm theo bảng R-2" |
+| AC-004-03 | tests\spec-004\view.test.mjs — "AC-004-03 trích dẫn giữ thứ tự và phần tử trùng" |
+| AC-004-04 | tests\spec-004\view.test.mjs — "AC-004-04 source_id không tồn tại → UNKNOWN_SOURCE" |
+| AC-004-05 | tests\spec-004\view.test.mjs — "AC-004-05 nhãn độ tin cậy và cảnh báo" |
+| AC-004-06 | tests\spec-004\view.test.mjs — "AC-004-06 nhãn loại nguồn và ngày hiệu lực" |
+| AC-004-07 | tests\spec-004\view.test.mjs — "AC-004-07 simulationHref, aliases, scopeNote khi có và không" |
+| AC-004-08 | tests\spec-004\view.test.mjs — "AC-004-08 không đổi đối số; lộ trình theo thứ tự nodes" |
+| AC-004-09 | tests\spec-004\build.test.mjs — "AC-004-09 nhãn bản nháp, một h1, thứ tự h2" |
+| AC-004-10 | tests\spec-004\build.test.mjs — "AC-004-10 mỗi trích dẫn là một details có đúng một link mở t" |
+| AC-004-11 | tests\spec-004\build.test.mjs — "AC-004-11 số cảnh báo bằng số item cần kiểm chứng" |
+| AC-004-12 | tests\spec-004\build.test.mjs — "AC-004-12 có đúng một link chơi thử" |
+| AC-004-13 | tests\spec-004\build.test.mjs — "AC-004-13 trang hồ sơ không thêm script riêng" |
 
 ## SPEC-005 — Màn chơi "một ngày làm nghề" trên trình duyệt
 
