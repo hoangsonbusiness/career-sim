@@ -13,7 +13,7 @@ Quy ước:
 |---|---|---|---|---|---|
 | CNT | Kiểm tra tự động nội dung nghề | F2, F5 | P0 | — | SPEC-001 |
 | ENG | Engine mô phỏng (logic) | F3 | P0 | — | SPEC-002 |
-| APP | Khung app: Next.js, routing, nạp content JSON, sinh type từ schema | — | P0 | — | — |
+| APP | Khung app: Next.js, routing, nạp content JSON, sinh type từ schema | — | P0 | — | SPEC-003 |
 | CAT | Danh mục nghề: lưới thẻ, lọc, tìm kiếm | F1 | P0 | APP | — |
 | PRO | Trang hồ sơ nghề + popover nguồn trích dẫn | F2, F5 | P0 | APP, CNT | — |
 | SIM | Màn chơi: render engine bằng Phaser, 6 loại mini-game | F3 | P0 | APP, ENG | — |

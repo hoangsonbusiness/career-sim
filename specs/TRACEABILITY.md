@@ -6,6 +6,7 @@
 |---|---|---|---|---|---|
 | [SPEC-001](SPEC-001-content-validation.md) Kiểm tra tự động nội dung nghề (schema + luật trích nguồn) | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 14/14 |
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
+| [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | draft | — | [F1, F2, F3] | 0/16 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -47,3 +48,24 @@
 | AC-002-15 | tests\spec-002\engine.test.mjs — "AC-002-15 state() trả bản sao sâu" |
 | AC-002-16 | tests\spec-002\engine.test.mjs — "AC-002-16 toàn bộ conformance vectors đạt" |
 | AC-002-17 | tests\spec-002\engine.test.mjs — "AC-002-17 mọi nghề có day_simulation chơi hết ngày tới done" |
+
+## SPEC-003 — Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema
+
+| AC | Test |
+|---|---|
+| AC-003-01 | ❌ chưa có |
+| AC-003-02 | ❌ chưa có |
+| AC-003-03 | ❌ chưa có |
+| AC-003-04 | ❌ chưa có |
+| AC-003-05 | ❌ chưa có |
+| AC-003-06 | ❌ chưa có |
+| AC-003-07 | ❌ chưa có |
+| AC-003-08 | ❌ chưa có |
+| AC-003-09 | ❌ chưa có |
+| AC-003-10 | ❌ chưa có |
+| AC-003-11 | ❌ chưa có |
+| AC-003-12 | ❌ chưa có |
+| AC-003-13 | ❌ chưa có |
+| AC-003-14 | ❌ chưa có |
+| AC-003-15 | ❌ chưa có |
+| AC-003-16 | ❌ chưa có |
