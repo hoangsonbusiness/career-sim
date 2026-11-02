@@ -1,0 +1,41 @@
+{
+  "id": "mini",
+  "name": "Nghề Mini",
+  "aliases": ["Mini A"],
+  "group": { "label": "Nhóm thử" },
+  "holland": ["S"],
+  "summary": "Tóm tắt thử.",
+  "sources": [
+    { "id": "S1", "type": "law", "title": "Luật thử", "publisher": "Quốc hội", "url": "https://example.gov.vn/luat", "accessed": "2026-11-02", "effective_date": "2026-01-01" },
+    { "id": "S2", "type": "official_stat", "title": "Số liệu thử", "publisher": "Bộ", "url": "https://example.gov.vn/so-lieu", "accessed": "2026-11-02" },
+    { "id": "S3", "type": "market", "title": "Báo cáo lương", "publisher": "Công ty", "url": "https://example.com/luong", "accessed": "2026-11-02" },
+    { "id": "S4", "type": "press", "title": "Bài báo", "publisher": "Báo", "url": "https://example.com/bao", "accessed": "2026-11-02" },
+    { "id": "S5", "type": "testimony", "title": "Chia sẻ", "publisher": "Người trong nghề", "url": "https://example.com/chia-se", "accessed": "2026-11-02" },
+    { "id": "S6", "type": "reference", "title": "O*NET", "publisher": "O*NET", "url": "https://example.com/onet", "accessed": "2026-11-02" }
+  ],
+  "requirements": {
+    "thcs": [{ "kind": "advice", "text": "Lời khuyên THCS." }],
+    "thpt": [{ "kind": "advice", "text": "Lời khuyên THPT." }],
+    "higher_ed": [{ "kind": "fact", "text": "Cần bằng cử nhân.", "source_ids": ["S2", "S1", "S2"], "confidence": "verified" }],
+    "on_the_job": [{ "kind": "fact", "text": "Một nguồn.", "source_ids": ["S4"], "confidence": "single_source" }]
+  },
+  "working_conditions": {
+    "schedule": [{ "kind": "fact", "text": "Lịch làm việc.", "source_ids": ["S1"], "confidence": "verified" }],
+    "income": [{ "kind": "fact", "text": "Thu nhập chưa chắc.", "source_ids": ["S3"], "confidence": "needs_verification", "note": "Cần thêm nguồn." }],
+    "environment": []
+  },
+  "day_simulation": { "stats": [], "segments": [] },
+  "career_ladder": {
+    "nodes": [
+      { "id": "n2", "title": "Bậc đầu", "description": "Mô tả bậc đầu.", "requirements": [{ "kind": "fact", "text": "Điều kiện bậc đầu.", "source_ids": ["S5"], "confidence": "single_source" }] },
+      { "id": "n1", "title": "Bậc sau", "requirements": [{ "kind": "fact", "text": "Điều kiện bậc sau.", "source_ids": ["S6"], "confidence": "single_source" }] }
+    ],
+    "edges": [{ "from": "n2", "to": "n1", "type": "promotion" }]
+  },
+  "downsides": [
+    { "kind": "fact", "text": "Khó 1.", "source_ids": ["S4"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Khó 2.", "source_ids": ["S4"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Khó 3.", "source_ids": ["S4"], "confidence": "single_source" }
+  ],
+  "meta": { "status": "draft", "researched_at": "2026-11-02", "researched_by": "test", "scope_note": "Phạm vi thử." }
+}
