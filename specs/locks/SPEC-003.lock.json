@@ -1,0 +1,10 @@
+{
+  "spec": "SPEC-003",
+  "locked_by": "complete 2026-11-02",
+  "locked_at": "2026-11-02",
+  "files": {
+    "tests\\spec-003\\build.test.mjs": "c6d38fa7317ff0f3",
+    "tests\\spec-003\\content.test.mjs": "657fb0bbd5f8b75c",
+    "tests\\spec-003\\tooling.test.mjs": "dee35f815599fc04"
+  }
+}
