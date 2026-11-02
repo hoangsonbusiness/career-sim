@@ -2,11 +2,14 @@
 id: SPEC-005
 title: Màn chơi "một ngày làm nghề" trên trình duyệt
 version: 1
-status: draft
+status: approved
 features: [F3]
 owns: [src/sim/**, src/app/nghe/[id]/mot-ngay/**]
 owner: anh Son
 created: 2026-11-02
+approved_hash: 5b82ebb024438d5e
+approved_by: Son
+approved_at: 2026-11-02
 ---
 
 # SPEC-005 — Màn chơi một ngày

@@ -2,11 +2,14 @@
 id: SPEC-004
 title: Trang hồ sơ nghề và trích dẫn nguồn
 version: 1
-status: draft
+status: approved
 features: [F2, F5]
 owns: [src/profile/**, src/app/nghe/[id]/page.tsx]
 owner: anh Son
 created: 2026-11-02
+approved_hash: 0405d8719bbbff1f
+approved_by: Son
+approved_at: 2026-11-02
 ---
 
 # SPEC-004 — Trang hồ sơ nghề
