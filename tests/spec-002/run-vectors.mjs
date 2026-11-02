@@ -2,9 +2,10 @@
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { isDeepStrictEqual } from "node:util";
+import { pathToFileURL } from "node:url";
 
 const [enginePath, vecPath] = process.argv.slice(2);
-const { createEngine } = await import(resolve(enginePath));
+const { createEngine } = await import(pathToFileURL(resolve(enginePath)).href);
 const spec = JSON.parse(readFileSync(vecPath, "utf8"));
 const fixture = JSON.parse(readFileSync(resolve(dirname(vecPath), spec.fixture), "utf8"));
 
