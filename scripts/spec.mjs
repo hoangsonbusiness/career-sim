@@ -55,7 +55,9 @@ if (cmd === "complete") {
   const tested = testedAcs();
   const missing = s.acs.filter((a) => !tested.has(a));
   if (missing.length) die(`Còn AC chưa có test: ${missing.join(", ")}`);
-  const t = spawnSync("npm", ["test", "--silent"], { cwd: root, encoding: "utf8" });
+  // shell: trên Windows npm là npm.cmd, không chạy được nếu không qua shell (BUG-001). Đối số là hằng số.
+  const t = spawnSync("npm test --silent", { cwd: root, encoding: "utf8", shell: true });
+  if (t.error) die("Không chạy được npm test: " + t.error.message);
   if (t.status !== 0) die("npm test chưa xanh:\n" + (t.stdout + t.stderr).split("\n").filter((l) => /not ok|fail/.test(l)).join("\n"));
   setFrontmatter(s, { status: "implemented" });
   const lock = writeLock(arg, `complete ${today}`);

@@ -2,7 +2,7 @@
 id: SPEC-002
 title: Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render)
 version: 2
-status: approved
+status: implemented
 features: [F3, F7]
 owns: [src/engine/**]
 owner: anh Son
@@ -169,7 +169,7 @@ export class EngineError extends Error {
 | AC-002-17 | Mọi file trong `content/professions/` có `day_simulation` | Tự động chơi hết ngày với đáp án hợp lệ đầu tiên | Kết thúc ở phase `done`, không ném lỗi |
 
 ## 5. Ghi chú kiểm thử
-- Unit test (Vitest) trong `tests/spec-002/`. Test kiểm tra lỗi theo `err.code`, không theo tên class.
+- Unit test (`node:test`, xem ADR-001) trong `tests/spec-002/`. Test kiểm tra lỗi theo `err.code`, không theo tên class.
 - AC-002-16 là test chạy vector: một vòng lặp đọc `vectors.json`. Thêm vector không cần sửa test.
 - AC-002-17 là contract test: nghề mới tự động được kiểm tra.
 - Không mock gì cả: engine là logic thuần.
@@ -185,3 +185,4 @@ Spec đã chốt theo đề xuất của em ở các quy tắc dưới. Anh đ�
 |---|---|---|---|
 | 1 | 2026-11-02 | Bản nháp đầu | — |
 | 2 | 2026-11-02 | Viết lại theo STANDARD.md: thêm hợp đồng đáp án cho 6 loại task, tách rawDelta/appliedDelta, chốt thứ tự chặn, bảng chuyển trạng thái, mã lỗi, conformance vectors | Bản 1 có 8 chỗ mơ hồ dẫn tới các bản implement khác nhau (xem trả lời trong hội thoại 2026-11-02) |
+| 2 | 2026-11-02 | §5: Vitest → `node:test` (không đổi phần quy phạm) | Repo chỉ có một test runner; xem ADR-001 |
