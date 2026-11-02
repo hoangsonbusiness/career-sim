@@ -2,7 +2,7 @@
 id: BUG-001
 spec: none          # scripts/spec.mjs (bộ công cụ SDD) chưa thuộc spec nào
 ac: "MỚI: chưa có AC — công cụ SDD chưa có spec (xem Ghi chú)"
-status: open
+status: fixed
 reported: 2026-11-02
 ---
 
