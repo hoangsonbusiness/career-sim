@@ -135,10 +135,10 @@ Không áp dụng: spec không có logic tính toán. Fixture thư mục nội d
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] R-12/R-14: đường dẫn trang nghề là `/nghe/<id>/` (tiếng Việt không dấu, có `/` cuối).
-- [ ] R-4: tên file nghề bắt buộc trùng `id`; sai là build thất bại, không tự bỏ qua file đó.
-- [ ] R-18: dùng bản ổn định mới nhất của Next.js, React, Tailwind tại thời điểm implement, ghim chính xác và ghi vào ADR-002.
-- [ ] R-17: ngân sách 300 KB gzip chỉ đo cho trang `/` ở spec này; trang màn chơi (có Phaser) sẽ đặt ngân sách riêng trong spec SIM.
+- [x] R-12/R-14: đường dẫn trang nghề là `/nghe/<id>/` (tiếng Việt không dấu, có `/` cuối).
+- [x] R-4: tên file nghề bắt buộc trùng `id`; sai là build thất bại, không tự bỏ qua file đó.
+- [x] R-18: dùng bản ổn định mới nhất của Next.js, React, Tailwind tại thời điểm implement, ghim chính xác và ghi vào ADR-002.
+- [x] R-17: ngân sách 300 KB gzip chỉ đo cho trang `/` ở spec này; trang màn chơi (có Phaser) sẽ đặt ngân sách riêng trong spec SIM.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
