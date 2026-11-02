@@ -7,6 +7,8 @@
 | [SPEC-001](SPEC-001-content-validation.md) Kiểm tra tự động nội dung nghề (schema + luật trích nguồn) | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 14/14 |
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
 | [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | implemented | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
+| [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | draft | — | [F2, F5] | 0/13 |
+| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | draft | — | [F3] | 0/16 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -69,3 +71,42 @@
 | AC-003-14 | tests\spec-003\build.test.mjs — "AC-003-14 JS trên trình duyệt không tải file nội dung" |
 | AC-003-15 | tests\spec-003\build.test.mjs — "AC-003-15 tổng JS gzip của trang chủ ≤ 300 KB" |
 | AC-003-16 | tests\spec-003\tooling.test.mjs — "AC-003-16 6 gói lõi được ghim phiên bản chính xác" |
+
+## SPEC-004 — Trang hồ sơ nghề và trích dẫn nguồn
+
+| AC | Test |
+|---|---|
+| AC-004-01 | ❌ chưa có |
+| AC-004-02 | ❌ chưa có |
+| AC-004-03 | ❌ chưa có |
+| AC-004-04 | ❌ chưa có |
+| AC-004-05 | ❌ chưa có |
+| AC-004-06 | ❌ chưa có |
+| AC-004-07 | ❌ chưa có |
+| AC-004-08 | ❌ chưa có |
+| AC-004-09 | ❌ chưa có |
+| AC-004-10 | ❌ chưa có |
+| AC-004-11 | ❌ chưa có |
+| AC-004-12 | ❌ chưa có |
+| AC-004-13 | ❌ chưa có |
+
+## SPEC-005 — Màn chơi "một ngày làm nghề" trên trình duyệt
+
+| AC | Test |
+|---|---|
+| AC-005-01 | ❌ chưa có |
+| AC-005-02 | ❌ chưa có |
+| AC-005-03 | ❌ chưa có |
+| AC-005-04 | ❌ chưa có |
+| AC-005-05 | ❌ chưa có |
+| AC-005-06 | ❌ chưa có |
+| AC-005-07 | ❌ chưa có |
+| AC-005-08 | ❌ chưa có |
+| AC-005-09 | ❌ chưa có |
+| AC-005-10 | ❌ chưa có |
+| AC-005-11 | ❌ chưa có |
+| AC-005-12 | ❌ chưa có |
+| AC-005-13 | ❌ chưa có |
+| AC-005-14 | ❌ chưa có |
+| AC-005-15 | ❌ chưa có |
+| AC-005-16 | ❌ chưa có |
