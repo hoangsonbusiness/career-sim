@@ -1,0 +1,31 @@
+// SPEC-005 R-8, R-9 — trang màn chơi; dữ liệu truyền vào component client qua props lúc build.
+import { notFound } from "next/navigation";
+import { getProfession, loadProfessions } from "../../../../content";
+import { buildProfileView, type CitationView } from "../../../../profile/view";
+import { DayPlayer, type PlayerSimulation } from "../../../../sim/DayPlayer";
+
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return loadProfessions().filter((p) => p.day_simulation).map((p) => ({ id: p.id }));
+}
+
+export default async function DayPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  const p = getProfession(id);
+  if (!p || !p.day_simulation) notFound();
+
+  // Trích dẫn cho basis của từng segment, dựng giống trang hồ sơ (SPEC-004 R-12).
+  const all = new Map(buildProfileView(p).sources.map((c) => [c.id, c]));
+  const citations: Record<string, CitationView[]> = {};
+  for (const s of p.day_simulation.segments) {
+    citations[s.id] = (s.basis.source_ids ?? []).flatMap((sid) => all.get(sid) ?? []);
+  }
+
+  return (
+    <main className="space-y-6">
+      <h1 className="text-2xl font-bold">Một ngày làm {p.name}</h1>
+      <DayPlayer professionId={p.id} sim={p.day_simulation as unknown as PlayerSimulation} citations={citations} />
+    </main>
+  );
+}

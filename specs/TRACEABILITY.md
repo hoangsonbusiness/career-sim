@@ -7,8 +7,8 @@
 | [SPEC-001](SPEC-001-content-validation.md) Kiểm tra tự động nội dung nghề (schema + luật trích nguồn) | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 14/14 |
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
 | [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | implemented | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
-| [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | approved | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
-| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | approved | ✓ Son 2026-11-02 | [F3] | 0/16 |
+| [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
+| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | approved | ✓ Son 2026-11-02 | [F3] | 16/16 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -94,19 +94,19 @@
 
 | AC | Test |
 |---|---|
-| AC-005-01 | ❌ chưa có |
-| AC-005-02 | ❌ chưa có |
-| AC-005-03 | ❌ chưa có |
-| AC-005-04 | ❌ chưa có |
-| AC-005-05 | ❌ chưa có |
-| AC-005-06 | ❌ chưa có |
-| AC-005-07 | ❌ chưa có |
-| AC-005-08 | ❌ chưa có |
-| AC-005-09 | ❌ chưa có |
-| AC-005-10 | ❌ chưa có |
-| AC-005-11 | ❌ chưa có |
-| AC-005-12 | ❌ chưa có |
-| AC-005-13 | ❌ chưa có |
-| AC-005-14 | ❌ chưa có |
-| AC-005-15 | ❌ chưa có |
-| AC-005-16 | ❌ chưa có |
+| AC-005-01 | tests\spec-005\controller.test.mjs — "AC-005-01 displayOrder đúng bảng mẫu" |
+| AC-005-02 | tests\spec-005\controller.test.mjs — "AC-005-02 mọi segment thật: hoán vị và không phải đồng nhất" |
+| AC-005-03 | tests\spec-005\controller.test.mjs — "AC-005-03 initialDraft sequence xáo theo displayOrder" |
+| AC-005-04 | tests\spec-005\controller.test.mjs — "AC-005-04 move trong biên thì dời, ngoài biên thì giữ nguyên" |
+| AC-005-05 | tests\spec-005\controller.test.mjs — "AC-005-05 choice: pick ghi đè, option lạ bị bỏ qua" |
+| AC-005-06 | tests\spec-005\controller.test.mjs — "AC-005-06 drag_sort: place và bucket lạ" |
+| AC-005-07 | tests\spec-005\controller.test.mjs — "AC-005-07 spot_error: toggle giữ tăng dần, dòng ngoài biên b" |
+| AC-005-08 | tests\spec-005\controller.test.mjs — "AC-005-08 dialogue: chỉ trả lời lượt kế tiếp" |
+| AC-005-09 | tests\spec-005\controller.test.mjs — "AC-005-09 time_budget: bước 30 phút, không vượt quỹ, không â" |
+| AC-005-10 | tests\spec-005\controller.test.mjs — "AC-005-10 update không sửa draft truyền vào" |
+| AC-005-11 | tests\spec-005\controller.test.mjs — "AC-005-11 toAnswer của draft đủ được engine chấp nhận" |
+| AC-005-12 | tests\spec-005\controller.test.mjs — "AC-005-12 formatDelta theo thứ tự stats, bỏ 0 và khóa lạ" |
+| AC-005-13 | tests\spec-005\controller.test.mjs — "AC-005-13 toàn bộ conformance vectors đạt" |
+| AC-005-14 | tests\spec-005\build.test.mjs — "AC-005-14 sinh trang màn chơi cho đúng các nghề có day_simul" |
+| AC-005-15 | tests\spec-005\build.test.mjs — "AC-005-15 JS không chứa đường dẫn nội dung" |
+| AC-005-16 | tests\spec-005\build.test.mjs — "AC-005-16 tổng JS gzip trang màn chơi ≤ 300 KB" |
