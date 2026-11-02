@@ -6,7 +6,7 @@
 |---|---|---|---|---|---|
 | [SPEC-001](SPEC-001-content-validation.md) Kiểm tra tự động nội dung nghề (schema + luật trích nguồn) | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 14/14 |
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
-| [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | draft | — | [F1, F2, F3] | 0/16 |
+| [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | approved | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -53,19 +53,19 @@
 
 | AC | Test |
 |---|---|
-| AC-003-01 | ❌ chưa có |
-| AC-003-02 | ❌ chưa có |
-| AC-003-03 | ❌ chưa có |
-| AC-003-04 | ❌ chưa có |
-| AC-003-05 | ❌ chưa có |
-| AC-003-06 | ❌ chưa có |
-| AC-003-07 | ❌ chưa có |
-| AC-003-08 | ❌ chưa có |
-| AC-003-09 | ❌ chưa có |
-| AC-003-10 | ❌ chưa có |
-| AC-003-11 | ❌ chưa có |
-| AC-003-12 | ❌ chưa có |
-| AC-003-13 | ❌ chưa có |
-| AC-003-14 | ❌ chưa có |
-| AC-003-15 | ❌ chưa có |
-| AC-003-16 | ❌ chưa có |
+| AC-003-01 | tests\spec-003\content.test.mjs — "AC-003-01 nạp thư mục nội dung thật: đủ file, có giao-vien-t" |
+| AC-003-02 | tests\spec-003\content.test.mjs — "AC-003-02 sắp xếp theo id, không theo thứ tự đọc file" |
+| AC-003-03 | tests\spec-003\content.test.mjs — "AC-003-03 tên file khác id → CONTENT_ID_MISMATCH" |
+| AC-003-04 | tests\spec-003\content.test.mjs — "AC-003-04 JSON hỏng → CONTENT_PARSE_ERROR" |
+| AC-003-05 | tests\spec-003\content.test.mjs — "AC-003-05 bỏ qua file không phải .json, đuôi .JSON và thư mụ" |
+| AC-003-06 | tests\spec-003\content.test.mjs — "AC-003-06 getProfession khớp chính xác id, phân biệt hoa thư" |
+| AC-003-07 | tests\spec-003\tooling.test.mjs — "AC-003-07 type đã sinh khớp schema → types:check exit 0" |
+| AC-003-08 | tests\spec-003\tooling.test.mjs — "AC-003-08 schema đổi mà chưa sinh lại type → types:check exi" |
+| AC-003-09 | tests\spec-003\tooling.test.mjs — "AC-003-09 typecheck strict không lỗi" |
+| AC-003-10 | tests\spec-003\tooling.test.mjs — "AC-003-10 script check chạy types:check và typecheck trước n" |
+| AC-003-11 | tests\spec-003\build.test.mjs — "AC-003-11 trang chủ: lang vi, mỗi nghề đúng một link /nghe/<" |
+| AC-003-12 | tests\spec-003\build.test.mjs — "AC-003-12 trang nghề giáo viên THPT có đúng một h1 là tên ng" |
+| AC-003-13 | tests\spec-003\build.test.mjs — "AC-003-13 sinh trang cho đúng tập id, không thừa không thiếu" |
+| AC-003-14 | tests\spec-003\build.test.mjs — "AC-003-14 JS trên trình duyệt không tải file nội dung" |
+| AC-003-15 | tests\spec-003\build.test.mjs — "AC-003-15 tổng JS gzip của trang chủ ≤ 300 KB" |
+| AC-003-16 | tests\spec-003\tooling.test.mjs — "AC-003-16 6 gói lõi được ghim phiên bản chính xác" |

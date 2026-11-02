@@ -9,9 +9,14 @@
     "spec:lint": "node scripts/spec.mjs lint",
     "approve": "node scripts/spec.mjs approve",
     "next": "node scripts/spec.mjs next",
-    "check": "npm run validate && npm run spec:lint && npm test && node scripts/trace.mjs --check",
+    "check": "npm run validate && npm run spec:lint && npm run types:check && npm run typecheck && npm test && node scripts/trace.mjs --check",
     "complete": "node scripts/spec.mjs complete",
-    "scope": "node scripts/scope.mjs"
+    "scope": "node scripts/scope.mjs",
+    "dev": "next dev",
+    "build": "next build",
+    "types": "node scripts/gen-types.mjs",
+    "types:check": "node scripts/gen-types.mjs --check",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
