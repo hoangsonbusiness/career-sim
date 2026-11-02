@@ -2,11 +2,14 @@
 id: SPEC-002
 title: Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render)
 version: 2
-status: draft
+status: approved
 features: [F3, F7]
 owns: [src/engine/**]
 owner: anh Son
 created: 2026-11-02
+approved_hash: 5920924b90d30998
+approved_by: Son
+approved_at: 2026-11-02
 ---
 
 # SPEC-002 — Engine mô phỏng một ngày
