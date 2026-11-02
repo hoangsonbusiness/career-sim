@@ -1,3 +1,5 @@
 node_modules/
 .next/
 out/
+# Next.js tự sinh lại mỗi lần dev/build; typecheck không cần file này
+next-env.d.ts
