@@ -1,0 +1,14 @@
+# GitLab CODEOWNERS — thay YOUR_GITLAB_USERNAME bằng username GitLab của anh Son.
+# Mọi thay đổi ở các đường dẫn dưới đây cần người này approve trong merge request.
+# Đặt file này ở thư mục gốc, hoặc .gitlab/CODEOWNERS.
+
+[Spec, test và quy trình]
+/specs/                 @YOUR_GITLAB_USERNAME
+/tests/                 @YOUR_GITLAB_USERNAME
+/scripts/               @YOUR_GITLAB_USERNAME
+/schema/                @YOUR_GITLAB_USERNAME
+/CLAUDE.md              @YOUR_GITLAB_USERNAME
+/AGENTS.md              @YOUR_GITLAB_USERNAME
+/.gitlab-ci.yml         @YOUR_GITLAB_USERNAME
+/.claude/               @YOUR_GITLAB_USERNAME
+/CODEOWNERS             @YOUR_GITLAB_USERNAME

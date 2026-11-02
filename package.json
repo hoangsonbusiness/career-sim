@@ -1,0 +1,20 @@
+{
+  "name": "career-sim",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "trace": "node scripts/trace.mjs",
+    "spec:lint": "node scripts/spec.mjs lint",
+    "approve": "node scripts/spec.mjs approve",
+    "next": "node scripts/spec.mjs next",
+    "check": "npm run validate && npm run spec:lint && npm test && node scripts/trace.mjs --check",
+    "complete": "node scripts/spec.mjs complete",
+    "scope": "node scripts/scope.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
+  }
+}

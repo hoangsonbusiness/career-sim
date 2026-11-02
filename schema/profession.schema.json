@@ -1,0 +1,209 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://career-sim.local/schema/profession.schema.json",
+  "title": "Profession",
+  "description": "Hồ sơ một nghề. Mọi dữ kiện (Item kind=fact) phải trỏ tới sources[]. Xem CLAUDE.md mục R1–R7.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "group", "holland", "summary", "sources", "requirements", "working_conditions", "career_ladder", "downsides", "meta"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+    "name": { "type": "string", "minLength": 2 },
+    "aliases": { "type": "array", "items": { "type": "string" } },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "properties": {
+        "label": { "type": "string", "description": "Nhóm ngành hiển thị, ví dụ 'Giáo dục & Đào tạo'" },
+        "vsco_code": { "type": "string", "description": "Mã Danh mục nghề nghiệp VN (QĐ 34/2020/QĐ-TTg) nếu đã xác minh" }
+      }
+    },
+    "holland": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "uniqueItems": true,
+      "items": { "enum": ["R", "I", "A", "S", "E", "C"] },
+      "description": "RIASEC, sắp theo mức độ phù hợp giảm dần"
+    },
+    "summary": { "type": "string", "minLength": 20, "maxLength": 400 },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/Source" }
+    },
+    "requirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["thcs", "thpt", "higher_ed", "on_the_job"],
+      "properties": {
+        "thcs": { "$ref": "#/$defs/ItemList", "description": "Dành cho học sinh THCS: nên mạnh gì, đi đường nào" },
+        "thpt": { "$ref": "#/$defs/ItemList", "description": "Tổ hợp môn, ngành học" },
+        "higher_ed": { "$ref": "#/$defs/ItemList", "description": "Bằng cấp, chứng chỉ bắt buộc" },
+        "on_the_job": { "$ref": "#/$defs/ItemList", "description": "Tuyển dụng, thử thách, chuẩn nghề nghiệp khi đi làm" }
+      }
+    },
+    "working_conditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["schedule", "income"],
+      "properties": {
+        "schedule": { "$ref": "#/$defs/ItemList" },
+        "income": { "$ref": "#/$defs/ItemList" },
+        "environment": { "$ref": "#/$defs/ItemList" }
+      }
+    },
+    "day_simulation": { "$ref": "#/$defs/DaySimulation" },
+    "career_ladder": { "$ref": "#/$defs/CareerLadder" },
+    "downsides": { "$ref": "#/$defs/ItemList", "minItems": 3 },
+    "future_outlook": { "$ref": "#/$defs/ItemList" },
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "researched_at", "researched_by"],
+      "properties": {
+        "status": { "enum": ["draft", "reviewed"] },
+        "researched_at": { "type": "string", "format": "date" },
+        "researched_by": { "type": "string" },
+        "reviewed_by": { "type": "string" },
+        "reviewed_at": { "type": "string", "format": "date" },
+        "scope_note": { "type": "string", "description": "Phạm vi áp dụng, ví dụ 'Áp dụng cho trường công lập'" }
+      }
+    }
+  },
+  "$defs": {
+    "Source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "title", "publisher", "url", "accessed"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^S[0-9]+$" },
+        "type": { "enum": ["law", "official_stat", "market", "press", "testimony", "reference"] },
+        "title": { "type": "string" },
+        "publisher": { "type": "string", "description": "Cơ quan ban hành hoặc trang đăng" },
+        "url": { "type": "string", "format": "uri" },
+        "accessed": { "type": "string", "format": "date" },
+        "issued_date": { "type": "string", "format": "date" },
+        "effective_date": { "type": "string", "format": "date", "description": "Bắt buộc với type=law (validator kiểm tra)" },
+        "supersedes": { "type": "string", "description": "Văn bản bị thay thế, nếu có" },
+        "note": { "type": "string" }
+      }
+    },
+    "Item": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "text"],
+      "properties": {
+        "kind": { "enum": ["fact", "advice"] },
+        "text": { "type": "string", "minLength": 5 },
+        "source_ids": { "type": "array", "items": { "type": "string", "pattern": "^S[0-9]+$" }, "uniqueItems": true },
+        "confidence": { "enum": ["verified", "single_source", "needs_verification"] },
+        "audience": {
+          "type": "array",
+          "items": { "enum": ["thcs", "thpt", "sinh_vien"] },
+          "description": "Bỏ trống = mọi đối tượng"
+        },
+        "note": { "type": "string", "description": "Công thức tính, mâu thuẫn nguồn, việc cần kiểm chứng thêm" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "fact" } } },
+          "then": { "required": ["confidence", "source_ids"] }
+        }
+      ]
+    },
+    "ItemList": { "type": "array", "items": { "$ref": "#/$defs/Item" } },
+    "Stat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "label", "initial"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z_]+$" },
+        "label": { "type": "string" },
+        "initial": { "type": "integer", "minimum": 0, "maximum": 100 }
+      }
+    },
+    "Effect": {
+      "type": "object",
+      "description": "Thay đổi chỉ số, key = Stat.id",
+      "additionalProperties": { "type": "integer", "minimum": -50, "maximum": 50 }
+    },
+    "Task": {
+      "type": "object",
+      "required": ["type", "prompt"],
+      "properties": {
+        "type": { "enum": ["sequence", "choice", "drag_sort", "spot_error", "dialogue", "time_budget"] },
+        "prompt": { "type": "string" },
+        "duration_sec": { "type": "integer", "minimum": 15, "maximum": 180 }
+      },
+      "allOf": [
+        { "if": { "properties": { "type": { "const": "sequence" } } }, "then": { "required": ["steps"], "properties": { "steps": { "type": "array", "minItems": 3, "items": { "type": "string" }, "description": "Theo đúng thứ tự; engine tự xáo" }, "on_success": { "$ref": "#/$defs/Effect" }, "on_fail": { "$ref": "#/$defs/Effect" } } } },
+        { "if": { "properties": { "type": { "const": "choice" } } }, "then": { "required": ["options"], "properties": { "options": { "type": "array", "minItems": 2, "items": { "type": "object", "required": ["text", "effect", "feedback"], "properties": { "text": { "type": "string" }, "effect": { "$ref": "#/$defs/Effect" }, "feedback": { "type": "string" } } } } } } },
+        { "if": { "properties": { "type": { "const": "drag_sort" } } }, "then": { "required": ["buckets", "items"], "properties": { "buckets": { "type": "array", "minItems": 2, "items": { "type": "string" } }, "items": { "type": "array", "minItems": 3, "items": { "type": "object", "required": ["text", "bucket"], "properties": { "text": { "type": "string" }, "bucket": { "type": "string" } } } }, "on_success": { "$ref": "#/$defs/Effect" }, "on_fail": { "$ref": "#/$defs/Effect" } } } },
+        { "if": { "properties": { "type": { "const": "spot_error" } } }, "then": { "required": ["document", "errors"], "properties": { "document": { "type": "array", "items": { "type": "string" }, "description": "Các dòng của tài liệu" }, "errors": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["line", "explain"], "properties": { "line": { "type": "integer", "minimum": 0 }, "explain": { "type": "string" } } } }, "on_success": { "$ref": "#/$defs/Effect" }, "on_fail": { "$ref": "#/$defs/Effect" } } } },
+        { "if": { "properties": { "type": { "const": "dialogue" } } }, "then": { "required": ["npc", "turns"], "properties": { "npc": { "type": "string" }, "turns": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["npc_line", "replies"], "properties": { "npc_line": { "type": "string" }, "replies": { "type": "array", "minItems": 2, "items": { "type": "object", "required": ["text", "effect"], "properties": { "text": { "type": "string" }, "effect": { "$ref": "#/$defs/Effect" }, "feedback": { "type": "string" } } } } } } } } } },
+        { "if": { "properties": { "type": { "const": "time_budget" } } }, "then": { "required": ["budget_min", "activities"], "properties": { "budget_min": { "type": "integer", "minimum": 30 }, "activities": { "type": "array", "minItems": 2, "items": { "type": "object", "required": ["label", "effect_per_30min"], "properties": { "label": { "type": "string" }, "effect_per_30min": { "$ref": "#/$defs/Effect" } } } } } } }
+      ]
+    },
+    "Segment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "time", "title", "narrative", "basis", "task"],
+      "properties": {
+        "id": { "type": "string" },
+        "time": { "type": "string", "pattern": "^([01][0-9]|2[0-3]):[0-5][0-9]$" },
+        "title": { "type": "string" },
+        "narrative": { "type": "string", "description": "Hư cấu minh họa (R6)" },
+        "basis": { "$ref": "#/$defs/Item", "description": "Fact có nguồn chứng minh công việc này có thật" },
+        "task": { "$ref": "#/$defs/Task" }
+      }
+    },
+    "DaySimulation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["persona", "setting", "stats", "segments", "time_is_illustrative"],
+      "properties": {
+        "persona": { "type": "string", "description": "Nhân vật người chơi nhập vai" },
+        "setting": { "type": "string" },
+        "time_is_illustrative": { "const": true },
+        "stats": { "type": "array", "minItems": 2, "maxItems": 4, "items": { "$ref": "#/$defs/Stat" } },
+        "segments": { "type": "array", "minItems": 6, "items": { "$ref": "#/$defs/Segment" } },
+        "reflection_questions": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "LadderNode": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "title", "requirements"],
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "requirements": { "$ref": "#/$defs/ItemList" }
+      }
+    },
+    "CareerLadder": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["nodes", "edges"],
+      "properties": {
+        "nodes": { "type": "array", "minItems": 2, "items": { "$ref": "#/$defs/LadderNode" } },
+        "edges": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to", "type"],
+            "properties": {
+              "from": { "type": "string" },
+              "to": { "type": "string" },
+              "type": { "enum": ["promotion", "management", "lateral"] },
+              "label": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

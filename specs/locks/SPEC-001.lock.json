@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-001",
+  "locked_by": "Son",
+  "locked_at": "2026-11-02",
+  "files": {
+    "tests\\spec-001\\validate.test.mjs": "61f740929ee4ac2a"
+  }
+}

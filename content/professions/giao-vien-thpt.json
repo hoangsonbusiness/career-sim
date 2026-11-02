@@ -1,0 +1,311 @@
+{
+  "id": "giao-vien-thpt",
+  "name": "Giáo viên Trung học phổ thông",
+  "aliases": ["Giáo viên cấp 3", "Thầy cô THPT"],
+  "group": { "label": "Giáo dục & Đào tạo" },
+  "holland": ["S", "A", "C"],
+  "summary": "Dạy một (hoặc hai) môn học cho học sinh lớp 10–12, thường kiêm chủ nhiệm lớp. Công việc gồm soạn bài, lên lớp, kiểm tra đánh giá, chăm lo học sinh và phối hợp với phụ huynh, cùng nhiều hoạt động chuyên môn của tổ và nhà trường.",
+  "sources": [
+    { "id": "S1", "type": "law", "title": "Luật Nhà giáo số 73/2025/QH15 (tóm tắt và toàn văn)", "publisher": "Quốc hội — đăng tại Luật Minh Khuê", "url": "https://luatminhkhue.vn/van-ban/luat-nha-giao-nam-2025.aspx", "accessed": "2026-11-02", "issued_date": "2025-06-16", "effective_date": "2026-01-01" },
+    { "id": "S2", "type": "press", "title": "Quy định về trình độ chuẩn được đào tạo của nhà giáo từ 01/01/2026", "publisher": "LuatVietnam", "url": "https://luatvietnam.vn/tin-van-ban-moi/quy-dinh-ve-trinh-do-chuan-duoc-dao-tao-cua-nha-giao-tu-01-01-2026-186-102957-article.html", "accessed": "2026-11-02" },
+    { "id": "S3", "type": "law", "title": "Luật Giáo dục 2019 — Điều 72: Trình độ chuẩn được đào tạo của nhà giáo", "publisher": "Quốc hội — trích tại Thư viện Pháp luật", "url": "https://thuvienphapluat.vn/hoi-dap-phap-luat/toan-van-luat-nha-giao-2025-nhu-the-nao-138054563.html", "accessed": "2026-11-02", "effective_date": "2020-07-01", "note": "Từ 01/01/2026 nội dung trình độ chuẩn do Điều 28 Luật Nhà giáo 2025 quy định." },
+    { "id": "S4", "type": "law", "title": "Thông tư 05/2025/TT-BGDĐT quy định chế độ làm việc đối với giáo viên phổ thông, dự bị đại học", "publisher": "Bộ GD&ĐT — tin tại Báo Nhân Dân", "url": "https://nhandan.vn/post-863711.html", "accessed": "2026-11-02", "issued_date": "2025-03-07", "effective_date": "2025-04-22", "supersedes": "Thông tư 28/2009/TT-BGDĐT và Thông tư 15/2017/TT-BGDĐT" },
+    { "id": "S5", "type": "press", "title": "Loạt chính sách mới về chế độ làm việc của giáo viên có hiệu lực từ hôm nay", "publisher": "Cổng TTĐT tỉnh Hà Tĩnh", "url": "https://hatinh.gov.vn/vi/bai-viet/loat-chinh-sach-moi-ve-che-do-lam-viec-cua-giao-vien-co-hieu-luc-tu-hom-nay", "accessed": "2026-11-02" },
+    { "id": "S6", "type": "press", "title": "Quy định mới về chế độ làm việc đối với giáo viên phổ thông, dự bị đại học", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/gdvn-post249702.gd", "accessed": "2026-11-02" },
+    { "id": "S7", "type": "press", "title": "Giáo viên kiêm nhiệm các công việc chuyên môn được giảm định mức tiết dạy", "publisher": "Tạp chí Luật sư Việt Nam", "url": "https://lsvn.vn/giao-vien-kiem-nhiem-cac-cong-viec-chuyen-mon-duoc-giam-dinh-muc-tiet-day-a155535.html", "accessed": "2026-11-02" },
+    { "id": "S8", "type": "press", "title": "Quy định về định mức tiết dạy của giáo viên 2026", "publisher": "HoaTieu.vn", "url": "https://hoatieu.vn/phap-luat/quy-dinh-ve-dinh-muc-tiet-day-cua-giao-vien-182134", "accessed": "2026-11-02" },
+    { "id": "S9", "type": "press", "title": "Chuyên mục định mức tiết dạy (tổng hợp bài viết và ý kiến giáo viên)", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/tag/%C4%91%E1%BB%8Bnh-m%E1%BB%A9c-ti%E1%BA%BFt-d%E1%BA%A1y.gd", "accessed": "2026-11-02" },
+    { "id": "S10", "type": "law", "title": "Thông tư 30/2026/TT-BGDĐT quy định chuẩn nghề nghiệp giáo viên cơ sở giáo dục phổ thông", "publisher": "Bộ GD&ĐT — toàn văn tại Cổng hành chính công Nghệ An", "url": "https://hcc.nghean.gov.vn/tin-tong-hop/toan-van-thong-tu-30-2026-tt-bgddt-quy-dinh-chuan-nghe-nghiep-giao-vien-co-so-giao-duc-pho-thong-2668.html", "accessed": "2026-11-02", "issued_date": "2026-04-14", "effective_date": "2026-04-14" },
+    { "id": "S11", "type": "press", "title": "Chuẩn nghề nghiệp theo Thông tư 30: Giáo viên hạng cao phải có thành tích, danh hiệu", "publisher": "Báo Văn Hóa", "url": "https://baovanhoa.vn/doi-song/chuan-nghe-nghiep-theo-thong-tu-30-giao-vien-hang-cao-phai-co-thanh-tich-danh-hieu-220724.html", "accessed": "2026-11-02" },
+    { "id": "S12", "type": "law", "title": "Thông tư 31/2026/TT-BGDĐT quy định mã số, bổ nhiệm chức danh và xếp lương đối với nhà giáo trong cơ sở giáo dục công lập (Điều 9 — giáo viên THPT)", "publisher": "Bộ GD&ĐT — trích tại Thư viện Pháp luật", "url": "https://thuvienphapluat.vn/hoi-dap-phap-luat/he-so-luong-giao-vien-thpt-hang-2-tu-14042026-la-bao-nhieu-138086594.html", "accessed": "2026-11-02", "issued_date": "2026-04-14", "effective_date": "2026-04-14", "supersedes": "Thông tư 04/2021/TT-BGDĐT, Thông tư 08/2023/TT-BGDĐT (phần xếp lương)" },
+    { "id": "S13", "type": "press", "title": "Lương giáo viên hạng I không tăng theo đề xuất — Thông tư 32/2026", "publisher": "Hướng Nghiệp 360", "url": "https://huongnghiep360.com/en/news/luong-giao-vien-hang-i-thong-tu-32-2026", "accessed": "2026-11-02" },
+    { "id": "S14", "type": "press", "title": "Lương giáo viên lên đến 17,15 triệu đồng/tháng từ 01/7/2026", "publisher": "LuatVietnam", "url": "https://luatvietnam.vn/lao-dong-tien-luong/luong-giao-vien-du-kien-len-den-1713-trieu-dong-thang-562-107640-article.html", "accessed": "2026-11-02", "note": "Lương cơ sở 2.340.000đ (NĐ 73/2024) → 2.530.000đ từ 01/7/2026 (NĐ 161/2026)." },
+    { "id": "S15", "type": "press", "title": "Cẩm nang lương giáo viên và thăng hạng", "publisher": "CareerLink", "url": "https://www.careerlink.vn/cam-nang-viec-lam/?p=29088", "accessed": "2026-11-02" },
+    { "id": "S16", "type": "press", "title": "Người trong cuộc nói gì về tiêu chuẩn, nhiệm vụ của giáo viên hạng I, II", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/nguoi-trong-cuoc-noi-gi-ve-tieu-chuan-nhiem-vu-cua-giao-vien-hang-i-ii-post259607.gd", "accessed": "2026-11-02" },
+    { "id": "S17", "type": "law", "title": "Thông tư 15/2026/TT-BGDĐT ban hành Điều lệ trường tiểu học, THCS, THPT và trường phổ thông có nhiều cấp học", "publisher": "Bộ GD&ĐT — trích tại Thư viện Pháp luật", "url": "https://thuvienphapluat.vn/lao-dong-tien-luong/tieu-chuan-hieu-truong-truong-mam-non-tieu-hoc-thcs-thpt-tu-ngay-1052026-58404.html", "accessed": "2026-11-02", "issued_date": "2026-03-24", "effective_date": "2026-05-10", "supersedes": "Điều lệ kèm Thông tư 32/2020/TT-BGDĐT" },
+    { "id": "S18", "type": "press", "title": "Vì sao rất ít giáo viên được đề nghị bổ nhiệm làm hiệu trưởng?", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/vi-sao-rat-it-giao-vien-duoc-de-nghi-bo-nhiem-lam-hieu-truong-post238219.gd", "accessed": "2026-11-02" },
+    { "id": "S19", "type": "press", "title": "Quy định về tiêu chuẩn bổ nhiệm hiệu trưởng, hiệu phó 2026", "publisher": "HoaTieu.vn", "url": "https://hoatieu.vn/phap-luat/quy-dinh-ve-tieu-chuan-bo-nhiem-hieu-truong-hieu-pho-131995", "accessed": "2026-11-02" },
+    { "id": "S20", "type": "press", "title": "Chủ đề văn bản hướng dẫn Luật Nhà giáo 2025", "publisher": "Thư viện Pháp luật", "url": "https://thuvienphapluat.vn/chu-de-van-ban/412/chi-tiet-van-ban-huong-dan-luat-nha-giao-2025", "accessed": "2026-11-02" },
+    { "id": "S21", "type": "press", "title": "Tổng hợp 10 điểm mới của dự thảo Thông tư quy định chế độ làm việc giáo viên", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/tong-hop-10-diem-moi-cua-du-thao-thong-tu-quy-dinh-che-do-lam-viec-giao-vien-can-biet-post263648.gd", "accessed": "2026-11-02" },
+    { "id": "S22", "type": "reference", "title": "O*NET 25-2031.00 — Secondary School Teachers, Except Special and Career/Technical Education", "publisher": "U.S. Department of Labor / O*NET", "url": "https://www.onetonline.org/link/summary/25-2031.00", "accessed": "2026-11-02", "note": "Chỉ dùng làm khung phân rã nhiệm vụ (R2.6)." },
+    { "id": "S23", "type": "press", "title": "Quy định nhiệm vụ của giáo viên trung học phổ thông (theo Thông tư 30/2026)", "publisher": "Cổng PBGDPL TP. Cần Thơ", "url": "https://pbgdpl.cantho.gov.vn/quy-dinh-nhiem-vu-cua-giao-vien-trung-hoc-pho-thong", "accessed": "2026-11-02" }
+  ],
+  "requirements": {
+    "thcs": [
+      { "kind": "advice", "text": "Học thật chắc môn bạn có thể muốn dạy sau này, vì giáo viên THPT dạy theo môn chuyên sâu.", "audience": ["thcs"] },
+      { "kind": "advice", "text": "Rèn kỹ năng nói trước lớp: xung phong thuyết trình, làm lớp trưởng hoặc cán sự môn, kèm bạn học yếu hơn.", "audience": ["thcs"] },
+      { "kind": "advice", "text": "Con đường phổ biến là học tiếp THPT rồi thi vào ngành sư phạm, vì nghề này yêu cầu bằng đại học.", "audience": ["thcs"] }
+    ],
+    "thpt": [
+      { "kind": "advice", "text": "Chọn tổ hợp môn có chứa môn bạn muốn dạy, rồi tìm hiểu đề án tuyển sinh ngành sư phạm của các trường để biết điều kiện cụ thể.", "audience": ["thpt"] },
+      { "kind": "advice", "text": "Thử làm 'giáo viên' thật sự: dạy kèm em nhỏ, tham gia câu lạc bộ học thuật, tình nguyện dạy học hè để xem bạn có thích việc giải thích cho người khác không.", "audience": ["thpt"] }
+    ],
+    "higher_ed": [
+      { "kind": "fact", "text": "Trình độ chuẩn của giáo viên THPT là bằng cử nhân thuộc ngành đào tạo giáo viên (ngành sư phạm) trở lên.", "source_ids": ["S3", "S2"], "confidence": "single_source", "audience": ["thpt", "sinh_vien"], "note": "Nguyên văn trích từ Điều 72 Luật Giáo dục 2019. Từ 01/01/2026 nội dung này do Điều 28 Luật Nhà giáo 2025 quy định; khoản 2 Điều 28 giao Chính phủ quy định một số trường hợp riêng. Cần đối chiếu nguyên văn Điều 28 để nâng lên verified." },
+      { "kind": "fact", "text": "Người có bằng cử nhân ngành khác (không phải sư phạm) trước đây có thể dạy THPT nếu có thêm chứng chỉ bồi dưỡng nghiệp vụ sư phạm; quy định chi tiết theo Luật Nhà giáo 2025 cần kiểm tra lại.", "source_ids": ["S19"], "confidence": "needs_verification", "audience": ["sinh_vien"], "note": "Nguồn S19 nêu yêu cầu 'đại học sư phạm hoặc đại học + chứng chỉ nghiệp vụ sư phạm' theo quy định cũ. Cần tìm văn bản hướng dẫn Điều 28 Luật Nhà giáo về các trường hợp ngoại lệ." }
+    ],
+    "on_the_job": [
+      { "kind": "fact", "text": "Luật Nhà giáo 2025 (hiệu lực từ 01/01/2026) lần đầu xác lập vị trí pháp lý chung cho nhà giáo ở cả trường công lập và ngoài công lập.", "source_ids": ["S1"], "confidence": "verified" },
+      { "kind": "fact", "text": "Giáo viên THPT được đánh giá theo chuẩn nghề nghiệp quy định tại Thông tư 30/2026/TT-BGDĐT, chia theo hạng III, II, I; hạng càng cao thì nhiệm vụ và tiêu chuẩn càng nhiều.", "source_ids": ["S10", "S23"], "confidence": "verified", "audience": ["sinh_vien"] },
+      { "kind": "fact", "text": "Ở trường công lập, giáo viên mới tuyển dụng thường được xếp hạng III, bậc 1.", "source_ids": ["S15"], "confidence": "single_source", "audience": ["sinh_vien"], "note": "Nguồn dẫn quy định theo Thông tư 01–04/2021; cần đối chiếu điều khoản bổ nhiệm khi tuyển dụng trong Thông tư 31/2026." },
+      { "kind": "advice", "text": "Kỹ năng quyết định thành công: diễn đạt dễ hiểu, kiên nhẫn, quản lý lớp học, giao tiếp với phụ huynh, và ứng dụng công nghệ trong dạy học.", "audience": ["thcs", "thpt", "sinh_vien"] }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      { "kind": "fact", "text": "Một năm học, giáo viên phổ thông làm việc 42 tuần, trong đó 37 tuần dành cho giảng dạy các nội dung của chương trình.", "source_ids": ["S4", "S5"], "confidence": "verified" },
+      { "kind": "fact", "text": "Định mức dạy của giáo viên THPT là 17 tiết mỗi tuần (trường phổ thông dân tộc nội trú thấp hơn 2 tiết).", "source_ids": ["S4", "S6", "S8"], "confidence": "verified" },
+      { "kind": "fact", "text": "Giáo viên chủ nhiệm lớp được giảm 4 tiết/tuần; tổ trưởng chuyên môn được giảm 3 tiết/tuần, vì những việc này tốn nhiều thời gian ngoài giờ lên lớp.", "source_ids": ["S4", "S7", "S8"], "confidence": "verified" },
+      { "kind": "fact", "text": "Số tiết dạy vượt định mức bị giới hạn không quá 50% định mức trung bình mỗi tuần.", "source_ids": ["S4", "S9"], "confidence": "single_source", "note": "Mới thấy qua một bài tổng hợp trên giaoduc.net.vn; cần đối chiếu điều khoản cụ thể của Thông tư 05/2025." },
+      { "kind": "advice", "text": "Thời gian trên lớp chỉ là một phần. Soạn bài, chấm bài, liên lạc phụ huynh thường làm buổi tối hoặc cuối tuần, nên hãy hình dung đây là nghề 'mang việc về nhà'." }
+    ],
+    "income": [
+      { "kind": "fact", "text": "Ở trường công lập, lương = hệ số lương × lương cơ sở. Lương cơ sở là 2.530.000 đồng/tháng từ 01/7/2026 (trước đó 2.340.000 đồng).", "source_ids": ["S14"], "confidence": "single_source", "note": "Lương cơ sở theo Nghị định 161/2026/NĐ-CP (dẫn qua LuatVietnam). Bổ sung nguồn gốc là nghị định để lên verified." },
+      { "kind": "fact", "text": "Giáo viên THPT hạng III: hệ số 2,34–4,98, tương đương khoảng 5,92–12,60 triệu đồng/tháng (chưa gồm phụ cấp).", "source_ids": ["S12", "S14"], "confidence": "verified", "note": "Tính: 2,34 × 2.530.000 = 5.920.200đ; 4,98 × 2.530.000 = 12.599.400đ." },
+      { "kind": "fact", "text": "Giáo viên THPT hạng II: hệ số 4,00–6,38, tương đương khoảng 10,12–16,14 triệu đồng/tháng (chưa gồm phụ cấp).", "source_ids": ["S12", "S13", "S14"], "confidence": "verified", "note": "Tính: 4,00 × 2.530.000 = 10.120.000đ; 6,38 × 2.530.000 = 16.141.400đ. Lưu ý: theo quy định cũ (TT 08/2023) hạng II là 4,40–6,78; Thông tư 31/2026 đã thay đổi." },
+      { "kind": "fact", "text": "Giáo viên THPT hạng I: hệ số 4,40–6,78, tương đương khoảng 11,13–17,15 triệu đồng/tháng (chưa gồm phụ cấp).", "source_ids": ["S13", "S14"], "confidence": "verified", "note": "Tính: 4,40 × 2.530.000 = 11.132.000đ; 6,78 × 2.530.000 = 17.153.400đ. Hai nguồn báo chí khớp nhau; cần mở nguyên văn Điều 9 TT 31/2026 để xác nhận mã số hạng I." },
+      { "kind": "fact", "text": "Ngoài lương, giáo viên công lập có các khoản phụ cấp; phụ cấp thâm niên bắt đầu khi đủ 5 năm công tác.", "source_ids": ["S15"], "confidence": "single_source", "note": "Chưa có số liệu phụ cấp ưu đãi nghề cho THPT theo văn bản mới — cần bổ sung." },
+      { "kind": "fact", "text": "Luật Nhà giáo 2025 quy định lương của nhà giáo được xếp cao nhất trong hệ thống thang bậc lương hành chính sự nghiệp.", "source_ids": ["S20"], "confidence": "single_source", "note": "Dẫn Điều 23 Luật Nhà giáo; đối chiếu nguyên văn để lên verified." },
+      { "kind": "fact", "text": "Thu nhập giáo viên trường tư thục, quốc tế rất khác nhau giữa các trường; hiện chưa có số liệu khảo sát đáng tin cậy để hiển thị.", "source_ids": [], "confidence": "needs_verification", "note": "Tìm báo cáo lương ngành giáo dục khu vực tư (TopCV/VietnamWorks) có năm khảo sát, hoặc tổng hợp ≥ 20 tin tuyển dụng." }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Cô/Thầy Minh — giáo viên Ngữ văn hạng III, năm thứ 3 đi dạy, chủ nhiệm lớp 11A2",
+    "setting": "Một trường THPT công lập, một ngày thứ Ba giữa học kỳ I",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "hoc_sinh", "label": "Học sinh tiến bộ", "initial": 50 },
+      { "id": "ap_luc", "label": "Áp lực", "initial": 30 }
+    ],
+    "segments": [
+      {
+        "id": "s1-soan-bai",
+        "time": "06:15",
+        "title": "Rà lại kế hoạch bài dạy",
+        "narrative": "Trước giờ vào lớp, bạn mở lại kế hoạch bài dạy đã soạn tối qua cho tiết đọc hiểu. Thứ tự hoạt động có hợp lý chưa?",
+        "basis": { "kind": "fact", "text": "Lập kế hoạch bài dạy và chuẩn bị tài liệu là nhiệm vụ cốt lõi của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các hoạt động của một tiết học theo thứ tự hợp lý",
+          "steps": ["Khởi động: đặt câu hỏi gợi tò mò", "Hình thành kiến thức: đọc và phân tích văn bản", "Luyện tập: học sinh làm việc nhóm", "Vận dụng: liên hệ với đời sống", "Tổng kết và giao bài về nhà"],
+          "on_success": { "hoc_sinh": 5 },
+          "on_fail": { "ap_luc": 5 }
+        }
+      },
+      {
+        "id": "s2-chao-co",
+        "time": "07:00",
+        "title": "15 phút đầu giờ với lớp chủ nhiệm",
+        "narrative": "Lớp 11A2 có hai bạn đi muộn và một bạn trông mệt mỏi bất thường. Là giáo viên chủ nhiệm, bạn xử lý thế nào?",
+        "basis": { "kind": "fact", "text": "Công tác chủ nhiệm được tính là nhiệm vụ kiêm nhiệm chính thức, được giảm 4 tiết dạy mỗi tuần.", "source_ids": ["S4", "S7"], "confidence": "verified" },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn ưu tiên việc gì trước?",
+          "options": [
+            { "text": "Ghi tên hai bạn đi muộn vào sổ và nhắc nhở trước lớp", "effect": { "ap_luc": 5 }, "feedback": "Nề nếp được giữ, nhưng bạn bỏ lỡ tín hiệu từ học sinh đang mệt." },
+            { "text": "Hỏi riêng bạn trông mệt mỏi, rồi xử lý chuyện đi muộn sau giờ", "effect": { "hoc_sinh": 8, "nang_luong": -5 }, "feedback": "Bạn phát hiện em ấy thức khuya làm thêm giúp gia đình — thông tin quan trọng để báo phụ huynh." },
+            { "text": "Bỏ qua, vì sắp vào tiết dạy", "effect": { "hoc_sinh": -5 }, "feedback": "Tiết kiệm được thời gian, nhưng chủ nhiệm là việc chăm lo con người." }
+          ]
+        }
+      },
+      {
+        "id": "s3-len-lop",
+        "time": "07:45",
+        "title": "Tiết 2 — Lớp 10A5: Một học sinh làm ồn",
+        "narrative": "Đang giữa bài giảng, một nhóm học sinh cuối lớp nói chuyện riêng và cười to.",
+        "basis": { "kind": "fact", "text": "Định mức giảng dạy của giáo viên THPT là 17 tiết mỗi tuần, nên một ngày thường có nhiều tiết ở nhiều lớp khác nhau.", "source_ids": ["S4", "S6"], "confidence": "verified" },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn quản lý lớp học thế nào?",
+          "options": [
+            { "text": "Dừng bài, quát cả lớp", "effect": { "ap_luc": 8, "hoc_sinh": -3 }, "feedback": "Lớp im lặng ngay, nhưng không khí học căng thẳng." },
+            { "text": "Đi xuống gần nhóm đó, giao cho nhóm một câu hỏi thảo luận", "effect": { "hoc_sinh": 6, "nang_luong": -3 }, "feedback": "Nhóm quay lại bài mà không ai bị xấu hổ." },
+            { "text": "Mặc kệ, giảng tiếp", "effect": { "hoc_sinh": -6 }, "feedback": "Tiếng ồn lan ra cả lớp." }
+          ]
+        }
+      },
+      {
+        "id": "s4-to-chuyen-mon",
+        "time": "10:30",
+        "title": "Dự giờ và góp ý chuyên môn",
+        "narrative": "Tiết trống, bạn dự giờ một đồng nghiệp trong tổ theo kế hoạch sinh hoạt chuyên môn. Tổ trưởng nhờ bạn ghi nhận xét.",
+        "basis": { "kind": "fact", "text": "Nhà trường có tổ chuyên môn do tổ trưởng phụ trách; tổ trưởng chuyên môn được giảm 3 tiết dạy mỗi tuần cho công việc này.", "source_ids": ["S4", "S8"], "confidence": "single_source" },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Phân loại các nhận xét: đâu là góp ý hữu ích, đâu là nhận xét chung chung",
+          "buckets": ["Góp ý cụ thể, hữu ích", "Nhận xét chung chung"],
+          "items": [
+            { "text": "Câu hỏi khởi động ở phút thứ 3 chỉ 2 em giơ tay — có thể chia nhỏ câu hỏi", "bucket": "Góp ý cụ thể, hữu ích" },
+            { "text": "Tiết dạy tốt", "bucket": "Nhận xét chung chung" },
+            { "text": "Phần luyện tập nhóm thiếu tiêu chí chấm, học sinh không biết làm đến đâu là đạt", "bucket": "Góp ý cụ thể, hữu ích" },
+            { "text": "Cần cố gắng hơn", "bucket": "Nhận xét chung chung" }
+          ],
+          "on_success": { "hoc_sinh": 3 },
+          "on_fail": { "ap_luc": 3 }
+        }
+      },
+      {
+        "id": "s5-cham-bai",
+        "time": "14:00",
+        "title": "Chấm bài kiểm tra",
+        "narrative": "Chồng bài kiểm tra của 3 lớp đang chờ. Bạn chấm thử một bài và phát hiện lỗi sai cần nhận xét.",
+        "basis": { "kind": "fact", "text": "Kiểm tra, đánh giá và theo dõi sự tiến bộ của học sinh là nhiệm vụ thường xuyên của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Tìm các lỗi trong đoạn bài làm của học sinh",
+          "document": [
+            "Truyện Kiều là tác phẩm của Nguyễn Du.",
+            "Tác phẩm được viết bằng thể thơ thất ngôn bát cú.",
+            "Nhân vật Thúy Kiều là người tài sắc vẹn toàn.",
+            "Đoạn trích thể hiện nghệ thuật tả cảnh ngụ tình."
+          ],
+          "errors": [ { "line": 1, "explain": "Truyện Kiều viết bằng thể thơ lục bát, không phải thất ngôn bát cú." } ],
+          "on_success": { "hoc_sinh": 5, "nang_luong": -5 },
+          "on_fail": { "ap_luc": 5, "nang_luong": -5 }
+        }
+      },
+      {
+        "id": "s6-phu-huynh",
+        "time": "16:45",
+        "title": "Cuộc gọi từ phụ huynh",
+        "narrative": "Mẹ của một học sinh lớp chủ nhiệm gọi điện, không vui vì con bị điểm thấp và cho rằng cô/thầy chấm khắt khe.",
+        "basis": { "kind": "fact", "text": "Phối hợp, trao đổi với cha mẹ học sinh về việc học và rèn luyện của học sinh là một phần công việc của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với phụ huynh",
+          "npc": "Mẹ của học sinh Lan",
+          "turns": [
+            {
+              "npc_line": "Con tôi học rất chăm mà sao chỉ được 5 điểm? Cô có chấm nhầm không?",
+              "replies": [
+                { "text": "Chị cứ yên tâm, em chấm đúng đáp án rồi.", "effect": { "ap_luc": 5 }, "feedback": "Đúng nhưng khiến phụ huynh thấy bị gạt đi." },
+                { "text": "Em cảm ơn chị đã quan tâm. Em gửi chị xem bài của cháu và chỉ rõ phần cháu còn hổng nhé.", "effect": { "hoc_sinh": 6, "nang_luong": -4 }, "feedback": "Minh bạch và hướng vào giải pháp — phụ huynh dịu lại." }
+              ]
+            },
+            {
+              "npc_line": "Vậy giờ cháu phải làm sao?",
+              "replies": [
+                { "text": "Em sẽ giao thêm bài luyện phần nghị luận và kiểm tra lại sau 2 tuần.", "effect": { "hoc_sinh": 6, "ap_luc": 3 }, "feedback": "Có kế hoạch cụ thể, nhưng thêm việc cho bạn." },
+                { "text": "Chị cho cháu đi học thêm bên ngoài nhé.", "effect": { "hoc_sinh": -3 }, "feedback": "Đẩy trách nhiệm ra ngoài lớp học." }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "s7-buoi-toi",
+        "time": "20:00",
+        "title": "Buổi tối: còn 2 tiếng",
+        "narrative": "Ngày mai có 4 tiết và một bài kiểm tra cần ra đề. Bạn chia 2 tiếng buổi tối thế nào?",
+        "basis": { "kind": "fact", "text": "Ngoài giờ lên lớp, giáo viên có nhiều nhiệm vụ chuyên môn (soạn bài, chấm bài, kiêm nhiệm); Thông tư 05/2025 quy định cả việc quy đổi một số hoạt động chuyên môn ra tiết dạy.", "source_ids": ["S4", "S9"], "confidence": "verified" },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Phân bổ 120 phút",
+          "budget_min": 120,
+          "activities": [
+            { "label": "Soạn bài cho ngày mai", "effect_per_30min": { "hoc_sinh": 4, "nang_luong": -5 } },
+            { "label": "Chấm nốt bài kiểm tra", "effect_per_30min": { "hoc_sinh": 3, "ap_luc": -4, "nang_luong": -5 } },
+            { "label": "Nghỉ ngơi, gia đình", "effect_per_30min": { "nang_luong": 10, "ap_luc": -3 } }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Phần nào trong ngày khiến bạn thấy hào hứng nhất?",
+      "Phần nào khiến bạn thấy mệt hoặc không muốn làm lại?",
+      "Bạn thích giải thích cho người khác hiểu, hay thích tự mình đào sâu một vấn đề hơn?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sv-su-pham",
+        "title": "Sinh viên sư phạm",
+        "requirements": [
+          { "kind": "fact", "text": "Theo học ngành đào tạo giáo viên ở trình độ cử nhân để đạt trình độ chuẩn giáo viên THPT.", "source_ids": ["S3", "S2"], "confidence": "single_source", "note": "Xem note ở requirements.higher_ed[0]." }
+        ]
+      },
+      {
+        "id": "gv-hang-3",
+        "title": "Giáo viên THPT hạng III",
+        "description": "Điểm khởi đầu ở trường công lập.",
+        "requirements": [
+          { "kind": "fact", "text": "Đạt chuẩn nghề nghiệp hạng III theo Thông tư 30/2026; hệ số lương 2,34–4,98.", "source_ids": ["S10", "S12"], "confidence": "verified" }
+        ]
+      },
+      {
+        "id": "gv-hang-2",
+        "title": "Giáo viên THPT hạng II",
+        "requirements": [
+          { "kind": "fact", "text": "Xét thăng hạng: cần 3 năm công tác liền kề trước năm dự xét được xếp loại hoàn thành tốt nhiệm vụ trở lên (Thông tư 13/2024/TT-BGDĐT).", "source_ids": ["S15"], "confidence": "single_source", "note": "Cần đối chiếu: TT 13/2024 có còn hiệu lực/được sửa sau khi TT 30, 31/2026 ban hành không." },
+          { "kind": "fact", "text": "Số lượng được thăng hạng phụ thuộc chỉ tiêu, nên nhiều giáo viên đủ tiêu chuẩn vẫn phải chờ.", "source_ids": ["S16"], "confidence": "single_source" }
+        ]
+      },
+      {
+        "id": "gv-hang-1",
+        "title": "Giáo viên THPT hạng I",
+        "requirements": [
+          { "kind": "fact", "text": "Hạng I đòi hỏi thành tích cao hơn, ví dụ danh hiệu chiến sĩ thi đua, khen thưởng cấp tỉnh trở lên, hoặc danh hiệu giáo viên dạy giỏi cấp tỉnh.", "source_ids": ["S11"], "confidence": "single_source", "note": "Bài báo nói chung cho giáo viên phổ thông; cần đối chiếu điều khoản THPT trong TT 30/2026." }
+        ]
+      },
+      {
+        "id": "to-truong",
+        "title": "Tổ trưởng chuyên môn",
+        "requirements": [
+          { "kind": "fact", "text": "Tổ trưởng chuyên môn do hiệu trưởng bổ nhiệm và được giảm 3 tiết dạy mỗi tuần.", "source_ids": ["S8"], "confidence": "single_source", "note": "Thẩm quyền bổ nhiệm tổ trưởng cần đối chiếu Điều lệ trường mới (TT 15/2026)." }
+        ]
+      },
+      {
+        "id": "pho-hieu-truong",
+        "title": "Phó hiệu trưởng",
+        "requirements": [
+          { "kind": "fact", "text": "Người được bổ nhiệm lần đầu vào chức vụ quản lý ở trường công lập phải nằm trong quy hoạch của cấp có thẩm quyền.", "source_ids": ["S18"], "confidence": "single_source", "note": "Theo Điều 44 Nghị định 115/2020/NĐ-CP (dẫn qua giaoduc.net.vn)." },
+          { "kind": "fact", "text": "Tiêu chuẩn phó hiệu trưởng (trình độ, số năm dạy học) hiện quy định tại Điều lệ trường kèm Thông tư 15/2026 — chưa xác minh được chi tiết.", "source_ids": ["S17"], "confidence": "needs_verification", "note": "Mở nguyên văn Điều 10 Điều lệ kèm TT 15/2026 để lấy số năm công tác tối thiểu." }
+        ]
+      },
+      {
+        "id": "hieu-truong",
+        "title": "Hiệu trưởng",
+        "requirements": [
+          { "kind": "fact", "text": "Nhiệm kỳ hiệu trưởng trường THPT là 5 năm.", "source_ids": ["S17"], "confidence": "verified" },
+          { "kind": "fact", "text": "Hiệu trưởng phải đạt chuẩn hiệu trưởng cơ sở giáo dục phổ thông (Thông tư 14/2018 quy định 5 tiêu chuẩn, 18 tiêu chí).", "source_ids": ["S19"], "confidence": "needs_verification", "note": "Kiểm tra TT 14/2018 có bị thay thế sau Luật Nhà giáo 2025 không, và tiêu chuẩn tại khoản 3 Điều 10 Điều lệ kèm TT 15/2026." }
+        ]
+      },
+      {
+        "id": "truong-tu",
+        "title": "Giáo viên trường tư thục / quốc tế",
+        "description": "Rẽ ngang: môi trường, thu nhập và yêu cầu (thường cả ngoại ngữ) khác trường công.",
+        "requirements": [
+          { "kind": "fact", "text": "Luật Nhà giáo 2025 áp dụng cho nhà giáo ở cả cơ sở công lập và ngoài công lập.", "source_ids": ["S1"], "confidence": "verified" }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sv-su-pham", "to": "gv-hang-3", "type": "promotion", "label": "Tốt nghiệp + trúng tuyển" },
+      { "from": "gv-hang-3", "to": "gv-hang-2", "type": "promotion", "label": "Xét thăng hạng" },
+      { "from": "gv-hang-2", "to": "gv-hang-1", "type": "promotion", "label": "Xét thăng hạng" },
+      { "from": "gv-hang-3", "to": "to-truong", "type": "management" },
+      { "from": "to-truong", "to": "pho-hieu-truong", "type": "management", "label": "Được quy hoạch + bổ nhiệm" },
+      { "from": "pho-hieu-truong", "to": "hieu-truong", "type": "management" },
+      { "from": "gv-hang-3", "to": "truong-tu", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    { "kind": "fact", "text": "Lương khởi điểm ở trường công khá thấp: khoảng 5,92 triệu đồng/tháng ở bậc 1 hạng III, chưa gồm phụ cấp.", "source_ids": ["S12", "S14"], "confidence": "verified", "note": "2,34 × 2.530.000đ." },
+    { "kind": "fact", "text": "Thăng hạng phụ thuộc chỉ tiêu; có giáo viên đủ chuẩn nhưng phải chờ nhiều năm.", "source_ids": ["S16"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Có giáo viên phản ánh dạy vượt giờ nhưng chỉ được thanh toán một phần (ví dụ dạy hơn 50 tiết tăng giờ, nhận tiền khoảng 20 tiết).", "source_ids": ["S9"], "confidence": "single_source", "note": "Phản ánh cá nhân đăng trên báo — không khái quát cho mọi trường." },
+    { "kind": "fact", "text": "Ngoài giảng dạy, giáo viên thường kiêm thêm nhiệm vụ (chủ nhiệm, tổ trưởng, công đoàn…); theo quy định hiện hành, mỗi giáo viên không kiêm nhiệm quá 2 chức danh.", "source_ids": ["S8", "S9"], "confidence": "single_source" }
+  ],
+  "future_outlook": [
+    { "kind": "fact", "text": "Năm 2026 là năm thay đổi lớn về chính sách cho nhà giáo: Luật Nhà giáo có hiệu lực, chuẩn nghề nghiệp mới (TT 30/2026), quy định xếp lương mới (TT 31/2026), Điều lệ trường mới (TT 15/2026).", "source_ids": ["S1", "S10", "S12", "S17"], "confidence": "verified" },
+    { "kind": "fact", "text": "Một dự thảo thông tư mới về chế độ làm việc đề xuất tăng định mức dạy THPT thêm 2 tiết/tuần so với Thông tư 05/2025.", "source_ids": ["S21"], "confidence": "needs_verification", "note": "Đây là DỰ THẢO; theo dõi xem đã ban hành chưa trước khi đưa lên UI." },
+    { "kind": "advice", "text": "Công nghệ và AI có thể giúp soạn bài, chấm bài nhanh hơn, nhưng phần gắn với con người — truyền cảm hứng, chủ nhiệm, đồng hành cùng học sinh — vẫn là cốt lõi của nghề." }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-02",
+    "researched_by": "Claude (claude.ai) — research qua web search",
+    "scope_note": "Số liệu lương, thăng hạng áp dụng cho trường THPT công lập. Trường tư thục chưa có số liệu."
+  }
+}

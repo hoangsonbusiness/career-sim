@@ -1,0 +1,42 @@
+{
+  "id": "mini",
+  "day_simulation": {
+    "persona": "Fixture",
+    "setting": "Fixture cho SPEC-002 — đủ 6 loại task",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "a", "label": "A", "initial": 50 },
+      { "id": "b", "label": "B", "initial": 90 }
+    ],
+    "segments": [
+      { "id": "seq", "time": "08:00", "title": "sequence", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "sequence", "prompt": "-", "steps": ["X", "Y", "Z"], "on_success": { "a": 10 }, "on_fail": { "a": -10 } } },
+      { "id": "cho", "time": "09:00", "title": "choice", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "choice", "prompt": "-", "options": [
+          { "text": "o0", "effect": { "a": 5, "b": 20 }, "feedback": "f0" },
+          { "text": "o1", "effect": { "a": -60 }, "feedback": "f1" } ] } },
+      { "id": "drg", "time": "10:00", "title": "drag_sort", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "drag_sort", "prompt": "-", "buckets": ["L", "R"],
+          "items": [ { "text": "i0", "bucket": "L" }, { "text": "i1", "bucket": "R" }, { "text": "i2", "bucket": "L" } ],
+          "on_success": { "b": 5 }, "on_fail": { "b": -5 } } },
+      { "id": "spt", "time": "11:00", "title": "spot_error", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "spot_error", "prompt": "-", "document": ["l0", "l1", "l2", "l3"],
+          "errors": [ { "line": 1, "explain": "e1" }, { "line": 3, "explain": "e3" } ],
+          "on_success": { "a": 4 }, "on_fail": { "a": -4 } } },
+      { "id": "dlg", "time": "12:00", "title": "dialogue", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "dialogue", "prompt": "-", "npc": "N", "turns": [
+          { "npc_line": "t0", "replies": [ { "text": "r00", "effect": { "a": 3 }, "feedback": "d00" }, { "text": "r01", "effect": { "a": -3 } } ] },
+          { "npc_line": "t1", "replies": [ { "text": "r10", "effect": { "b": -2 } }, { "text": "r11", "effect": { "b": 2 }, "feedback": "d11" } ] } ] } },
+      { "id": "tbd", "time": "20:00", "title": "time_budget", "narrative": "-",
+        "basis": { "kind": "fact", "text": "Fixture basis.", "source_ids": [], "confidence": "needs_verification", "note": "fixture" },
+        "task": { "type": "time_budget", "prompt": "-", "budget_min": 90, "activities": [
+          { "label": "A", "effect_per_30min": { "a": 2 } },
+          { "label": "B", "effect_per_30min": { "b": -1, "a": 1 } } ] } }
+    ]
+  }
+}

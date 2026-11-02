@@ -1,0 +1,28 @@
+# Chốt chặn cuối nằm NGOÀI tầm tay agent: chạy trên server GitLab.
+# Cấu hình kèm: Settings → Repository → Protected branches (main: không push thẳng),
+#               Settings → Merge requests → "Pipelines must succeed" + bật Code Owner approval.
+image: node:22
+
+stages: [check]
+
+cache:
+  key: { files: [package-lock.json] }
+  paths: [node_modules/]
+
+check:
+  stage: check
+  script:
+    - npm ci
+    - npm run check
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+
+scope:
+  stage: check
+  script:
+    - npm ci
+    - git fetch origin $CI_MERGE_REQUEST_TARGET_BRANCH_NAME --depth=200
+    - node scripts/scope.mjs $CI_MERGE_REQUEST_DIFF_BASE_SHA
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
