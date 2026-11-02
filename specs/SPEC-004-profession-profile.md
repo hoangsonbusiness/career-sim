@@ -152,10 +152,10 @@ Không có tính toán số. Fixture `tests/fixtures/profile-mini.json` (đủ m
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] R-2: thứ tự mục "Cần học gì → Điều kiện làm việc → Mặt khó → Triển vọng", rồi tới lộ trình và nguồn.
-- [ ] R-3: lộ trình thăng tiến hiển thị tạm dạng danh sách ở spec này; đồ thị để LAD làm sau.
-- [ ] R-12: trích dẫn dùng `<details>` (bấm mở tại chỗ, không cần JavaScript) thay cho popover nổi.
-- [ ] Ngoài phạm vi: chưa làm nút "Tôi là: THCS / THPT / Sinh viên"; trang hiện mọi nội dung cho mọi người.
+- [x] R-2: thứ tự mục "Cần học gì → Điều kiện làm việc → Mặt khó → Triển vọng", rồi tới lộ trình và nguồn.
+- [x] R-3: lộ trình thăng tiến hiển thị tạm dạng danh sách ở spec này; đồ thị để LAD làm sau.
+- [x] R-12: trích dẫn dùng `<details>` (bấm mở tại chỗ, không cần JavaScript) thay cho popover nổi.
+- [x] Ngoài phạm vi: chưa làm nút "Tôi là: THCS / THPT / Sinh viên"; trang hiện mọi nội dung cho mọi người.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

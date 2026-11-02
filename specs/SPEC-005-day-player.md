@@ -172,10 +172,10 @@ Controller không ném lỗi: action không hợp lệ trả về draft cũ (R-3
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] Bối cảnh: làm 6 mini-game bằng React + HTML thay vì Phaser cho bản demo (lệch PRD mục 7; ghi ADR-003).
-- [ ] R-1: đề xáo theo công thức cố định, mọi người chơi cùng một nghề thấy cùng thứ tự.
-- [ ] R-3: hội thoại chỉ trả lời tuần tự, không quay lại sửa câu đã chọn (muốn sửa thì nộp xong bấm "Làm lại").
-- [ ] Ngoài phạm vi: câu hỏi phản tư chỉ hiển thị, chưa có ô trả lời và chưa lưu (để hạng mục REF làm).
+- [x] Bối cảnh: làm 6 mini-game bằng React + HTML thay vì Phaser cho bản demo (lệch PRD mục 7; ghi ADR-003).
+- [x] R-1: đề xáo theo công thức cố định, mọi người chơi cùng một nghề thấy cùng thứ tự.
+- [x] R-3: hội thoại chỉ trả lời tuần tự, không quay lại sửa câu đã chọn (muốn sửa thì nộp xong bấm "Làm lại").
+- [x] Ngoài phạm vi: câu hỏi phản tư chỉ hiển thị, chưa có ô trả lời và chưa lưu (để hạng mục REF làm).
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
