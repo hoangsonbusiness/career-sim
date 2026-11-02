@@ -2,7 +2,7 @@
 id: SPEC-002
 title: Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render)
 version: 2
-status: approved
+status: implemented
 features: [F3, F7]
 owns: [src/engine/**]
 owner: anh Son
