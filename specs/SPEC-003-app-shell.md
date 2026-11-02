@@ -2,11 +2,14 @@
 id: SPEC-003
 title: Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema
 version: 1
-status: draft
+status: approved
 features: [F1, F2, F3]
 owns: [src/app/**, src/content/**, src/types/**, scripts/gen-types.mjs, next.config.mjs, tsconfig.json, postcss.config.mjs]
 owner: anh Son
 created: 2026-11-02
+approved_hash: edee80d38f2487e0
+approved_by: Son
+approved_at: 2026-11-02
 ---
 
 # SPEC-003 — Khung app
