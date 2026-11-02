@@ -1,0 +1,9 @@
+{
+  "spec": "SPEC-004",
+  "locked_by": "complete 2026-11-02",
+  "locked_at": "2026-11-02",
+  "files": {
+    "tests\\spec-004\\build.test.mjs": "a3f783a85f0c28e3",
+    "tests\\spec-004\\view.test.mjs": "c7c58c1930e78ca4"
+  }
+}
