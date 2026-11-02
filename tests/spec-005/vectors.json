@@ -1,0 +1,58 @@
+{
+  "$comment": "Conformance vectors cho SPEC-005. displayOrder: hoán vị mong đợi. actions: segment trong fixture, chuỗi action, draft mong đợi sau MỖI action (so sánh sâu).",
+  "fixture": "../fixtures/mini-profession.json",
+  "displayOrder": [
+    { "segmentId": "seq", "n": 3, "expect": [0, 2, 1] },
+    { "segmentId": "drg", "n": 3, "expect": [1, 0, 2] },
+    { "segmentId": "s1-soan-bai", "n": 5, "expect": [3, 4, 2, 0, 1] },
+    { "segmentId": "x", "n": 1, "expect": [0] },
+    { "segmentId": "x", "n": 0, "expect": [] },
+    { "segmentId": "a", "n": 2, "expect": [1, 0] }
+  ],
+  "actions": [
+    {
+      "id": "A01-sequence",
+      "segment": "seq",
+      "initial": { "type": "sequence", "order": ["X", "Z", "Y"] },
+      "steps": [
+        { "action": { "kind": "move", "from": 0, "to": 2 }, "expect": { "type": "sequence", "order": ["Z", "Y", "X"] } },
+        { "action": { "kind": "move", "from": -1, "to": 0 }, "expect": { "type": "sequence", "order": ["Z", "Y", "X"] } },
+        { "action": { "kind": "pick", "option": 0 }, "expect": { "type": "sequence", "order": ["Z", "Y", "X"] } },
+        { "action": { "kind": "move", "from": 2, "to": 0 }, "expect": { "type": "sequence", "order": ["X", "Z", "Y"] } }
+      ]
+    },
+    {
+      "id": "A02-drag-sort",
+      "segment": "drg",
+      "initial": { "type": "drag_sort", "placement": [null, null, null] },
+      "steps": [
+        { "action": { "kind": "place", "item": 2, "bucket": "L" }, "expect": { "type": "drag_sort", "placement": [null, null, "L"] } },
+        { "action": { "kind": "place", "item": 2, "bucket": "R" }, "expect": { "type": "drag_sort", "placement": [null, null, "R"] } },
+        { "action": { "kind": "place", "item": 3, "bucket": "L" }, "expect": { "type": "drag_sort", "placement": [null, null, "R"] } }
+      ]
+    },
+    {
+      "id": "A03-time-budget",
+      "segment": "tbd",
+      "initial": { "type": "time_budget", "minutes": [0, 0] },
+      "steps": [
+        { "action": { "kind": "add", "activity": 1 }, "expect": { "type": "time_budget", "minutes": [0, 30] } },
+        { "action": { "kind": "add", "activity": 2 }, "expect": { "type": "time_budget", "minutes": [0, 30] } },
+        { "action": { "kind": "sub", "activity": 0 }, "expect": { "type": "time_budget", "minutes": [0, 30] } },
+        { "action": { "kind": "add", "activity": 0 }, "expect": { "type": "time_budget", "minutes": [30, 30] } }
+      ]
+    },
+    {
+      "id": "A04-dialogue",
+      "segment": "dlg",
+      "initial": { "type": "dialogue", "replies": [] },
+      "steps": [
+        { "action": { "kind": "reply", "turn": 0, "reply": 2 }, "expect": { "type": "dialogue", "replies": [] } },
+        { "action": { "kind": "reply", "turn": 0, "reply": 0 }, "expect": { "type": "dialogue", "replies": [0] } },
+        { "action": { "kind": "reply", "turn": 0, "reply": 1 }, "expect": { "type": "dialogue", "replies": [0] } },
+        { "action": { "kind": "reply", "turn": 1, "reply": 1 }, "expect": { "type": "dialogue", "replies": [0, 1] } },
+        { "action": { "kind": "reply", "turn": 2, "reply": 0 }, "expect": { "type": "dialogue", "replies": [0, 1] } }
+      ]
+    }
+  ]
+}

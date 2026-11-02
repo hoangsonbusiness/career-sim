@@ -1,0 +1,10 @@
+{
+  "spec": "SPEC-005",
+  "locked_by": "complete 2026-11-02",
+  "locked_at": "2026-11-02",
+  "files": {
+    "tests\\spec-005\\build.test.mjs": "582a12756683b58f",
+    "tests\\spec-005\\controller.test.mjs": "c85b52d244ac0c9d",
+    "tests\\spec-005\\vectors.json": "555ff821adfbd831"
+  }
+}

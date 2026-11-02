@@ -2,7 +2,7 @@
 id: SPEC-004
 title: Trang hồ sơ nghề và trích dẫn nguồn
 version: 1
-status: approved
+status: implemented
 features: [F2, F5]
 owns: [src/profile/**, src/app/nghe/[id]/page.tsx]
 owner: anh Son
