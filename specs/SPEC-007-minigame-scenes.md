@@ -1,13 +1,13 @@
 ---
 id: SPEC-007
 title: Hoạt cảnh mini-game trong thế giới 2D
-version: 1
-status: implemented
+version: 2
+status: approved
 features: [F3]
 owns: [src/game/minigames/**]
 owner: anh Son
 created: 2026-11-03
-approved_hash: 6938b6763597d3ff
+approved_hash: 8747c30f0440e099
 approved_by: Son
 approved_at: 2026-11-03
 ---
@@ -106,13 +106,13 @@ Không có lỗi mới. Thao tác không hợp lệ đã được controller b�
 | AC-007-06 | `minutes = [60,30,0]`, budget 120 | `timeSlots` | `[0,0,1,null]` |
 | AC-007-07 | `minutes = [0,0]`, budget 90 | `timeSlots` | `[null,null,null]` |
 | AC-007-08 | Khay `[{0,0,50,50},{60,0,50,50}]` | `hitBucket` tại (70,10); (55,10); (0,0) | `1`; `null`; `0` |
-| AC-007-09 | Bản build | Tìm trong chunk JS chứa mã game | Có đủ 6 thành phần hoạt cảnh (tìm theo `data-minigame="sequence"`, `"choice"`, `"drag_sort"`, `"spot_error"`, `"dialogue"`, `"time_budget"`) |
+| AC-007-09 | Mã nguồn `src/game/minigames/stages.tsx` | Tìm chuỗi | Có đủ 6 thành phần hoạt cảnh (`data-minigame="sequence"`, `"choice"`, `"drag_sort"`, `"spot_error"`, `"dialogue"`, `"time_budget"`) |
 | AC-007-10 | Bản build | Tổng gzip chunk game | ≤ 614400 byte (giữ SPEC-006 R-17) |
 
 ## 5. Ghi chú kiểm thử
 - `node:test`; `layout.ts` thuần, không mock.
 - Hoạt cảnh (kéo thả, nét khoanh đỏ, camera) chưa có test tự động vì cần trình duyệt; em chơi thử trên preview từng hoạt cảnh, cả bằng chuột và bằng bàn phím, ghi kết quả vào commit. Anh Son chơi thử để đánh giá cảm giác (như BUG-004).
-- AC-007-09 chỉ chứng minh 6 hoạt cảnh có trong bản build, không chứng minh chúng chạy đúng.
+- AC-007-09 chỉ chứng minh 6 hoạt cảnh có trong mã nguồn, không chứng minh chúng chạy đúng. Từ v2, game (SPEC-014) không còn dùng hoạt cảnh nên bản build không chứa chúng.
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
@@ -126,3 +126,4 @@ Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-03 | Bản nháp đầu | Bước 2 của SPEC-006: thay bảng task phủ màn hình bằng hoạt cảnh trong cảnh |
+| 2 | 2026-11-03 | AC-007-09 kiểm 6 hoạt cảnh trong mã nguồn thay vì trong bản build | SPEC-014 / ADR-005: game bỏ quiz, không còn đóng gói mini-game |

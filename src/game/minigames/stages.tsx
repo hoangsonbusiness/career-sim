@@ -9,7 +9,7 @@ type Act = (a: Action) => void;
 interface StageProps { segmentId: string; task: Task; draft: Draft; act: Act; announce: (msg: string) => void }
 
 /** Vùng giữa màn hình cho bảng đen / tờ bài / khay / thanh thời gian. */
-// data-minigame ghi trực tiếp ở nơi gọi (chuỗi cố định) để bản build còn giữ tên hoạt cảnh (AC-007-09).
+// data-minigame ghi trực tiếp ở nơi gọi (chuỗi cố định) để kiểm được tên hoạt cảnh trong mã nguồn (AC-007-09).
 function Stage({ children, className = "", ...rest }: { children: React.ReactNode; className?: string; "data-minigame": string }) {
   return (
     <div {...rest} className={`mx-auto flex min-h-0 w-full max-w-xl flex-1 flex-col overflow-y-auto ${className}`}>
