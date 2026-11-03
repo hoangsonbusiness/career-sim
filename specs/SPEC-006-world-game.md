@@ -178,12 +178,12 @@ Bảng mode ở 3.3. Mọi thao tác không có trong bảng của mode hiện t
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] Bối cảnh: dùng Phaser, đảo ngược ADR-003; SPEC-005 lên v2, giao diện biểu mẫu chỉ còn cho nghề chưa có bản đồ.
-- [ ] Bối cảnh: anh tải thêm Kenney Roguelike/RPG pack (sàn, tường, cửa) vào `assets-src/`.
-- [ ] R-8: di chuyển theo ô (vì nhân vật không có khung đi bộ), mỗi bước 150 ms.
-- [ ] R-12: bước 1 hiển thị task bằng bảng HTML phủ lên game; hoạt cảnh riêng từng mini-game để bước 2.
-- [ ] R-17: ngân sách JS game tải lười ≤ 600 KB gzip (trang đầu vẫn ≤ 300 KB).
-- [ ] Bản đồ giáo viên THPT gồm: sân trường (spawn), lớp 11A2 (chủ nhiệm), lớp 10A5, phòng tổ chuyên môn, phòng giáo viên (chấm bài, nghe điện thoại phụ huynh), và bản đồ "nhà" cho buổi sáng sớm (soạn bài) và buổi tối.
+- [x] Bối cảnh: dùng Phaser, đảo ngược ADR-003; SPEC-005 lên v2, giao diện biểu mẫu chỉ còn cho nghề chưa có bản đồ.
+- [x] Bối cảnh: anh tải thêm Kenney Roguelike/RPG pack (sàn, tường, cửa) vào `assets-src/`.
+- [x] R-8: di chuyển theo ô (vì nhân vật không có khung đi bộ), mỗi bước 150 ms.
+- [x] R-12: bước 1 hiển thị task bằng bảng HTML phủ lên game; hoạt cảnh riêng từng mini-game để bước 2.
+- [x] R-17: ngân sách JS game tải lười ≤ 600 KB gzip (trang đầu vẫn ≤ 300 KB).
+- [x] Bản đồ giáo viên THPT gồm: sân trường (spawn), lớp 11A2 (chủ nhiệm), lớp 10A5, phòng tổ chuyên môn, phòng giáo viên (chấm bài, nghe điện thoại phụ huynh), và bản đồ "nhà" cho buổi sáng sớm (soạn bài) và buổi tối.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
