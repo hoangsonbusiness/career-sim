@@ -1,0 +1,184 @@
+{
+  "id": "ke-toan",
+  "name": "Kế toán",
+  "aliases": ["Kế toán viên", "Nhân viên kế toán"],
+  "group": { "label": "Tài chính – Kế toán" },
+  "holland": ["C", "E", "I"],
+  "summary": "Thu thập, kiểm tra chứng từ và hóa đơn, ghi sổ, theo dõi công nợ, lập báo cáo và tờ khai thuế cho doanh nghiệp. Nghề đòi hỏi chính xác, nắm luật và giữ đúng số liệu kể cả khi bị cấp trên gây áp lực.",
+  "sources": [
+    { "id": "S1", "type": "law", "title": "Luật Kế toán số 88/2015/QH13 — Văn bản hợp nhất 41/VBHN-VPQH (2026), gồm sửa đổi của Luật 56/2024/QH15 và Luật Quản lý thuế 108/2025/QH15", "publisher": "Văn phòng Quốc hội / CSDL quốc gia về pháp luật (vbpl.vn)", "url": "https://vbpl.vn/van-ban/chi-tiet/van-ban-hop-nhat-41-vbhn-vpqh-2026-hop-nhat-luat-ke-toan-so-88-2015-qh13--a12cb650-8fe9-11f1-9a4d-951d26e6cf11", "accessed": "2026-11-03", "effective_date": "2017-01-01", "note": "effective_date là ngày hiệu lực của luật gốc. Phần sửa đổi: Luật 56/2024/QH15 hiệu lực 01/01/2025; Luật 108/2025/QH15 hiệu lực 01/7/2026. Đã đọc các Điều 13, 16, 18, 51, 54." },
+    { "id": "S2", "type": "law", "title": "Luật Quản lý thuế số 108/2025/QH15", "publisher": "Quốc hội / CSDL quốc gia về pháp luật (vbpl.vn)", "url": "https://vbpl.vn/van-ban/chi-tiet/luat-quan-ly-thue-so-108-2025-qh15--187043", "accessed": "2026-11-03", "issued_date": "2025-12-10", "effective_date": "2026-07-01", "supersedes": "Luật Quản lý thuế số 38/2019/QH14 (đã sửa đổi bởi Luật 56/2024/QH15)", "note": "Điều 12 khoản 8: Chính phủ quy định thời hạn nộp hồ sơ khai thuế (luật không ghi ngày cụ thể). Điều 12 khoản 5: khai bổ sung khi phát hiện sai sót. Điều 45 khoản 4: các hành vi trốn thuế." },
+    { "id": "S3", "type": "law", "title": "Nghị định 254/2026/NĐ-CP quy định chi tiết Luật Quản lý thuế 108/2025/QH15 về hóa đơn điện tử, chứng từ điện tử", "publisher": "Chính phủ / CSDL quốc gia về pháp luật (vbpl.vn)", "url": "https://vbpl.vn/van-ban/chi-tiet/nghi-dinh-so-254-2026-nd-cp-quy-dinh-chi-tiet-mot-so-dieu-va-bien-phap-de-to-chuc-huong-dan-thi-hanh-luat-quan-ly-thue-so-108-2025-qh15-ve-hoa-don-dien-tu-chung-tu-dien-tu--37c68630-8037-11f1-b45e-3127ba599b1c", "accessed": "2026-11-03", "effective_date": "2026-07-01", "supersedes": "Nghị định 123/2020/NĐ-CP và Điều 1 Nghị định 41/2022/NĐ-CP (Điều 43 khoản 2; xem đủ danh sách văn bản hết hiệu lực tại điều này)", "note": "Điều 10 khoản 1: các nội dung bắt buộc của hóa đơn — dùng cho tài liệu phần 1." },
+    { "id": "S4", "type": "market", "title": "Khám phá mức lương Kế toán mới nhất (dữ liệu Công cụ Tra cứu mức lương TopCV)", "publisher": "TopCV", "url": "https://www.topcv.vn/luong-ke-toan", "accessed": "2026-11-03", "issued_date": "2026-09-09", "note": "Bài cập nhật 09/09/2026. Số liệu là dữ liệu tra cứu lương của TopCV, không phải khảo sát có mô tả phương pháp." },
+    { "id": "S5", "type": "press", "title": "Mùa quyết toán thuế: Cần lưu ý những gì?", "publisher": "Báo Điện tử Chính phủ (chuyên trang Thủ đô Hà Nội)", "url": "https://thanglong.chinhphu.vn/mua-quyet-toan-thue-can-luu-y-nhung-gi-103240329145311379.htm", "accessed": "2026-11-03", "issued_date": "2024-03-29", "note": "Các mốc thời hạn trong bài theo luật cũ (38/2019/QH14), KHÔNG dùng. Chỉ dùng ý: cuối quý I là cao điểm quyết toán thuế năm." },
+    { "id": "S6", "type": "press", "title": "Nữ kế toán phát bệnh tâm thần vì áp lực công việc, ám ảnh 'sợ sai' (bác sĩ Nguyễn Viết Chung, Bệnh viện E)", "publisher": "Báo VnExpress", "url": "https://vnexpress.net/nu-ke-toan-phat-benh-tam-than-vi-ap-luc-cong-viec-am-anh-so-sai-5131097.html", "accessed": "2026-11-03", "issued_date": "2026-10-12" },
+    { "id": "S7", "type": "press", "title": "Lời cảnh báo của nữ kế toán trong vụ án Shark Bình", "publisher": "Báo Dân trí", "url": "https://dantri.com.vn/phap-luat/loi-canh-bao-cua-nu-ke-toan-trong-vu-an-shark-binh-20261015000626302.htm", "accessed": "2026-11-03", "issued_date": "2026-10-15", "note": "Theo kết luận điều tra (chưa xét xử). Không nêu tên cá nhân trong nội dung app." },
+    { "id": "S8", "type": "press", "title": "Nữ kế toán 'không biết gì' vẫn ký 120 lệnh, 'tuồn' 30 triệu USD qua biên giới", "publisher": "Báo Thanh Niên", "url": "https://thanhnien.vn/nu-ke-toan-khong-biet-gi-van-ky-120-lenh-tuon-30-trieu-usd-qua-bien-gioi-185261013174740216.htm", "accessed": "2026-11-03", "issued_date": "2026-10-13", "note": "Theo cáo trạng (chưa xét xử). Không nêu tên cá nhân trong nội dung app." },
+    { "id": "S9", "type": "testimony", "title": "Kỹ năng cần có cho sinh viên kế toán (chia sẻ của ông Nguyễn Phan Anh Quốc, Giám đốc Kiểm toán EY Việt Nam; ông Trần Hồng Vân, Giám đốc tài chính Tập đoàn Giáo dục Quốc tế)", "publisher": "Báo VnExpress", "url": "https://vnexpress.net/ky-nang-can-co-cho-sinh-vien-ke-toan-4452891.html", "accessed": "2026-11-03", "issued_date": "2022-04-19" },
+    { "id": "S10", "type": "testimony", "title": "Gian nan quyết toán thuế thu nhập cá nhân (chia sẻ của anh V.Q, kế toán trưởng một đơn vị)", "publisher": "Báo Người Lao Động", "url": "https://tuoitre.vn/nld/gian-nan-quyet-toan-thue-thu-nhap-ca-nhan-196250413221609744.htm", "accessed": "2026-11-03", "issued_date": "2025-04-14", "note": "Bài chỉ ghi tên viết tắt; người chia sẻ làm ở đơn vị nhà nước tự chủ tài chính, không phải doanh nghiệp. Chỉ dùng cho mô tả trải nghiệm mùa quyết toán. Nên thay bằng chia sẻ có tên đầy đủ ở doanh nghiệp khi tìm được." },
+    { "id": "S11", "type": "reference", "title": "O*NET 13-2011.00 — Accountants and Auditors", "publisher": "U.S. Department of Labor / O*NET", "url": "https://www.onetonline.org/link/summary/13-2011.00", "accessed": "2026-11-03", "note": "Chỉ dùng làm khung phân rã nhiệm vụ và mã Holland (CEI); không dùng số liệu cho Việt Nam." }
+  ],
+  "requirements": {
+    "thcs": [
+      { "kind": "advice", "text": "Học chắc Toán và rèn tính cẩn thận: kiểm lại phép tính, ghi chép gọn gàng.", "audience": ["thcs"] },
+      { "kind": "advice", "text": "Làm quen với bảng tính trên máy tính, ví dụ tự ghi thu chi tiêu vặt của mình.", "audience": ["thcs"] }
+    ],
+    "thpt": [
+      { "kind": "advice", "text": "Tổ hợp xét tuyển ngành Kế toán khác nhau giữa các trường; hãy đọc đề án tuyển sinh của trường bạn nhắm tới.", "audience": ["thpt"] },
+      { "kind": "advice", "text": "Thử hỏi chuyện một người làm kế toán để biết công việc hằng ngày có hợp với mình không.", "audience": ["thpt"] }
+    ],
+    "higher_ed": [
+      { "kind": "fact", "text": "Theo Luật Kế toán, người làm kế toán phải có đạo đức nghề nghiệp, trung thực, liêm khiết, chấp hành pháp luật và có trình độ chuyên môn kế toán.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 51 khoản 1." },
+      { "kind": "fact", "text": "Muốn làm kế toán trưởng cần chuyên môn kế toán từ trung cấp trở lên, chứng chỉ bồi dưỡng kế toán trưởng và ít nhất 2 năm làm kế toán (trình độ đại học) hoặc 3 năm (trung cấp, cao đẳng).", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 54 khoản 1." }
+    ],
+    "on_the_job": [
+      { "kind": "fact", "text": "Việc chính gồm kiểm tra sổ sách, báo cáo tài chính cho đúng và đủ; xử lý hóa đơn để thanh toán; đối chiếu sai lệch; tính thuế và lập tờ khai thuế.", "source_ids": ["S11"], "confidence": "single_source" },
+      { "kind": "fact", "text": "Người làm kế toán có quyền bảo lưu ý kiến chuyên môn bằng văn bản và báo cáo khi phát hiện vi phạm về tài chính, kế toán trong đơn vị.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 51 khoản 2." }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      { "kind": "fact", "text": "Công việc chủ yếu ở văn phòng, làm trên máy tính với số liệu, chứng từ và phần mềm kế toán.", "source_ids": ["S11"], "confidence": "single_source" },
+      { "kind": "fact", "text": "Cuối quý I là cao điểm quyết toán thuế năm, doanh nghiệp và người làm kế toán rất tất bật.", "source_ids": ["S5", "S10"], "confidence": "single_source", "note": "Mốc thời hạn quyết toán cụ thể theo luật mới (108/2025/QH15) do Chính phủ quy định; chưa đưa vào bộ dữ liệu." },
+      { "kind": "fact", "text": "Số giờ làm thêm của kế toán ở Việt Nam chưa có số liệu đáng tin trong bộ dữ liệu này.", "source_ids": [], "confidence": "needs_verification", "note": "Cần một khảo sát có phương pháp rõ (ví dụ báo cáo lương Adecco, Navigos) về giờ làm của nhân sự kế toán." }
+    ],
+    "income": [
+      { "kind": "fact", "text": "Theo dữ liệu tra cứu lương TopCV (cập nhật 9/2026), nhân viên kế toán dưới 1 năm kinh nghiệm khoảng 9,5 triệu; 1–3 năm khoảng 12 triệu; 3–5 năm khoảng 16,5 triệu đồng/tháng.", "source_ids": ["S4"], "confidence": "single_source", "note": "Mức trung bình theo kinh nghiệm trong bảng của TopCV; khác nhau theo vị trí, thành phố, công ty. Cần thêm một nguồn thị trường thứ hai để đối chiếu." },
+      { "kind": "fact", "text": "Cũng theo TopCV, kế toán tổng hợp có mức trung bình khoảng 14 triệu, kế toán thuế khoảng 13,5 triệu đồng/tháng.", "source_ids": ["S4"], "confidence": "single_source" }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Lan — kế toán viên 2 năm kinh nghiệm ở một công ty thương mại nhỏ",
+    "setting": "Một ngày cuối tháng ở văn phòng: kiểm hóa đơn, xếp chứng từ, duyệt chi, làm việc với nhà cung cấp và kịp hạn tờ khai thuế.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chinh_xac", "label": "Độ chính xác", "initial": 50 },
+      { "id": "ap_luc", "label": "Áp lực", "initial": 30 }
+    ],
+    "segments": [
+      {
+        "id": "k1-hoa-don", "time": "08:00", "title": "Kiểm tra hóa đơn đầu vào",
+        "narrative": "Hóa đơn mua giấy in vừa về. Trước khi ghi sổ, bạn soát lại từng nội dung bắt buộc.",
+        "basis": { "kind": "fact", "text": "Hóa đơn phải có đủ các nội dung bắt buộc như tên, địa chỉ, mã số thuế người bán, người mua; hàng hóa, tiền thuế, tổng tiền thanh toán; chữ ký người bán.", "source_ids": ["S3"], "confidence": "verified", "note": "Nghị định 254/2026/NĐ-CP, Điều 10 khoản 1." },
+        "task": { "type": "spot_error", "prompt": "Tìm các dòng sai trên hóa đơn (tên công ty, mã số thuế đều hư cấu)", "document": [
+          "HÓA ĐƠN GIÁ TRỊ GIA TĂNG — Số: 123 — Ngày lập: 28/10/2026",
+          "Người bán: Công ty TNHH Giấy Bút Mẫu, số 1 Đường A",
+          "Mã số thuế người bán: (để trống)",
+          "Người mua: Công ty CP Gốm Sứ Hư Cấu, số 2 Đường B",
+          "Mã số thuế người mua: 0000000000",
+          "Giấy in A4: 50 ram × 80.000đ = 4.000.000đ",
+          "Thuế suất GTGT 10% — Tiền thuế GTGT: 400.000đ",
+          "Tổng tiền thanh toán: 4.000.000đ",
+          "Chữ ký số người bán: (không có)"
+        ], "errors": [
+          { "line": 2, "explain": "Hóa đơn phải ghi mã số thuế của người bán." },
+          { "line": 7, "explain": "Tổng thanh toán phải gồm cả tiền thuế: 4.000.000 + 400.000 = 4.400.000đ." },
+          { "line": 8, "explain": "Hóa đơn phải có chữ ký của người bán." }
+        ], "on_success": { "chinh_xac": 5 }, "on_fail": { "chinh_xac": -4, "ap_luc": 3 } }
+      },
+      {
+        "id": "k2-chung-tu", "time": "09:30", "title": "Xếp các khoản chi trong tháng",
+        "narrative": "Khay giấy tờ chi tiêu cả tháng. Khoản nào đủ chứng từ để ghi sổ, khoản nào còn thiếu?",
+        "basis": { "kind": "fact", "text": "Mọi nghiệp vụ kinh tế, tài chính phải lập chứng từ kế toán; chứng từ bị tẩy xóa, sửa chữa không có giá trị thanh toán và ghi sổ.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 18 khoản 1 và 3." },
+        "task": { "type": "drag_sort", "prompt": "Xếp mỗi khoản chi vào đúng nhóm", "buckets": ["Đủ chứng từ", "Còn thiếu"], "items": [
+          { "text": "Mua mực in, có hóa đơn ghi đúng tên và mã số thuế công ty", "bucket": "Đủ chứng từ" },
+          { "text": "Tiền điện tháng 10, có hóa đơn điện tử của bên bán", "bucket": "Đủ chứng từ" },
+          { "text": "Tiền taxi đi gặp khách, chỉ có lời kể, không có giấy tờ", "bucket": "Còn thiếu" },
+          { "text": "Phiếu chi có số tiền bị tẩy xóa rồi viết lại", "bucket": "Còn thiếu" }
+        ], "on_success": { "chinh_xac": 4, "ap_luc": -2 }, "on_fail": { "chinh_xac": -3, "ap_luc": 3 } }
+      },
+      {
+        "id": "k3-duyet-chi", "time": "10:30", "title": "Duyệt một khoản thanh toán",
+        "narrative": "Nhà cung cấp gửi đề nghị thanh toán. Bạn mang hồ sơ sang phòng giám đốc.",
+        "basis": { "kind": "fact", "text": "Chứng từ kế toán phải có chữ ký, họ tên người lập, người duyệt; người ký phải chịu trách nhiệm về nội dung chứng từ.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 16 khoản 1 điểm g và Điều 18 khoản 5. Thứ tự các bước là minh họa một quy trình nội bộ phổ biến." },
+        "task": { "type": "sequence", "prompt": "Sắp xếp các bước chi một khoản tiền", "steps": [
+          "Nhận đề nghị thanh toán kèm hóa đơn, chứng từ",
+          "Kiểm tra chứng từ đủ và hợp lệ",
+          "Lập chứng từ chi, ký tên người lập",
+          "Trình người có thẩm quyền duyệt, ký",
+          "Chi tiền và ghi sổ kế toán"
+        ], "on_success": { "chinh_xac": 5 }, "on_fail": { "ap_luc": 4 } }
+      },
+      {
+        "id": "k4-chinh-so", "time": "13:30", "title": "Đề nghị \"chỉnh số cho đẹp\"",
+        "narrative": "Giám đốc gọi bạn vào: \"Tháng này lỗ. Em chỉnh số cho đẹp để gửi ngân hàng vay vốn nhé.\"",
+        "basis": { "kind": "fact", "text": "Luật Kế toán nghiêm cấm cố ý hoặc ép buộc người khác cung cấp, xác nhận số liệu kế toán sai sự thật; người làm kế toán vẫn có thể bị cấp trên gây áp lực làm theo ý muốn.", "source_ids": ["S1", "S7", "S9"], "confidence": "verified", "note": "Luật Kế toán, Điều 13 khoản 2 và 6. S7: vụ án có kế toán trưởng cảnh báo nhưng vẫn bị yêu cầu làm; S9: chia sẻ về áp lực từ lãnh đạo." },
+        "task": { "type": "choice", "prompt": "Bạn trả lời giám đốc thế nào?", "options": [
+          { "text": "Từ chối, giải thích là trái luật; nếu vẫn bị yêu cầu, báo cáo bằng văn bản", "effect": { "chinh_xac": 5, "ap_luc": 4 }, "feedback": "Luật cho người làm kế toán quyền bảo lưu ý kiến và báo cáo bằng văn bản khi thấy sai phạm." },
+          { "text": "Làm theo, sửa số liệu cho đẹp", "effect": { "chinh_xac": -10, "ap_luc": -2 }, "feedback": "Cung cấp số liệu kế toán sai sự thật bị Luật Kế toán nghiêm cấm; ai ký chứng từ phải chịu trách nhiệm." },
+          { "text": "Im lặng, để kế toán trưởng lo", "effect": { "chinh_xac": -3, "ap_luc": 3 }, "feedback": "Né tránh không làm số liệu đúng hơn; bạn vẫn chịu trách nhiệm phần việc của mình." }
+        ] }
+      },
+      {
+        "id": "k5-nha-cung-cap", "time": "15:00", "title": "Nhà cung cấp gọi hỏi tiền",
+        "narrative": "Điện thoại bàn reo. Là chị phụ trách bán hàng của công ty giấy.",
+        "basis": { "kind": "fact", "text": "Kế toán xử lý hóa đơn để thanh toán, theo dõi công nợ và đối chiếu số liệu với đối tác.", "source_ids": ["S11", "S4"], "confidence": "single_source" },
+        "task": { "type": "dialogue", "prompt": "Trao đổi với nhà cung cấp", "npc": "Nhà cung cấp", "turns": [
+          { "npc_line": "Chị bên công ty giấy đây. Hóa đơn tháng trước bao giờ bên em trả ạ?", "replies": [
+            { "text": "Em xem sổ công nợ rồi báo chị ngày thanh toán cụ thể ạ.", "effect": { "chinh_xac": 3 }, "feedback": "Trả lời dựa trên sổ công nợ, không hứa theo cảm tính." },
+            { "text": "Mai em chuyển luôn ạ!", "effect": { "ap_luc": 4 }, "feedback": "Hứa khi khoản chi chưa được duyệt dễ lỡ hẹn với đối tác." } ] },
+          { "npc_line": "À, hóa đơn đó bên chị quên ghi mã số thuế, có sao không em?", "replies": [
+            { "text": "Chị gửi lại giúp em hóa đơn ghi đủ thông tin nhé.", "effect": { "chinh_xac": 4 }, "feedback": "Hóa đơn phải ghi đủ nội dung bắt buộc, trong đó có mã số thuế người bán." },
+            { "text": "Không sao đâu chị, em vẫn ghi sổ.", "effect": { "chinh_xac": -4, "ap_luc": 2 }, "feedback": "Thiếu mã số thuế người bán là hóa đơn chưa đủ nội dung bắt buộc." } ] } ] }
+      },
+      {
+        "id": "k6-to-khai", "time": "16:30", "title": "Hạn nộp tờ khai thuế sát nút",
+        "narrative": "Hôm nay là hạn cuối nộp tờ khai thuế tháng. Còn một khoản nhỏ chưa khớp số.",
+        "basis": { "kind": "fact", "text": "Kế toán tính thuế và lập tờ khai thuế cho doanh nghiệp; thời hạn nộp hồ sơ khai thuế do Chính phủ quy định theo Luật Quản lý thuế 2025.", "source_ids": ["S11", "S2"], "confidence": "verified", "note": "Luật 108/2025/QH15, Điều 12 khoản 5 (khai bổ sung) và khoản 8; Điều 45 khoản 4 điểm a (nộp hồ sơ sau 90 ngày dẫn tới thiếu thuế là trốn thuế)." },
+        "task": { "type": "choice", "prompt": "Bạn xử lý thế nào?", "options": [
+          { "text": "Nộp đúng hạn với số đã kiểm; tìm ra sai sót thì khai bổ sung", "effect": { "chinh_xac": 3, "ap_luc": 2 }, "feedback": "Luật cho phép khai bổ sung khi phát hiện sai sót (có điều kiện và thời hạn)." },
+          { "text": "Để mai nộp, làm cho thật khớp đã", "effect": { "chinh_xac": -2, "ap_luc": 5 }, "feedback": "Nộp trễ là vi phạm; trễ quá 90 ngày mà làm thiếu thuế còn bị coi là trốn thuế." },
+          { "text": "Điền đại một con số cho khớp rồi nộp", "effect": { "chinh_xac": -8 }, "feedback": "Ghi số không có căn cứ là cung cấp số liệu sai sự thật, bị Luật Kế toán cấm." }
+        ] }
+      },
+      {
+        "id": "k7-buoi-toi", "time": "19:30", "title": "Buổi tối mùa quyết toán",
+        "narrative": "Sắp tới mùa quyết toán, việc còn nhiều. Hai tiếng buổi tối, bạn dùng thế nào?",
+        "basis": { "kind": "fact", "text": "Mùa quyết toán thuế là cao điểm của người làm kế toán; có lúc phải mang cả bộ chứng từ đi đối chiếu với cơ quan thuế, tốn nhiều thời gian, công sức.", "source_ids": ["S5", "S10"], "confidence": "single_source" },
+        "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
+          { "label": "Làm nốt bảng đối chiếu", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -2 } },
+          { "label": "Đọc quy định thuế mới", "effect_per_30min": { "chinh_xac": 1, "nang_luong": -1 } },
+          { "label": "Nghỉ ngơi, gia đình", "effect_per_30min": { "nang_luong": 3, "ap_luc": -3 } } ] }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có thấy dễ chịu khi soát từng con số, từng dòng giấy tờ không?",
+      "Nếu cấp trên yêu cầu làm sai, bạn có dám nói không?",
+      "Bạn có sẵn lòng đọc và cập nhật luật thuế thay đổi liên tục không?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      { "id": "sv-ke-toan", "title": "Sinh viên / thực tập kế toán", "requirements": [{ "kind": "advice", "text": "Thực tập ở phòng kế toán một doanh nghiệp để làm quen với chứng từ và phần mềm kế toán thật." }] },
+      { "id": "nv-ke-toan", "title": "Nhân viên kế toán", "requirements": [{ "kind": "fact", "text": "Theo dữ liệu TopCV (9/2026), nhân viên kế toán dưới 1 năm kinh nghiệm khoảng 9,5 triệu đồng/tháng.", "source_ids": ["S4"], "confidence": "single_source" }] },
+      { "id": "kt-tong-hop", "title": "Kế toán tổng hợp", "requirements": [{ "kind": "fact", "text": "Theo dữ liệu TopCV (9/2026), kế toán tổng hợp có mức trung bình khoảng 14 triệu đồng/tháng.", "source_ids": ["S4"], "confidence": "single_source" }] },
+      { "id": "kt-thue", "title": "Kế toán thuế", "requirements": [{ "kind": "fact", "text": "Theo dữ liệu TopCV (9/2026), kế toán thuế có mức trung bình khoảng 13,5 triệu đồng/tháng.", "source_ids": ["S4"], "confidence": "single_source" }] },
+      { "id": "ke-toan-truong", "title": "Kế toán trưởng", "requirements": [{ "kind": "fact", "text": "Cần chứng chỉ bồi dưỡng kế toán trưởng và ít nhất 2 năm làm kế toán (đại học) hoặc 3 năm (trung cấp, cao đẳng).", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 54." }] },
+      { "id": "gd-tai-chinh", "title": "Giám đốc tài chính", "requirements": [{ "kind": "advice", "text": "Vị trí quản lý cấp cao, cần thêm kỹ năng phân tích tài chính và hỗ trợ ra quyết định kinh doanh." }] }
+    ],
+    "edges": [
+      { "from": "sv-ke-toan", "to": "nv-ke-toan", "type": "promotion" },
+      { "from": "nv-ke-toan", "to": "kt-tong-hop", "type": "promotion" },
+      { "from": "nv-ke-toan", "to": "kt-thue", "type": "lateral", "label": "Chuyên sâu mảng thuế" },
+      { "from": "kt-tong-hop", "to": "ke-toan-truong", "type": "promotion" },
+      { "from": "ke-toan-truong", "to": "gd-tai-chinh", "type": "management" }
+    ]
+  },
+  "downsides": [
+    { "kind": "fact", "text": "Mùa quyết toán thuế là cao điểm công việc; có kế toán phải mang cả bộ chứng từ đi đối chiếu với cơ quan thuế, tốn nhiều thời gian, công sức.", "source_ids": ["S5", "S10"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Người ký chứng từ phải chịu trách nhiệm về nội dung. Có người chỉ đứng tên kế toán, ký giấy tờ mà không biết nội dung, vẫn bị truy tố trong một vụ án.", "source_ids": ["S1", "S8"], "confidence": "verified", "note": "Luật Kế toán, Điều 18 khoản 5; vụ việc theo cáo trạng (S8), chưa xét xử." },
+    { "kind": "fact", "text": "Kế toán có thể bị lãnh đạo gây áp lực ghi sổ theo ý muốn. Trong một vụ án, kế toán trưởng đã cảnh báo việc giấu doanh thu là trái luật nhưng vẫn bị yêu cầu làm.", "source_ids": ["S9", "S7"], "confidence": "single_source", "note": "S7 theo kết luận điều tra, chưa xét xử." },
+    { "kind": "fact", "text": "Nghề đòi hỏi độ chính xác cao; có trường hợp kế toán lo âu kéo dài vì sợ sai, phải đi khám và điều trị.", "source_ids": ["S6"], "confidence": "single_source", "note": "Một ca bệnh do bác sĩ kể lại, không phải số liệu về cả nghề." }
+  ],
+  "future_outlook": [
+    { "kind": "fact", "text": "Từ 01/7/2026, luật quản lý thuế mới và nghị định mới về hóa đơn điện tử có hiệu lực, thay các văn bản cũ; người làm kế toán phải cập nhật liên tục.", "source_ids": ["S2", "S3"], "confidence": "verified" },
+    { "kind": "advice", "text": "Ngoài ghi chép, kế toán ngày càng được kỳ vọng phân tích số liệu để giúp lãnh đạo ra quyết định; kỹ năng tự học và dùng phần mềm sẽ rất có ích." }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-03",
+    "researched_by": "Claude Code — research qua trình duyệt (vbpl.vn, TopCV, O*NET, báo chí); chưa được Codex kiểm tra chéo",
+    "scope_note": "Bối cảnh doanh nghiệp nhỏ và vừa khu vực tư. Lương lấy từ dữ liệu tra cứu TopCV (2026), khác nhau theo vị trí, thành phố. Thời hạn nộp tờ khai thuế cụ thể do nghị định hướng dẫn Luật Quản lý thuế 2025 quy định, chưa đưa vào bộ dữ liệu."
+  }
+}
