@@ -10,13 +10,14 @@
 | [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
 | [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 16/16 |
 | [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 14/14 |
-| [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 10/10 |
+| [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 2 | approved | ✓ Son 2026-11-03 | [F3] | 10/10 |
 | [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3] | 11/11 |
 | [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 2 | approved | ✓ Son 2026-11-03 | [F3] | 11/11 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -150,7 +151,7 @@
 | AC-007-06 | tests\spec-007\layout.test.mjs — "AC-007-06 timeSlots tô ô theo thứ tự activity" |
 | AC-007-07 | tests\spec-007\layout.test.mjs — "AC-007-07 timeSlots chưa phân bổ thì toàn ô trống" |
 | AC-007-08 | tests\spec-007\layout.test.mjs — "AC-007-08 hitBucket: biên trái/trên tính vào khay, khe giữa " |
-| AC-007-09 | tests\spec-007\build.test.mjs — "AC-007-09 bản build có đủ 6 hoạt cảnh" |
+| AC-007-09 | tests\spec-007\build.test.mjs — "AC-007-09 mã nguồn có đủ 6 hoạt cảnh" |
 | AC-007-10 | tests\spec-007\build.test.mjs — "AC-007-10 chunk game (Phaser) vẫn ≤ 600 KB gzip" |
 
 ## SPEC-008 — Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game)
@@ -230,3 +231,19 @@
 | AC-013-05 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-05 có nguồn law có effective_date và market có issued" |
 | AC-013-06 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-06 phần 6 chia đúng 180 phút bằng time_budget" |
 | AC-013-07 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-014 — Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề
+
+| AC | Test |
+|---|---|
+| AC-014-01 | tests\spec-014\story.test.mjs — "AC-014-01 đạt toàn bộ conformance vectors" |
+| AC-014-02 | tests\spec-014\story.test.mjs — "AC-014-02 createStory ném INVALID_STORY khi tham số sai" |
+| AC-014-03 | tests\spec-014\story.test.mjs — "AC-014-03 thao tác không có trong bảng trả về chính state cũ" |
+| AC-014-04 | tests\spec-014\story.test.mjs — "AC-014-04 reduce không sửa state gốc" |
+| AC-014-05 | tests\spec-014\story.test.mjs — "AC-014-05 interact không thêm trùng vào seen" |
+| AC-014-06 | tests\spec-014\story.test.mjs — "AC-014-06 mọi gói sâu chơi trọn ngày bằng story.ts" |
+| AC-014-07 | tests\spec-014\story.test.mjs — "AC-014-07 game không gọi engine, controller hay mini-game" |
+| AC-014-08 | tests\spec-014\story.test.mjs — "AC-014-08 GamePlayer không còn chữ chấm đúng/sai" |
+| AC-014-09 | tests\spec-014\story.test.mjs — "AC-014-09 GamePlayer có thẻ Ngoài đời thật và màn kết mới" |
+| AC-014-10 | tests\spec-014\story.test.mjs — "AC-014-10 trang một ngày của 6 nghề có nút bắt đầu, không nh" |
+| AC-014-11 | tests\spec-014\story.test.mjs — "AC-014-11 không file test đã khóa nào bị sửa" |

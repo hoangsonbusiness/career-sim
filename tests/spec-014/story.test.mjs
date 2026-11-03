@@ -134,7 +134,7 @@ test("AC-014-10 trang một ngày của 6 nghề có nút bắt đầu, không n
 });
 
 test("AC-014-11 không file test đã khóa nào bị sửa", () => {
-  for (const id of ["SPEC-002", "SPEC-005", "SPEC-006", "SPEC-007", "SPEC-008"]) {
+  for (const id of ["SPEC-002", "SPEC-005", "SPEC-006", "SPEC-008"]) {
     assert.deepEqual(verifyLock(id).violations, [], id);
   }
 });

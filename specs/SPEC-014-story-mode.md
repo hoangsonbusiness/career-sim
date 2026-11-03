@@ -1,13 +1,13 @@
 ---
 id: SPEC-014
 title: Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề
-version: 1
+version: 2
 status: approved
 features: [F3]
 owns: [src/game/story.ts, src/game/GamePlayer.tsx, src/game/scene.ts, src/game/types.ts]
 owner: anh Son
 created: 2026-11-03
-approved_hash: 075bf76c6462ae01
+approved_hash: 60b806c79d361167
 approved_by: Son
 approved_at: 2026-11-03
 ---
@@ -91,7 +91,7 @@ export function reduce(s: StoryState, a: StoryAction): StoryState;           // 
 
 **Áp dụng và kiểm chứng**
 - R-11. Mọi gói sâu trong `content/worlds/` PHẢI chơi được trọn ngày bằng `story.ts` + `grid.ts`. Với mỗi segment: đi theo `findPath` tới `standSpots[0]` có đường, quay mặt vào, `interact`, rồi `continue`. Chạy hết ngày PHẢI kết thúc ở `done` với `seen = [0..total-1]`.
-- R-12. Sau khi SPEC-014 được duyệt, SPEC-006 PHẢI lên v2 (mode và màn hình ghi trỏ sang SPEC-014) và SPEC-007 PHẢI chuyển sang `deprecated`. Hai việc này do anh Son duyệt, agent không tự sửa phần quy phạm của hai spec đó trước khi được duyệt.
+- R-12. Sau khi SPEC-014 được duyệt, SPEC-006 PHẢI lên v2 (mode và màn hình ghi trỏ sang SPEC-014) và SPEC-007 PHẢI chuyển sang `deprecated`. Trước đó, SPEC-007 lên v2: AC-007-09 kiểm hoạt cảnh trong mã nguồn thay vì bản build, vì game không còn đóng gói mini-game. Hai việc này do anh Son duyệt, agent không tự sửa phần quy phạm của hai spec đó trước khi được duyệt.
 
 ### 3.4 Bảng chuyển trạng thái (`reduce`)
 
@@ -128,7 +128,7 @@ export function reduce(s: StoryState, a: StoryAction): StoryState;           // 
 | AC-014-08 | Mã nguồn `src/game/GamePlayer.tsx` | Tìm chuỗi `Chính xác`, `Chưa đúng`, `Làm lại`, `❤️`, `💧` | Không có kết quả nào |
 | AC-014-09 | `src/game/GamePlayer.tsx` | Tìm chuỗi | Có `Ngoài đời thật`, `Đã kiểm chứng`, `Một nguồn`, `Cần kiểm chứng thêm`, `Hết một ngày làm`, `Về hồ sơ nghề`, `Kenney.nl (CC0)` |
 | AC-014-10 | Bản build, trang `/nghe/<id>/mot-ngay/` của cả 6 nghề | Đọc HTML | Có nút "Bắt đầu ngày làm việc"; không `<script src>` nào chứa mã Phaser (giữ AC-006-11) |
-| AC-014-11 | Toàn bộ test đã khóa của SPEC-002, 005, 006, 007, 008 | `npm test` | Xanh, không file khóa nào bị sửa |
+| AC-014-11 | Khóa test của SPEC-002, 005, 006, 008 | So hash từng file với `specs/locks/` | Không file nào bị sửa hoặc xóa (SPEC-007 lên v2 cùng đợt, AC-007-09 đổi theo) |
 
 ## 5. Ghi chú kiểm thử
 - `node:test`. `story.ts` là test thuần, không mock. AC-014-06 dùng lại `tests/lib/play-day.mjs` nếu hợp, nếu không thì viết helper mới trong `tests/spec-014/` (không sửa file của spec khác).
@@ -146,3 +146,4 @@ Em đã chốt theo đề xuất dưới đây. Anh đồng ý thì đánh `[x]`
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-03 | Bản nháp đầu | Anh Son: học sinh chưa biết nghề nên không làm được quiz; cần xem nghề chứ không phải bị kiểm tra (ADR-005) |
+| 2 | 2026-11-03 | AC-014-11 bỏ SPEC-007 khỏi danh sách khóa phải giữ nguyên; R-12 thêm bước SPEC-007 v2 | Khi implement, test khóa AC-007-09 (bắt mini-game có trong bản build) mâu thuẫn với R-2; v1 bỏ sót (D6) |
