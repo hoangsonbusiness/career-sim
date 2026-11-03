@@ -1,0 +1,9 @@
+{
+  "spec": "SPEC-014",
+  "locked_by": "complete 2026-11-03",
+  "locked_at": "2026-11-03",
+  "files": {
+    "tests\\spec-014\\story.test.mjs": "0a2edb85079d41e7",
+    "tests\\spec-014\\vectors.json": "8ed695487f6364f2"
+  }
+}

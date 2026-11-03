@@ -10,14 +10,14 @@
 | [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
 | [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 16/16 |
 | [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 14/14 |
-| [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 2 | approved | ✓ Son 2026-11-03 | [F3] | 10/10 |
+| [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 10/10 |
 | [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3] | 11/11 |
 | [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 2 | approved | ✓ Son 2026-11-03 | [F3] | 11/11 |
+| [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 11/11 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 

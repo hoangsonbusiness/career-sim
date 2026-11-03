@@ -3,7 +3,7 @@
   "locked_by": "complete 2026-11-03",
   "locked_at": "2026-11-03",
   "files": {
-    "tests\\spec-007\\build.test.mjs": "b711b5796bba6d64",
+    "tests\\spec-007\\build.test.mjs": "40e50cdfff787cc1",
     "tests\\spec-007\\layout.test.mjs": "ba9760dc803cf381",
     "tests\\spec-007\\vectors.json": "1287100114978d1a"
   }
