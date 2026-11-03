@@ -1,0 +1,20 @@
+[
+  { "name": "2 phần, 1 câu suy ngẫm, chơi trọn", "total": 2, "questions": 1,
+    "actions": ["start", "interact", "continue", "interact", "continue", "continue"],
+    "expect": { "mode": "done", "index": 1, "total": 2, "question": 0, "questions": 1, "seen": [0, 1] } },
+  { "name": "không có câu suy ngẫm thì xong ngay sau cảnh cuối", "total": 1, "questions": 0,
+    "actions": ["start", "interact", "continue"],
+    "expect": { "mode": "done", "index": 0, "total": 1, "question": 0, "questions": 0, "seen": [0] } },
+  { "name": "thao tác lạ bị bỏ qua", "total": 3, "questions": 2,
+    "actions": ["continue", "interact", "start", "start", "continue", "interact", "interact", "start"],
+    "expect": { "mode": "scene", "index": 0, "total": 3, "question": 0, "questions": 2, "seen": [0] } },
+  { "name": "đang ở câu suy ngẫm thứ hai", "total": 1, "questions": 3,
+    "actions": ["start", "interact", "continue", "continue"],
+    "expect": { "mode": "reflection", "index": 0, "total": 1, "question": 1, "questions": 3, "seen": [0] } },
+  { "name": "done bỏ qua mọi thao tác", "total": 1, "questions": 1,
+    "actions": ["start", "interact", "continue", "continue", "start", "interact", "continue"],
+    "expect": { "mode": "done", "index": 0, "total": 1, "question": 0, "questions": 1, "seen": [0] } },
+  { "name": "giữa ngày, đang đi tới phần 3", "total": 4, "questions": 1,
+    "actions": ["start", "interact", "continue", "interact", "continue"],
+    "expect": { "mode": "walk", "index": 2, "total": 4, "question": 0, "questions": 1, "seen": [0, 1] } }
+]
