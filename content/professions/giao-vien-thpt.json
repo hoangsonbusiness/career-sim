@@ -28,7 +28,9 @@
     { "id": "S20", "type": "press", "title": "Chủ đề văn bản hướng dẫn Luật Nhà giáo 2025", "publisher": "Thư viện Pháp luật", "url": "https://thuvienphapluat.vn/chu-de-van-ban/412/chi-tiet-van-ban-huong-dan-luat-nha-giao-2025", "accessed": "2026-11-02" },
     { "id": "S21", "type": "press", "title": "Tổng hợp 10 điểm mới của dự thảo Thông tư quy định chế độ làm việc giáo viên", "publisher": "Tạp chí Giáo dục Việt Nam", "url": "https://giaoduc.net.vn/tong-hop-10-diem-moi-cua-du-thao-thong-tu-quy-dinh-che-do-lam-viec-giao-vien-can-biet-post263648.gd", "accessed": "2026-11-02" },
     { "id": "S22", "type": "reference", "title": "O*NET 25-2031.00 — Secondary School Teachers, Except Special and Career/Technical Education", "publisher": "U.S. Department of Labor / O*NET", "url": "https://www.onetonline.org/link/summary/25-2031.00", "accessed": "2026-11-02", "note": "Chỉ dùng làm khung phân rã nhiệm vụ (R2.6)." },
-    { "id": "S23", "type": "press", "title": "Quy định nhiệm vụ của giáo viên trung học phổ thông (theo Thông tư 30/2026)", "publisher": "Cổng PBGDPL TP. Cần Thơ", "url": "https://pbgdpl.cantho.gov.vn/quy-dinh-nhiem-vu-cua-giao-vien-trung-hoc-pho-thong", "accessed": "2026-11-02" }
+    { "id": "S23", "type": "press", "title": "Quy định nhiệm vụ của giáo viên trung học phổ thông (theo Thông tư 30/2026)", "publisher": "Cổng PBGDPL TP. Cần Thơ", "url": "https://pbgdpl.cantho.gov.vn/quy-dinh-nhiem-vu-cua-giao-vien-trung-hoc-pho-thong", "accessed": "2026-11-02" },
+    { "id": "S24", "type": "testimony", "title": "Giáo viên chủ nhiệm chia sẻ về nghề từ trải nghiệm thực tế (cô Trịnh Thị Hiên, Trường THPT Minh Châu, Hưng Yên)", "publisher": "Báo Giáo dục & Thời đại", "url": "https://giaoducthoidai.vn/giao-vien-chu-nhiem-chia-se-ve-nghe-tu-trai-nghiem-thuc-te-post635879.html", "accessed": "2026-11-03", "issued_date": "2023-04-25" },
+    { "id": "S25", "type": "testimony", "title": "Trăm dâu đổ đầu… giáo viên chủ nhiệm - Kỳ 1: Những “ca” khó (chia sẻ của giáo viên THPT Trần Hưng Đạo, THPT Nhân Chính, Hà Nội)", "publisher": "Báo Tuổi Trẻ", "url": "https://tuoitre.vn/tram-dau-do-dau-giao-vien-chu-nhiem-ky-1-nhung-ca-kho-20190502085953611.htm", "accessed": "2026-11-03", "issued_date": "2019-05-02" }
   ],
   "requirements": {
     "thcs": [
@@ -170,7 +172,7 @@
         "time": "16:45",
         "title": "Cuộc gọi từ phụ huynh",
         "narrative": "Mẹ của một học sinh lớp chủ nhiệm gọi điện, không vui vì con bị điểm thấp và cho rằng cô/thầy chấm khắt khe.",
-        "basis": { "kind": "fact", "text": "Phối hợp, trao đổi với cha mẹ học sinh về việc học và rèn luyện của học sinh là một phần công việc của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
+        "basis": { "kind": "fact", "text": "Phối hợp, trao đổi với cha mẹ học sinh về việc học và rèn luyện của học sinh là một phần công việc của giáo viên trung học.", "source_ids": ["S22", "S23", "S24", "S25"], "confidence": "single_source" },
         "task": {
           "type": "dialogue",
           "prompt": "Trao đổi với phụ huynh",
