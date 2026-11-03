@@ -3,10 +3,10 @@
 // Điểm số và vòng đời ngày do engine SPEC-002; bản nháp đáp án do controller SPEC-005.
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createEngine, type EngineState, type SegmentResult } from "../engine/index";
-import { canSubmit, formatDelta, initialDraft, toAnswer, update, type Action, type Draft } from "../sim/controller";
-import { TaskView, type PlayerSimulation } from "../sim/DayPlayer";
-import { Citation } from "../profile/components";
+import { formatDelta, initialDraft, toAnswer, update, type Action, type Draft } from "../sim/controller";
+import type { PlayerSimulation } from "../sim/DayPlayer";
 import type { CitationView } from "../profile/view";
+import { MinigameLayer, ResultLayer, useAnchor, useFrameSize } from "./minigames/MinigameLayer";
 import type { GameHandle } from "./scene";
 import type { GameMode } from "./quest";
 import type { WorldData } from "./types";
@@ -45,8 +45,6 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
   const [draft, setDraft] = useState<Draft | null>(null);
   const [result, setResult] = useState<SegmentResult | null>(null);
   const [floating, setFloating] = useState<string[]>([]);
-  const [showMore, setShowMore] = useState(false);
-  const [showSources, setShowSources] = useState(false);
   const [question, setQuestion] = useState(0);
 
   const seg = state.segmentIndex >= 0 ? sim.segments[state.segmentIndex] : null;
@@ -69,8 +67,8 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
     const cur = sim.segments[s.segmentIndex];
     game.current?.setWalkEnabled(false);
     game.current?.setTarget(null);
+    game.current?.focusOn(world.segments[cur.id].target); // SPEC-007 R-1
     setDraft(initialDraft(cur.id, cur.task));
-    setShowSources(false);
     shownAt.current = performance.now();
     setMode("task");
   }, [engine, sim]);
@@ -101,7 +99,6 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
     const r = engine.submit(toAnswer(seg.task, draft), { durationMs });
     setResult(r);
     setState(engine.state());
-    setShowMore(false);
     setFloating(formatDelta(r.appliedDelta, sim.stats));
     game.current?.emote(ws?.npc ?? null, emoteFor(r, sim.stats[0].id));
     setMode("result");
@@ -114,6 +111,7 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
     const s = engine.state();
     setState(s);
     setFloating([]);
+    game.current?.focusOn(null);
     if (s.phase === "reflection") { setQuestion(0); setMode("reflection"); return; }
     setMode("walk"); // đóng bảng kết quả ngay; di chuyển chỉ bật lại sau khi đổi bản đồ xong
     await enterSegment();
@@ -124,6 +122,12 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
   // Cập nhật dạng hàm: bấm nhanh nhiều lần trước khi vẽ lại không làm mất thao tác trước.
   const act = (a: Action) => seg && setDraft((d) => (d ? update(seg.task, d, a) : d));
   const questions = sim.reflection_questions ?? [];
+
+  // SPEC-007: điểm neo bong bóng (NPC của việc, hoặc nhân vật chính) và kích thước khung game.
+  const inTask = mode === "task" || mode === "result";
+  const npcAnchor = useAnchor(game.current, ws?.npc ?? null, inTask);
+  const playerAnchor = useAnchor(game.current, null, inTask);
+  const frameSize = useFrameSize(host.current);
 
   return (
     <div className="relative h-[75vh] min-h-[420px] w-full overflow-hidden rounded-lg bg-[#2b2b35] select-none">
@@ -171,41 +175,28 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
         </div>
       )}
 
-      {/* Bảng task (R-12) */}
+      {/* Hoạt cảnh mini-game (SPEC-007) */}
       {mode === "task" && seg && draft && (
-        <div className="absolute inset-x-2 bottom-2 max-h-[70%] overflow-y-auto">
-          <div className={`${frame} space-y-2 p-3 text-[#3b2a1a]`}>
-            <div className="flex items-start justify-between gap-2">
-              <p className="text-sm"><span className="font-bold">{npcName ?? "Bạn"}:</span> {seg.narrative}</p>
-              <button className="shrink-0 text-lg" title="Nguồn: việc này có thật trong nghề" onClick={() => setShowSources((v) => !v)}>📖</button>
-            </div>
-            {showSources && (
-              <div className="rounded bg-white p-2 text-xs">
-                {seg.basis.text}
-                {(citations[seg.id] ?? []).map((c, k) => <Citation key={k} c={c} />)}
-              </div>
-            )}
-            <p className="font-bold">{seg.task.prompt}</p>
-            <TaskView segmentId={seg.id} task={seg.task} draft={draft} act={act} />
-            <div className="flex justify-end"><button className={primary} disabled={!canSubmit(seg.task, draft)} onClick={submit}>Nộp</button></div>
-          </div>
-        </div>
+        <MinigameLayer
+          key={`${seg.id}-${state.history.length}`}
+          segmentId={seg.id}
+          task={seg.task}
+          narrative={seg.narrative}
+          basis={seg.basis.text}
+          citations={citations[seg.id] ?? []}
+          draft={draft}
+          act={act}
+          onDone={submit}
+          speaker={npcName ?? "Bạn"}
+          anchor={npcAnchor}
+          playerAnchor={playerAnchor}
+          frameSize={frameSize}
+        />
       )}
 
-      {/* Kết quả */}
+      {/* Kết quả (SPEC-007 R-12) */}
       {mode === "result" && result && (
-        <div className="absolute inset-x-2 bottom-2">
-          <div className={`${frame} space-y-2 p-3 text-[#3b2a1a]`}>
-            {result.success !== null && <p className="text-lg font-bold">{result.success ? "Chính xác!" : "Chưa đúng"}</p>}
-            {result.feedback[0] && <p className="text-sm">{result.feedback[0]}</p>}
-            {result.feedback.length > 1 && !showMore && <button className="text-sm underline" onClick={() => setShowMore(true)}>Xem thêm</button>}
-            {showMore && result.feedback.slice(1).map((f, k) => <p key={k} className="text-sm">{f}</p>)}
-            <div className="flex justify-end gap-2">
-              <button className={secondary} onClick={retry}>Làm lại</button>
-              <button className={primary} onClick={next}>Tiếp tục</button>
-            </div>
-          </div>
-        </div>
+        <ResultLayer result={result} speaker={npcName ?? "Bạn"} anchor={npcAnchor} frameSize={frameSize} onRetry={retry} onNext={next} />
       )}
 
       {/* Nhìn lại một ngày */}

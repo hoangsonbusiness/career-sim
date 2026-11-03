@@ -2,7 +2,7 @@
 id: SPEC-007
 title: Hoạt cảnh mini-game trong thế giới 2D
 version: 1
-status: approved
+status: implemented
 features: [F3]
 owns: [src/game/minigames/**]
 owner: anh Son

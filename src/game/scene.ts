@@ -20,6 +20,10 @@ export interface GameHandle {
   setWalkEnabled: (on: boolean) => void;
   /** Hiện biểu cảm trên NPC (id) hoặc trên người chơi (null), 1200 ms (R-13). */
   emote: (npcId: string | null, emoji: string) => void;
+  /** SPEC-007 R-1: camera tiến lại gần target khi mở việc; null = trở lại bám người chơi. */
+  focusOn: (target: Pos | null) => void;
+  /** SPEC-007 R-2: điểm neo trên màn hình của NPC (id) hoặc người chơi (null). */
+  anchorOf: (npcId: string | null) => { x: number; y: number } | null;
   destroy: () => void;
 }
 
@@ -52,6 +56,8 @@ class WorldScene extends Phaser.Scene {
   route: Pos[] = [];
   autoInteract: { face: Dir } | null = null;
   keys = new MoveInput();
+  baseZoom = 2;
+  focused = false;
 
   constructor() { super("world"); }
 
@@ -159,10 +165,36 @@ class WorldScene extends Phaser.Scene {
     const mw = this.map.width * T, mh = this.map.height * T;
     const fit = Math.min(width / mw, height / mh);
     const zoom = Math.max(2, Math.min(4, Math.floor(fit * 2) / 2 || 2));
-    const cam = this.cameras.main.setZoom(zoom);
+    this.baseZoom = zoom;
+    const cam = this.cameras.main.setZoom(this.focused ? Math.min(5, zoom + 1) : zoom);
     // Bản đồ nhỏ hơn khung nhìn thì nới biên camera đều hai phía để bản đồ nằm giữa.
     const vw = width / zoom, vh = height / zoom;
     cam.setBounds(Math.min(0, (mw - vw) / 2), Math.min(0, (mh - vh) / 2), Math.max(mw, vw), Math.max(mh, vh));
+  }
+
+  /** SPEC-007 R-1: camera dịch tới giữa người chơi và target, phóng to thêm 1 mức; null = trở lại bám người chơi. */
+  focusOn(target: Pos | null) {
+    const cam = this.cameras.main;
+    const ms = this.reduced ? 0 : 300;
+    this.focused = target !== null;
+    if (target) {
+      const t = center(target);
+      cam.stopFollow();
+      cam.pan((t.x + this.player.x) / 2, (t.y + this.player.y) / 2, ms, "Sine.easeInOut", true);
+      cam.zoomTo(Math.min(5, this.baseZoom + 1), ms, "Sine.easeInOut", true);
+    } else {
+      cam.zoomTo(this.baseZoom, ms, "Sine.easeInOut", true);
+      cam.startFollow(this.player, true, ms ? 0.15 : 1, ms ? 0.15 : 1);
+      if (ms) this.time.delayedCall(ms + 200, () => cam.setLerp(1, 1)); // trở lại bám sát (BUG-004)
+    }
+  }
+
+  /** SPEC-007 R-2: điểm neo (đỉnh đầu) của NPC hoặc người chơi, toạ độ màn hình của khung game. */
+  anchorOf(npcId: string | null): { x: number; y: number } | null {
+    const host = npcId ? this.npcObjs.get(npcId) : this.player;
+    if (!host) return null;
+    const cam = this.cameras.main;
+    return { x: (host.x - cam.worldView.x) * cam.zoom, y: (host.y - T / 2 - cam.worldView.y) * cam.zoom };
   }
 
   blocked(): Pos[] {
@@ -253,8 +285,9 @@ export function mountGame(parent: HTMLElement, world: WorldData, cb: GameCallbac
     scene: [],
   });
   // Scene chưa có `events` cho tới khi game khởi động xong, nên scene tự báo sẵn sàng ở cuối create().
+  let scene: WorldScene | null = null;
   const ready = new Promise<WorldScene>((resolve) => {
-    game.scene.add("world", new WorldScene(), true, { world, cb, reduced, onReady: resolve });
+    game.scene.add("world", new WorldScene(), true, { world, cb, reduced, onReady: (s: WorldScene) => { scene = s; resolve(s); } });
   });
 
   return {
@@ -269,6 +302,8 @@ export function mountGame(parent: HTMLElement, world: WorldData, cb: GameCallbac
     setTarget: (t) => { void ready.then((s) => s.setTarget(t)); },
     setWalkEnabled: (on) => { void ready.then((s) => { s.walkEnabled = on; if (!on) { s.route = []; s.autoInteract = null; s.keys.clear(); } }); },
     emote: (id, e) => { void ready.then((s) => s.emote(id, e)); },
+    focusOn: (t) => { void ready.then((s) => s.focusOn(t)); },
+    anchorOf: (id) => scene?.anchorOf(id) ?? null,
     destroy: () => game.destroy(true),
   };
 }
