@@ -138,8 +138,8 @@ function StatBars({ stats, values }: { stats: PlayerSimulation["stats"]; values:
   );
 }
 
-/** R-12 */
-function TaskView({ segmentId, task, draft, act }: { segmentId: string; task: Task; draft: Draft; act: (a: Action) => void }) {
+/** R-12. Dùng lại trong bảng task của game 2D (SPEC-006 R-12). */
+export function TaskView({ segmentId, task, draft, act }: { segmentId: string; task: Task; draft: Draft; act: (a: Action) => void }) {
   switch (draft.type) {
     case "sequence":
       return (

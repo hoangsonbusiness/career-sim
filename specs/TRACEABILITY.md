@@ -8,8 +8,8 @@
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
 | [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | implemented | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
 | [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
-| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ❌ đã đổi sau duyệt | [F3] | 16/16 |
-| [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | draft | — | [F3] | 0/14 |
+| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | approved | ✓ Son 2026-11-03 | [F3] | 16/16 |
+| [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | approved | ✓ Son 2026-11-03 | [F3] | 14/14 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -116,17 +116,17 @@
 
 | AC | Test |
 |---|---|
-| AC-006-01 | ❌ chưa có |
-| AC-006-02 | ❌ chưa có |
-| AC-006-03 | ❌ chưa có |
-| AC-006-04 | ❌ chưa có |
-| AC-006-05 | ❌ chưa có |
-| AC-006-06 | ❌ chưa có |
-| AC-006-07 | ❌ chưa có |
-| AC-006-08 | ❌ chưa có |
-| AC-006-09 | ❌ chưa có |
-| AC-006-10 | ❌ chưa có |
-| AC-006-11 | ❌ chưa có |
-| AC-006-12 | ❌ chưa có |
-| AC-006-13 | ❌ chưa có |
-| AC-006-14 | ❌ chưa có |
+| AC-006-01 | tests\spec-006\grid.test.mjs — "AC-006-01 toàn bộ conformance vectors đạt" |
+| AC-006-02 | tests\spec-006\grid.test.mjs — "AC-006-02 step: tường, biên, ô bị chặn" |
+| AC-006-03 | tests\spec-006\grid.test.mjs — "AC-006-03 findPath: BFS ưu tiên up, right, down, left" |
+| AC-006-04 | tests\spec-006\grid.test.mjs — "AC-006-04 standSpots: thứ tự up, right, down, left và hướng " |
+| AC-006-05 | tests\spec-006\grid.test.mjs — "AC-006-05 canInteract chỉ khi quay mặt đúng vào target" |
+| AC-006-06 | tests\spec-006\world.test.mjs — "AC-006-06 thế giới mẫu hợp lệ → exit 0" |
+| AC-006-07 | tests\spec-006\world.test.mjs — "AC-006-07 các lỗi cấu trúc → exit 1, có tên file" |
+| AC-006-08 | tests\spec-006\world.test.mjs — "AC-006-08 target bị tường bao kín → exit 1" |
+| AC-006-09 | tests\spec-006\world.test.mjs — "AC-006-09 thế giới giáo viên THPT hợp lệ và đủ 7 segment" |
+| AC-006-10 | tests\spec-006\world.test.mjs — "AC-006-10 check chạy validate:world ngay sau validate" |
+| AC-006-11 | tests\spec-006\build.test.mjs — "AC-006-11 trang màn chơi có nút bắt đầu, script ban đầu khôn" |
+| AC-006-12 | tests\spec-006\build.test.mjs — "AC-006-12 chunk Phaser tải lười ≤ 600 KB gzip" |
+| AC-006-13 | tests\spec-006\build.test.mjs — "AC-006-13 ảnh tileset tồn tại và có giấy phép cho từng bộ as" |
+| AC-006-14 | tests\spec-006\playthrough.test.mjs — "AC-006-14 chơi hết ngày giáo viên trong thế giới, tới được m" |
