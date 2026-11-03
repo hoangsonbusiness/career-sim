@@ -2,7 +2,7 @@
 id: SPEC-010
 title: Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/lap-trinh-vien.json, content/worlds/lap-trinh-vien.json]
 owner: anh Son
