@@ -427,4 +427,70 @@ const constructionWorld = {
 };
 writeFileSync(out("content/worlds/ky-su-xay-dung.json"), JSON.stringify(constructionWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung}.json");
+// ---------- Nhân viên Marketing (SPEC-013): một văn phòng agency ----------
+// Phòng họp trái, hành lang bảng ý tưởng giữa, phòng trưởng nhóm phải, khu bàn mở phía dưới.
+const AGENCY = [
+  "##############################",
+  "#...........#...#............#",
+  "#...........#...#............#",
+  "#...........#...#............#",
+  "#...........#...#............#",
+  "#...........#...#............#",
+  "#...........#...#............#",
+  "######D#######D########D######",
+  "#............................#",
+  "#............................#",
+  "#............................#",
+  "#............................#",
+  "#............................#",
+  "#............................#",
+  "#............................#",
+  "##############################",
+];
+const AGENCY_PROPS = [
+  // Phòng họp: bàn dài, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng trưởng nhóm: bàn, kệ hồ sơ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn mở: bàn của bạn, bàn designer, bàn content, góc cà phê
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [5, 10, 85, 1], [6, 10, 86, 1], [24, 10, 85, 1], [25, 10, 86, 1],
+  [1, 13, 324, 1], [2, 13, 325, 1], [3, 13, 326, 1], [28, 14, 17, 1],
+];
+const AGENCY_DECOR = [
+  // Bảng ý tưởng ghép từ các tờ giấy trên tường hành lang.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [6, 10, 18], [25, 10, 18],
+];
+
+const marketingWorld = {
+  profession_id: "nhan-vien-marketing",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("agency", AGENCY, AGENCY_PROPS, AGENCY_DECOR, { x: 15, y: 13 }),
+  ],
+  npcs: [
+    { id: "truong-nhom-hop", map: "agency", x: 3, y: 4, name: "Trưởng nhóm", sprite: C(379) },
+    { id: "khach-hang", map: "agency", x: 9, y: 4, name: "Khách hàng", sprite: C(433) },
+    { id: "truong-nhom", map: "agency", x: 22, y: 4, name: "Trưởng nhóm", sprite: C(379) },
+    { id: "designer", map: "agency", x: 5, y: 11, name: "Đồng nghiệp Designer", sprite: C(54, 17, 22) },
+    { id: "content", map: "agency", x: 24, y: 11, name: "Đồng nghiệp Content", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "m1-brief": { map: "agency", target: { x: 3, y: 4 }, npc: "truong-nhom-hop", quest: "Vào phòng họp, nhận brief chiến dịch" },
+    "m2-duyet-noi-dung": { map: "agency", target: { x: 15, y: 10 }, quest: "Về bàn làm việc, duyệt nội dung trước khi đăng" },
+    "m3-y-tuong": { map: "agency", target: { x: 12, y: 3 }, quest: "Tới bảng ý tưởng, xếp lại các đề xuất" },
+    "m4-khach-doi-y": { map: "agency", target: { x: 9, y: 4 }, npc: "khach-hang", quest: "Khách hàng đang chờ trong phòng họp" },
+    "m5-binh-luan": { map: "agency", target: { x: 15, y: 10 }, quest: "Bình luận tiêu cực lan nhanh, về bàn xử lý" },
+    "m6-chia-thoi-gian": { map: "agency", target: { x: 15, y: 10 }, quest: "Chia ba giờ còn lại cho các việc cuối ngày" },
+    "m7-bao-cao-kpi": { map: "agency", target: { x: 22, y: 4 }, npc: "truong-nhom", quest: "Mang số liệu KPI sang phòng trưởng nhóm" },
+  },
+};
+writeFileSync(out("content/worlds/nhan-vien-marketing.json"), JSON.stringify(marketingWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing}.json");

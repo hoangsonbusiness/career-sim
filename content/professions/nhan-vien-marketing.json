@@ -1,0 +1,553 @@
+{
+  "id": "nhan-vien-marketing",
+  "name": "Nhân viên Marketing",
+  "aliases": ["Marketing Executive", "Nhân viên truyền thông", "Chuyên viên marketing"],
+  "group": { "label": "Marketing, Truyền thông & Quảng cáo" },
+  "holland": ["E", "A", "S"],
+  "summary": "Lên kế hoạch và triển khai chiến dịch cho thương hiệu, phối hợp nội dung với thiết kế, theo dõi kênh mạng xã hội và đọc số liệu để điều chỉnh. Công việc đòi hỏi sáng tạo nhưng cũng nhiều deadline, chỉ tiêu và trách nhiệm pháp lý về quảng cáo.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Quảng cáo số 16/2012/QH13",
+      "publisher": "Quốc hội / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://vanban.chinhphu.vn/default.aspx?docid=163008&pageid=27160",
+      "accessed": "2026-11-03",
+      "issued_date": "2012-06-21",
+      "effective_date": "2013-01-01",
+      "note": "Đã đọc Điều 8: cấm quảng cáo gây nhầm lẫn, dùng hình ảnh cá nhân chưa được đồng ý, so sánh trực tiếp và dùng từ ngữ khẳng định tuyệt đối khi không có tài liệu chứng minh."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật số 75/2025/QH15 sửa đổi, bổ sung một số điều của Luật Quảng cáo",
+      "publisher": "Quốc hội / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=214561&pageid=27160",
+      "accessed": "2026-11-03",
+      "issued_date": "2025-06-16",
+      "effective_date": "2026-01-01",
+      "note": "Bổ sung quyền, nghĩa vụ của người chuyển tải sản phẩm quảng cáo; yêu cầu gỡ bỏ quảng cáo vi phạm trên mạng chậm nhất 24 giờ kể từ khi có yêu cầu."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Nghị định số 342/2025/NĐ-CP quy định chi tiết một số điều của Luật Quảng cáo",
+      "publisher": "Chính phủ / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://vanban.chinhphu.vn/?docid=216403&pageid=27160",
+      "accessed": "2026-11-03",
+      "issued_date": "2025-12-26",
+      "effective_date": "2026-02-15",
+      "note": "Đã đọc Điều 17 về quảng cáo không ở vùng cố định, Điều 18 về ngăn chặn, gỡ bỏ quảng cáo vi phạm và Điều 19 về lưu trữ hồ sơ, minh bạch quảng cáo trên mạng."
+    },
+    {
+      "id": "S4",
+      "type": "market",
+      "title": "Nhân viên Marketing là gì? Cập nhật mức lương nhân viên Marketing",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/nhan-vien-marketing",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-09-04",
+      "note": "Dẫn Báo cáo thị trường tuyển dụng 2025–2026: nhân viên 1–3 năm kinh nghiệm 7,518–13,782 triệu đồng/tháng; 3–5 năm 10,622–19,473 triệu đồng/tháng. Lương thay đổi theo vị trí, địa điểm và ngành."
+    },
+    {
+      "id": "S5",
+      "type": "testimony",
+      "title": "Không dám tan làm đúng giờ",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/khong-dam-tan-lam-dung-gio-5107733.html",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-08-28",
+      "note": "Lời kể của Thục Uyên, 32 tuổi, nhân viên marketing tại TP HCM: dù hết giờ, cô thường ở lại sau 19h30 hoặc đợi sếp về vì sợ bị đánh giá thiếu nhiệt tình."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Mệt mỏi, tụt năng lượng cuối năm: Bác sĩ mách cách lấy lại tinh thần",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/met-moi-tut-nang-luong-cuoi-nam-bac-si-mach-cach-lay-lai-tinh-than-185251217232307102.htm",
+      "accessed": "2026-11-03",
+      "issued_date": "2025-12-17",
+      "note": "Lời kể của chị T.T.T.A, 32 tuổi, nhân viên marketing, đi khám vì mệt mỏi kéo dài, mất ngủ và cáu gắt; bài báo nêu áp lực KPI trong công việc."
+    },
+    {
+      "id": "S7",
+      "type": "reference",
+      "title": "Nhân viên Digital Marketing là gì? Mô tả công việc và mức lương chi tiết",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/nhan-vien-digital-marketing-la-gi",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-10-01",
+      "note": "Mô tả công việc gồm lập kế hoạch, triển khai và quản lý chiến dịch; phối hợp content/design; theo dõi, đo lường và báo cáo hiệu quả."
+    },
+    {
+      "id": "S8",
+      "type": "reference",
+      "title": "Câu hỏi phỏng vấn nhân viên truyền thông: báo chí, mạng xã hội, nội bộ",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-viec-lam/phong-van-viec-lam/cau-hoi-phong-van-nhan-vien-truyen-thong",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-10-28",
+      "note": "Nêu tình huống bình luận tiêu cực trên fanpage; quy trình giờ vàng gồm xác minh, thống nhất người phát ngôn, phản hồi ghi nhận ban đầu và cập nhật kết quả xử lý."
+    },
+    {
+      "id": "S9",
+      "type": "press",
+      "title": "Xử gọn deadline, cân đẹp stress",
+      "publisher": "Báo Người Lao Động",
+      "url": "https://tuoitre.vn/nld/xu-gon-deadline-can-dep-stress-196241119115638219.htm",
+      "accessed": "2026-11-03",
+      "issued_date": "2024-11-19",
+      "note": "Phỏng vấn người làm marketing dịp cuối năm: deadline tính từng giờ, phải điều phối từ sản xuất, vận chuyển đến các chương trình quảng cáo, khuyến mãi."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Viết và đọc nhiều để quen diễn đạt ngắn, rõ; tập quan sát quảng cáo quanh mình và hỏi vì sao chúng thu hút người xem.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Thử làm một trang nhỏ hoặc video giới thiệu sở thích, tập lắng nghe góp ý và sửa lại sản phẩm của mình.",
+        "audience": ["thcs"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Học đều Ngữ văn, Toán và tiếng Anh; kiểm tra tổ hợp xét tuyển của từng trường vì các trường có thể yêu cầu môn khác nhau.",
+        "audience": ["thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tạo portfolio vài bài viết, ảnh hoặc video tự làm; ghi lại mục tiêu, cách làm và kết quả để thể hiện tư duy.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Nhiều tin tuyển dụng yêu cầu tốt nghiệp đại học hoặc cao đẳng ngành Marketing, Kinh tế, Quản trị hoặc ngành liên quan.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "note": "Tổng hợp từ mô tả công việc trên TopCV; yêu cầu cụ thể khác theo doanh nghiệp."
+      },
+      {
+        "kind": "advice",
+        "text": "Học thêm phân tích dữ liệu, viết nội dung và kỹ năng thuyết trình; một portfolio có số liệu giúp ứng viên nổi bật hơn.",
+        "audience": ["sinh_vien"]
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Công việc gồm lập kế hoạch, triển khai chiến dịch, phối hợp nội dung và thiết kế, theo dõi KPI rồi báo cáo hiệu quả.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "note": "Tổng hợp mô tả công việc marketing trên TopCV."
+      },
+      {
+        "kind": "fact",
+        "text": "Khi có bình luận tiêu cực lan nhanh, quy trình gợi ý bắt đầu bằng xác minh, thống nhất người phát ngôn và phản hồi ghi nhận.",
+        "source_ids": ["S8"],
+        "confidence": "single_source",
+        "note": "Bài phỏng vấn nhân viên truyền thông của CareerLink."
+      },
+      {
+        "kind": "fact",
+        "text": "Nội dung quảng cáo phải trung thực, không gây nhầm lẫn và không so sánh trực tiếp hoặc khẳng định tuyệt đối khi thiếu căn cứ.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Quảng cáo 16/2012/QH13, Điều 8 khoản 8–11."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Một nhân viên marketing kể ngày nào cũng ở lại văn phòng sau giờ quy định vì sợ bị đánh giá thiếu nhiệt tình.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "Lời kể cá nhân trên VnExpress, không đại diện cho mọi doanh nghiệp."
+      },
+      {
+        "kind": "fact",
+        "text": "Vào mùa chiến dịch cuối năm, công việc có thể kéo dài và deadline được theo dõi sát theo từng giờ.",
+        "source_ids": ["S9"],
+        "confidence": "single_source",
+        "note": "Phỏng vấn người làm marketing của Báo Người Lao Động."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo dữ liệu TopCV, nhân viên marketing 1–3 năm kinh nghiệm có dải lương 7,518–13,782 triệu đồng/tháng; 3–5 năm là 10,622–19,473 triệu.",
+        "source_ids": ["S4"],
+        "confidence": "single_source",
+        "note": "Dẫn Báo cáo thị trường tuyển dụng 2025–2026; mức thực tế tùy vị trí, ngành và địa điểm."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Nhân viên marketing thường làm việc trong agency hoặc phòng marketing, phối hợp với khách hàng, nội dung, thiết kế và bên vận hành.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "note": "Mô tả công việc trên TopCV."
+      },
+      {
+        "kind": "fact",
+        "text": "Nội dung quảng cáo phải được kiểm tra trước khi đăng; người tham gia hoạt động quảng cáo có trách nhiệm với sản phẩm phát hành.",
+        "source_ids": ["S1", "S2"],
+        "confidence": "verified",
+        "note": "Luật Quảng cáo 16/2012/QH13 và Luật 75/2025/QH15, Điều 15a."
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Mai — nhân viên marketing 2 năm kinh nghiệm tại một agency truyền thông",
+    "setting": "Một ngày trong agency: nhận brief, duyệt nội dung, chọn ý tưởng, xử lý khách hàng đổi ý, bình luận tiêu cực và báo cáo KPI.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "sang_tao", "label": "Sáng tạo", "initial": 65 },
+      { "id": "ap_luc", "label": "Áp lực KPI", "initial": 35 }
+    ],
+    "segments": [
+      {
+        "id": "m1-brief",
+        "time": "09:00",
+        "title": "Nhận brief và lên kế hoạch chiến dịch",
+        "narrative": "Sáng đầu tuần, trưởng nhóm đưa brief ra mắt vị trà mới của Trà sữa Mây. Bạn phải biến yêu cầu thành kế hoạch rõ ràng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Theo mô tả công việc, nhân viên marketing lập kế hoạch, triển khai và theo dõi chiến dịch trên các kênh.",
+          "source_ids": ["S7"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước từ brief tới kế hoạch chiến dịch",
+          "steps": [
+            "Đọc brief, chốt mục tiêu và khách hàng mục tiêu",
+            "Kiểm tra ngân sách, thời gian và nguồn lực",
+            "Đề xuất thông điệp, kênh và định dạng nội dung",
+            "Lên lịch nội dung, phối hợp designer và content",
+            "Chốt KPI, cách đo và người duyệt với trưởng nhóm"
+          ],
+          "on_success": { "sang_tao": 4, "ap_luc": -2 },
+          "on_fail": { "ap_luc": 4 }
+        }
+      },
+      {
+        "id": "m2-duyet-noi-dung",
+        "time": "10:00",
+        "title": "Duyệt bài quảng cáo trước khi đăng",
+        "narrative": "Content gửi bản nháp bài đăng. Bạn phải khoanh những dòng vi phạm trước khi nội dung lên trang của thương hiệu.",
+        "basis": {
+          "kind": "fact",
+          "text": "Nội dung quảng cáo phải trung thực, không gây nhầm lẫn và không dùng từ ngữ so sánh, khẳng định thiếu căn cứ.",
+          "source_ids": ["S1"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng vi phạm pháp luật quảng cáo",
+          "document": [
+            "BÀI ĐĂNG QUẢNG CÁO — Trà sữa Mây (thương hiệu hư cấu)",
+            "Trà sữa Mây là ngon nhất Việt Nam, ai uống cũng mê.",
+            "Ảnh nhân vật Minh An lấy từ trang cá nhân, chưa xin phép.",
+            "Sản phẩm tốt hơn hẳn trà sữa cùng loại của quán khác.",
+            "Giá 39.000đ, giảm còn 29.000đ từ 1/11 đến 7/11.",
+            "Vị trà sữa trân châu đường đen, cỡ M, ít đá.",
+            "Chương trình áp dụng đến hết ngày 7/11/2026."
+          ],
+          "errors": [
+            { "line": 1, "explain": "Dùng 'ngon nhất' khi không có tài liệu chứng minh là hành vi bị cấm." },
+            { "line": 2, "explain": "Dùng hình ảnh cá nhân chưa được người đó đồng ý là hành vi bị cấm." },
+            { "line": 3, "explain": "So sánh trực tiếp chất lượng với sản phẩm cùng loại của đối thủ là hành vi bị cấm." }
+          ],
+          "on_success": { "sang_tao": 3, "ap_luc": -3 },
+          "on_fail": { "ap_luc": 6, "sang_tao": -3 }
+        }
+      },
+      {
+        "id": "m3-y-tuong",
+        "time": "11:30",
+        "title": "Chọn ý tưởng bám brief",
+        "narrative": "Bảng ý tưởng đầy giấy nhớ. Bạn phải tách phương án đúng brief khỏi ý tưởng lạc đề hoặc có rủi ro pháp lý.",
+        "basis": {
+          "kind": "fact",
+          "text": "Mô tả công việc yêu cầu phối hợp content và thiết kế để tạo creative theo mục tiêu chiến dịch.",
+          "source_ids": ["S7"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp ý tưởng vào đúng brief hoặc lạc brief",
+          "buckets": ["Đúng brief", "Lạc brief"],
+          "items": [
+            { "text": "Video ngắn giới thiệu vị trà mới cho khách 16–24", "bucket": "Đúng brief" },
+            { "text": "Minigame check-in nhận topping tại cửa hàng", "bucket": "Đúng brief" },
+            { "text": "Ảnh sản phẩm ghi rõ giá và thời hạn khuyến mãi", "bucket": "Đúng brief" },
+            { "text": "Bài so sánh trực tiếp với trà sữa của đối thủ", "bucket": "Lạc brief" },
+            { "text": "Dùng câu 'ngon nhất Việt Nam' khi chưa có tài liệu", "bucket": "Lạc brief" },
+            { "text": "Ảnh người mẫu tải trên mạng, chưa xin phép", "bucket": "Lạc brief" }
+          ],
+          "on_success": { "sang_tao": 4, "ap_luc": -1 },
+          "on_fail": { "sang_tao": -3, "ap_luc": 3 }
+        }
+      },
+      {
+        "id": "m4-khach-doi-y",
+        "time": "13:30",
+        "title": "Khách hàng đổi thông điệp sát ngày đăng",
+        "narrative": "Đại diện Trà sữa Mây gọi điện: muốn đổi câu chốt và vẫn giữ lịch đăng ngày mai. Bạn phải vừa giữ quan hệ vừa bảo vệ chất lượng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Vào mùa chiến dịch, quản lý marketing phải bám deadline từng giờ và điều phối lại kế hoạch khi yêu cầu thay đổi.",
+          "source_ids": ["S9"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với khách hàng về yêu cầu mới",
+          "npc": "Khách hàng Trà sữa Mây",
+          "turns": [
+            {
+              "npc_line": "Sếp tôi muốn câu chốt: 'Uống là hết mệt'. Mai phải đăng.",
+              "replies": [
+                {
+                  "text": "Em ghi nhận, nhưng câu đó dễ gây hiểu nhầm về sức khỏe; em gửi phương án khác.",
+                  "effect": { "sang_tao": 2, "ap_luc": 1, "nang_luong": -1 },
+                  "feedback": "Phải cảnh báo nội dung có thể gây hiểu nhầm về công dụng sản phẩm."
+                },
+                {
+                  "text": "Dạ em đổi ngay, không cần kiểm duyệt nữa.",
+                  "effect": { "sang_tao": -3, "ap_luc": 4 },
+                  "feedback": "Bỏ bước kiểm duyệt khiến thương hiệu đối diện rủi ro pháp lý."
+                }
+              ]
+            },
+            {
+              "npc_line": "Nhưng đổi nội dung thì trễ lịch, bên em bị phạt.",
+              "replies": [
+                {
+                  "text": "Em báo thời gian cần để duyệt và giữ lịch nếu chỉ chỉnh câu chữ.",
+                  "effect": { "ap_luc": 1, "nang_luong": -1 },
+                  "feedback": "Nói rõ thời gian và phạm vi chỉnh sửa giúp khách hàng chủ động."
+                },
+                {
+                  "text": "Cứ đăng bản cũ, em tự chịu trách nhiệm.",
+                  "effect": { "sang_tao": -3, "ap_luc": 4 },
+                  "feedback": "Tự nhận trách nhiệm thay khách không giải quyết rủi ro nội dung."
+                }
+              ]
+            },
+            {
+              "npc_line": "Gửi tôi hai phương án, nhớ đúng giọng thương hiệu.",
+              "replies": [
+                {
+                  "text": "Dạ, em gửi trước giờ họp chiều, kèm lý do và mục tiêu.",
+                  "effect": { "sang_tao": 3, "ap_luc": -2 },
+                  "feedback": "Đưa lựa chọn có căn cứ giúp khách hàng quyết nhanh."
+                },
+                {
+                  "text": "Em gửi sau, miễn kịp giờ đăng là được.",
+                  "effect": { "ap_luc": 4, "nang_luong": -2 },
+                  "feedback": "Sát giờ mới gửi làm giảm thời gian duyệt và tăng rủi ro."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "m5-binh-luan",
+        "time": "15:00",
+        "title": "Bình luận tiêu cực lan nhanh",
+        "narrative": "Một bài đăng bị chê vì giao hàng chậm. Bình luận tiêu cực tăng nhanh, nhiều người tag thương hiệu. Bạn xử lý thế nào?",
+        "basis": {
+          "kind": "fact",
+          "text": "Quản lý kênh truyền thông gồm theo dõi, phản hồi bình luận tiêu cực; quy trình khủng hoảng bắt đầu bằng xác minh.",
+          "source_ids": ["S8"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Chọn cách xử lý bình luận tiêu cực",
+          "options": [
+            {
+              "text": "Xác minh, phản hồi ghi nhận công khai, báo trưởng nhóm và cập nhật kết quả",
+              "effect": { "ap_luc": -3, "sang_tao": 1, "nang_luong": -1 },
+              "feedback": "Xác minh trước, phản hồi một giọng và cập nhật là quy trình phù hợp."
+            },
+            {
+              "text": "Xóa và chặn các bình luận tiêu cực để trang sạch",
+              "effect": { "ap_luc": 7, "sang_tao": -4 },
+              "feedback": "Xóa bình luận có thể làm mất bằng chứng và khiến công chúng phản ứng mạnh hơn."
+            },
+            {
+              "text": "Đáp trả từng người để bảo vệ thương hiệu",
+              "effect": { "ap_luc": 5, "sang_tao": -2, "nang_luong": -2 },
+              "feedback": "Tranh luận công khai dễ kéo dài khủng hoảng; cần giọng điệu thống nhất."
+            }
+          ]
+        }
+      },
+      {
+        "id": "m6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia quỹ thời gian buổi chiều",
+        "narrative": "Còn một quãng làm việc trước khi tan. Nội dung, số liệu và cuộc họp đều cần bạn; hãy chia thời gian hợp lý.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một nhân viên marketing kể ngày nào cũng phải ở lại văn phòng sau giờ quy định vì sợ bị đánh giá thiếu nhiệt tình.",
+          "source_ids": ["S5"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Viết nội dung cho tuần sau", "effect_per_30min": { "sang_tao": 2, "nang_luong": -2 } },
+            { "label": "Đọc số liệu chiến dịch", "effect_per_30min": { "ap_luc": -2, "nang_luong": -1 } },
+            { "label": "Họp nhanh với nhóm", "effect_per_30min": { "sang_tao": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ ngơi, ăn tối", "effect_per_30min": { "nang_luong": 3, "ap_luc": -2 } }
+          ]
+        }
+      },
+      {
+        "id": "m7-bao-cao-kpi",
+        "time": "18:00",
+        "title": "Báo cáo kết quả thấp hơn mục tiêu",
+        "narrative": "Cuối ngày, số liệu chiến dịch thấp hơn mục tiêu. Trưởng nhóm gọi bạn vào phòng để nghe báo cáo và phương án tiếp theo.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một nhân viên marketing kể áp lực KPI khiến cô mất ngủ, mệt mỏi kéo dài và cáu gắt.",
+          "source_ids": ["S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn báo cáo kết quả với trưởng nhóm thế nào?",
+          "options": [
+            {
+              "text": "Trình số thật, chỉ ra nguyên nhân, đề xuất thử nghiệm và xin ưu tiên",
+              "effect": { "sang_tao": 3, "ap_luc": 2 },
+              "feedback": "Báo cáo trung thực kèm phân tích giúp nhóm ra quyết định dựa trên dữ liệu."
+            },
+            {
+              "text": "Sửa số cho đẹp để không bị hỏi",
+              "effect": { "sang_tao": -6, "ap_luc": 4 },
+              "feedback": "Sửa số liệu phá niềm tin và khiến quyết định sau đó sai."
+            },
+            {
+              "text": "Đổ lỗi cho nền tảng rồi xin dừng báo cáo",
+              "effect": { "ap_luc": 5, "sang_tao": -3 },
+              "feedback": "Đổ lỗi không thay thế được phân tích; nhà quản lý vẫn cần dữ liệu."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có sẵn lòng nói không với một nội dung hấp dẫn nhưng có thể vi phạm quy định?",
+      "Bạn xử lý thế nào khi khách hàng đổi yêu cầu sát hạn chót?",
+      "Bạn có chịu được việc theo dõi chỉ tiêu và bị hỏi về kết quả mỗi tuần?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "thuc-tap-marketing",
+        "title": "Thực tập sinh / trợ lý marketing",
+        "requirements": [
+          { "kind": "advice", "text": "Làm quen với brief, lịch nội dung, số liệu kênh và quy trình duyệt trước khi đăng." }
+        ]
+      },
+      {
+        "id": "nhan-vien-marketing",
+        "title": "Nhân viên marketing",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Công việc gồm lập kế hoạch, triển khai chiến dịch, phối hợp nội dung và theo dõi KPI.",
+            "source_ids": ["S7"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "truong-nhom-marketing",
+        "title": "Trưởng nhóm marketing",
+        "requirements": [
+          { "kind": "advice", "text": "Cần thêm kinh nghiệm quản lý ngân sách, điều phối nhiều kênh và dẫn dắt nhóm nội dung, thiết kế." }
+        ]
+      },
+      {
+        "id": "marketing-manager",
+        "title": "Marketing Manager",
+        "requirements": [
+          { "kind": "advice", "text": "Hướng tới quản trị mục tiêu kinh doanh, chiến lược thương hiệu, ngân sách và quan hệ đối tác." }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "thuc-tap-marketing", "to": "nhan-vien-marketing", "type": "promotion" },
+      { "from": "nhan-vien-marketing", "to": "truong-nhom-marketing", "type": "promotion" },
+      { "from": "truong-nhom-marketing", "to": "marketing-manager", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Một nhân viên marketing kể áp lực KPI khiến cô mất ngủ, mệt mỏi kéo dài và cáu gắt.",
+      "source_ids": ["S6"],
+      "confidence": "single_source",
+      "note": "Lời kể cá nhân trên Báo Thanh Niên; không phải tỷ lệ đại diện cho toàn nghề."
+    },
+    {
+      "kind": "fact",
+      "text": "Một nhân viên marketing kể ngày nào cũng phải ở lại văn phòng sau giờ quy định vì sợ bị đánh giá thiếu nhiệt tình.",
+      "source_ids": ["S5"],
+      "confidence": "single_source",
+      "note": "Lời kể cá nhân trên VnExpress về văn hoá có mặt muộn."
+    },
+    {
+      "kind": "fact",
+      "text": "Người tham gia hoạt động quảng cáo phải kiểm tra nội dung và chịu trách nhiệm với sản phẩm phát hành; quảng cáo sai lệch có thể bị xử lý.",
+      "source_ids": ["S1", "S2"],
+      "confidence": "verified",
+      "note": "Luật Quảng cáo 16/2012/QH13 và Luật sửa đổi 75/2025/QH15."
+    },
+    {
+      "kind": "fact",
+      "text": "Mùa chiến dịch cuối năm có thể kéo dài giờ làm vì deadline được theo dõi sát và phải điều phối nhiều bên.",
+      "source_ids": ["S9"],
+      "confidence": "single_source",
+      "note": "Phỏng vấn người làm marketing của Báo Người Lao Động."
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ năm 2026, Luật sửa đổi về quảng cáo và nghị định hướng dẫn mới có hiệu lực; người làm marketing phải cập nhật quy định trên mạng.",
+      "source_ids": ["S2", "S3"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm phân tích dữ liệu, công cụ đo lường và cách kiểm chứng nội dung sẽ giúp làm việc hiệu quả hơn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-03",
+    "researched_by": "Codex — research qua web (chinhphu.vn, TopCV, VnExpress, Thanh Niên, CareerLink)",
+    "scope_note": "Bối cảnh nhân viên marketing 1–2 năm kinh nghiệm tại agency, phụ trách thương hiệu hư cấu Trà sữa Mây. Lương là dữ liệu tham khảo TopCV 2026; tình huống trong ngày là hư cấu minh họa."
+  }
+}
