@@ -2,11 +2,14 @@
 id: SPEC-009
 title: Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/dieu-duong.json, content/worlds/dieu-duong.json]
 owner: anh Son
 created: 2026-11-03
+approved_hash: 80c66760336975e4
+approved_by: Son
+approved_at: 2026-11-03
 ---
 
 # SPEC-009 — Gói nghề Điều dưỡng

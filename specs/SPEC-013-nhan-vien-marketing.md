@@ -2,11 +2,14 @@
 id: SPEC-013
 title: Gói nghề Nhân viên Marketing (nội dung + bản đồ agency)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/nhan-vien-marketing.json, content/worlds/nhan-vien-marketing.json]
 owner: anh Son
 created: 2026-11-03
+approved_hash: 9f25342c5751b957
+approved_by: Son
+approved_at: 2026-11-03
 ---
 
 # SPEC-013 — Gói nghề Nhân viên Marketing

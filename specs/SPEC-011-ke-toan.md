@@ -2,11 +2,14 @@
 id: SPEC-011
 title: Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/ke-toan.json, content/worlds/ke-toan.json]
 owner: anh Son
 created: 2026-11-03
+approved_hash: 75db64c60fbb7715
+approved_by: Son
+approved_at: 2026-11-03
 ---
 
 # SPEC-011 — Gói nghề Kế toán

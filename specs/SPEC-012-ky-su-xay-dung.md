@@ -2,11 +2,14 @@
 id: SPEC-012
 title: Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/ky-su-xay-dung.json, content/worlds/ky-su-xay-dung.json]
 owner: anh Son
 created: 2026-11-03
+approved_hash: d53bccd879096ec1
+approved_by: Son
+approved_at: 2026-11-03
 ---
 
 # SPEC-012 — Gói nghề Kỹ sư xây dựng
