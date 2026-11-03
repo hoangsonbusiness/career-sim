@@ -2,11 +2,14 @@
 id: SPEC-006
 title: Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề
 version: 1
-status: draft
+status: approved
 features: [F3]
 owns: [src/game/**, content/worlds/**, schema/world.schema.json, scripts/validate-world.mjs, public/game/**]
 owner: anh Son
 created: 2026-11-03
+approved_hash: af05c144ca09f322
+approved_by: Son
+approved_at: 2026-11-03
 ---
 
 # SPEC-006 — Game thế giới 2D
