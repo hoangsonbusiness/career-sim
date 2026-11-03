@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-011",
+  "locked_by": "complete 2026-11-03",
+  "locked_at": "2026-11-03",
+  "files": {
+    "tests\\spec-011\\ke-toan.test.mjs": "4936529c11ef1951"
+  }
+}
