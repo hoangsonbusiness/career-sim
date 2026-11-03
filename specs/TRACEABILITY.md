@@ -117,7 +117,7 @@
 | AC | Test |
 |---|---|
 | AC-006-01 | tests\spec-006\grid.test.mjs — "AC-006-01 toàn bộ conformance vectors đạt" |
-| AC-006-02 | tests\spec-006\grid.test.mjs — "AC-006-02 step: tường, biên, ô bị chặn" |
+| AC-006-02 | tests\spec-006\bug-004.test.mjs — "BUG-004 AC-006-02 giữ phím thì luôn có hướng đi tiếp, nhả th"<br>tests\spec-006\bug-004.test.mjs — "BUG-004 AC-006-02 phím nhấn sau cùng được ưu tiên; nhả nó th"<br>tests\spec-006\bug-004.test.mjs — "BUG-004 AC-006-02 chạm nhanh trong lúc đang bước vẫn được áp"<br>tests\spec-006\bug-004.test.mjs — "BUG-004 AC-006-02 nhấn lại phím đang giữ (sự kiện lặp) không"<br>tests\spec-006\bug-004.test.mjs — "BUG-004 AC-006-02 clear() xóa mọi phím (mất focus, mở bảng t"<br>tests\spec-006\grid.test.mjs — "AC-006-02 step: tường, biên, ô bị chặn" |
 | AC-006-03 | tests\spec-006\grid.test.mjs — "AC-006-03 findPath: BFS ưu tiên up, right, down, left" |
 | AC-006-04 | tests\spec-006\grid.test.mjs — "AC-006-04 standSpots: thứ tự up, right, down, left và hướng " |
 | AC-006-05 | tests\spec-006\grid.test.mjs — "AC-006-05 canInteract chỉ khi quay mặt đúng vào target" |

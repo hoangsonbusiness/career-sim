@@ -3,6 +3,7 @@
 import * as Phaser from "phaser";
 import { findPath, standSpots, step, type Dir, type Pos } from "./grid";
 import { canInteract } from "./quest";
+import { MoveInput } from "./input";
 import type { WorldData, WorldMap } from "./types";
 
 export interface GameCallbacks {
@@ -50,6 +51,7 @@ class WorldScene extends Phaser.Scene {
   edgeArrow!: Phaser.GameObjects.Text;
   route: Pos[] = [];
   autoInteract: { face: Dir } | null = null;
+  keys = new MoveInput();
 
   constructor() { super("world"); }
 
@@ -78,10 +80,22 @@ class WorldScene extends Phaser.Scene {
     this.input.keyboard?.on("keydown", (e: KeyboardEvent) => {
       // Ngoài mode walk để nguyên phím cho bảng task (radio, nút) dùng.
       if (!this.walkEnabled) return;
-      if (INTERACT_KEYS.has(e.key)) { e.preventDefault(); this.tryInteract(); return; }
+      if (INTERACT_KEYS.has(e.key)) { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
       const dir = KEY_DIR[e.key];
-      if (dir) { e.preventDefault(); this.route = []; this.autoInteract = null; this.walk(dir); }
+      if (!dir) return;
+      e.preventDefault();
+      if (e.repeat) return; // BUG-004: không dựa vào lặp phím của hệ điều hành
+      this.route = [];
+      this.autoInteract = null;
+      this.keys.press(dir);
+      if (!this.moving) this.continueWalking();
     });
+    this.input.keyboard?.on("keyup", (e: KeyboardEvent) => {
+      const dir = KEY_DIR[e.key];
+      if (dir) this.keys.release(dir);
+    });
+    // Mất focus thì coi như nhả mọi phím, tránh nhân vật tự đi mãi.
+    this.game.events.on(Phaser.Core.Events.BLUR, () => this.keys.clear());
     this.input.on("pointerdown", (p: Phaser.Input.Pointer) => this.onTap(p));
     this.scale.on("resize", () => this.fitCamera());
     // Chỉ bản dev: cho phép đọc trạng thái cảnh khi chơi thử bằng công cụ trình duyệt.
@@ -134,7 +148,7 @@ class WorldScene extends Phaser.Scene {
     this.pos = { ...m.spawn };
     this.face = "up";
     this.player = this.sprite(this.world.player_sprite, this.pos, 10 + this.pos.y);
-    this.cameras.main.startFollow(this.player, true, 0.2, 0.2);
+    this.cameras.main.startFollow(this.player, true, 1, 1); // bám sát, không trễ (BUG-004)
     this.fitCamera();
   }
 
@@ -155,20 +169,21 @@ class WorldScene extends Phaser.Scene {
     return this.world.npcs.filter((n) => n.map === this.map.id).map((n) => ({ x: n.x, y: n.y }));
   }
 
+  /** Một bước theo ô (R-8). Bị chặn thì chỉ quay mặt, không đi. */
   walk(dir: Dir) {
     if (!this.walkEnabled || this.moving) return;
     this.face = dir;
     const next = step(this.map, this.pos, dir, this.blocked());
-    if (next.x === this.pos.x && next.y === this.pos.y) { this.afterStep(); return; }
+    if (next.x === this.pos.x && next.y === this.pos.y) return;
     this.pos = next;
     this.moving = true;
     this.player.setDepth(10 + next.y);
     const to = center(next);
-    this.tweens.add({ targets: this.player, x: to.x, y: to.y, duration: STEP_MS, onComplete: () => { this.moving = false; this.afterStep(); } });
-    if (!this.reduced) this.tweens.add({ targets: this.player.list, y: -2, duration: STEP_MS / 2, yoyo: true });
+    // Tween tuyến tính: các ô nối nhau đều tốc độ, không có nhún (BUG-004).
+    this.tweens.add({ targets: this.player, x: to.x, y: to.y, duration: STEP_MS, ease: "Linear", onComplete: () => { this.moving = false; this.afterStep(); } });
   }
 
-  /** Đi tiếp theo route (chạm/nhấp chuột), hết route thì tự tương tác nếu đã định. */
+  /** Cuối mỗi bước: đi tiếp theo route (chạm/nhấp chuột), hoặc theo phím đang giữ (BUG-004). */
   afterStep() {
     const next = this.route.shift();
     if (next) {
@@ -180,7 +195,14 @@ class WorldScene extends Phaser.Scene {
       this.face = this.autoInteract.face;
       this.autoInteract = null;
       this.tryInteract();
+      return;
     }
+    this.continueWalking();
+  }
+
+  continueWalking() {
+    const d = this.keys.next();
+    if (d) this.walk(d);
   }
 
   tryInteract() {
@@ -245,7 +267,7 @@ export function mountGame(parent: HTMLElement, world: WorldData, cb: GameCallbac
       s.cameras.main.fadeIn(300);
     },
     setTarget: (t) => { void ready.then((s) => s.setTarget(t)); },
-    setWalkEnabled: (on) => { void ready.then((s) => { s.walkEnabled = on; if (!on) { s.route = []; s.autoInteract = null; } }); },
+    setWalkEnabled: (on) => { void ready.then((s) => { s.walkEnabled = on; if (!on) { s.route = []; s.autoInteract = null; s.keys.clear(); } }); },
     emote: (id, e) => { void ready.then((s) => s.emote(id, e)); },
     destroy: () => game.destroy(true),
   };
