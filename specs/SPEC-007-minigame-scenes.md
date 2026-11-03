@@ -113,11 +113,11 @@ Không có lỗi mới. Thao tác không hợp lệ đã được controller b�
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] Bối cảnh: hoạt cảnh làm bằng HTML/CSS gắn theo vị trí nhân vật trên canvas (dùng được bằng bàn phím, test được), không vẽ bằng Phaser.
-- [ ] Bảng ở mục 1: thiết kế 6 hoạt cảnh (bảng đen, bong bóng thoại, khay tài liệu, bút đỏ khoanh, thanh thời gian).
-- [ ] R-1: camera tiến lại gần (zoom thêm 1 mức) khi bắt đầu việc.
-- [ ] R-4: `narrative` hiện tối đa 3 dòng trong bong bóng, có nút "…" để đọc hết.
-- [ ] R-5: mọi kéo thả có thao tác thay thế bằng bàn phím.
+- [x] Bối cảnh: hoạt cảnh làm bằng HTML/CSS gắn theo vị trí nhân vật trên canvas (dùng được bằng bàn phím, test được), không vẽ bằng Phaser.
+- [x] Bảng ở mục 1: thiết kế 6 hoạt cảnh (bảng đen, bong bóng thoại, khay tài liệu, bút đỏ khoanh, thanh thời gian).
+- [x] R-1: camera tiến lại gần (zoom thêm 1 mức) khi bắt đầu việc.
+- [x] R-4: `narrative` hiện tối đa 3 dòng trong bong bóng, có nút "…" để đọc hết.
+- [x] R-5: mọi kéo thả có thao tác thay thế bằng bàn phím.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
