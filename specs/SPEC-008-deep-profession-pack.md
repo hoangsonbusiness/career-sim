@@ -92,11 +92,11 @@ Không có tính toán số. Fixture `tests/fixtures/pack-*/` (một gói hợp 
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] R-1: mỗi nghề đúng 7 phần trong ngày.
-- [ ] R-2: ít nhất 4 loại mini-game, mỗi loại tối đa 2 lần.
-- [ ] R-3: giới hạn chữ cho khung game (dẫn 140, câu lệnh 80, lựa chọn 90 ký tự…).
-- [ ] R-5: mỗi nghề cần ít nhất 2 chia sẻ người trong nghề từ 2 nơi đăng khác nhau.
-- [ ] R-12: Codex kiểm tra chéo nguồn trước khi anh duyệt nội dung.
+- [x] R-1: mỗi nghề đúng 7 phần trong ngày.
+- [x] R-2: ít nhất 4 loại mini-game, mỗi loại tối đa 2 lần.
+- [x] R-3: giới hạn chữ cho khung game (dẫn 140, câu lệnh 80, lựa chọn 90 ký tự…).
+- [x] R-5: mỗi nghề cần ít nhất 2 chia sẻ người trong nghề từ 2 nơi đăng khác nhau.
+- [x] R-12: Codex kiểm tra chéo nguồn trước khi anh duyệt nội dung.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

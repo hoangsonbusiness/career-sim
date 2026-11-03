@@ -78,10 +78,10 @@ Như SPEC-009 mục 5; test đặt trong `tests/spec-011/`.
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: bối cảnh doanh nghiệp nhỏ và vừa, cuối tháng.
-- [ ] R-2: có tình huống bị yêu cầu "chỉnh số" để phản ánh đạo đức nghề nghiệp.
-- [ ] R-1: mã số thuế trong game là số hư cấu toàn chữ số 0.
-- [ ] 3.3: kế hoạch 7 phần trong ngày như bảng.
+- [x] 3.1: bối cảnh doanh nghiệp nhỏ và vừa, cuối tháng.
+- [x] R-2: có tình huống bị yêu cầu "chỉnh số" để phản ánh đạo đức nghề nghiệp.
+- [x] R-1: mã số thuế trong game là số hư cấu toàn chữ số 0.
+- [x] 3.3: kế hoạch 7 phần trong ngày như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

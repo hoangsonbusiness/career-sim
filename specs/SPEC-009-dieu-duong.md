@@ -78,10 +78,10 @@ Không áp dụng (nội dung).
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: bối cảnh khoa nội, bệnh viện công, ca ngày.
-- [ ] R-1: mini-game tìm lỗi chỉ là lỗi ghi chép, không dùng ngưỡng chỉ số lâm sàng khi chưa có nguồn Bộ Y tế.
-- [ ] R-3: không đưa tên thuốc, liều, chẩn đoán vào game.
-- [ ] 3.3: kế hoạch 7 phần trong ngày như bảng.
+- [x] 3.1: bối cảnh khoa nội, bệnh viện công, ca ngày.
+- [x] R-1: mini-game tìm lỗi chỉ là lỗi ghi chép, không dùng ngưỡng chỉ số lâm sàng khi chưa có nguồn Bộ Y tế.
+- [x] R-3: không đưa tên thuốc, liều, chẩn đoán vào game.
+- [x] 3.3: kế hoạch 7 phần trong ngày như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

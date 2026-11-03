@@ -80,10 +80,10 @@ Như SPEC-009 mục 5; test đặt trong `tests/spec-012/`.
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: vai kỹ sư giám sát thi công phía nhà thầu, công trình nhà nhiều tầng.
-- [ ] R-5: ô nền ngoài trời lấy từ Kenney Roguelike/RPG pack (anh tải về `assets-src/`); nếu chưa có thì em tự vẽ bằng code như bộ ô nền hiện tại.
-- [ ] R-1: mini-game an toàn chỉ dùng đáp án truy được về quy chuẩn còn hiệu lực.
-- [ ] 3.3: kế hoạch 7 phần trong ngày như bảng.
+- [x] 3.1: vai kỹ sư giám sát thi công phía nhà thầu, công trình nhà nhiều tầng.
+- [x] R-5: ô nền ngoài trời lấy từ Kenney Roguelike/RPG pack (anh tải về `assets-src/`); nếu chưa có thì em tự vẽ bằng code như bộ ô nền hiện tại.
+- [x] R-1: mini-game an toàn chỉ dùng đáp án truy được về quy chuẩn còn hiệu lực.
+- [x] 3.3: kế hoạch 7 phần trong ngày như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

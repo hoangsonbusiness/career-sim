@@ -79,9 +79,9 @@ Như SPEC-009 mục 5; test đặt trong `tests/spec-010/`.
 
 ## 6. Câu hỏi mở
 Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: bối cảnh công ty phần mềm làm sản phẩm (không phải gia công), lập trình viên 2–3 năm kinh nghiệm.
-- [ ] R-1: mini-game review code dùng mã giả tiếng Việt.
-- [ ] 3.3: kế hoạch 7 phần trong ngày như bảng.
+- [x] 3.1: bối cảnh công ty phần mềm làm sản phẩm (không phải gia công), lập trình viên 2–3 năm kinh nghiệm.
+- [x] R-1: mini-game review code dùng mã giả tiếng Việt.
+- [x] 3.3: kế hoạch 7 phần trong ngày như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
