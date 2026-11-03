@@ -12,7 +12,7 @@
 | [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 14/14 |
 | [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 10/10 |
 | [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3] | 11/11 |
-| [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
 | [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
@@ -173,13 +173,13 @@
 
 | AC | Test |
 |---|---|
-| AC-009-01 | ❌ chưa có |
-| AC-009-02 | ❌ chưa có |
-| AC-009-03 | ❌ chưa có |
-| AC-009-04 | ❌ chưa có |
-| AC-009-05 | ❌ chưa có |
-| AC-009-06 | ❌ chưa có |
-| AC-009-07 | ❌ chưa có |
+| AC-009-01 | tests\spec-009\dieu-duong.test.mjs — "AC-009-01 hồ sơ Điều dưỡng qua validate" |
+| AC-009-02 | tests\spec-009\dieu-duong.test.mjs — "AC-009-02 bản đồ Điều dưỡng qua validate:world" |
+| AC-009-03 | tests\spec-009\dieu-duong.test.mjs — "AC-009-03 gói Điều dưỡng đạt check:pack" |
+| AC-009-04 | tests\spec-009\dieu-duong.test.mjs — "AC-009-04 chơi hết ngày Điều dưỡng tới done" |
+| AC-009-05 | tests\spec-009\dieu-duong.test.mjs — "AC-009-05 có nguồn pháp luật có ngày hiệu lực, draft, có phạ" |
+| AC-009-06 | tests\spec-009\dieu-duong.test.mjs — "AC-009-06 không có liều thuốc, nhiệt độ, huyết áp trong chữ " |
+| AC-009-07 | tests\spec-009\dieu-duong.test.mjs — "AC-009-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-010 — Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm)
 

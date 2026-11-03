@@ -153,7 +153,7 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
         <div className="pointer-events-none absolute left-2 right-2 top-2 flex flex-wrap items-start gap-2">
           <div className={`${frame} flex gap-3 px-2 py-1 text-xs`}>
             {sim.stats.map((s) => (
-              <div key={s.id} className="w-28">
+              <div key={s.id} className="w-36">
                 <div className="flex justify-between font-bold text-[#3b2a1a]"><span className="truncate">{s.label}</span><span>{state.stats[s.id]}</span></div>
                 <progress max={100} value={state.stats[s.id]} className="h-1.5 w-full" />
               </div>

@@ -180,4 +180,66 @@ const world = {
 };
 
 writeFileSync(out("content/worlds/giao-vien-thpt.json"), JSON.stringify(world) + "\n");
-console.log("✓ public/game/ và content/worlds/giao-vien-thpt.json");
+
+// ---------- Điều dưỡng (SPEC-009): khoa Nội + nhà ----------
+const KHOA_NOI = [
+  "##########################",
+  "#......#........#........#",
+  "#......#........#........#",
+  "#......#........#........#",
+  "#......#........#........#",
+  "###D########D########D####",
+  "#........................#",
+  "#........................#",
+  "#####D###########D########",
+  "#.........#..............#",
+  "#.........#..............#",
+  "#.........#..............#",
+  "#.........D..............#",
+  "##########################",
+];
+const KHOA_NOI_PROPS = [
+  // Buồng 1: giường 12 (x2), giường 3 (x5) — giường dọc 2 ô
+  [2, 1, 116, 1], [2, 2, 143, 1], [5, 1, 116, 1], [5, 2, 143, 1], [1, 4, 17, 1],
+  // Buồng 2: giường 5 (x10), giường 9 (x13)
+  [10, 1, 116, 1], [10, 2, 143, 1], [13, 1, 116, 1], [13, 2, 143, 1], [15, 4, 16, 1],
+  // Phòng điều dưỡng: bàn, kệ hồ sơ, cây
+  [18, 2, 0, 1], [19, 2, 1, 1], [20, 2, 2, 1], [23, 1, 329, 1], [24, 1, 330, 1], [17, 4, 16, 1],
+  // Quầy thuốc: tủ, xe thuốc (điểm việc)
+  [2, 9, 324, 1], [3, 9, 325, 1], [4, 9, 326, 1], [6, 11, 97, 1], [9, 9, 17, 1],
+  // Sảnh chờ: ghế, cây
+  [13, 11, 55, 1], [14, 11, 55, 1], [15, 11, 55, 1], [16, 11, 55, 1], [24, 9, 17, 1],
+];
+const KHOA_NOI_DECOR = [[19, 2, 18], [6, 11, 18]];
+const PATIENT = C(595);
+
+const nurseWorld = {
+  profession_id: "dieu-duong",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("khoa-noi", KHOA_NOI, KHOA_NOI_PROPS, KHOA_NOI_DECOR, { x: 20, y: 3 }),
+    buildMap("nha", HOME, HOME_PROPS, HOME_DECOR, { x: 6, y: 5 }),
+  ],
+  npcs: [
+    { id: "dd-ca-dem", map: "khoa-noi", x: 22, y: 3, name: "Điều dưỡng ca đêm", sprite: C(0, 71, 19) },
+    { id: "bn-12", map: "khoa-noi", x: 2, y: 2, name: "Người bệnh giường 12", sprite: PATIENT },
+    { id: "bn-3", map: "khoa-noi", x: 5, y: 2, name: "Người bệnh giường 3", sprite: PATIENT },
+    { id: "bn-5", map: "khoa-noi", x: 10, y: 2, name: "Người bệnh giường 5", sprite: PATIENT },
+    { id: "bn-9", map: "khoa-noi", x: 13, y: 2, name: "Người bệnh giường 9", sprite: PATIENT },
+    { id: "nguoi-nha", map: "khoa-noi", x: 8, y: 7, name: "Con gái người bệnh", sprite: C(486) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "d1-ban-giao": { map: "khoa-noi", target: { x: 22, y: 3 }, npc: "dd-ca-dem", quest: "Nhận bàn giao ở phòng điều dưỡng" },
+    "d2-phieu-theo-doi": { map: "khoa-noi", target: { x: 2, y: 2 }, npc: "bn-12", quest: "Rà phiếu chăm sóc giường 12 (Buồng 1)" },
+    "d3-y-lenh": { map: "khoa-noi", target: { x: 6, y: 11 }, quest: "Tới quầy thuốc chuẩn bị việc buổi sáng" },
+    "d4-nguoi-nha": { map: "khoa-noi", target: { x: 8, y: 7 }, npc: "nguoi-nha", quest: "Người nhà giường 12 đang chờ ở hành lang" },
+    "d5-hai-chuong": { map: "khoa-noi", target: { x: 10, y: 2 }, npc: "bn-5", quest: "Chuông gọi! Tới Buồng 2" },
+    "d6-ra-vien": { map: "khoa-noi", target: { x: 5, y: 2 }, npc: "bn-3", quest: "Hướng dẫn ra viện cho giường 3 (Buồng 1)" },
+    "d7-sau-ca": { map: "nha", target: { x: 3, y: 2 }, quest: "Về nhà sau ca làm" },
+  },
+};
+writeFileSync(out("content/worlds/dieu-duong.json"), JSON.stringify(nurseWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong}.json");
