@@ -121,7 +121,8 @@ export function GamePlayer({ professionId, name, sim, world, citations }: Props)
 
   const finish = () => { engine.finish(); setState(engine.state()); setMode("done"); };
 
-  const act = (a: Action) => seg && draft && setDraft(update(seg.task, draft, a));
+  // Cập nhật dạng hàm: bấm nhanh nhiều lần trước khi vẽ lại không làm mất thao tác trước.
+  const act = (a: Action) => seg && setDraft((d) => (d ? update(seg.task, d, a) : d));
   const questions = sim.reflection_questions ?? [];
 
   return (

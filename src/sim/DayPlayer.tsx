@@ -47,7 +47,8 @@ export function DayPlayer({ professionId, sim, citations }: Props) {
     }
   };
 
-  const act = (a: Action) => seg && draft && setDraft(update(seg.task, draft, a));
+  // Cập nhật dạng hàm: bấm nhanh nhiều lần trước khi vẽ lại không làm mất thao tác trước (BUG-003).
+  const act = (a: Action) => seg && setDraft((d) => (d ? update(seg.task, d, a) : d));
 
   const submit = () => {
     if (!seg || !draft) return;
