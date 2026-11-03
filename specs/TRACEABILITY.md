@@ -10,6 +10,7 @@
 | [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
 | [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 16/16 |
 | [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 14/14 |
+| [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 1 | approved | ✓ Son 2026-11-03 | [F3] | 10/10 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -130,3 +131,18 @@
 | AC-006-12 | tests\spec-006\build.test.mjs — "AC-006-12 chunk Phaser tải lười ≤ 600 KB gzip" |
 | AC-006-13 | tests\spec-006\build.test.mjs — "AC-006-13 ảnh tileset tồn tại và có giấy phép cho từng bộ as" |
 | AC-006-14 | tests\spec-006\playthrough.test.mjs — "AC-006-14 chơi hết ngày giáo viên trong thế giới, tới được m" |
+
+## SPEC-007 — Hoạt cảnh mini-game trong thế giới 2D
+
+| AC | Test |
+|---|---|
+| AC-007-01 | tests\spec-007\layout.test.mjs — "AC-007-01 toàn bộ conformance vectors đạt" |
+| AC-007-02 | tests\spec-007\layout.test.mjs — "AC-007-02 bong bóng nằm trên điểm neo, căn giữa" |
+| AC-007-03 | tests\spec-007\layout.test.mjs — "AC-007-03 bong bóng bị kẹp trong khung" |
+| AC-007-04 | tests\spec-007\layout.test.mjs — "AC-007-04 dropIndex đếm thẻ khác có tâm phía trên điểm thả" |
+| AC-007-05 | tests\spec-007\layout.test.mjs — "AC-007-05 thả thẻ ở dropIndex tạo đúng action move" |
+| AC-007-06 | tests\spec-007\layout.test.mjs — "AC-007-06 timeSlots tô ô theo thứ tự activity" |
+| AC-007-07 | tests\spec-007\layout.test.mjs — "AC-007-07 timeSlots chưa phân bổ thì toàn ô trống" |
+| AC-007-08 | tests\spec-007\layout.test.mjs — "AC-007-08 hitBucket: biên trái/trên tính vào khay, khe giữa " |
+| AC-007-09 | tests\spec-007\build.test.mjs — "AC-007-09 bản build có đủ 6 hoạt cảnh" |
+| AC-007-10 | tests\spec-007\build.test.mjs — "AC-007-10 chunk game (Phaser) vẫn ≤ 600 KB gzip" |
