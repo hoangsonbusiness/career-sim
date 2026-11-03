@@ -26,7 +26,7 @@ test("AC-011-02 bản đồ Kế toán qua validate:world", () => {
 
 test("AC-011-03 gói Kế toán đạt check:pack", () => {
   const r = node([join(root, "scripts/check-pack.mjs")]);
-  assert.match(r.stdout, new RegExp(`✓ ${ID}\b`), r.stdout + r.stderr);
+  assert.match(r.stdout, new RegExp(`✓ ${ID}\\b`), r.stdout + r.stderr);
 });
 
 test("AC-011-04 chơi hết ngày Kế toán tới done", () => {
