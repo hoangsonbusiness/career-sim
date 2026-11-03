@@ -1,0 +1,183 @@
+#!/usr/bin/env node
+// SPEC-006 — sinh asset và file thế giới cho nghề giáo viên THPT.
+//   node scripts/gen-world.mjs
+// 1. Vẽ bộ ô nền tự làm (sàn, tường, cỏ, lối đi) → public/game/base/ (CC0, chưa có Kenney RPG pack).
+// 2. Chép tilesheet Kenney + License.txt từ assets-src/ → public/game/kenney-*/ (nếu có assets-src).
+// 3. Dựng content/worlds/giao-vien-thpt.json từ sơ đồ ký tự bên dưới.
+import { copyFileSync, existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import { deflateSync } from "node:zlib";
+
+const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const out = (p) => { const f = join(root, p); mkdirSync(dirname(f), { recursive: true }); return f; };
+
+// ---------- 1. Bộ ô nền ----------
+const T = 16, GAP = 1;
+const BASE = ["school_floor", "wood_floor", "wall_face", "wall_top", "grass", "path", "door"];
+const hex = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16), 255];
+
+/** Hàm vẽ từng ô: trả về màu RGBA của điểm (x, y) trong ô 16×16. */
+const PAINT = {
+  school_floor: (x, y) => (x % 8 === 0 || y % 8 === 0 ? hex("#c9c2b2") : (x + y) % 7 === 0 ? hex("#e2dccd") : hex("#ddd6c6")),
+  wood_floor: (x, y) => (y % 4 === 3 ? hex("#8a5a35") : (x + (Math.floor(y / 4) % 2) * 8) % 16 === 0 ? hex("#93613b") : hex("#a8703f")),
+  wall_face: (x, y) => (y >= 14 ? hex("#8f8068") : y < 2 ? hex("#b9ab8d") : x % 8 === 0 && y % 6 === 0 ? hex("#cbbd9f") : hex("#d8cbaa")),
+  wall_top: (x, y) => (x === 0 || y === 0 || x === 15 || y === 15 ? hex("#6f6450") : hex("#e7dcc0")),
+  grass: (x, y) => ((x * 7 + y * 13) % 11 === 0 ? hex("#6fae4f") : (x * 3 + y * 5) % 17 === 0 ? hex("#93cf6b") : hex("#82c05c")),
+  path: (x, y) => ((x * 5 + y * 3) % 9 === 0 ? hex("#c7ad7a") : hex("#d9c08c")),
+  door: (x, y) => (x < 2 || x > 13 ? hex("#6b4a2b") : y % 5 === 4 ? hex("#7d5532") : hex("#9b6a3d")),
+};
+
+function png(width, height, pixel) {
+  const crcT = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
+  const crc = (buf) => { let c = 0xffffffff; for (const b of buf) c = crcT[(c ^ b) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
+  const chunk = (type, data) => {
+    const len = Buffer.alloc(4); len.writeUInt32BE(data.length);
+    const td = Buffer.concat([Buffer.from(type), data]);
+    const c = Buffer.alloc(4); c.writeUInt32BE(crc(td));
+    return Buffer.concat([len, td, c]);
+  };
+  const ihdr = Buffer.alloc(13); ihdr.writeUInt32BE(width, 0); ihdr.writeUInt32BE(height, 4); ihdr[8] = 8; ihdr[9] = 6;
+  const raw = Buffer.alloc((width * 4 + 1) * height);
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) raw.set(pixel(x, y), y * (width * 4 + 1) + 1 + x * 4);
+  return Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("IDAT", deflateSync(raw)), chunk("IEND", Buffer.alloc(0))]);
+}
+
+const baseW = BASE.length * (T + GAP) - GAP;
+writeFileSync(out("public/game/base/base.png"), png(baseW, T, (x, y) => {
+  const i = Math.floor(x / (T + GAP)), lx = x % (T + GAP);
+  return lx >= T ? [0, 0, 0, 0] : PAINT[BASE[i]](lx, y);
+}));
+writeFileSync(out("public/game/base/License.txt"), [
+  "Bộ ô nền (sàn, tường, cỏ, lối đi) của dự án Một Ngày Làm Nghề.",
+  "Vẽ bằng code trong scripts/gen-world.mjs.",
+  "License: Creative Commons Zero (CC0) http://creativecommons.org/publicdomain/zero/1.0/",
+  "",
+].join("\n"));
+
+// ---------- 2. Asset Kenney ----------
+const KENNEY = [
+  ["assets-src/kenney_roguelike-indoors/Tilesheets/roguelikeIndoor_transparent.png", "assets-src/kenney_roguelike-indoors/License.txt", "public/game/kenney-indoor"],
+  ["assets-src/kenney_roguelike-characters/Spritesheet/roguelikeChar_transparent.png", "assets-src/kenney_roguelike-characters/License.txt", "public/game/kenney-chars"],
+];
+for (const [img, lic, dir] of KENNEY) {
+  if (!existsSync(join(root, img))) { console.warn(`⚠ thiếu ${img} — giữ bản đã có trong ${dir}`); continue; }
+  copyFileSync(join(root, img), out(`${dir}/sheet.png`));
+  copyFileSync(join(root, lic), out(`${dir}/License.txt`));
+}
+
+// ---------- 3. Bản đồ ----------
+// '#' tường, '.' sàn gạch, ',' sàn gỗ, 'g' cỏ, '=' lối đi, 'D' cửa (đi được).
+const SCHOOL = [
+  "##############################",
+  "#........#........#..........#",
+  "#........#........#..........#",
+  "#........#........#..........#",
+  "#........#........#..........#",
+  "#........#........#..........#",
+  "####D#########D#########D#####",
+  "#............................#",
+  "#............................#",
+  "####D###############=#########",
+  "#........#gggggggggg=gggggggg#",
+  "#........#gggggggggg=gggggggg#",
+  "#........#gggggggggg=gggggggg#",
+  "#........#gggggggggg=gggggggg#",
+  "##########gggggggggg=gggggggg#",
+  "gggggggggggggggggggg=ggggggggg",
+];
+const HOME = [
+  "############",
+  "#,,,,,,,,,,#",
+  "#,,,,,,,,,,#",
+  "#,,,,,,,,,,#",
+  "#,,,,,,,,,,#",
+  "#,,,,,,,,,,#",
+  "#,,,,,,,,,,#",
+  "############",
+];
+
+// Đồ vật: [x, y, ô Kenney indoor, solid]
+const SCHOOL_PROPS = [
+  // Lớp 11A2 (chủ nhiệm)
+  [3, 1, 448, 1], [4, 1, 449, 1], [5, 1, 450, 1], [1, 1, 16, 1], [8, 1, 17, 1],
+  [2, 3, 5, 1], [4, 3, 5, 1], [6, 3, 5, 1], [2, 5, 5, 1], [6, 5, 5, 1],
+  // Lớp 10A5
+  [12, 1, 448, 1], [13, 1, 449, 1], [14, 1, 450, 1], [17, 1, 16, 1],
+  [11, 3, 5, 1], [13, 3, 5, 1], [15, 3, 5, 1], [11, 5, 5, 1], [13, 5, 5, 1],
+  // Phòng giáo viên: bàn dài có chồng bài, điện thoại ở góc
+  [21, 3, 0, 1], [22, 3, 1, 1], [23, 3, 1, 1], [24, 3, 2, 1],
+  [19, 1, 329, 1], [20, 1, 330, 1], [28, 1, 16, 1], [27, 5, 97, 1], [19, 5, 17, 1],
+  // Phòng tổ chuyên môn
+  [3, 11, 0, 1], [4, 11, 1, 1], [5, 11, 2, 1], [1, 10, 329, 1], [8, 10, 16, 1],
+];
+const SCHOOL_DECOR = [[23, 3, 18], [4, 11, 18]]; // giấy tờ trên bàn (lớp trên, không đổi solid)
+const HOME_PROPS = [
+  [2, 2, 85, 1], [3, 2, 86, 1], [1, 1, 16, 1], [5, 1, 329, 1], [6, 1, 330, 1],
+  [9, 1, 116, 1], [9, 2, 143, 1], [8, 5, 97, 1], [10, 6, 17, 1],
+];
+const HOME_DECOR = [[3, 2, 18]];
+
+function buildMap(id, rows, props, decor, spawn) {
+  const width = rows[0].length, height = rows.length;
+  if (!rows.every((r) => r.length === width)) throw new Error(`map ${id}: dòng không đều`);
+  const at = (x, y) => (y < 0 || y >= height || x < 0 || x >= width ? "#" : rows[y][x]);
+  const floor = [], walls = [], furniture = Array(width * height).fill(null), top = Array(width * height).fill(null), solid = [];
+  for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
+    const c = at(x, y);
+    const isWall = c === "#";
+    floor.push(c === "," ? "base:1" : c === "g" ? "base:4" : c === "=" ? "base:5" : c === "D" ? "base:6" : isWall ? null : "base:0");
+    // Tường có sàn ngay bên dưới → mặt tường; còn lại → đỉnh tường.
+    walls.push(isWall ? (at(x, y + 1) !== "#" && y + 1 < height ? "base:2" : "base:3") : null);
+    solid.push(isWall ? 1 : 0);
+  }
+  for (const [x, y, tile, s] of props) {
+    const i = y * width + x;
+    if (rows[y][x] === "#") throw new Error(`map ${id}: đồ vật (${x},${y}) đè lên tường`);
+    furniture[i] = `indoor:${tile}`;
+    if (s) solid[i] = 1;
+  }
+  for (const [x, y, tile] of decor) top[y * width + x] = `indoor:${tile}`;
+  return {
+    id, width, height, spawn, solid,
+    layers: [{ name: "floor", data: floor }, { name: "walls", data: walls }, { name: "furniture", data: furniture }, { name: "decor", data: top }],
+  };
+}
+
+// Nhân vật ghép lớp từ Kenney Roguelike Characters.
+const C = (...ids) => ids.map((i) => `chars:${i}`);
+const world = {
+  profession_id: "giao-vien-thpt",
+  tile_size: 16,
+  tilesets: [
+    { key: "base", image: "game/base/base.png", columns: BASE.length, spacing: 1 },
+    { key: "indoor", image: "game/kenney-indoor/sheet.png", columns: 27, spacing: 1 },
+    { key: "chars", image: "game/kenney-chars/sheet.png", columns: 54, spacing: 1 },
+  ],
+  maps: [
+    buildMap("nha", HOME, HOME_PROPS, HOME_DECOR, { x: 6, y: 5 }),
+    buildMap("truong", SCHOOL, SCHOOL_PROPS, SCHOOL_DECOR, { x: 20, y: 15 }),
+  ],
+  npcs: [
+    { id: "hs-11a2", map: "truong", x: 4, y: 4, name: "Học sinh lớp 11A2", sprite: C(0, 121, 128) },
+    { id: "hs-11a2-b", map: "truong", x: 2, y: 4, name: "Học sinh lớp 11A2", sprite: C(54, 71, 19) },
+    { id: "hs-11a2-c", map: "truong", x: 7, y: 4, name: "Học sinh lớp 11A2", sprite: C(1, 13, 76) },
+    { id: "hs-10a5", map: "truong", x: 15, y: 4, name: "Học sinh lớp 10A5", sprite: C(54, 17, 22) },
+    { id: "hs-10a5-b", map: "truong", x: 11, y: 4, name: "Học sinh lớp 10A5", sprite: C(54, 125, 23) },
+    { id: "to-truong", map: "truong", x: 6, y: 12, name: "Tổ trưởng chuyên môn", sprite: C(379) },
+    { id: "dong-nghiep", map: "truong", x: 25, y: 5, name: "Đồng nghiệp", sprite: C(108, 16, 73) },
+  ],
+  player_sprite: C(0, 13, 20),
+  segments: {
+    "s1-soan-bai": { map: "nha", target: { x: 3, y: 2 }, quest: "Ngồi vào bàn, xem lại giáo án" },
+    "s2-chao-co": { map: "truong", target: { x: 4, y: 4 }, npc: "hs-11a2", quest: "Tới lớp chủ nhiệm 11A2" },
+    "s3-len-lop": { map: "truong", target: { x: 15, y: 4 }, npc: "hs-10a5", quest: "Lên lớp 10A5, tiết 2" },
+    "s4-to-chuyen-mon": { map: "truong", target: { x: 6, y: 12 }, npc: "to-truong", quest: "Gặp tổ trưởng ở phòng tổ chuyên môn" },
+    "s5-cham-bai": { map: "truong", target: { x: 23, y: 3 }, quest: "Chấm bài ở phòng giáo viên" },
+    "s6-phu-huynh": { map: "truong", target: { x: 27, y: 5 }, quest: "Nghe điện thoại ở phòng giáo viên" },
+    "s7-buoi-toi": { map: "nha", target: { x: 3, y: 2 }, quest: "Về nhà, sắp xếp buổi tối" },
+  },
+};
+
+writeFileSync(out("content/worlds/giao-vien-thpt.json"), JSON.stringify(world) + "\n");
+console.log("✓ public/game/ và content/worlds/giao-vien-thpt.json");

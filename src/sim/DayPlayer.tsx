@@ -47,7 +47,8 @@ export function DayPlayer({ professionId, sim, citations }: Props) {
     }
   };
 
-  const act = (a: Action) => seg && draft && setDraft(update(seg.task, draft, a));
+  // Cập nhật dạng hàm: bấm nhanh nhiều lần trước khi vẽ lại không làm mất thao tác trước (BUG-003).
+  const act = (a: Action) => seg && setDraft((d) => (d ? update(seg.task, d, a) : d));
 
   const submit = () => {
     if (!seg || !draft) return;
@@ -138,8 +139,8 @@ function StatBars({ stats, values }: { stats: PlayerSimulation["stats"]; values:
   );
 }
 
-/** R-12 */
-function TaskView({ segmentId, task, draft, act }: { segmentId: string; task: Task; draft: Draft; act: (a: Action) => void }) {
+/** R-12. Dùng lại trong bảng task của game 2D (SPEC-006 R-12). */
+export function TaskView({ segmentId, task, draft, act }: { segmentId: string; task: Task; draft: Draft; act: (a: Action) => void }) {
   switch (draft.type) {
     case "sequence":
       return (

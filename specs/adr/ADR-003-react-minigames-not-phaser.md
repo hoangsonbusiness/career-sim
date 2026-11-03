@@ -1,5 +1,7 @@
 # ADR-003 — Mini-game bằng React + HTML, chưa dùng Phaser
 
+> **Đã bị thay thế bởi ADR-004 (2026-11-03).** Giữ lại để truy vết lý do lần đầu.
+
 - Ngày: 2026-11-02
 - Liên quan: SPEC-005; lệch PRD mục 7 ("Phaser 3 cho các mini-game"). Anh Son đã đồng ý trong câu hỏi mở của SPEC-005.
 

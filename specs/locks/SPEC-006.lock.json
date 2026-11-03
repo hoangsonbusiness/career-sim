@@ -1,0 +1,12 @@
+{
+  "spec": "SPEC-006",
+  "locked_by": "complete 2026-11-03",
+  "locked_at": "2026-11-03",
+  "files": {
+    "tests\\spec-006\\build.test.mjs": "b14240e293114928",
+    "tests\\spec-006\\grid.test.mjs": "d83f55bbfc8b8cda",
+    "tests\\spec-006\\playthrough.test.mjs": "966dd6df6fd221dc",
+    "tests\\spec-006\\vectors.json": "ab8bb0664b51a5ae",
+    "tests\\spec-006\\world.test.mjs": "1a2f02cde79e1f75"
+  }
+}

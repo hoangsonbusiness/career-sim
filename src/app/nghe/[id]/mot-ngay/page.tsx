@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { getProfession, loadProfessions } from "../../../../content";
 import { buildProfileView, type CitationView } from "../../../../profile/view";
 import { DayPlayer, type PlayerSimulation } from "../../../../sim/DayPlayer";
+import { GamePlayer } from "../../../../game/GamePlayer";
+import { loadWorld } from "../../../../game/worldData";
 
 export const dynamicParams = false;
 
@@ -22,10 +24,16 @@ export default async function DayPage({ params }: { params: Promise<{ id: string
     citations[s.id] = (s.basis.source_ids ?? []).flatMap((sid) => all.get(sid) ?? []);
   }
 
+  const sim = p.day_simulation as unknown as PlayerSimulation;
+  // SPEC-005 R-10b: nghề có bản đồ dùng game 2D (SPEC-006), chưa có thì dùng giao diện biểu mẫu.
+  const world = loadWorld(p.id);
+
   return (
     <main className="space-y-6">
       <h1 className="text-2xl font-bold">Một ngày làm {p.name}</h1>
-      <DayPlayer professionId={p.id} sim={p.day_simulation as unknown as PlayerSimulation} citations={citations} />
+      {world
+        ? <GamePlayer professionId={p.id} name={p.name} sim={sim} world={world} citations={citations} />
+        : <DayPlayer professionId={p.id} sim={sim} citations={citations} />}
     </main>
   );
 }
