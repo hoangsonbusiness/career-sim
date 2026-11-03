@@ -15,8 +15,8 @@
 | [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
-| [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
-| [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
+| [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -210,23 +210,23 @@
 
 | AC | Test |
 |---|---|
-| AC-012-01 | ❌ chưa có |
-| AC-012-02 | ❌ chưa có |
-| AC-012-03 | ❌ chưa có |
-| AC-012-04 | ❌ chưa có |
-| AC-012-05 | ❌ chưa có |
-| AC-012-06 | ❌ chưa có |
-| AC-012-07 | ❌ chưa có |
-| AC-012-08 | ❌ chưa có |
+| AC-012-01 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-01 hồ sơ Kỹ sư xây dựng qua validate" |
+| AC-012-02 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-02 bản đồ Kỹ sư xây dựng qua validate:world" |
+| AC-012-03 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-03 gói Kỹ sư xây dựng đạt check:pack" |
+| AC-012-04 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-04 chơi hết ngày Kỹ sư xây dựng tới done" |
+| AC-012-05 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-05 có ≥ 2 nguồn law có effective_date" |
+| AC-012-06 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-06 phần 3 có lựa chọn làm an toàn giảm" |
+| AC-012-07 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-07 mọi tileset của gói có License.txt cùng thư mục" |
+| AC-012-08 | tests\spec-012\ky-su-xay-dung.test.mjs — "AC-012-08 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-013 — Gói nghề Nhân viên Marketing (nội dung + bản đồ agency)
 
 | AC | Test |
 |---|---|
-| AC-013-01 | ❌ chưa có |
-| AC-013-02 | ❌ chưa có |
-| AC-013-03 | ❌ chưa có |
-| AC-013-04 | ❌ chưa có |
-| AC-013-05 | ❌ chưa có |
-| AC-013-06 | ❌ chưa có |
-| AC-013-07 | ❌ chưa có |
+| AC-013-01 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-01 hồ sơ Nhân viên Marketing qua validate" |
+| AC-013-02 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-02 bản đồ Nhân viên Marketing qua validate:world và c" |
+| AC-013-03 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-03 gói Nhân viên Marketing đạt check:pack" |
+| AC-013-04 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-04 chơi hết ngày Nhân viên Marketing tới done" |
+| AC-013-05 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-05 có nguồn law có effective_date và market có issued" |
+| AC-013-06 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-013-07 | tests\spec-013\nhan-vien-marketing.test.mjs — "AC-013-07 bản build có trang hồ sơ và trang màn chơi" |

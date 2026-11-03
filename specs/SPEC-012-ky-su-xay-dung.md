@@ -1,13 +1,13 @@
 ---
 id: SPEC-012
 title: Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường)
-version: 1
+version: 2
 status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/ky-su-xay-dung.json, content/worlds/ky-su-xay-dung.json]
 owner: anh Son
 created: 2026-11-03
-approved_hash: d53bccd879096ec1
+approved_hash: 84031f71e5c85e66
 approved_by: Son
 approved_at: 2026-11-03
 ---
@@ -42,12 +42,12 @@ Kỹ sư giám sát thi công (phía nhà thầu hoặc tư vấn giám sát —
 ### 3.3 Kế hoạch 7 phần
 | # | Giờ | Việc | `task.type` | Nơi | `basis` cần nguồn chứng minh |
 |---|---|---|---|---|---|
-| 1 | 06:45 | Các bước kiểm tra an toàn đầu ca | `sequence` | Cổng công trường | Kiểm tra an toàn trước khi thi công theo quy chuẩn an toàn xây dựng |
+| 1 | 06:45 | Công nhân thiếu bảo hộ đầu ca | `choice` | Cổng công trường | Người lao động phải được trang bị bảo hộ trước khi làm việc |
 | 2 | 07:30 | Đi kiểm tra hiện trường, rà bảng kiểm an toàn | `spot_error` | Khu giàn giáo | Kỹ sư giám sát kiểm tra điều kiện an toàn tại hiện trường |
 | 3 | 09:30 | Nhà thầu muốn đổ bê tông khi chưa nghiệm thu cốt thép | `choice` | Sàn đang thi công | Công việc phải được nghiệm thu trước khi chuyển bước |
-| 4 | 11:00 | Phân loại vi phạm: dừng thi công ngay hay ghi nhận khắc phục | `drag_sort` | Lán ban chỉ huy | Quyền và trách nhiệm dừng thi công khi có nguy cơ mất an toàn |
+| 4 | 11:00 | Phân loại theo ngưỡng quy chuẩn: yêu cầu tạm dừng hay làm tiếp | `drag_sort` | Lán ban chỉ huy | Quyền và trách nhiệm dừng thi công khi có nguy cơ mất an toàn |
 | 5 | 14:00 | Chủ đầu tư muốn rút ngắn tiến độ | `dialogue` | Lán ban chỉ huy | Kỹ sư làm việc với chủ đầu tư, tư vấn giám sát |
-| 6 | 16:00 | Mưa lớn bất ngờ | `choice` | Sàn đang thi công | Biện pháp an toàn khi thời tiết xấu |
+| 6 | 16:00 | Mưa lớn bất ngờ: các bước dừng, kiểm tra, làm tiếp | `sequence` | Sàn đang thi công | Biện pháp an toàn khi thời tiết xấu và kiểm tra lại sau khi dừng |
 | 7 | 19:30 | Buổi tối: nhật ký, ôn thi chứng chỉ, gia đình | `time_budget` | Nhà | Yêu cầu chứng chỉ hành nghề / ghi nhật ký thi công |
 
 - R-1. Mọi mini-game về an toàn PHẢI dựa trên quy chuẩn hoặc văn bản pháp luật còn hiệu lực; đáp án "đúng" của `sequence`, `spot_error`, `drag_sort` PHẢI truy được về nội dung trong văn bản đó. Không tìm được → phần đó dùng `choice` mô tả tình huống và `feedback` chỉ nêu điều có nguồn.
@@ -92,3 +92,4 @@ Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-03 | Bản nháp đầu | PRD 4.1, SPEC-008 |
+| 2 | 2026-11-03 | Phần 1 `sequence`→`choice`, phần 6 `choice`→`sequence`; phần 4 phân loại theo ngưỡng quy chuẩn | R-1: quy chuẩn không quy định thứ tự kiểm tra đầu ca và không phân loại "dừng ngay/khắc phục"; thứ tự dừng→kiểm tra→làm tiếp khi mưa có trong QCVN 18:2021 mục 2.1.12 |

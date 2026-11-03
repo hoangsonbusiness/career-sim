@@ -1,0 +1,761 @@
+{
+  "id": "ky-su-xay-dung",
+  "name": "Kỹ sư xây dựng",
+  "aliases": [
+    "Kỹ sư giám sát thi công",
+    "Kỹ sư công trường",
+    "Giám sát trưởng công trình"
+  ],
+  "group": {
+    "label": "Xây dựng & Kiến trúc"
+  },
+  "holland": [
+    "R",
+    "I",
+    "C"
+  ],
+  "summary": "Theo dõi thi công tại công trường, kiểm tra an toàn, nghiệm thu từng bước và làm việc với nhà thầu, chủ đầu tư để công trình đúng chất lượng và tiến độ. Công việc gắn với nắng mưa, giàn giáo, hồ sơ và trách nhiệm rất cụ thể.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Xây dựng số 135/2025/QH15",
+      "publisher": "Quốc hội / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://vanban.chinhphu.vn/?classid=1&docid=216514&pageid=27160&typegroupid=3",
+      "accessed": "2026-11-03",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-07-01",
+      "supersedes": "Luật Xây dựng số 50/2014/QH13 (đã sửa đổi, bổ sung nhiều lần)",
+      "note": "Điều 88 khoản 1: cá nhân đảm nhận chức danh giám sát thi công xây dựng phải có chứng chỉ hành nghề tương ứng."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Nghị định số 207/2026/NĐ-CP quy định chi tiết một số điều của Luật Xây dựng về quản lý chất lượng, thi công xây dựng và bảo trì công trình xây dựng",
+      "publisher": "Chính phủ / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/nghi-dinh-so-207-2026-nd-cp-ve-quan-ly-chat-iuong-thi-cong-bao-tri-cong-trinh-xay-dung-119260616081951719.htm",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-06-15",
+      "effective_date": "2026-07-01",
+      "supersedes": "Nghị định 06/2021/NĐ-CP về quản lý chất lượng, thi công xây dựng và bảo trì công trình xây dựng",
+      "note": "Đã đọc Điều 13 (rào chắn, biển báo), Điều 16 (trách nhiệm nhà thầu), Điều 20 khoản 3 điểm h (quyền yêu cầu tạm dừng), Điều 22–23 (nghiệm thu), Phụ lục II (nhật ký thi công)."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Thông tư số 16/2021/TT-BXD ban hành QCVN 18:2021/BXD — Quy chuẩn kỹ thuật quốc gia về an toàn trong thi công xây dựng",
+      "publisher": "Bộ Xây dựng / Cổng Thông tin điện tử Chính phủ",
+      "url": "https://vanban.chinhphu.vn/default.aspx?docid=204974&pageid=27160",
+      "accessed": "2026-11-03",
+      "issued_date": "2021-12-20",
+      "effective_date": "2022-06-20",
+      "note": "Đã đọc 2.1.5.1, 2.1.11.2, 2.1.12.2, 2.2.3.6, 2.2.3.12, 2.2.4.1, 2.19.1.1."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Nghị định số 212/2026/NĐ-CP quy định chi tiết một số điều của Luật Xây dựng về điều kiện năng lực hoạt động xây dựng và cơ sở dữ liệu quốc gia về hoạt động xây dựng",
+      "publisher": "Chính phủ / Thư viện Pháp luật",
+      "url": "https://thuvienphapluat.vn/van-ban/Cong-nghe-thong-tin/Nghi-dinh-212-2026-ND-CP-dieu-kien-nang-luc-hoat-dong-xay-dung-697287.aspx",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-06-17",
+      "effective_date": "2026-07-01",
+      "note": "Điều 33: điều kiện chung cấp chứng chỉ hành nghề; Điều 37: điều kiện kinh nghiệm cấp chứng chỉ giám sát thi công xây dựng."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Cập nhật mức lương Kỹ sư xây dựng mới nhất 2026",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/cap-nhat-muc-luong-ky-su-xay-dung-moi-nhat",
+      "accessed": "2026-11-03",
+      "note": "Dữ liệu Công cụ Tra cứu mức lương TopCV: 1–3 năm kinh nghiệm 8,4–16,388 triệu đồng/tháng; 5–6 năm 15,966–23,4 triệu đồng/tháng. Khác nhau theo vị trí, địa điểm và loại hình dự án."
+    },
+    {
+      "id": "S6",
+      "type": "official_stat",
+      "title": "Thông báo số 11241/TB-BNV về tình hình tai nạn lao động 6 tháng đầu năm 2026",
+      "publisher": "Bộ Nội vụ",
+      "url": "https://moha.gov.vn/thong-bao/thong-bao-tinh-hinh-tai-nan-lao-dong-6-thang-dau-nam-2026---id1653",
+      "accessed": "2026-11-03",
+      "issued_date": "2026-10-06",
+      "note": "6 tháng đầu năm 2026: 3.415 vụ tai nạn lao động, 3.476 người bị nạn, 378 vụ chết người, 391 người chết, 747 người bị thương nặng."
+    },
+    {
+      "id": "S7",
+      "type": "press",
+      "title": "Gia tăng tai nạn lao động trong 6 tháng đầu năm",
+      "publisher": "Báo Nhân Dân",
+      "url": "https://nhandan.vn/gia-tang-tai-nan-lao-dong-trong-6-thang-dau-nam-post993931.html",
+      "accessed": "2026-11-03",
+      "note": "Dẫn Thông báo 11241/TB-BNV. Tỷ lệ 6,7% là tỷ lệ xây dựng trong số vụ tai nạn lao động chết người, tính từ các biên bản điều tra Bộ Nội vụ đã nhận, không phải tỷ lệ trên toàn bộ vụ tai nạn."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Nâng tĩnh không cầu Bình Triệu 1: Bước ngoặt công nghệ từ đôi tay người Việt",
+      "publisher": "Báo Phụ Nữ (Tuổi Trẻ Online)",
+      "url": "https://tuoitre.vn/phunuonline/nang-tinh-khong-cau-binh-trieu-1-buoc-ngoat-cong-nghe-tu-doi-tay-nguoi-viet-1101560845.htm",
+      "accessed": "2026-11-03",
+      "note": "Lời kỹ sư Cao Thanh An, Giám sát trưởng công trình, kể về việc điều khiển 28–30 kích thủy lực đồng bộ trong sai số 1 mm."
+    },
+    {
+      "id": "S9",
+      "type": "testimony",
+      "title": "Nắng lửa, mưa dầm, công nhân vẫn bám trụ công trường cao tốc miền Tây",
+      "publisher": "Báo Xây Dựng (đăng lại trên Báo Mới)",
+      "url": "https://baomoi.com/nang-lua-mua-dam-cong-nhan-van-bam-tru-cong-truong-cao-toc-mien-tay-c52866747.epi",
+      "accessed": "2026-11-03",
+      "note": "Lời kỹ sư Đậu Văn Xuân, phường Dĩ An, Bình Dương: sống cách công trường gần 200 km, hơn một năm không có ngày nghỉ."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học chắc Toán và Vật lý; tập đọc bản vẽ đơn giản, ước lượng kích thước và quan sát hiện trường.",
+        "audience": [
+          "thcs"
+        ]
+      },
+      {
+        "kind": "advice",
+        "text": "Rèn tính cẩn thận và thói quen ghi chép: mỗi việc làm xong đều có người kiểm lại.",
+        "audience": [
+          "thcs"
+        ]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Tìm hiểu tổ hợp xét tuyển ngành Kỹ thuật xây dựng ở từng trường; các trường có thể yêu cầu môn khác nhau.",
+        "audience": [
+          "thpt"
+        ]
+      },
+      {
+        "kind": "advice",
+        "text": "Thử tham gia một buổi tham quan công trường hoặc hỏi một kỹ sư giám sát về công việc hằng ngày.",
+        "audience": [
+          "thpt"
+        ]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Cá nhân đảm nhận chức danh giám sát thi công xây dựng phải có chứng chỉ hành nghề hoạt động xây dựng tương ứng.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Xây dựng 135/2025/QH15, Điều 88 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Điều kiện chung và điều kiện kinh nghiệm để được cấp chứng chỉ giám sát thi công được quy định theo từng hạng.",
+        "source_ids": [
+          "S4"
+        ],
+        "confidence": "verified",
+        "note": "Nghị định 212/2026/NĐ-CP, Điều 33 và Điều 37."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Người giám sát kiểm tra thi công theo thiết kế, giám sát an toàn, nghiệm thu công việc và xác nhận khối lượng hoàn thành.",
+        "source_ids": [
+          "S2"
+        ],
+        "confidence": "verified",
+        "note": "Nghị định 207/2026/NĐ-CP, Điều 20 và các Điều 22–23."
+      },
+      {
+        "kind": "fact",
+        "text": "Khi chất lượng hoặc biện pháp thi công không bảo đảm an toàn, người giám sát có quyền yêu cầu nhà thầu tạm dừng thi công.",
+        "source_ids": [
+          "S2"
+        ],
+        "confidence": "verified",
+        "note": "Nghị định 207/2026/NĐ-CP, Điều 20 khoản 3 điểm h."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Công việc chủ yếu ở công trường, theo tiến độ dự án; một kỹ sư cao tốc kể sống cách nhà gần 200 km và hơn một năm không có ngày nghỉ.",
+        "source_ids": [
+          "S9"
+        ],
+        "confidence": "single_source",
+        "note": "Lời kể của một kỹ sư cụ thể trên báo, không phải số liệu đại diện cho cả nghề."
+      },
+      {
+        "kind": "fact",
+        "text": "Nhật ký thi công ghi diễn biến thời tiết, số lượng nhân công, thiết bị và các công việc được thi công, nghiệm thu hằng ngày.",
+        "source_ids": [
+          "S2"
+        ],
+        "confidence": "verified",
+        "note": "Nghị định 207/2026/NĐ-CP, Phụ lục II."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo dữ liệu TopCV (2026), kỹ sư xây dựng 1–3 năm kinh nghiệm khoảng 8,4–16,388 triệu đồng/tháng; 5–6 năm khoảng 15,966–23,4 triệu.",
+        "source_ids": [
+          "S5"
+        ],
+        "confidence": "single_source",
+        "note": "Dữ liệu tra cứu lương, không phải khảo sát có mô tả phương pháp; mức thực tế tùy vị trí và dự án."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Công việc có thể diễn ra ngoài trời và trên giàn giáo cao; quy chuẩn yêu cầu bảo hộ, lan can và kiểm tra an toàn định kỳ.",
+        "source_ids": [
+          "S3"
+        ],
+        "confidence": "verified",
+        "note": "QCVN 18:2021/BXD, các mục 2.1.5.1, 2.2.3.12, 2.2.4.1 và 2.19.1.1."
+      },
+      {
+        "kind": "fact",
+        "text": "Công trường đang thi công phải được rào chắn để ngăn người lạ xâm nhập và có biển báo cần thiết.",
+        "source_ids": [
+          "S2"
+        ],
+        "confidence": "verified",
+        "note": "Nghị định 207/2026/NĐ-CP, Điều 13."
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Hùng — kỹ sư giám sát thi công 3 năm kinh nghiệm của nhà thầu tại công trình nhà nhiều tầng",
+    "setting": "Một ngày ở công trường đang thi công phần thân: kiểm tra an toàn, nghiệm thu cốt thép, xử lý mưa và áp lực tiến độ.",
+    "time_is_illustrative": true,
+    "stats": [
+      {
+        "id": "suc_luc",
+        "label": "Sức lực",
+        "initial": 80
+      },
+      {
+        "id": "an_toan",
+        "label": "An toàn lao động",
+        "initial": 50
+      },
+      {
+        "id": "tien_do",
+        "label": "Tiến độ",
+        "initial": 30
+      }
+    ],
+    "segments": [
+      {
+        "id": "x1-kiem-tra-dau-ca",
+        "time": "06:45",
+        "title": "Công nhân thiếu bảo hộ đầu ca",
+        "narrative": "Bạn có mặt ở cổng khi tổ công nhân tới. Hai người chưa có mũ và dây an toàn nhưng muốn lên giàn ngay cho kịp việc.",
+        "basis": {
+          "kind": "fact",
+          "text": "Trước khi thi công, công trường phải rào chắn, có biển báo; người lao động phải được trang bị bảo hộ phù hợp.",
+          "source_ids": [
+            "S2",
+            "S3"
+          ],
+          "confidence": "verified",
+          "note": "Nghị định 207/2026/NĐ-CP, Điều 13; QCVN 18:2021/BXD, mục 2.19.1.1."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý thế nào trước giờ vào ca?",
+          "options": [
+            {
+              "text": "Cho hai người nhận đủ bảo hộ rồi mới vào vị trí",
+              "effect": {
+                "an_toan": 5,
+                "tien_do": -1
+              },
+              "feedback": "Người lao động phải được trang bị bảo hộ phù hợp trước khi làm việc."
+            },
+            {
+              "text": "Cho lên trước, lát nữa mang bảo hộ tới sau",
+              "effect": {
+                "an_toan": -6,
+                "tien_do": 2
+              },
+              "feedback": "Làm việc khi chưa có bảo hộ phù hợp là trái quy chuẩn an toàn."
+            },
+            {
+              "text": "Để tổ trưởng tự quyết, bạn đi kiểm tra chỗ khác",
+              "effect": {
+                "an_toan": -3,
+                "suc_luc": 1
+              },
+              "feedback": "Kiểm tra điều kiện an toàn tại hiện trường là việc của người giám sát."
+            }
+          ]
+        }
+      },
+      {
+        "id": "x2-gian-giao",
+        "time": "07:30",
+        "title": "Rà bảng kiểm an toàn giàn giáo",
+        "narrative": "Khu giàn giáo tầng 3 vừa được dựng. Phiếu kiểm treo ở cột, bạn rà từng dòng trước khi cho công nhân lên sàn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giàn giáo cao từ 2 m phải có lan can và tấm chặn chân; giàn kim loại phải được kiểm tra ít nhất 7 ngày một lần.",
+          "source_ids": [
+            "S3"
+          ],
+          "confidence": "verified",
+          "note": "QCVN 18:2021/BXD, các mục 2.2.3.12 và 2.2.4.1."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Tìm các điểm chưa đạt trong phiếu kiểm tra giàn giáo",
+          "document": [
+            "GIÀN GIÁO KHU A — PHIẾU KIỂM TRA NGÀY 03/11/2026",
+            "Chiều cao sàn công tác: 3,2 m",
+            "Lan can: chỉ một thanh ngang, không có tấm chặn chân",
+            "Mặt sàn: ván liền, không thấy khe hở",
+            "Loại giàn: giàn giáo kim loại",
+            "Lần kiểm tra gần nhất: 12 ngày trước",
+            "Biển báo: đã gắn ở chân giàn giáo"
+          ],
+          "errors": [
+            {
+              "line": 2,
+              "explain": "Sàn công tác cao từ 2 m phải có lan can và tấm chặn chân."
+            },
+            {
+              "line": 5,
+              "explain": "Giàn giáo kim loại phải được kiểm tra ít nhất 7 ngày một lần."
+            }
+          ],
+          "on_success": {
+            "an_toan": 6
+          },
+          "on_fail": {
+            "an_toan": -6,
+            "tien_do": -2
+          }
+        }
+      },
+      {
+        "id": "x3-do-be-tong",
+        "time": "09:30",
+        "title": "Nhà thầu muốn đổ bê tông khi chưa nghiệm thu",
+        "narrative": "Chỉ huy trưởng giục đổ bê tông sàn tầng 5. Hồ sơ nghiệm thu cốt thép vẫn chưa được ký.",
+        "basis": {
+          "kind": "fact",
+          "text": "Công việc xây dựng phải được nghiệm thu trước khi chuyển bước; người giám sát thực hiện trong 24 giờ từ khi nhận đề nghị.",
+          "source_ids": [
+            "S2"
+          ],
+          "confidence": "verified",
+          "note": "Nghị định 207/2026/NĐ-CP, Điều 22 và Điều 23 khoản 1."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý yêu cầu đổ bê tông thế nào?",
+          "options": [
+            {
+              "text": "Dừng đổ, nghiệm thu cốt thép rồi mới cho thi công",
+              "effect": {
+                "an_toan": 5,
+                "tien_do": -2
+              },
+              "feedback": "Công việc phải được nghiệm thu trước khi chuyển bước; biên bản ghi rõ kết quả."
+            },
+            {
+              "text": "Đồng ý đổ trước, nghiệm thu sau cho kịp tiến độ",
+              "effect": {
+                "an_toan": -10,
+                "tien_do": 5
+              },
+              "feedback": "Đổ bê tông khi chưa nghiệm thu cốt thép là bỏ qua bước kiểm soát chất lượng."
+            },
+            {
+              "text": "Gọi chủ đầu tư xin ý kiến rồi quyết",
+              "effect": {
+                "tien_do": -2,
+                "an_toan": 1
+              },
+              "feedback": "Chủ đầu tư không thay thế được trách nhiệm nghiệm thu của người giám sát."
+            }
+          ]
+        }
+      },
+      {
+        "id": "x4-phan-loai-vi-pham",
+        "time": "11:00",
+        "title": "Yêu cầu tạm dừng hay cho làm tiếp",
+        "narrative": "Bạn đối chiếu các ghi nhận buổi sáng với quy chuẩn. Chỗ nào chưa bảo đảm an toàn thì yêu cầu nhà thầu tạm dừng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người giám sát có quyền yêu cầu tạm dừng khi biện pháp thi công không an toàn; quy chuẩn nêu ngưỡng lan can, kiểm tra giàn và mưa lớn.",
+          "source_ids": [
+            "S2",
+            "S3"
+          ],
+          "confidence": "verified",
+          "note": "Nghị định 207/2026/NĐ-CP, Điều 20 khoản 3 điểm h; QCVN 18:2021/BXD, mục 2.1.11.2, 2.2.3.12, 2.2.4.1."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Phân loại theo quy chuẩn an toàn",
+          "buckets": [
+            "Yêu cầu tạm dừng",
+            "Đạt, làm tiếp"
+          ],
+          "items": [
+            {
+              "text": "Sàn công tác cao 2,5 m chưa có tấm chặn chân",
+              "bucket": "Yêu cầu tạm dừng"
+            },
+            {
+              "text": "Giàn giáo kim loại 10 ngày chưa được kiểm tra",
+              "bucket": "Yêu cầu tạm dừng"
+            },
+            {
+              "text": "Tổ xây vẫn làm ngoài trời khi mưa 60 mm trong ngày",
+              "bucket": "Yêu cầu tạm dừng"
+            },
+            {
+              "text": "Sàn cao 3 m có đủ lan can và tấm chặn chân",
+              "bucket": "Đạt, làm tiếp"
+            },
+            {
+              "text": "Giàn giáo kim loại được kiểm tra 5 ngày trước",
+              "bucket": "Đạt, làm tiếp"
+            },
+            {
+              "text": "Công trường có rào chắn và biển báo ở lối vào",
+              "bucket": "Đạt, làm tiếp"
+            }
+          ],
+          "on_success": {
+            "an_toan": 4,
+            "tien_do": -1
+          },
+          "on_fail": {
+            "an_toan": -4
+          }
+        }
+      },
+      {
+        "id": "x5-chu-dau-tu",
+        "time": "14:00",
+        "title": "Chủ đầu tư muốn rút ngắn tiến độ",
+        "narrative": "Chủ đầu tư họp với ban chỉ huy, muốn rút ngắn tiến độ. Áp lực tăng, nhưng bước kiểm tra an toàn thì không thể bỏ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người giám sát nghiệm thu và xác nhận khối lượng hoàn thành; một giám sát trưởng kể mỗi lần thi công hạng mục lớn là áp lực rất lớn.",
+          "source_ids": [
+            "S2",
+            "S8"
+          ],
+          "confidence": "single_source",
+          "note": "Nghị định 207/2026/NĐ-CP, Điều 20 và Điều 22–23; lời kỹ sư Cao Thanh An trên Báo Phụ Nữ là trải nghiệm cá nhân."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với chủ đầu tư về tiến độ",
+          "npc": "Chủ đầu tư",
+          "turns": [
+            {
+              "npc_line": "Tôi cần xong sàn tầng 5 trước cuối tháng, cắt bớt kiểm tra đi.",
+              "replies": [
+                {
+                  "text": "Kiểm tra an toàn không cắt được; em sẽ báo tiến độ thực tế.",
+                  "effect": {
+                    "an_toan": 3,
+                    "tien_do": 1
+                  },
+                  "feedback": "Giữ bước kiểm tra là đúng; tiến độ phải báo theo thực tế."
+                },
+                {
+                  "text": "Dạ, em cho làm xuyên đêm và bỏ bước kiểm tra.",
+                  "effect": {
+                    "an_toan": -6,
+                    "suc_luc": -5
+                  },
+                  "feedback": "Bỏ kiểm tra và làm xuyên đêm làm tăng rủi ro tai nạn."
+                }
+              ]
+            },
+            {
+              "npc_line": "Vậy lập kế hoạch tăng ca đi, cần thêm bao nhiêu người?",
+              "replies": [
+                {
+                  "text": "Em rà từng hạng mục, chỉ tăng ca ở việc ít rủi ro.",
+                  "effect": {
+                    "tien_do": 4,
+                    "suc_luc": -2
+                  },
+                  "feedback": "Tăng ca có chọn lọc giúp giữ an toàn và tiến độ."
+                },
+                {
+                  "text": "Tăng gấp đôi người ở mọi vị trí, kể cả trên giàn giáo.",
+                  "effect": {
+                    "an_toan": -5,
+                    "tien_do": 2
+                  },
+                  "feedback": "Dồn người lên giàn giáo dễ quá tải và va chạm."
+                }
+              ]
+            },
+            {
+              "npc_line": "Nếu chậm, nhà thầu bị phạt. Kỹ sư chịu trách nhiệm được không?",
+              "replies": [
+                {
+                  "text": "Em chịu trách nhiệm chất lượng và an toàn; tiến độ báo bằng văn bản.",
+                  "effect": {
+                    "an_toan": 2,
+                    "tien_do": -1
+                  },
+                  "feedback": "Trách nhiệm nghề nghiệp phải đi cùng hồ sơ rõ ràng."
+                },
+                {
+                  "text": "Em ký cam kết bù tiến độ bằng mọi giá.",
+                  "effect": {
+                    "tien_do": 3,
+                    "an_toan": -4
+                  },
+                  "feedback": "Cam kết bằng mọi giá thường phải đánh đổi an toàn."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "x6-mua-lon",
+        "time": "16:00",
+        "title": "Mưa lớn bất ngờ",
+        "narrative": "Mây đen kéo tới, mưa đổ xuống sàn đang thi công. Công nhân còn trên giàn giáo và máy trộn vẫn chạy.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quy chuẩn cấm làm việc khi mưa từ 51 mm/24 giờ hoặc 26 mm/12 giờ; sau khi dừng phải kiểm tra lại giàn giáo, kết cấu.",
+          "source_ids": [
+            "S3"
+          ],
+          "confidence": "verified",
+          "note": "QCVN 18:2021/BXD, các mục 2.1.11.2 và 2.1.12.2–2.1.12.3."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước khi mưa lớn ập xuống",
+          "steps": [
+            "Dừng mọi việc ngoài trời và trên giàn giáo",
+            "Đưa công nhân xuống nơi trú an toàn",
+            "Chờ hết mưa lớn",
+            "Kiểm tra lại giàn giáo, kết cấu đang thi công",
+            "Cho làm tiếp khi đã kiểm tra đạt"
+          ],
+          "on_success": {
+            "an_toan": 6,
+            "tien_do": -3
+          },
+          "on_fail": {
+            "an_toan": -6,
+            "tien_do": -2
+          }
+        }
+      },
+      {
+        "id": "x7-buoi-toi",
+        "time": "19:30",
+        "title": "Buổi tối ở nhà",
+        "narrative": "Về tới nhà khi trời đã tối. Còn nhật ký công trường, sách ôn chứng chỉ và cuộc gọi về quê.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một kỹ sư công trường cao tốc sống cách nhà gần 200 km, hơn một năm không có ngày nghỉ; nhật ký ghi thời tiết và việc nghiệm thu.",
+          "source_ids": [
+            "S9",
+            "S2"
+          ],
+          "confidence": "single_source",
+          "note": "Lời kỹ sư Đậu Văn Xuân trên Báo Xây Dựng; yêu cầu nhật ký theo Nghị định 207/2026/NĐ-CP, Phụ lục II."
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Phân bổ 120 phút buổi tối",
+          "budget_min": 120,
+          "activities": [
+            {
+              "label": "Viết nhật ký thi công",
+              "effect_per_30min": {
+                "tien_do": 2,
+                "suc_luc": -1
+              }
+            },
+            {
+              "label": "Ôn chứng chỉ giám sát",
+              "effect_per_30min": {
+                "an_toan": 1,
+                "tien_do": 1,
+                "suc_luc": -2
+              }
+            },
+            {
+              "label": "Nghỉ ngơi, gọi về nhà",
+              "effect_per_30min": {
+                "suc_luc": 3
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có chịu được việc nhiều người giục nhanh trong khi một bước kiểm tra chưa xong?",
+      "Bạn có sẵn lòng nói dừng thi công khi việc đó làm chậm tiến độ?",
+      "Bạn thấy thế nào khi công việc thường xuyên xa nhà và phụ thuộc thời tiết?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sv-xay-dung",
+        "title": "Sinh viên / thực tập công trường",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Đi công trường sớm để làm quen bản vẽ, vật liệu, trình tự thi công và cách ghi chép hiện trường."
+          }
+        ]
+      },
+      {
+        "id": "ks-giam-sat",
+        "title": "Kỹ sư giám sát thi công",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Cần chứng chỉ hành nghề giám sát thi công xây dựng; điều kiện chung và kinh nghiệm theo từng hạng do Chính phủ quy định.",
+            "source_ids": [
+              "S1",
+              "S4"
+            ],
+            "confidence": "verified",
+            "note": "Luật Xây dựng 135/2025/QH15, Điều 88; Nghị định 212/2026/NĐ-CP, Điều 33 và Điều 37."
+          }
+        ]
+      },
+      {
+        "id": "chi-huy-truong",
+        "title": "Chỉ huy trưởng công trường",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Thường cần thêm kinh nghiệm điều phối nhân lực, thiết bị, tiến độ và xử lý nhiều bên trên cùng một công trường."
+          }
+        ]
+      },
+      {
+        "id": "giam-doc-du-an",
+        "title": "Giám đốc dự án",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Hướng tới quản trị nhiều công trường: hợp đồng, chi phí, chất lượng và quan hệ với chủ đầu tư."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": "sv-xay-dung",
+        "to": "ks-giam-sat",
+        "type": "promotion"
+      },
+      {
+        "from": "ks-giam-sat",
+        "to": "chi-huy-truong",
+        "type": "promotion"
+      },
+      {
+        "from": "chi-huy-truong",
+        "to": "giam-doc-du-an",
+        "type": "management"
+      }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Có kỹ sư công trường cao tốc sống cách nhà gần 200 km và hơn một năm không có ngày nghỉ; công việc thường xuyên xa nhà.",
+      "source_ids": [
+        "S9"
+      ],
+      "confidence": "single_source",
+      "note": "Lời kể của một kỹ sư cụ thể, không phải số liệu đại diện cho cả nghề."
+    },
+    {
+      "kind": "fact",
+      "text": "Sáu tháng đầu năm 2026 cả nước có 3.415 vụ tai nạn lao động, làm 391 người chết.",
+      "source_ids": [
+        "S6"
+      ],
+      "confidence": "verified",
+      "note": "Thông báo 11241/TB-BNV của Bộ Nội vụ (file PDF đính kèm)."
+    },
+    {
+      "kind": "fact",
+      "text": "Theo Báo Nhân Dân, xây dựng chiếm 6,7% số vụ chết người trong các biên bản điều tra Bộ Nội vụ đã nhận.",
+      "source_ids": [
+        "S7"
+      ],
+      "confidence": "single_source",
+      "note": "Tỷ lệ do báo dẫn lại; cần đối chiếu với file PDF của Thông báo 11241/TB-BNV."
+    },
+    {
+      "kind": "fact",
+      "text": "Công việc ngoài trời phụ thuộc thời tiết; quy chuẩn cấm làm việc khi mưa lớn, gió mạnh hoặc nắng nóng vượt ngưỡng an toàn.",
+      "source_ids": [
+        "S3"
+      ],
+      "confidence": "verified",
+      "note": "QCVN 18:2021/BXD, mục 2.1.11.2."
+    },
+    {
+      "kind": "fact",
+      "text": "Người giám sát phải nghiệm thu trong thời hạn 24 giờ và chịu trách nhiệm về kết quả; hồ sơ, nhật ký phải đầy đủ.",
+      "source_ids": [
+        "S2"
+      ],
+      "confidence": "verified",
+      "note": "Nghị định 207/2026/NĐ-CP, Điều 22 và Phụ lục II."
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/7/2026, Luật Xây dựng 2025 và các nghị định mới về chất lượng, chứng chỉ hành nghề có hiệu lực; kỹ sư phải cập nhật quy định.",
+      "source_ids": [
+        "S1",
+        "S2",
+        "S4"
+      ],
+      "confidence": "verified"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm công cụ số, đọc bản vẽ và ngoại ngữ sẽ giúp làm việc với dự án lớn và hồ sơ ngày càng nhiều."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-03",
+    "researched_by": "Codex — research qua web (chinhphu.vn, thuvienphapluat.vn, TopCV, báo chí)",
+    "scope_note": "Bối cảnh kỹ sư giám sát thi công phía nhà thầu tại công trình nhà nhiều tầng. Lương là dữ liệu tra cứu TopCV 2026, khác nhau theo vị trí và địa điểm. Các tình huống trong ngày là hư cấu minh họa."
+  }
+}

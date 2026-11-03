@@ -28,6 +28,16 @@ const PAINT = {
   door: (x, y) => (x < 2 || x > 13 ? hex("#6b4a2b") : y % 5 === 4 ? hex("#7d5532") : hex("#9b6a3d")),
 };
 
+// Ô nền công trường (SPEC-012): đất, bê tông, rào tôn, giàn giáo, sàn cốt thép.
+const SITE = ["dirt", "concrete", "fence", "scaffold", "rebar"];
+const SITE_PAINT = {
+  dirt: (x, y) => ((x * 3 + y * 5) % 13 === 0 ? hex("#6f5538") : (x * 7 + y * 11) % 17 === 0 ? hex("#a07d52") : hex("#8b6a45")),
+  concrete: (x, y) => (x === 0 || y === 0 ? hex("#8e8e88") : (x * 5 + y * 3) % 19 === 0 ? hex("#777771") : (x + y) % 7 === 0 ? hex("#b0b0a8") : hex("#a3a39b")),
+  fence: (x, y) => (y === 0 || y === 15 ? hex("#6f7378") : x % 4 === 0 ? hex("#b8bcc0") : x % 4 === 2 ? hex("#8d9297") : hex("#a7abaf")),
+  scaffold: (x, y) => (x < 2 || x > 13 ? hex("#6b6f74") : y === 0 || y === 15 || y === 7 || y === 8 ? hex("#c46a2b") : (x + y) % 5 === 0 ? hex("#9aa0a5") : hex("#7d8287")),
+  rebar: (x, y) => (x % 5 === 0 || y % 5 === 0 ? hex("#5b5f63") : (x + y) % 9 === 0 ? hex("#b9b6aa") : hex("#a9a79c")),
+};
+
 function png(width, height, pixel) {
   const crcT = Array.from({ length: 256 }, (_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
   const crc = (buf) => { let c = 0xffffffff; for (const b of buf) c = crcT[(c ^ b) & 0xff] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
@@ -43,13 +53,25 @@ function png(width, height, pixel) {
   return Buffer.concat([Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]), chunk("IHDR", ihdr), chunk("IDAT", deflateSync(raw)), chunk("IEND", Buffer.alloc(0))]);
 }
 
-const baseW = BASE.length * (T + GAP) - GAP;
-writeFileSync(out("public/game/base/base.png"), png(baseW, T, (x, y) => {
-  const i = Math.floor(x / (T + GAP)), lx = x % (T + GAP);
-  return lx >= T ? [0, 0, 0, 0] : PAINT[BASE[i]](lx, y);
-}));
+function sheet(tiles, paint) {
+  const w = tiles.length * (T + GAP) - GAP;
+  return png(w, T, (x, y) => {
+    const i = Math.floor(x / (T + GAP)), lx = x % (T + GAP);
+    return lx >= T ? [0, 0, 0, 0] : paint[tiles[i]](lx, y);
+  });
+}
+
+writeFileSync(out("public/game/base/base.png"), sheet(BASE, PAINT));
+writeFileSync(out("public/game/site/site.png"), sheet(SITE, SITE_PAINT));
 writeFileSync(out("public/game/base/License.txt"), [
   "Bộ ô nền (sàn, tường, cỏ, lối đi) của dự án Một Ngày Làm Nghề.",
+  "Vẽ bằng code trong scripts/gen-world.mjs.",
+  "Ô nền công trường (đất, bê tông, rào tôn, giàn giáo, cốt thép) nằm ở public/game/site/.",
+  "License: Creative Commons Zero (CC0) http://creativecommons.org/publicdomain/zero/1.0/",
+  "",
+].join("\n"));
+writeFileSync(out("public/game/site/License.txt"), [
+  "Bộ ô nền công trường (đất, nền bê tông, rào tôn, giàn giáo, sàn cốt thép) của dự án Một Ngày Làm Nghề.",
   "Vẽ bằng code trong scripts/gen-world.mjs.",
   "License: Creative Commons Zero (CC0) http://creativecommons.org/publicdomain/zero/1.0/",
   "",
@@ -118,18 +140,19 @@ const HOME_PROPS = [
 ];
 const HOME_DECOR = [[3, 2, 18]];
 
-function buildMap(id, rows, props, decor, spawn) {
+function buildMap(id, rows, props, decor, spawn, extraFloor = {}) {
   const width = rows[0].length, height = rows.length;
   if (!rows.every((r) => r.length === width)) throw new Error(`map ${id}: dòng không đều`);
   const at = (x, y) => (y < 0 || y >= height || x < 0 || x >= width ? "#" : rows[y][x]);
+  const FLOOR = { ".": "base:0", ",": "base:1", g: "base:4", "=": "base:5", D: "base:6", ...extraFloor };
   const floor = [], walls = [], furniture = Array(width * height).fill(null), top = Array(width * height).fill(null), solid = [];
   for (let y = 0; y < height; y++) for (let x = 0; x < width; x++) {
     const c = at(x, y);
     const isWall = c === "#";
-    floor.push(c === "," ? "base:1" : c === "g" ? "base:4" : c === "=" ? "base:5" : c === "D" ? "base:6" : isWall ? null : "base:0");
+    floor.push(FLOOR[c] ?? (isWall ? null : "base:0"));
     // Tường có sàn ngay bên dưới → mặt tường; còn lại → đỉnh tường.
     walls.push(isWall ? (at(x, y + 1) !== "#" && y + 1 < height ? "base:2" : "base:3") : null);
-    solid.push(isWall ? 1 : 0);
+    solid.push(isWall || c === "r" || c === "s" ? 1 : 0);
   }
   for (const [x, y, tile, s] of props) {
     const i = y * width + x;
@@ -349,4 +372,59 @@ const accountantWorld = {
 };
 writeFileSync(out("content/worlds/ke-toan.json"), JSON.stringify(accountantWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan}.json");
+// ---------- Kỹ sư xây dựng (SPEC-012): công trường ngoài trời + nhà ----------
+// ';' đất, 'c' nền bê tông, 'r' rào tôn (solid), 's' giàn giáo (solid), 'b' sàn cốt thép.
+const CONG_TRUONG = [
+  "rrrrrrrrrrrrrrrrrrrrrrrrrr",
+  "r;;;;;;;;;;;cc;;;;;;;;;;;r",
+  "r;sssss;;;;;bbbbbbb;;;;;;r",
+  "r;sssss;;;;;bbbbbbb;;;;;;r",
+  "r;sssss;;;;;bbbbbbb;;;;;;r",
+  "r;sssss;;;;;bbbbbbb;;;;;;r",
+  "r;;;;;;;;;;;bbbbbbb;;;;;;r",
+  "r;;;;;;;;;;;cc;;;;#.....#r",
+  "r;;;;;;;;;;;cc;;;;#.....#r",
+  "r;;;;;;;;;;;cc;;;;D.....#r",
+  "r;;;;;;;;;;;cc;;;;#.....#r",
+  "r;;;;;;;;;;;cc;;;;#######r",
+  "r;;;;;;;;;;;cccccc;;;;;;;r",
+  "rrrrrrrrrrrrccrrrrrrrrrrrr",
+];
+const CONG_TRUONG_PROPS = [
+  // Lán ban chỉ huy: bàn làm việc, điện thoại, bảng tiến độ, cây
+  [20, 8, 85, 1], [21, 8, 86, 1], [22, 8, 97, 1], [23, 8, 329, 1],
+  [19, 10, 16, 1],
+];
+const CONG_TRUONG_DECOR = [[21, 8, 18], [23, 8, 18]];
+const SITE_FLOOR = { ";": "site:0", c: "site:1", r: "site:2", s: "site:3", b: "site:4" };
+
+const constructionWorld = {
+  profession_id: "ky-su-xay-dung",
+  tile_size: 16,
+  tilesets: [...world.tilesets, { key: "site", image: "game/site/site.png", columns: SITE.length, spacing: 1 }],
+  maps: [
+    buildMap("cong-truong", CONG_TRUONG, CONG_TRUONG_PROPS, CONG_TRUONG_DECOR, { x: 12, y: 13 }, SITE_FLOOR),
+    buildMap("nha", HOME, HOME_PROPS, HOME_DECOR, { x: 6, y: 5 }),
+  ],
+  npcs: [
+    { id: "cong-nhan-1", map: "cong-truong", x: 13, y: 12, name: "Công nhân tổ 1", sprite: C(0, 121, 128) },
+    { id: "cong-nhan-2", map: "cong-truong", x: 8, y: 4, name: "Công nhân giàn giáo", sprite: C(54, 17, 22) },
+    { id: "chi-huy-truong", map: "cong-truong", x: 17, y: 4, name: "Chỉ huy trưởng nhà thầu", sprite: C(379) },
+    { id: "chu-dau-tu", map: "cong-truong", x: 21, y: 9, name: "Chủ đầu tư", sprite: C(1, 13, 76) },
+    { id: "cong-nhan-3", map: "cong-truong", x: 10, y: 10, name: "Công nhân tổ 2", sprite: C(1, 125, 20) },
+    { id: "cong-nhan-4", map: "cong-truong", x: 14, y: 11, name: "Công nhân tổ 3", sprite: C(54, 71, 19) },
+  ],
+  player_sprite: C(0, 13, 20),
+  segments: {
+    "x1-kiem-tra-dau-ca": { map: "cong-truong", target: { x: 12, y: 12 }, npc: "cong-nhan-1", quest: "Tới cổng công trường, kiểm tra bảo hộ đầu ca" },
+    "x2-gian-giao": { map: "cong-truong", target: { x: 6, y: 5 }, npc: "cong-nhan-2", quest: "Tới khu giàn giáo, rà phiếu kiểm tra" },
+    "x3-do-be-tong": { map: "cong-truong", target: { x: 15, y: 4 }, npc: "chi-huy-truong", quest: "Lên sàn tầng 5, gặp chỉ huy trưởng nhà thầu" },
+    "x4-phan-loai-vi-pham": { map: "cong-truong", target: { x: 23, y: 8 }, quest: "Về lán ban chỉ huy, xem bảng tiến độ" },
+    "x5-chu-dau-tu": { map: "cong-truong", target: { x: 22, y: 9 }, npc: "chu-dau-tu", quest: "Họp với chủ đầu tư ở lán ban chỉ huy" },
+    "x6-mua-lon": { map: "cong-truong", target: { x: 15, y: 2 }, quest: "Mưa lớn! Quay lại sàn đang thi công" },
+    "x7-buoi-toi": { map: "nha", target: { x: 3, y: 2 }, quest: "Về nhà, sắp xếp buổi tối" },
+  },
+};
+writeFileSync(out("content/worlds/ky-su-xay-dung.json"), JSON.stringify(constructionWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung}.json");
