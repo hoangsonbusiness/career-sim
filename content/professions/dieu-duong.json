@@ -1,0 +1,153 @@
+{
+  "id": "dieu-duong",
+  "name": "Điều dưỡng",
+  "aliases": ["Y tá", "Điều dưỡng viên"],
+  "group": { "label": "Y tế & Sức khỏe" },
+  "holland": ["S", "C", "I"],
+  "summary": "Chăm sóc, theo dõi người bệnh suốt quá trình điều trị: nhận định tình trạng sức khỏe, thực hiện y lệnh của bác sĩ, chăm sóc vệ sinh, dinh dưỡng, tinh thần, ghi hồ sơ và hướng dẫn người bệnh, người nhà. Làm theo ca, kể cả trực đêm.",
+  "sources": [
+    { "id": "S1", "type": "law", "title": "Luật Khám bệnh, chữa bệnh số 15/2023/QH15 (Điều 24, Điều 120)", "publisher": "Quốc hội — CSDL quốc gia về pháp luật (vbpl.vn)", "url": "https://vbpl.vn/van-ban/chi-tiet/luat-kham-benh-chua-benh-2023-so-15-2023-qh15--168125", "accessed": "2026-11-03", "effective_date": "2024-01-01", "supersedes": "Luật Khám bệnh, chữa bệnh số 40/2009/QH12 (sửa đổi bởi Luật số 21/2017/QH14)", "note": "Ngày hiệu lực lấy theo Điều 120 trong văn bản. Trường thuộc tính trên vbpl.vn ghi 19/02/2023, khác với Điều 120; dùng ngày trong văn bản." },
+    { "id": "S2", "type": "law", "title": "Thông tư 31/2021/TT-BYT quy định hoạt động điều dưỡng trong bệnh viện (Điều 3, 4, 6, 14)", "publisher": "Bộ Y tế — CSDL quốc gia về pháp luật (vbpl.vn)", "url": "https://vbpl.vn/van-ban/chi-tiet/thong-tu-so-31-2021-tt-byt-quy-dinh-hoat-dong-dieu-duong-trong-benh-vien--152956", "accessed": "2026-11-03", "effective_date": "2022-02-27", "supersedes": "Thông tư 07/2011/TT-BYT", "note": "vbpl.vn ghi Còn hiệu lực, cập nhật 01/04/2026. Văn bản bị thay thế lấy theo tin của Báo Chính phủ (chưa mở nguyên văn điều khoản thay thế)." },
+    { "id": "S3", "type": "law", "title": "Thông tư 02/2025/TT-BYT quy định mã số, tiêu chuẩn chức danh nghề nghiệp điều dưỡng, hộ sinh, kỹ thuật y (toàn văn)", "publisher": "Bộ Y tế — đăng tại Cổng TTĐT Chính phủ (xaydungchinhsach.chinhphu.vn)", "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-thong-tu-quy-dinh-ma-so-tieu-chuan-chuc-danh-nghe-nghiep-dieu-duong-ho-sinh-ky-thuat-y-119250116085800498.htm", "accessed": "2026-11-03", "issued_date": "2025-01-09", "effective_date": "2025-03-01", "supersedes": "Thông tư liên tịch 26/2015/TTLT-BYT-BNV", "note": "Không áp dụng đối với cơ sở y tế tư nhân." },
+    { "id": "S4", "type": "press", "title": "Cách xếp lương điều dưỡng, hộ sinh, kỹ thuật y hạng IV (Bộ Y tế trả lời công dân)", "publisher": "Báo Điện tử Chính phủ (baochinhphu.vn)", "url": "https://baochinhphu.vn/cach-xep-luong-dieu-duong-ho-sinh-ky-thuat-y-hang-iv-102250930102941456.htm", "accessed": "2026-11-03", "issued_date": "2025-09-30" },
+    { "id": "S5", "type": "press", "title": "Lương giáo viên lên đến 17,15 triệu đồng/tháng từ 01/7/2026 (phần lương cơ sở)", "publisher": "LuatVietnam", "url": "https://luatvietnam.vn/lao-dong-tien-luong/luong-giao-vien-du-kien-len-den-1713-trieu-dong-thang-562-107640-article.html", "accessed": "2026-11-02", "note": "Dùng lại nguồn S14 của gói Giáo viên THPT cho mức lương cơ sở 2.530.000đ từ 01/7/2026 (Nghị định 161/2026/NĐ-CP). Cần mở nguyên văn nghị định để lên verified." },
+    { "id": "S6", "type": "press", "title": "Điều dưỡng bệnh viện kiệt sức", "publisher": "Báo VnExpress", "url": "https://vnexpress.net/dieu-duong-benh-vien-kiet-suc-4884895.html", "accessed": "2026-11-03", "issued_date": "2025-05-12" },
+    { "id": "S7", "type": "official_stat", "title": "Tuyển sinh 2025: Phương thức, chỉ tiêu tuyển sinh của Trường Đại học Y Hà Nội", "publisher": "Cổng TTĐT Chính phủ (xaydungchinhsach.chinhphu.vn)", "url": "https://xaydungchinhsach.chinhphu.vn/tuyen-sinh-2025-phuong-thuc-chi-tieu-tuyen-sinh-cua-truong-dai-hoc-y-ha-noi-119250519154943907.htm", "accessed": "2026-11-03" },
+    { "id": "S8", "type": "reference", "title": "O*NET 29-1141.00 — Registered Nurses", "publisher": "U.S. Department of Labor / O*NET", "url": "https://www.onetonline.org/link/summary/29-1141.00", "accessed": "2026-11-03", "note": "Chỉ dùng làm khung phân rã nhiệm vụ và mã Holland (SCI)." },
+    { "id": "S9", "type": "testimony", "title": "Điều dưỡng 30 năm gắn bó với nghề: 'Chính người bệnh đã neo tôi lại' (chị Trần Thị Bích Thủy, khoa Gây mê - Hồi sức, Bệnh viện Đại học Y Dược TP.HCM)", "publisher": "Báo Thanh Niên", "url": "https://thanhnien.vn/dieu-duong-30-nam-gan-bo-voi-nghe-chinh-nguoi-benh-da-neo-toi-lai-185230223111257551.htm", "accessed": "2026-11-03", "issued_date": "2023-05-12" },
+    { "id": "S10", "type": "testimony", "title": "Nghề điều dưỡng: Vất vả đi qua, yêu thương ở lại (chị Huỳnh Thị Thấm, BV Hoàn Mỹ Thủ Đức; anh Nguyễn Tiến Dũng, BV Hoàn Mỹ Đà Nẵng)", "publisher": "Báo Tuổi Trẻ", "url": "https://tuoitre.vn/nghe-dieu-duong-vat-va-di-qua-yeu-thuong-o-lai-20210929114101178.htm", "accessed": "2026-11-03", "issued_date": "2021-09-29", "note": "Bài gắn với phim tài liệu do Tập đoàn Y khoa Hoàn Mỹ sản xuất; chỉ dùng cho mô tả trải nghiệm, không dùng số liệu." }
+  ],
+  "requirements": {
+    "thcs": [
+      { "kind": "advice", "text": "Học chắc Sinh học và Hóa học, vì đây là nền tảng để hiểu cơ thể người và cách chăm sóc người bệnh.", "audience": ["thcs"] },
+      { "kind": "advice", "text": "Rèn tính kiên nhẫn và cách nói chuyện nhẹ nhàng: chăm sóc ông bà, em nhỏ, tham gia hoạt động tình nguyện.", "audience": ["thcs"] }
+    ],
+    "thpt": [
+      { "kind": "fact", "text": "Ví dụ năm 2025, Trường Đại học Y Hà Nội xét tuyển ngành Điều dưỡng bằng tổ hợp A00 (Toán, Hóa, Lý) và B00 (Toán, Hóa, Sinh).", "source_ids": ["S7"], "confidence": "single_source", "audience": ["thpt"], "note": "Mỗi trường và mỗi năm có thể khác; xem đề án tuyển sinh của trường bạn định thi." },
+      { "kind": "advice", "text": "Chọn tổ hợp môn có Toán, Hóa, Sinh để giữ nhiều lựa chọn cho các ngành sức khỏe.", "audience": ["thpt"] }
+    ],
+    "higher_ed": [
+      { "kind": "fact", "text": "Điều dưỡng hạng IV ở cơ sở y tế công lập cần bằng tốt nghiệp cao đẳng Điều dưỡng trở lên; hạng III cần bằng đại học ngành điều dưỡng.", "source_ids": ["S3"], "confidence": "verified" }
+    ],
+    "on_the_job": [
+      { "kind": "fact", "text": "Muốn hành nghề, điều dưỡng phải có giấy phép hành nghề; điều kiện cấp mới gồm qua kiểm tra đánh giá năng lực do Hội đồng Y khoa Quốc gia tổ chức.", "source_ids": ["S1"], "confidence": "verified" },
+      { "kind": "fact", "text": "Theo lộ trình của luật, Hội đồng Y khoa Quốc gia bắt đầu kiểm tra năng lực chức danh điều dưỡng từ 01/01/2028; người đề nghị cấp phép từ 2024 đến hết năm 2027 chưa phải kiểm tra.", "source_ids": ["S1"], "confidence": "verified" },
+      { "kind": "fact", "text": "Điều dưỡng ở khoa lâm sàng có nhiệm vụ học tập liên tục để cập nhật kiến thức, kỹ năng.", "source_ids": ["S2"], "confidence": "verified" }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      { "kind": "fact", "text": "Điều dưỡng phải bàn giao đầy đủ người bệnh và các vấn đề cần theo dõi, đặc biệt giữa các ca trực.", "source_ids": ["S2"], "confidence": "verified" },
+      { "kind": "fact", "text": "Chăm sóc người bệnh diễn ra cả ngày lẫn đêm; khảo sát năm 2024 ở Bệnh viện Hữu nghị Việt Đức cho thấy 80% điều dưỡng phải trực đêm thường xuyên.", "source_ids": ["S6"], "confidence": "single_source" }
+    ],
+    "income": [
+      { "kind": "fact", "text": "Ở cơ sở công lập, điều dưỡng hạng IV xếp lương viên chức loại A0, hệ số 2,1–4,89, tương đương khoảng 5,31–12,37 triệu đồng/tháng (chưa gồm phụ cấp).", "source_ids": ["S4", "S5"], "confidence": "single_source", "note": "Tính: 2,1 × 2.530.000 = 5.313.000đ; 4,89 × 2.530.000 = 12.371.700đ. Hệ số theo Bộ Y tế trả lời (S4); lương cơ sở theo S5." },
+      { "kind": "fact", "text": "Thu nhập của điều dưỡng ở bệnh viện tư nhân chưa có số liệu đáng tin trong bộ dữ liệu này.", "source_ids": [], "confidence": "needs_verification", "note": "Cần báo cáo lương có năm (TopCV, VietnamWorks, Navigos) tách riêng điều dưỡng; các bài tổng hợp tìm được là blog không rõ phương pháp." }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Điều dưỡng Hà — điều dưỡng hạng IV, năm thứ ba đi làm ở khoa Nội một bệnh viện công",
+    "setting": "Một ca ngày ở khoa Nội: nhận bàn giao, đi buồng, thực hiện y lệnh, trò chuyện với người nhà và hướng dẫn người bệnh ra viện.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "suc_luc", "label": "Sức lực", "initial": 80 },
+      { "id": "nguoi_benh_an_tam", "label": "Người bệnh an tâm", "initial": 50 },
+      { "id": "ap_luc", "label": "Áp lực", "initial": 30 }
+    ],
+    "segments": [
+      {
+        "id": "d1-ban-giao", "time": "06:45", "title": "Nhận bàn giao ca",
+        "narrative": "Ca đêm sắp về. Bạn nhận bàn giao những người bệnh của buồng mình. Làm theo thứ tự nào để không sót ai?",
+        "basis": { "kind": "fact", "text": "Điều dưỡng phải bàn giao đầy đủ số lượng người bệnh và các vấn đề cần theo dõi, đặc biệt giữa các ca trực.", "source_ids": ["S2"], "confidence": "verified" },
+        "task": { "type": "sequence", "prompt": "Sắp xếp các bước nhận bàn giao ca", "steps": ["Nhận danh sách người bệnh của buồng", "Nghe ca trước báo các vấn đề cần theo dõi", "Cùng ca trước đi buồng xem từng người bệnh", "Đối chiếu hồ sơ chăm sóc với y lệnh trong ngày", "Ký nhận bàn giao vào sổ"], "on_success": { "nguoi_benh_an_tam": 5 }, "on_fail": { "ap_luc": 5 } }
+      },
+      {
+        "id": "d2-phieu-theo-doi", "time": "07:30", "title": "Rà phiếu chăm sóc",
+        "narrative": "Đi buồng xong, bạn rà phiếu chăm sóc ca đêm ghi cho giường 12. Có chỗ nào ca sau sẽ không theo dõi tiếp được?",
+        "basis": { "kind": "fact", "text": "Điều dưỡng lập hồ sơ quản lý người bệnh và cập nhật hằng ngày.", "source_ids": ["S2", "S9"], "confidence": "verified" },
+        "task": { "type": "spot_error", "prompt": "Tìm chỗ ghi chép thiếu trong phiếu chăm sóc", "document": ["Người bệnh: Nguyễn Văn B. — Giường 12", "Giờ ghi: (để trống)", "Nhận định: ngủ ít, kêu mệt, ăn được nửa suất", "Đã báo bác sĩ điều trị", "Người ghi: (không ký tên)"], "errors": [{ "line": 1, "explain": "Thiếu giờ ghi thì ca sau không biết tình trạng này có từ lúc nào." }, { "line": 4, "explain": "Thiếu tên người ghi thì không biết hỏi lại ai khi cần." }], "on_success": { "nguoi_benh_an_tam": 4 }, "on_fail": { "ap_luc": 4 } }
+      },
+      {
+        "id": "d3-y-lenh", "time": "09:00", "title": "Việc nào cần y lệnh?",
+        "narrative": "Xe thuốc và việc chăm sóc buổi sáng đã sẵn. Việc nào bạn tự làm được, việc nào phải có chỉ định của bác sĩ?",
+        "basis": { "kind": "fact", "text": "Điều dưỡng thực hiện thuốc và một số chăm sóc theo chỉ định của bác sĩ; vệ sinh, giấc ngủ, chăm sóc tinh thần thuộc chăm sóc điều dưỡng.", "source_ids": ["S2"], "confidence": "verified" },
+        "task": { "type": "drag_sort", "prompt": "Xếp mỗi việc vào đúng nhóm", "buckets": ["Tự làm theo chuyên môn", "Cần chỉ định của bác sĩ"], "items": [{ "text": "Giúp người bệnh vệ sinh thân thể, thay đồ vải", "bucket": "Tự làm theo chuyên môn" }, { "text": "Động viên người bệnh đang lo lắng", "bucket": "Tự làm theo chuyên môn" }, { "text": "Cho người bệnh dùng thuốc", "bucket": "Cần chỉ định của bác sĩ" }, { "text": "Đổi chế độ ăn của người bệnh", "bucket": "Cần chỉ định của bác sĩ" }, { "text": "Giữ buồng bệnh yên tĩnh vào giờ nghỉ", "bucket": "Tự làm theo chuyên môn" }], "on_success": { "nguoi_benh_an_tam": 5 }, "on_fail": { "nguoi_benh_an_tam": -5, "ap_luc": 5 } }
+      },
+      {
+        "id": "d4-nguoi-nha", "time": "10:30", "title": "Người nhà hỏi chuyện",
+        "narrative": "Con gái người bệnh giường 12 chặn bạn ở hành lang, giọng rất lo.",
+        "basis": { "kind": "fact", "text": "Điều dưỡng phối hợp với bác sĩ tư vấn, hướng dẫn người bệnh và người nhà về bệnh và cách tự chăm sóc.", "source_ids": ["S2", "S6"], "confidence": "verified" },
+        "task": { "type": "dialogue", "prompt": "Trò chuyện với người nhà", "npc": "Con gái người bệnh", "turns": [
+          { "npc_line": "Sao bố tôi nằm mãi chưa khỏi? Có phải chữa sai không?", "replies": [
+            { "text": "Chị bình tĩnh, việc điều trị là do bác sĩ quyết định ạ.", "effect": { "nguoi_benh_an_tam": -2 }, "feedback": "Đúng phạm vi, nhưng người nhà thấy bị gạt đi." },
+            { "text": "Em hiểu chị lo. Em mời bác sĩ điều trị trao đổi rõ với chị nhé.", "effect": { "nguoi_benh_an_tam": 4, "suc_luc": -2 }, "feedback": "Lắng nghe và nối người nhà với bác sĩ." } ] },
+          { "npc_line": "Về nhà thì tôi chăm bố thế nào cho đúng?", "replies": [
+            { "text": "Em hướng dẫn chị cách giúp bố vệ sinh và vận động nhẹ nhé.", "effect": { "nguoi_benh_an_tam": 5, "suc_luc": -3 }, "feedback": "Hướng dẫn người nhà là một phần việc của điều dưỡng." },
+            { "text": "Chị tra trên mạng là có hết ạ.", "effect": { "nguoi_benh_an_tam": -4 }, "feedback": "Người nhà dễ làm theo thông tin sai." } ] } ] }
+      },
+      {
+        "id": "d5-hai-chuong", "time": "13:30", "title": "Hai chuông gọi cùng lúc",
+        "narrative": "Chuông giường 5 (người bệnh nặng, cần chăm sóc toàn diện) và giường 9 (người bệnh tự đi lại được) reo cùng lúc.",
+        "basis": { "kind": "fact", "text": "Người bệnh được phân cấp chăm sóc; người bệnh nặng, nguy kịch phụ thuộc hoàn toàn vào sự theo dõi, chăm sóc liên tục của điều dưỡng.", "source_ids": ["S2", "S10"], "confidence": "verified" },
+        "task": { "type": "choice", "prompt": "Bạn đến giường nào trước?", "options": [
+          { "text": "Giường 5 trước, nhờ đồng nghiệp báo giường 9 chờ một chút", "effect": { "nguoi_benh_an_tam": 5, "ap_luc": 3 }, "feedback": "Ưu tiên người bệnh nặng, người kia vẫn biết mình được quan tâm." },
+          { "text": "Giường 9 trước vì gần hơn", "effect": { "nguoi_benh_an_tam": -5, "ap_luc": 5 }, "feedback": "Người bệnh nặng phụ thuộc hoàn toàn vào theo dõi của điều dưỡng." },
+          { "text": "Làm xong việc đang dở rồi mới đi", "effect": { "nguoi_benh_an_tam": -6 }, "feedback": "Chậm trả lời chuông gọi khiến người bệnh bất an." } ] }
+      },
+      {
+        "id": "d6-ra-vien", "time": "15:30", "title": "Hướng dẫn ra viện",
+        "narrative": "Ông cụ giường 3 được ra viện chiều nay. Bác sĩ đã dặn xong, giờ đến lượt bạn hướng dẫn.",
+        "basis": { "kind": "fact", "text": "Điều dưỡng hướng dẫn hoặc hỗ trợ người bệnh thực hiện các quy định khi ra viện.", "source_ids": ["S2"], "confidence": "verified" },
+        "task": { "type": "choice", "prompt": "Bạn hướng dẫn thế nào?", "options": [
+          { "text": "Dặn từng việc ở nhà, rồi hỏi lại xem ông đã nhớ chưa", "effect": { "nguoi_benh_an_tam": 6, "suc_luc": -3 }, "feedback": "Hỏi lại giúp chắc người bệnh hiểu đúng." },
+          { "text": "Đưa tờ hướng dẫn rồi đi làm việc khác", "effect": { "nguoi_benh_an_tam": -3 }, "feedback": "Nhanh, nhưng người bệnh lớn tuổi dễ bỏ sót." },
+          { "text": "Bảo ông hỏi lại bác sĩ", "effect": { "nguoi_benh_an_tam": -4 }, "feedback": "Hướng dẫn khi ra viện cũng là việc của điều dưỡng." } ] }
+      },
+      {
+        "id": "d7-sau-ca", "time": "19:00", "title": "Sau ca: còn 2 tiếng",
+        "narrative": "Hết ca, bạn về nhà mệt rã. Hai tiếng buổi tối, bạn chia thế nào?",
+        "basis": { "kind": "fact", "text": "Điều dưỡng khoa lâm sàng có nhiệm vụ học tập liên tục để cập nhật kiến thức, kỹ năng.", "source_ids": ["S2"], "confidence": "verified" },
+        "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
+          { "label": "Ngủ bù, nghỉ ngơi", "effect_per_30min": { "suc_luc": 4, "ap_luc": -2 } },
+          { "label": "Học cập nhật kiến thức", "effect_per_30min": { "nguoi_benh_an_tam": 2, "suc_luc": -1 } },
+          { "label": "Ăn tối cùng gia đình", "effect_per_30min": { "ap_luc": -3 } } ] }
+      }
+    ],
+    "reflection_questions": [
+      "Phần nào trong ca làm bạn thấy có ý nghĩa nhất?",
+      "Bạn có chịu được việc làm theo ca và trực đêm không?",
+      "Bạn thích chăm sóc con người trực tiếp, hay thích làm việc với giấy tờ, máy móc hơn?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      { "id": "sv-dieu-duong", "title": "Sinh viên ngành Điều dưỡng", "requirements": [{ "kind": "fact", "text": "Học cao đẳng hoặc đại học ngành Điều dưỡng để đạt trình độ chuẩn của chức danh.", "source_ids": ["S3"], "confidence": "verified" }] },
+      { "id": "dd-hang-4", "title": "Điều dưỡng hạng IV", "description": "Bậc khởi đầu với bằng cao đẳng ở cơ sở công lập.", "requirements": [{ "kind": "fact", "text": "Bằng cao đẳng Điều dưỡng trở lên; có giấy phép hành nghề hoặc chứng chỉ bồi dưỡng theo tiêu chuẩn chức danh.", "source_ids": ["S3"], "confidence": "verified" }] },
+      { "id": "dd-hang-3", "title": "Điều dưỡng hạng III", "requirements": [{ "kind": "fact", "text": "Bằng đại học ngành điều dưỡng; xét thăng hạng từ hạng IV cần giữ hạng IV đủ 3 năm trở lên.", "source_ids": ["S3"], "confidence": "verified" }] },
+      { "id": "dd-hang-2", "title": "Điều dưỡng hạng II", "requirements": [{ "kind": "fact", "text": "Bằng chuyên khoa cấp I hoặc thạc sĩ ngành Điều dưỡng; xét thăng hạng từ hạng III cần giữ hạng III tối thiểu 9 năm.", "source_ids": ["S3"], "confidence": "verified" }] },
+      { "id": "dd-hang-1", "title": "Điều dưỡng hạng I", "requirements": [{ "kind": "fact", "text": "Bằng chuyên khoa cấp II hoặc tiến sĩ ngành Điều dưỡng.", "source_ids": ["S3"], "confidence": "verified" }] }
+    ],
+    "edges": [
+      { "from": "sv-dieu-duong", "to": "dd-hang-4", "type": "promotion" },
+      { "from": "dd-hang-4", "to": "dd-hang-3", "type": "promotion" },
+      { "from": "dd-hang-3", "to": "dd-hang-2", "type": "promotion" },
+      { "from": "dd-hang-2", "to": "dd-hang-1", "type": "promotion" }
+    ]
+  },
+  "downsides": [
+    { "kind": "fact", "text": "Khảo sát năm 2024 với 300 điều dưỡng Bệnh viện Hữu nghị Việt Đức: 44% kiệt sức nghề nghiệp ở mức trung bình tới cao.", "source_ids": ["S6"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Phần lớn điều dưỡng phải trực đêm; ở Bệnh viện Việt Đức, 80% trực đêm thường xuyên.", "source_ids": ["S6"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Ngoài áp lực chuyên môn, điều dưỡng có lúc bị người nhà người bệnh nói to tiếng, xúc phạm.", "source_ids": ["S6"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Đứng nhiều, trực đêm kéo dài khiến một số điều dưỡng bị giãn tĩnh mạch chân, mất ngủ.", "source_ids": ["S10"], "confidence": "single_source", "note": "Theo chia sẻ trong bài; không phải số liệu khảo sát." }
+  ],
+  "future_outlook": [
+    { "kind": "fact", "text": "Theo Bộ Y tế (dẫn trên VnExpress, 2025), Việt Nam cần khoảng 260.000 điều dưỡng nhưng mới có khoảng 150.000.", "source_ids": ["S6"], "confidence": "single_source" },
+    { "kind": "advice", "text": "Nghề luôn cần người, nhưng chỉ hợp với ai thật sự chịu được làm theo ca và áp lực chăm sóc con người." }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-03",
+    "researched_by": "Claude Code — research qua trình duyệt (vbpl.vn, chinhphu.vn, báo chí); chưa được Codex kiểm tra chéo",
+    "scope_note": "Chức danh, trình độ và lương áp dụng cho điều dưỡng viên chức ở cơ sở y tế công lập. Bệnh viện tư chưa có số liệu đáng tin."
+  }
+}
