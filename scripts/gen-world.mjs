@@ -298,4 +298,55 @@ const devWorld = {
 };
 writeFileSync(out("content/worlds/lap-trinh-vien.json"), JSON.stringify(devWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien}.json");
+// ---------- Kế toán (SPEC-011): văn phòng doanh nghiệp + nhà ----------
+const CONG_TY = [
+  "########################",
+  "#.........#............#",
+  "#.........#............#",
+  "#.........D............#",
+  "#.........#............#",
+  "#.........#............#",
+  "#####D#####............#",
+  "#.........#............#",
+  "#.........D............#",
+  "#.........#............#",
+  "#.........#............#",
+  "########################",
+];
+const CONG_TY_PROPS = [
+  // Phòng giám đốc: bàn, kệ, cây
+  [4, 2, 85, 1], [5, 2, 86, 1], [8, 1, 329, 1], [9, 1, 330, 1], [1, 1, 16, 1],
+  // Quầy lễ tân: quầy, cây
+  [3, 8, 324, 1], [4, 8, 325, 1], [5, 8, 326, 1], [1, 10, 17, 1],
+  // Phòng kế toán: bàn của bạn (x14), điện thoại (x16), bàn đồng nghiệp (x19), tủ hồ sơ
+  [14, 2, 85, 1], [15, 2, 86, 1], [16, 2, 97, 1], [19, 2, 85, 1], [20, 2, 86, 1],
+  [21, 5, 329, 1], [22, 5, 330, 1], [21, 7, 329, 1], [22, 7, 330, 1], [22, 1, 16, 1],
+];
+const CONG_TY_DECOR = [[15, 2, 18], [20, 2, 18], [5, 2, 18]];
+
+const accountantWorld = {
+  profession_id: "ke-toan",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("cong-ty", CONG_TY, CONG_TY_PROPS, CONG_TY_DECOR, { x: 16, y: 9 }),
+    buildMap("nha", HOME, HOME_PROPS, HOME_DECOR, { x: 6, y: 5 }),
+  ],
+  npcs: [
+    { id: "giam-doc", map: "cong-ty", x: 5, y: 3, name: "Giám đốc", sprite: C(379) },
+    { id: "ke-toan-truong", map: "cong-ty", x: 19, y: 3, name: "Kế toán trưởng", sprite: C(54, 17, 22) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "k1-hoa-don": { map: "cong-ty", target: { x: 14, y: 2 }, quest: "Về bàn kế toán, kiểm hóa đơn mới về" },
+    "k2-chung-tu": { map: "cong-ty", target: { x: 15, y: 2 }, quest: "Xếp chứng từ chi tiêu ở bàn kế toán" },
+    "k3-duyet-chi": { map: "cong-ty", target: { x: 5, y: 3 }, npc: "giam-doc", quest: "Mang hồ sơ thanh toán sang phòng giám đốc" },
+    "k4-chinh-so": { map: "cong-ty", target: { x: 5, y: 3 }, npc: "giam-doc", quest: "Giám đốc gọi bạn vào phòng" },
+    "k5-nha-cung-cap": { map: "cong-ty", target: { x: 16, y: 2 }, quest: "Điện thoại bàn kế toán đang reo" },
+    "k6-to-khai": { map: "cong-ty", target: { x: 14, y: 2 }, quest: "Hạn tờ khai thuế! Về bàn kế toán" },
+    "k7-buoi-toi": { map: "nha", target: { x: 3, y: 2 }, quest: "Về nhà, sắp xếp buổi tối" },
+  },
+};
+writeFileSync(out("content/worlds/ke-toan.json"), JSON.stringify(accountantWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan}.json");

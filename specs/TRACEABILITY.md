@@ -14,7 +14,7 @@
 | [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3] | 11/11 |
 | [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
+| [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
 
@@ -197,14 +197,14 @@
 
 | AC | Test |
 |---|---|
-| AC-011-01 | ❌ chưa có |
-| AC-011-02 | ❌ chưa có |
-| AC-011-03 | ❌ chưa có |
-| AC-011-04 | ❌ chưa có |
-| AC-011-05 | ❌ chưa có |
-| AC-011-06 | ❌ chưa có |
-| AC-011-07 | ❌ chưa có |
-| AC-011-08 | ❌ chưa có |
+| AC-011-01 | tests\spec-011\ke-toan.test.mjs — "AC-011-01 hồ sơ Kế toán qua validate" |
+| AC-011-02 | tests\spec-011\ke-toan.test.mjs — "AC-011-02 bản đồ Kế toán qua validate:world" |
+| AC-011-03 | tests\spec-011\ke-toan.test.mjs — "AC-011-03 gói Kế toán đạt check:pack" |
+| AC-011-04 | tests\spec-011\ke-toan.test.mjs — "AC-011-04 chơi hết ngày Kế toán tới done" |
+| AC-011-05 | tests\spec-011\ke-toan.test.mjs — "AC-011-05 có ≥ 2 nguồn law có effective_date" |
+| AC-011-06 | tests\spec-011\ke-toan.test.mjs — "AC-011-06 phần 4 có lựa chọn làm Độ chính xác giảm" |
+| AC-011-07 | tests\spec-011\ke-toan.test.mjs — "AC-011-07 mã số trong hóa đơn spot_error chỉ gồm chữ số 0" |
+| AC-011-08 | tests\spec-011\ke-toan.test.mjs — "AC-011-08 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-012 — Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường)
 
