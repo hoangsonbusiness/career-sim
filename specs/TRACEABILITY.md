@@ -11,12 +11,12 @@
 | [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 16/16 |
 | [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 14/14 |
 | [SPEC-007](SPEC-007-minigame-scenes.md) Hoạt cảnh mini-game trong thế giới 2D | 1 | implemented | ✓ Son 2026-11-03 | [F3] | 10/10 |
-| [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | draft | — | [F2, F3] | 0/11 |
-| [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
-| [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
-| [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-008](SPEC-008-deep-profession-pack.md) Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3] | 11/11 |
+| [SPEC-009](SPEC-009-dieu-duong.md) Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-010](SPEC-010-lap-trinh-vien.md) Gói nghề Lập trình viên (nội dung + bản đồ văn phòng phần mềm) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
+| [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/8 |
+| [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | approved | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 0/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -157,17 +157,17 @@
 
 | AC | Test |
 |---|---|
-| AC-008-01 | ❌ chưa có |
-| AC-008-02 | ❌ chưa có |
-| AC-008-03 | ❌ chưa có |
-| AC-008-04 | ❌ chưa có |
-| AC-008-05 | ❌ chưa có |
-| AC-008-06 | ❌ chưa có |
-| AC-008-07 | ❌ chưa có |
-| AC-008-08 | ❌ chưa có |
-| AC-008-09 | ❌ chưa có |
-| AC-008-10 | ❌ chưa có |
-| AC-008-11 | ❌ chưa có |
+| AC-008-01 | tests\spec-008\pack.test.mjs — "AC-008-01 gói hợp lệ → exit 0" |
+| AC-008-02 | tests\spec-008\pack.test.mjs — "AC-008-02 không đủ 7 segment → R-1" |
+| AC-008-03 | tests\spec-008\pack.test.mjs — "AC-008-03 ít loại task hoặc một loại quá 2 lần → R-2" |
+| AC-008-04 | tests\spec-008\pack.test.mjs — "AC-008-04 vượt giới hạn chữ → R-3" |
+| AC-008-05 | tests\spec-008\pack.test.mjs — "AC-008-05 stats không đúng 3 hoặc label dài → R-4" |
+| AC-008-06 | tests\spec-008\pack.test.mjs — "AC-008-06 thiếu testimony, trùng publisher, testimony không " |
+| AC-008-07 | tests\spec-008\pack.test.mjs — "AC-008-07 reviewed thiếu reviewed_by → chỉ cảnh báo, exit 0" |
+| AC-008-08 | tests\spec-008\pack.test.mjs — "AC-008-08 bản đồ có target bị bao kín → R-7" |
+| AC-008-09 | tests\spec-008\pack.test.mjs — "AC-008-09 check chạy check:pack ngay sau validate:world" |
+| AC-008-10 | tests\spec-008\playthrough.test.mjs — "AC-008-10 mọi gói sâu chơi hết ngày trong thế giới tới done" |
+| AC-008-11 | tests\spec-008\pack.test.mjs — "AC-008-11 nội dung thật đạt chuẩn gói sâu" |
 
 ## SPEC-009 — Gói nghề Điều dưỡng (nội dung + bản đồ bệnh viện)
 

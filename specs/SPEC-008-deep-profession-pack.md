@@ -2,7 +2,7 @@
 id: SPEC-008
 title: Chuẩn đóng gói một nghề trải nghiệm sâu (nội dung + bản đồ game)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3]
 owns: [scripts/check-pack.mjs]
 owner: anh Son

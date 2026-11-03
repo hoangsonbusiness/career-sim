@@ -1,0 +1,9 @@
+{
+  "spec": "SPEC-008",
+  "locked_by": "complete 2026-11-03",
+  "locked_at": "2026-11-03",
+  "files": {
+    "tests\\spec-008\\pack.test.mjs": "eafef3085054e559",
+    "tests\\spec-008\\playthrough.test.mjs": "2461d49066d31012"
+  }
+}
