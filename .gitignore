@@ -3,3 +3,5 @@ node_modules/
 out/
 # Next.js tự sinh lại mỗi lần dev/build; typecheck không cần file này
 next-env.d.ts
+# Asset gốc tải từ Kenney; bản dùng trong game được chép vào public/game/ (SPEC-006 R-18)
+assets-src/

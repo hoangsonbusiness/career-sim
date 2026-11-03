@@ -1,7 +1,7 @@
 ---
 id: SPEC-005
 title: Màn chơi "một ngày làm nghề" trên trình duyệt
-version: 1
+version: 2
 status: implemented
 features: [F3]
 owns: [src/sim/**, src/app/nghe/[id]/mot-ngay/**]
@@ -107,6 +107,7 @@ export function formatDelta(delta: StatMap, stats: { id: string; label: string }
 - R-8. Trang PHẢI được sinh tĩnh cho đúng các nghề có `day_simulation`, và KHÔNG ĐƯỢC sinh cho nghề khác (`dynamicParams = false`). Trang PHẢI có `<html lang="vi">` và đúng một `<h1>` với nội dung `"Một ngày làm " + name`.
 - R-9. Dữ liệu `day_simulation` PHẢI được truyền vào component client qua props lúc build; trang KHÔNG ĐƯỢC tải file nội dung lúc chạy (giữ SPEC-003 R-16).
 - R-10. Component PHẢI tạo engine bằng `createEngine` của SPEC-002 và chỉ đổi phase qua `start`, `submit`, `retry`, `next`, `finish`. Mọi số hiển thị (chỉ số, delta, feedback) PHẢI lấy từ `engine.state()` hoặc kết quả `submit`.
+- R-10b. R-11, R-12, R-13 chỉ áp dụng cho nghề **không có** `content/worlds/<id>.json`. Nghề có file thế giới dùng game 2D theo SPEC-006; trang vẫn giữ R-8, R-9, R-16 và nút "Bắt đầu ngày làm việc". *Lý do: SPEC-006 thay giao diện biểu mẫu bằng game; nghề chưa có bản đồ vẫn chơi được.*
 - R-11. Nội dung theo phase (chuỗi trong ngoặc kép là chính xác):
 
   | Phase | Hiển thị | Nút |
@@ -184,3 +185,4 @@ Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-02 | Bản nháp đầu | Hạng mục SIM trong ROADMAP |
+| 2 | 2026-11-03 | Thêm R-10b: giao diện biểu mẫu (R-11..R-13) chỉ cho nghề chưa có bản đồ | SPEC-006; anh Son đánh giá màn chơi dạng biểu mẫu quá nhiều chữ |

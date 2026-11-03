@@ -8,7 +8,8 @@
 | [SPEC-002](SPEC-002-day-simulation-engine.md) Engine mô phỏng "một ngày làm việc" (lõi logic, không gồm render) | 2 | implemented | ✓ Son 2026-11-02 | [F3, F7] | 17/17 |
 | [SPEC-003](SPEC-003-app-shell.md) Khung app — Next.js static export, nạp nội dung nghề, sinh type từ schema | 1 | implemented | ✓ Son 2026-11-02 | [F1, F2, F3] | 16/16 |
 | [SPEC-004](SPEC-004-profession-profile.md) Trang hồ sơ nghề và trích dẫn nguồn | 1 | implemented | ✓ Son 2026-11-02 | [F2, F5] | 13/13 |
-| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 1 | implemented | ✓ Son 2026-11-02 | [F3] | 16/16 |
+| [SPEC-005](SPEC-005-day-player.md) Màn chơi "một ngày làm nghề" trên trình duyệt | 2 | implemented | ❌ đã đổi sau duyệt | [F3] | 16/16 |
+| [SPEC-006](SPEC-006-world-game.md) Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề | 1 | draft | — | [F3] | 0/14 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -110,3 +111,22 @@
 | AC-005-14 | tests\spec-005\build.test.mjs — "AC-005-14 sinh trang màn chơi cho đúng các nghề có day_simul" |
 | AC-005-15 | tests\spec-005\build.test.mjs — "AC-005-15 JS không chứa đường dẫn nội dung" |
 | AC-005-16 | tests\spec-005\build.test.mjs — "AC-005-16 tổng JS gzip trang màn chơi ≤ 300 KB" |
+
+## SPEC-006 — Game thế giới 2D — đi lại và làm việc trong một ngày làm nghề
+
+| AC | Test |
+|---|---|
+| AC-006-01 | ❌ chưa có |
+| AC-006-02 | ❌ chưa có |
+| AC-006-03 | ❌ chưa có |
+| AC-006-04 | ❌ chưa có |
+| AC-006-05 | ❌ chưa có |
+| AC-006-06 | ❌ chưa có |
+| AC-006-07 | ❌ chưa có |
+| AC-006-08 | ❌ chưa có |
+| AC-006-09 | ❌ chưa có |
+| AC-006-10 | ❌ chưa có |
+| AC-006-11 | ❌ chưa có |
+| AC-006-12 | ❌ chưa có |
+| AC-006-13 | ❌ chưa có |
+| AC-006-14 | ❌ chưa có |
