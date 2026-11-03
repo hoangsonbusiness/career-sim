@@ -1,0 +1,29 @@
+{
+  "$comment": "Conformance vectors SPEC-007 cho src/game/minigames/layout.ts.",
+  "bubbleRect": [
+    { "anchor": { "x": 100, "y": 80 }, "size": { "w": 60, "h": 20 }, "frame": { "w": 200, "h": 150 }, "margin": 4, "expect": { "x": 70, "y": 56, "w": 60, "h": 20 } },
+    { "anchor": { "x": 5, "y": 10 }, "size": { "w": 60, "h": 20 }, "frame": { "w": 200, "h": 150 }, "margin": 4, "expect": { "x": 4, "y": 4, "w": 60, "h": 20 } },
+    { "anchor": { "x": 195, "y": 140 }, "size": { "w": 60, "h": 20 }, "frame": { "w": 200, "h": 150 }, "margin": 4, "expect": { "x": 136, "y": 116, "w": 60, "h": 20 } },
+    { "anchor": { "x": 100, "y": 80 }, "size": { "w": 300, "h": 200 }, "frame": { "w": 200, "h": 150 }, "margin": 4, "expect": { "x": 4, "y": 4, "w": 300, "h": 200 } }
+  ],
+  "dropIndex": [
+    { "centersY": [10, 30, 50, 70], "dragged": 0, "dropY": 55, "expect": 2 },
+    { "centersY": [10, 30, 50, 70], "dragged": 3, "dropY": 0, "expect": 0 },
+    { "centersY": [10, 30, 50, 70], "dragged": 1, "dropY": 100, "expect": 3 },
+    { "centersY": [10, 30, 50, 70], "dragged": 2, "dropY": 50, "expect": 2 },
+    { "centersY": [10], "dragged": 0, "dropY": 999, "expect": 0 }
+  ],
+  "timeSlots": [
+    { "minutes": [60, 30, 0], "budget": 120, "expect": [0, 0, 1, null] },
+    { "minutes": [0, 0], "budget": 90, "expect": [null, null, null] },
+    { "minutes": [0, 30, 60], "budget": 120, "expect": [1, 2, 2, null] },
+    { "minutes": [90], "budget": 90, "expect": [0, 0, 0] }
+  ],
+  "hitBucket": [
+    { "point": { "x": 70, "y": 10 }, "buckets": [{ "x": 0, "y": 0, "w": 50, "h": 50 }, { "x": 60, "y": 0, "w": 50, "h": 50 }], "expect": 1 },
+    { "point": { "x": 55, "y": 10 }, "buckets": [{ "x": 0, "y": 0, "w": 50, "h": 50 }, { "x": 60, "y": 0, "w": 50, "h": 50 }], "expect": null },
+    { "point": { "x": 0, "y": 0 }, "buckets": [{ "x": 0, "y": 0, "w": 50, "h": 50 }, { "x": 60, "y": 0, "w": 50, "h": 50 }], "expect": 0 },
+    { "point": { "x": 50, "y": 10 }, "buckets": [{ "x": 0, "y": 0, "w": 50, "h": 50 }, { "x": 60, "y": 0, "w": 50, "h": 50 }], "expect": null },
+    { "point": { "x": 10, "y": 10 }, "buckets": [], "expect": null }
+  ]
+}
