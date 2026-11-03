@@ -1,0 +1,148 @@
+{
+  "id": "lap-trinh-vien",
+  "name": "Lập trình viên",
+  "aliases": ["Kỹ sư phần mềm", "Developer"],
+  "group": { "label": "Công nghệ thông tin" },
+  "holland": ["I", "C"],
+  "summary": "Phân tích yêu cầu, viết và kiểm thử phần mềm, sửa lỗi, trao đổi với đồng nghiệp và khách hàng. Công việc thay đổi nhanh theo công nghệ, nhất là từ khi có các công cụ AI viết code.",
+  "sources": [
+    { "id": "S1", "type": "market", "title": "Báo cáo Lương IT & Thị trường tuyển dụng IT Việt Nam 2025-2026 (bảng mức lương trung vị theo vị trí và kinh nghiệm)", "publisher": "ITviec", "url": "https://itviec.com/bao-cao/luong-it-va-thi-truong-tuyen-dung-it-vietnam", "accessed": "2026-11-03", "issued_date": "2025-11-11", "note": "Khảo sát trực tuyến 1.839 người, hai đợt 27/05–31/07 và 21/10–11/11/2025. Trang không ghi ngày phát hành; issued_date là ngày kết thúc khảo sát." },
+    { "id": "S2", "type": "market", "title": "Báo cáo Thị trường IT Việt Nam 2024 - 2025 (Vietnam IT & Tech Talent Landscape)", "publisher": "TopDev", "url": "https://topdev.vn/blog/bao-cao-thi-truong-it-viet-nam-2024/", "accessed": "2026-11-03", "issued_date": "2024-09-01", "note": "Trang ghi 'Ngày phát hành: Tháng 9/2024'; issued_date lấy ngày đầu tháng." },
+    { "id": "S3", "type": "press", "title": "Trường ĐH Công nghệ Thông tin công bố phương án tuyển sinh 2025", "publisher": "Báo VietNamNet", "url": "https://vietnamnet.vn/truong-dh-cong-nghe-thong-tin-cong-bo-phuong-an-tuyen-sinh-2025-2370682.html", "accessed": "2026-11-03" },
+    { "id": "S4", "type": "reference", "title": "O*NET 15-1252.00 — Software Developers", "publisher": "U.S. Department of Labor / O*NET", "url": "https://www.onetonline.org/link/summary/15-1252.00", "accessed": "2026-11-03", "note": "Chỉ dùng làm khung phân rã nhiệm vụ và mã Holland (IC); không dùng số liệu cho Việt Nam." },
+    { "id": "S5", "type": "testimony", "title": "Lập trình viên Việt giữa 'dòng xoáy' tác nhân AI (chia sẻ của kỹ sư phần mềm Đức Hòa, Hà Nội; Thanh Hoài; Thế Hoàng, TP Huế; ông Phạm Quang Khang, Rikkei Japan)", "publisher": "Báo VnExpress", "url": "https://vnexpress.net/lap-trinh-vien-viet-giua-dong-xoay-tac-nhan-ai-5048774.html", "accessed": "2026-11-03", "issued_date": "2026-03-13", "note": "Một số người chỉ ghi tên, nơi làm việc ghi chung (\"một công ty công nghệ ở Hà Nội\"). Chỉ dùng cho mô tả trải nghiệm." },
+    { "id": "S6", "type": "testimony", "title": "Thủ khoa tốt nghiệp sớm một năm, trở thành kỹ sư AI từ khi còn đi học (Nguyễn Văn Phong, ĐH FPT Cần Thơ / FPT Software Cần Thơ)", "publisher": "Báo Thanh Niên", "url": "https://thanhnien.vn/thu-khoa-tot-nghiep-som-mot-nam-tro-thanh-ky-su-ai-tu-khi-con-di-hoc-185261028210858233.htm", "accessed": "2026-11-03", "issued_date": "2026-10-29" }
+  ],
+  "requirements": {
+    "thcs": [
+      { "kind": "advice", "text": "Học chắc Toán và tiếng Anh: Toán rèn tư duy logic, tiếng Anh giúp đọc tài liệu lập trình.", "audience": ["thcs"] },
+      { "kind": "advice", "text": "Thử lập trình kéo thả hoặc làm một trò chơi nhỏ để xem mình có thích ngồi giải bài toán lâu không.", "audience": ["thcs"] }
+    ],
+    "thpt": [
+      { "kind": "fact", "text": "Ví dụ năm 2025, Trường ĐH Công nghệ Thông tin (ĐHQG TP.HCM) bổ sung tổ hợp xét tuyển có môn Tin học: Toán – Tiếng Anh – Tin học, Toán – Vật lý – Tin học.", "source_ids": ["S3"], "confidence": "single_source", "audience": ["thpt"], "note": "Mỗi trường, mỗi năm khác nhau; xem đề án tuyển sinh của trường." },
+      { "kind": "advice", "text": "Nếu trường bạn có môn Tin học, cân nhắc chọn để vừa học vừa thử xem mình có hợp nghề không.", "audience": ["thpt"] }
+    ],
+    "higher_ed": [
+      { "kind": "advice", "text": "Các ngành học gần với nghề: Công nghệ thông tin, Khoa học máy tính, Kỹ thuật phần mềm, Trí tuệ nhân tạo." }
+    ],
+    "on_the_job": [
+      { "kind": "fact", "text": "Nhiệm vụ chính gồm phân tích yêu cầu người dùng, lập trình và kiểm thử, sửa lỗi phần mềm, trao đổi với đồng nghiệp và báo cáo tiến độ.", "source_ids": ["S4"], "confidence": "single_source" },
+      { "kind": "fact", "text": "Từ khi có công cụ AI viết code, nhiều kỹ sư phải học thêm cách chia việc, kiểm soát và đánh giá chất lượng code do AI tạo ra.", "source_ids": ["S5"], "confidence": "single_source" }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      { "kind": "fact", "text": "Công việc chủ yếu làm trên máy tính, xen giữa viết code và trao đổi với đồng nghiệp, cấp trên qua họp, tin nhắn, email.", "source_ids": ["S4"], "confidence": "single_source" },
+      { "kind": "fact", "text": "Mức độ làm thêm giờ (OT) của lập trình viên ở Việt Nam chưa có số liệu đáng tin trong bộ dữ liệu này.", "source_ids": [], "confidence": "needs_verification", "note": "Báo cáo ITviec 2025-2026 có phần phân tích OT nhưng chỉ có trong bản PDF tải về; cần mở bản đầy đủ để trích số liệu." }
+    ],
+    "income": [
+      { "kind": "fact", "text": "Theo khảo sát ITviec 2025, lương trung vị Back-end Developer: dưới 1 năm khoảng 12,4 triệu; 3–4 năm khoảng 30,1 triệu; trên 8 năm khoảng 54,9 triệu đồng/tháng.", "source_ids": ["S1"], "confidence": "single_source" },
+      { "kind": "fact", "text": "Báo cáo TopDev (phát hành 9/2024) ước tính lương trung bình lập trình viên năm 2024 khoảng 1.100–3.000 USD/tháng, tùy kỹ năng và kinh nghiệm.", "source_ids": ["S2"], "confidence": "single_source", "note": "Khác năm, khác phương pháp với ITviec; không gộp hai nguồn thành một con số." }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Nam — lập trình viên back-end 3 năm kinh nghiệm ở một công ty làm sản phẩm phần mềm",
+    "setting": "Một ngày ở văn phòng: họp đầu ngày, làm tính năng mới, review code, xử lý lỗi và trao đổi với khách hàng.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chat_luong", "label": "Chất lượng code", "initial": 50 },
+      { "id": "ap_luc", "label": "Áp lực deadline", "initial": 30 }
+    ],
+    "segments": [
+      {
+        "id": "l1-hop-dau-ngay", "time": "09:00", "title": "Họp đầu ngày",
+        "narrative": "Cả nhóm đứng họp nhanh. Đến lượt bạn: hôm qua làm gì, hôm nay làm gì, có vướng gì không?",
+        "basis": { "kind": "fact", "text": "Lập trình viên trao đổi với đồng nghiệp và báo cáo tình trạng, tiến độ công việc.", "source_ids": ["S4"], "confidence": "single_source" },
+        "task": { "type": "choice", "prompt": "Bạn báo cáo thế nào?", "options": [
+          { "text": "Nói ngắn gọn, nêu rõ chỗ đang vướng để nhờ hỗ trợ", "effect": { "chat_luong": 3, "ap_luc": -2 }, "feedback": "Nói sớm chỗ vướng giúp cả nhóm gỡ nhanh." },
+          { "text": "Bảo mọi thứ ổn dù đang bị kẹt", "effect": { "ap_luc": 5 }, "feedback": "Giấu vấn đề, cuối tuần dễ trễ hạn." },
+          { "text": "Kể chi tiết từng dòng code đã viết", "effect": { "nang_luong": -3 }, "feedback": "Họp đầu ngày cần ngắn; chi tiết để trao đổi riêng." } ] }
+      },
+      {
+        "id": "l2-chia-viec", "time": "09:30", "title": "Nhận tính năng mới",
+        "narrative": "Bạn nhận tính năng mới: cho khách hàng tự đổi mật khẩu. Bắt đầu từ đâu?",
+        "basis": { "kind": "fact", "text": "Lập trình viên phân tích nhu cầu người dùng và yêu cầu phần mềm trước khi thiết kế, lập trình.", "source_ids": ["S4"], "confidence": "single_source" },
+        "task": { "type": "sequence", "prompt": "Sắp xếp các bước làm một tính năng", "steps": ["Đọc yêu cầu, hỏi lại chỗ chưa rõ", "Chia thành các việc nhỏ, ước lượng thời gian", "Viết code cho từng việc", "Tự kiểm thử, viết test", "Gửi đồng nghiệp review"], "on_success": { "chat_luong": 5 }, "on_fail": { "ap_luc": 5 } }
+      },
+      {
+        "id": "l3-review-code", "time": "11:00", "title": "Review code của đồng nghiệp",
+        "narrative": "Đồng nghiệp nhờ bạn xem đoạn kiểm tra đăng nhập trước khi đưa lên hệ thống. Có dòng nào sai?",
+        "basis": { "kind": "fact", "text": "Lập trình viên đọc, góp ý và sửa code của nhau (kể cả code do AI tạo) trước khi đưa vào sản phẩm.", "source_ids": ["S5", "S6"], "confidence": "single_source" },
+        "task": { "type": "spot_error", "prompt": "Tìm các dòng sai trong đoạn mã giả", "document": ["hàm kiểm_tra_đăng_nhập(tên, mật_khẩu):", "  nếu tên rỗng thì báo lỗi Thiếu tên", "  người_dùng = tìm người dùng theo tên", "  nếu mật_khẩu khác mật khẩu đã lưu thì cho đăng nhập", "  ghi nhật ký: tên và mật_khẩu vừa nhập", "  trả về người_dùng"], "errors": [{ "line": 3, "explain": "Phải cho đăng nhập khi mật khẩu khớp, không phải khi khác." }, { "line": 4, "explain": "Không ghi mật khẩu vào nhật ký: ai đọc nhật ký cũng thấy được." }], "on_success": { "chat_luong": 5 }, "on_fail": { "chat_luong": -4, "ap_luc": 3 } }
+      },
+      {
+        "id": "l4-phan-loai-loi", "time": "13:30", "title": "Danh sách lỗi buổi chiều",
+        "narrative": "Hộp thư có bốn báo lỗi mới. Thời gian có hạn: lỗi nào sửa ngay, lỗi nào xếp lịch sau?",
+        "basis": { "kind": "fact", "text": "Lập trình viên sửa đổi phần mềm đang chạy để khắc phục lỗi.", "source_ids": ["S4"], "confidence": "single_source" },
+        "task": { "type": "drag_sort", "prompt": "Xếp mỗi lỗi vào đúng nhóm", "buckets": ["Sửa ngay", "Xếp lịch sau"], "items": [{ "text": "Khách không thanh toán được đơn hàng", "bucket": "Sửa ngay" }, { "text": "Thông tin cá nhân của khách hiện trên trang công khai", "bucket": "Sửa ngay" }, { "text": "Nút bấm lệch màu so với thiết kế", "bucket": "Xếp lịch sau" }, { "text": "Lỗi chính tả trong trang giới thiệu", "bucket": "Xếp lịch sau" }], "on_success": { "chat_luong": 4, "ap_luc": -2 }, "on_fail": { "ap_luc": 5 } }
+      },
+      {
+        "id": "l5-khach-hang", "time": "15:00", "title": "Khách hàng đổi yêu cầu",
+        "narrative": "Khách hàng gọi khi chỉ còn một ngày là bàn giao.",
+        "basis": { "kind": "fact", "text": "Lập trình viên trao đổi với khách hàng, đồng nghiệp về yêu cầu, giới hạn thời gian và chi phí của dự án.", "source_ids": ["S4"], "confidence": "single_source" },
+        "task": { "type": "dialogue", "prompt": "Trao đổi với khách hàng", "npc": "Khách hàng", "turns": [
+          { "npc_line": "Mai bàn giao rồi, em thêm giúp chị đăng nhập bằng mạng xã hội nhé?", "replies": [
+            { "text": "Dạ được ạ, em làm thâu đêm cho kịp.", "effect": { "nang_luong": -6, "ap_luc": 5 }, "feedback": "Chiều khách nhưng dễ ra sản phẩm lỗi." },
+            { "text": "Em ghi nhận. Em báo trưởng nhóm ước lượng rồi hẹn lịch rõ với chị.", "effect": { "chat_luong": 3, "ap_luc": 2 }, "feedback": "Thay đổi cần được ước lượng, không hứa vội." } ] },
+          { "npc_line": "Vậy bản ngày mai có gì?", "replies": [
+            { "text": "Bản mai giữ đúng phần đã chốt, tính năng mới ở bản sau ạ.", "effect": { "chat_luong": 4 }, "feedback": "Giữ phạm vi rõ giúp bàn giao đúng hẹn." },
+            { "text": "Em cũng chưa chắc nữa ạ.", "effect": { "ap_luc": 4 }, "feedback": "Câu trả lời mơ hồ làm khách mất tin tưởng." } ] } ] }
+      },
+      {
+        "id": "l6-su-co", "time": "17:30", "title": "Sự cố trên hệ thống thật",
+        "narrative": "Đúng lúc bạn định về, hệ thống báo lỗi: khách không đặt hàng được.",
+        "basis": { "kind": "fact", "text": "Lập trình viên sửa phần mềm đang vận hành để khắc phục lỗi và cải thiện hiệu năng.", "source_ids": ["S4"], "confidence": "single_source" },
+        "task": { "type": "choice", "prompt": "Bạn xử lý thế nào?", "options": [
+          { "text": "Báo nhóm, quay về bản trước cho hệ thống chạy lại, rồi tìm nguyên nhân", "effect": { "chat_luong": 4, "nang_luong": -4, "ap_luc": 2 }, "feedback": "Cho hệ thống chạy lại trước, sửa tận gốc sau." },
+          { "text": "Sửa thẳng trên hệ thống thật cho nhanh", "effect": { "chat_luong": -5, "ap_luc": 5 }, "feedback": "Sửa vội trên hệ thống thật dễ gây lỗi lớn hơn." },
+          { "text": "Để mai tính", "effect": { "chat_luong": -6, "ap_luc": 6 }, "feedback": "Hệ thống lỗi thì khách không mua hàng được." } ] }
+      },
+      {
+        "id": "l7-buoi-toi", "time": "20:00", "title": "Buổi tối: còn 2 tiếng",
+        "narrative": "Công cụ AI viết code thay đổi từng tháng. Hai tiếng buổi tối, bạn dùng thế nào?",
+        "basis": { "kind": "fact", "text": "Lập trình viên phải chủ động tự học, cập nhật công nghệ mới như công cụ AI viết code.", "source_ids": ["S5", "S6"], "confidence": "single_source" },
+        "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
+          { "label": "Học công nghệ mới", "effect_per_30min": { "chat_luong": 2, "nang_luong": -1 } },
+          { "label": "Làm dự án cá nhân", "effect_per_30min": { "chat_luong": 1, "nang_luong": -1 } },
+          { "label": "Nghỉ ngơi, gia đình", "effect_per_30min": { "nang_luong": 3, "ap_luc": -3 } } ] }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn thấy hứng thú nhất lúc nào: viết code, tìm lỗi, hay trao đổi với khách hàng?",
+      "Bạn có thích tự học cái mới liên tục không?",
+      "Bạn chịu được việc ngồi máy tính nhiều giờ và xử lý sự cố bất ngờ không?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      { "id": "sv-cntt", "title": "Sinh viên / thực tập sinh", "requirements": [{ "kind": "advice", "text": "Tham gia thực tập, cuộc thi lập trình hoặc dự án thật để có kinh nghiệm trước khi ra trường." }] },
+      { "id": "dev", "title": "Lập trình viên (Back-end, Front-end, Mobile…)", "requirements": [{ "kind": "fact", "text": "Theo khảo sát ITviec 2025, lương trung vị Back-end Developer toàn thị trường khoảng 37,8 triệu đồng/tháng.", "source_ids": ["S1"], "confidence": "single_source" }] },
+      { "id": "tech-lead", "title": "Trưởng nhóm kỹ thuật (Tech Lead)", "requirements": [{ "kind": "fact", "text": "Theo khảo sát ITviec 2025, lương trung vị Tech Lead khoảng 51,8 triệu đồng/tháng.", "source_ids": ["S1"], "confidence": "single_source" }] },
+      { "id": "pm", "title": "Quản lý dự án (Project Manager)", "requirements": [{ "kind": "fact", "text": "Theo khảo sát ITviec 2025, lương trung vị Project Leader/Manager khoảng 50,1 triệu đồng/tháng.", "source_ids": ["S1"], "confidence": "single_source" }] },
+      { "id": "cto", "title": "Giám đốc công nghệ (CTO)", "requirements": [{ "kind": "fact", "text": "Theo khảo sát ITviec 2025, lương trung vị nhóm CTO/CIO/VPoE khoảng 101,25 triệu đồng/tháng.", "source_ids": ["S1"], "confidence": "single_source" }] }
+    ],
+    "edges": [
+      { "from": "sv-cntt", "to": "dev", "type": "promotion" },
+      { "from": "dev", "to": "tech-lead", "type": "promotion" },
+      { "from": "dev", "to": "pm", "type": "lateral", "label": "Chuyển sang quản lý dự án" },
+      { "from": "tech-lead", "to": "cto", "type": "management" }
+    ]
+  },
+  "downsides": [
+    { "kind": "fact", "text": "Người mới ra trường khó tìm việc hơn vì các việc cơ bản dành cho người mới như sửa lỗi nhỏ, viết code đơn giản đang được AI làm.", "source_ids": ["S5"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Code do AI tạo trông hợp lý nhưng có thể chạy lỗi; kỹ sư phải đọc, sửa từng phần, có lúc tốn thời gian hơn tự viết.", "source_ids": ["S5"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Việc nhận làm thêm ngoài giờ (\"code dạo\") giảm mạnh từ nửa cuối 2025 vì nhiều người tự tạo website, ứng dụng bằng AI.", "source_ids": ["S5"], "confidence": "single_source" },
+    { "kind": "fact", "text": "Yêu cầu phần mềm luôn gắn với giới hạn thời gian và chi phí của dự án, tạo áp lực tiến độ.", "source_ids": ["S4"], "confidence": "single_source" }
+  ],
+  "future_outlook": [
+    { "kind": "fact", "text": "Nghề đang dịch chuyển từ \"người gõ code\" sang \"người thiết kế và đảm bảo hệ thống\" để AI sinh code đúng hướng.", "source_ids": ["S5"], "confidence": "single_source", "note": "Nhận định của ông Phạm Quang Khang (Rikkei Japan), không phải số liệu." },
+    { "kind": "advice", "text": "Nền tảng tư duy giải quyết vấn đề quan trọng hơn thành thạo một công cụ cụ thể, vì công cụ thay đổi rất nhanh." }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-03",
+    "researched_by": "Claude Code — research qua trình duyệt (ITviec, TopDev, O*NET, báo chí); chưa được Codex kiểm tra chéo",
+    "scope_note": "Lương lấy từ khảo sát thị trường khu vực tư (ITviec 2025, TopDev 2024); mỗi công ty, thành phố, vị trí khác nhau. Nghề không có chứng chỉ hành nghề bắt buộc trong bộ dữ liệu này."
+  }
+}

@@ -242,4 +242,60 @@ const nurseWorld = {
 };
 writeFileSync(out("content/worlds/dieu-duong.json"), JSON.stringify(nurseWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong}.json");
+// ---------- Lập trình viên (SPEC-010): văn phòng phần mềm + nhà ----------
+const VAN_PHONG = [
+  "########################",
+  "#.......#..............#",
+  "#.......#..............#",
+  "#.......#..............#",
+  "#.......D..............#",
+  "#.......#..............#",
+  "#########..............#",
+  "#......................#",
+  "#......................#",
+  "#......................#",
+  "#......................#",
+  "########################",
+];
+const VAN_PHONG_PROPS = [
+  // Phòng họp: bàn dài, cây
+  [2, 2, 0, 1], [3, 2, 1, 1], [4, 2, 1, 1], [5, 2, 2, 1], [7, 1, 16, 1],
+  // Khu bàn mở: bàn của bạn (x12), bàn đồng nghiệp (x16), bàn khác
+  [11, 2, 85, 1], [12, 2, 86, 1], [16, 2, 85, 1], [17, 2, 86, 1], [20, 2, 85, 1], [21, 2, 86, 1],
+  [11, 6, 85, 1], [12, 6, 86, 1], [16, 6, 85, 1], [17, 6, 86, 1], [22, 1, 17, 1],
+  // Pantry: quầy, cây
+  [2, 8, 324, 1], [3, 8, 325, 1], [4, 8, 326, 1], [1, 10, 16, 1],
+  // Tủ máy chủ ở góc
+  [22, 8, 416, 1],
+];
+const VAN_PHONG_DECOR = [[12, 2, 18], [17, 2, 18]];
+
+const devWorld = {
+  profession_id: "lap-trinh-vien",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("van-phong", VAN_PHONG, VAN_PHONG_PROPS, VAN_PHONG_DECOR, { x: 14, y: 10 }),
+    buildMap("nha", HOME, HOME_PROPS, HOME_DECOR, { x: 6, y: 5 }),
+  ],
+  npcs: [
+    { id: "truong-nhom", map: "van-phong", x: 4, y: 3, name: "Trưởng nhóm", sprite: C(379) },
+    { id: "khach-hang", map: "van-phong", x: 2, y: 4, name: "Khách hàng", sprite: C(433) },
+    { id: "dong-nghiep", map: "van-phong", x: 16, y: 3, name: "Đồng nghiệp", sprite: C(54, 17, 22) },
+    { id: "dong-nghiep-b", map: "van-phong", x: 20, y: 3, name: "Đồng nghiệp", sprite: C(1, 13, 76) },
+    { id: "dong-nghiep-c", map: "van-phong", x: 11, y: 7, name: "Đồng nghiệp", sprite: C(0, 121, 128) },
+  ],
+  player_sprite: C(0, 13, 20),
+  segments: {
+    "l1-hop-dau-ngay": { map: "van-phong", target: { x: 4, y: 3 }, npc: "truong-nhom", quest: "Vào phòng họp, họp đầu ngày" },
+    "l2-chia-viec": { map: "van-phong", target: { x: 12, y: 2 }, quest: "Về bàn làm việc, nhận tính năng mới" },
+    "l3-review-code": { map: "van-phong", target: { x: 16, y: 3 }, npc: "dong-nghiep", quest: "Đồng nghiệp nhờ review code" },
+    "l4-phan-loai-loi": { map: "van-phong", target: { x: 12, y: 2 }, quest: "Xem danh sách lỗi ở bàn làm việc" },
+    "l5-khach-hang": { map: "van-phong", target: { x: 2, y: 4 }, npc: "khach-hang", quest: "Khách hàng đang chờ ở phòng họp" },
+    "l6-su-co": { map: "van-phong", target: { x: 22, y: 8 }, quest: "Sự cố! Kiểm tra tủ máy chủ" },
+    "l7-buoi-toi": { map: "nha", target: { x: 3, y: 2 }, quest: "Về nhà, sắp xếp buổi tối" },
+  },
+};
+writeFileSync(out("content/worlds/lap-trinh-vien.json"), JSON.stringify(devWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien}.json");
