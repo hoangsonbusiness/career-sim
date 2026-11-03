@@ -52,7 +52,7 @@
     "segments": [
       {
         "id": "l1-hop-dau-ngay", "time": "09:00", "title": "Họp đầu ngày",
-        "narrative": "Cả nhóm đứng họp nhanh. Đến lượt bạn: hôm qua làm gì, hôm nay làm gì, có vướng gì không?",
+        "narrative": "Cả nhóm đứng họp nhanh. Đến lượt bạn kể hôm qua làm gì, hôm nay làm gì và chỗ đang vướng cần người giúp.",
         "basis": { "kind": "fact", "text": "Lập trình viên trao đổi với đồng nghiệp và báo cáo tình trạng, tiến độ công việc.", "source_ids": ["S4"], "confidence": "single_source" },
         "task": { "type": "choice", "prompt": "Bạn báo cáo thế nào?", "options": [
           { "text": "Nói ngắn gọn, nêu rõ chỗ đang vướng để nhờ hỗ trợ", "effect": { "chat_luong": 3, "ap_luc": -2 }, "feedback": "Nói sớm chỗ vướng giúp cả nhóm gỡ nhanh." },
@@ -61,25 +61,25 @@
       },
       {
         "id": "l2-chia-viec", "time": "09:30", "title": "Nhận tính năng mới",
-        "narrative": "Bạn nhận tính năng mới: cho khách hàng tự đổi mật khẩu. Bắt đầu từ đâu?",
+        "narrative": "Bạn nhận tính năng cho khách tự đổi mật khẩu. Bạn đọc kỹ yêu cầu, hỏi lại chỗ chưa rõ rồi mới bắt tay thiết kế.",
         "basis": { "kind": "fact", "text": "Lập trình viên phân tích nhu cầu người dùng và yêu cầu phần mềm trước khi thiết kế, lập trình.", "source_ids": ["S4"], "confidence": "single_source" },
         "task": { "type": "sequence", "prompt": "Sắp xếp các bước làm một tính năng", "steps": ["Đọc yêu cầu, hỏi lại chỗ chưa rõ", "Chia thành các việc nhỏ, ước lượng thời gian", "Viết code cho từng việc", "Tự kiểm thử, viết test", "Gửi đồng nghiệp review"], "on_success": { "chat_luong": 5 }, "on_fail": { "ap_luc": 5 } }
       },
       {
         "id": "l3-review-code", "time": "11:00", "title": "Review code của đồng nghiệp",
-        "narrative": "Đồng nghiệp nhờ bạn xem đoạn kiểm tra đăng nhập trước khi đưa lên hệ thống. Có dòng nào sai?",
+        "narrative": "Đồng nghiệp nhờ bạn xem đoạn kiểm tra đăng nhập. Bạn đọc từng dòng, để lại góp ý ở chỗ có thể gây lỗi.",
         "basis": { "kind": "fact", "text": "Lập trình viên đọc, góp ý và sửa code của nhau (kể cả code do AI tạo) trước khi đưa vào sản phẩm.", "source_ids": ["S5", "S6"], "confidence": "single_source" },
         "task": { "type": "spot_error", "prompt": "Tìm các dòng sai trong đoạn mã giả", "document": ["hàm kiểm_tra_đăng_nhập(tên, mật_khẩu):", "  nếu tên rỗng thì báo lỗi Thiếu tên", "  người_dùng = tìm người dùng theo tên", "  nếu mật_khẩu khác mật khẩu đã lưu thì cho đăng nhập", "  ghi nhật ký: tên và mật_khẩu vừa nhập", "  trả về người_dùng"], "errors": [{ "line": 3, "explain": "Phải cho đăng nhập khi mật khẩu khớp, không phải khi khác." }, { "line": 4, "explain": "Không ghi mật khẩu vào nhật ký: ai đọc nhật ký cũng thấy được." }], "on_success": { "chat_luong": 5 }, "on_fail": { "chat_luong": -4, "ap_luc": 3 } }
       },
       {
         "id": "l4-phan-loai-loi", "time": "13:30", "title": "Danh sách lỗi buổi chiều",
-        "narrative": "Hộp thư có bốn báo lỗi mới. Thời gian có hạn: lỗi nào sửa ngay, lỗi nào xếp lịch sau?",
+        "narrative": "Hộp thư có bốn báo lỗi mới. Bạn xem lỗi nào ảnh hưởng khách nhiều nhất để sửa ngay, lỗi còn lại xếp lịch sau.",
         "basis": { "kind": "fact", "text": "Lập trình viên sửa đổi phần mềm đang chạy để khắc phục lỗi.", "source_ids": ["S4"], "confidence": "single_source" },
         "task": { "type": "drag_sort", "prompt": "Xếp mỗi lỗi vào đúng nhóm", "buckets": ["Sửa ngay", "Xếp lịch sau"], "items": [{ "text": "Khách không thanh toán được đơn hàng", "bucket": "Sửa ngay" }, { "text": "Thông tin cá nhân của khách hiện trên trang công khai", "bucket": "Sửa ngay" }, { "text": "Nút bấm lệch màu so với thiết kế", "bucket": "Xếp lịch sau" }, { "text": "Lỗi chính tả trong trang giới thiệu", "bucket": "Xếp lịch sau" }], "on_success": { "chat_luong": 4, "ap_luc": -2 }, "on_fail": { "ap_luc": 5 } }
       },
       {
         "id": "l5-khach-hang", "time": "15:00", "title": "Khách hàng đổi yêu cầu",
-        "narrative": "Khách hàng gọi khi chỉ còn một ngày là bàn giao.",
+        "narrative": "Khách hàng gọi đổi yêu cầu khi chỉ còn một ngày là bàn giao. Bạn nói rõ phần nào kịp, phần nào cần thêm thời gian.",
         "basis": { "kind": "fact", "text": "Lập trình viên trao đổi với khách hàng, đồng nghiệp về yêu cầu, giới hạn thời gian và chi phí của dự án.", "source_ids": ["S4"], "confidence": "single_source" },
         "task": { "type": "dialogue", "prompt": "Trao đổi với khách hàng", "npc": "Khách hàng", "turns": [
           { "npc_line": "Mai bàn giao rồi, em thêm giúp chị đăng nhập bằng mạng xã hội nhé?", "replies": [
@@ -91,7 +91,7 @@
       },
       {
         "id": "l6-su-co", "time": "17:30", "title": "Sự cố trên hệ thống thật",
-        "narrative": "Đúng lúc bạn định về, hệ thống báo lỗi: khách không đặt hàng được.",
+        "narrative": "Đúng lúc định về, hệ thống báo lỗi: khách không đặt hàng được. Bạn ở lại cùng nhóm tìm nguyên nhân và sửa.",
         "basis": { "kind": "fact", "text": "Lập trình viên sửa phần mềm đang vận hành để khắc phục lỗi và cải thiện hiệu năng.", "source_ids": ["S4"], "confidence": "single_source" },
         "task": { "type": "choice", "prompt": "Bạn xử lý thế nào?", "options": [
           { "text": "Báo nhóm, quay về bản trước cho hệ thống chạy lại, rồi tìm nguyên nhân", "effect": { "chat_luong": 4, "nang_luong": -4, "ap_luc": 2 }, "feedback": "Cho hệ thống chạy lại trước, sửa tận gốc sau." },
@@ -100,7 +100,7 @@
       },
       {
         "id": "l7-buoi-toi", "time": "20:00", "title": "Buổi tối: còn 2 tiếng",
-        "narrative": "Công cụ AI viết code thay đổi từng tháng. Hai tiếng buổi tối, bạn dùng thế nào?",
+        "narrative": "Công cụ AI viết code thay đổi từng tháng. Buổi tối, bạn dành một lúc thử công cụ mới và đọc tài liệu.",
         "basis": { "kind": "fact", "text": "Lập trình viên phải chủ động tự học, cập nhật công nghệ mới như công cụ AI viết code.", "source_ids": ["S5", "S6"], "confidence": "single_source" },
         "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
           { "label": "Học công nghệ mới", "effect_per_30min": { "chat_luong": 2, "nang_luong": -1 } },

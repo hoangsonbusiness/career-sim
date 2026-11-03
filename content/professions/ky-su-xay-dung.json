@@ -262,7 +262,7 @@
         "id": "x1-kiem-tra-dau-ca",
         "time": "06:45",
         "title": "Công nhân thiếu bảo hộ đầu ca",
-        "narrative": "Bạn có mặt ở cổng khi tổ công nhân tới. Hai người chưa có mũ và dây an toàn nhưng muốn lên giàn ngay cho kịp việc.",
+        "narrative": "Bạn đứng ở cổng khi tổ công nhân tới. Hai người chưa có mũ và dây an toàn, bạn yêu cầu trang bị đủ rồi mới lên giàn.",
         "basis": {
           "kind": "fact",
           "text": "Trước khi thi công, công trường phải rào chắn, có biển báo; người lao động phải được trang bị bảo hộ phù hợp.",
@@ -308,7 +308,7 @@
         "id": "x2-gian-giao",
         "time": "07:30",
         "title": "Rà bảng kiểm an toàn giàn giáo",
-        "narrative": "Khu giàn giáo tầng 3 vừa được dựng. Phiếu kiểm treo ở cột, bạn rà từng dòng trước khi cho công nhân lên sàn.",
+        "narrative": "Khu giàn giáo tầng 3 vừa dựng xong. Bạn đi một vòng, rà từng dòng phiếu kiểm: lan can, tấm chặn chân, ngày kiểm tra.",
         "basis": {
           "kind": "fact",
           "text": "Giàn giáo cao từ 2 m phải có lan can và tấm chặn chân; giàn kim loại phải được kiểm tra ít nhất 7 ngày một lần.",
@@ -353,7 +353,7 @@
         "id": "x3-do-be-tong",
         "time": "09:30",
         "title": "Nhà thầu muốn đổ bê tông khi chưa nghiệm thu",
-        "narrative": "Chỉ huy trưởng giục đổ bê tông sàn tầng 5. Hồ sơ nghiệm thu cốt thép vẫn chưa được ký.",
+        "narrative": "Chỉ huy trưởng giục đổ bê tông sàn tầng 5. Bạn xuống kiểm tra cốt thép, ký nghiệm thu xong mới cho đổ.",
         "basis": {
           "kind": "fact",
           "text": "Công việc xây dựng phải được nghiệm thu trước khi chuyển bước; người giám sát thực hiện trong 24 giờ từ khi nhận đề nghị.",
@@ -398,7 +398,7 @@
         "id": "x4-phan-loai-vi-pham",
         "time": "11:00",
         "title": "Yêu cầu tạm dừng hay cho làm tiếp",
-        "narrative": "Bạn đối chiếu các ghi nhận buổi sáng với quy chuẩn. Chỗ nào chưa bảo đảm an toàn thì yêu cầu nhà thầu tạm dừng.",
+        "narrative": "Bạn đối chiếu ghi nhận buổi sáng với quy chuẩn. Chỗ nào chưa an toàn, bạn ghi vào sổ và yêu cầu nhà thầu tạm dừng.",
         "basis": {
           "kind": "fact",
           "text": "Người giám sát có quyền yêu cầu tạm dừng khi biện pháp thi công không an toàn; quy chuẩn nêu ngưỡng lan can, kiểm tra giàn và mưa lớn.",
@@ -455,7 +455,7 @@
         "id": "x5-chu-dau-tu",
         "time": "14:00",
         "title": "Chủ đầu tư muốn rút ngắn tiến độ",
-        "narrative": "Chủ đầu tư họp với ban chỉ huy, muốn rút ngắn tiến độ. Áp lực tăng, nhưng bước kiểm tra an toàn thì không thể bỏ.",
+        "narrative": "Chủ đầu tư muốn rút ngắn tiến độ. Bạn trình bày lịch làm việc mới, nhưng giữ nguyên các bước kiểm tra an toàn.",
         "basis": {
           "kind": "fact",
           "text": "Người giám sát nghiệm thu và xác nhận khối lượng hoàn thành; một giám sát trưởng kể mỗi lần thi công hạng mục lớn là áp lực rất lớn.",
@@ -541,7 +541,7 @@
         "id": "x6-mua-lon",
         "time": "16:00",
         "title": "Mưa lớn bất ngờ",
-        "narrative": "Mây đen kéo tới, mưa đổ xuống sàn đang thi công. Công nhân còn trên giàn giáo và máy trộn vẫn chạy.",
+        "narrative": "Mây đen kéo tới, mưa đổ xuống sàn. Bạn cho công nhân xuống khỏi giàn, tắt máy trộn, mưa tạnh thì kiểm tra lại giàn giáo.",
         "basis": {
           "kind": "fact",
           "text": "Quy chuẩn cấm làm việc khi mưa từ 51 mm/24 giờ hoặc 26 mm/12 giờ; sau khi dừng phải kiểm tra lại giàn giáo, kết cấu.",
@@ -575,7 +575,7 @@
         "id": "x7-buoi-toi",
         "time": "19:30",
         "title": "Buổi tối ở nhà",
-        "narrative": "Về tới nhà khi trời đã tối. Còn nhật ký công trường, sách ôn chứng chỉ và cuộc gọi về quê.",
+        "narrative": "Về tới nhà khi trời đã tối. Bạn ghi nốt nhật ký công trường, gọi về quê một lúc rồi mở sách ôn chứng chỉ.",
         "basis": {
           "kind": "fact",
           "text": "Một kỹ sư công trường cao tốc sống cách nhà gần 200 km, hơn một năm không có ngày nghỉ; nhật ký ghi thời tiết và việc nghiệm thu.",

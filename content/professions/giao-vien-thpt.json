@@ -85,7 +85,7 @@
         "id": "s1-soan-bai",
         "time": "06:15",
         "title": "Rà lại kế hoạch bài dạy",
-        "narrative": "Trước giờ vào lớp, bạn mở lại kế hoạch bài dạy đã soạn tối qua cho tiết đọc hiểu. Thứ tự hoạt động có hợp lý chưa?",
+        "narrative": "Trước giờ vào lớp, bạn mở lại kế hoạch bài dạy đã soạn tối qua, sắp lại các hoạt động và in thêm phiếu học tập.",
         "basis": { "kind": "fact", "text": "Lập kế hoạch bài dạy và chuẩn bị tài liệu là nhiệm vụ cốt lõi của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
         "task": {
           "type": "sequence",
@@ -99,7 +99,7 @@
         "id": "s2-chao-co",
         "time": "07:00",
         "title": "15 phút đầu giờ với lớp chủ nhiệm",
-        "narrative": "Lớp 11A2 có hai bạn đi muộn và một bạn trông mệt mỏi bất thường. Là giáo viên chủ nhiệm, bạn xử lý thế nào?",
+        "narrative": "Lớp 11A2 có hai bạn đi muộn và một bạn trông mệt. Bạn hỏi chuyện riêng từng em và ghi lại để báo phụ huynh.",
         "basis": { "kind": "fact", "text": "Công tác chủ nhiệm được tính là nhiệm vụ kiêm nhiệm chính thức, được giảm 4 tiết dạy mỗi tuần.", "source_ids": ["S4", "S7"], "confidence": "verified" },
         "task": {
           "type": "choice",
@@ -115,7 +115,7 @@
         "id": "s3-len-lop",
         "time": "07:45",
         "title": "Tiết 2 — Lớp 10A5: Một học sinh làm ồn",
-        "narrative": "Đang giữa bài giảng, một nhóm học sinh cuối lớp nói chuyện riêng và cười to.",
+        "narrative": "Đang giữa bài giảng, nhóm cuối lớp nói chuyện riêng. Bạn dừng lại, đặt cho cả nhóm một câu hỏi để kéo các em vào bài.",
         "basis": { "kind": "fact", "text": "Định mức giảng dạy của giáo viên THPT là 17 tiết mỗi tuần, nên một ngày thường có nhiều tiết ở nhiều lớp khác nhau.", "source_ids": ["S4", "S6"], "confidence": "verified" },
         "task": {
           "type": "choice",
@@ -131,7 +131,7 @@
         "id": "s4-to-chuyen-mon",
         "time": "10:30",
         "title": "Dự giờ và góp ý chuyên môn",
-        "narrative": "Tiết trống, bạn dự giờ một đồng nghiệp trong tổ theo kế hoạch sinh hoạt chuyên môn. Tổ trưởng nhờ bạn ghi nhận xét.",
+        "narrative": "Tiết trống, bạn dự giờ một đồng nghiệp trong tổ, ghi những điểm hay và những chỗ có thể làm khác để góp ý sau.",
         "basis": { "kind": "fact", "text": "Nhà trường có tổ chuyên môn do tổ trưởng phụ trách; tổ trưởng chuyên môn được giảm 3 tiết dạy mỗi tuần cho công việc này.", "source_ids": ["S4", "S8"], "confidence": "single_source" },
         "task": {
           "type": "drag_sort",
@@ -151,7 +151,7 @@
         "id": "s5-cham-bai",
         "time": "14:00",
         "title": "Chấm bài kiểm tra",
-        "narrative": "Chồng bài kiểm tra của 3 lớp đang chờ. Bạn chấm thử một bài và phát hiện lỗi sai cần nhận xét.",
+        "narrative": "Chồng bài kiểm tra của 3 lớp đang chờ. Bạn chấm từng bài, gạch dưới chỗ sai và viết một dòng nhận xét cho mỗi em.",
         "basis": { "kind": "fact", "text": "Kiểm tra, đánh giá và theo dõi sự tiến bộ của học sinh là nhiệm vụ thường xuyên của giáo viên trung học.", "source_ids": ["S22", "S23"], "confidence": "single_source" },
         "task": {
           "type": "spot_error",
@@ -171,7 +171,7 @@
         "id": "s6-phu-huynh",
         "time": "16:45",
         "title": "Cuộc gọi từ phụ huynh",
-        "narrative": "Mẹ của một học sinh lớp chủ nhiệm gọi điện, không vui vì con bị điểm thấp và cho rằng cô/thầy chấm khắt khe.",
+        "narrative": "Mẹ của một học sinh gọi điện, không vui vì con bị điểm thấp. Bạn lắng nghe, giải thích cách chấm và hẹn cùng giúp em.",
         "basis": { "kind": "fact", "text": "Phối hợp, trao đổi với cha mẹ học sinh về việc học và rèn luyện của học sinh là một phần công việc của giáo viên trung học.", "source_ids": ["S22", "S23", "S24", "S25"], "confidence": "single_source" },
         "task": {
           "type": "dialogue",
@@ -199,7 +199,7 @@
         "id": "s7-buoi-toi",
         "time": "20:00",
         "title": "Buổi tối: còn 2 tiếng",
-        "narrative": "Ngày mai có 4 tiết và một bài kiểm tra cần ra đề. Bạn chia 2 tiếng buổi tối thế nào?",
+        "narrative": "Ngày mai có 4 tiết và một bài kiểm tra cần ra đề. Buổi tối, bạn soạn nốt đề rồi xem lại bài dạy trước khi ngủ.",
         "basis": { "kind": "fact", "text": "Ngoài giờ lên lớp, giáo viên có nhiều nhiệm vụ chuyên môn (soạn bài, chấm bài, kiêm nhiệm); Thông tư 05/2025 quy định cả việc quy đổi một số hoạt động chuyên môn ra tiết dạy.", "source_ids": ["S4", "S9"], "confidence": "verified" },
         "task": {
           "type": "time_budget",

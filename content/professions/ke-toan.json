@@ -59,7 +59,7 @@
     "segments": [
       {
         "id": "k1-hoa-don", "time": "08:00", "title": "Kiểm tra hóa đơn đầu vào",
-        "narrative": "Hóa đơn mua giấy in vừa về. Trước khi ghi sổ, bạn soát lại từng nội dung bắt buộc.",
+        "narrative": "Hóa đơn mua giấy in vừa về. Trước khi ghi sổ, bạn soát từng dòng: tên, mã số thuế, tiền hàng, tiền thuế, chữ ký.",
         "basis": { "kind": "fact", "text": "Hóa đơn phải có đủ các nội dung bắt buộc như tên, địa chỉ, mã số thuế người bán, người mua; hàng hóa, tiền thuế, tổng tiền thanh toán; chữ ký người bán.", "source_ids": ["S3"], "confidence": "verified", "note": "Nghị định 254/2026/NĐ-CP, Điều 10 khoản 1." },
         "task": { "type": "spot_error", "prompt": "Tìm các dòng sai trên hóa đơn (tên công ty, mã số thuế đều hư cấu)", "document": [
           "HÓA ĐƠN GIÁ TRỊ GIA TĂNG — Số: 123 — Ngày lập: 28/10/2026",
@@ -79,7 +79,7 @@
       },
       {
         "id": "k2-chung-tu", "time": "09:30", "title": "Xếp các khoản chi trong tháng",
-        "narrative": "Khay giấy tờ chi tiêu cả tháng. Khoản nào đủ chứng từ để ghi sổ, khoản nào còn thiếu?",
+        "narrative": "Khay giấy tờ chi tiêu cả tháng. Bạn xếp riêng khoản đủ chứng từ để ghi sổ, khoản còn thiếu thì nhắn người nộp bổ sung.",
         "basis": { "kind": "fact", "text": "Mọi nghiệp vụ kinh tế, tài chính phải lập chứng từ kế toán; chứng từ bị tẩy xóa, sửa chữa không có giá trị thanh toán và ghi sổ.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 18 khoản 1 và 3." },
         "task": { "type": "drag_sort", "prompt": "Xếp mỗi khoản chi vào đúng nhóm", "buckets": ["Đủ chứng từ", "Còn thiếu"], "items": [
           { "text": "Mua mực in, có hóa đơn ghi đúng tên và mã số thuế công ty", "bucket": "Đủ chứng từ" },
@@ -90,7 +90,7 @@
       },
       {
         "id": "k3-duyet-chi", "time": "10:30", "title": "Duyệt một khoản thanh toán",
-        "narrative": "Nhà cung cấp gửi đề nghị thanh toán. Bạn mang hồ sơ sang phòng giám đốc.",
+        "narrative": "Nhà cung cấp gửi đề nghị thanh toán. Bạn kiểm hồ sơ, ký phần người lập rồi mang sang phòng giám đốc để duyệt.",
         "basis": { "kind": "fact", "text": "Chứng từ kế toán phải có chữ ký, họ tên người lập, người duyệt; người ký phải chịu trách nhiệm về nội dung chứng từ.", "source_ids": ["S1"], "confidence": "verified", "note": "Luật Kế toán, Điều 16 khoản 1 điểm g và Điều 18 khoản 5. Thứ tự các bước là minh họa một quy trình nội bộ phổ biến." },
         "task": { "type": "sequence", "prompt": "Sắp xếp các bước chi một khoản tiền", "steps": [
           "Nhận đề nghị thanh toán kèm hóa đơn, chứng từ",
@@ -102,7 +102,7 @@
       },
       {
         "id": "k4-chinh-so", "time": "13:30", "title": "Đề nghị \"chỉnh số cho đẹp\"",
-        "narrative": "Giám đốc gọi bạn vào: \"Tháng này lỗ. Em chỉnh số cho đẹp để gửi ngân hàng vay vốn nhé.\"",
+        "narrative": "Giám đốc muốn \"chỉnh số cho đẹp\" để đi vay vốn. Bạn từ chối, giải thích rủi ro và đề xuất cách trình bày trung thực.",
         "basis": { "kind": "fact", "text": "Luật Kế toán nghiêm cấm cố ý hoặc ép buộc người khác cung cấp, xác nhận số liệu kế toán sai sự thật; người làm kế toán vẫn có thể bị cấp trên gây áp lực làm theo ý muốn.", "source_ids": ["S1", "S7", "S9"], "confidence": "verified", "note": "Luật Kế toán, Điều 13 khoản 2 và 6. S7: vụ án có kế toán trưởng cảnh báo nhưng vẫn bị yêu cầu làm; S9: chia sẻ về áp lực từ lãnh đạo." },
         "task": { "type": "choice", "prompt": "Bạn trả lời giám đốc thế nào?", "options": [
           { "text": "Từ chối, giải thích là trái luật; nếu vẫn bị yêu cầu, báo cáo bằng văn bản", "effect": { "chinh_xac": 5, "ap_luc": 4 }, "feedback": "Luật cho người làm kế toán quyền bảo lưu ý kiến và báo cáo bằng văn bản khi thấy sai phạm." },
@@ -112,7 +112,7 @@
       },
       {
         "id": "k5-nha-cung-cap", "time": "15:00", "title": "Nhà cung cấp gọi hỏi tiền",
-        "narrative": "Điện thoại bàn reo. Là chị phụ trách bán hàng của công ty giấy.",
+        "narrative": "Chị bán hàng của công ty giấy gọi hỏi tiền. Bạn mở sổ công nợ, đối chiếu từng hóa đơn và hẹn ngày thanh toán.",
         "basis": { "kind": "fact", "text": "Kế toán xử lý hóa đơn để thanh toán, theo dõi công nợ và đối chiếu số liệu với đối tác.", "source_ids": ["S11", "S4"], "confidence": "single_source" },
         "task": { "type": "dialogue", "prompt": "Trao đổi với nhà cung cấp", "npc": "Nhà cung cấp", "turns": [
           { "npc_line": "Chị bên công ty giấy đây. Hóa đơn tháng trước bao giờ bên em trả ạ?", "replies": [
@@ -124,7 +124,7 @@
       },
       {
         "id": "k6-to-khai", "time": "16:30", "title": "Hạn nộp tờ khai thuế sát nút",
-        "narrative": "Hôm nay là hạn cuối nộp tờ khai thuế tháng. Còn một khoản nhỏ chưa khớp số.",
+        "narrative": "Hôm nay là hạn nộp tờ khai thuế tháng, còn một khoản chưa khớp. Bạn rà lại chứng từ, tìm ra chỗ lệch rồi mới nộp.",
         "basis": { "kind": "fact", "text": "Kế toán tính thuế và lập tờ khai thuế cho doanh nghiệp; thời hạn nộp hồ sơ khai thuế do Chính phủ quy định theo Luật Quản lý thuế 2025.", "source_ids": ["S11", "S2"], "confidence": "verified", "note": "Luật 108/2025/QH15, Điều 12 khoản 5 (khai bổ sung) và khoản 8; Điều 45 khoản 4 điểm a (nộp hồ sơ sau 90 ngày dẫn tới thiếu thuế là trốn thuế)." },
         "task": { "type": "choice", "prompt": "Bạn xử lý thế nào?", "options": [
           { "text": "Nộp đúng hạn với số đã kiểm; tìm ra sai sót thì khai bổ sung", "effect": { "chinh_xac": 3, "ap_luc": 2 }, "feedback": "Luật cho phép khai bổ sung khi phát hiện sai sót (có điều kiện và thời hạn)." },
@@ -134,7 +134,7 @@
       },
       {
         "id": "k7-buoi-toi", "time": "19:30", "title": "Buổi tối mùa quyết toán",
-        "narrative": "Sắp tới mùa quyết toán, việc còn nhiều. Hai tiếng buổi tối, bạn dùng thế nào?",
+        "narrative": "Sắp tới mùa quyết toán, việc còn nhiều. Buổi tối, bạn mang một phần sổ sách về đối chiếu cho kịp tiến độ.",
         "basis": { "kind": "fact", "text": "Mùa quyết toán thuế là cao điểm của người làm kế toán; có lúc phải mang cả bộ chứng từ đi đối chiếu với cơ quan thuế, tốn nhiều thời gian, công sức.", "source_ids": ["S5", "S10"], "confidence": "single_source" },
         "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
           { "label": "Làm nốt bảng đối chiếu", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -2 } },

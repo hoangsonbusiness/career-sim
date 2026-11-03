@@ -220,7 +220,7 @@
         "id": "m1-brief",
         "time": "09:00",
         "title": "Nhận brief và lên kế hoạch chiến dịch",
-        "narrative": "Sáng đầu tuần, trưởng nhóm đưa brief ra mắt vị trà mới của Trà sữa Mây. Bạn phải biến yêu cầu thành kế hoạch rõ ràng.",
+        "narrative": "Sáng đầu tuần, trưởng nhóm đưa brief ra mắt vị trà mới của Trà sữa Mây. Bạn chia nhỏ yêu cầu thành kế hoạch từng kênh.",
         "basis": {
           "kind": "fact",
           "text": "Theo mô tả công việc, nhân viên marketing lập kế hoạch, triển khai và theo dõi chiến dịch trên các kênh.",
@@ -245,7 +245,7 @@
         "id": "m2-duyet-noi-dung",
         "time": "10:00",
         "title": "Duyệt bài quảng cáo trước khi đăng",
-        "narrative": "Content gửi bản nháp bài đăng. Bạn phải khoanh những dòng vi phạm trước khi nội dung lên trang của thương hiệu.",
+        "narrative": "Content gửi bản nháp bài đăng. Bạn khoanh những câu khẳng định thiếu căn cứ và nhờ sửa trước khi đăng.",
         "basis": {
           "kind": "fact",
           "text": "Nội dung quảng cáo phải trung thực, không gây nhầm lẫn và không dùng từ ngữ so sánh, khẳng định thiếu căn cứ.",
@@ -277,7 +277,7 @@
         "id": "m3-y-tuong",
         "time": "11:30",
         "title": "Chọn ý tưởng bám brief",
-        "narrative": "Bảng ý tưởng đầy giấy nhớ. Bạn phải tách phương án đúng brief khỏi ý tưởng lạc đề hoặc có rủi ro pháp lý.",
+        "narrative": "Bảng ý tưởng đầy giấy nhớ. Bạn cùng nhóm giữ lại phương án bám brief, gỡ bỏ ý lạc đề hoặc có rủi ro.",
         "basis": {
           "kind": "fact",
           "text": "Mô tả công việc yêu cầu phối hợp content và thiết kế để tạo creative theo mục tiêu chiến dịch.",
@@ -304,7 +304,7 @@
         "id": "m4-khach-doi-y",
         "time": "13:30",
         "title": "Khách hàng đổi thông điệp sát ngày đăng",
-        "narrative": "Đại diện Trà sữa Mây gọi điện: muốn đổi câu chốt và vẫn giữ lịch đăng ngày mai. Bạn phải vừa giữ quan hệ vừa bảo vệ chất lượng.",
+        "narrative": "Đại diện Trà sữa Mây gọi muốn đổi câu chốt sát ngày đăng. Bạn trao đổi lại với khách, rồi xếp lại việc cho cả nhóm.",
         "basis": {
           "kind": "fact",
           "text": "Vào mùa chiến dịch, quản lý marketing phải bám deadline từng giờ và điều phối lại kế hoạch khi yêu cầu thay đổi.",
@@ -368,7 +368,7 @@
         "id": "m5-binh-luan",
         "time": "15:00",
         "title": "Bình luận tiêu cực lan nhanh",
-        "narrative": "Một bài đăng bị chê vì giao hàng chậm. Bình luận tiêu cực tăng nhanh, nhiều người tag thương hiệu. Bạn xử lý thế nào?",
+        "narrative": "Một bài đăng bị chê vì giao hàng chậm, bình luận tiêu cực tăng nhanh. Bạn xác minh sự việc trước, rồi mới phản hồi.",
         "basis": {
           "kind": "fact",
           "text": "Quản lý kênh truyền thông gồm theo dõi, phản hồi bình luận tiêu cực; quy trình khủng hoảng bắt đầu bằng xác minh.",
@@ -401,7 +401,7 @@
         "id": "m6-chia-thoi-gian",
         "time": "16:00",
         "title": "Chia quỹ thời gian buổi chiều",
-        "narrative": "Còn một quãng làm việc trước khi tan. Nội dung, số liệu và cuộc họp đều cần bạn; hãy chia thời gian hợp lý.",
+        "narrative": "Còn một quãng làm việc trước khi tan. Bạn chạy qua lại giữa sửa nội dung, cập nhật số liệu và một cuộc họp.",
         "basis": {
           "kind": "fact",
           "text": "Một nhân viên marketing kể ngày nào cũng phải ở lại văn phòng sau giờ quy định vì sợ bị đánh giá thiếu nhiệt tình.",
@@ -424,7 +424,7 @@
         "id": "m7-bao-cao-kpi",
         "time": "18:00",
         "title": "Báo cáo kết quả thấp hơn mục tiêu",
-        "narrative": "Cuối ngày, số liệu chiến dịch thấp hơn mục tiêu. Trưởng nhóm gọi bạn vào phòng để nghe báo cáo và phương án tiếp theo.",
+        "narrative": "Cuối ngày, số liệu chiến dịch thấp hơn mục tiêu. Bạn vào phòng trưởng nhóm báo cáo và đề xuất cách điều chỉnh.",
         "basis": {
           "kind": "fact",
           "text": "Một nhân viên marketing kể áp lực KPI khiến cô mất ngủ, mệt mỏi kéo dài và cáu gắt.",

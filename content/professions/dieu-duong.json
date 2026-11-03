@@ -57,25 +57,25 @@
     "segments": [
       {
         "id": "d1-ban-giao", "time": "06:45", "title": "Nhận bàn giao ca",
-        "narrative": "Ca đêm sắp về. Bạn nhận bàn giao những người bệnh của buồng mình. Làm theo thứ tự nào để không sót ai?",
+        "narrative": "Ca đêm sắp về. Bạn đi cùng điều dưỡng ca trước qua từng giường, nghe kỹ ai cần theo dõi gì rồi mới nhận ca.",
         "basis": { "kind": "fact", "text": "Điều dưỡng phải bàn giao đầy đủ số lượng người bệnh và các vấn đề cần theo dõi, đặc biệt giữa các ca trực.", "source_ids": ["S2"], "confidence": "verified" },
         "task": { "type": "sequence", "prompt": "Sắp xếp các bước nhận bàn giao ca", "steps": ["Nhận danh sách người bệnh của buồng", "Nghe ca trước báo các vấn đề cần theo dõi", "Cùng ca trước đi buồng xem từng người bệnh", "Đối chiếu hồ sơ chăm sóc với y lệnh trong ngày", "Ký nhận bàn giao vào sổ"], "on_success": { "nguoi_benh_an_tam": 5 }, "on_fail": { "ap_luc": 5 } }
       },
       {
         "id": "d2-phieu-theo-doi", "time": "07:30", "title": "Rà phiếu chăm sóc",
-        "narrative": "Đi buồng xong, bạn rà phiếu chăm sóc ca đêm ghi cho giường 12. Có chỗ nào ca sau sẽ không theo dõi tiếp được?",
+        "narrative": "Đi buồng xong, bạn ngồi cập nhật phiếu chăm sóc giường 12, ghi rõ những gì ca sau cần theo dõi tiếp.",
         "basis": { "kind": "fact", "text": "Điều dưỡng lập hồ sơ quản lý người bệnh và cập nhật hằng ngày.", "source_ids": ["S2", "S9"], "confidence": "verified" },
         "task": { "type": "spot_error", "prompt": "Tìm chỗ ghi chép thiếu trong phiếu chăm sóc", "document": ["Người bệnh: Nguyễn Văn B. — Giường 12", "Giờ ghi: (để trống)", "Nhận định: ngủ ít, kêu mệt, ăn được nửa suất", "Đã báo bác sĩ điều trị", "Người ghi: (không ký tên)"], "errors": [{ "line": 1, "explain": "Thiếu giờ ghi thì ca sau không biết tình trạng này có từ lúc nào." }, { "line": 4, "explain": "Thiếu tên người ghi thì không biết hỏi lại ai khi cần." }], "on_success": { "nguoi_benh_an_tam": 4 }, "on_fail": { "ap_luc": 4 } }
       },
       {
         "id": "d3-y-lenh", "time": "09:00", "title": "Việc nào cần y lệnh?",
-        "narrative": "Xe thuốc và việc chăm sóc buổi sáng đã sẵn. Việc nào bạn tự làm được, việc nào phải có chỉ định của bác sĩ?",
+        "narrative": "Bạn đẩy xe thuốc đi phát theo y lệnh của bác sĩ, rồi giúp người bệnh vệ sinh, hỏi han xem đêm qua ngủ có ngon không.",
         "basis": { "kind": "fact", "text": "Điều dưỡng thực hiện thuốc và một số chăm sóc theo chỉ định của bác sĩ; vệ sinh, giấc ngủ, chăm sóc tinh thần thuộc chăm sóc điều dưỡng.", "source_ids": ["S2"], "confidence": "verified" },
         "task": { "type": "drag_sort", "prompt": "Xếp mỗi việc vào đúng nhóm", "buckets": ["Tự làm theo chuyên môn", "Cần chỉ định của bác sĩ"], "items": [{ "text": "Giúp người bệnh vệ sinh thân thể, thay đồ vải", "bucket": "Tự làm theo chuyên môn" }, { "text": "Động viên người bệnh đang lo lắng", "bucket": "Tự làm theo chuyên môn" }, { "text": "Cho người bệnh dùng thuốc", "bucket": "Cần chỉ định của bác sĩ" }, { "text": "Đổi chế độ ăn của người bệnh", "bucket": "Cần chỉ định của bác sĩ" }, { "text": "Giữ buồng bệnh yên tĩnh vào giờ nghỉ", "bucket": "Tự làm theo chuyên môn" }], "on_success": { "nguoi_benh_an_tam": 5 }, "on_fail": { "nguoi_benh_an_tam": -5, "ap_luc": 5 } }
       },
       {
         "id": "d4-nguoi-nha", "time": "10:30", "title": "Người nhà hỏi chuyện",
-        "narrative": "Con gái người bệnh giường 12 chặn bạn ở hành lang, giọng rất lo.",
+        "narrative": "Con gái người bệnh giường 12 chặn bạn ở hành lang, giọng rất lo. Bạn bình tĩnh giải thích và hẹn hỏi thêm bác sĩ cho chị.",
         "basis": { "kind": "fact", "text": "Điều dưỡng phối hợp với bác sĩ tư vấn, hướng dẫn người bệnh và người nhà về bệnh và cách tự chăm sóc.", "source_ids": ["S2", "S6"], "confidence": "verified" },
         "task": { "type": "dialogue", "prompt": "Trò chuyện với người nhà", "npc": "Con gái người bệnh", "turns": [
           { "npc_line": "Sao bố tôi nằm mãi chưa khỏi? Có phải chữa sai không?", "replies": [
@@ -87,7 +87,7 @@
       },
       {
         "id": "d5-hai-chuong", "time": "13:30", "title": "Hai chuông gọi cùng lúc",
-        "narrative": "Chuông giường 5 (người bệnh nặng, cần chăm sóc toàn diện) và giường 9 (người bệnh tự đi lại được) reo cùng lúc.",
+        "narrative": "Chuông giường 5 và giường 9 reo cùng lúc. Bạn tới người bệnh nặng trước, nhờ đồng nghiệp ghé giường còn lại.",
         "basis": { "kind": "fact", "text": "Người bệnh được phân cấp chăm sóc; người bệnh nặng, nguy kịch phụ thuộc hoàn toàn vào sự theo dõi, chăm sóc liên tục của điều dưỡng.", "source_ids": ["S2", "S10"], "confidence": "verified" },
         "task": { "type": "choice", "prompt": "Bạn đến giường nào trước?", "options": [
           { "text": "Giường 5 trước, nhờ đồng nghiệp báo giường 9 chờ một chút", "effect": { "nguoi_benh_an_tam": 5, "ap_luc": 3 }, "feedback": "Ưu tiên người bệnh nặng, người kia vẫn biết mình được quan tâm." },
@@ -96,7 +96,7 @@
       },
       {
         "id": "d6-ra-vien", "time": "15:30", "title": "Hướng dẫn ra viện",
-        "narrative": "Ông cụ giường 3 được ra viện chiều nay. Bác sĩ đã dặn xong, giờ đến lượt bạn hướng dẫn.",
+        "narrative": "Ông cụ giường 3 được ra viện chiều nay. Bạn ngồi xuống, dặn lại cách uống thuốc, lịch tái khám và giấy tờ cần mang.",
         "basis": { "kind": "fact", "text": "Điều dưỡng hướng dẫn hoặc hỗ trợ người bệnh thực hiện các quy định khi ra viện.", "source_ids": ["S2"], "confidence": "verified" },
         "task": { "type": "choice", "prompt": "Bạn hướng dẫn thế nào?", "options": [
           { "text": "Dặn từng việc ở nhà, rồi hỏi lại xem ông đã nhớ chưa", "effect": { "nguoi_benh_an_tam": 6, "suc_luc": -3 }, "feedback": "Hỏi lại giúp chắc người bệnh hiểu đúng." },
@@ -105,7 +105,7 @@
       },
       {
         "id": "d7-sau-ca", "time": "19:00", "title": "Sau ca: còn 2 tiếng",
-        "narrative": "Hết ca, bạn về nhà mệt rã. Hai tiếng buổi tối, bạn chia thế nào?",
+        "narrative": "Hết ca, bạn về nhà mệt rã. Nghỉ một lúc, bạn mở tài liệu ôn lại một kỹ thuật chăm sóc mới học ở khoa.",
         "basis": { "kind": "fact", "text": "Điều dưỡng khoa lâm sàng có nhiệm vụ học tập liên tục để cập nhật kiến thức, kỹ năng.", "source_ids": ["S2"], "confidence": "verified" },
         "task": { "type": "time_budget", "prompt": "Phân bổ 120 phút buổi tối", "budget_min": 120, "activities": [
           { "label": "Ngủ bù, nghỉ ngơi", "effect_per_30min": { "suc_luc": 4, "ap_luc": -2 } },
