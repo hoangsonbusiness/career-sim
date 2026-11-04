@@ -1,0 +1,548 @@
+{
+  "id": "ky-thuat-vien-o-to",
+  "name": "Kỹ thuật viên ô tô",
+  "aliases": ["Thợ sửa ô tô", "Kỹ thuật viên sửa chữa ô tô", "Automotive technician"],
+  "group": { "label": "Kỹ thuật & Sản xuất" },
+  "holland": ["R", "I", "C"],
+  "summary": "Kiểm tra, chẩn đoán, bảo dưỡng và sửa chữa ô tô ở xưởng dịch vụ hay garage; làm việc với dầu mỡ, máy móc và ngày càng nhiều thiết bị điện tử, phần mềm chẩn đoán; phải giữ an toàn cho mình và nói thật với khách về tình trạng xe.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật An toàn, vệ sinh lao động số 84/2015/QH13 (Văn bản hợp nhất 14/VBHN-VPQH năm 2024)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/lao-dong/van-ban-hop-nhat-14-vbhn-vpqh-2024-hop-nhat-luat-an-toan-ve-sinh-lao-dong-375139-d5.html",
+      "accessed": "2026-11-04",
+      "effective_date": "2016-07-01",
+      "note": "Đọc trên văn bản hợp nhất năm 2024 (có sửa đổi theo Luật Bảo hiểm xã hội 41/2024/QH15). Đã đọc Điều 6, 12, 23."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật Bảo vệ quyền lợi người tiêu dùng số 19/2023/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/thuong-mai/luat-bao-ve-quyen-loi-nguoi-tieu-dung-2023-so-19-2023-qh15-259732-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-06-20",
+      "effective_date": "2024-07-01",
+      "note": "Ngày ban hành, hiệu lực theo Công báo. Đã đọc Điều 4 (quyền của người tiêu dùng) và Điều 10 khoản 1 (hành vi bị nghiêm cấm)."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Luật Giáo dục nghề nghiệp số 124/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/giao-duc/luat-giao-duc-nghe-nghiep-2025-so-124-2025-qh15-422919-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-01-01",
+      "note": "Thay Luật Giáo dục nghề nghiệp 74/2014/QH13. Điều 44: hiệu lực từ 01/01/2026, một số điều từ 01/7/2026 (ngày 10/12/2025 là ngày Quốc hội thông qua, không phải ngày hiệu lực). Có các trình độ cao đẳng, trung cấp, sơ cấp và chương trình giáo dục trung học nghề."
+    },
+    {
+      "id": "S4",
+      "type": "official_stat",
+      "title": "Thông báo tuyển sinh đại học chính quy năm 2026 — Trường Đại học Công nghiệp TP.HCM",
+      "publisher": "Trường Đại học Công nghiệp TP.HCM",
+      "url": "https://tuyensinh.iuh.edu.vn/",
+      "accessed": "2026-11-04",
+      "note": "Danh mục ngành có Công nghệ kỹ thuật ô tô (mã 7510205), gồm chuyên ngành Công nghệ kỹ thuật ô tô và Công nghệ kỹ thuật ô tô điện. Chỉ là một trường, dùng để minh họa đường đại học."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Tin tuyển dụng Kỹ thuật viên ô tô trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-ky-thuat-vien-o-to",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "7 tin: lương ghi từ 8 tới 18 triệu đồng/tháng; nhiều tin không yêu cầu kinh nghiệm (8–15, 9–12, 10–18 triệu), tin học việc 9–10 triệu, 1 tin thỏa thuận. Trang tra cứu lương 'kỹ thuật viên ô tô' của TopCV không có dữ liệu."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Vô tình đến với nghề sửa ô tô nhưng rồi trở thành... đam mê",
+      "publisher": "Báo Dân trí",
+      "url": "https://dantri.com.vn/lao-dong-viec-lam/vo-tinh-den-voi-nghe-sua-o-to-nhung-roi-tro-thanh-dam-me-20200715142848126.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2020-07-15",
+      "note": "Lời kể của anh Nguyễn Đình Tiến (kỹ thuật viên máy – gầm – điện ở một đại lý tại Hà Nội) và anh Trần Trung Hậu (kỹ thuật viên phần mềm chẩn đoán). Bài năm 2020; số lương trong bài đã cũ nên không dùng."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Thợ sửa ô tô dễ thất nghiệp nếu chỉ biết 'vặn ốc, thay dầu'",
+      "publisher": "Báo Tuổi Trẻ (Pháp Luật Online)",
+      "url": "https://tuoitre.vn/plo/tho-sua-o-to-de-that-nghiep-neu-chi-biet-van-oc-thay-dau-109891355.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-01-15",
+      "note": "Lời kể của anh Nguyễn Văn Nam (chủ một garage ở TP.HCM) và một kỹ sư ô tô. Bài có nội dung quảng bá cho một trung tâm đào tạo; chỉ dùng phần lời kể về yêu cầu công việc, không dùng phần đánh giá cơ sở đào tạo."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Thử tháo lắp xe đạp, quạt điện cũ dưới sự hướng dẫn của người lớn để xem bạn có thích làm việc với máy móc không.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Học tốt Vật lý (điện, cơ học) và Tin học vì xe ngày nay có rất nhiều điện tử, phần mềm.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Sau lớp 9 hoặc lớp 12 bạn đều có đường vào nghề; hãy tìm hiểu cả trường nghề lẫn đại học trước khi chọn.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Đường giáo dục nghề nghiệp: có các trình độ sơ cấp, trung cấp, cao đẳng và chương trình giáo dục trung học nghề.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Luật Giáo dục nghề nghiệp 2025, quy định về chương trình đào tạo và mục tiêu đào tạo các trình độ."
+      },
+      {
+        "kind": "fact",
+        "text": "Đường đại học: có ngành Công nghệ kỹ thuật ô tô (mã 7510205); ví dụ năm 2026 Trường Đại học Công nghiệp TP.HCM tuyển ngành này với hai chuyên ngành, trong đó có ô tô điện.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "Thông báo tuyển sinh chính thức của một trường; các trường khác xem đề án riêng."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Người làm công việc có yếu tố nguy hiểm, có hại phải được trang cấp đủ phương tiện bảo vệ cá nhân và phải dùng chúng; doanh nghiệp không được phát tiền thay đồ bảo hộ hay bắt người lao động tự mua.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật An toàn, vệ sinh lao động Điều 23 khoản 1, khoản 3 điểm b."
+      },
+      {
+        "kind": "fact",
+        "text": "Người lao động được từ chối làm việc hoặc rời nơi làm việc mà vẫn được trả lương khi thấy rõ nguy cơ tai nạn đe dọa nghiêm trọng tính mạng, sức khỏe, nhưng phải báo ngay cho người quản lý.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật An toàn, vệ sinh lao động Điều 6 khoản 1 điểm đ."
+      },
+      {
+        "kind": "fact",
+        "text": "Cơ sở kinh doanh không được lừa dối khách bằng thông tin sai về dịch vụ, và không được ép khách trả tiền cho dịch vụ chưa thỏa thuận trước.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Luật Bảo vệ quyền lợi người tiêu dùng Điều 10 khoản 1 điểm a, d."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Nhiều học viên học nghề sửa ô tô đi làm thêm ở xưởng ngay từ năm thứ nhất: sáng học lý thuyết, chiều thực hành tại xưởng.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Tháng 11/2026, tin tuyển kỹ thuật viên ô tô trên TopCV ghi lương khoảng 8–18 triệu đồng/tháng; nhiều tin không yêu cầu kinh nghiệm, tin học việc ghi 9–10 triệu.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "7 tin tại một thời điểm; một công ty đăng nhiều tin."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Kỹ thuật viên kể nghề thuộc nhóm cơ khí, nặng nhọc và tỉ mẩn, làm việc với dầu mỡ, mùi xăng và cả phần mềm điều khiển phức tạp.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Sửa ô tô hiện nay phải tra sơ đồ mạch điện, đọc dữ liệu kỹ thuật của hãng và phân tích lỗi bằng máy chẩn đoán, không chỉ tháo lắp.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Nam — kỹ thuật viên 2 năm kinh nghiệm tại Xưởng dịch vụ ô tô Phú Thịnh (hư cấu), làm cùng một kỹ thuật viên chính và một cố vấn dịch vụ.",
+    "setting": "Một ngày ở xưởng dịch vụ: an toàn trước khi nâng xe, kiểm tra đồ bảo hộ, soát phiếu sửa chữa, chẩn đoán tiếng kêu lạ, bảo dưỡng buổi chiều, lời đề nghị 'bán thêm' và chiếc xe chạy thử còn tiếng lạ.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "an_toan", "label": "An toàn", "initial": 70 },
+      { "id": "chat_luong", "label": "Chất lượng", "initial": 65 }
+    ],
+    "segments": [
+      {
+        "id": "kt1-cau-nang",
+        "time": "07:30",
+        "title": "Trước khi nâng xe lên cầu",
+        "narrative": "Chiếc xe đầu tiên trong ngày đã vào xưởng. Kỹ thuật viên chính nhắc bạn làm đúng từng bước an toàn trước khi nâng xe.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người lao động phải chấp hành nội quy, quy trình an toàn tại nơi làm việc, sử dụng phương tiện bảo vệ cá nhân được cấp và báo ngay cho người có trách nhiệm khi phát hiện nguy cơ.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn, vệ sinh lao động Điều 6 khoản 2 điểm a, b, c. Các bước trong game chỉ ở mức khái quát, không phải hướng dẫn kỹ thuật (SPEC-025 R-2)."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước an toàn trước khi nâng xe",
+          "steps": [
+            "Mặc đồ, đi giày và đeo găng bảo hộ xưởng cấp",
+            "Đọc phiếu, hỏi kỹ thuật viên chính về chiếc xe",
+            "Kiểm tra cầu nâng theo quy trình của xưởng",
+            "Đặt xe đúng vị trí theo hướng dẫn của xưởng",
+            "Báo kỹ thuật viên chính rồi mới nâng xe"
+          ],
+          "on_success": { "an_toan": 4 },
+          "on_fail": { "an_toan": -4 }
+        }
+      },
+      {
+        "id": "kt2-bao-ho",
+        "time": "08:30",
+        "title": "Đồ bảo hộ và thao tác trong xưởng",
+        "narrative": "Ở tủ dụng cụ, bạn để ý vài chuyện quanh xưởng sáng nay. Có chuyện an toàn, có chuyện nguy hiểm.",
+        "basis": {
+          "kind": "fact",
+          "text": "Phương tiện bảo vệ cá nhân phải được cấp đủ và phải dùng; không được phát tiền thay đồ bảo hộ; người lao động được từ chối làm khi thấy rõ nguy cơ tai nạn nghiêm trọng; cấm buộc người lao động làm tiếp khi nguy cơ chưa được khắc phục.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn, vệ sinh lao động Điều 6 khoản 1 điểm đ, khoản 2 điểm b; Điều 12 khoản 1; Điều 23 khoản 1, khoản 3 điểm b."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp các chuyện bạn thấy: an toàn hay nguy hiểm",
+          "buckets": ["An toàn", "Nguy hiểm"],
+          "items": [
+            { "text": "Đeo kính, găng tay xưởng cấp suốt lúc làm việc", "bucket": "An toàn" },
+            { "text": "Báo ngay quản lý khi thấy cầu nâng có tiếng lạ", "bucket": "An toàn" },
+            { "text": "Dừng tay, rời chỗ khi thấy rõ nguy cơ tai nạn", "bucket": "An toàn" },
+            { "text": "Tháo kính bảo hộ ra cho dễ nhìn", "bucket": "Nguy hiểm" },
+            { "text": "Xưởng phát tiền thay đồ bảo hộ, bảo thợ tự mua", "bucket": "Nguy hiểm" },
+            { "text": "Quản lý bắt làm tiếp dù cầu nâng hỏng chưa sửa", "bucket": "Nguy hiểm" }
+          ],
+          "on_success": { "an_toan": 5 },
+          "on_fail": { "an_toan": -5 }
+        }
+      },
+      {
+        "id": "kt3-phieu-sua-chua",
+        "time": "10:00",
+        "title": "Soát phiếu sửa chữa",
+        "narrative": "Cố vấn dịch vụ đưa bạn phiếu sửa chữa của xe anh Phong để ký xác nhận. Bạn đọc kỹ trước khi ký.",
+        "basis": {
+          "kind": "fact",
+          "text": "Khách được cung cấp chứng từ và thông tin chính xác, đầy đủ về dịch vụ; cơ sở kinh doanh không được lừa dối khách bằng thông tin sai về dịch vụ, không được ép khách trả tiền cho dịch vụ chưa thỏa thuận trước.",
+          "source_ids": ["S2"],
+          "confidence": "verified",
+          "note": "Luật Bảo vệ quyền lợi người tiêu dùng Điều 4 khoản 2; Điều 10 khoản 1 điểm a, d. Chỉ đánh lỗi hai dòng có quy định rõ (SPEC-025 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng sai quy định trong phiếu sửa chữa",
+          "document": [
+            "PHIẾU SỬA CHỮA — Xe của anh Phong (hư cấu)",
+            "Khách yêu cầu: kiểm tra tiếng kêu ở gầm trước",
+            "Thêm hạng mục thay má phanh, chưa hỏi khách, vẫn tính tiền",
+            "Ghi 'phụ tùng chính hãng' cho hàng không rõ nguồn gốc",
+            "Báo giá từng hạng mục, gửi khách trước khi làm",
+            "Có chữ ký nhận xe của khách và cố vấn dịch vụ"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Tính tiền dịch vụ khách chưa đồng ý trước là hành vi luật cấm." },
+            { "line": 3, "explain": "Ghi sai nguồn gốc phụ tùng là lừa dối khách bằng thông tin sai về dịch vụ." }
+          ],
+          "on_success": { "chat_luong": 5 },
+          "on_fail": { "chat_luong": -5 }
+        }
+      },
+      {
+        "id": "kt4-chan-doan",
+        "time": "11:00",
+        "title": "Khách nói xe kêu lạ",
+        "narrative": "Chị Hạnh đưa xe vào, kể xe có tiếng kêu lạ nhưng không rõ ở đâu. Kỹ thuật viên chính để bạn tự xử lý trước.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người trong nghề kể sửa ô tô hiện nay phải đọc, phân tích lỗi bằng máy chẩn đoán, tra dữ liệu kỹ thuật và kết hợp với kinh nghiệm thực tế; người làm nghề phải liên tục tự học.",
+          "source_ids": ["S7", "S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn bắt đầu kiểm tra từ đâu?",
+          "options": [
+            {
+              "text": "Hỏi kỹ khách khi nào xe kêu, chạy thử cùng kỹ thuật viên chính rồi mới kiểm tra",
+              "effect": { "chat_luong": 5, "nang_luong": -2 },
+              "feedback": "Thu thập đủ thông tin trước khi tháo giúp tìm đúng bệnh, không tốn tiền khách."
+            },
+            {
+              "text": "Thay ngay vài phụ tùng hay hỏng nhất cho chắc",
+              "effect": { "chat_luong": -4 },
+              "feedback": "Thay bừa có thể không đúng bệnh mà khách lại mất tiền oan."
+            },
+            {
+              "text": "Đoán theo kinh nghiệm, nghe qua rồi kết luận luôn",
+              "effect": { "chat_luong": -2, "nang_luong": 1 },
+              "feedback": "Xe ngày nay nhiều điện tử, chỉ nghe tiếng dễ đoán sai."
+            }
+          ]
+        }
+      },
+      {
+        "id": "kt5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều nhiều xe",
+        "narrative": "Buổi chiều có 3 giờ, ba chiếc xe đang chờ: một xe bảo dưỡng, một xe cần thay phụ tùng, một xe sửa xong cần chạy thử.",
+        "basis": {
+          "kind": "fact",
+          "text": "Kỹ thuật viên kể nghề sửa ô tô nặng nhọc và tỉ mẩn; người mới vào nghề thường mệt nhoài, lấm lem dầu mỡ.",
+          "source_ids": ["S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Bảo dưỡng định kỳ", "effect_per_30min": { "chat_luong": 2, "nang_luong": -2 } },
+            { "label": "Thay phụ tùng", "effect_per_30min": { "chat_luong": 2, "nang_luong": -2 } },
+            { "label": "Chạy thử, kiểm tra lại", "effect_per_30min": { "an_toan": 2, "chat_luong": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "kt6-ban-them",
+        "time": "16:30",
+        "title": "Lời đề nghị 'bán thêm'",
+        "narrative": "Cố vấn dịch vụ kéo bạn ra góc xưởng, nhờ bạn 'hỗ trợ' để tháng này đạt doanh số.",
+        "basis": {
+          "kind": "fact",
+          "text": "Cơ sở kinh doanh không được lừa dối khách bằng thông tin sai về dịch vụ; khách có quyền tự quyết định có tham gia giao dịch hay không.",
+          "source_ids": ["S2"],
+          "confidence": "verified",
+          "note": "Luật Bảo vệ quyền lợi người tiêu dùng Điều 10 khoản 1 điểm a; Điều 4 khoản 3."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời cố vấn dịch vụ",
+          "npc": "Anh Khoa (cố vấn dịch vụ)",
+          "turns": [
+            {
+              "npc_line": "Em báo khách xe chị Hạnh phải thay luôn lọc gió nhé, dù nó còn dùng tốt.",
+              "replies": [
+                {
+                  "text": "Lọc gió còn tốt anh ạ, em không báo khách thay được.",
+                  "effect": { "chat_luong": 3 },
+                  "feedback": "Nói đúng tình trạng xe giữ được niềm tin của khách và đúng luật."
+                },
+                {
+                  "text": "Vâng, em báo là hỏng rồi.",
+                  "effect": { "chat_luong": -5 },
+                  "feedback": "Báo sai tình trạng để bán thêm là lừa dối khách hàng."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thì cứ nói là 'sắp hỏng', khách đâu có biết.",
+              "replies": [
+                {
+                  "text": "Em ghi là 'nên kiểm tra lại ở lần bảo dưỡng tới', để khách tự quyết anh ạ.",
+                  "effect": { "chat_luong": 2, "nang_luong": -1 },
+                  "feedback": "Đưa thông tin đúng và để khách tự chọn là tôn trọng quyền của khách."
+                },
+                {
+                  "text": "Ừ thôi, em nói vậy cho anh vui.",
+                  "effect": { "chat_luong": -3 },
+                  "feedback": "Một câu nói không đúng sự thật cũng khiến khách mất lòng tin vào cả xưởng."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế em ghi gì vào phiếu?",
+              "replies": [
+                {
+                  "text": "Em ghi đúng những gì em đã kiểm tra và thấy ạ.",
+                  "effect": { "chat_luong": 2 },
+                  "feedback": "Phiếu ghi trung thực là bằng chứng bảo vệ cả khách lẫn bạn."
+                },
+                {
+                  "text": "Anh muốn ghi gì em ký nấy.",
+                  "effect": { "chat_luong": -4 },
+                  "feedback": "Ký xác nhận điều mình không làm là tự đặt mình vào rắc rối."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "kt7-giao-xe",
+        "time": "17:30",
+        "title": "Xe chạy thử còn tiếng lạ",
+        "narrative": "Gần hết giờ, bạn chạy thử chiếc xe sửa xong. Vẫn còn một tiếng lạ nhỏ, mà khách hẹn 6 giờ tới lấy xe.",
+        "basis": {
+          "kind": "fact",
+          "text": "Khách hàng được bảo đảm an toàn tính mạng, tài sản khi sử dụng dịch vụ và được thông tin kịp thời, chính xác; người lao động phải báo ngay cho người có trách nhiệm khi phát hiện nguy cơ mất an toàn.",
+          "source_ids": ["S2", "S1"],
+          "confidence": "verified",
+          "note": "Luật Bảo vệ quyền lợi người tiêu dùng Điều 4 khoản 1, 2; Luật An toàn, vệ sinh lao động Điều 6 khoản 2 điểm c."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với chiếc xe?",
+          "options": [
+            {
+              "text": "Báo kỹ thuật viên chính, giữ xe kiểm tra tiếp, gọi khách hẹn giờ mới",
+              "effect": { "an_toan": 4, "chat_luong": 3, "nang_luong": -2 },
+              "feedback": "Chậm một chút nhưng xe giao đi phải an toàn — khách sẽ hiểu."
+            },
+            {
+              "text": "Giao xe đúng giờ, tiếng nhỏ chắc không sao",
+              "effect": { "an_toan": -5, "chat_luong": -3 },
+              "feedback": "Giao xe khi chưa rõ nguyên nhân có thể đặt khách vào nguy hiểm."
+            },
+            {
+              "text": "Tự làm thêm vài hạng mục, không báo ai, tính vào hóa đơn",
+              "effect": { "chat_luong": -4 },
+              "feedback": "Làm và tính tiền hạng mục khách chưa đồng ý là trái luật."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có ngại làm việc cả ngày với dầu mỡ, đứng và cúi nhiều không?",
+      "Bạn có thích tìm nguyên nhân của một lỗi khó như giải một câu đố không?",
+      "Nếu được yêu cầu 'bán thêm' cho khách, bạn sẽ trả lời thế nào?",
+      "Bạn muốn học đường trường nghề hay đại học, và có muốn theo xe điện không?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "hoc-nghe-o-to",
+        "title": "Học viên trường nghề / sinh viên ngành ô tô",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có thể học theo các trình độ của giáo dục nghề nghiệp (trung cấp, cao đẳng, trung học nghề) hoặc ngành Công nghệ kỹ thuật ô tô ở đại học.",
+            "source_ids": ["S3", "S4"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "ktv-hoc-viec",
+        "title": "Kỹ thuật viên học việc",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tháng 11/2026 có tin tuyển kỹ thuật viên học việc, không yêu cầu kinh nghiệm.",
+            "source_ids": ["S5"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "ktv",
+        "title": "Kỹ thuật viên (máy, gầm, điện)",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Chịu khó tự học, tra tài liệu và dùng thành thạo máy chẩn đoán để lên tay nghề."
+          }
+        ]
+      },
+      {
+        "id": "ktv-chinh",
+        "title": "Kỹ thuật viên chính / tổ trưởng xưởng",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm và biết kèm cặp người mới."
+          }
+        ]
+      },
+      {
+        "id": "co-van-dich-vu",
+        "title": "Cố vấn dịch vụ / mở garage riêng",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Kỹ năng giao tiếp với khách và hiểu biết kỹ thuật giúp bạn chuyển sang tư vấn hoặc tự kinh doanh."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "hoc-nghe-o-to", "to": "ktv-hoc-viec", "type": "promotion" },
+      { "from": "ktv-hoc-viec", "to": "ktv", "type": "promotion" },
+      { "from": "ktv", "to": "ktv-chinh", "type": "management" },
+      { "from": "ktv", "to": "co-van-dich-vu", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Công việc nặng nhọc, làm với dầu mỡ, mùi xăng; người mới vào nghề thường mệt nhoài, lấm lem.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Lúc mới học việc thu nhập thấp; có người mới vào nghề còn làm không lương.",
+      "source_ids": ["S6", "S5"],
+      "confidence": "single_source",
+      "note": "'Làm không lương' theo S6 (2020); tin học việc trên TopCV tháng 11/2026 ghi 9–10 triệu (S5)."
+    },
+    {
+      "kind": "fact",
+      "text": "Phải học liên tục: xe ngày càng nhiều điện tử, phần mềm; người trong nghề cảnh báo chỉ biết 'vặn ốc, thay dầu' thì khó đi xa.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Công việc có yếu tố nguy hiểm, có hại buộc phải dùng đồ bảo hộ suốt lúc làm việc.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật An toàn, vệ sinh lao động Điều 23 khoản 1 (quy định chung cho công việc có yếu tố nguy hiểm, có hại)."
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Xe hybrid, xe điện và các hệ thống an toàn chủ động ngày càng nhiều khiến nghề sửa chữa ô tô liên tục thay đổi.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Đã có trường đại học mở chuyên ngành Công nghệ kỹ thuật ô tô điện trong tuyển sinh năm 2026.",
+      "source_ids": ["S4"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm điện – điện tử và đọc tài liệu tiếng Anh sẽ giúp bạn theo kịp xe đời mới."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, tuyensinh.iuh.edu.vn, TopCV, Dân trí, Tuổi Trẻ)",
+    "scope_note": "Xưởng, khách đều hư cấu, không dùng tên hãng xe (SPEC-025 R-3); các bước trong game chỉ khái quát, không phải hướng dẫn kỹ thuật (R-2). Chưa đọc Nghị định 116/2017 sửa bởi 117/2026 (điều kiện dịch vụ bảo dưỡng) và chưa tìm được danh mục nghề nặng nhọc áp dụng cho sửa chữa ô tô — chưa dùng."
+  }
+}

@@ -1020,4 +1020,67 @@ const hrWorld = {
 };
 writeFileSync(out("content/worlds/chuyen-vien-nhan-su.json"), JSON.stringify(hrWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich,chuyen-vien-nhan-su}.json");
+// ---------- Kỹ thuật viên ô tô (SPEC-025): một xưởng dịch vụ ô tô ----------
+// Kho phụ tùng trên trái, phòng cố vấn dịch vụ dưới trái, xưởng nền bê tông có cầu nâng và tủ dụng cụ, bãi chạy thử phía dưới.
+const XUONG_DICH_VU = [
+  "##############################",
+  "#.......#cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "####D####cccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "#.......Dcccccccccccccccccccc#",
+  "#.......#cccccccccccccccccccc#",
+  "##############D###############",
+  "#============================#",
+  "#============================#",
+  "#============================#",
+  "##############################",
+];
+const XUONG_DICH_VU_PROPS = [
+  // Kho phụ tùng: các kệ
+  [1, 1, 329, 1], [2, 1, 330, 1], [5, 1, 329, 1], [6, 1, 330, 1], [1, 5, 329, 1], [6, 5, 330, 1],
+  // Xưởng: hai cầu nâng (bàn dài làm khung), tủ dụng cụ, cây
+  [14, 4, 0, 1], [15, 4, 1, 1], [16, 4, 2, 1],
+  [21, 4, 0, 1], [22, 4, 1, 1], [23, 4, 2, 1],
+  [26, 1, 329, 1], [27, 1, 330, 1], [28, 1, 329, 1],
+  [10, 1, 16, 1],
+  // Phòng cố vấn dịch vụ: bàn tiếp khách
+  [3, 8, 85, 1], [4, 8, 86, 1], [5, 8, 97, 1], [1, 10, 17, 1],
+];
+const XUONG_DICH_VU_DECOR = [
+  // Phiếu sửa chữa trên bàn cố vấn, dụng cụ trên tủ.
+  [4, 8, 18], [27, 1, 18],
+];
+
+const mechanicWorld = {
+  profession_id: "ky-thuat-vien-o-to",
+  tile_size: 16,
+  tilesets: [...world.tilesets, { key: "site", image: "game/site/site.png", columns: SITE.length, spacing: 1 }],
+  maps: [
+    buildMap("xuong-dich-vu", XUONG_DICH_VU, XUONG_DICH_VU_PROPS, XUONG_DICH_VU_DECOR, { x: 14, y: 6 }, SITE_FLOOR),
+  ],
+  npcs: [
+    { id: "ktv-chinh", map: "xuong-dich-vu", x: 16, y: 6, name: "Anh Hùng (kỹ thuật viên chính)", sprite: C(54, 17, 22) },
+    { id: "ktv-chinh-bai", map: "xuong-dich-vu", x: 20, y: 13, name: "Anh Hùng (kỹ thuật viên chính)", sprite: C(54, 17, 22) },
+    { id: "co-van", map: "xuong-dich-vu", x: 5, y: 9, name: "Anh Khoa (cố vấn dịch vụ)", sprite: C(379) },
+    { id: "khach-hang", map: "xuong-dich-vu", x: 12, y: 8, name: "Chị Hạnh (khách hàng)", sprite: C(433) },
+    { id: "thu-kho", map: "xuong-dich-vu", x: 4, y: 3, name: "Thủ kho phụ tùng", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "kt1-cau-nang": { map: "xuong-dich-vu", target: { x: 16, y: 6 }, npc: "ktv-chinh", quest: "Tới cầu nâng, anh Hùng đang chờ" },
+    "kt2-bao-ho": { map: "xuong-dich-vu", target: { x: 27, y: 2 }, quest: "Ra tủ dụng cụ lấy đồ bảo hộ" },
+    "kt3-phieu-sua-chua": { map: "xuong-dich-vu", target: { x: 5, y: 9 }, npc: "co-van", quest: "Cố vấn dịch vụ nhờ bạn ký phiếu sửa chữa" },
+    "kt4-chan-doan": { map: "xuong-dich-vu", target: { x: 12, y: 8 }, npc: "khach-hang", quest: "Khách vừa đưa xe vào, nghe chị kể bệnh xe" },
+    "kt5-chia-thoi-gian": { map: "xuong-dich-vu", target: { x: 15, y: 5 }, quest: "Về cầu nâng, ba chiếc xe đang chờ" },
+    "kt6-ban-them": { map: "xuong-dich-vu", target: { x: 5, y: 9 }, npc: "co-van", quest: "Anh Khoa gọi bạn ra nói chuyện riêng" },
+    "kt7-giao-xe": { map: "xuong-dich-vu", target: { x: 20, y: 13 }, npc: "ktv-chinh-bai", quest: "Ra bãi chạy thử xe trước khi giao" },
+  },
+};
+writeFileSync(out("content/worlds/ky-thuat-vien-o-to.json"), JSON.stringify(mechanicWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich,chuyen-vien-nhan-su,ky-thuat-vien-o-to}.json");
