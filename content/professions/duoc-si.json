@@ -1,0 +1,649 @@
+{
+  "id": "duoc-si",
+  "name": "Dược sĩ nhà thuốc",
+  "aliases": ["Dược sĩ", "Dược sĩ bán lẻ", "Community Pharmacist"],
+  "group": { "label": "Y tế & Chăm sóc sức khỏe" },
+  "holland": ["I", "S", "C"],
+  "summary": "Đứng quầy ở nhà thuốc: kiểm tra đơn, bán đúng theo đơn, tư vấn cách dùng thuốc, quản lý bảo quản và hạn dùng, và chịu trách nhiệm chuyên môn theo Luật Dược.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Dược số 105/2016/QH13",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/luat-duoc-2016-so-105-2016-qh13-104849-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2016-04-06",
+      "effective_date": "2017-01-01",
+      "note": "Đã đọc Điều 6 (khoản 5 điểm b, h), Điều 13, Điều 18 khoản 1, Điều 47 khoản 1 điểm đ, Điều 77 khoản 2 và 4. Đã đối chiếu Luật 44/2024/QH15: các điểm này không bị sửa."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật số 44/2024/QH15 sửa đổi, bổ sung một số điều của Luật Dược",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/luat-duoc-sua-doi-2024-so-44-2024-qh15-379066-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-11-21",
+      "effective_date": "2025-07-01",
+      "note": "Một số khoản có hiệu lực từ 01/01/2025. Đã đọc khoản 3 Điều 1 (sửa Điều 6, thêm khoản 17 cấm bán lẻ online thuốc kê đơn) và khoản 22 (sửa Điều 47)."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Thông tư 26/2025/TT-BYT quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
+      "publisher": "Bộ Y tế / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/thong-tu-26-2025-tt-byt-quy-dinh-ke-don-thuoc-hoa-duoc-sinh-pham-tai-co-so-kham-chua-benh-404246-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-30",
+      "effective_date": "2025-07-01",
+      "supersedes": "Thông tư 52/2017/TT-BYT, 18/2018/TT-BYT, 04/2022/TT-BYT, 27/2021/TT-BYT",
+      "note": "Đã đọc Điều 6 (yêu cầu chung với nội dung kê đơn: khoản 3, 4, 6, 7). Ngày ban hành lấy theo thông tin công bố; văn bản thay thế lấy theo bài của Sở Y tế TP.HCM (S4)."
+    },
+    {
+      "id": "S4",
+      "type": "official_stat",
+      "title": "Sở Y tế TP.HCM: Triển khai thực hiện Thông tư số 26/2025/TT-BYT về kê đơn thuốc trong điều trị ngoại trú",
+      "publisher": "Sở Y tế TP. Hồ Chí Minh",
+      "url": "https://medinet.gov.vn/chuyen-muc/so-y-te-tphcm-trien-khai-thuc-hien-thong-tu-so-262025tt-byt-ve-ke-don-thuoc-tro-c1780-73419.aspx",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-07-10"
+    },
+    {
+      "id": "S5",
+      "type": "law",
+      "title": "Thông tư 02/2018/TT-BYT quy định về Thực hành tốt cơ sở bán lẻ thuốc (GPP)",
+      "publisher": "Bộ Y tế / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/thong-tu-02-2018-tt-byt-ve-thuc-hanh-tot-co-so-ban-le-thuoc-160571-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2018-01-22",
+      "effective_date": "2018-03-08",
+      "note": "Đã đọc Phụ lục GPP cho nhà thuốc: thiết bị bảo quản (nhiệt kế, ẩm kế), sổ/phần mềm theo dõi số lô, hạn dùng, quy định bán thuốc theo đơn. Văn bản đã được sửa bởi TT 12/2020/TT-BYT và TT 11/2025/TT-BYT (S6); văn bản hợp nhất 11/VBHN-BYT ngày 28/07/2025."
+    },
+    {
+      "id": "S6",
+      "type": "law",
+      "title": "Thông tư 11/2025/TT-BYT sửa đổi các Thông tư về thực hành tốt bán lẻ, phân phối, bảo quản thuốc",
+      "publisher": "Bộ Y tế / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/thong-tu-11-2025-tt-byt-sua-doi-quy-dinh-thuc-hanh-tot-ban-le-phan-phoi-bao-quan-thuoc-400532-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-05-16",
+      "effective_date": "2025-07-01",
+      "note": "Đã đọc Điều 1: không sửa phần bảo quản và bán theo đơn của GPP; thêm yêu cầu quản lý mua bán bằng phần mềm, bán online và bán theo đơn điện tử (không bán quá số lượng trong đơn, không bán đơn hết hạn)."
+    },
+    {
+      "id": "S7",
+      "type": "law",
+      "title": "Nghị định 90/2026/NĐ-CP quy định xử phạt vi phạm hành chính trong lĩnh vực y tế",
+      "publisher": "Chính phủ / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/nghi-dinh-90-2026-nd-cp-quy-dinh-xu-phat-vi-pham-hanh-chinh-trong-linh-vuc-y-te-430543-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-30",
+      "effective_date": "2026-05-15",
+      "supersedes": "Nghị định 117/2020/NĐ-CP",
+      "note": "Đã đọc Điều 59 (vi phạm về bán lẻ thuốc), khoản 4 điểm đ và g."
+    },
+    {
+      "id": "S8",
+      "type": "market",
+      "title": "Mức lương ngành Dược: Từ nhà thuốc đến FDI là bao nhiêu?",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-luong/muc-luong-nganh-duoc/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-18",
+      "note": "Bảng lương năm 2026 tổng hợp từ dữ liệu tuyển dụng."
+    },
+    {
+      "id": "S9",
+      "type": "market",
+      "title": "Báo cáo lương vị trí Dược sĩ tại Việt Nam 2026",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/duoc-si",
+      "accessed": "2026-11-04",
+      "note": "Trang tra cứu lương năm 2026, không ghi ngày cập nhật; gộp mọi vị trí dược sĩ, không riêng nhà thuốc."
+    },
+    {
+      "id": "S10",
+      "type": "market",
+      "title": "Một ngày làm việc của dược sĩ diễn ra theo từng ca trực",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-viec-lam/tu-van-nghe-nghiep/mot-ngay-lam-viec-cua-duoc-si",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-26"
+    },
+    {
+      "id": "S11",
+      "type": "press",
+      "title": "Tăng phạt gấp đôi, thuốc kê đơn vẫn lọt",
+      "publisher": "Tuổi Trẻ Online",
+      "url": "https://tuoitre.vn/tang-phat-gap-doi-thuoc-ke-don-van-lot-20260520095944726.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-05-20"
+    },
+    {
+      "id": "S12",
+      "type": "press",
+      "title": "Hơn 320 nhà thuốc của một chuỗi lớn hoạt động xuyên Tết Bính Ngọ",
+      "publisher": "Dân Việt",
+      "url": "https://danviet.vn/long-chau-co-hon-320-nha-thuoc-hoat-dong-xuyen-tet-binh-ngo-d1403175.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-02-14",
+      "note": "Bài trong chuyên mục Doanh nghiệp, có thể là bài truyền thông của doanh nghiệp; chỉ dùng để minh họa việc nhà thuốc mở cửa ngày Tết."
+    },
+    {
+      "id": "S13",
+      "type": "official_stat",
+      "title": "Phương thức tuyển sinh đại học dự kiến năm 2026",
+      "publisher": "Trường Đại học Dược Hà Nội",
+      "url": "https://tuyensinh.hup.edu.vn/noidung/1243/Phuong-thuc-tuyen-sinh-dai-hoc-du-kien-nam-2026",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-02-25",
+      "note": "Thông tin dự kiến của một trường; trường khác có thể dùng tổ hợp khác."
+    },
+    {
+      "id": "S14",
+      "type": "testimony",
+      "title": "Khách mua thuốc kê đơn không có đơn, cơ hội nào cho nhà thuốc?",
+      "publisher": "thuocsi.vn (trang tin ngành dược)",
+      "url": "https://news.thuocsi.vn/khach-mua-thuoc-ke-don-khong-co-don-co-hoi-nao-cho-nha-thuoc/",
+      "accessed": "2026-11-04",
+      "note": "Lời kể của dược sĩ Phạm Thị Ánh, nhà thuốc ở Vĩnh Long. Trang không ghi ngày đăng."
+    },
+    {
+      "id": "S15",
+      "type": "testimony",
+      "title": "Bác sĩ bán thuốc, dược sĩ kê đơn",
+      "publisher": "VnExpress (Góc nhìn)",
+      "url": "https://vnexpress.net/bac-si-ban-thuoc-duoc-si-ke-don-4762956.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-06-27",
+      "note": "Bài viết của BS, TS Quan Thế Dân — người trong ngành y, không phải dược sĩ."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học chắc Hóa học và Sinh học, tập thói quen ghi chép cẩn thận và kiểm tra lại trước khi nộp bài.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập nói chuyện rõ ràng, kiên nhẫn với người lớn tuổi; nghề này giải thích cho khách mỗi ngày.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Năm 2026, Trường Đại học Dược Hà Nội dự kiến xét tuyển ngành Dược học theo tổ hợp A00 và B00.",
+        "source_ids": ["S13"],
+        "confidence": "verified",
+        "audience": ["thpt"],
+        "note": "Thông tin dự kiến của một trường; xem đề án chính thức của từng trường trước khi đăng ký."
+      },
+      {
+        "kind": "advice",
+        "text": "Mỗi trường có thể dùng tổ hợp và phương thức khác nhau; hãy đọc đề án tuyển sinh của chính trường bạn nhắm tới.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Muốn làm người chịu trách nhiệm chuyên môn của một nhà thuốc, bạn cần bằng dược sĩ đại học và 02 năm thực hành chuyên môn tại cơ sở dược phù hợp.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Dược 2016, Điều 18 khoản 1 dẫn tới Điều 13 khoản 1 điểm a; Luật 44/2024 không sửa điều này."
+      },
+      {
+        "kind": "fact",
+        "text": "Để được cấp chứng chỉ hành nghề dược, ngoài văn bằng và thời gian thực hành còn cần giấy chứng nhận đủ sức khỏe và không thuộc các trường hợp bị cấm theo luật.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Dược 2016, Điều 13 khoản 2, 3, 4."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Dược sĩ phải bán đúng theo đơn; đơn không rõ tên thuốc, hàm lượng hay số lượng thì báo lại người kê đơn, và có quyền từ chối đơn không hợp lệ.",
+        "source_ids": ["S5"],
+        "confidence": "verified"
+      },
+      {
+        "kind": "fact",
+        "text": "Người có bằng dược sĩ được thay thuốc trong đơn bằng thuốc cùng hoạt chất, đường dùng, liều lượng khi người mua đồng ý, và phải chịu trách nhiệm về việc thay đó.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Dược 2016, Điều 47 khoản 1 điểm đ."
+      },
+      {
+        "kind": "fact",
+        "text": "Nhà thuốc phải quản lý việc mua, bán thuốc bằng phần mềm, bảo đảm truy xuất được nguồn gốc thuốc.",
+        "source_ids": ["S6"],
+        "confidence": "verified"
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Dược sĩ nhà thuốc thường làm theo ca khoảng 8 tiếng (sáng, chiều hoặc tối), đứng nhiều giờ liền và có khi trực cuối tuần.",
+        "source_ids": ["S10"],
+        "confidence": "single_source",
+        "note": "Mô tả chung trên trang tuyển dụng; giờ làm thực tế khác nhau theo nhà thuốc."
+      },
+      {
+        "kind": "fact",
+        "text": "Nhiều nhà thuốc vẫn mở cửa trong kỳ nghỉ Tết, nên có dược sĩ phải trực vào ngày lễ.",
+        "source_ids": ["S12"],
+        "confidence": "single_source",
+        "note": "Một chuỗi nhà thuốc mở hơn 320 điểm xuyên Tết Nguyên đán 2026; bài có thể là truyền thông doanh nghiệp."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một bảng lương năm 2026, dược sĩ đại học làm tại nhà thuốc có thu nhập khoảng 8–15 triệu đồng/tháng; mới ra trường thường khởi điểm ở mức thấp của khoảng này.",
+        "source_ids": ["S8"],
+        "confidence": "single_source",
+        "note": "Tổng hợp từ dữ liệu tuyển dụng; mức thực tế tùy nơi làm và kinh nghiệm."
+      },
+      {
+        "kind": "fact",
+        "text": "Một trang tra cứu lương năm 2026 ghi mức trung bình của vị trí dược sĩ khoảng 12,5 triệu đồng/tháng, phổ biến 10–15 triệu.",
+        "source_ids": ["S9"],
+        "confidence": "single_source",
+        "note": "Gộp mọi vị trí dược sĩ, không riêng nhà thuốc; khoảng phổ biến chồng lấn với S8 nhưng không trùng khớp nên không nâng lên verified."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Nhà thuốc phải có nhiệt kế, ẩm kế; điều kiện bảo quản ở nhiệt độ phòng là không quá 30°C và độ ẩm không quá 75%.",
+        "source_ids": ["S5"],
+        "confidence": "verified"
+      },
+      {
+        "kind": "fact",
+        "text": "Từ 01/01/2026, mọi cơ sở khám chữa bệnh phải kê đơn điện tử, nên dược sĩ làm việc nhiều với hệ thống đơn thuốc điện tử.",
+        "source_ids": ["S4", "S6"],
+        "confidence": "verified",
+        "note": "Lộ trình kê đơn điện tử theo S4; yêu cầu nhà thuốc cập nhật mã đơn điện tử theo S6."
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Linh — dược sĩ đại học 2 năm kinh nghiệm, đứng quầy tại Nhà thuốc An Tâm (hư cấu).",
+    "setting": "Một ngày trong nhà thuốc: mở cửa kiểm tra bảo quản, soát đơn, xử lý yêu cầu mua thuốc, từ chối bán sai quy định, xử lý thuốc hết hạn và khách quay lại báo khó chịu.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chinh_xac", "label": "Chính xác", "initial": 70 },
+      { "id": "tin_nhiem", "label": "Tin nhiệm", "initial": 60 }
+    ],
+    "segments": [
+      {
+        "id": "d1-mo-cua",
+        "time": "07:30",
+        "title": "Mở cửa và kiểm tra bảo quản",
+        "narrative": "Nhà thuốc An Tâm vừa mở cửa. Trước khi đón khách, bạn kiểm tra điều kiện bảo quản và sổ sách theo quy trình.",
+        "basis": {
+          "kind": "fact",
+          "text": "Theo chuẩn GPP, nhà thuốc phải có nhiệt kế, ẩm kế để kiểm soát điều kiện bảo quản và có sổ hoặc phần mềm theo dõi số lô, hạn dùng.",
+          "source_ids": ["S5", "S6"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước kiểm tra đầu ca",
+          "steps": [
+            "Đọc nhiệt kế, ẩm kế và ghi vào sổ theo dõi",
+            "Kiểm tra tủ lạnh dành cho thuốc cần bảo quản lạnh",
+            "Mở phần mềm quản lý mua bán thuốc",
+            "Lọc các lô thuốc sắp tới hạn dùng",
+            "Báo dược sĩ phụ trách nếu có điều bất thường"
+          ],
+          "on_success": { "chinh_xac": 4, "nang_luong": -1 },
+          "on_fail": { "chinh_xac": -3 }
+        }
+      },
+      {
+        "id": "d2-soat-don",
+        "time": "09:00",
+        "title": "Soát một đơn thuốc trước khi bán",
+        "narrative": "Mẹ bé K. đưa đơn của phòng khám. Trước khi lấy thuốc, bạn soát từng mục; đơn thiếu thông tin thì báo lại người kê đơn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Đơn thuốc phải ghi đủ các mục bắt buộc, như nơi cư trú, tháng tuổi và cân nặng với trẻ dưới 72 tháng; dược sĩ là người kiểm tra cuối trước khi thuốc tới người bệnh.",
+          "source_ids": ["S3", "S5", "S15"],
+          "confidence": "verified",
+          "note": "Mục bắt buộc theo TT 26/2025 Điều 6; vai trò kiểm tra cuối theo bài của BS Quan Thế Dân (S15) và quy định báo lại người kê đơn trong GPP (S5)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng đơn thuốc ghi sai hoặc thiếu theo quy định",
+          "document": [
+            "ĐƠN THUỐC — Phòng khám Hoa Sen (hư cấu)",
+            "Người bệnh: bé Trần Minh K., 36 tháng tuổi",
+            "Cân nặng: (để trống)",
+            "Người đưa trẻ đi khám: mẹ — Nguyễn Thị L.",
+            "Nơi cư trú: (để trống)",
+            "Thuốc A (tên hư cấu) — hàm lượng: không ghi",
+            "Số lượng thuốc A: 5 gói",
+            "Bác sĩ khám bệnh ký, ghi rõ họ tên"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Trẻ dưới 72 tháng tuổi phải được ghi cân nặng trong đơn." },
+            { "line": 4, "explain": "Đơn phải ghi nơi cư trú của người bệnh." },
+            { "line": 5, "explain": "Đơn phải ghi nồng độ hoặc hàm lượng của từng thuốc." },
+            { "line": 6, "explain": "Số lượng thuốc chỉ có một chữ số phải ghi thêm số 0 phía trước, ví dụ 05." }
+          ],
+          "on_success": { "chinh_xac": 5, "tin_nhiem": 1 },
+          "on_fail": { "chinh_xac": -4, "tin_nhiem": -1 }
+        }
+      },
+      {
+        "id": "d3-xep-yeu-cau",
+        "time": "10:30",
+        "title": "Xử lý các yêu cầu mua thuốc",
+        "narrative": "Giữa buổi sáng, quầy đông khách. Mỗi yêu cầu mua thuốc cần một cách xử lý khác nhau theo quy định.",
+        "basis": {
+          "kind": "fact",
+          "text": "Dược sĩ bán đúng theo đơn, báo lại người kê đơn khi đơn không rõ, và không được bán thuốc kê đơn khi không có đơn hay thuốc đã hết hạn dùng.",
+          "source_ids": ["S1", "S5", "S6"],
+          "confidence": "verified",
+          "note": "Luật Dược Điều 6 khoản 5 điểm b, h; GPP phần bán thuốc theo đơn; TT 11/2025 về không bán quá số lượng trong đơn điện tử."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp mỗi yêu cầu vào cách xử lý đúng",
+          "buckets": ["Bán đúng theo đơn", "Từ chối bán", "Báo lại người kê đơn"],
+          "items": [
+            { "text": "Đơn ghi đủ thông tin, khách mua đúng số lượng trong đơn", "bucket": "Bán đúng theo đơn" },
+            { "text": "Khách muốn mua gấp đôi số lượng ghi trong đơn", "bucket": "Từ chối bán" },
+            { "text": "Hộp thuốc trên kệ đã quá hạn dùng", "bucket": "Từ chối bán" },
+            { "text": "Khách mua hộp ghi \"thuốc kê đơn\" nhưng không có đơn", "bucket": "Từ chối bán" },
+            { "text": "Đơn không ghi hàm lượng của một thuốc", "bucket": "Báo lại người kê đơn" },
+            { "text": "Số lượng trong đơn viết khó đọc, không chắc là bao nhiêu", "bucket": "Báo lại người kê đơn" }
+          ],
+          "on_success": { "chinh_xac": 4, "tin_nhiem": 1 },
+          "on_fail": { "chinh_xac": -4 }
+        }
+      },
+      {
+        "id": "d4-khach-doi-mua",
+        "time": "13:30",
+        "title": "Khách muốn mua thuốc kê đơn mà không có đơn",
+        "narrative": "Đầu giờ chiều, một khách quen cầm hộp thuốc ghi \"thuốc kê đơn\" tới quầy, muốn mua ngay mà không có đơn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật Dược cấm bán lẻ thuốc kê đơn khi không có đơn; từ 15/5/2026 hành vi này bị phạt tiền 10–20 triệu đồng. Dược sĩ nhà thuốc không thay bác sĩ chẩn đoán.",
+          "source_ids": ["S1", "S7", "S11", "S14"],
+          "confidence": "verified",
+          "note": "Điều cấm: Luật Dược Điều 6 khoản 5 điểm h. Mức phạt: NĐ 90/2026 Điều 59 khoản 4 điểm g. Vai trò không chẩn đoán: ý kiến chuyên gia trong bài Tuổi Trẻ (S11). Dược sĩ Phạm Thị Ánh (S14) kể khách nay hỏi kỹ hơn và chuộng thuốc không kê đơn hơn."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với khách về yêu cầu mua thuốc",
+          "npc": "Khách quen",
+          "turns": [
+            {
+              "npc_line": "Tôi mua hộp này hoài, em bán cho tôi một hộp, khỏi cần đơn.",
+              "replies": [
+                {
+                  "text": "Hộp này ghi là thuốc kê đơn, em chỉ bán được khi anh có đơn của bác sĩ.",
+                  "effect": { "chinh_xac": 2, "tin_nhiem": 1 },
+                  "feedback": "Luật cấm bán lẻ thuốc kê đơn khi không có đơn; nói rõ lý do giúp khách hiểu."
+                },
+                {
+                  "text": "Khách quen thì em bán, lần sau anh nhớ mang đơn nhé.",
+                  "effect": { "chinh_xac": -5, "tin_nhiem": -1 },
+                  "feedback": "Bán thuốc kê đơn khi không có đơn là vi phạm và có thể bị phạt tiền nặng."
+                }
+              ]
+            },
+            {
+              "npc_line": "Đi khám mất cả buổi. Hay em nghe triệu chứng rồi bán giúp?",
+              "replies": [
+                {
+                  "text": "Em hỏi thêm vài điều, nhưng cần thuốc kê đơn thì anh nên đi khám để bác sĩ chẩn đoán.",
+                  "effect": { "chinh_xac": 2, "nang_luong": -1 },
+                  "feedback": "Dược sĩ hỏi kỹ để sàng lọc, nhưng không thay bác sĩ chẩn đoán bệnh."
+                },
+                {
+                  "text": "Anh kể đi, em đoán bệnh rồi chọn thuốc cho.",
+                  "effect": { "chinh_xac": -4, "tin_nhiem": -2 },
+                  "feedback": "Tự chẩn đoán thay bác sĩ vượt quá vai trò của dược sĩ nhà thuốc."
+                }
+              ]
+            },
+            {
+              "npc_line": "Vậy giờ tôi không mua được gì à?",
+              "replies": [
+                {
+                  "text": "Anh đi khám rồi quay lại, em sẽ hướng dẫn dùng thuốc theo đơn.",
+                  "effect": { "tin_nhiem": 3 },
+                  "feedback": "Hẹn khách quay lại với đơn giữ được niềm tin lâu dài."
+                },
+                {
+                  "text": "Không có đơn thì thôi, anh đi chỗ khác.",
+                  "effect": { "tin_nhiem": -4 },
+                  "feedback": "Từ chối cộc lốc làm khách mất lòng tin dù bạn làm đúng luật."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "d5-thuoc-het-han",
+        "time": "15:00",
+        "title": "Phát hiện thuốc đã hết hạn trên kệ",
+        "narrative": "Khi kiểm kho, bạn thấy vài hộp đã quá hạn dùng nằm lẫn với lô còn hạn trên kệ bán.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật Dược cấm kinh doanh thuốc đã hết hạn dùng; không cách ly hoặc biệt trữ thuốc đã hết hạn có thể bị phạt tiền.",
+          "source_ids": ["S1", "S7"],
+          "confidence": "verified",
+          "note": "Luật Dược Điều 6 khoản 5 điểm b; NĐ 90/2026 Điều 59 khoản 4 điểm đ."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý mấy hộp thuốc hết hạn thế nào?",
+          "options": [
+            {
+              "text": "Báo dược sĩ phụ trách, ghi sổ và chuyển các hộp hết hạn vào khu biệt trữ",
+              "effect": { "chinh_xac": 4, "nang_luong": -1 },
+              "feedback": "Thuốc hết hạn phải được cách ly, biệt trữ và báo người phụ trách để xử lý."
+            },
+            {
+              "text": "Để nguyên trên kệ, bán nốt vì khách ít để ý hạn dùng",
+              "effect": { "chinh_xac": -6, "tin_nhiem": -3 },
+              "feedback": "Bán thuốc đã hết hạn dùng là hành vi bị Luật Dược cấm."
+            },
+            {
+              "text": "Bỏ ngay vào thùng rác cho nhanh, không cần ghi lại",
+              "effect": { "chinh_xac": -2 },
+              "feedback": "Không biệt trữ, không ghi sổ, không báo người phụ trách là bỏ qua quy trình bắt buộc."
+            }
+          ]
+        }
+      },
+      {
+        "id": "d6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia thời gian ca chiều",
+        "narrative": "Ca chiều còn dài. Bạn chia thời gian giữa đứng quầy tư vấn, nhập hàng mới và cập nhật dữ liệu bán thuốc.",
+        "basis": {
+          "kind": "fact",
+          "text": "Dược sĩ nhà thuốc làm theo ca, phải liên tục chuyển giữa tư vấn chuyên môn và vận hành quầy như nhập hàng, cập nhật dữ liệu.",
+          "source_ids": ["S10"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian ca chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Tư vấn khách tại quầy", "effect_per_30min": { "tin_nhiem": 2, "nang_luong": -2 } },
+            { "label": "Nhập hàng, kiểm nguồn gốc", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -1 } },
+            { "label": "Cập nhật phần mềm, sổ sách", "effect_per_30min": { "chinh_xac": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ chân, ăn nhẹ", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "d7-khach-quay-lai",
+        "time": "19:00",
+        "title": "Khách quay lại báo khó chịu sau khi dùng thuốc",
+        "narrative": "Gần tối, một khách quay lại, nói thấy khó chịu sau khi dùng thuốc mua sáng nay. Bạn phải xử lý thật cẩn thận.",
+        "basis": {
+          "kind": "fact",
+          "text": "Nhà thuốc phải tư vấn khi người dùng có dấu hiệu bất thường trong quá trình dùng thuốc, và thu thập, báo cáo thông tin đó cho cơ quan có thẩm quyền.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Dược 2016, Điều 77 khoản 2 và 4 (cảnh giác dược)."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với khách đang thấy khó chịu?",
+          "options": [
+            {
+              "text": "Hỏi kỹ dấu hiệu, khuyên khách đi khám ngay, ghi lại và báo cáo theo quy định",
+              "effect": { "tin_nhiem": 3, "chinh_xac": 3, "nang_luong": -1 },
+              "feedback": "Luật giao nhà thuốc tư vấn khi có dấu hiệu bất thường và thu thập, báo cáo thông tin."
+            },
+            {
+              "text": "Bán thêm một thuốc khác để khách đỡ khó chịu",
+              "effect": { "chinh_xac": -4, "tin_nhiem": -2 },
+              "feedback": "Thêm thuốc khi chưa rõ nguyên nhân là bỏ qua bước khám và báo cáo mà luật yêu cầu."
+            },
+            {
+              "text": "Bảo khách cứ về nghỉ, chắc mai sẽ hết",
+              "effect": { "tin_nhiem": -3, "chinh_xac": -2 },
+              "feedback": "Bỏ qua dấu hiệu bất thường là bỏ trách nhiệm tư vấn và báo cáo của nhà thuốc."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có đủ vững vàng để từ chối một khách quen khi yêu cầu của họ trái quy định không?",
+      "Bạn thấy mình hợp với việc kiểm tra tỉ mỉ từng dòng giấy tờ, ngày này qua ngày khác không?",
+      "Đứng quầy theo ca, có lúc làm tối hoặc ngày lễ, có hợp với nhịp sống bạn muốn không?",
+      "Ngoài nhà thuốc, bạn muốn tìm hiểu thêm những nơi dược sĩ làm việc nào?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-duoc",
+        "title": "Sinh viên ngành Dược học",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Đi thực tập ở nhà thuốc từ sớm để quen quy trình bán theo đơn và bảo quản thuốc."
+          }
+        ]
+      },
+      {
+        "id": "duoc-si-ban-le",
+        "title": "Dược sĩ đứng quầy",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Đứng quầy, bán đúng theo đơn, báo lại người kê đơn khi đơn không rõ và hướng dẫn người mua cách dùng thuốc.",
+            "source_ids": ["S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "duoc-si-phu-trach",
+        "title": "Dược sĩ chịu trách nhiệm chuyên môn nhà thuốc",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Cần bằng dược sĩ đại học và 02 năm thực hành chuyên môn tại cơ sở dược phù hợp.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "quan-ly-chuoi",
+        "title": "Quản lý khu vực / chuỗi nhà thuốc",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Người chịu trách nhiệm chuyên môn của cơ sở tổ chức chuỗi nhà thuốc cũng cần bằng dược sĩ đại học và 02 năm thực hành.",
+            "source_ids": ["S2"],
+            "confidence": "verified",
+            "note": "Luật 44/2024/QH15, khoản 8 Điều 1 (bổ sung Điều 17a)."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-duoc", "to": "duoc-si-ban-le", "type": "promotion" },
+      { "from": "duoc-si-ban-le", "to": "duoc-si-phu-trach", "type": "promotion" },
+      { "from": "duoc-si-phu-trach", "to": "quan-ly-chuoi", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Người chịu trách nhiệm chuyên môn gánh trách nhiệm pháp lý: bán thuốc kê đơn khi không có đơn có thể bị phạt tiền 10–20 triệu đồng.",
+      "source_ids": ["S7"],
+      "confidence": "verified",
+      "note": "NĐ 90/2026 Điều 59 khoản 4 điểm g, hiệu lực 15/5/2026."
+    },
+    {
+      "kind": "fact",
+      "text": "Ca làm ở nhà thuốc đòi hỏi đứng nhiều giờ liền, có ca tối và trực cuối tuần; nhiều nhà thuốc mở cả ngày Tết.",
+      "source_ids": ["S10", "S12"],
+      "confidence": "single_source",
+      "note": "Hai nguồn nói về hai khía cạnh khác nhau (ca làm và mở cửa ngày Tết), mỗi khía cạnh chỉ một nguồn."
+    },
+    {
+      "kind": "fact",
+      "text": "Người dân quen tự mua thuốc kê đơn; báo chí vẫn ghi nhận nhiều nơi bán không cần đơn, nên dược sĩ làm đúng luật phải từ chối và giải thích với khách.",
+      "source_ids": ["S11", "S14"],
+      "confidence": "single_source",
+      "note": "S11 phản ánh tình trạng bán không cần đơn năm 2026; S14 là lời kể về việc từ chối bán khi khách không có đơn hợp lệ."
+    },
+    {
+      "kind": "fact",
+      "text": "Mới ra trường làm tại nhà thuốc, thu nhập thường khởi điểm ở mức thấp của khoảng lương ngành.",
+      "source_ids": ["S8"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Một áp lực rõ rệt là yêu cầu chính xác: một nhầm lẫn nhỏ cũng có thể ảnh hưởng tới sức khỏe người bệnh.",
+      "source_ids": ["S10"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/7/2025, Luật Dược sửa đổi cấm bán lẻ thuốc kê đơn qua mạng; từ 01/01/2026 mọi cơ sở khám chữa bệnh kê đơn điện tử, nhà thuốc phải liên thông dữ liệu.",
+      "source_ids": ["S2", "S4", "S6"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "advice",
+      "text": "Kỹ năng tư vấn, giải thích rõ ràng và làm việc thành thạo với phần mềm, đơn điện tử sẽ ngày càng quan trọng."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, medinet.gov.vn, tuyensinh.hup.edu.vn, TopCV, CareerLink, Tuổi Trẻ, VnExpress, Dân Việt, thuocsi.vn)",
+    "scope_note": "Bối cảnh dược sĩ đại học 1–2 năm kinh nghiệm đứng quầy tại nhà thuốc; không gồm dược sĩ bệnh viện, công ty dược. Không nêu tên thuốc, nhóm thuốc hay liều dùng (SPEC-015 R-2, R-3)."
+  }
+}
