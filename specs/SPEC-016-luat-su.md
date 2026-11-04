@@ -2,11 +2,14 @@
 id: SPEC-016
 title: Gói nghề Luật sư (nội dung + bản đồ văn phòng luật)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/luat-su.json, content/worlds/luat-su.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: efb5a70fe3f5eed1
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-016 — Gói nghề Luật sư

@@ -2,11 +2,14 @@
 id: SPEC-020
 title: Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/kien-truc-su.json, content/worlds/kien-truc-su.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: 46b76832d14dd48d
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-020 — Gói nghề Kiến trúc sư
