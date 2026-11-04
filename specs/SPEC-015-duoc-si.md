@@ -1,12 +1,15 @@
 ---
 id: SPEC-015
 title: Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc)
-version: 1
-status: draft
+version: 2
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/duoc-si.json, content/worlds/duoc-si.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: 97eca069d9e373e7
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-015 — Gói nghề Dược sĩ nhà thuốc
@@ -39,14 +42,14 @@ Dược sĩ đại học 1–2 năm kinh nghiệm, đứng quầy tại một nh
 |---|---|---|---|---|---|
 | 1 | 07:30 | Các bước mở cửa: kiểm nhiệt độ/độ ẩm, kiểm tủ, sổ sách | `sequence` | Kho/quầy | Nhà thuốc phải theo dõi điều kiện bảo quản theo GPP |
 | 2 | 09:00 | Kiểm tra một đơn thuốc trước khi bán | `spot_error` | Quầy | Đơn thuốc phải ghi đủ thông tin bắt buộc theo quy định kê đơn |
-| 3 | 10:30 | Xếp thuốc: cần đơn hay không cần đơn | `drag_sort` | Quầy | Thuốc kê đơn chỉ được bán khi có đơn |
-| 4 | 13:30 | Khách đòi mua kháng sinh không có đơn | `dialogue` | Quầy | Như phần 3; dược sĩ có trách nhiệm tư vấn |
+| 3 | 10:30 | Xếp các yêu cầu mua thuốc: bán đúng đơn, từ chối, hay báo lại người kê đơn | `drag_sort` | Quầy | Quy định GPP về bán thuốc theo đơn và các điều cấm của Luật Dược |
+| 4 | 13:30 | Khách đòi mua một hộp ghi "thuốc kê đơn" mà không có đơn | `dialogue` | Quầy | Luật Dược cấm bán lẻ thuốc kê đơn mà không có đơn |
 | 5 | 15:00 | Phát hiện lô thuốc sắp hết hạn trên kệ | `choice` | Kho | Nhà thuốc phải quản lý hạn dùng, không bán thuốc hết hạn |
 | 6 | 16:00 | Chia 3 giờ còn lại: tư vấn khách, nhập hàng, cập nhật sổ | `time_budget` | Quầy | Các việc này là nhiệm vụ của nhà thuốc theo GPP |
 | 7 | 19:00 | Khách quay lại báo bị khó chịu sau khi dùng thuốc | `choice` | Quầy | Dược sĩ theo dõi, khuyên đi khám, báo cáo phản ứng có hại |
 
 - R-1. `spot_error` (phần 2) PHẢI dựa trên nội dung bắt buộc của đơn thuốc trong văn bản kê đơn còn hiệu lực; mỗi dòng lỗi PHẢI tương ứng một quy định có nguồn `law`. Không tìm được quy định cụ thể → dòng đó không được đánh là lỗi.
-- R-2. `drag_sort` (phần 3) PHẢI dùng **nhóm thuốc chung** (ví dụ "kháng sinh", "thuốc hạ sốt thông thường"), KHÔNG ĐƯỢC dùng tên biệt dược hay hoạt chất kèm liều. Mỗi thẻ PHẢI dựa trên quy định có nguồn `law`; nhóm không chắc chắn thì bỏ.
+- R-2. `drag_sort` (phần 3) PHẢI xếp **tình huống mua thuốc** (ví dụ "đơn hợp lệ", "đơn không rõ hàm lượng", "thuốc đã hết hạn"), KHÔNG ĐƯỢC xếp theo nhóm thuốc hay hoạt chất, vì từ 01/7/2025 việc phân loại thuốc kê đơn làm theo từng sản phẩm đăng ký lưu hành chứ không theo nhóm. Mỗi thẻ PHẢI dựa trên quy định có nguồn `law`. KHÔNG ĐƯỢC dùng tên biệt dược, hoạt chất hay nhóm thuốc ở bất kỳ phần nào để khẳng định một thuốc "cần đơn" hay "không cần đơn".
 - R-3. Nội dung KHÔNG ĐƯỢC chứa liều dùng, chỉ định điều trị hay lời khuyên dùng thuốc có thể làm theo ngoài đời. Lời kể chỉ mô tả hành vi nghề (hỏi triệu chứng, khuyên đi khám).
 - R-4. Mọi nhà thuốc, khách hàng, người trong nội dung PHẢI là hư cấu.
 - R-5. Mặt khó PHẢI có ít nhất 3 fact có nguồn; ít nhất một fact về đứng quầy dài giờ/làm ca tối, cuối tuần và một fact về trách nhiệm pháp lý của người phụ trách chuyên môn.
@@ -88,3 +91,4 @@ Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-04 | Bản nháp đầu | PRD 4.1, SPEC-008 |
+| 2 | 2026-11-04 | Phần 3, 4 và R-2: bỏ việc xếp thuốc theo nhóm, chuyển sang xếp tình huống mua thuốc; phần 4 không nêu nhóm thuốc | TT 12/2025/TT-BYT (hiệu lực 01/7/2025) bãi bỏ danh mục thuốc không kê đơn theo nhóm của TT 07/2017; phát hiện khi research |

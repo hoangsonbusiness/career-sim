@@ -18,7 +18,7 @@
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 11/11 |
-| [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 2 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 | [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 | [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
@@ -258,13 +258,13 @@
 
 | AC | Test |
 |---|---|
-| AC-015-01 | ❌ chưa có |
-| AC-015-02 | ❌ chưa có |
-| AC-015-03 | ❌ chưa có |
-| AC-015-04 | ❌ chưa có |
-| AC-015-05 | ❌ chưa có |
-| AC-015-06 | ❌ chưa có |
-| AC-015-07 | ❌ chưa có |
+| AC-015-01 | tests\spec-015\duoc-si.test.mjs — "AC-015-01 hồ sơ Dược sĩ qua validate" |
+| AC-015-02 | tests\spec-015\duoc-si.test.mjs — "AC-015-02 bản đồ Dược sĩ qua validate:world và chỉ có một bả" |
+| AC-015-03 | tests\spec-015\duoc-si.test.mjs — "AC-015-03 gói Dược sĩ đạt check:pack" |
+| AC-015-04 | tests\spec-015\duoc-si.test.mjs — "AC-015-04 chơi hết ngày Dược sĩ tới done" |
+| AC-015-05 | tests\spec-015\duoc-si.test.mjs — "AC-015-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-015-06 | tests\spec-015\duoc-si.test.mjs — "AC-015-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-015-07 | tests\spec-015\duoc-si.test.mjs — "AC-015-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-016 — Gói nghề Luật sư (nội dung + bản đồ văn phòng luật)
 
