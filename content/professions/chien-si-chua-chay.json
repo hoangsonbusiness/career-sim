@@ -1,0 +1,569 @@
+{
+  "id": "chien-si-chua-chay",
+  "name": "Chiến sĩ chữa cháy và cứu nạn, cứu hộ",
+  "aliases": ["Lính cứu hỏa", "Cảnh sát phòng cháy, chữa cháy", "Chiến sĩ PCCC và CNCH", "Firefighter"],
+  "group": { "label": "An ninh & Quốc phòng" },
+  "holland": ["R", "S", "C"],
+  "summary": "Trực sẵn sàng ngày đêm để chữa cháy, cứu nạn, cứu hộ; phần lớn thời gian còn lại là huấn luyện, bảo dưỡng phương tiện, kiểm tra an toàn phòng cháy và tuyên truyền. Đây là lực lượng thuộc Công an nhân dân, công việc nguy hiểm và đòi hỏi kỷ luật rất cao.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ số 55/2024/QH15 (Văn bản hợp nhất 58/VBHN-VPQH năm 2026)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/an-ninh-trat-tu/van-ban-hop-nhat-58-vbhn-vpqh-2026-luat-phong-chay-chua-chay-va-cuu-nan-cuu-ho-429517-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-11-29",
+      "effective_date": "2025-07-01",
+      "note": "Bản hợp nhất 23/03/2026 (sửa bởi Luật 118/2025/QH15 và Luật Xây dựng 135/2025/QH15, hiệu lực 01/7/2026). Đã đọc Điều 6, 11, 14, 23, 28, 41, 43 trên bản hợp nhất."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Thông tư 37/2025/TT-BCA quy định về nhiệm vụ công tác phòng cháy, chữa cháy, cứu nạn, cứu hộ của lực lượng Công an nhân dân",
+      "publisher": "Bộ Công an / LuatVietnam",
+      "url": "https://luatvietnam.vn/an-ninh-trat-tu/thong-tu-37-2025-tt-bca-quy-dinh-cong-tac-phong-chay-chua-chay-cuu-nan-cua-cong-an-401502-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-05-15",
+      "effective_date": "2025-07-01",
+      "note": "Thay Thông tư 139/2020/TT-BCA về thường trực sẵn sàng chữa cháy. Đã đọc Điều 5, 9, 37."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Luật Công an nhân dân số 37/2018/QH14 (Văn bản hợp nhất 139/VBHN-VPQH năm 2025)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/an-ninh-quoc-gia/van-ban-hop-nhat-139-vbhn-vpqh-nam-2025-do-van-phong-quoc-hoi-ban-hanh-hop-nhat-luat-cong-an-nhan-dan-411073-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2018-11-20",
+      "effective_date": "2019-07-01",
+      "note": "Đã đọc Điều 7 (tuyển chọn công dân vào Công an nhân dân), Điều 8 (nghĩa vụ tham gia Công an nhân dân). Chưa kiểm tra có bản hợp nhất mới hơn năm 2026 hay không."
+    },
+    {
+      "id": "S4",
+      "type": "official_stat",
+      "title": "Cổng thông tin Học viện Phòng cháy, chữa cháy và Cứu nạn, cứu hộ — Bộ Công an",
+      "publisher": "Học viện Phòng cháy, chữa cháy và Cứu nạn, cứu hộ",
+      "url": "https://hocvienpccc.bocongan.gov.vn/",
+      "accessed": "2026-11-04",
+      "note": "Trang chủ cho biết Trường Đại học PCCC đã được đổi tên thành Học viện PCCC và CNCH, thuộc Bộ Công an. Bài thông tin tuyển sinh 2026 trên cổng không mở được (chuyển về trang chủ) nên chưa có chỉ tiêu, phương thức tuyển sinh."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Tin tuyển dụng Nhân viên phòng cháy chữa cháy (doanh nghiệp) trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-nhan-vien-phong-chay-chua-chay",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "Chỉ 2 tin, ở khu vực doanh nghiệp (không phải lực lượng Cảnh sát PCCC): 1 tin 10–20 triệu đồng/tháng (yêu cầu 1 năm kinh nghiệm), 1 tin thỏa thuận. Dùng cho nhánh nghề PCCC ở doanh nghiệp; không phải lương của chiến sĩ."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Những lần ngược dòng lửa cứu người của thượng úy cảnh sát say nghề",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/nhung-lan-nguoc-dong-lua-cua-chien-si-chua-chay-say-nghe-4860930.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-03-16",
+      "note": "Lời kể của thượng úy Nguyễn Viết Quân (cảnh sát PCCC và CNCH, Hà Nội), 14 năm trong nghề."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Lính phòng cháy chữa cháy kể chuyện",
+      "publisher": "Báo Dân trí",
+      "url": "https://dantri.com.vn/lao-dong-viec-lam/linh-phong-chay-chua-chay-ke-chuyen-1119516312.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2005-06-23",
+      "note": "Lời kể của ông Phan Văn Thượng (lái xe chữa cháy) và anh Nguyễn Chí Thành (tiểu đội cứu hộ), Trung tâm PCCC TP.HCM. Bài rất cũ, chỉ dùng phần trải nghiệm về áp lực và kỷ luật."
+    },
+    {
+      "id": "S8",
+      "type": "press",
+      "title": "Chữa cháy, 3 chiến sĩ hy sinh: Các anh đã cứu 8 người",
+      "publisher": "Báo Tuổi Trẻ",
+      "url": "https://tuoitre.vn/chua-chay-3-chien-si-hy-sinh-cac-anh-da-cuu-8-nguoi-20220802080321592.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2022-08-02",
+      "note": "Chỉ dùng thông tin chung: năm 2022, 3 cán bộ, chiến sĩ cảnh sát PCCC hy sinh khi làm nhiệm vụ chữa cháy sau khi cứu được 8 người. Không đưa tên, chi tiết vào app (SPEC-030 R-2, R-3)."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Rèn thể lực đều đặn (chạy, bơi) và tập thói quen nề nếp, đúng giờ từ sớm; nghề này cần sức khỏe tốt và làm đúng mệnh lệnh.",
+        "audience": ["thcs", "thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Học các kỹ năng thoát nạn khi có cháy ở trường và ở nhà; đó là bước đầu để hiểu nghề.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Công dân có đủ tiêu chuẩn về chính trị, đạo đức, trình độ, sức khỏe, độ tuổi và năng khiếu, có nguyện vọng thì có thể được tuyển chọn vào Công an nhân dân.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Luật Công an nhân dân Điều 7 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Hằng năm Công an nhân dân tuyển chọn công dân trong độ tuổi gọi nhập ngũ để thực hiện nghĩa vụ tham gia Công an nhân dân với thời hạn 24 tháng.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Luật Công an nhân dân Điều 8 khoản 1."
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Cơ sở đào tạo chuyên ngành là Học viện Phòng cháy, chữa cháy và Cứu nạn, cứu hộ thuộc Bộ Công an (trước đây là Trường Đại học PCCC).",
+        "source_ids": ["S4"],
+        "confidence": "verified"
+      },
+      {
+        "kind": "fact",
+        "text": "Chỉ tiêu, phương thức tuyển sinh năm gần nhất vào Học viện chưa xác minh được.",
+        "source_ids": ["S4"],
+        "confidence": "needs_verification",
+        "note": "Cần mở thông báo tuyển sinh chính thức của Bộ Công an và Học viện năm 2026 (bài trên cổng Học viện không truy cập được)."
+      },
+      {
+        "kind": "fact",
+        "text": "Một thượng úy kể anh nhập ngũ Công an nhân dân sau THPT, huấn luyện ở trung tâm nghiệp vụ, làm nhiệm vụ hai năm rồi mới được cử đi học trung cấp cảnh sát PCCC.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Nhiệm vụ của lực lượng Cảnh sát PCCC và CNCH gồm tuyên truyền, huấn luyện, xây dựng và thực tập phương án, chữa cháy, cứu nạn, cứu hộ, kiểm tra và xử lý vi phạm về phòng cháy, chữa cháy.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 41 khoản 2, 3, 4, 9."
+      },
+      {
+        "kind": "fact",
+        "text": "Lực lượng chữa cháy phải quản lý, sử dụng, bảo quản, bảo dưỡng phương tiện được trang bị.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 43 khoản 1."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Đơn vị chữa cháy trực tiếp nhận và xử lý tin báo cháy 24/24 giờ, chia thành ca trực, mỗi ca tại bộ phận tiếp nhận có ít nhất 2 cán bộ, chiến sĩ.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Thông tư 37/2025/TT-BCA Điều 5 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Chiến sĩ kể đi chữa cháy về lúc 3 giờ sáng vẫn phải chuẩn bị ngay phương tiện, phơi vòi, bơm nước vào xe, nạp bình khí thở để sẵn sàng cho đám cháy tiếp theo.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Chưa có nguồn chính thức về thu nhập của chiến sĩ chữa cháy trong gói này; ở doanh nghiệp, tin tuyển nhân viên PCCC trên TopCV tháng 11/2026 có tin ghi 10–20 triệu đồng/tháng.",
+        "source_ids": ["S5"],
+        "confidence": "needs_verification",
+        "note": "Chỉ 2 tin, là nhân viên PCCC doanh nghiệp, không phải lực lượng Cảnh sát. Lương lực lượng vũ trang tính theo cấp bậc và lương cơ sở — chưa tự tính (CLAUDE.md R4)."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Chiến sĩ kể đội đi chữa cháy chia tổ trinh sát tìm người bị nạn và tổ chữa cháy phun nước làm mát cho tổ trinh sát; người lính phải đeo bình dưỡng khí, vào những nơi đầy khói.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Long — chiến sĩ 2 năm công tác ở Đội chữa cháy và cứu nạn, cứu hộ khu vực Bình Minh (hư cấu), làm cùng một đội trưởng và một tổ trưởng.",
+    "setting": "Một ngày ở đội: giao ca và kiểm tra xe, đi kiểm tra an toàn một cơ sở, soát biên bản, nhận tin báo cháy, buổi chiều huấn luyện, lời xin 'bỏ qua' của chủ cơ sở và một tình huống ở hiện trường.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "the_luc", "label": "Thể lực", "initial": 80 },
+      { "id": "an_toan", "label": "An toàn", "initial": 70 },
+      { "id": "san_sang", "label": "Sẵn sàng", "initial": 65 }
+    ],
+    "segments": [
+      {
+        "id": "cc1-giao-ca",
+        "time": "07:00",
+        "title": "Giao ca và kiểm tra phương tiện",
+        "narrative": "Ca đêm vừa đi chữa cháy về lúc gần sáng. Đội trưởng nhắc bạn nhận ca và kiểm tra xe thật kỹ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Lực lượng chữa cháy phải quản lý, bảo quản, bảo dưỡng phương tiện được trang bị; chiến sĩ kể sau mỗi lần đi chữa cháy phải chuẩn bị ngay phương tiện, bơm nước vào xe, nạp bình khí thở để luôn sẵn sàng.",
+          "source_ids": ["S1", "S6"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 43 khoản 1. Thứ tự các bước là minh họa khái quát."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước nhận ca",
+          "steps": [
+            "Có mặt đúng giờ, nghe ca trước bàn giao",
+            "Kiểm tra xe chữa cháy: nước, nhiên liệu, vòi",
+            "Kiểm tra bình khí thở và đồ bảo hộ cá nhân",
+            "Ghi sổ, báo cáo chỉ huy ca trực",
+            "Vào vị trí, sẵn sàng chờ lệnh"
+          ],
+          "on_success": { "san_sang": 5 },
+          "on_fail": { "san_sang": -5 }
+        }
+      },
+      {
+        "id": "cc2-kiem-tra-co-so",
+        "time": "08:00",
+        "title": "Kiểm tra an toàn một cơ sở",
+        "narrative": "Tổ của bạn đi kiểm tra an toàn phòng cháy ở Xưởng may Hòa An (hư cấu). Bạn ghi lại những gì nhìn thấy.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm che khuất, tự ý di chuyển phương tiện chữa cháy, biển chỉ dẫn; cấm cản trở lối thoát nạn; cấm bố trí vật cản gây cản trở phương tiện chữa cháy. Cơ sở phải có nội quy phòng cháy, phương án chữa cháy và trang bị phương tiện theo quy định.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 14 khoản 10, 11; Điều 23 khoản 1 điểm a, b, đ. Mỗi thẻ 'Vi phạm' có khoản luật tương ứng (SPEC-030 R-1)."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp những gì bạn thấy: vi phạm hay đúng quy định",
+          "buckets": ["Đúng quy định", "Vi phạm"],
+          "items": [
+            { "text": "Nội quy phòng cháy treo ở lối vào xưởng", "bucket": "Đúng quy định" },
+            { "text": "Có phương án chữa cháy được lưu tại xưởng", "bucket": "Đúng quy định" },
+            { "text": "Bình chữa cháy để đúng chỗ, dễ lấy", "bucket": "Đúng quy định" },
+            { "text": "Chất hàng che kín bình chữa cháy", "bucket": "Vi phạm" },
+            { "text": "Khóa và chắn hàng ở lối thoát nạn", "bucket": "Vi phạm" },
+            { "text": "Đậu xe chắn lối vào của xe chữa cháy", "bucket": "Vi phạm" }
+          ],
+          "on_success": { "an_toan": 5 },
+          "on_fail": { "an_toan": -5 }
+        }
+      },
+      {
+        "id": "cc3-bien-ban",
+        "time": "10:00",
+        "title": "Soát biên bản kiểm tra",
+        "narrative": "Về đội, tổ trưởng đưa bạn bản nháp biên bản kiểm tra xưởng may để soát lại trước khi ký.",
+        "basis": {
+          "kind": "fact",
+          "text": "Nội dung kiểm tra gồm việc thực hiện trách nhiệm phòng cháy của người đứng đầu cơ sở và việc duy trì điều kiện an toàn; cơ sở phải có phương án chữa cháy và thành lập lực lượng phòng cháy cơ sở hoặc phân công người làm nhiệm vụ.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 11 khoản 2; Điều 23 khoản 1 điểm đ, e. Chỉ đánh lỗi hai dòng có điều luật rõ (SPEC-030 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng ghi sai so với thực tế và quy định",
+          "document": [
+            "BIÊN BẢN KIỂM TRA — Xưởng may Hòa An (hư cấu)",
+            "Nội quy phòng cháy: có, treo ở lối vào — Đạt",
+            "Phương án chữa cháy: xưởng chưa có — ghi 'Đạt'",
+            "Lực lượng PCCC cơ sở: chưa lập, chưa phân công ai — 'Đạt'",
+            "Lối thoát nạn bị chắn: đã kiến nghị khắc phục ngay",
+            "Có chữ ký người đứng đầu cơ sở và tổ kiểm tra"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Cơ sở phải có phương án chữa cháy; chưa có mà ghi 'Đạt' là ghi sai thực tế." },
+            { "line": 3, "explain": "Cơ sở phải lập lực lượng PCCC cơ sở hoặc phân công người; chưa có thì không thể ghi 'Đạt'." }
+          ],
+          "on_success": { "an_toan": 4, "san_sang": 1 },
+          "on_fail": { "an_toan": -4 }
+        }
+      },
+      {
+        "id": "cc4-tin-bao",
+        "time": "11:00",
+        "title": "Có tin báo cháy",
+        "narrative": "Chuông báo vang lên. Bạn đang trực ở bàn tiếp nhận thì có người gọi báo cháy, giọng rất hoảng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Khi tiếp nhận tin báo cháy phải nắm thông tin người báo, địa chỉ, thời gian phát hiện, loại hình, quy mô đám cháy, số người mắc kẹt, nguy cơ cháy lan; chỉ huy ca trực đánh giá tình huống và ra lệnh huy động lực lượng, phương tiện đi chữa cháy nhanh chóng, kịp thời.",
+          "source_ids": ["S2"],
+          "confidence": "verified",
+          "note": "Thông tư 37/2025/TT-BCA Điều 5 khoản 4; Điều 9 khoản 1."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì trước?",
+          "options": [
+            {
+              "text": "Trấn an, hỏi nhanh địa chỉ, có người mắc kẹt không, rồi báo ngay chỉ huy ca trực",
+              "effect": { "san_sang": 5, "an_toan": 2 },
+              "feedback": "Thông tin đúng, đủ ngay từ đầu giúp chỉ huy điều đủ lực lượng và đến đúng chỗ."
+            },
+            {
+              "text": "Cúp máy chạy ra xe luôn, chưa kịp hỏi địa chỉ",
+              "effect": { "san_sang": -4 },
+              "feedback": "Không có địa chỉ chính xác, xe chữa cháy có thể đến sai chỗ và mất thời gian."
+            },
+            {
+              "text": "Bảo người báo tự dập lửa trước rồi gọi lại",
+              "effect": { "an_toan": -5, "san_sang": -2 },
+              "feedback": "Khi nhận tin báo, lực lượng chữa cháy phải được huy động ngay, không đẩy việc cho người báo."
+            }
+          ]
+        }
+      },
+      {
+        "id": "cc5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều ở đội",
+        "narrative": "Không có cháy, nhưng việc vẫn kín: huấn luyện thể lực, bảo dưỡng phương tiện, và chuẩn bị buổi tuyên truyền ở một trường học.",
+        "basis": {
+          "kind": "fact",
+          "text": "Lực lượng Cảnh sát PCCC và CNCH có nhiệm vụ tuyên truyền, huấn luyện, xây dựng và thực tập phương án chữa cháy, đồng thời bảo quản, bảo dưỡng phương tiện được trang bị.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 41 khoản 2, 3; Điều 43 khoản 1."
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Huấn luyện thể lực", "effect_per_30min": { "the_luc": 1, "san_sang": 2 } },
+            { "label": "Bảo dưỡng phương tiện", "effect_per_30min": { "san_sang": 2, "the_luc": -1 } },
+            { "label": "Chuẩn bị tuyên truyền", "effect_per_30min": { "an_toan": 2, "the_luc": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "the_luc": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "cc6-bo-qua",
+        "time": "15:30",
+        "title": "Lời xin 'bỏ qua'",
+        "narrative": "Chủ xưởng may tìm đến đội, muốn nói chuyện riêng với bạn về biên bản sáng nay.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm lợi dụng, lạm dụng việc thực hiện nhiệm vụ phòng cháy, chữa cháy để làm trái pháp luật, nhũng nhiễu, xâm phạm lợi ích của Nhà nước và quyền, lợi ích hợp pháp của người khác.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 14 khoản 3."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời chủ cơ sở",
+          "npc": "Ông Hải (chủ xưởng may)",
+          "turns": [
+            {
+              "npc_line": "Cậu sửa giúp biên bản thành 'đạt' hết nhé, tôi gửi chút quà cảm ơn.",
+              "replies": [
+                {
+                  "text": "Cháu không nhận quà và không sửa được ạ. Biên bản phải ghi đúng thực tế.",
+                  "effect": { "an_toan": 4 },
+                  "feedback": "Từ chối rõ ràng là giữ đúng luật và giữ an toàn cho chính công nhân của xưởng."
+                },
+                {
+                  "text": "Thôi được, lần này cháu bỏ qua cho chú.",
+                  "effect": { "an_toan": -6 },
+                  "feedback": "Lợi dụng nhiệm vụ để làm sai là hành vi luật cấm; nếu cháy xảy ra, hậu quả rất lớn."
+                }
+              ]
+            },
+            {
+              "npc_line": "Làm phương án mất thời gian lắm, xưởng còn phải chạy đơn hàng.",
+              "replies": [
+                {
+                  "text": "Cháu sẽ hướng dẫn chú các bước làm phương án và lập đội PCCC cơ sở cho nhanh ạ.",
+                  "effect": { "an_toan": 3, "the_luc": -1 },
+                  "feedback": "Hướng dẫn cơ sở khắc phục cũng là nhiệm vụ của lực lượng chữa cháy."
+                },
+                {
+                  "text": "Chú cứ chạy đơn hàng đi, tính sau.",
+                  "effect": { "an_toan": -3 },
+                  "feedback": "Để vi phạm kéo dài là để rủi ro cháy nổ treo trên đầu công nhân."
+                }
+              ]
+            },
+            {
+              "npc_line": "Lối thoát nạn để tạm hàng mấy hôm thôi mà.",
+              "replies": [
+                {
+                  "text": "Cháy thì không chờ mấy hôm đâu chú. Lối thoát nạn phải thông ngay hôm nay ạ.",
+                  "effect": { "an_toan": 3 },
+                  "feedback": "Lối thoát nạn bị chắn là nguyên nhân khiến nhiều người không thoát được khi có cháy."
+                },
+                {
+                  "text": "Vâng, để vài hôm cũng được.",
+                  "effect": { "an_toan": -4 },
+                  "feedback": "Cản trở lối thoát nạn là hành vi luật cấm."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "cc7-hien-truong",
+        "time": "17:00",
+        "title": "Ở hiện trường",
+        "narrative": "Đội được điều đến một kho hàng đang bốc khói. Một đồng đội muốn cùng bạn vào khu phía sau, nơi chỉ huy chưa cho phép.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người có chức vụ cao nhất của lực lượng Công an được phân công chỉ huy có mặt tại đám cháy là người chỉ huy chữa cháy và chỉ huy bằng mệnh lệnh; chiến sĩ kể làm việc phải kỷ luật, thận trọng vì có lúc bị sốc khói ngất ngay trong đám cháy.",
+          "source_ids": ["S1", "S7"],
+          "confidence": "verified",
+          "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 28 khoản 1, 3. Narrative không mô tả thương vong (SPEC-030 R-2)."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì?",
+          "options": [
+            {
+              "text": "Báo chỉ huy điều mình thấy, chờ lệnh rồi mới vào cùng tổ theo phân công",
+              "effect": { "an_toan": 5, "san_sang": 2, "the_luc": -2 },
+              "feedback": "Chỉ huy nắm toàn cảnh đám cháy; làm theo mệnh lệnh giữ an toàn cho cả tổ."
+            },
+            {
+              "text": "Cùng đồng đội vào luôn cho nhanh",
+              "effect": { "an_toan": -6 },
+              "feedback": "Tự ý vào khu chưa được trinh sát có thể khiến cả hai mắc kẹt."
+            },
+            {
+              "text": "Đứng ngoài chờ, không báo gì",
+              "effect": { "san_sang": -3 },
+              "feedback": "Thông tin bạn thấy có thể quan trọng; hãy báo ngay cho chỉ huy."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có chịu được trực đêm, trực Tết và kỷ luật của lực lượng vũ trang không?",
+      "Bạn có giữ được bình tĩnh và làm đúng mệnh lệnh khi rất căng thẳng không?",
+      "Bạn có sẵn sàng rèn thể lực đều đặn trong nhiều năm không?",
+      "Nếu được nhờ 'bỏ qua' một vi phạm, bạn sẽ trả lời thế nào?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "cong-dan-nhap-ngu",
+        "title": "Công dân thực hiện nghĩa vụ tham gia Công an nhân dân",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Thời hạn phục vụ là 24 tháng, có thể kéo dài khi đang thực hiện nhiệm vụ cứu nạn, cứu hộ.",
+            "source_ids": ["S3"],
+            "confidence": "verified",
+            "note": "Luật Công an nhân dân Điều 8 khoản 1."
+          }
+        ]
+      },
+      {
+        "id": "chien-si-chua-chay",
+        "title": "Chiến sĩ chữa cháy và cứu nạn, cứu hộ",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Chiến sĩ kể phải qua huấn luyện khắc nghiệt về thể lực, võ thuật, kỹ thuật nghiệp vụ trước khi làm nhiệm vụ.",
+            "source_ids": ["S6"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "hoc-chuyen-nganh",
+        "title": "Học viên trung cấp / Học viện PCCC và CNCH",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Học viện Phòng cháy, chữa cháy và Cứu nạn, cứu hộ thuộc Bộ Công an là cơ sở đào tạo chuyên ngành.",
+            "source_ids": ["S4"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "can-bo-chi-huy",
+        "title": "Tổ trưởng / đội trưởng chữa cháy",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm hiện trường, khả năng chỉ huy và giữ bình tĩnh trong tình huống nguy hiểm."
+          }
+        ]
+      },
+      {
+        "id": "pccc-doanh-nghiep",
+        "title": "Nhân viên PCCC ở doanh nghiệp",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có doanh nghiệp tuyển nhân viên phòng cháy chữa cháy; tháng 11/2026 trên TopCV có tin yêu cầu 1 năm kinh nghiệm.",
+            "source_ids": ["S5"],
+            "confidence": "single_source"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "cong-dan-nhap-ngu", "to": "chien-si-chua-chay", "type": "promotion" },
+      { "from": "chien-si-chua-chay", "to": "hoc-chuyen-nganh", "type": "promotion" },
+      { "from": "hoc-chuyen-nganh", "to": "can-bo-chi-huy", "type": "management" },
+      { "from": "chien-si-chua-chay", "to": "pccc-doanh-nghiep", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Nguy hiểm tính mạng: đã có cán bộ, chiến sĩ cảnh sát PCCC hy sinh khi làm nhiệm vụ chữa cháy; chiến sĩ kể có lần bị sốc khói ngất ngay trong đám cháy.",
+      "source_ids": ["S8", "S7"],
+      "confidence": "verified",
+      "note": "Hai nguồn ở hai báo khác nhau (năm 2022 và 2005)."
+    },
+    {
+      "kind": "fact",
+      "text": "Trực 24/24 giờ theo ca; đi chữa cháy về lúc nửa đêm vẫn phải chuẩn bị ngay phương tiện cho lần tiếp theo.",
+      "source_ids": ["S2", "S6"],
+      "confidence": "verified",
+      "note": "Thông tư 37/2025/TT-BCA Điều 5 khoản 1; lời kể S6."
+    },
+    {
+      "kind": "fact",
+      "text": "Áp lực tâm lý thường trực: chiến sĩ kể đang ngủ hay đang tắm, nghe hiệu lệnh là phải chạy, và gia đình luôn lo lắng mỗi lần nghe còi xe chữa cháy.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Huấn luyện khắc nghiệt dưới nắng nóng, phải rèn thể lực, võ thuật và kỹ thuật nghiệp vụ.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/7/2025 có Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ mới, giao lực lượng nhiều nhiệm vụ cả về chữa cháy lẫn cứu nạn, cứu hộ và quản lý cơ sở dữ liệu báo cháy.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Phòng cháy, chữa cháy và cứu nạn, cứu hộ Điều 41 khoản 8; Điều 54."
+    },
+    {
+      "kind": "advice",
+      "text": "Ngoài thể lực, hãy học thêm sơ cứu, kỹ năng giao tiếp và tin học vì công việc ngày càng gắn với tuyên truyền và dữ liệu báo cháy."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, hocvienpccc.bocongan.gov.vn, TopCV, VnExpress, Dân trí, Tuổi Trẻ)",
+    "scope_note": "Đơn vị, cơ sở, vụ cháy trong game đều hư cấu; không dựa trên vụ cháy có thật (SPEC-030 R-3); không mô tả thương vong (R-2). Chưa có nguồn chính thức về lương chiến sĩ và chưa đọc được thông báo tuyển sinh 2026 nên để needs_verification (R-5). Một lời kể là bài năm 2005."
+  }
+}
