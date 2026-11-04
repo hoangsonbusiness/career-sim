@@ -1,13 +1,13 @@
 ---
 id: SPEC-015
 title: Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc)
-version: 2
+version: 3
 status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/duoc-si.json, content/worlds/duoc-si.json]
 owner: anh Son
 created: 2026-11-04
-approved_hash: 97eca069d9e373e7
+approved_hash: 94157f7663cf295f
 approved_by: Son
 approved_at: 2026-11-04
 ---
@@ -57,7 +57,7 @@ Dược sĩ đại học 1–2 năm kinh nghiệm, đứng quầy tại một nh
 - R-7. Phần 6 dùng `time_budget` với `budget_min = 180`; `effect_per_30min` là minh họa và KHÔNG ĐƯỢC kèm con số thực tế trong `narrative`.
 
 ### 3.4 Bản đồ
-- R-8. Bản đồ `nha_thuoc` PHẢI có: quầy tư vấn (spawn), kệ thuốc không kê đơn, tủ thuốc kê đơn sau quầy, kho nhỏ có nhiệt kế/ẩm kế. Không cần bản đồ `nha`; cả 7 phần diễn ra trong một bản đồ.
+- R-8. Bản đồ `nha-thuoc` PHẢI có: quầy tư vấn (spawn), kệ thuốc không kê đơn, tủ thuốc kê đơn sau quầy, kho nhỏ có nhiệt kế/ẩm kế. Không cần bản đồ `nha`; cả 7 phần diễn ra trong một bản đồ.
 - R-9. NPC: dược sĩ phụ trách chuyên môn (phần 1, 5), khách đòi kháng sinh (phần 4), khách quay lại (phần 7), khách mua đồ (trang trí).
 
 ### 3.5 Lỗi
@@ -92,3 +92,4 @@ Em đã chốt theo đề xuất ở các quy tắc dưới. Anh đồng ý thì
 |---|---|---|---|
 | 1 | 2026-11-04 | Bản nháp đầu | PRD 4.1, SPEC-008 |
 | 2 | 2026-11-04 | Phần 3, 4 và R-2: bỏ việc xếp thuốc theo nhóm, chuyển sang xếp tình huống mua thuốc; phần 4 không nêu nhóm thuốc | TT 12/2025/TT-BYT (hiệu lực 01/7/2025) bãi bỏ danh mục thuốc không kê đơn theo nhóm của TT 07/2017; phát hiện khi research |
+| 3 | 2026-11-04 | R-8: id bản đồ đổi từ `nha_thuoc` sang `nha-thuoc` | Schema thế giới chỉ cho id bản đồ dạng `^[a-z0-9-]+$`; phát hiện khi chạy validate:world |
