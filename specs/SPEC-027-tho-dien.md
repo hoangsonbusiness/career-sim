@@ -2,11 +2,14 @@
 id: SPEC-027
 title: Gói nghề Thợ điện (nội dung + bản đồ tòa nhà đang hoàn thiện)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/tho-dien.json, content/worlds/tho-dien.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: 9453e8063e4f9b73
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-027 — Gói nghề Thợ điện
@@ -85,9 +88,9 @@ Như SPEC-009 mục 5; test trong `tests/spec-027/`.
 
 ## 6. Câu hỏi mở
 Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: bối cảnh nhân vật như mô tả.
-- [ ] R-1: chỉ đánh lỗi/vi phạm khi có nguồn quy định chính thức.
-- [ ] 3.3: kế hoạch 7 phần như bảng.
+- [x] 3.1: bối cảnh nhân vật như mô tả.
+- [x] R-1: chỉ đánh lỗi/vi phạm khi có nguồn quy định chính thức.
+- [x] 3.3: kế hoạch 7 phần như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
