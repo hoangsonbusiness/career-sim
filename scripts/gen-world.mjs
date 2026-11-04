@@ -641,4 +641,53 @@ const designWorld = {
 };
 writeFileSync(out("content/worlds/thiet-ke-do-hoa.json"), JSON.stringify(designWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa}.json");
+// ---------- Giao dịch viên ngân hàng (SPEC-018): một chi nhánh ngân hàng ----------
+// Kho quỹ trái, hành lang giữa, phòng trưởng phòng phải, sảnh giao dịch với quầy và ghế chờ phía dưới.
+const CHI_NHANH = AGENCY;
+const CHI_NHANH_PROPS = [
+  // Kho quỹ: két, kệ tiền, bàn kiểm đếm
+  [2, 1, 329, 1], [4, 1, 329, 1], [8, 1, 330, 1],
+  [4, 3, 85, 1], [5, 3, 86, 1], [6, 3, 97, 1],
+  // Phòng trưởng phòng: bàn, kệ hồ sơ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Quầy giao dịch
+  [12, 9, 85, 1], [13, 9, 86, 1], [14, 9, 86, 1], [15, 9, 86, 1], [16, 9, 97, 1],
+  // Khu khách chờ: dãy ghế, cây
+  [2, 13, 162, 1], [3, 13, 163, 1], [4, 13, 164, 1],
+  [24, 13, 162, 1], [25, 13, 163, 1], [26, 13, 164, 1],
+  [1, 11, 16, 1], [28, 14, 17, 1],
+];
+const CHI_NHANH_DECOR = [
+  // Bảng tỷ giá, bảng cảnh báo lừa đảo trên tường.
+  [12, 2, 18], [12, 4, 18], [14, 9, 18],
+];
+
+const bankWorld = {
+  profession_id: "giao-dich-vien-ngan-hang",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("chi-nhanh", CHI_NHANH, CHI_NHANH_PROPS, CHI_NHANH_DECOR, { x: 14, y: 12 }),
+  ],
+  npcs: [
+    { id: "truong-phong", map: "chi-nhanh", x: 22, y: 4, name: "Trưởng phòng", sprite: C(379) },
+    { id: "truong-phong-kho", map: "chi-nhanh", x: 5, y: 4, name: "Trưởng phòng", sprite: C(379) },
+    { id: "khach-mo-tk", map: "chi-nhanh", x: 13, y: 10, name: "Khách mở tài khoản", sprite: C(1, 13, 76) },
+    { id: "ba-cu", map: "chi-nhanh", x: 15, y: 10, name: "Bà cụ", sprite: C(433) },
+    { id: "bao-ve", map: "chi-nhanh", x: 10, y: 13, name: "Bảo vệ", sprite: C(54, 17, 22) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "gd1-mo-quay": { map: "chi-nhanh", target: { x: 5, y: 4 }, npc: "truong-phong-kho", quest: "Vào kho quỹ nhận tiền mặt đầu ngày" },
+    "gd2-ho-so-mo-tk": { map: "chi-nhanh", target: { x: 13, y: 10 }, npc: "khach-mo-tk", quest: "Ra quầy, soát hồ sơ mở tài khoản của khách" },
+    "gd3-dau-hieu-lua-dao": { map: "chi-nhanh", target: { x: 14, y: 9 }, quest: "Quầy đông khách, để ý các dấu hiệu bất thường" },
+    "gd4-khach-cao-tuoi": { map: "chi-nhanh", target: { x: 15, y: 10 }, npc: "ba-cu", quest: "Một bà cụ đang chờ ở quầy, trông rất lo lắng" },
+    "gd5-chi-tieu-bao-hiem": { map: "chi-nhanh", target: { x: 22, y: 4 }, npc: "truong-phong", quest: "Trưởng phòng gọi bạn vào nhắc chỉ tiêu" },
+    "gd6-chia-thoi-gian": { map: "chi-nhanh", target: { x: 14, y: 9 }, quest: "Về quầy, chia thời gian cuối chiều" },
+    "gd7-lech-quy": { map: "chi-nhanh", target: { x: 5, y: 4 }, npc: "truong-phong-kho", quest: "Mang quỹ vào kho đối chiếu cuối ngày" },
+  },
+};
+writeFileSync(out("content/worlds/giao-dich-vien-ngan-hang.json"), JSON.stringify(bankWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang}.json");

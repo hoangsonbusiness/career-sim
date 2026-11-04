@@ -1,0 +1,539 @@
+{
+  "id": "giao-dich-vien-ngan-hang",
+  "name": "Giao dịch viên ngân hàng",
+  "aliases": ["Teller", "Nhân viên giao dịch ngân hàng"],
+  "group": { "label": "Tài chính & Ngân hàng" },
+  "holland": ["C", "S", "E"],
+  "summary": "Phục vụ khách tại quầy: nộp rút tiền, mở tài khoản, kiểm tra giấy tờ theo quy định nhận biết khách hàng, cảnh giác lừa đảo, giới thiệu sản phẩm và đối chiếu quỹ tiền mặt cuối ngày.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Các tổ chức tín dụng số 32/2024/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/tai-chinh/luat-cac-to-chuc-tin-dung-2024-so-32-2024-qh15-296639-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-01-18",
+      "effective_date": "2024-07-01",
+      "note": "Đã đọc Điều 15 khoản 5. Đã đối chiếu Luật 96/2025/QH15 (S2): không sửa Điều 15. Chưa đối chiếu Luật 43/2024/QH15 (sửa một số điều)."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật số 96/2025/QH15 sửa đổi, bổ sung một số điều của Luật Các tổ chức tín dụng",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/tai-chinh/luat-cac-to-chuc-tin-dung-sua-doi-2025-so-96-2025-qh15-405399-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-27",
+      "effective_date": "2025-10-15",
+      "note": "Chỉ sửa Điều 193, thêm Điều 198a–198c và bãi bỏ một số khoản; không chạm Điều 15."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Thông tư 17/2024/TT-NHNN quy định việc mở và sử dụng tài khoản thanh toán",
+      "publisher": "Ngân hàng Nhà nước Việt Nam / LuatVietnam",
+      "url": "https://luatvietnam.vn/tai-chinh/thong-tu-17-2024-tt-nhnn-cua-ngan-hang-nha-nuoc-viet-nam-quy-dinh-viec-mo-va-su-dung-tai-khoan-thanh-toan-tai-to-chuc-cung-ung-dich-vu-thanh-toan-358811-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-06-28",
+      "effective_date": "2024-07-01",
+      "note": "Đã đọc Điều 12, 13, 14. Điều 12, 13, 15 đã bị sửa bởi TT 25/2025 (S4); Điều 14 không bị sửa."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Thông tư 25/2025/TT-NHNN sửa đổi Thông tư 17/2024/TT-NHNN",
+      "publisher": "Ngân hàng Nhà nước Việt Nam / LuatVietnam",
+      "url": "https://luatvietnam.vn/tai-chinh/thong-tu-25-2025-tt-nhnn-410683-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-08-31",
+      "effective_date": "2025-08-31",
+      "note": "Điều 3 (sửa Điều 12: giấy tờ tùy thân, bỏ chứng minh nhân dân) có hiệu lực 31/8/2025; Điều 5 (sửa Điều 15: gặp mặt, đối chiếu sinh trắc học) từ 01/12/2025; Điều 4 (thêm Điều 13 điểm c1: tên tài khoản theo họ tên trên giấy tờ) từ 01/3/2026."
+    },
+    {
+      "id": "S5",
+      "type": "official_stat",
+      "title": "Cảnh báo thủ đoạn giả danh cơ quan công an gửi tin nhắn 'phạt nguội' để lừa đảo, chiếm đoạt tài sản",
+      "publisher": "Báo Điện tử Chính phủ (chinhphu.vn), theo Bộ Công an",
+      "url": "https://baochinhphu.vn/canh-bao-thu-doan-gia-danh-co-quan-cong-an-gui-tin-nhan-phat-nguoi-de-lua-dao-102260910151049819.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-09-10"
+    },
+    {
+      "id": "S6",
+      "type": "market",
+      "title": "Mức lương ngành ngân hàng theo vị trí và kinh nghiệm",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-viec-lam/tu-van-nghe-nghiep/muc-luong-nganh-ngan-hang",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-07-28"
+    },
+    {
+      "id": "S7",
+      "type": "press",
+      "title": "7 điều ứng viên cần biết về vị trí Giao dịch viên (Phần 1)",
+      "publisher": "Tuổi Trẻ Online",
+      "url": "https://tuoitre.vn/7-dieu-ung-vien-can-biet-ve-vi-tri-giao-dich-vien-phan-1-20230406160439435.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-04-11",
+      "note": "Mô tả công việc giao dịch viên; bài có tính hướng nghiệp."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Nhân viên ngân hàng chạy đua tìm khách gửi tiền",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/nhan-vien-ngan-hang-chay-dua-tim-khach-gui-tien-5110600.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-19",
+      "note": "Lời kể của Thu Hằng (23 tuổi, đang thử việc tại một ngân hàng quốc doanh) và Khánh Vân (chuyên viên khách hàng)."
+    },
+    {
+      "id": "S9",
+      "type": "testimony",
+      "title": "Nhân viên ngân hàng tiếc thời \"ăn trắng mặc trơn\", \"việc nhẹ lương cao\"",
+      "publisher": "Báo Dân trí",
+      "url": "https://dantri.com.vn/lao-dong-viec-lam/nhan-vien-ngan-hang-tiec-thoi-an-trang-mac-tron-viec-nhe-luong-cao-20230421164846334.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-04-22",
+      "note": "Nhận xét của TS Hoàng Việt Trung, nguyên Cục trưởng Cục 1, Cơ quan Thanh tra giám sát ngân hàng (Ngân hàng Nhà nước)."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học chắc Toán, tập tính nhẩm và kiểm tra lại kết quả; nghề này làm việc với tiền và số liệu mỗi ngày.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập giao tiếp lịch sự, kiên nhẫn với mọi lứa tuổi, nhất là người lớn tuổi.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Nếu muốn theo ngân hàng, hãy tìm hiểu các ngành Tài chính – Ngân hàng, Kế toán và đọc kỹ đề án tuyển sinh của từng trường.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Giao dịch viên là vị trí tuyến đầu, thường là nhóm khởi điểm khi vào làm ngân hàng.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Giao dịch viên xử lý nộp, rút, chuyển tiền, mở tài khoản, phát hành thẻ, quản lý tiền mặt tại quầy và đối soát giao dịch cuối ngày.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Khi mở tài khoản, ngân hàng phải gặp trực tiếp khách hoặc người đại diện, kiểm tra giấy tờ tùy thân và đối chiếu khớp thông tin sinh trắc học.",
+        "source_ids": ["S3", "S4"],
+        "confidence": "verified",
+        "note": "TT 17/2024 Điều 15 khoản 2, sửa bởi TT 25/2025, áp dụng từ 01/12/2025."
+      },
+      {
+        "kind": "fact",
+        "text": "Từ 01/3/2026, tên tài khoản thanh toán cá nhân phải đặt theo họ và tên trên giấy tờ tùy thân.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "TT 25/2025 Điều 4, thêm điểm c1 khoản 1 Điều 13 TT 17/2024."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Một nguyên lãnh đạo thanh tra ngân hàng nhận xét cán bộ ngân hàng hiếm khi về trước 19h, và một số nơi bắt nhân viên bán thêm bảo hiểm, trái phiếu.",
+        "source_ids": ["S9"],
+        "confidence": "single_source",
+        "note": "Nhận xét chung về nhân viên ngân hàng năm 2023, không riêng giao dịch viên."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một bảng thu nhập năm 2026, giao dịch viên mới vào nghề tới 1–2 năm có thu nhập khoảng 6–12 triệu đồng/tháng, chủ yếu là lương cứng cộng phụ cấp nhỏ.",
+        "source_ids": ["S6"],
+        "confidence": "single_source",
+        "note": "Mức thực tế khác nhau theo ngân hàng và chỉ tiêu."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Bộ Công an cảnh báo các thủ đoạn giả danh cơ quan chức năng, gửi đường link giả và đòi mã OTP, nên người làm quầy phải thường xuyên nhắc khách cảnh giác.",
+        "source_ids": ["S5"],
+        "confidence": "verified"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Nam — giao dịch viên 2 năm kinh nghiệm tại một chi nhánh của Ngân hàng Sông Xanh (hư cấu).",
+    "setting": "Một ngày ở quầy giao dịch: nhận quỹ đầu ngày, soát hồ sơ mở tài khoản, nhận ra dấu hiệu lừa đảo, giúp một khách cao tuổi, chịu áp lực chỉ tiêu bảo hiểm và khớp quỹ cuối ngày.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chinh_xac", "label": "Chính xác", "initial": 70 },
+      { "id": "chi_tieu", "label": "Áp lực chỉ tiêu", "initial": 40 }
+    ],
+    "segments": [
+      {
+        "id": "gd1-mo-quay",
+        "time": "07:45",
+        "title": "Nhận quỹ và mở quầy",
+        "narrative": "Chi nhánh chưa mở cửa. Bạn nhận quỹ tiền mặt đầu ngày và chuẩn bị quầy trước khi đón khách đầu tiên.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giao dịch viên quản lý lưu lượng tiền mặt thu chi tại quầy và đối soát giao dịch trong ngày.",
+          "source_ids": ["S7"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước mở quầy đầu ngày",
+          "steps": [
+            "Nhận quỹ tiền mặt đầu ngày, ký nhận với kiểm quỹ",
+            "Kiểm đếm, đối chiếu số tiền vừa nhận",
+            "Đăng nhập hệ thống giao dịch",
+            "Kiểm tra máy đếm tiền, máy in chứng từ",
+            "Mở quầy, gọi khách theo số thứ tự"
+          ],
+          "on_success": { "chinh_xac": 4, "nang_luong": -1 },
+          "on_fail": { "chinh_xac": -3 }
+        }
+      },
+      {
+        "id": "gd2-ho-so-mo-tk",
+        "time": "09:00",
+        "title": "Soát hồ sơ mở tài khoản",
+        "narrative": "Một khách mới muốn mở tài khoản thanh toán. Bạn soát hồ sơ trước khi trình kiểm soát viên duyệt.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hồ sơ mở tài khoản cá nhân phải có giấy tờ tùy thân hợp lệ và các thông tin bắt buộc; ngân hàng phải đối chiếu sinh trắc học, và tên tài khoản phải theo họ tên trên giấy tờ.",
+          "source_ids": ["S3", "S4"],
+          "confidence": "verified",
+          "note": "TT 17/2024 Điều 12 khoản 2 điểm a (sửa bởi TT 25/2025), Điều 13 khoản 1 điểm c1, Điều 14 khoản 1 điểm a, Điều 15 khoản 2."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng hồ sơ chưa đúng quy định",
+          "document": [
+            "HỒ SƠ MỞ TÀI KHOẢN — Ngân hàng Sông Xanh (hư cấu)",
+            "Khách: anh Phạm Văn T., công dân Việt Nam",
+            "Giấy tờ tùy thân khách đưa: thẻ sinh viên",
+            "Đối chiếu sinh trắc học: chưa làm vì khách vội",
+            "Số điện thoại: (để trống)",
+            "Nghề nghiệp: nhân viên văn phòng",
+            "Tên tài khoản: \"TUAN SHOP 99\", khác họ tên trên giấy tờ",
+            "Khách có mặt trực tiếp tại quầy"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Công dân Việt Nam phải dùng thẻ căn cước công dân, thẻ căn cước hoặc căn cước điện tử." },
+            { "line": 3, "explain": "Ngân hàng phải đối chiếu khớp đúng thông tin sinh trắc học của chủ tài khoản." },
+            { "line": 4, "explain": "Số điện thoại là thông tin bắt buộc của khách hàng cá nhân." },
+            { "line": 6, "explain": "Từ 01/3/2026, tên tài khoản cá nhân phải theo họ và tên trên giấy tờ tùy thân." }
+          ],
+          "on_success": { "chinh_xac": 5 },
+          "on_fail": { "chinh_xac": -5 }
+        }
+      },
+      {
+        "id": "gd3-dau-hieu-lua-dao",
+        "time": "10:30",
+        "title": "Nhận ra dấu hiệu lừa đảo",
+        "narrative": "Quầy đông khách. Có những giao dịch rất bình thường, nhưng cũng có những câu chuyện nghe là thấy có vấn đề.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bộ Công an cảnh báo kẻ gian giả danh cơ quan chức năng, gửi đường link giả, tạo tâm lý cấp bách và đòi mật khẩu, mã OTP; người dân nên tra cứu vi phạm qua kênh chính thức như VNeID.",
+          "source_ids": ["S5"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp các tình huống: dấu hiệu lừa đảo hay bình thường",
+          "buckets": ["Dấu hiệu lừa đảo", "Giao dịch bình thường"],
+          "items": [
+            { "text": "Khách được \"công an\" gọi điện, yêu cầu chuyển tiền gấp", "bucket": "Dấu hiệu lừa đảo" },
+            { "text": "Khách nhận tin nhắn \"phạt nguội\" kèm đường link để nộp phạt", "bucket": "Dấu hiệu lừa đảo" },
+            { "text": "Người gọi đòi khách đọc mã OTP vừa nhận", "bucket": "Dấu hiệu lừa đảo" },
+            { "text": "Khách bị hối thúc làm ngay kẻo bị phạt nặng hơn", "bucket": "Dấu hiệu lừa đảo" },
+            { "text": "Khách tự tra cứu vi phạm trên VNeID rồi tới nộp phạt", "bucket": "Giao dịch bình thường" },
+            { "text": "Khách rút tiền mặt từ tài khoản của chính mình để đi chợ", "bucket": "Giao dịch bình thường" }
+          ],
+          "on_success": { "chinh_xac": 4 },
+          "on_fail": { "chinh_xac": -4 }
+        }
+      },
+      {
+        "id": "gd4-khach-cao-tuoi",
+        "time": "13:30",
+        "title": "Người cao tuổi muốn chuyển tiền gấp",
+        "narrative": "Đầu giờ chiều, một bà cụ run run đưa sổ tiết kiệm, muốn chuyển gấp cho người tự xưng là cán bộ vừa gọi điện.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bộ Công an khuyến cáo người dân không chuyển tiền, không đọc mã OTP theo yêu cầu từ cuộc gọi không xác định; nếu nghi bị lừa phải báo ngay ngân hàng và công an.",
+          "source_ids": ["S5"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trò chuyện với bà cụ trước khi làm giao dịch",
+          "npc": "Bà cụ",
+          "turns": [
+            {
+              "npc_line": "Cháu chuyển gấp hết tiền tiết kiệm cho bà, công an vừa gọi bảo bà dính vụ rửa tiền.",
+              "replies": [
+                {
+                  "text": "Bà ơi, công an không đòi chuyển tiền qua điện thoại. Mình gọi người nhà bà trước nhé.",
+                  "effect": { "chinh_xac": 3 },
+                  "feedback": "Bộ Công an khuyến cáo không chuyển tiền theo yêu cầu từ cuộc gọi không xác định."
+                },
+                {
+                  "text": "Dạ, bà ký vào đây là cháu chuyển ngay.",
+                  "effect": { "chinh_xac": -6 },
+                  "feedback": "Làm ngay mà không cảnh báo có thể khiến khách mất tiền vào tay kẻ lừa đảo."
+                }
+              ]
+            },
+            {
+              "npc_line": "Nhưng họ dọa phải làm ngay, chậm là bị bắt.",
+              "replies": [
+                {
+                  "text": "Đó là cách kẻ gian hay dọa. Cháu mời trưởng phòng cùng nói chuyện với bà nhé.",
+                  "effect": { "chinh_xac": 2, "nang_luong": -1 },
+                  "feedback": "Gây hoảng sợ, thúc giục làm ngay là dấu hiệu Bộ Công an đã cảnh báo."
+                },
+                {
+                  "text": "Vậy bà cứ quyết, cháu không hỏi thêm nữa.",
+                  "effect": { "chinh_xac": -4 },
+                  "feedback": "Im lặng cho qua làm mất cơ hội ngăn một vụ lừa đảo."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế giờ bà phải làm sao?",
+              "replies": [
+                {
+                  "text": "Bà đừng đọc mã OTP cho ai; nếu lỡ làm rồi thì báo ngay ngân hàng và công an.",
+                  "effect": { "chinh_xac": 2 },
+                  "feedback": "Nếu nghi bị lừa, cần liên hệ ngay ngân hàng để khóa tài khoản và báo công an."
+                },
+                {
+                  "text": "Bà cứ về nhà, có gì tính sau.",
+                  "effect": { "chinh_xac": -3 },
+                  "feedback": "Không hướng dẫn cách xử lý khiến khách dễ bị lừa lần nữa."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd5-chi-tieu-bao-hiem",
+        "time": "15:00",
+        "title": "Chỉ tiêu bảo hiểm và một khách không có nhu cầu",
+        "narrative": "Trưởng phòng nhắc chỉ tiêu bán bảo hiểm. Một khách đang làm thủ tục, nhưng không có nhu cầu mua bảo hiểm.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm nhân viên ngân hàng gắn việc bán bảo hiểm không bắt buộc với việc cung ứng sản phẩm, dịch vụ ngân hàng; dù vậy, một số nơi vẫn bắt nhân viên bán thêm bảo hiểm.",
+          "source_ids": ["S1", "S2", "S9"],
+          "confidence": "verified",
+          "note": "Điều cấm: Luật Các tổ chức tín dụng 2024 Điều 15 khoản 5. Thực tế chỉ tiêu: nhận xét của TS Hoàng Việt Trung (S9). Theo SPEC-018 R-3, lựa chọn đặt quyền lợi khách lên trên chỉ tiêu không bị trừ chinh_xac hay nang_luong."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với khách không cần bảo hiểm?",
+          "options": [
+            {
+              "text": "Tư vấn trung thực, nói rõ bảo hiểm không bắt buộc và để khách tự quyết",
+              "effect": { "chi_tieu": 3 },
+              "feedback": "Làm đúng luật và giữ được lòng tin của khách; đổi lại, áp lực chỉ tiêu của bạn tăng."
+            },
+            {
+              "text": "Nói với khách phải mua bảo hiểm thì hồ sơ mới được xử lý nhanh",
+              "effect": { "chinh_xac": -6, "chi_tieu": -2 },
+              "feedback": "Gắn bán bảo hiểm không bắt buộc với dịch vụ ngân hàng là hành vi luật cấm."
+            },
+            {
+              "text": "Kẹp sẵn hợp đồng bảo hiểm vào bộ hồ sơ để khách ký luôn",
+              "effect": { "chinh_xac": -5, "chi_tieu": -1 },
+              "feedback": "Lồng bảo hiểm vào hồ sơ mà khách không biết rõ cũng là gắn bán bảo hiểm trái luật."
+            }
+          ]
+        }
+      },
+      {
+        "id": "gd6-chia-thoi-gian",
+        "time": "15:30",
+        "title": "Chia thời gian cuối chiều",
+        "narrative": "Còn vài giờ trước khi đóng quầy. Bạn chia thời gian giữa phục vụ khách, nhập liệu và gọi khách tiềm năng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một nhân viên ngân hàng mới vào nghề kể mỗi ngày phải mời chào rất nhiều khách, có lúc bỏ cả tiền túi để cố đạt chỉ tiêu.",
+          "source_ids": ["S8"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian cuối chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Phục vụ khách tại quầy", "effect_per_30min": { "chinh_xac": 1, "nang_luong": -2 } },
+            { "label": "Nhập liệu, rà chứng từ", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -1 } },
+            { "label": "Gọi khách tiềm năng", "effect_per_30min": { "chi_tieu": -2, "nang_luong": -1 } },
+            { "label": "Nghỉ ngắn, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "gd7-lech-quy",
+        "time": "17:30",
+        "title": "Khớp quỹ cuối ngày bị lệch",
+        "narrative": "Đóng quầy, bạn đếm lại quỹ và thấy số tiền mặt không khớp với số liệu trên hệ thống.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giao dịch viên phải báo cáo, đối soát giao dịch trong ngày cho đúng với số tiền mặt thu chi tại quầy.",
+          "source_ids": ["S7"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý chênh lệch quỹ thế nào?",
+          "options": [
+            {
+              "text": "Báo kiểm soát viên ngay, cùng rà lại từng giao dịch trong ngày",
+              "effect": { "chinh_xac": 3, "nang_luong": -2 },
+              "feedback": "Báo ngay và rà soát cùng người có trách nhiệm giúp tìm đúng nguyên nhân."
+            },
+            {
+              "text": "Lặng lẽ lấy tiền túi bù vào cho khớp rồi về",
+              "effect": { "chinh_xac": -4 },
+              "feedback": "Bù lặng lẽ che mất lỗi thật, sai sót có thể lặp lại mà không ai biết."
+            },
+            {
+              "text": "Sửa số liệu cho khớp, mai tính tiếp",
+              "effect": { "chinh_xac": -6 },
+              "feedback": "Sửa số cho khớp làm hồ sơ sai sự thật và che giấu chênh lệch."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có dám nói thật với khách dù điều đó làm chỉ tiêu của bạn khó đạt hơn không?",
+      "Bạn thấy mình hợp với việc kiểm tra tỉ mỉ giấy tờ, tiền mặt cả ngày không?",
+      "Nếu gặp một người cao tuổi đang bị lừa, bạn sẽ nói gì để họ tin bạn?",
+      "Ngoài quầy giao dịch, bạn muốn tìm hiểu thêm vị trí nào trong ngân hàng?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "thuc-tap-ngan-hang",
+        "title": "Thực tập / thử việc tại ngân hàng",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Làm quen quy trình giao dịch, giấy tờ khách hàng và quy định nội bộ của chi nhánh."
+          }
+        ]
+      },
+      {
+        "id": "giao-dich-vien",
+        "title": "Giao dịch viên",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Vị trí tuyến đầu: nộp rút tiền, mở tài khoản, tư vấn cơ bản tại quầy.",
+            "source_ids": ["S6"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "chuyen-vien-khach-hang",
+        "title": "Chuyên viên quan hệ khách hàng / tín dụng",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Nhóm vị trí có chỉ tiêu kinh doanh rõ hơn, thu nhập phụ thuộc nhiều vào kết quả.",
+            "source_ids": ["S6"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "truong-phong-giao-dich",
+        "title": "Kiểm soát viên / Trưởng phòng giao dịch",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm, nắm chắc quy trình kiểm soát và khả năng quản lý đội ngũ."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "thuc-tap-ngan-hang", "to": "giao-dich-vien", "type": "promotion" },
+      { "from": "giao-dich-vien", "to": "chuyen-vien-khach-hang", "type": "lateral" },
+      { "from": "giao-dich-vien", "to": "truong-phong-giao-dich", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Áp lực chỉ tiêu: một nhân viên mới kể phải mời chào rất nhiều khách mỗi ngày, có lúc bỏ tiền túi, mà vẫn chưa đạt chỉ tiêu thử việc.",
+      "source_ids": ["S8"],
+      "confidence": "single_source",
+      "note": "Lời kể cá nhân; chỉ tiêu khác nhau theo ngân hàng."
+    },
+    {
+      "kind": "fact",
+      "text": "Giờ làm thường kéo dài: một nguyên lãnh đạo thanh tra ngân hàng cho biết cán bộ ngân hàng hiếm khi về trước 19h.",
+      "source_ids": ["S9"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Thu nhập lúc mới vào nghề nằm ở phần thấp của dải lương ngành ngân hàng.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Giao dịch viên có thể phải chịu trách nhiệm khi quỹ tiền mặt bị thiếu.",
+      "source_ids": [],
+      "confidence": "needs_verification",
+      "note": "Chưa tìm được văn bản pháp luật hay quy chế công khai về việc giao dịch viên bồi hoàn khi thiếu quỹ; mỗi ngân hàng có quy định nội bộ riêng. Cần tìm quy chế công khai hoặc lời kể có tên."
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Quy định mở tài khoản ngày càng chặt: từ 01/12/2025 phải gặp mặt và đối chiếu sinh trắc học, từ 01/3/2026 tên tài khoản phải theo họ tên trên giấy tờ.",
+      "source_ids": ["S4"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "advice",
+      "text": "Kỹ năng tư vấn, nhận diện lừa đảo và làm việc với công nghệ số sẽ ngày càng quan trọng với người làm quầy."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, baochinhphu.vn, CareerLink, Tuổi Trẻ, VnExpress, Dân trí)",
+    "scope_note": "Bối cảnh giao dịch viên 1–2 năm kinh nghiệm tại chi nhánh ngân hàng hư cấu; không nêu lãi suất, biểu phí, hạn mức hay khuyến nghị sản phẩm tài chính (SPEC-018 R-3)."
+  }
+}
