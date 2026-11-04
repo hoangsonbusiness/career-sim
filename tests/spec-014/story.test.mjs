@@ -120,10 +120,10 @@ before(() => {
   build = spawnSync("npm run build", { cwd: root, encoding: "utf8", shell: true });
 });
 
-test("AC-014-10 trang một ngày của 6 nghề có nút bắt đầu, không nhúng Phaser", () => {
+test("AC-014-10 trang một ngày của mọi nghề có bản đồ có nút bắt đầu, không nhúng Phaser", () => {
   assert.equal(build.status, 0, (build.stdout + build.stderr).slice(-3000));
-  const ids = readdirSync(join(root, "content/worlds")).map((f) => f.slice(0, -5));
-  assert.equal(ids.length, 6);
+  const ids = readdirSync(join(root, "content/worlds")).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5));
+  assert.ok(ids.length >= 6, `chỉ có ${ids.length} nghề có bản đồ`);
   for (const id of ids) {
     const html = read(`out/nghe/${id}/mot-ngay/index.html`);
     assert.ok(html.includes("Bắt đầu ngày làm việc"), id);

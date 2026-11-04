@@ -1,15 +1,15 @@
 ---
 id: SPEC-014
 title: Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề
-version: 2
-status: implemented
+version: 3
+status: approved
 features: [F3]
 owns: [src/game/story.ts, src/game/GamePlayer.tsx, src/game/scene.ts, src/game/types.ts]
 owner: anh Son
 created: 2026-11-03
-approved_hash: 60b806c79d361167
+approved_hash: 3fa19ea237aeca81
 approved_by: Son
-approved_at: 2026-11-03
+approved_at: 2026-11-04
 ---
 
 # SPEC-014 — Chế độ "xem và nghe kể"
@@ -31,7 +31,7 @@ Những gì đổi (thay cho các quy tắc đã duyệt, cần anh duyệt lạ
 - SPEC-007: game không dùng hoạt cảnh mini-game nữa.
 
 ## 2. Phạm vi
-- Trong phạm vi: module thuần `src/game/story.ts` (vòng đi → cảnh → suy ngẫm → xong); mode `scene` và thẻ "Ngoài đời thật" trong `GamePlayer`; HUD và màn `done` mới; gỡ việc gọi engine, mini-game và chỉ số khỏi game; áp dụng cho mọi gói sâu (6 nghề).
+- Trong phạm vi: module thuần `src/game/story.ts` (vòng đi → cảnh → suy ngẫm → xong); mode `scene` và thẻ "Ngoài đời thật" trong `GamePlayer`; HUD và màn `done` mới; gỡ việc gọi engine, mini-game và chỉ số khỏi game; áp dụng cho mọi gói sâu (mọi nghề có bản đồ trong `content/worlds/`).
 - Ngoài phạm vi: sửa engine SPEC-002, controller SPEC-005 và trang biểu mẫu SPEC-005; xóa trường `task` khỏi schema và nội dung; xóa mã `src/game/minigames/**` (các test khóa của SPEC-007 vẫn import `layout.ts`); sửa `check:pack` (SPEC-008); viết lời kể mới cho nghề; âm thanh.
 
 ## 3. Thiết kế
@@ -127,7 +127,7 @@ export function reduce(s: StoryState, a: StoryAction): StoryState;           // 
 | AC-014-07 | Mã nguồn `src/game/**` trừ `src/game/minigames/**` | Tìm chuỗi `createEngine`, `src/engine`, `sim/controller`, `minigames/` | Không có kết quả nào |
 | AC-014-08 | Mã nguồn `src/game/GamePlayer.tsx` | Tìm chuỗi `Chính xác`, `Chưa đúng`, `Làm lại`, `❤️`, `💧` | Không có kết quả nào |
 | AC-014-09 | `src/game/GamePlayer.tsx` | Tìm chuỗi | Có `Ngoài đời thật`, `Đã kiểm chứng`, `Một nguồn`, `Cần kiểm chứng thêm`, `Hết một ngày làm`, `Về hồ sơ nghề`, `Kenney.nl (CC0)` |
-| AC-014-10 | Bản build, trang `/nghe/<id>/mot-ngay/` của cả 6 nghề | Đọc HTML | Có nút "Bắt đầu ngày làm việc"; không `<script src>` nào chứa mã Phaser (giữ AC-006-11) |
+| AC-014-10 | Bản build, trang `/nghe/<id>/mot-ngay/` của mọi nghề có file trong `content/worlds/` (≥ 6) | Đọc HTML | Với từng nghề: có nút "Bắt đầu ngày làm việc"; không `<script src>` nào chứa mã Phaser (giữ AC-006-11) |
 | AC-014-11 | Khóa test của SPEC-002, 005, 006, 008 | So hash từng file với `specs/locks/` | Không file nào bị sửa hoặc xóa (SPEC-007 lên v2 cùng đợt, AC-007-09 đổi theo) |
 
 ## 5. Ghi chú kiểm thử
@@ -147,3 +147,4 @@ Em đã chốt theo đề xuất dưới đây. Anh đồng ý thì đánh `[x]`
 |---|---|---|---|
 | 1 | 2026-11-03 | Bản nháp đầu | Anh Son: học sinh chưa biết nghề nên không làm được quiz; cần xem nghề chứ không phải bị kiểm tra (ADR-005) |
 | 2 | 2026-11-03 | AC-014-11 bỏ SPEC-007 khỏi danh sách khóa phải giữ nguyên; R-12 thêm bước SPEC-007 v2 | Khi implement, test khóa AC-007-09 (bắt mini-game có trong bản build) mâu thuẫn với R-2; v1 bỏ sót (D6) |
+| 3 | 2026-11-04 | AC-014-10: kiểm mọi nghề có bản đồ (≥ 6) thay vì đúng 6 nghề; mục 2 bỏ con số 6 | Thêm gói nghề mới (SPEC-015) làm test khóa AC-014-10 đỏ dù hành vi vẫn đúng; AC v2 đếm cứng số nghề (D6) |
