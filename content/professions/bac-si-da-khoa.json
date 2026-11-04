@@ -1,0 +1,570 @@
+{
+  "id": "bac-si-da-khoa",
+  "name": "Bác sĩ đa khoa",
+  "aliases": ["Bác sĩ", "Bác sỹ đa khoa", "Bác sĩ Y khoa", "General practitioner"],
+  "group": { "label": "Y tế & Sức khỏe" },
+  "holland": ["I", "S", "R"],
+  "summary": "Hỏi bệnh, khám, chẩn đoán, chỉ định xét nghiệm, kê đơn và ghi hồ sơ bệnh án cho người bệnh; làm việc theo ca, có trực đêm, chịu trách nhiệm trực tiếp với sức khỏe và tính mạng người bệnh. Muốn hành nghề phải học ngành Y khoa, thực hành rồi mới được cấp giấy phép.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Khám bệnh, chữa bệnh số 15/2023/QH15 (Văn bản hợp nhất 26/VBHN-VPQH năm 2026)",
+      "publisher": "Quốc hội / Văn phòng Quốc hội",
+      "url": "https://congbao.chinhphu.vn/van-ban/van-ban-hop-nhat-so-26-vbhn-vpqh-469053.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-01-09",
+      "effective_date": "2024-01-01",
+      "note": "Văn bản hợp nhất ngày 26/02/2026; luật được sửa bởi Luật Quy hoạch 112/2025/QH15 và Luật Dân số 113/2025/QH15, hai luật này không sửa các điều được dùng ở đây. Đã đọc toàn văn trên dulieuphapluat.vn (bản hợp nhất) và xaydungchinhsach.chinhphu.vn (bản gốc): Điều 7, 19, 23, 24, 41, 120."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Nghị định 96/2023/NĐ-CP quy định chi tiết một số điều của Luật Khám bệnh, chữa bệnh",
+      "publisher": "Chính phủ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-dinh-quy-dinh-chi-tiet-mot-so-dieu-cua-luat-kham-benh-chua-benh-119240115115947657.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-12-30",
+      "effective_date": "2024-01-01",
+      "note": "Đã đọc Điều 3 (thời gian thực hành). Bộ Y tế đã lấy ý kiến dự thảo nghị định sửa đổi Nghị định này (baochinhphu.vn, 2025); chưa xác minh được bản sửa đổi đã ban hành hay chưa và có đổi Điều 3 không."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Thông tư 26/2025/TT-BYT quy định về đơn thuốc và việc kê đơn thuốc hóa dược, sinh phẩm trong điều trị ngoại trú",
+      "publisher": "Bộ Y tế / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/thong-tu-26-2025-tt-byt-quy-dinh-ke-don-thuoc-hoa-duoc-sinh-pham-tai-co-so-kham-chua-benh-404246-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-30",
+      "effective_date": "2025-07-01",
+      "note": "Thay Thông tư 52/2017/TT-BYT, 18/2018/TT-BYT và 27/2021/TT-BYT. Đã đọc Điều 4, 5, 6."
+    },
+    {
+      "id": "S4",
+      "type": "official_stat",
+      "title": "Thông tin tuyển sinh đại học chính quy năm 2026 (dự kiến) — Trường Đại học Y Hà Nội",
+      "publisher": "Trường Đại học Y Hà Nội / xaydungchinhsach.chinhphu.vn",
+      "url": "https://xaydungchinhsach.chinhphu.vn/tuyen-sinh-truong-dai-hoc-y-ha-noi-sinh-2026-119260214152221887.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-02-14",
+      "note": "Ngành Y khoa mã 7720101, tổ hợp B00 (Toán – Hóa – Sinh), xét tuyển thẳng và xét điểm thi tốt nghiệp THPT. Thông báo ghi là dự kiến; chỉ là một trường, dùng để minh họa."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Tin tuyển dụng Bác sĩ đa khoa trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-bac-si-da-khoa-cr781cb783cl799",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "6 tin: 3 tin ghi lương thỏa thuận; các tin có số ghi 8–10 triệu (nhân viên y tế học đường, yêu cầu 1 năm), 15–20 triệu (yêu cầu 3 năm) và 20–25 triệu (yêu cầu 1 năm) đồng/tháng. Mẫu rất nhỏ, chỉ khu vực tư."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Áp lực ở nơi lằn ranh sự sống và cái chết",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/ap-luc-o-noi-lan-ranh-su-song-va-cai-chet-4874863.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-05-05",
+      "note": "Lời kể của bác sĩ Đỗ Trọng Nam (Trung tâm Cấp cứu A9, Bệnh viện Bạch Mai) và bác sĩ Nguyễn Duy Toản (Bệnh viện Đa khoa Đức Giang). Chỉ dùng phần mô tả trải nghiệm, không dùng số giờ làm việc mà bài dẫn lại."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Giáo sư cảnh báo góc khuất nghề y được chia sẻ trở lại, nghề 'không phải để mưu sinh mà là cứu sinh'",
+      "publisher": "Báo Tuổi Trẻ",
+      "url": "https://tuoitre.vn/giao-su-canh-bao-goc-khuat-nghe-y-duoc-chia-se-tro-lai-nghe-khong-phai-de-muu-sinh-ma-la-cuu-sinh-100261016122413223.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-10-16",
+      "note": "Thuật lại bài phát biểu năm 2024 của GS.TS.BS Phạm Mạnh Hùng (nguyên Thứ trưởng Bộ Y tế) với tân bác sĩ: nguy cơ sai sót chuyên môn, lạm dụng xét nghiệm, kê đơn để tăng thu nhập. Không dùng các số liệu nước ngoài trong bài."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "'Lò luyện thép' đêm 30 của bác sĩ nội trú",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/lo-luyen-thep-dem-30-cua-bac-si-noi-tru-5041989.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-02-18",
+      "note": "Lời kể của bác sĩ Bùi Xuân Trường (Bệnh viện E), TS.BS Nguyễn Đình Liên (Bệnh viện E), bác sĩ Huỳnh Thanh Quảng (Bệnh viện Phụ sản Trung ương) về trực đêm giao thừa."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học chắc Sinh học và Hóa học từ cấp 2; đây là nền tảng của gần như mọi môn trong trường y.",
+        "audience": ["thcs", "thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Thử tham gia sơ cứu, tình nguyện ở trạm y tế hay hội chữ thập đỏ để xem bạn có chịu được cảnh người đau ốm không.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Ví dụ năm 2026, Trường Đại học Y Hà Nội dự kiến xét tuyển ngành Y khoa bằng tổ hợp Toán – Hóa – Sinh (B00), qua tuyển thẳng hoặc điểm thi tốt nghiệp THPT.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "Thông báo tuyển sinh dự kiến của một trường; các trường khác xem đề án riêng."
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Học xong ngành Y khoa chưa được tự hành nghề ngay: phải có giấy phép hành nghề còn hiệu lực và đăng ký hành nghề.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Khám bệnh, chữa bệnh Điều 19 khoản 1 điểm a, b."
+      },
+      {
+        "kind": "fact",
+        "text": "Trước khi xin giấy phép, bác sĩ phải thực hành khám bệnh, chữa bệnh tại cơ sở phù hợp, dưới sự hướng dẫn của người hành nghề.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Khám bệnh, chữa bệnh Điều 23 khoản 1, 2; Điều 19 khoản 2 điểm a."
+      },
+      {
+        "kind": "fact",
+        "text": "Thời gian thực hành của bác sĩ là 12 tháng, trong đó 3 tháng thực hành hồi sức cấp cứu.",
+        "source_ids": ["S2"],
+        "confidence": "needs_verification",
+        "note": "Nghị định 96/2023/NĐ-CP Điều 3 khoản 1. Đã có dự thảo nghị định sửa đổi Nghị định này; cần kiểm tra bản sửa đổi đã ban hành chưa và có đổi thời gian thực hành không."
+      },
+      {
+        "kind": "fact",
+        "text": "Từ ngày 01/01/2027, bác sĩ phải qua kỳ kiểm tra đánh giá năng lực hành nghề do Hội đồng Y khoa Quốc gia tổ chức rồi mới được cấp giấy phép.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Khám bệnh, chữa bệnh Điều 24; Điều 30 khoản 2 điểm a; Điều 120 khoản 3 điểm a. Người dự kiểm tra phải tự trả chi phí (Điều 24 khoản 4)."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Bác sĩ có quyền được đào tạo, phát triển chuyên môn và cập nhật kiến thức y khoa liên tục phù hợp phạm vi hành nghề.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Khám bệnh, chữa bệnh Điều 41."
+      },
+      {
+        "kind": "fact",
+        "text": "Kê đơn thuốc phải ghi đầy đủ, rõ ràng, chính xác các mục trong đơn; muốn sửa đơn thì kê đơn mới thay đơn cũ.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Thông tư 26/2025/TT-BYT Điều 6 khoản 1, 9."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Bác sĩ ở khoa cấp cứu, hồi sức làm theo kíp trực, có trực đêm và cả đêm giao thừa; sáng sớm giao ca là lúc mệt nhất.",
+        "source_ids": ["S6", "S8"],
+        "confidence": "single_source",
+        "note": "Hai bài cùng một báo nên chỉ tính một nguồn độc lập."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Tháng 11/2026 trên TopCV chỉ có vài tin tuyển bác sĩ đa khoa; một nửa ghi lương thỏa thuận, các tin có số ghi từ 8 tới 25 triệu đồng/tháng và đa số đòi 1–3 năm kinh nghiệm.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "6 tin khu vực tư tại một thời điểm; không đại diện cho lương ở bệnh viện công."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Một bác sĩ vừa làm chuyên môn vừa tư vấn, giải thích diễn biến bệnh cho gia đình người bệnh, kể cả lúc phải báo tin xấu.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Minh — bác sĩ mới có giấy phép hành nghề, làm ở phòng khám nội tổng quát của Bệnh viện quận An Phú (hư cấu), cùng một bác sĩ trưởng khoa và một điều dưỡng.",
+    "setting": "Một ngày ở phòng khám: giao ban đầu ca, phân loại người bệnh, soát đơn thuốc, khám ca đau bụng, buổi chiều đông người, lời nhờ ghi hồ sơ sai và một người bệnh trở nặng lúc gần hết ca.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "an_toan_nguoi_benh", "label": "An toàn người bệnh", "initial": 70 },
+      { "id": "tin_cay", "label": "Tin cậy", "initial": 65 }
+    ],
+    "segments": [
+      {
+        "id": "bs1-giao-ban",
+        "time": "07:00",
+        "title": "Giao ban đầu ca",
+        "narrative": "Kíp trực đêm mắt thâm quầng, chuẩn bị bàn giao. Bác sĩ trưởng khoa dặn bạn nắm kỹ từng người bệnh trước khi nhận ca.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bác sĩ cấp cứu kể kíp trực đêm làm nốt việc rồi bàn giao ca vào buổi sáng; lúc giao ca là lúc thể lực cạn kiệt mà người bệnh nặng vẫn tới dồn dập.",
+          "source_ids": ["S6"],
+          "confidence": "single_source",
+          "note": "Các bước trong game chỉ khái quát, không phải quy trình chuyên môn (SPEC-026 R-2)."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước nhận ca",
+          "steps": [
+            "Có mặt đúng giờ, dự giao ban của khoa",
+            "Nghe kíp trực đêm báo từng người bệnh",
+            "Hỏi lại những điểm chưa rõ",
+            "Đi xem trực tiếp người bệnh nặng",
+            "Ký nhận ca rồi bắt đầu khám"
+          ],
+          "on_success": { "an_toan_nguoi_benh": 4 },
+          "on_fail": { "an_toan_nguoi_benh": -4 }
+        }
+      },
+      {
+        "id": "bs2-phan-loai",
+        "time": "08:00",
+        "title": "Ai cần xử trí ngay?",
+        "narrative": "Sảnh chờ đã kín người. Điều dưỡng đưa bạn danh sách vài người vừa tới và hỏi nên ưu tiên ai.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm từ chối hoặc cố ý chậm cấp cứu người bệnh; bác sĩ cấp cứu kể trong cấp cứu càng nhanh càng tốt, chậm một chút có thể mất cơ hội sống.",
+          "source_ids": ["S1", "S6"],
+          "confidence": "verified",
+          "note": "Luật Khám bệnh, chữa bệnh Điều 7 khoản 2. Cách xếp thẻ là minh họa khái quát, không phải hướng dẫn phân loại chuyên môn; không thẻ nào bị gọi là vi phạm (SPEC-026 R-1)."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp người bệnh: cần xử trí ngay hay có thể chờ",
+          "buckets": ["Xử trí ngay", "Có thể chờ"],
+          "items": [
+            { "text": "Người bệnh khó thở, môi tím tái", "bucket": "Xử trí ngay" },
+            { "text": "Người bệnh lơ mơ, gọi không tỉnh hẳn", "bucket": "Xử trí ngay" },
+            { "text": "Người bệnh đau ngực dữ dội, vã mồ hôi", "bucket": "Xử trí ngay" },
+            { "text": "Người bệnh tái khám định kỳ, đang ổn định", "bucket": "Có thể chờ" },
+            { "text": "Người bệnh muốn hỏi lại kết quả xét nghiệm cũ", "bucket": "Có thể chờ" },
+            { "text": "Người bệnh xin giấy khám sức khỏe đi làm", "bucket": "Có thể chờ" }
+          ],
+          "on_success": { "an_toan_nguoi_benh": 5 },
+          "on_fail": { "an_toan_nguoi_benh": -5 }
+        }
+      },
+      {
+        "id": "bs3-don-thuoc",
+        "time": "09:30",
+        "title": "Soát đơn thuốc",
+        "narrative": "Một đơn thuốc nháp cho bé Na (hư cấu) cần bạn ký. Bạn đọc kỹ từng dòng trước khi ký.",
+        "basis": {
+          "kind": "fact",
+          "text": "Đơn thuốc phải ghi đầy đủ, rõ ràng, chính xác; trẻ dưới 72 tháng tuổi phải ghi số tháng tuổi, cân nặng và họ tên người đưa trẻ đi khám; muốn sửa đơn thì kê đơn mới thay đơn cũ.",
+          "source_ids": ["S3"],
+          "confidence": "verified",
+          "note": "Thông tư 26/2025/TT-BYT Điều 6 khoản 1, 4, 9. Đơn trong game không có tên thuốc hay liều (SPEC-026 R-2)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng sai quy định trong đơn thuốc",
+          "document": [
+            "ĐƠN THUỐC — Bé Na, 36 tháng tuổi (hư cấu)",
+            "Cân nặng: (để trống)",
+            "Người đưa trẻ đi khám: chị Hoa (mẹ)",
+            "Chẩn đoán ghi rõ ràng, đọc được",
+            "Thuốc thứ hai bị gạch xóa, viết đè thuốc khác",
+            "Chữ ký và họ tên bác sĩ kê đơn"
+          ],
+          "errors": [
+            { "line": 1, "explain": "Trẻ dưới 72 tháng tuổi bắt buộc phải ghi cân nặng trong đơn thuốc." },
+            { "line": 4, "explain": "Muốn sửa thuốc trong đơn thì phải kê đơn mới thay đơn cũ, không gạch xóa viết đè." }
+          ],
+          "on_success": { "an_toan_nguoi_benh": 5 },
+          "on_fail": { "an_toan_nguoi_benh": -5 }
+        }
+      },
+      {
+        "id": "bs4-dau-bung",
+        "time": "10:30",
+        "title": "Người bệnh đau bụng",
+        "narrative": "Chú Tư (hư cấu) vào khám vì đau bụng từ tối qua. Điều dưỡng hỏi bạn muốn bắt đầu thế nào.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người hành nghề phải tuân thủ quy định chuyên môn và không được chỉ định dịch vụ kỹ thuật nhằm trục lợi; một giáo sư ngành y cảnh báo sai sót chẩn đoán và lạm dụng xét nghiệm là những góc khuất của nghề.",
+          "source_ids": ["S1", "S7"],
+          "confidence": "verified",
+          "note": "Luật Khám bệnh, chữa bệnh Điều 7 khoản 6, 9."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn bắt đầu từ đâu?",
+          "options": [
+            {
+              "text": "Hỏi kỹ bệnh sử, khám bụng cẩn thận rồi mới chọn xét nghiệm thật cần",
+              "effect": { "an_toan_nguoi_benh": 5, "tin_cay": 3, "nang_luong": -2 },
+              "feedback": "Hỏi và khám kỹ giúp tránh bỏ sót bệnh, cũng không bắt người bệnh tốn tiền oan."
+            },
+            {
+              "text": "Cho làm thật nhiều xét nghiệm cho chắc, khám sau",
+              "effect": { "tin_cay": -4, "nang_luong": 1 },
+              "feedback": "Chỉ định tràn lan làm người bệnh tốn kém; chỉ định để trục lợi là hành vi luật cấm."
+            },
+            {
+              "text": "Nghe kể qua, cho thuốc giảm đau rồi cho về",
+              "effect": { "an_toan_nguoi_benh": -5 },
+              "feedback": "Chưa khám kỹ đã cho về có thể bỏ sót một bệnh nguy hiểm."
+            }
+          ]
+        }
+      },
+      {
+        "id": "bs5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều đông người",
+        "narrative": "Còn 3 giờ, danh sách chờ vẫn dài. Hồ sơ bệnh án buổi sáng chưa ghi xong, vài người bệnh cần được giải thích thêm.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bác sĩ kể một người vừa làm chuyên môn, vừa chăm sóc, tư vấn cho người bệnh và gia đình, đồng thời phải giữ tỉnh táo để không bỏ lỡ dấu hiệu nguy hiểm.",
+          "source_ids": ["S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Khám người bệnh", "effect_per_30min": { "an_toan_nguoi_benh": 2, "nang_luong": -2 } },
+            { "label": "Ghi hồ sơ bệnh án", "effect_per_30min": { "an_toan_nguoi_benh": 1, "tin_cay": 1, "nang_luong": -1 } },
+            { "label": "Tư vấn người bệnh", "effect_per_30min": { "tin_cay": 2, "nang_luong": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "bs6-ho-so-sai",
+        "time": "15:30",
+        "title": "Lời nhờ ghi hồ sơ khác sự thật",
+        "narrative": "Con trai một người bệnh đợi bạn ở góc phòng khám, nhờ bạn 'giúp' để gia đình được bảo hiểm chi trả nhiều hơn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm sửa chữa hồ sơ bệnh án để làm sai lệch thông tin, cấm lập hồ sơ bệnh án giả hay giấy tờ khống về kết quả khám bệnh, chữa bệnh.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Khám bệnh, chữa bệnh Điều 7 khoản 10."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời người nhà người bệnh",
+          "npc": "Anh Quang (con trai người bệnh)",
+          "turns": [
+            {
+              "npc_line": "Bác sĩ ghi giúp là bố em nằm viện thêm ba ngày nhé, để bảo hiểm trả nhiều hơn.",
+              "replies": [
+                {
+                  "text": "Em hiểu nhà mình khó khăn, nhưng hồ sơ phải ghi đúng những gì đã khám, chữa.",
+                  "effect": { "tin_cay": 3 },
+                  "feedback": "Từ chối nhẹ nhàng mà rõ ràng giữ được cả người nhà lẫn đúng luật."
+                },
+                {
+                  "text": "Thôi được, ghi thêm vài ngày chắc không ai để ý.",
+                  "effect": { "tin_cay": -6 },
+                  "feedback": "Lập hồ sơ khống là hành vi luật cấm; bạn có thể mất cả giấy phép hành nghề."
+                }
+              ]
+            },
+            {
+              "npc_line": "Bác sĩ trẻ thế này, giúp nhau một chút thôi mà.",
+              "replies": [
+                {
+                  "text": "Em chỉ ký điều đúng sự thật. Anh hỏi phòng công tác xã hội xem có hỗ trợ không nhé.",
+                  "effect": { "tin_cay": 2, "nang_luong": -1 },
+                  "feedback": "Chỉ người nhà tới đúng nơi có thể giúp là cách hỗ trợ hợp pháp."
+                },
+                {
+                  "text": "Để em hỏi xem có cách nào ghi khác đi không.",
+                  "effect": { "tin_cay": -3 },
+                  "feedback": "Lưỡng lự dễ khiến người nhà tiếp tục ép, còn bạn tự đặt mình vào rủi ro."
+                }
+              ]
+            },
+            {
+              "npc_line": "Vậy bác sĩ ghi gì cho bố em?",
+              "replies": [
+                {
+                  "text": "Em ghi đúng tình trạng, đúng ngày điều trị, và giải thích rõ cho anh hiểu.",
+                  "effect": { "tin_cay": 2 },
+                  "feedback": "Hồ sơ trung thực bảo vệ người bệnh, gia đình và cả chính bạn."
+                },
+                {
+                  "text": "Anh muốn ghi gì thì em ghi nấy.",
+                  "effect": { "tin_cay": -5 },
+                  "feedback": "Ký vào hồ sơ sai sự thật là chịu trách nhiệm cho điều mình không làm."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "bs7-tro-nang",
+        "time": "17:00",
+        "title": "Người bệnh trở nặng lúc gần hết ca",
+        "narrative": "Gần hết giờ, điều dưỡng chạy vào báo chú Tư đau bụng nhiều hơn, mạch nhanh. Ca sau chưa tới.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm cố ý chậm cấp cứu người bệnh; bác sĩ trẻ kể nhiều khi phải tự đưa ra quyết định xử trí ban đầu trong ca trực rồi báo người có kinh nghiệm hơn.",
+          "source_ids": ["S1", "S8"],
+          "confidence": "verified",
+          "note": "Luật Khám bệnh, chữa bệnh Điều 7 khoản 2; lời kể của TS.BS Nguyễn Đình Liên trong S8."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì?",
+          "options": [
+            {
+              "text": "Tới ngay xem người bệnh, báo bác sĩ trưởng khoa và ghi rõ diễn biến vào hồ sơ",
+              "effect": { "an_toan_nguoi_benh": 5, "tin_cay": 2, "nang_luong": -3 },
+              "feedback": "Xử trí ngay và báo người có kinh nghiệm là đúng trách nhiệm với người bệnh."
+            },
+            {
+              "text": "Dặn điều dưỡng theo dõi tiếp, để ca sau xem",
+              "effect": { "an_toan_nguoi_benh": -6 },
+              "feedback": "Để người bệnh trở nặng chờ ca sau có thể làm mất thời gian vàng."
+            },
+            {
+              "text": "Tự xử trí một mình, không báo ai cho đỡ phiền",
+              "effect": { "an_toan_nguoi_benh": -2, "tin_cay": -2 },
+              "feedback": "Bác sĩ mới gặp ca khó nên báo người hướng dẫn, không phải tự gánh một mình."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có sẵn sàng học nhiều năm, thực hành rồi thi đánh giá năng lực mới được hành nghề không?",
+      "Bạn có chịu được trực đêm, làm việc cả ngày lễ Tết không?",
+      "Nếu người nhà người bệnh nhờ bạn làm điều sai, bạn sẽ từ chối thế nào?",
+      "Bạn có thể giữ bình tĩnh khi phải báo tin xấu cho một gia đình không?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-y-khoa",
+        "title": "Sinh viên ngành Y khoa",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Ví dụ năm 2026, Trường Đại học Y Hà Nội dự kiến xét tuyển ngành Y khoa (mã 7720101) bằng tổ hợp B00.",
+            "source_ids": ["S4"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "bac-si-thuc-hanh",
+        "title": "Bác sĩ đang thực hành",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Được khám bệnh, chữa bệnh dưới sự giám sát của người hành nghề trong thời gian thực hành để xin giấy phép.",
+            "source_ids": ["S1"],
+            "confidence": "verified",
+            "note": "Luật Khám bệnh, chữa bệnh Điều 19 khoản 2 điểm a; Điều 23."
+          }
+        ]
+      },
+      {
+        "id": "bac-si-co-giay-phep",
+        "title": "Bác sĩ có giấy phép hành nghề",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Từ 01/01/2027, phải qua kiểm tra đánh giá năng lực hành nghề của Hội đồng Y khoa Quốc gia.",
+            "source_ids": ["S1"],
+            "confidence": "verified",
+            "note": "Luật Khám bệnh, chữa bệnh Điều 24, Điều 120 khoản 3 điểm a."
+          }
+        ]
+      },
+      {
+        "id": "bac-si-chuyen-khoa",
+        "title": "Bác sĩ nội trú / chuyên khoa",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Muốn đi sâu một chuyên ngành, bạn cần học tiếp sau đại học và tích lũy nhiều năm kinh nghiệm."
+          }
+        ]
+      },
+      {
+        "id": "truong-khoa",
+        "title": "Trưởng khoa / quản lý bệnh viện",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Ngoài chuyên môn, cần kỹ năng lãnh đạo, kèm cặp bác sĩ trẻ và hiểu quy định quản lý."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-y-khoa", "to": "bac-si-thuc-hanh", "type": "promotion" },
+      { "from": "bac-si-thuc-hanh", "to": "bac-si-co-giay-phep", "type": "promotion" },
+      { "from": "bac-si-co-giay-phep", "to": "bac-si-chuyen-khoa", "type": "promotion" },
+      { "from": "bac-si-chuyen-khoa", "to": "truong-khoa", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Con đường dài: học xong ngành Y khoa vẫn phải thực hành, và từ 2027 phải qua kỳ kiểm tra năng lực (tự trả phí) mới có giấy phép hành nghề.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Khám bệnh, chữa bệnh Điều 19, 23, 24, Điều 120 khoản 3."
+    },
+    {
+      "kind": "fact",
+      "text": "Trực đêm, trực cả đêm giao thừa; bác sĩ cấp cứu kể phải tranh thủ chợp mắt vài phút giữa các ca nặng và dễ kiệt sức.",
+      "source_ids": ["S6", "S8"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Áp lực tinh thần lớn: thường xuyên đối mặt với cái chết, phải báo tin xấu cho gia đình người bệnh.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Một sai sót chuyên môn có thể gây hại tới tính mạng người bệnh; nghề cũng có nhiều cám dỗ như kê đơn, chỉ định xét nghiệm để tăng thu nhập.",
+      "source_ids": ["S7", "S1"],
+      "confidence": "verified",
+      "note": "Lời GS.TS.BS Phạm Mạnh Hùng (S7); Luật Khám bệnh, chữa bệnh Điều 7 khoản 9 cấm kê đơn, chỉ định nhằm trục lợi."
+    },
+    {
+      "kind": "fact",
+      "text": "Nhiều tin tuyển bác sĩ đa khoa ở khu vực tư đòi 1–3 năm kinh nghiệm hoặc chỉ ghi lương thỏa thuận.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Kỳ kiểm tra đánh giá năng lực hành nghề sẽ áp dụng cho bác sĩ từ 2027, sau đó lần lượt cho y sĩ, điều dưỡng, hộ sinh (2028) và các chức danh khác (2029).",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Khám bệnh, chữa bệnh Điều 120 khoản 3."
+    },
+    {
+      "kind": "advice",
+      "text": "Rèn tiếng Anh để đọc tài liệu y khoa mới, và rèn kỹ năng giao tiếp vì bạn sẽ phải giải thích cho người bệnh mỗi ngày."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (dulieuphapluat.vn, xaydungchinhsach.chinhphu.vn, luatvietnam.vn, TopCV, VnExpress, Tuổi Trẻ)",
+    "scope_note": "Bệnh viện, người bệnh đều hư cấu (SPEC-026 R-3); không có tên thuốc, liều hay phác đồ (R-2). Chưa có nguồn chính thức về lương bác sĩ khu vực công nên chưa đưa vào. Thời gian thực hành 12 tháng để needs_verification vì Nghị định 96/2023 đang được sửa đổi."
+  }
+}

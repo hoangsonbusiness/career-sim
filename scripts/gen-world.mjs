@@ -1083,4 +1083,252 @@ const mechanicWorld = {
 };
 writeFileSync(out("content/worlds/ky-thuat-vien-o-to.json"), JSON.stringify(mechanicWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich,chuyen-vien-nhan-su,ky-thuat-vien-o-to}.json");
+// ---------- Bác sĩ đa khoa (SPEC-026): phòng khám đa khoa của một bệnh viện quận ----------
+// Dùng khung KHOA_NOI: phòng giao ban trái trên, phòng khám giữa trên, phòng cấp cứu phải trên, hành lang giữa, quầy tiếp đón dưới trái, sảnh chờ dưới phải.
+const PHONG_KHAM = KHOA_NOI;
+const PHONG_KHAM_PROPS = [
+  // Phòng giao ban: bàn dài, ghế, kệ hồ sơ
+  [2, 2, 0, 1], [3, 2, 1, 1], [4, 2, 2, 1], [6, 1, 329, 1], [1, 4, 17, 1],
+  // Phòng khám: bàn bác sĩ, giường khám, cây
+  [9, 2, 85, 1], [10, 2, 86, 1], [14, 1, 116, 1], [14, 2, 143, 1], [15, 4, 16, 1],
+  // Phòng cấp cứu: hai giường, tủ thuốc
+  [18, 1, 116, 1], [18, 2, 143, 1], [21, 1, 116, 1], [21, 2, 143, 1], [24, 1, 324, 1],
+  // Quầy tiếp đón: quầy, cây
+  [2, 9, 324, 1], [3, 9, 325, 1], [4, 9, 326, 1], [9, 9, 17, 1],
+  // Sảnh chờ: dãy ghế, cây
+  [13, 11, 55, 1], [14, 11, 55, 1], [15, 11, 55, 1], [16, 11, 55, 1], [24, 9, 17, 1],
+];
+const PHONG_KHAM_DECOR = [[3, 2, 18], [9, 2, 18], [3, 9, 18]];
+
+const doctorWorld = {
+  profession_id: "bac-si-da-khoa",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("phong-kham", PHONG_KHAM, PHONG_KHAM_PROPS, PHONG_KHAM_DECOR, { x: 11, y: 3 }),
+  ],
+  npcs: [
+    { id: "truong-khoa", map: "phong-kham", x: 5, y: 3, name: "Bác sĩ Lan (trưởng khoa)", sprite: C(0, 71, 19) },
+    { id: "truong-khoa-cc", map: "phong-kham", x: 20, y: 3, name: "Bác sĩ Lan (trưởng khoa)", sprite: C(0, 71, 19) },
+    { id: "dieu-duong", map: "phong-kham", x: 14, y: 4, name: "Chị Thu (điều dưỡng)", sprite: C(486) },
+    { id: "chu-tu", map: "phong-kham", x: 13, y: 3, name: "Chú Tư (người bệnh)", sprite: PATIENT },
+    { id: "nguoi-nha", map: "phong-kham", x: 9, y: 4, name: "Anh Quang (người nhà)", sprite: C(433) },
+    { id: "tiep-don", map: "phong-kham", x: 5, y: 10, name: "Nhân viên tiếp đón", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "bs1-giao-ban": { map: "phong-kham", target: { x: 5, y: 3 }, npc: "truong-khoa", quest: "Vào phòng giao ban nhận ca" },
+    "bs2-phan-loai": { map: "phong-kham", target: { x: 14, y: 4 }, npc: "dieu-duong", quest: "Điều dưỡng mang danh sách người bệnh vào phòng khám" },
+    "bs3-don-thuoc": { map: "phong-kham", target: { x: 10, y: 3 }, quest: "Về bàn khám, soát đơn thuốc trước khi ký" },
+    "bs4-dau-bung": { map: "phong-kham", target: { x: 13, y: 3 }, npc: "chu-tu", quest: "Chú Tư đang chờ khám ở giường khám" },
+    "bs5-chia-thoi-gian": { map: "phong-kham", target: { x: 10, y: 3 }, quest: "Về bàn khám, danh sách chờ buổi chiều còn dài" },
+    "bs6-ho-so-sai": { map: "phong-kham", target: { x: 9, y: 4 }, npc: "nguoi-nha", quest: "Người nhà một người bệnh đợi bạn ở góc phòng khám" },
+    "bs7-tro-nang": { map: "phong-kham", target: { x: 20, y: 3 }, npc: "truong-khoa-cc", quest: "Chú Tư trở nặng! Tới phòng cấp cứu" },
+  },
+};
+writeFileSync(out("content/worlds/bac-si-da-khoa.json"), JSON.stringify(doctorWorld) + "\n");
+
+// ---------- Thợ điện (SPEC-027): một tòa nhà văn phòng đang hoàn thiện ----------
+// Phòng chỉ huy công trường trên trái, thang máy công trình giữa, kho vật tư trên phải; sàn thi công nền bê tông phía dưới, tủ điện tầng ở góc trái.
+const TOA_NHA = AGENCY.map((row, y) => (y >= 8 && y <= 14 ? row.replace(/\./g, "c") : row));
+const TOA_NHA_PROPS = [
+  // Phòng chỉ huy: bàn, bảng tiến độ, cây
+  [4, 2, 85, 1], [5, 2, 86, 1], [6, 2, 97, 1], [9, 1, 329, 1], [1, 1, 16, 1],
+  // Thang máy công trình: khung cabin
+  [13, 1, 324, 1], [15, 1, 326, 1],
+  // Kho vật tư: các kệ
+  [18, 1, 329, 1], [19, 1, 330, 1], [22, 1, 329, 1], [23, 1, 330, 1], [26, 1, 329, 1], [27, 1, 330, 1],
+  // Sàn thi công: tủ điện tầng, bàn vật tư
+  [1, 9, 324, 1], [2, 9, 325, 1], [14, 12, 0, 1], [15, 12, 1, 1], [16, 12, 2, 1],
+];
+const TOA_NHA_DECOR = [[5, 2, 18], [2, 9, 18], [15, 12, 18]];
+
+const electricianWorld = {
+  profession_id: "tho-dien",
+  tile_size: 16,
+  tilesets: [...world.tilesets, { key: "site", image: "game/site/site.png", columns: SITE.length, spacing: 1 }],
+  maps: [
+    buildMap("toa-nha", TOA_NHA, TOA_NHA_PROPS, TOA_NHA_DECOR, { x: 3, y: 11 }, SITE_FLOOR),
+  ],
+  npcs: [
+    { id: "doi-truong", map: "toa-nha", x: 4, y: 10, name: "Anh Bình (đội trưởng)", sprite: C(54, 17, 22) },
+    { id: "doi-truong-san", map: "toa-nha", x: 20, y: 12, name: "Anh Bình (đội trưởng)", sprite: C(54, 17, 22) },
+    { id: "giam-sat", map: "toa-nha", x: 7, y: 4, name: "Anh Phúc (giám sát kỹ thuật)", sprite: C(379) },
+    { id: "giam-sat-san", map: "toa-nha", x: 25, y: 12, name: "Anh Phúc (giám sát kỹ thuật)", sprite: C(379) },
+    { id: "tho-phu", map: "toa-nha", x: 12, y: 11, name: "Long (thợ phụ)", sprite: C(1, 13, 76) },
+    { id: "bao-ve", map: "toa-nha", x: 14, y: 3, name: "Bảo vệ công trường", sprite: C(0, 121, 128) },
+  ],
+  player_sprite: C(0, 13, 20),
+  segments: {
+    "td1-truoc-khi-lam": { map: "toa-nha", target: { x: 4, y: 10 }, npc: "doi-truong", quest: "Tới tủ điện tầng, đội trưởng đang chờ" },
+    "td2-kho-vat-tu": { map: "toa-nha", target: { x: 22, y: 4 }, quest: "Vào kho vật tư lấy đồ cho buổi sáng" },
+    "td3-phieu-cong-tac": { map: "toa-nha", target: { x: 7, y: 4 }, npc: "giam-sat", quest: "Giám sát gọi bạn sang phòng chỉ huy ký phiếu" },
+    "td4-mat-dien": { map: "toa-nha", target: { x: 3, y: 11 }, quest: "Tầng 3 báo mất điện! Ra tủ điện xem trước" },
+    "td5-chia-thoi-gian": { map: "toa-nha", target: { x: 12, y: 11 }, npc: "tho-phu", quest: "Ra sàn thi công cùng thợ phụ" },
+    "td6-bo-buoc": { map: "toa-nha", target: { x: 20, y: 12 }, npc: "doi-truong-san", quest: "Đội trưởng gọi bạn ra góc sàn nói chuyện" },
+    "td7-do-kiem": { map: "toa-nha", target: { x: 25, y: 12 }, npc: "giam-sat-san", quest: "Đo kiểm lại các mạch trước khi về" },
+  },
+};
+writeFileSync(out("content/worlds/tho-dien.json"), JSON.stringify(electricianWorld) + "\n");
+
+// ---------- Nhân viên logistics (SPEC-028): văn phòng và kho vận của một công ty giao nhận ----------
+// Phòng trưởng nhóm và phòng họp phía trên trái, khu bàn làm việc dưới trái, kho nền bê tông bên phải, khu bốc xếp dọc phía dưới.
+const KHO_VAN = [
+  "##############################",
+  "#.......#.......#cccccccccccc#",
+  "#.......#.......#cccccccccccc#",
+  "#.......#.......#cccccccccccc#",
+  "#.......#.......#cccccccccccc#",
+  "#.......#.......#cccccccccccc#",
+  "#.......#.......#cccccccccccc#",
+  "####D#######D####cccccccccccc#",
+  "#...............#cccccccccccc#",
+  "#...............Dcccccccccccc#",
+  "#...............#cccccccccccc#",
+  "#...............#cccccccccccc#",
+  "######################D#######",
+  "#============================#",
+  "#============================#",
+  "##############################",
+];
+const KHO_VAN_PROPS = [
+  // Phòng trưởng nhóm: bàn, tủ hồ sơ, cây
+  [3, 2, 85, 1], [4, 2, 86, 1], [5, 2, 97, 1], [1, 1, 329, 1], [6, 5, 16, 1],
+  // Phòng họp: bàn dài, ghế
+  [10, 3, 0, 1], [11, 3, 1, 1], [12, 3, 2, 1], [10, 4, 162, 1], [11, 4, 163, 1], [12, 4, 164, 1], [15, 1, 17, 1],
+  // Khu bàn làm việc: bàn của bạn, bàn đồng nghiệp, máy in
+  [5, 10, 85, 1], [6, 10, 86, 1], [10, 10, 85, 1], [11, 10, 86, 1], [14, 8, 324, 1],
+  // Kho: các dãy kệ hàng
+  [19, 2, 329, 1], [20, 2, 330, 1], [23, 2, 329, 1], [24, 2, 330, 1], [27, 2, 329, 1],
+  [19, 6, 329, 1], [20, 6, 330, 1], [23, 6, 329, 1], [24, 6, 330, 1], [27, 6, 329, 1],
+];
+const KHO_VAN_DECOR = [[4, 2, 18], [6, 10, 18], [11, 3, 18]];
+
+const logisticsWorld = {
+  profession_id: "nhan-vien-logistics",
+  tile_size: 16,
+  tilesets: [...world.tilesets, { key: "site", image: "game/site/site.png", columns: SITE.length, spacing: 1 }],
+  maps: [
+    buildMap("kho-van", KHO_VAN, KHO_VAN_PROPS, KHO_VAN_DECOR, { x: 6, y: 11 }, SITE_FLOOR),
+  ],
+  npcs: [
+    { id: "truong-nhom", map: "kho-van", x: 8, y: 11, name: "Chị Ngân (trưởng nhóm)", sprite: C(379) },
+    { id: "truong-nhom-hop", map: "kho-van", x: 13, y: 5, name: "Chị Ngân (trưởng nhóm)", sprite: C(379) },
+    { id: "nhan-vien-kho", map: "kho-van", x: 21, y: 8, name: "Anh Lộc (nhân viên kho)", sprite: C(54, 17, 22) },
+    { id: "khach-hang", map: "kho-van", x: 9, y: 5, name: "Anh Tuấn (khách hàng)", sprite: C(433) },
+    { id: "tai-xe", map: "kho-van", x: 10, y: 13, name: "Tài xế xe tải", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "lg1-don-hang": { map: "kho-van", target: { x: 8, y: 11 }, npc: "truong-nhom", quest: "Trưởng nhóm ghé bàn giao bạn đơn hàng mới" },
+    "lg2-ho-so": { map: "kho-van", target: { x: 6, y: 11 }, quest: "Về bàn làm việc, phân loại giấy tờ khách gửi" },
+    "lg3-to-khai": { map: "kho-van", target: { x: 6, y: 11 }, quest: "Mở tờ khai nháp để soát lại" },
+    "lg4-hang-tre": { map: "kho-van", target: { x: 13, y: 5 }, npc: "truong-nhom-hop", quest: "Hãng vận chuyển báo trễ! Vào phòng họp báo trưởng nhóm" },
+    "lg5-chia-thoi-gian": { map: "kho-van", target: { x: 21, y: 8 }, npc: "nhan-vien-kho", quest: "Xuống kho, anh Lộc đang chờ kiểm hàng" },
+    "lg6-khai-gia-thap": { map: "kho-van", target: { x: 9, y: 5 }, npc: "khach-hang", quest: "Khách hàng chờ bạn trong phòng họp" },
+    "lg7-lech-so-kien": { map: "kho-van", target: { x: 21, y: 8 }, npc: "nhan-vien-kho", quest: "Xuống kho, anh Lộc báo số kiện lệch" },
+  },
+};
+writeFileSync(out("content/worlds/nhan-vien-logistics.json"), JSON.stringify(logisticsWorld) + "\n");
+
+// ---------- Chuyên viên phân tích dữ liệu (SPEC-029): văn phòng một công ty thương mại điện tử ----------
+// Dùng khung AGENCY: phòng họp trái trên, hành lang bảng số liệu giữa, phòng trưởng nhóm phải trên; khu bàn mở dưới (bàn của bạn giữa, khu marketing phải, góc pantry trái).
+const VAN_PHONG_DU_LIEU = AGENCY;
+const VAN_PHONG_DU_LIEU_PROPS = AGENCY_PROPS;
+const VAN_PHONG_DU_LIEU_DECOR = [
+  // Biểu đồ dán trên tường hành lang; báo cáo trên bàn.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [25, 10, 18],
+];
+
+const dataWorld = {
+  profession_id: "chuyen-vien-phan-tich-du-lieu",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("van-phong-du-lieu", VAN_PHONG_DU_LIEU, VAN_PHONG_DU_LIEU_PROPS, VAN_PHONG_DU_LIEU_DECOR, { x: 15, y: 12 }),
+  ],
+  npcs: [
+    { id: "truong-nhom-du-lieu", map: "van-phong-du-lieu", x: 17, y: 11, name: "Anh Duy (trưởng nhóm dữ liệu)", sprite: C(379) },
+    { id: "quan-ly-marketing", map: "van-phong-du-lieu", x: 3, y: 4, name: "Chị Vy (quản lý marketing)", sprite: C(433) },
+    { id: "truong-nhom-du-lieu-hop", map: "van-phong-du-lieu", x: 8, y: 4, name: "Anh Duy (trưởng nhóm dữ liệu)", sprite: C(379) },
+    { id: "ky-su-du-lieu", map: "van-phong-du-lieu", x: 13, y: 11, name: "Chị Hằng (kỹ sư dữ liệu)", sprite: C(54, 17, 22) },
+    { id: "dong-nghiep", map: "van-phong-du-lieu", x: 4, y: 13, name: "Đồng nghiệp ở pantry", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "da1-ke-hoach": { map: "van-phong-du-lieu", target: { x: 17, y: 11 }, npc: "truong-nhom-du-lieu", quest: "Trưởng nhóm ghé bàn giao bạn yêu cầu báo cáo" },
+    "da2-du-lieu-ca-nhan": { map: "van-phong-du-lieu", target: { x: 15, y: 11 }, quest: "Về bàn, xem lại các cột trong bảng đơn hàng" },
+    "da3-bieu-do": { map: "van-phong-du-lieu", target: { x: 3, y: 4 }, npc: "quan-ly-marketing", quest: "Quản lý marketing mời bạn vào phòng họp xem bản trình bày" },
+    "da4-doanh-so-giam": { map: "van-phong-du-lieu", target: { x: 13, y: 11 }, npc: "ky-su-du-lieu", quest: "Dashboard báo doanh số giảm! Hỏi kỹ sư dữ liệu" },
+    "da5-chia-thoi-gian": { map: "van-phong-du-lieu", target: { x: 15, y: 11 }, quest: "Về bàn, hoàn thiện báo cáo tháng" },
+    "da6-xin-file": { map: "van-phong-du-lieu", target: { x: 3, y: 4 }, npc: "quan-ly-marketing", quest: "Chị Vy mời bạn vào phòng họp" },
+    "da7-so-trung": { map: "van-phong-du-lieu", target: { x: 8, y: 4 }, npc: "truong-nhom-du-lieu-hop", quest: "Số liệu có vấn đề! Vào phòng họp báo trưởng nhóm" },
+  },
+};
+writeFileSync(out("content/worlds/chuyen-vien-phan-tich-du-lieu.json"), JSON.stringify(dataWorld) + "\n");
+
+// ---------- Chiến sĩ chữa cháy (SPEC-030): một đội chữa cháy và cứu nạn, cứu hộ khu vực ----------
+// Phòng trực ban trên trái, nhà xe chữa cháy nền bê tông giữa, sân tập đất bên phải; sân chung ở giữa; cơ sở được kiểm tra dưới trái, hiện trường dưới phải.
+const DOI_CHUA_CHAY = [
+  "##############################",
+  "#.......#cccccccccccc#;;;;;;;#",
+  "#.......#cccccccccccc#;;;;;;;#",
+  "#.......#cccccccccccc#;;;;;;;#",
+  "#.......#cccccccccccc#;;;;;;;#",
+  "#.......#cccccccccccc#;;;;;;;#",
+  "#.......#cccccccccccc;;;;;;;;#",
+  "####D####cccccccccccc#;;;;;;;#",
+  "#============================#",
+  "#============================#",
+  "#============================#",
+  "######D###############D#######",
+  "#.............#;;;;;;;;;;;;;;#",
+  "#.............#;;;;;;;;;;;;;;#",
+  "#.............#;;;;;;;;;;;;;;#",
+  "##############################",
+];
+const DOI_CHUA_CHAY_PROPS = [
+  // Phòng trực ban: bàn tiếp nhận tin báo, điện thoại, tủ hồ sơ
+  [2, 2, 85, 1], [3, 2, 86, 1], [4, 2, 97, 1], [6, 1, 329, 1], [1, 5, 17, 1],
+  // Nhà xe: hai xe chữa cháy (bàn dài làm khung), giá vòi
+  [11, 2, 0, 1], [12, 2, 1, 1], [13, 2, 2, 1],
+  [16, 2, 0, 1], [17, 2, 1, 1], [18, 2, 2, 1],
+  [20, 5, 329, 1],
+  // Sân tập: dụng cụ tập
+  [24, 2, 5, 1], [27, 2, 5, 1], [25, 5, 5, 1],
+  // Cơ sở được kiểm tra: kệ hàng, bàn
+  [2, 13, 329, 1], [3, 13, 330, 1], [9, 12, 85, 1], [10, 12, 86, 1],
+];
+const DOI_CHUA_CHAY_DECOR = [[3, 2, 18], [10, 12, 18]];
+
+const firefighterWorld = {
+  profession_id: "chien-si-chua-chay",
+  tile_size: 16,
+  tilesets: [...world.tilesets, { key: "site", image: "game/site/site.png", columns: SITE.length, spacing: 1 }],
+  maps: [
+    buildMap("doi-chua-chay", DOI_CHUA_CHAY, DOI_CHUA_CHAY_PROPS, DOI_CHUA_CHAY_DECOR, { x: 14, y: 5 }, SITE_FLOOR),
+  ],
+  npcs: [
+    { id: "doi-truong", map: "doi-chua-chay", x: 15, y: 4, name: "Anh Thắng (đội trưởng)", sprite: C(54, 17, 22) },
+    { id: "doi-truong-truc", map: "doi-chua-chay", x: 5, y: 4, name: "Anh Thắng (đội trưởng)", sprite: C(54, 17, 22) },
+    { id: "doi-truong-ht", map: "doi-chua-chay", x: 21, y: 13, name: "Anh Thắng (đội trưởng)", sprite: C(54, 17, 22) },
+    { id: "to-truong", map: "doi-chua-chay", x: 3, y: 4, name: "Anh Toàn (tổ trưởng)", sprite: C(379) },
+    { id: "to-truong-san", map: "doi-chua-chay", x: 25, y: 4, name: "Anh Toàn (tổ trưởng)", sprite: C(379) },
+    { id: "chu-co-so", map: "doi-chua-chay", x: 6, y: 13, name: "Ông Hải (chủ xưởng may)", sprite: C(433) },
+    { id: "nguoi-dan", map: "doi-chua-chay", x: 18, y: 9, name: "Người dân", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(0, 13, 20),
+  segments: {
+    "cc1-giao-ca": { map: "doi-chua-chay", target: { x: 15, y: 4 }, npc: "doi-truong", quest: "Ra nhà xe nhận ca, đội trưởng đang chờ" },
+    "cc2-kiem-tra-co-so": { map: "doi-chua-chay", target: { x: 6, y: 13 }, npc: "chu-co-so", quest: "Đi kiểm tra an toàn ở xưởng may" },
+    "cc3-bien-ban": { map: "doi-chua-chay", target: { x: 3, y: 4 }, npc: "to-truong", quest: "Về phòng trực ban soát biên bản cùng tổ trưởng" },
+    "cc4-tin-bao": { map: "doi-chua-chay", target: { x: 5, y: 4 }, npc: "doi-truong-truc", quest: "Chuông báo! Vào bàn tiếp nhận tin báo" },
+    "cc5-chia-thoi-gian": { map: "doi-chua-chay", target: { x: 25, y: 4 }, npc: "to-truong-san", quest: "Ra sân tập, tổ trưởng phân việc buổi chiều" },
+    "cc6-bo-qua": { map: "doi-chua-chay", target: { x: 6, y: 13 }, npc: "chu-co-so", quest: "Chủ xưởng may muốn gặp bạn" },
+    "cc7-hien-truong": { map: "doi-chua-chay", target: { x: 21, y: 13 }, npc: "doi-truong-ht", quest: "Xuất quân! Tới hiện trường gặp đội trưởng" },
+  },
+};
+writeFileSync(out("content/worlds/chien-si-chua-chay.json"), JSON.stringify(firefighterWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich,chuyen-vien-nhan-su,ky-thuat-vien-o-to,bac-si-da-khoa,tho-dien,nhan-vien-logistics,chuyen-vien-phan-tich-du-lieu,chien-si-chua-chay}.json");
