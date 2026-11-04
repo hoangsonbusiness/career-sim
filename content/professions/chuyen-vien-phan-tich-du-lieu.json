@@ -1,0 +1,529 @@
+{
+  "id": "chuyen-vien-phan-tich-du-lieu",
+  "name": "Chuyên viên phân tích dữ liệu",
+  "aliases": ["Data Analyst", "Nhà phân tích dữ liệu", "Chuyên viên phân tích kinh doanh (BI)"],
+  "group": { "label": "Công nghệ thông tin" },
+  "holland": ["I", "C", "E"],
+  "summary": "Thu thập, làm sạch, truy vấn và phân tích dữ liệu, rồi vẽ biểu đồ và giải thích con số để người quản lý ra quyết định; ngày nào cũng làm việc với số liệu, phải kiểm tra kỹ từng con số và tuân thủ quy định bảo vệ dữ liệu cá nhân.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/dan-su/luat-bao-ve-du-lieu-ca-nhan-2025-so-91-2025-qh15-405135-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-26",
+      "effective_date": "2026-01-01",
+      "note": "Đã đọc Điều 2, 3, 7, 15, 38. Chưa thấy văn bản hợp nhất hay luật sửa đổi. Danh mục cụ thể dữ liệu cá nhân cơ bản, nhạy cảm do Chính phủ ban hành; chưa đọc nghị định hướng dẫn."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật Dữ liệu số 60/2024/QH15 (Văn bản hợp nhất 42/VBHN-VPQH năm 2026)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/khoa-hoc/van-ban-hop-nhat-42-vbhn-vpqh-2026-hop-nhat-luat-du-lieu-430724-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-11-30",
+      "effective_date": "2025-07-01",
+      "note": "Bản hợp nhất 16/03/2026 (sửa bởi Luật An ninh mạng 116/2025/QH15). Đã đọc Điều 10, 12, 19."
+    },
+    {
+      "id": "S3",
+      "type": "official_stat",
+      "title": "Hỏi đáp về tuyển sinh 2026 — Khoa Khoa học dữ liệu và Trí tuệ nhân tạo, Đại học Kinh tế Quốc dân",
+      "publisher": "Đại học Kinh tế Quốc dân",
+      "url": "https://fda.neu.edu.vn/hoi-dap-ve-tuyen-sinh-2026/",
+      "accessed": "2026-11-04",
+      "note": "Khoa có chương trình Khoa học dữ liệu trong Tài chính và Thương mại điện tử (EP15), Trí tuệ nhân tạo (EP16), Công nghệ Logistics và Quản trị chuỗi cung ứng (EP20). Chỉ là một trường, dùng để minh họa."
+    },
+    {
+      "id": "S4",
+      "type": "market",
+      "title": "Báo cáo lương vị trí Data Analyst tại Việt Nam 2026 — TopCV",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/data-analyst",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "Tất cả mức kinh nghiệm, toàn quốc: mức lương trung bình 18,5 triệu, khoảng phổ biến 15–22 triệu đồng/tháng. Không đọc được số tách theo kinh nghiệm (biểu đồ không có chữ)."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Báo cáo Lương IT & Thị trường tuyển dụng IT Việt Nam 2025-2026 — ITviec",
+      "publisher": "ITviec",
+      "url": "https://itviec.com/bao-cao/luong-it-va-thi-truong-tuyen-dung-it-vietnam",
+      "accessed": "2026-11-04",
+      "note": "Bảng lương trung vị nhóm Data Analyst/Data Scientist/BI Analyst: tổng 40,65 triệu; 1–2 năm 23,8 triệu; 5–8 năm 42,5 triệu; không có số cho dưới 1 năm. Đoạn chữ trong báo cáo lại ghi 40,65 triệu là mức của nhóm 3–4 năm, mâu thuẫn với bảng; chỉ dùng số trong bảng. Mẫu là người làm IT, gộp cả Data Scientist."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Cựu sinh viên y dược chuyển nghề Data Analyst sau 8 tháng",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/cuu-sinh-vien-y-duoc-chuyen-nghe-data-analyst-sau-8-thang-4586130.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-03-27",
+      "note": "Lời kể của anh Trần Danh Ngân (Data Analyst ở một công ty y tế tại Hà Nội). Bài có nội dung quảng bá cho một trung tâm đào tạo trực tuyến; chỉ dùng phần trải nghiệm cá nhân."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Bạn có 'bén duyên' với ngành Data Analysis?",
+      "publisher": "Báo Tuổi Trẻ (Mực Tím)",
+      "url": "https://muctim.tuoitre.vn/ban-co-ben-duyen-voi-nganh-data-analysis-70162.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-03-04",
+      "note": "Chia sẻ của chị Phạm Mỹ Linh (trưởng bộ phận cấp cao trải nghiệm khách hàng, một công ty giao hàng) về kỹ năng cần có, và thầy Lê Đình Phong (trưởng khoa CNTT một trường đại học). Ý 'Việt Nam chưa đào tạo chính thức ngành này' đã cũ (năm 2026 đã có chương trình chính quy, xem S3) nên không dùng."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học chắc Toán, đặc biệt phần thống kê và xác suất; đó là công cụ chính của người phân tích dữ liệu.",
+        "audience": ["thcs", "thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập dùng bảng tính ghi lại chi tiêu hằng tuần rồi vẽ biểu đồ, xem bạn có thích tìm ra điều thú vị trong đó không.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Rèn Tiếng Anh từ sớm vì phần lớn tài liệu và công cụ dữ liệu dùng tiếng Anh.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Đã có chương trình đại học chính quy về khoa học dữ liệu; ví dụ năm 2026 Đại học Kinh tế Quốc dân tuyển chương trình Khoa học dữ liệu trong Tài chính và Thương mại điện tử.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Trang tuyển sinh chính thức của khoa; các trường khác xem đề án riêng."
+      },
+      {
+        "kind": "fact",
+        "text": "Người trong nghề kể có thể chuyển sang phân tích dữ liệu từ ngành khác bằng cách tự học thống kê và các khóa học về dữ liệu.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Chỉ được thu thập, xử lý dữ liệu cá nhân đúng phạm vi, mục đích cụ thể, rõ ràng; muốn cung cấp dữ liệu cá nhân cho tổ chức, cá nhân khác thì phải được người có dữ liệu đồng ý, trừ trường hợp luật quy định khác.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Bảo vệ dữ liệu cá nhân Điều 3 khoản 2; Điều 15 khoản 2 điểm b."
+      },
+      {
+        "kind": "fact",
+        "text": "Tổ chức, cá nhân được phân tích, tổng hợp dữ liệu từ nguồn dữ liệu được phép truy cập, sử dụng.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Luật Dữ liệu Điều 19 khoản 2."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "advice",
+        "text": "Công việc chủ yếu ở văn phòng, trước máy tính; hạn nộp báo cáo thường dồn vào cuối tuần, cuối tháng."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo TopCV năm 2026, lương Data Analyst phổ biến khoảng 15–22 triệu đồng/tháng (gộp mọi mức kinh nghiệm); báo cáo ITviec 2025–2026 ghi trung vị khoảng 23,8 triệu cho nhóm 1–2 năm kinh nghiệm (gộp cả Data Scientist).",
+        "source_ids": ["S4", "S5"],
+        "confidence": "single_source",
+        "note": "Hai nguồn đo khác nhau (một gộp mọi kinh nghiệm, một là dân IT có 1–2 năm) nên không coi là khớp nhau. ITviec không có số cho người dưới 1 năm."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Người làm nghề phải tổng hợp, phân tích, xử lý số liệu, vẽ biểu đồ, rồi trình bày kết quả sao cho đối tác và đồng nghiệp dễ hiểu.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Khánh — chuyên viên phân tích dữ liệu 1 năm kinh nghiệm ở Công ty thương mại điện tử Chợ Xanh (hư cấu), làm cùng một trưởng nhóm dữ liệu và một quản lý marketing.",
+    "setting": "Một ngày ở văn phòng: lên kế hoạch một báo cáo, phân loại trường dữ liệu, soát biểu đồ gây hiểu nhầm, doanh số giảm đột ngột, chiều làm sạch dữ liệu, lời xin file khách hàng và số liệu bị trùng ngay trước hạn nộp.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chinh_xac", "label": "Chính xác", "initial": 65 },
+      { "id": "bao_mat", "label": "Bảo mật", "initial": 70 }
+    ],
+    "segments": [
+      {
+        "id": "da1-ke-hoach",
+        "time": "08:30",
+        "title": "Một yêu cầu báo cáo mới",
+        "narrative": "Trưởng nhóm giao bạn làm báo cáo doanh số tháng cho ban giám đốc. Bạn lên kế hoạch trước khi mở dữ liệu.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người phân tích dữ liệu tổng hợp, phân tích, xử lý số liệu, vẽ biểu đồ để ra kết luận và trình bày dễ hiểu; dữ liệu dùng phải bảo đảm chính xác, đầy đủ, thống nhất.",
+          "source_ids": ["S7", "S2"],
+          "confidence": "verified",
+          "note": "Luật Dữ liệu Điều 12 khoản 1. Thứ tự các bước là minh họa khái quát."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước làm một báo cáo",
+          "steps": [
+            "Hỏi rõ người cần báo cáo muốn trả lời câu hỏi gì",
+            "Lấy dữ liệu từ nguồn được phép sử dụng",
+            "Làm sạch dữ liệu: bỏ trùng, kiểm tra số thiếu",
+            "Phân tích và vẽ biểu đồ",
+            "Kiểm tra lại con số rồi mới gửi báo cáo"
+          ],
+          "on_success": { "chinh_xac": 4 },
+          "on_fail": { "chinh_xac": -4 }
+        }
+      },
+      {
+        "id": "da2-du-lieu-ca-nhan",
+        "time": "09:30",
+        "title": "Trường nào là dữ liệu cá nhân?",
+        "narrative": "Bảng dữ liệu đơn hàng có nhiều cột. Trước khi chia sẻ cho nhóm khác, bạn phải biết cột nào là dữ liệu cá nhân.",
+        "basis": {
+          "kind": "fact",
+          "text": "Dữ liệu cá nhân là dữ liệu xác định hoặc giúp xác định một con người cụ thể; dữ liệu sau khi khử nhận dạng không còn là dữ liệu cá nhân.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Bảo vệ dữ liệu cá nhân Điều 2 khoản 1, 11. Thẻ 'Là dữ liệu cá nhân' đều gắn với người cụ thể (SPEC-029 R-1); không thẻ nào bị gọi là vi phạm."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp các cột: là dữ liệu cá nhân hay không",
+          "buckets": ["Là dữ liệu cá nhân", "Không phải"],
+          "items": [
+            { "text": "Họ tên kèm số điện thoại người mua", "bucket": "Là dữ liệu cá nhân" },
+            { "text": "Địa chỉ giao hàng của từng khách", "bucket": "Là dữ liệu cá nhân" },
+            { "text": "Lịch sử mua hàng gắn với tài khoản khách", "bucket": "Là dữ liệu cá nhân" },
+            { "text": "Tổng doanh số theo từng tỉnh", "bucket": "Không phải" },
+            { "text": "Giá bán trung bình của một sản phẩm", "bucket": "Không phải" },
+            { "text": "Bảng đã khử nhận dạng, không còn xác định được ai", "bucket": "Không phải" }
+          ],
+          "on_success": { "bao_mat": 5 },
+          "on_fail": { "bao_mat": -5 }
+        }
+      },
+      {
+        "id": "da3-bieu-do",
+        "time": "10:30",
+        "title": "Biểu đồ gây hiểu nhầm",
+        "narrative": "Quản lý marketing nhờ bạn xem trước bản trình bày sẽ đưa lên ban giám đốc. Vài biểu đồ trông lạ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người phân tích dữ liệu phải trình bày kết quả bằng cách trực quan, dễ hiểu; dữ liệu phải bảo đảm chính xác, toàn vẹn, thống nhất.",
+          "source_ids": ["S7", "S2"],
+          "confidence": "verified",
+          "note": "Luật Dữ liệu Điều 12 khoản 1. Đây là lỗi trình bày số liệu, không phải vi phạm pháp luật (SPEC-029 R-2). Số liệu trong game là hư cấu (R-3)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng có biểu đồ, số liệu gây hiểu nhầm",
+          "document": [
+            "BÁO CÁO THÁNG 10 — Chợ Xanh (số liệu hư cấu)",
+            "Biểu đồ cột: trục đứng bắt đầu từ 0, có ghi đơn vị",
+            "Biểu đồ tròn: các phần cộng lại thành 112%",
+            "Doanh số tăng 2% nhưng trục đứng bắt đầu từ 95",
+            "Ghi rõ nguồn dữ liệu và ngày lấy số liệu",
+            "Có chú thích màu cho từng nhóm sản phẩm"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Các phần của biểu đồ tròn phải cộng lại đúng 100%; 112% cho thấy số liệu bị trùng hoặc sai." },
+            { "line": 3, "explain": "Trục bị cắt khiến mức tăng nhỏ trông như rất lớn, người xem dễ hiểu nhầm." }
+          ],
+          "on_success": { "chinh_xac": 5 },
+          "on_fail": { "chinh_xac": -5 }
+        }
+      },
+      {
+        "id": "da4-doanh-so-giam",
+        "time": "11:30",
+        "title": "Doanh số giảm đột ngột",
+        "narrative": "Dashboard báo doanh số hôm qua giảm một nửa. Quản lý marketing hốt hoảng nhắn tin, bạn sang hỏi kỹ sư dữ liệu.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bảo đảm chất lượng dữ liệu là bảo đảm tính chính xác, hợp lệ, toàn vẹn, đầy đủ, cập nhật kịp thời, thống nhất của dữ liệu; người phân tích phải xử lý dữ liệu thô từ nhiều nguồn trước khi kết luận.",
+          "source_ids": ["S2", "S7"],
+          "confidence": "verified",
+          "note": "Luật Dữ liệu Điều 12 khoản 1."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn kiểm tra từ đâu?",
+          "options": [
+            {
+              "text": "Kiểm tra dữ liệu hôm qua đã cập nhật đủ chưa, rồi đối chiếu với hệ thống bán hàng",
+              "effect": { "chinh_xac": 5, "nang_luong": -2 },
+              "feedback": "Nhiều khi số 'giảm' chỉ vì dữ liệu chưa về đủ; kiểm tra nguồn trước giúp tránh báo động giả."
+            },
+            {
+              "text": "Báo ngay ban giám đốc là doanh số sụt mạnh",
+              "effect": { "chinh_xac": -5 },
+              "feedback": "Kết luận khi chưa kiểm tra có thể khiến cả công ty quyết định sai."
+            },
+            {
+              "text": "Xóa ngày hôm qua khỏi dashboard cho đỡ rối",
+              "effect": { "chinh_xac": -4 },
+              "feedback": "Giấu số liệu không giải quyết vấn đề, còn làm dữ liệu thiếu toàn vẹn."
+            }
+          ]
+        }
+      },
+      {
+        "id": "da5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều với dữ liệu",
+        "narrative": "Còn 3 giờ chiều để hoàn thiện báo cáo tháng: dữ liệu còn bẩn, phần phân tích mới làm một nửa, phần viết chưa bắt đầu.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người trong nghề cho rằng phân tích dữ liệu cần khả năng xử lý, phân tích và trình bày dữ liệu, biết lập trình để tự động hóa báo cáo và tính cẩn thận; một Data Analyst kể anh thích nghề vì được mày mò tìm logic giữa những con số.",
+          "source_ids": ["S7", "S6"],
+          "confidence": "verified",
+          "note": "Hai lời kể ở hai báo khác nhau."
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Làm sạch dữ liệu", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -2 } },
+            { "label": "Phân tích, vẽ biểu đồ", "effect_per_30min": { "chinh_xac": 1, "nang_luong": -2 } },
+            { "label": "Viết báo cáo", "effect_per_30min": { "chinh_xac": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "da6-xin-file",
+        "time": "15:30",
+        "title": "Lời xin file khách hàng",
+        "narrative": "Quản lý marketing gọi bạn vào phòng họp, muốn có ngay danh sách khách hàng để gửi cho một đối tác quảng cáo.",
+        "basis": {
+          "kind": "fact",
+          "text": "Chỉ được xử lý dữ liệu cá nhân đúng phạm vi, mục đích; cung cấp dữ liệu cá nhân cho tổ chức khác phải được người có dữ liệu đồng ý; luật cấm mua bán dữ liệu cá nhân và cấm cố ý làm lộ dữ liệu cá nhân.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Bảo vệ dữ liệu cá nhân Điều 3 khoản 2; Điều 7 khoản 6, 7; Điều 15 khoản 2 điểm b."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời quản lý marketing",
+          "npc": "Chị Vy (quản lý marketing)",
+          "turns": [
+            {
+              "npc_line": "Em xuất giúp chị file tên và số điện thoại toàn bộ khách nhé, chị gửi đối tác chạy quảng cáo.",
+              "replies": [
+                {
+                  "text": "Chị ơi, gửi dữ liệu khách cho bên khác phải được khách đồng ý, em hỏi trưởng nhóm đã ạ.",
+                  "effect": { "bao_mat": 4 },
+                  "feedback": "Cung cấp dữ liệu cá nhân cho bên khác cần sự đồng ý của người có dữ liệu."
+                },
+                {
+                  "text": "Dạ, em gửi chị ngay.",
+                  "effect": { "bao_mat": -6 },
+                  "feedback": "Gửi dữ liệu khách khi chưa được phép có thể làm lộ dữ liệu cá nhân — hành vi luật cấm."
+                }
+              ]
+            },
+            {
+              "npc_line": "Đối tác còn trả tiền cho mình mà, có sao đâu.",
+              "replies": [
+                {
+                  "text": "Nhận tiền để đưa dữ liệu khách là mua bán dữ liệu cá nhân, luật cấm chị ạ.",
+                  "effect": { "bao_mat": 4 },
+                  "feedback": "Bạn nhận ra rủi ro pháp lý và nói rõ với đồng nghiệp."
+                },
+                {
+                  "text": "Vậy em gửi nhưng chị đừng nói ai nhé.",
+                  "effect": { "bao_mat": -5 },
+                  "feedback": "Giấu đi không làm việc sai trở thành đúng."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế em giúp được gì cho chị?",
+              "replies": [
+                {
+                  "text": "Em làm số liệu tổng hợp theo nhóm khách, không có tên, số điện thoại, chị dùng nhé.",
+                  "effect": { "bao_mat": 3, "chinh_xac": 1, "nang_luong": -1 },
+                  "feedback": "Dữ liệu tổng hợp không xác định được ai vẫn giúp marketing làm việc."
+                },
+                {
+                  "text": "Chị tự hỏi bên IT đi ạ.",
+                  "effect": { "bao_mat": 1, "chinh_xac": -2 },
+                  "feedback": "Từ chối điều sai là đúng, nhưng gợi ý cách hợp pháp sẽ giúp đồng nghiệp hơn."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "da7-so-trung",
+        "time": "17:00",
+        "title": "Số liệu bị trùng trước hạn nộp",
+        "narrative": "Còn một giờ là hạn nộp báo cáo tháng. Bạn phát hiện số liệu tuần trước bị trùng, làm doanh số tháng cao hơn thực tế.",
+        "basis": {
+          "kind": "fact",
+          "text": "Dữ liệu phải bảo đảm tính chính xác, toàn vẹn, thống nhất; luật cấm cố ý cung cấp dữ liệu sai lệch theo quy định của pháp luật.",
+          "source_ids": ["S2"],
+          "confidence": "verified",
+          "note": "Luật Dữ liệu Điều 12 khoản 1; Điều 10 khoản 4."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì?",
+          "options": [
+            {
+              "text": "Báo trưởng nhóm ngay, sửa lỗi trùng và xin lùi hạn một chút để kiểm tra lại",
+              "effect": { "chinh_xac": 5, "nang_luong": -2 },
+              "feedback": "Báo cáo đúng muộn một chút tốt hơn báo cáo sai đúng giờ."
+            },
+            {
+              "text": "Cứ nộp, con số đẹp thì ai cũng vui",
+              "effect": { "chinh_xac": -6 },
+              "feedback": "Ban giám đốc có thể ra quyết định sai dựa trên con số không có thật."
+            },
+            {
+              "text": "Sửa vội rồi nộp luôn, không kiểm tra lại",
+              "effect": { "chinh_xac": -2, "nang_luong": 1 },
+              "feedback": "Sửa vội dễ sinh lỗi mới; luôn kiểm tra lại sau khi sửa."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có thích ngồi hàng giờ với bảng số liệu để tìm ra một quy luật không?",
+      "Bạn có kiên nhẫn soát lại từng con số trước khi gửi đi không?",
+      "Bạn có sẵn sàng học lập trình và tiếng Anh để làm nghề này không?",
+      "Nếu được nhờ gửi dữ liệu khách hàng cho người ngoài, bạn sẽ làm gì?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-du-lieu",
+        "title": "Sinh viên ngành dữ liệu / ngành liên quan",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Năm 2026 đã có chương trình đại học chính quy về khoa học dữ liệu, ví dụ ở Đại học Kinh tế Quốc dân.",
+            "source_ids": ["S3"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "thuc-tap-du-lieu",
+        "title": "Thực tập sinh / Junior Data Analyst",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Làm vài dự án nhỏ với dữ liệu thật công khai để có sản phẩm khi đi phỏng vấn."
+          }
+        ]
+      },
+      {
+        "id": "data-analyst",
+        "title": "Chuyên viên phân tích dữ liệu",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Nhà tuyển dụng quan tâm khả năng phân tích, lập trình, trình bày, đọc tài liệu tiếng Anh và tính cẩn thận.",
+            "source_ids": ["S7"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "truong-nhom-du-lieu",
+        "title": "Trưởng nhóm dữ liệu",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm, hiểu kinh doanh và biết hướng dẫn người mới."
+          }
+        ]
+      },
+      {
+        "id": "data-scientist",
+        "title": "Nhà khoa học dữ liệu / kỹ sư dữ liệu",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Học sâu hơn về thống kê, học máy hoặc hạ tầng dữ liệu để chuyển sang hướng chuyên sâu."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-du-lieu", "to": "thuc-tap-du-lieu", "type": "promotion" },
+      { "from": "thuc-tap-du-lieu", "to": "data-analyst", "type": "promotion" },
+      { "from": "data-analyst", "to": "truong-nhom-du-lieu", "type": "management" },
+      { "from": "data-analyst", "to": "data-scientist", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Mức lương cao hay được nhắc thường là của người đã có kinh nghiệm: báo cáo ITviec không có số cho người dưới 1 năm, còn TopCV ghi khoảng phổ biến 15–22 triệu đồng/tháng khi gộp mọi mức kinh nghiệm.",
+      "source_ids": ["S5", "S4"],
+      "confidence": "single_source",
+      "note": "Hai nguồn đo khác nhau; chưa có nguồn riêng cho lương khởi điểm."
+    },
+    {
+      "kind": "fact",
+      "text": "Phải học liên tục và cạnh tranh: nhà tuyển dụng đòi cả phân tích, lập trình, trình bày, tiếng Anh; người chuyển ngành kể phải nộp hồ sơ nhiều nơi mới được nhận.",
+      "source_ids": ["S7", "S6"],
+      "confidence": "verified",
+      "note": "Hai nguồn ở hai báo khác nhau."
+    },
+    {
+      "kind": "fact",
+      "text": "Chịu trách nhiệm với dữ liệu cá nhân: luật cấm mua bán, cố ý làm lộ hay làm mất dữ liệu cá nhân, nên một sơ suất khi chia sẻ file có thể gây hậu quả pháp lý.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Bảo vệ dữ liệu cá nhân Điều 7 khoản 6, 7."
+    },
+    {
+      "kind": "fact",
+      "text": "Công việc đòi hỏi ngồi hàng giờ soát, sửa lỗi số liệu; người không thích làm việc tỉ mỉ với con số sẽ dễ chán.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/01/2026, Luật Bảo vệ dữ liệu cá nhân có hiệu lực, nên doanh nghiệp càng cần người xử lý dữ liệu hiểu quy định.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Bảo vệ dữ liệu cá nhân Điều 38 khoản 1."
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm cách dùng công cụ AI để phân tích, nhưng luôn tự kiểm tra lại kết quả vì người chịu trách nhiệm cuối cùng là bạn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, fda.neu.edu.vn, TopCV, ITviec, VnExpress, Tuổi Trẻ Mực Tím)",
+    "scope_note": "Công ty, khách hàng, số liệu trong game đều hư cấu (SPEC-029 R-3). Lỗi ở phần soát biểu đồ là lỗi trình bày, không gọi là vi phạm (R-2). Chưa đọc nghị định hướng dẫn danh mục dữ liệu cá nhân; phần phân loại dữ liệu chỉ dựa vào định nghĩa ở Điều 2 Luật. Hai lời kể đều từ năm 2023, một bài có tính quảng bá."
+  }
+}
