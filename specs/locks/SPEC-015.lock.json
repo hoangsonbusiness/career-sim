@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-015",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-015\\duoc-si.test.mjs": "6cc3c830bcc1fc42"
+  }
+}

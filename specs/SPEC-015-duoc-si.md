@@ -2,7 +2,7 @@
 id: SPEC-015
 title: Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc)
 version: 3
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/duoc-si.json, content/worlds/duoc-si.json]
 owner: anh Son
