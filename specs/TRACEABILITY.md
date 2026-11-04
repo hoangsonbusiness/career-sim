@@ -18,6 +18,12 @@
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 2 | implemented | ✓ Son 2026-11-03 | [F3] | 11/11 |
+| [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
+| [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
+| [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -247,3 +253,77 @@
 | AC-014-09 | tests\spec-014\story.test.mjs — "AC-014-09 GamePlayer có thẻ Ngoài đời thật và màn kết mới" |
 | AC-014-10 | tests\spec-014\story.test.mjs — "AC-014-10 trang một ngày của 6 nghề có nút bắt đầu, không nh" |
 | AC-014-11 | tests\spec-014\story.test.mjs — "AC-014-11 không file test đã khóa nào bị sửa" |
+
+## SPEC-015 — Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc)
+
+| AC | Test |
+|---|---|
+| AC-015-01 | ❌ chưa có |
+| AC-015-02 | ❌ chưa có |
+| AC-015-03 | ❌ chưa có |
+| AC-015-04 | ❌ chưa có |
+| AC-015-05 | ❌ chưa có |
+| AC-015-06 | ❌ chưa có |
+| AC-015-07 | ❌ chưa có |
+
+## SPEC-016 — Gói nghề Luật sư (nội dung + bản đồ văn phòng luật)
+
+| AC | Test |
+|---|---|
+| AC-016-01 | ❌ chưa có |
+| AC-016-02 | ❌ chưa có |
+| AC-016-03 | ❌ chưa có |
+| AC-016-04 | ❌ chưa có |
+| AC-016-05 | ❌ chưa có |
+| AC-016-06 | ❌ chưa có |
+| AC-016-07 | ❌ chưa có |
+
+## SPEC-017 — Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio)
+
+| AC | Test |
+|---|---|
+| AC-017-01 | ❌ chưa có |
+| AC-017-02 | ❌ chưa có |
+| AC-017-03 | ❌ chưa có |
+| AC-017-04 | ❌ chưa có |
+| AC-017-05 | ❌ chưa có |
+| AC-017-06 | ❌ chưa có |
+| AC-017-07 | ❌ chưa có |
+
+## SPEC-018 — Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh)
+
+| AC | Test |
+|---|---|
+| AC-018-01 | ❌ chưa có |
+| AC-018-02 | ❌ chưa có |
+| AC-018-03 | ❌ chưa có |
+| AC-018-04 | ❌ chưa có |
+| AC-018-05 | ❌ chưa có |
+| AC-018-06 | ❌ chưa có |
+| AC-018-07 | ❌ chưa có |
+| AC-018-08 | ❌ chưa có |
+
+## SPEC-019 — Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp)
+
+| AC | Test |
+|---|---|
+| AC-019-01 | ❌ chưa có |
+| AC-019-02 | ❌ chưa có |
+| AC-019-03 | ❌ chưa có |
+| AC-019-04 | ❌ chưa có |
+| AC-019-05 | ❌ chưa có |
+| AC-019-06 | ❌ chưa có |
+| AC-019-07 | ❌ chưa có |
+| AC-019-08 | ❌ chưa có |
+
+## SPEC-020 — Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc)
+
+| AC | Test |
+|---|---|
+| AC-020-01 | ❌ chưa có |
+| AC-020-02 | ❌ chưa có |
+| AC-020-03 | ❌ chưa có |
+| AC-020-04 | ❌ chưa có |
+| AC-020-05 | ❌ chưa có |
+| AC-020-06 | ❌ chưa có |
+| AC-020-07 | ❌ chưa có |
