@@ -1,0 +1,547 @@
+{
+  "id": "thiet-ke-do-hoa",
+  "name": "Nhà thiết kế đồ họa",
+  "aliases": ["Graphic Designer", "Designer", "Thiết kế đồ họa"],
+  "group": { "label": "Nghệ thuật, Thiết kế & Sáng tạo" },
+  "holland": ["A", "E", "R"],
+  "summary": "Biến yêu cầu của khách thành hình ảnh: logo, bộ nhận diện, ấn phẩm in và nội dung số; làm theo brief, sửa theo phản hồi, chuẩn bị file đúng kỹ thuật và tôn trọng quyền tác giả.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Sở hữu trí tuệ số 50/2005/QH11 (Văn bản hợp nhất 155/VBHN-VPQH năm 2025)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/so-huu-tri-tue/van-ban-hop-nhat-155-vbhn-vpqh-nam-2025-do-van-phong-quoc-hoi-ban-hanh-hop-nhat-luat-so-huu-tri-tue-411282-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2005-11-29",
+      "effective_date": "2006-07-01",
+      "note": "Đã đọc Điều 6 khoản 1, Điều 14, Điều 20, Điều 27, Điều 28. Luật đã được sửa nhiều lần; lần gần nhất là Luật 131/2025/QH15 (S2), không sửa các điều này."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật số 131/2025/QH15 sửa đổi, bổ sung một số điều của Luật Sở hữu trí tuệ",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/so-huu-tri-tue/luat-so-huu-tri-tue-sua-doi-2025-so-131-2025-qh15-423358-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-04-01",
+      "note": "Đã đối chiếu danh sách điều bị sửa: phần quyền tác giả chỉ sửa Điều 15, 16, 22, 26, 33; không sửa Điều 6 khoản 1, 14, 20, 27."
+    },
+    {
+      "id": "S3",
+      "type": "reference",
+      "title": "File in ấn chuẩn 2026: định dạng, màu sắc, bleed, DPI",
+      "publisher": "In Sơn Nguyên",
+      "url": "https://insonnguyen.vn/nhung-dieu-can-biet-khi-chuan-bi-file-in-an/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-04-01",
+      "note": "Hướng dẫn kỹ thuật của một xưởng in."
+    },
+    {
+      "id": "S4",
+      "type": "reference",
+      "title": "Cách chuẩn bị file thiết kế chuẩn in ấn — tránh lỗi phổ biến",
+      "publisher": "In Nhanh HCM",
+      "url": "https://innhanhhcm.net/cach-chuan-bi-file-thiet-ke-chuan-in-an-tranh-loi-pho-bien-in-nhanh-hcm/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-04",
+      "note": "Hướng dẫn kỹ thuật của một xưởng in; độc lập với S3. Số mm tràn lề hai nơi ghi khác nhau nên nội dung không nêu con số."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Mức lương ngành Thiết kế đồ họa theo cấp bậc",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-luong/muc-luong-nganh-thiet-ke-do-hoa/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-20"
+    },
+    {
+      "id": "S6",
+      "type": "press",
+      "title": "Dùng AI biến tấu thiết kế của người khác thế nào thì bị xử lý hình sự?",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/dung-ai-bien-tau-thiet-ke-cua-nguoi-khac-the-nao-thi-bi-xu-ly-hinh-su-5083645.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-10",
+      "note": "Ý kiến của luật sư Trương Anh Tú và luật sư Mai Thị Thảo (TAT Law Firm)."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Không lương thưởng cố định, vì sao nhiều người trẻ chọn làm việc tự do?",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/khong-luong-thuong-co-dinh-vi-sao-nhieu-nguoi-tre-chon-lam-viec-tu-do-185260422194309065.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-04-23",
+      "note": "Lời kể của Phạm Ngọc Thanh Thư, freelancer trong lĩnh vực thiết kế, TP.HCM."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Concept artist: Những họa sĩ chơi đùa cùng ý tưởng",
+      "publisher": "Tuổi Trẻ Cuối Tuần",
+      "url": "https://cuoituan.tuoitre.vn/concept-artist-nhung-hoa-si-choi-dua-cung-y-tuong-20230113160734052.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-01-24",
+      "note": "Lời kể của Trần Minh Hải, họa sĩ ý tưởng (concept artist) — gần với nghề thiết kế đồ họa nhưng không trùng hẳn."
+    },
+    {
+      "id": "S9",
+      "type": "press",
+      "title": "Ngày càng có nhiều người làm việc tự do trên nền tảng số",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/ngay-cang-co-nhieu-nguoi-lam-viec-tu-do-tren-nen-tang-so-185251003140934982.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-10-03",
+      "note": "Lời kể của freelancer lập trình web và viết nội dung, không phải designer; dùng cho ý chung về làm tự do."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Vẽ thường xuyên, chụp ảnh, quan sát bao bì và biển hiệu quanh bạn để luyện mắt nhìn bố cục và màu sắc.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Thử kể một câu chuyện chỉ bằng hình ảnh; nghề này là truyền tải thông điệp, không chỉ vẽ cho đẹp.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Xem trường bạn nhắm tới có thi năng khiếu vẽ không, và luyện vẽ từ sớm nếu cần.",
+        "audience": ["thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Bắt đầu lưu lại những bài vẽ, thiết kế tốt nhất thành một bộ hồ sơ năng lực nhỏ.",
+        "audience": ["thpt", "sinh_vien"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Giai đoạn mới vào nghề, người làm thiết kế tập trung nắm quy trình thực tế: nhận brief, làm moodboard, dựng layout.",
+        "source_ids": ["S5"],
+        "confidence": "single_source"
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Quyền tác giả phát sinh ngay khi tác phẩm được tạo ra và thể hiện dưới một hình thức vật chất, dù đã đăng ký hay chưa.",
+        "source_ids": ["S1", "S2"],
+        "confidence": "verified",
+        "note": "Luật Sở hữu trí tuệ Điều 6 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Sao chép, làm tác phẩm phái sinh hay đưa tác phẩm của người khác lên mạng là quyền của tác giả hoặc chủ sở hữu; người khác muốn làm phải được cho phép.",
+        "source_ids": ["S1", "S2"],
+        "confidence": "verified",
+        "note": "Luật Sở hữu trí tuệ Điều 20 khoản 1, 2."
+      },
+      {
+        "kind": "fact",
+        "text": "Trước khi gửi in, file thiết kế cần dùng hệ màu in, ảnh đủ độ phân giải, có vùng tràn lề quanh mép cắt và chữ đã được chuyển thành đường nét.",
+        "source_ids": ["S3", "S4"],
+        "confidence": "verified",
+        "note": "Hai xưởng in độc lập ghi cùng yêu cầu; mức cụ thể tùy nhà in."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Một designer làm tự do kể có giai đoạn nhận nhiều dự án cùng lúc, làm từ sáng tới khuya, cuối tuần cũng không dám nghỉ vì sợ trễ hạn.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "note": "Lời kể cá nhân; designer làm ở studio có giờ giấc khác."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một bảng lương năm 2026, người mới vào nghề thiết kế đồ họa nhận khoảng 7–10 triệu đồng/tháng; junior 1–3 năm khoảng 10–16 triệu đồng/tháng.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "Tổng hợp từ thị trường tuyển dụng; thực tế tùy chuyên ngành, loại doanh nghiệp và portfolio."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Mặt bằng lương thiết kế ở TP.HCM và Hà Nội cao hơn các tỉnh; làm từ xa và freelance giúp designer ở tỉnh nhận dự án từ thành phố lớn hoặc nước ngoài.",
+        "source_ids": ["S5"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Vy — designer 2 năm kinh nghiệm tại Studio Nắng (hư cấu), đang làm bộ nhận diện cho Tiệm bánh Mộc (hư cấu).",
+    "setting": "Một ngày ở studio: đọc brief, soát file trước khi in, chọn tư liệu được phép dùng, khách đòi sửa thêm, khách gửi logo \"lấy cảm hứng\" và trưởng nhóm góp ý sát giờ giao.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "sang_tao", "label": "Sáng tạo", "initial": 65 },
+      { "id": "deadline", "label": "Áp lực deadline", "initial": 35 }
+    ],
+    "segments": [
+      {
+        "id": "tk1-doc-brief",
+        "time": "09:00",
+        "title": "Từ brief tới bản phác thảo",
+        "narrative": "Sáng đầu tuần, trưởng nhóm giao brief bộ nhận diện cho Tiệm bánh Mộc. Bạn bắt đầu từ việc hiểu khách cần gì.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quy trình thiết kế thực tế đi từ nhận brief, làm moodboard tới dựng layout.",
+          "source_ids": ["S5"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước từ brief tới phác thảo",
+          "steps": [
+            "Đọc brief: mục tiêu, khách hàng, hạn giao",
+            "Hỏi lại khách những điểm còn chưa rõ",
+            "Tìm tư liệu, làm moodboard",
+            "Phác thảo vài hướng ý tưởng",
+            "Chọn hướng tốt nhất và dựng layout"
+          ],
+          "on_success": { "sang_tao": 4, "deadline": -2 },
+          "on_fail": { "deadline": 4 }
+        }
+      },
+      {
+        "id": "tk2-soat-file-in",
+        "time": "10:30",
+        "title": "Soát file trước khi gửi in",
+        "narrative": "Nhà in hẹn nhận file trưa nay. Bạn mở lại file bao bì bánh và soát từng mục kỹ thuật trước khi gửi.",
+        "basis": {
+          "kind": "fact",
+          "text": "Các xưởng in yêu cầu file dùng hệ màu in, ảnh đủ độ phân giải, có vùng tràn lề và chữ đã chuyển thành đường nét.",
+          "source_ids": ["S3", "S4"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng file chưa đạt yêu cầu in",
+          "document": [
+            "FILE IN — Bao bì Tiệm bánh Mộc (hư cấu)",
+            "Hệ màu của file: RGB",
+            "Ảnh nền: độ phân giải thấp, vỡ hạt khi phóng to",
+            "Vùng tràn lề quanh mép cắt: không có",
+            "Chữ: chưa chuyển thành đường nét (outline)",
+            "Kích thước thành phẩm: đúng như nhà in yêu cầu",
+            "Định dạng xuất: PDF"
+          ],
+          "errors": [
+            { "line": 1, "explain": "File in cần dùng hệ màu in CMYK, không phải RGB của màn hình." },
+            { "line": 2, "explain": "Ảnh độ phân giải thấp sẽ bị mờ, vỡ khi in." },
+            { "line": 3, "explain": "Thiếu vùng tràn lề thì khi cắt dễ lộ viền trắng ở mép." },
+            { "line": 4, "explain": "Chữ chưa chuyển thành nét có thể bị lỗi phông ở máy nhà in." }
+          ],
+          "on_success": { "sang_tao": 2, "deadline": -3 },
+          "on_fail": { "deadline": 5 }
+        }
+      },
+      {
+        "id": "tk3-xep-tu-lieu",
+        "time": "11:30",
+        "title": "Chọn tư liệu được phép dùng",
+        "narrative": "Trên bảng moodboard có đủ loại ảnh và hình vẽ. Bạn tách những gì dùng được ngay khỏi những gì phải xin phép.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quyền tác giả phát sinh khi tác phẩm được tạo ra; sao chép hay làm tác phẩm phái sinh từ tác phẩm của người khác phải được tác giả hoặc chủ sở hữu cho phép.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified",
+          "note": "Luật Sở hữu trí tuệ Điều 6 khoản 1, Điều 20."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp tư liệu: dùng được hay phải xin phép",
+          "buckets": ["Dùng được", "Phải xin phép trước"],
+          "items": [
+            { "text": "Ảnh bánh do chính bạn chụp cho dự án", "bucket": "Dùng được" },
+            { "text": "Bản phác thảo nhóm bạn tự vẽ cho dự án", "bucket": "Dùng được" },
+            { "text": "Ảnh tải trên mạng, không rõ ai chụp", "bucket": "Phải xin phép trước" },
+            { "text": "Hình minh họa của một họa sĩ khác đăng trên mạng", "bucket": "Phải xin phép trước" },
+            { "text": "Thiết kế của người khác, bạn chỉ đổi màu rồi dùng", "bucket": "Phải xin phép trước" }
+          ],
+          "on_success": { "sang_tao": 3, "deadline": -1 },
+          "on_fail": { "sang_tao": -3, "deadline": 3 }
+        }
+      },
+      {
+        "id": "tk4-khach-doi-sua",
+        "time": "13:30",
+        "title": "Khách đòi sửa thêm lần nữa",
+        "narrative": "Đầu giờ chiều, chủ tiệm bánh tới phòng họp, muốn sửa thêm dù hai bên đã chốt số lần sửa từ trước.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người làm thiết kế kể chịu áp lực thời gian lớn, có nơi ép hạn rất gấp và phải gửi khách nhiều phương án để chọn.",
+          "source_ids": ["S8"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với khách về yêu cầu sửa",
+          "npc": "Chủ tiệm bánh",
+          "turns": [
+            {
+              "npc_line": "Em sửa thêm lần nữa nhé, đổi hết màu sang xanh lá.",
+              "replies": [
+                {
+                  "text": "Dạ, mình đã chốt số lần sửa; lần này em báo thêm phí và thời gian ạ.",
+                  "effect": { "sang_tao": 1, "deadline": -2 },
+                  "feedback": "Nói rõ phạm vi đã thỏa thuận giúp hai bên tránh sửa mãi không dừng."
+                },
+                {
+                  "text": "Dạ em sửa ngay, bao nhiêu lần cũng được.",
+                  "effect": { "deadline": 4, "nang_luong": -2 },
+                  "feedback": "Nhận sửa không giới hạn dễ khiến bạn trễ việc khác và phải làm thêm giờ."
+                }
+              ]
+            },
+            {
+              "npc_line": "Nói thật là tôi chưa ưng, mà cũng chưa biết mình muốn gì.",
+              "replies": [
+                {
+                  "text": "Em gửi anh hai, ba hướng kèm lý do, anh chọn hướng gần ý nhất.",
+                  "effect": { "sang_tao": 2, "nang_luong": -1 },
+                  "feedback": "Đưa vài phương án có lý do giúp khách nói ra điều họ thật sự muốn."
+                },
+                {
+                  "text": "Vậy anh tự nghĩ rồi báo em sau.",
+                  "effect": { "deadline": 3 },
+                  "feedback": "Đẩy việc lại cho khách làm dự án đứng yên, càng sát hạn càng gấp."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thứ Sáu tôi cần bản cuối nhé.",
+              "replies": [
+                {
+                  "text": "Dạ, nếu hôm nay chốt hướng thì thứ Sáu em giao kịp.",
+                  "effect": { "deadline": -2 },
+                  "feedback": "Gắn hạn giao với mốc chốt ý giúp lịch làm việc rõ ràng."
+                },
+                {
+                  "text": "Dạ em sẽ cố, chắc phải thức đêm.",
+                  "effect": { "nang_luong": -3, "deadline": 2 },
+                  "feedback": "Hứa bằng mọi giá thường đổi lại bằng sức khỏe và chất lượng bản thiết kế."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "tk5-lay-cam-hung",
+        "time": "15:00",
+        "title": "Logo \"lấy cảm hứng\" giống hệt logo khác",
+        "narrative": "Khách gửi logo của một tiệm bánh khác, nhờ bạn làm \"na ná\" cho tiệm mình. Không có đáp án nào thật dễ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Tác phẩm được bảo hộ phải do tác giả tự sáng tạo, không sao chép; ranh giới giữa học hỏi ý tưởng và xâm phạm quyền tác giả vẫn đang được tranh luận.",
+          "source_ids": ["S1", "S6"],
+          "confidence": "verified",
+          "note": "Luật Sở hữu trí tuệ Điều 14 khoản 3; tranh luận về ranh giới theo ý kiến luật sư trong S6. Theo SPEC-017 R-2, tình huống này không có đáp án đúng/sai: mọi lựa chọn chỉ có tác động nhỏ và phản hồi nêu đánh đổi."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn trả lời yêu cầu làm \"na ná\" thế nào?",
+          "options": [
+            {
+              "text": "Giải thích rủi ro bản quyền và đề xuất một ý tưởng riêng cho tiệm",
+              "effect": { "sang_tao": 2, "deadline": 1 },
+              "feedback": "Tự sáng tạo giảm rủi ro bản quyền, đổi lại tốn thêm thời gian thuyết phục khách."
+            },
+            {
+              "text": "Làm na ná theo mẫu khách gửi, chỉnh khác vài chi tiết",
+              "effect": { "sang_tao": -1, "deadline": -1 },
+              "feedback": "Nhanh hơn, nhưng nếu vẫn giữ yếu tố sáng tạo cốt lõi của bản gốc thì có thể bị coi là xâm phạm."
+            },
+            {
+              "text": "Hỏi trưởng nhóm và người có chuyên môn pháp lý trước khi nhận",
+              "effect": { "deadline": 1, "nang_luong": -1 },
+              "feedback": "Quyết định có căn cứ hơn, nhưng làm chậm tiến độ của cả nhóm."
+            }
+          ]
+        }
+      },
+      {
+        "id": "tk6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia thời gian cuối chiều",
+        "narrative": "Còn vài giờ trước khi tan. Bạn chia thời gian giữa thiết kế bản mới, sửa theo phản hồi và chuẩn bị file.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một designer kể có lúc nhận nhiều dự án cùng lúc, làm từ sáng tới khuya và cuối tuần cũng không dám nghỉ vì sợ trễ hạn.",
+          "source_ids": ["S7"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian cuối chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Thiết kế bản mới", "effect_per_30min": { "sang_tao": 2, "nang_luong": -2 } },
+            { "label": "Sửa theo phản hồi", "effect_per_30min": { "deadline": -2, "nang_luong": -1 } },
+            { "label": "Chuẩn bị file in", "effect_per_30min": { "deadline": -1, "nang_luong": -1 } },
+            { "label": "Nghỉ ngơi, đi lại", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "tk7-truong-nhom-gop-y",
+        "time": "18:30",
+        "title": "Trưởng nhóm chê bản thiết kế sát giờ giao",
+        "narrative": "Gần giờ giao, trưởng nhóm xem bản thiết kế và nói thẳng: bố cục rối, chữ khó đọc.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người làm thiết kế kể áp lực thời gian rất lớn, có nơi ép thời hạn đòi ra sản phẩm rất gấp.",
+          "source_ids": ["S8"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn nhận góp ý của trưởng nhóm thế nào?",
+          "options": [
+            {
+              "text": "Hỏi rõ điểm cần sửa, ưu tiên sửa phần quan trọng nhất trước giờ giao",
+              "effect": { "sang_tao": 3, "deadline": 1 },
+              "feedback": "Nhận phản hồi cụ thể và sửa có ưu tiên giúp bản giao tốt hơn trong thời gian ngắn."
+            },
+            {
+              "text": "Cãi lại vì cho rằng trưởng nhóm không hiểu ý tưởng",
+              "effect": { "sang_tao": -2, "deadline": 3 },
+              "feedback": "Tranh cãi sát giờ giao tốn thời gian mà bản thiết kế vẫn chưa tốt hơn."
+            },
+            {
+              "text": "Giao luôn bản cũ, chuyện sửa để mai tính",
+              "effect": { "sang_tao": -3 },
+              "feedback": "Giao bản còn lỗi đã biết có thể làm khách mất niềm tin vào cả nhóm."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có chịu được việc sửa đi sửa lại một thiết kế mình đã thấy ưng không?",
+      "Nếu khách nhờ làm \"na ná\" sản phẩm của người khác, bạn sẽ nói gì?",
+      "Bạn thích làm ở studio có giờ giấc rõ ràng hay làm tự do với thu nhập lúc nhiều lúc ít?",
+      "Ngoài thiết kế đồ họa, bạn muốn thử thêm UI/UX, motion hay minh họa?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "fresher-designer",
+        "title": "Thực tập / Fresher designer",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Giai đoạn đầu tập trung nắm quy trình thực tế: nhận brief, làm moodboard, dựng layout.",
+            "source_ids": ["S5"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "junior-designer",
+        "title": "Junior Graphic Designer",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Làm chủ quy trình từ brief tới file in, tự xử lý phản hồi của khách mà không cần hướng dẫn từng bước."
+          }
+        ]
+      },
+      {
+        "id": "senior-designer",
+        "title": "Senior Designer",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Chuyên sâu một mảng (nhận diện, bao bì, UI, motion) và hướng dẫn được người mới."
+          }
+        ]
+      },
+      {
+        "id": "art-director",
+        "title": "Art Director / Creative Director",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Định hướng hình ảnh cho cả dự án, làm việc trực tiếp với khách và dẫn dắt nhóm thiết kế."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "fresher-designer", "to": "junior-designer", "type": "promotion" },
+      { "from": "junior-designer", "to": "senior-designer", "type": "promotion" },
+      { "from": "senior-designer", "to": "art-director", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Làm tự do không có lương cứng: một designer kể có giai đoạn gần cả tháng không có dự án mới.",
+      "source_ids": ["S7"],
+      "confidence": "single_source",
+      "note": "Lời kể cá nhân."
+    },
+    {
+      "kind": "fact",
+      "text": "Khi nhiều dự án dồn cùng lúc, người làm tự do phải làm khuya, xuyên đêm hay cả cuối tuần để kịp hạn.",
+      "source_ids": ["S7", "S9"],
+      "confidence": "single_source",
+      "note": "S7 là designer; S9 là freelancer ngành khác, nên không coi là hai nguồn cùng nghề khớp nhau."
+    },
+    {
+      "kind": "fact",
+      "text": "Áp lực thời gian lớn: có nơi ép hạn rất gấp và đòi gửi khách nhiều phương án để chọn.",
+      "source_ids": ["S8"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Dùng tác phẩm của người khác khi chưa được phép là xâm phạm quyền tác giả; dùng AI để biến tấu cũng không làm mất trách nhiệm pháp lý.",
+      "source_ids": ["S1", "S6"],
+      "confidence": "verified",
+      "note": "Luật Sở hữu trí tuệ Điều 28; vụ việc và ý kiến luật sư trong S6."
+    },
+    {
+      "kind": "fact",
+      "text": "Lương lúc mới vào nghề thấp hơn nhiều so với designer có kinh nghiệm, và phụ thuộc nhiều vào portfolio.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Designer kết hợp được nhiều kỹ năng như thiết kế đồ họa với UI/UX hay motion graphics thường tăng thu nhập nhanh hơn.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Học cách dùng công cụ AI có trách nhiệm: biết rõ nguồn tư liệu đầu vào và giữ dấu ấn sáng tạo của riêng bạn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, CareerLink, VnExpress, Thanh Niên, Tuổi Trẻ, hướng dẫn kỹ thuật của hai xưởng in)",
+    "scope_note": "Bối cảnh designer 1–2 năm kinh nghiệm tại studio nhỏ; mọi thương hiệu, logo, tác phẩm trong nội dung là hư cấu (SPEC-017 R-3). Tình huống \"lấy cảm hứng\" không chấm đúng/sai (R-2)."
+  }
+}

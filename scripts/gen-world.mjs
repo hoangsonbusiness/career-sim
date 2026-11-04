@@ -594,4 +594,51 @@ const lawWorld = {
 };
 writeFileSync(out("content/worlds/luat-su.json"), JSON.stringify(lawWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su}.json");
+// ---------- Nhà thiết kế đồ họa (SPEC-017): một studio nhỏ ----------
+// Phòng họp trái, hành lang có bảng moodboard giữa, phòng trưởng nhóm phải, khu bàn làm việc phía dưới.
+const STUDIO = AGENCY;
+const STUDIO_PROPS = [
+  // Phòng họp: bàn dài, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng trưởng nhóm: bàn, kệ mẫu in, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn làm việc: bàn của bạn, bàn đồng nghiệp in ấn, kệ giấy mẫu
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [24, 10, 85, 1], [25, 10, 86, 1],
+  [2, 10, 329, 1], [3, 10, 330, 1], [28, 14, 17, 1],
+];
+const STUDIO_DECOR = [
+  // Bảng moodboard ghép từ ảnh, mẫu màu trên tường hành lang.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [25, 10, 18],
+];
+
+const designWorld = {
+  profession_id: "thiet-ke-do-hoa",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("studio", STUDIO, STUDIO_PROPS, STUDIO_DECOR, { x: 15, y: 13 }),
+  ],
+  npcs: [
+    { id: "truong-nhom", map: "studio", x: 22, y: 4, name: "Trưởng nhóm", sprite: C(379) },
+    { id: "khach-hang", map: "studio", x: 3, y: 4, name: "Chủ tiệm bánh", sprite: C(433) },
+    { id: "dong-nghiep-in", map: "studio", x: 24, y: 11, name: "Đồng nghiệp in ấn", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "tk1-doc-brief": { map: "studio", target: { x: 22, y: 4 }, npc: "truong-nhom", quest: "Sang phòng trưởng nhóm nhận brief" },
+    "tk2-soat-file-in": { map: "studio", target: { x: 15, y: 10 }, quest: "Về bàn, soát file trước khi gửi in" },
+    "tk3-xep-tu-lieu": { map: "studio", target: { x: 12, y: 3 }, quest: "Tới bảng moodboard, chọn tư liệu được phép dùng" },
+    "tk4-khach-doi-sua": { map: "studio", target: { x: 3, y: 4 }, npc: "khach-hang", quest: "Chủ tiệm bánh đang chờ ở phòng họp" },
+    "tk5-lay-cam-hung": { map: "studio", target: { x: 15, y: 10 }, quest: "Khách vừa gửi một logo mẫu, về bàn xem" },
+    "tk6-chia-thoi-gian": { map: "studio", target: { x: 15, y: 10 }, quest: "Chia thời gian cho các việc cuối chiều" },
+    "tk7-truong-nhom-gop-y": { map: "studio", target: { x: 22, y: 4 }, npc: "truong-nhom", quest: "Mang bản thiết kế sang cho trưởng nhóm xem" },
+  },
+};
+writeFileSync(out("content/worlds/thiet-ke-do-hoa.json"), JSON.stringify(designWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa}.json");
