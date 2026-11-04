@@ -54,7 +54,7 @@ created: 2026-11-04
 - R-7. Phần 6: `time_budget`, `budget_min = 180`; `effect_per_30min` minh họa, không kèm số thực tế trong narrative.
 
 ### 3.4 Bản đồ
-- R-8. Bản đồ `bep_nha_hang` PHẢI có: khu món nóng (spawn), khu sơ chế, kho lạnh, quầy ra món. Một bản đồ.
+- R-8. Bản đồ `bep-nha-hang` PHẢI có: khu món nóng (spawn), khu sơ chế, kho lạnh, quầy ra món. Một bản đồ.
 - R-9. NPC: bếp trưởng (phần 1, 5), nhân viên phục vụ (phần 4, 7), phụ bếp (trang trí).
 
 ### 3.5 Lỗi
