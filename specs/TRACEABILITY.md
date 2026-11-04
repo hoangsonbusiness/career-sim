@@ -24,11 +24,11 @@
 | [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-021](SPEC-021-giao-vien-mam-non.md) Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-022](SPEC-022-phong-vien.md) Gói nghề Phóng viên (nội dung + bản đồ tòa soạn) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-021](SPEC-021-giao-vien-mam-non.md) Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-022](SPEC-022-phong-vien.md) Gói nghề Phóng viên (nội dung + bản đồ tòa soạn) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -349,46 +349,46 @@
 
 | AC | Test |
 |---|---|
-| AC-022-01 | ❌ chưa có |
-| AC-022-02 | ❌ chưa có |
-| AC-022-03 | ❌ chưa có |
-| AC-022-04 | ❌ chưa có |
-| AC-022-05 | ❌ chưa có |
-| AC-022-06 | ❌ chưa có |
-| AC-022-07 | ❌ chưa có |
+| AC-022-01 | tests\spec-022\phong-vien.test.mjs — "AC-022-01 hồ sơ Phóng viên qua validate" |
+| AC-022-02 | tests\spec-022\phong-vien.test.mjs — "AC-022-02 bản đồ Phóng viên qua validate:world và chỉ có một" |
+| AC-022-03 | tests\spec-022\phong-vien.test.mjs — "AC-022-03 gói Phóng viên đạt check:pack" |
+| AC-022-04 | tests\spec-022\phong-vien.test.mjs — "AC-022-04 chơi hết ngày Phóng viên tới done" |
+| AC-022-05 | tests\spec-022\phong-vien.test.mjs — "AC-022-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-022-06 | tests\spec-022\phong-vien.test.mjs — "AC-022-06 phần 5 chia đúng 120 phút bằng time_budget" |
+| AC-022-07 | tests\spec-022\phong-vien.test.mjs — "AC-022-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-023 — Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan)
 
 | AC | Test |
 |---|---|
-| AC-023-01 | ❌ chưa có |
-| AC-023-02 | ❌ chưa có |
-| AC-023-03 | ❌ chưa có |
-| AC-023-04 | ❌ chưa có |
-| AC-023-05 | ❌ chưa có |
-| AC-023-06 | ❌ chưa có |
-| AC-023-07 | ❌ chưa có |
+| AC-023-01 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-01 hồ sơ Hướng dẫn viên du lịch qua validate" |
+| AC-023-02 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-02 bản đồ Hướng dẫn viên du lịch qua validate:world v" |
+| AC-023-03 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-03 gói Hướng dẫn viên du lịch đạt check:pack" |
+| AC-023-04 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-04 chơi hết ngày Hướng dẫn viên du lịch tới done" |
+| AC-023-05 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-023-06 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-06 phần 5 chia đúng 120 phút bằng time_budget" |
+| AC-023-07 | tests\spec-023\huong-dan-vien-du-lich.test.mjs — "AC-023-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-024 — Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự)
 
 | AC | Test |
 |---|---|
-| AC-024-01 | ❌ chưa có |
-| AC-024-02 | ❌ chưa có |
-| AC-024-03 | ❌ chưa có |
-| AC-024-04 | ❌ chưa có |
-| AC-024-05 | ❌ chưa có |
-| AC-024-06 | ❌ chưa có |
-| AC-024-07 | ❌ chưa có |
+| AC-024-01 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-01 hồ sơ Chuyên viên nhân sự qua validate" |
+| AC-024-02 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-02 bản đồ Chuyên viên nhân sự qua validate:world và c" |
+| AC-024-03 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-03 gói Chuyên viên nhân sự đạt check:pack" |
+| AC-024-04 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-04 chơi hết ngày Chuyên viên nhân sự tới done" |
+| AC-024-05 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-024-06 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-06 phần 6 chia đúng 120 phút bằng time_budget" |
+| AC-024-07 | tests\spec-024\chuyen-vien-nhan-su.test.mjs — "AC-024-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-025 — Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ)
 
 | AC | Test |
 |---|---|
-| AC-025-01 | ❌ chưa có |
-| AC-025-02 | ❌ chưa có |
-| AC-025-03 | ❌ chưa có |
-| AC-025-04 | ❌ chưa có |
-| AC-025-05 | ❌ chưa có |
-| AC-025-06 | ❌ chưa có |
-| AC-025-07 | ❌ chưa có |
+| AC-025-01 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-01 hồ sơ Kỹ thuật viên ô tô qua validate" |
+| AC-025-02 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-02 bản đồ Kỹ thuật viên ô tô qua validate:world và ch" |
+| AC-025-03 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-03 gói Kỹ thuật viên ô tô đạt check:pack" |
+| AC-025-04 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-04 chơi hết ngày Kỹ thuật viên ô tô tới done" |
+| AC-025-05 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-025-06 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-025-07 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-07 bản build có trang hồ sơ và trang màn chơi" |

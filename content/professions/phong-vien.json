@@ -1,0 +1,536 @@
+{
+  "id": "phong-vien",
+  "name": "Phóng viên",
+  "aliases": ["Nhà báo", "Phóng viên báo điện tử", "Reporter", "Journalist"],
+  "group": { "label": "Truyền thông & Báo chí" },
+  "holland": ["A", "S", "E"],
+  "summary": "Tìm đề tài, đi hiện trường, phỏng vấn, kiểm chứng thông tin rồi viết, quay, dựng thành tác phẩm báo chí; chịu trách nhiệm trước pháp luật về từng thông tin mình đưa ra và phải cải chính nếu đưa sai.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Báo chí số 126/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/chinh-sach/luat-bao-chi-2025-so-126-2025-qh15-422610-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-07-01",
+      "note": "Thay Luật Báo chí 103/2016/QH13. Đã đọc Điều 8, 27, 28, 33, 50. Theo Điều 50 khoản 3, điều kiện cấp thẻ lần đầu phải qua lớp bồi dưỡng nghiệp vụ, đạo đức nghề nghiệp có hiệu lực từ 01/01/2027."
+    },
+    {
+      "id": "S2",
+      "type": "official_stat",
+      "title": "Quy định đạo đức nghề nghiệp người làm báo Việt Nam (Quyết định 483/QĐ-HNBVN)",
+      "publisher": "Hội Nhà báo Việt Nam / Báo Nhân Dân",
+      "url": "https://nhandan.vn/10-dieu-quy-dinh-dao-duc-nghe-nghiep-nguoi-lam-bao-viet-nam-post885757.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2016-12-16",
+      "note": "Văn bản của tổ chức chính trị - xã hội nghề nghiệp, không phải văn bản pháp luật nên ghi official_stat (anh Son chốt khi duyệt SPEC-022). Hiệu lực từ 01/01/2017. Luật Báo chí 2025 Điều 27 khoản 3 điểm c buộc nhà báo tuân thủ quy định đạo đức nghề nghiệp."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Nghị định 237/2026/NĐ-CP quy định chi tiết thi hành một số điều của Luật Báo chí",
+      "publisher": "Chính phủ / Báo Tuổi Trẻ (tóm tắt)",
+      "url": "https://tuoitre.vn/plo/nhung-diem-moi-dang-chu-y-cua-nghi-dinh-huong-dan-luat-bao-chi-2025-109913242.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-26",
+      "effective_date": "2026-07-01",
+      "note": "CHƯA đọc toàn văn nghị định; nội dung lấy từ bài tóm tắt của Tuổi Trẻ ngày 28/06/2026. Ngày ban hành 26/06/2026 theo thuvienphapluat.vn. Fact dùng nguồn này để single_source."
+    },
+    {
+      "id": "S4",
+      "type": "market",
+      "title": "Tin tuyển dụng Phóng viên trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-phong-vien",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "Chỉ có 4 tin; 2 tin ghi lương (12–17 triệu, Hà Nội, 3 năm kinh nghiệm; 10–18 triệu, TP.HCM, 1 năm), 2 tin ghi thỏa thuận. Đều là công ty truyền thông, chưa chắc là cơ quan báo chí. Trang tra cứu lương 'phóng viên' của TopCV không có dữ liệu."
+    },
+    {
+      "id": "S5",
+      "type": "testimony",
+      "title": "Áp lực của nghề báo",
+      "publisher": "Báo Đắk Lắk",
+      "url": "https://baodaklak.vn/van-hoa-xa-hoi/202606/ap-luc-cua-nghe-bao-9934624/",
+      "accessed": "2026-11-04",
+      "note": "Đăng tháng 6/2026 (theo đường dẫn). Chia sẻ của phóng viên Cao Minh Thông và quay phim Đặng Trung Kiên (Báo và Phát thanh, Truyền hình Đắk Lắk) khi tác nghiệp mưa lũ tháng 11/2025 và các sự kiện lớn."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Phóng viên trẻ với những trải nghiệm nuôi lớn đam mê làm báo",
+      "publisher": "Báo Lao Động",
+      "url": "https://laodong.vn/ban-doc/phong-vien-tre-voi-nhung-trai-nghiem-nuoi-lon-dam-me-lam-bao-1750666.ldo",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-14",
+      "note": "Chia sẻ của các phóng viên Báo Lao Động: Mỹ Linh, Ngọc Lê, Việt Anh."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Đọc báo mỗi ngày và tập viết lại một tin ngắn bằng lời của mình; thử làm báo tường hay kênh tin của lớp.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập đặt câu hỏi và hỏi lại người khác để chắc mình hiểu đúng — kỹ năng phỏng vấn bắt đầu từ đó.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Học tốt Ngữ văn và một ngoại ngữ; tập chụp ảnh, quay video ngắn bằng điện thoại vì phóng viên ngày nay thường phải làm cả hình ảnh.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Để được cấp thẻ nhà báo, phóng viên cần bằng đại học trở lên và lần đầu phải có ít nhất 02 năm công tác liên tục tại cơ quan báo chí đề nghị cấp thẻ.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 28 khoản 2 điểm b, c. Một số trường hợp (quay phim truyền hình, người dân tộc thiểu số làm báo tiếng dân tộc) chỉ cần cao đẳng."
+      },
+      {
+        "kind": "fact",
+        "text": "Từ 01/01/2027, người xin cấp thẻ nhà báo lần đầu còn phải qua lớp bồi dưỡng nghiệp vụ báo chí và đạo đức nghề nghiệp.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 28 khoản 2 điểm c; Điều 50 khoản 3."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Người chưa có thẻ nhà báo khi tác nghiệp phải có giấy giới thiệu của cơ quan báo chí nơi mình làm.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 27 khoản 4."
+      },
+      {
+        "kind": "fact",
+        "text": "Nhà báo phải thông tin trung thực, tuân thủ đạo đức nghề nghiệp, phải cải chính và xin lỗi nếu đưa tin sai, và chịu trách nhiệm trước pháp luật về nội dung tác phẩm của mình.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 27 khoản 3 điểm a, c, đ, e."
+      },
+      {
+        "kind": "fact",
+        "text": "Luật cấm đưa thông tin sai sự thật, quy kết tội danh khi chưa có bản án của tòa, tiết lộ bí mật cá nhân và thông tin ảnh hưởng tới sự phát triển bình thường của trẻ em.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 8 khoản 6, 9, 10."
+      },
+      {
+        "kind": "fact",
+        "text": "Người được phỏng vấn có quyền yêu cầu xem lại nội dung trả lời trước khi đăng, và phóng viên phải thể hiện chính xác lời họ nói.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Báo chí 2025 Điều 33 khoản 2."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Phóng viên trẻ kể nhịp làm việc ở một 'tòa soạn không ngủ' rất hối hả, có nơi yêu cầu mỗi ngày hoàn thành ít nhất một sản phẩm đa phương tiện.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Phóng viên, quay phim địa phương kể mỗi sự kiện lớn là một cuộc chạy đua với giờ phát sóng, giờ đăng bài.",
+        "source_ids": ["S5"],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Tháng 11/2026, vài tin tuyển phóng viên, biên tập viên trên TopCV ghi lương khoảng 10–18 triệu đồng/tháng cho người có 1–3 năm kinh nghiệm; nhiều tin ghi thỏa thuận.",
+        "source_ids": ["S4"],
+        "confidence": "single_source",
+        "note": "Mẫu rất nhỏ (4 tin, 2 tin có lương) và là công ty truyền thông; không đại diện cho thu nhập ở cơ quan báo chí."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Phóng viên có lúc phải tác nghiệp giữa vùng lũ, nơi đông người, mang theo nhiều thiết bị và tự xử lý sự cố máy móc ngay tại hiện trường.",
+        "source_ids": ["S5", "S6"],
+        "confidence": "single_source",
+        "note": "Hai chia sẻ cá nhân ở hai tờ báo; mỗi ý dựa trên một lời kể."
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Minh — phóng viên mảng xã hội 3 năm kinh nghiệm của báo điện tử Tin Sáng (hư cấu).",
+    "setting": "Một ngày của phóng viên: nhận đề tài về vụ sụt lún bờ kè ở phường Hòa An (hư cấu), gặp tin đồn trên mạng, kiểm chứng, soát bản thảo, nhân vật xin rút lời và thư ký tòa soạn muốn đổi tít.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chinh_xac", "label": "Chính xác", "initial": 70 },
+      { "id": "toc_do", "label": "Tốc độ", "initial": 60 }
+    ],
+    "segments": [
+      {
+        "id": "pv1-nhan-de-tai",
+        "time": "08:00",
+        "title": "Nhận đề tài, chuẩn bị đi hiện trường",
+        "narrative": "Thư ký tòa soạn giao đề tài: bờ kè ở phường Hòa An bị sụt lún. Bạn chuẩn bị đúng từng bước trước khi lên đường.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người phỏng vấn phải báo trước cho người được phỏng vấn mục đích, yêu cầu và câu hỏi; người chưa có thẻ nhà báo phải mang giấy giới thiệu khi tác nghiệp.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Báo chí 2025 Điều 33 khoản 1; Điều 27 khoản 4."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước từ nhận đề tài tới lên đường",
+          "steps": [
+            "Nhận đề tài và hạn nộp bài từ thư ký tòa soạn",
+            "Đọc tư liệu cũ, tìm hiểu bối cảnh khu bờ kè",
+            "Gọi hẹn nhân vật, báo rõ mục đích phỏng vấn",
+            "Soạn câu hỏi, sạc máy ảnh, mang thẻ nhà báo",
+            "Lên đường tới hiện trường"
+          ],
+          "on_success": { "chinh_xac": 3, "toc_do": 2 },
+          "on_fail": { "toc_do": -3 }
+        }
+      },
+      {
+        "id": "pv2-nguon-tin",
+        "time": "10:30",
+        "title": "Tin đồn trên mạng xã hội",
+        "narrative": "Đang ở hiện trường, bạn thấy một bài đăng nói bờ kè đã làm sập ba căn nhà. Đồng nghiệp nhắn: báo khác sắp đăng rồi.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm đưa thông tin sai sự thật; nhà báo phải cải chính, xin lỗi nếu đưa tin sai. Phóng viên địa phương kể giữa lúc vội, một con số sai có thể gây hậu quả khó lường.",
+          "source_ids": ["S1", "S5"],
+          "confidence": "verified",
+          "note": "Luật Báo chí 2025 Điều 8 khoản 9, Điều 27 khoản 3 điểm đ; trải nghiệm: S5."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với bài đăng trên mạng?",
+          "options": [
+            {
+              "text": "Tới tận nơi xem, hỏi chính quyền phường và người dân trước khi gửi tin",
+              "effect": { "chinh_xac": 5, "toc_do": -2, "nang_luong": -2 },
+              "feedback": "Chậm vài chục phút nhưng đúng sự thật — đó là điều làm nên giá trị của báo chí."
+            },
+            {
+              "text": "Gửi ngay tin 'ba căn nhà bị sập' về tòa soạn cho kịp",
+              "effect": { "toc_do": 3, "chinh_xac": -6 },
+              "feedback": "Đưa tin sai sự thật là điều luật cấm; báo sẽ phải cải chính, xin lỗi."
+            },
+            {
+              "text": "Bỏ qua bài đăng, không tìm hiểu thêm",
+              "effect": { "chinh_xac": -1, "toc_do": -1 },
+              "feedback": "Không lan truyền tin đồn là tốt, nhưng bạn bỏ lỡ cơ hội kiểm chứng để người đọc biết sự thật."
+            }
+          ]
+        }
+      },
+      {
+        "id": "pv3-xep-thong-tin",
+        "time": "11:30",
+        "title": "Xếp thông tin thu được",
+        "narrative": "Về tới tòa soạn, bạn ghim mọi thứ lên bảng đề tài để tách cái đã chắc chắn khỏi cái còn phải hỏi thêm.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người làm báo phải hành nghề trung thực, khách quan, không làm sai lệch sự thật; nhà báo phải thông tin trung thực.",
+          "source_ids": ["S2", "S1"],
+          "confidence": "verified",
+          "note": "Quy định đạo đức nghề nghiệp người làm báo Điều 3; Luật Báo chí 2025 Điều 27 khoản 3 điểm a."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp thông tin: đã kiểm chứng hay chưa",
+          "buckets": ["Đã kiểm chứng", "Chưa kiểm chứng"],
+          "items": [
+            { "text": "Thông báo bằng văn bản của Ủy ban phường về đoạn kè sụt", "bucket": "Đã kiểm chứng" },
+            { "text": "Lời kể của bà Hạnh, có ghi âm, khớp lời hai hàng xóm", "bucket": "Đã kiểm chứng" },
+            { "text": "Ảnh đoạn kè sụt do chính bạn chụp sáng nay", "bucket": "Đã kiểm chứng" },
+            { "text": "Bài đăng ẩn danh nói có ba căn nhà bị sập", "bucket": "Chưa kiểm chứng" },
+            { "text": "Tin nhắn chuyển tiếp không rõ ai gửi đầu tiên", "bucket": "Chưa kiểm chứng" },
+            { "text": "Một người nói 'nghe hàng xóm kể lại' là có người bị thương", "bucket": "Chưa kiểm chứng" }
+          ],
+          "on_success": { "chinh_xac": 4 },
+          "on_fail": { "chinh_xac": -4 }
+        }
+      },
+      {
+        "id": "pv4-ban-thao",
+        "time": "13:30",
+        "title": "Soát bản thảo",
+        "narrative": "Bản thảo xong, bạn đọc lại từng dòng trước khi gửi trưởng ban. Có mấy câu bạn viết lúc vội.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm quy kết tội danh khi chưa có bản án của tòa, tiết lộ bí mật cá nhân và đưa thông tin ảnh hưởng tới sự phát triển bình thường của trẻ em.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified",
+          "note": "Luật Báo chí 2025 Điều 8 khoản 6, 9, 10; Quy định đạo đức nghề nghiệp Điều 4 (không xâm phạm đời tư). Chỉ đánh lỗi hai dòng có quy định rõ (SPEC-022 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng trái quy định trong bản thảo",
+          "document": [
+            "BẢN THẢO — Bờ kè phường Hòa An sụt lún (hư cấu)",
+            "Đoạn kè dài 20 m bị sụt, phường đã rào chắn (theo thông báo)",
+            "Ông chủ thầu K. là kẻ ăn cắp vật liệu, dù chưa bị xử án",
+            "Đăng ảnh rõ mặt, tên trường của bé 9 tuổi nhà sát kè",
+            "Trích lời bà Hạnh đúng ghi âm, bà đã xem lại trước",
+            "Ảnh: phóng viên Minh"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Luật cấm quy kết tội danh cho một người khi chưa có bản án của tòa." },
+            { "line": 3, "explain": "Lộ mặt, tên trường của trẻ có thể ảnh hưởng tới sự phát triển của trẻ và xâm phạm đời tư." }
+          ],
+          "on_success": { "chinh_xac": 5 },
+          "on_fail": { "chinh_xac": -5 }
+        }
+      },
+      {
+        "id": "pv5-chia-thoi-gian",
+        "time": "15:00",
+        "title": "Hai tiếng trước hạn nộp",
+        "narrative": "Trưởng ban duyệt hướng bài, hạn nộp còn 2 giờ. Bạn chia thời gian giữa viết, gọi xác minh và làm ảnh.",
+        "basis": {
+          "kind": "fact",
+          "text": "Phóng viên trẻ kể có nơi yêu cầu mỗi ngày ít nhất một sản phẩm đa phương tiện, phóng viên tự quay, phỏng vấn và dựng bài.",
+          "source_ids": ["S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 2 giờ trước hạn nộp bài",
+          "budget_min": 120,
+          "activities": [
+            { "label": "Viết bài", "effect_per_30min": { "toc_do": 2, "nang_luong": -2 } },
+            { "label": "Gọi điện xác minh", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -1 } },
+            { "label": "Chọn và xử lý ảnh", "effect_per_30min": { "toc_do": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "pv6-rut-loi",
+        "time": "17:00",
+        "title": "Nhân vật xin rút lời",
+        "narrative": "Bà Hạnh, người dân sống sát kè, tới tòa soạn. Bà lo hàng xóm phiền lòng vì câu mình nói sáng nay.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người được phỏng vấn có quyền yêu cầu xem lại nội dung trả lời trước khi đăng; phóng viên phải thể hiện chính xác lời họ nói. Người làm báo phải bảo vệ bí mật nguồn tin.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified",
+          "note": "Luật Báo chí 2025 Điều 33 khoản 2; Quy định đạo đức nghề nghiệp Điều 6."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Nói chuyện với bà Hạnh về câu trả lời phỏng vấn",
+          "npc": "Bà Hạnh (người dân sống sát kè)",
+          "turns": [
+            {
+              "npc_line": "Cháu cho bà xem lại cái câu bà nói sáng nay được không?",
+              "replies": [
+                {
+                  "text": "Dạ được ạ, đây là đoạn cháu trích, bà xem có đúng ý bà không.",
+                  "effect": { "chinh_xac": 3 },
+                  "feedback": "Người được phỏng vấn có quyền xem lại câu trả lời trước khi đăng."
+                },
+                {
+                  "text": "Bài sắp lên rồi bà ạ, không sửa được nữa đâu.",
+                  "effect": { "chinh_xac": -4 },
+                  "feedback": "Từ chối cho xem lại là trái quyền của người được phỏng vấn."
+                }
+              ]
+            },
+            {
+              "npc_line": "Bà nói hơi quá, cháu bỏ câu 'chính quyền chẳng làm gì' đi giúp bà.",
+              "replies": [
+                {
+                  "text": "Dạ, cháu bỏ câu đó và chỉ giữ ý bà đã xác nhận ạ.",
+                  "effect": { "chinh_xac": 2, "toc_do": -1 },
+                  "feedback": "Thể hiện đúng điều nhân vật xác nhận giúp bài trung thực và giữ niềm tin."
+                },
+                {
+                  "text": "Câu đó hay nhất bài, cháu vẫn giữ bà ạ.",
+                  "effect": { "chinh_xac": -3 },
+                  "feedback": "Giữ câu nhân vật không còn xác nhận dễ khiến bài thiếu chính xác và mất nguồn tin."
+                }
+              ]
+            },
+            {
+              "npc_line": "Cháu đừng ghi tên thật của bà nhé.",
+              "replies": [
+                {
+                  "text": "Dạ, cháu sẽ ghi 'một người dân sống sát kè' và báo trưởng ban ạ.",
+                  "effect": { "chinh_xac": 1, "nang_luong": -1 },
+                  "feedback": "Bảo vệ nguồn tin là một nguyên tắc đạo đức của người làm báo."
+                },
+                {
+                  "text": "Không ghi tên thì bài mất giá trị lắm bà ơi.",
+                  "effect": { "chinh_xac": -2 },
+                  "feedback": "Ép nhân vật lộ danh tính khiến họ và người khác ngại nói thật với báo."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "pv7-doi-tit",
+        "time": "19:00",
+        "title": "Thư ký tòa soạn muốn đổi tít",
+        "narrative": "Bài sắp lên trang. Thư ký tòa soạn đề nghị tít 'Bờ kè Hòa An sắp cuốn trôi cả khu phố?' cho nhiều người đọc.",
+        "basis": {
+          "kind": "fact",
+          "text": "Nhà báo có quyền khước từ thể hiện tác phẩm trái pháp luật, có nghĩa vụ thông tin trung thực; người làm báo không được làm sai lệch sự thật.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified",
+          "note": "Luật Báo chí 2025 Điều 27 khoản 2 điểm e, khoản 3 điểm a; Quy định đạo đức nghề nghiệp Điều 3."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý đề nghị đổi tít thế nào?",
+          "options": [
+            {
+              "text": "Đề xuất tít khác vừa hút người đọc vừa đúng nội dung bài",
+              "effect": { "chinh_xac": 3, "toc_do": 1, "nang_luong": -1 },
+              "feedback": "Tít hấp dẫn mà vẫn đúng sự thật bảo vệ cả người đọc và uy tín tờ báo."
+            },
+            {
+              "text": "Đồng ý ngay, tít giật gân thì nhiều người đọc hơn",
+              "effect": { "toc_do": 2, "chinh_xac": -5 },
+              "feedback": "Tít phóng đại làm sai lệch sự thật và có thể gây hoang mang cho người dân."
+            },
+            {
+              "text": "Im lặng, để thư ký tòa soạn tự quyết",
+              "effect": { "chinh_xac": -2 },
+              "feedback": "Bạn chịu trách nhiệm về tác phẩm của mình; im lặng là bỏ qua cơ hội giữ bài đúng."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Khi báo khác đã đăng trước, bạn có chịu chậm hơn để kiểm chứng không?",
+      "Bạn có thoải mái gọi điện hỏi người lạ và đi tới những nơi đông người, thậm chí nguy hiểm không?",
+      "Bạn có sẵn sàng tự học quay phim, dựng video bên cạnh viết bài không?",
+      "Nếu cấp trên muốn một tít câu khách sai sự thật, bạn sẽ nói gì?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-bao-chi",
+        "title": "Sinh viên ngành Báo chí, Truyền thông",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Đi thực tập ở tòa soạn sớm và viết thật nhiều; tác phẩm đã đăng là hồ sơ tốt nhất khi xin việc."
+          }
+        ]
+      },
+      {
+        "id": "phong-vien-moi",
+        "title": "Phóng viên (chưa có thẻ nhà báo)",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tác nghiệp bằng giấy giới thiệu của cơ quan báo chí nơi mình làm.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "nha-bao",
+        "title": "Nhà báo (có thẻ nhà báo)",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Bằng đại học trở lên, ít nhất 02 năm công tác liên tục tại cơ quan đề nghị cấp thẻ; từ 2027 thêm điều kiện qua lớp bồi dưỡng.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "truong-ban",
+        "title": "Phó, trưởng ban nghiệp vụ / thư ký tòa soạn",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần kinh nghiệm biên tập, quản lý đề tài và giữ vững đạo đức nghề khi chịu áp lực tốc độ."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-bao-chi", "to": "phong-vien-moi", "type": "promotion" },
+      { "from": "phong-vien-moi", "to": "nha-bao", "type": "promotion" },
+      { "from": "nha-bao", "to": "truong-ban", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Áp lực vừa phải nhanh vừa phải đúng: phóng viên kể một con số sai đưa ra lúc vội có thể gây hậu quả khó lường và mất niềm tin của bạn đọc.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Có lúc phải tác nghiệp ở nơi nguy hiểm như vùng lũ, ổ dịch.",
+      "source_ids": ["S5", "S6"],
+      "confidence": "single_source",
+      "note": "Lũ Đắk Lắk 11/2025 (S5); tâm dịch COVID-19 năm 2021 (S6)."
+    },
+    {
+      "kind": "fact",
+      "text": "Cường độ cao: có nơi yêu cầu mỗi ngày ít nhất một sản phẩm đa phương tiện, phóng viên mang ba lô thiết bị nặng và tự quay, dựng.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Trách nhiệm pháp lý nặng: đưa tin sai phải cải chính, xin lỗi và chịu trách nhiệm trước pháp luật về nội dung mình viết.",
+      "source_ids": ["S1"],
+      "confidence": "verified"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/7/2026, cơ quan báo chí dùng trí tuệ nhân tạo phải chịu trách nhiệm về nội dung AI tạo ra và gắn nhãn rõ với hình ảnh, video do AI tạo hoặc chỉnh sửa có thể gây nhầm lẫn.",
+      "source_ids": ["S3"],
+      "confidence": "single_source",
+      "note": "Nghị định 237/2026, theo bài tóm tắt của Tuổi Trẻ; chưa đọc toàn văn."
+    },
+    {
+      "kind": "fact",
+      "text": "Phóng viên ngày càng phải làm sản phẩm đa phương tiện: tự quay, phỏng vấn và dựng bài.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Kỹ năng kiểm chứng thông tin và làm video sẽ càng quý khi tin giả và nội dung AI ngày càng nhiều."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, nhandan.vn, tuoitre.vn, TopCV, Báo Đắk Lắk, Báo Lao Động)",
+    "scope_note": "Tòa soạn, nhân vật, sự kiện bờ kè đều hư cấu (SPEC-022 R-2, R-3). Nguồn Hội Nhà báo ghi official_stat. Cần đọc toàn văn Nghị định 237/2026; dữ liệu lương còn mỏng."
+  }
+}

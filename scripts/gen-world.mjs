@@ -855,4 +855,53 @@ const preschoolWorld = {
 };
 writeFileSync(out("content/worlds/giao-vien-mam-non.json"), JSON.stringify(preschoolWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non}.json");
+// ---------- Phóng viên (SPEC-022): một tòa soạn báo điện tử ----------
+// Phòng họp trái, hành lang có bảng đề tài giữa, phòng thư ký tòa soạn phải, khu bàn phóng viên và góc in thử phía dưới.
+const TOA_SOAN = AGENCY;
+const TOA_SOAN_PROPS = [
+  // Phòng họp: bàn dài, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng thư ký tòa soạn: bàn, kệ báo, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn phóng viên: bàn của bạn, bàn trưởng ban, bàn phóng viên ảnh
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [5, 10, 85, 1], [6, 10, 86, 1], [24, 10, 85, 1], [25, 10, 86, 1],
+  // Góc in thử
+  [1, 13, 324, 1], [2, 13, 325, 1], [28, 14, 17, 1],
+];
+const TOA_SOAN_DECOR = [
+  // Bảng đề tài ghim giấy trên tường hành lang; bản thảo trên bàn.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [6, 10, 18], [2, 13, 18],
+];
+
+const reporterWorld = {
+  profession_id: "phong-vien",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("toa-soan", TOA_SOAN, TOA_SOAN_PROPS, TOA_SOAN_DECOR, { x: 15, y: 12 }),
+  ],
+  npcs: [
+    { id: "thu-ky-toa-soan", map: "toa-soan", x: 22, y: 4, name: "Thư ký tòa soạn", sprite: C(379) },
+    { id: "truong-ban", map: "toa-soan", x: 6, y: 11, name: "Trưởng ban Xã hội", sprite: C(54, 17, 22) },
+    { id: "ba-hanh", map: "toa-soan", x: 3, y: 4, name: "Bà Hạnh (người dân sống sát kè)", sprite: C(433) },
+    { id: "phong-vien-anh", map: "toa-soan", x: 24, y: 11, name: "Phóng viên ảnh", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "pv1-nhan-de-tai": { map: "toa-soan", target: { x: 22, y: 4 }, npc: "thu-ky-toa-soan", quest: "Sang phòng thư ký tòa soạn nhận đề tài" },
+    "pv2-nguon-tin": { map: "toa-soan", target: { x: 15, y: 11 }, quest: "Mở điện thoại xem tin trên mạng xã hội" },
+    "pv3-xep-thong-tin": { map: "toa-soan", target: { x: 12, y: 3 }, quest: "Tới bảng đề tài, xếp thông tin thu được" },
+    "pv4-ban-thao": { map: "toa-soan", target: { x: 6, y: 11 }, npc: "truong-ban", quest: "Soát bản thảo trước khi gửi trưởng ban" },
+    "pv5-chia-thoi-gian": { map: "toa-soan", target: { x: 15, y: 11 }, quest: "Về bàn, chia thời gian trước hạn nộp" },
+    "pv6-rut-loi": { map: "toa-soan", target: { x: 3, y: 4 }, npc: "ba-hanh", quest: "Bà Hạnh đang chờ bạn ở phòng họp" },
+    "pv7-doi-tit": { map: "toa-soan", target: { x: 22, y: 4 }, npc: "thu-ky-toa-soan", quest: "Thư ký tòa soạn gọi bạn về cái tít" },
+  },
+};
+writeFileSync(out("content/worlds/phong-vien.json"), JSON.stringify(reporterWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien}.json");
