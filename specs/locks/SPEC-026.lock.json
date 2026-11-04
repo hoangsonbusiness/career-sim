@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-026",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-026\\bac-si-da-khoa.test.mjs": "525966db19a835fa"
+  }
+}

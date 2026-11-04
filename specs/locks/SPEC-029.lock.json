@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-029",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-029\\chuyen-vien-phan-tich-du-lieu.test.mjs": "7246329b9fde3f16"
+  }
+}

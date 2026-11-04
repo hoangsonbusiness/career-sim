@@ -29,6 +29,11 @@
 | [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-026](SPEC-026-bac-si-da-khoa.md) Gói nghề Bác sĩ đa khoa (nội dung + bản đồ phòng khám đa khoa) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-027](SPEC-027-tho-dien.md) Gói nghề Thợ điện (nội dung + bản đồ tòa nhà đang hoàn thiện) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-028](SPEC-028-nhan-vien-logistics.md) Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-029](SPEC-029-chuyen-vien-phan-tich-du-lieu.md) Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-030](SPEC-030-chien-si-chua-chay.md) Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -392,3 +397,63 @@
 | AC-025-05 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-05 có ≥ 2 nguồn law có effective_date và market có is" |
 | AC-025-06 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-06 phần 5 chia đúng 180 phút bằng time_budget" |
 | AC-025-07 | tests\spec-025\ky-thuat-vien-o-to.test.mjs — "AC-025-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-026 — Gói nghề Bác sĩ đa khoa (nội dung + bản đồ phòng khám đa khoa)
+
+| AC | Test |
+|---|---|
+| AC-026-01 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-01 hồ sơ Bác sĩ đa khoa qua validate" |
+| AC-026-02 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-02 bản đồ Bác sĩ đa khoa qua validate:world và chỉ có" |
+| AC-026-03 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-03 gói Bác sĩ đa khoa đạt check:pack" |
+| AC-026-04 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-04 chơi hết ngày Bác sĩ đa khoa tới done" |
+| AC-026-05 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-026-06 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-026-07 | tests\spec-026\bac-si-da-khoa.test.mjs — "AC-026-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-027 — Gói nghề Thợ điện (nội dung + bản đồ tòa nhà đang hoàn thiện)
+
+| AC | Test |
+|---|---|
+| AC-027-01 | tests\spec-027\tho-dien.test.mjs — "AC-027-01 hồ sơ Thợ điện qua validate" |
+| AC-027-02 | tests\spec-027\tho-dien.test.mjs — "AC-027-02 bản đồ Thợ điện qua validate:world và chỉ có một b" |
+| AC-027-03 | tests\spec-027\tho-dien.test.mjs — "AC-027-03 gói Thợ điện đạt check:pack" |
+| AC-027-04 | tests\spec-027\tho-dien.test.mjs — "AC-027-04 chơi hết ngày Thợ điện tới done" |
+| AC-027-05 | tests\spec-027\tho-dien.test.mjs — "AC-027-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-027-06 | tests\spec-027\tho-dien.test.mjs — "AC-027-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-027-07 | tests\spec-027\tho-dien.test.mjs — "AC-027-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-028 — Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận)
+
+| AC | Test |
+|---|---|
+| AC-028-01 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-01 hồ sơ Nhân viên logistics qua validate" |
+| AC-028-02 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-02 bản đồ Nhân viên logistics qua validate:world và c" |
+| AC-028-03 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-03 gói Nhân viên logistics đạt check:pack" |
+| AC-028-04 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-04 chơi hết ngày Nhân viên logistics tới done" |
+| AC-028-05 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-028-06 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-028-07 | tests\spec-028\nhan-vien-logistics.test.mjs — "AC-028-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-029 — Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử)
+
+| AC | Test |
+|---|---|
+| AC-029-01 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-01 hồ sơ Chuyên viên phân tích dữ liệu qua validate" |
+| AC-029-02 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-02 bản đồ Chuyên viên phân tích dữ liệu qua validate:" |
+| AC-029-03 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-03 gói Chuyên viên phân tích dữ liệu đạt check:pack" |
+| AC-029-04 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-04 chơi hết ngày Chuyên viên phân tích dữ liệu tới do" |
+| AC-029-05 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-029-06 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-029-07 | tests\spec-029\chuyen-vien-phan-tich-du-lieu.test.mjs — "AC-029-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-030 — Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ)
+
+| AC | Test |
+|---|---|
+| AC-030-01 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-01 hồ sơ Chiến sĩ chữa cháy qua validate" |
+| AC-030-02 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-02 bản đồ Chiến sĩ chữa cháy qua validate:world và ch" |
+| AC-030-03 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-03 gói Chiến sĩ chữa cháy đạt check:pack" |
+| AC-030-04 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-04 chơi hết ngày Chiến sĩ chữa cháy tới done" |
+| AC-030-05 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-030-06 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-06 phần 5 chia đúng 180 phút bằng time_budget" |
+| AC-030-07 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-07 bản build có trang hồ sơ và trang màn chơi" |

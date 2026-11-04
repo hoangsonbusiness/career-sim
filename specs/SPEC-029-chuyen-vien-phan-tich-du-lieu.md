@@ -2,7 +2,7 @@
 id: SPEC-029
 title: Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/chuyen-vien-phan-tich-du-lieu.json, content/worlds/chuyen-vien-phan-tich-du-lieu.json]
 owner: anh Son

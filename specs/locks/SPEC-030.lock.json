@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-030",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-030\\chien-si-chua-chay.test.mjs": "724c5aaf6faa969f"
+  }
+}

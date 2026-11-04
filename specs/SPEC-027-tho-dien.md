@@ -2,7 +2,7 @@
 id: SPEC-027
 title: Gói nghề Thợ điện (nội dung + bản đồ tòa nhà đang hoàn thiện)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/tho-dien.json, content/worlds/tho-dien.json]
 owner: anh Son

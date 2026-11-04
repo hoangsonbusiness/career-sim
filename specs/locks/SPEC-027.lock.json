@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-027",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-027\\tho-dien.test.mjs": "cda8ddff31683154"
+  }
+}

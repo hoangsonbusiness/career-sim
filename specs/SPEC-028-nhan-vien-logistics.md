@@ -2,7 +2,7 @@
 id: SPEC-028
 title: Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/nhan-vien-logistics.json, content/worlds/nhan-vien-logistics.json]
 owner: anh Son

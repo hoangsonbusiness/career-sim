@@ -2,7 +2,7 @@
 id: SPEC-030
 title: Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/chien-si-chua-chay.json, content/worlds/chien-si-chua-chay.json]
 owner: anh Son

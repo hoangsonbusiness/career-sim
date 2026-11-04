@@ -2,7 +2,7 @@
 id: SPEC-026
 title: Gói nghề Bác sĩ đa khoa (nội dung + bản đồ phòng khám đa khoa)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/bac-si-da-khoa.json, content/worlds/bac-si-da-khoa.json]
 owner: anh Son
