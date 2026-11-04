@@ -53,7 +53,7 @@ Kiến trúc sư 2–3 năm kinh nghiệm tại một văn phòng **hư cấu**,
 - R-6. Phần 6: `time_budget`, `budget_min = 180`; `effect_per_30min` minh họa, không kèm số thực tế trong narrative.
 
 ### 3.4 Bản đồ
-- R-7. Bản đồ `van_phong_kien_truc` PHẢI có: bàn làm việc (spawn), bảng phương án (ô trên tường), phòng họp, phòng kiến trúc sư chủ trì, bàn mô hình. Một bản đồ.
+- R-7. Bản đồ `van-phong-kien-truc` PHẢI có: bàn làm việc (spawn), bảng phương án (ô trên tường), phòng họp, phòng kiến trúc sư chủ trì, bàn mô hình. Một bản đồ.
 - R-8. NPC: kiến trúc sư chủ trì (phần 1, 7), chủ nhà (phần 4, 5), kỹ sư kết cấu (phần 7), đồng nghiệp dựng hình (trang trí).
 
 ### 3.5 Lỗi

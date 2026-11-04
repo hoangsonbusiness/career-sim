@@ -54,7 +54,7 @@ Luật sư 1–2 năm sau khi được cấp chứng chỉ, làm tại một vă
 - R-7. Phần 6: `time_budget`, `budget_min = 180`; `effect_per_30min` minh họa, không kèm số thực tế trong narrative.
 
 ### 3.4 Bản đồ
-- R-8. Bản đồ `van_phong_luat` PHẢI có: bàn làm việc (spawn), phòng hồ sơ, phòng tiếp khách, phòng luật sư điều hành. Phần 1 có thể kết thúc bằng cảnh chuyển sang tòa nhưng không cần bản đồ tòa; cả 7 phần chơi trong một bản đồ.
+- R-8. Bản đồ `van-phong-luat` PHẢI có: bàn làm việc (spawn), phòng hồ sơ, phòng tiếp khách, phòng luật sư điều hành. Phần 1 có thể kết thúc bằng cảnh chuyển sang tòa nhưng không cần bản đồ tòa; cả 7 phần chơi trong một bản đồ.
 - R-9. NPC: luật sư điều hành (phần 1, 5), khách hàng (phần 4), người bên kia (phần 7), thư ký (trang trí).
 
 ### 3.5 Lỗi

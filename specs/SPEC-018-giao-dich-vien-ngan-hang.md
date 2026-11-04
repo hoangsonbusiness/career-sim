@@ -53,7 +53,7 @@ Giao dịch viên 1–2 năm kinh nghiệm tại chi nhánh của một ngân h�
 - R-6. Phần 6: `time_budget`, `budget_min = 180`; `effect_per_30min` minh họa, không kèm số thực tế trong narrative.
 
 ### 3.4 Bản đồ
-- R-7. Bản đồ `chi_nhanh` PHẢI có: quầy giao dịch (spawn), khu khách chờ, phòng trưởng phòng, kho quỹ. Một bản đồ.
+- R-7. Bản đồ `chi-nhanh` PHẢI có: quầy giao dịch (spawn), khu khách chờ, phòng trưởng phòng, kho quỹ. Một bản đồ.
 - R-8. NPC: trưởng phòng (phần 1, 5, 7), khách mở tài khoản (phần 2), khách cao tuổi (phần 4), bảo vệ (trang trí).
 
 ### 3.5 Lỗi
