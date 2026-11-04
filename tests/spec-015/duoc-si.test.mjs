@@ -24,7 +24,7 @@ test("AC-015-02 bản đồ Dược sĩ qua validate:world và chỉ có một b
   assert.equal(r.status, 0, r.stdout + r.stderr);
   const w = readJson(`content/worlds/${ID}.json`);
   assert.equal(w.maps.length, 1);
-  assert.equal(w.maps[0].id, "nha_thuoc");
+  assert.equal(w.maps[0].id, "nha-thuoc");
 });
 
 test("AC-015-03 gói Dược sĩ đạt check:pack", () => {
