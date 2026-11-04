@@ -2,7 +2,7 @@
 id: SPEC-021
 title: Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/giao-vien-mam-non.json, content/worlds/giao-vien-mam-non.json]
 owner: anh Son

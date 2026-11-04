@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-021",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-021\\giao-vien-mam-non.test.mjs": "76c9fc1525f2a548"
+  }
+}
