@@ -2,7 +2,7 @@
 id: SPEC-023
 title: Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/huong-dan-vien-du-lich.json, content/worlds/huong-dan-vien-du-lich.json]
 owner: anh Son

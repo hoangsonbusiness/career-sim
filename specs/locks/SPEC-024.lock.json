@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-024",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-024\\chuyen-vien-nhan-su.test.mjs": "2a7f60869fdfd211"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-023",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-023\\huong-dan-vien-du-lich.test.mjs": "dd553a7fae7dd584"
+  }
+}

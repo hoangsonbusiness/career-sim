@@ -25,10 +25,10 @@
 | [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-021](SPEC-021-giao-vien-mam-non.md) Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-022](SPEC-022-phong-vien.md) Gói nghề Phóng viên (nội dung + bản đồ tòa soạn) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-022](SPEC-022-phong-vien.md) Gói nghề Phóng viên (nội dung + bản đồ tòa soạn) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 

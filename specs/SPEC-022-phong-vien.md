@@ -2,7 +2,7 @@
 id: SPEC-022
 title: Gói nghề Phóng viên (nội dung + bản đồ tòa soạn)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/phong-vien.json, content/worlds/phong-vien.json]
 owner: anh Son

@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-025",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-025\\ky-thuat-vien-o-to.test.mjs": "d57c42ab8f690f22"
+  }
+}
