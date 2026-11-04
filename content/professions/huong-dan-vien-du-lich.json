@@ -1,0 +1,735 @@
+{
+  "id": "huong-dan-vien-du-lich",
+  "name": "Hướng dẫn viên du lịch",
+  "aliases": [
+    "Hướng dẫn viên",
+    "Tour guide",
+    "HDV"
+  ],
+  "group": {
+    "label": "Du lịch & Dịch vụ"
+  },
+  "holland": [
+    "S",
+    "E",
+    "A"
+  ],
+  "summary": "Dẫn đoàn khách theo chương trình du lịch: thuyết minh, lo ăn ở, đi lại, giữ an toàn cho khách và xử lý mọi tình huống phát sinh; phải có thẻ hướng dẫn viên và hợp đồng với doanh nghiệp lữ hành mới được hành nghề.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Du lịch số 09/2017/QH14",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/van-hoa/luat-du-lich-2017-luat-so-09-2017-qh14-115518-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2017-06-19",
+      "effective_date": "2018-01-01",
+      "note": "Đã đọc Điều 9, 11, 39, 58, 59, 62, 65. Tới 04/11/2026 chưa có luật thay thế; dự thảo luật sửa một số điều của 7 luật lĩnh vực văn hóa, thể thao, du lịch (gồm Luật Du lịch) vẫn đang lấy ý kiến theo báo Thể thao và Văn hóa ngày 22/10/2026 — cần kiểm tra lại khi luật mới được thông qua."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Nghị quyết 66.18/2026/NQ-CP về phân quyền, cắt giảm, đơn giản hóa thủ tục hành chính, điều kiện kinh doanh",
+      "publisher": "Chính phủ / vanban.chinhphu.vn",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218181",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-05-18",
+      "effective_date": "2026-07-01",
+      "note": "Chưa đọc được toàn văn (PDF). Nội dung về thẻ hướng dẫn viên lấy theo ghi chú dẫn Phụ lục I.9 của nghị quyết mà LuatVietnam gắn vào Điều 60–63 Luật Du lịch (S1): đơn giản hóa hồ sơ, thủ tục cấp, cấp đổi, cấp lại thẻ; không sửa điều kiện cấp thẻ ở Điều 59."
+    },
+    {
+      "id": "S3",
+      "type": "market",
+      "title": "Báo cáo lương vị trí Hướng dẫn viên du lịch tại Việt Nam 2026",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/huong-dan-vien-du-lich",
+      "accessed": "2026-11-04",
+      "note": "Trang tra cứu lương năm 2026, tổng hợp từ tin tuyển dụng, không ghi ngày cập nhật: trung bình 11,3 triệu, phổ biến 8,5–14 triệu đồng/tháng. Là lương ghi trên tin tuyển dụng, không gồm tip, hoa hồng."
+    },
+    {
+      "id": "S4",
+      "type": "market",
+      "title": "Tin tuyển dụng Hướng dẫn viên du lịch trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-huong-dan-vien-du-lich",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "7 tin; 6 tin ghi lương thỏa thuận, 1 tin hướng dẫn viên trên tàu ở Hải Phòng ghi 14–18 triệu đồng/tháng."
+    },
+    {
+      "id": "S5",
+      "type": "testimony",
+      "title": "Hướng dẫn viên du lịch 'chạy' không ngày nghỉ",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/huong-dan-vien-du-lich-chay-khong-ngay-nghi-1851474078.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2022-07-02",
+      "note": "Lời kể của anh Võ Hữu Huy, hướng dẫn viên tự do tại TP.HCM. Bài năm 2022, ngay sau giai đoạn COVID-19; số tiền công tác phí trong bài đã cũ nên không dùng."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Nghề hướng dẫn viên du lịch vừa làm, vừa chơi?",
+      "publisher": "Báo Giáo dục và Thời đại",
+      "url": "https://giaoducthoidai.vn/nghe-huong-dan-vien-du-lich-vua-lam-vua-choi-post682710.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-05-11",
+      "note": "Chia sẻ của các anh Nguyễn Việt Hoàng, Nguyễn Thành Trung (hơn 10 năm ở một công ty lữ hành) và Bùi Văn Chuyên (gần 10 năm trong ngành), đều ở Hà Nội."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Tập thuyết trình trước lớp, kể chuyện cho các em nhỏ nghe và học tốt Lịch sử, Địa lý — đây là vốn để thuyết minh sau này.",
+        "audience": [
+          "thcs"
+        ]
+      },
+      {
+        "kind": "advice",
+        "text": "Thử làm trưởng nhóm khi lớp đi dã ngoại để xem bạn có thích lo cho cả một nhóm người không.",
+        "audience": [
+          "thcs",
+          "thpt"
+        ]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Học chắc một ngoại ngữ nếu muốn dẫn khách quốc tế, và rèn sức khỏe vì nghề phải di chuyển liên tục.",
+        "audience": [
+          "thpt"
+        ]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Thẻ hướng dẫn viên nội địa cần tốt nghiệp trung cấp trở lên chuyên ngành hướng dẫn du lịch, hoặc ngành khác kèm chứng chỉ nghiệp vụ hướng dẫn du lịch nội địa.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Du lịch Điều 59 khoản 1 điểm d."
+      },
+      {
+        "kind": "fact",
+        "text": "Thẻ hướng dẫn viên quốc tế cần tốt nghiệp cao đẳng trở lên chuyên ngành hướng dẫn du lịch (hoặc ngành khác kèm chứng chỉ nghiệp vụ quốc tế) và sử dụng thành thạo ngoại ngữ đăng ký hành nghề.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Du lịch Điều 59 khoản 2."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Muốn hành nghề, hướng dẫn viên phải có thẻ hướng dẫn viên và hợp đồng với doanh nghiệp lữ hành, doanh nghiệp dịch vụ hướng dẫn hoặc là hội viên tổ chức nghề nghiệp về hướng dẫn du lịch.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Du lịch Điều 58 khoản 3."
+      },
+      {
+        "kind": "fact",
+        "text": "Hướng dẫn viên phải dẫn khách đúng chương trình, thông tin cho khách về chương trình và quyền lợi của họ, hỗ trợ bảo đảm an toàn cho khách và đeo thẻ khi hành nghề.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Du lịch Điều 65 khoản 2 điểm c, d, đ, g."
+      },
+      {
+        "kind": "fact",
+        "text": "Luật cấm nài ép khách du lịch mua hàng hóa, dịch vụ và cấm xâm hại tài nguyên, môi trường du lịch.",
+        "source_ids": [
+          "S1"
+        ],
+        "confidence": "verified",
+        "note": "Luật Du lịch Điều 9 khoản 3, 4."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Một hướng dẫn viên hơn 10 năm kể vào mùa cao điểm, anh và đồng nghiệp gần như không ở nhà quá 2 ngày; thức khuya, dậy sớm là chuyện thường.",
+        "source_ids": [
+          "S6"
+        ],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Một hướng dẫn viên tự do kể có tháng cao điểm anh chạy tour suốt 25 ngày, hết tour này đi ngay tour khác.",
+        "source_ids": [
+          "S5"
+        ],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo trang tra cứu lương của TopCV năm 2026, lương ghi trên tin tuyển hướng dẫn viên trung bình khoảng 11,3 triệu đồng/tháng, phổ biến 8,5–14 triệu; nhiều tin chỉ ghi thỏa thuận.",
+        "source_ids": [
+          "S3",
+          "S4"
+        ],
+        "confidence": "single_source",
+        "note": "Cùng là dữ liệu TopCV nên không tính hai nguồn độc lập. Không gồm tip, hoa hồng."
+      },
+      {
+        "kind": "fact",
+        "text": "Hướng dẫn viên tự do có thể không có lương cứng; thu nhập phụ thuộc vào số tour nhận được.",
+        "source_ids": [
+          "S5"
+        ],
+        "confidence": "single_source"
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Hướng dẫn viên kể phải giữ thái độ chuyên nghiệp cả khi gặp khách đòi hỏi vô lý, mắng mỏ, vì khách có thể phản hồi về công ty.",
+        "source_ids": [
+          "S6"
+        ],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Vy — hướng dẫn viên nội địa 2 năm kinh nghiệm của Công ty Lữ hành Mây Xanh (hư cấu), dẫn đoàn 30 khách đi trong ngày.",
+    "setting": "Một ngày dẫn đoàn tới Quần thể di tích Vạn Lâm (hư cấu): điểm danh, soát chương trình, khách lạc đoàn, giờ ăn trưa, lời mời ăn hoa hồng và một cơn mưa lớn cuối chiều.",
+    "time_is_illustrative": true,
+    "stats": [
+      {
+        "id": "nang_luong",
+        "label": "Năng lượng",
+        "initial": 80
+      },
+      {
+        "id": "an_toan",
+        "label": "An toàn",
+        "initial": 70
+      },
+      {
+        "id": "hai_long",
+        "label": "Hài lòng",
+        "initial": 65
+      }
+    ],
+    "segments": [
+      {
+        "id": "hd1-xuat-phat",
+        "time": "06:30",
+        "title": "Trước khi xe lăn bánh",
+        "narrative": "Trời mới sáng, 30 khách đang tập trung ở bãi xe. Bạn làm từng bước trước khi xe chạy.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hướng dẫn viên phải đeo thẻ khi hành nghề, mang giấy phân công nhiệm vụ và chương trình du lịch, thông tin cho khách về chương trình và hỗ trợ bảo đảm an toàn cho khách.",
+          "source_ids": [
+            "S1"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 65 khoản 2 điểm c, đ, g, h."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước trước khi xe xuất phát",
+          "steps": [
+            "Đeo thẻ, mang giấy phân công và chương trình tour",
+            "Chào tài xế, kiểm tra xe và nước uống cho khách",
+            "Điểm danh khách theo danh sách đoàn",
+            "Phổ biến lịch trình, giờ hẹn, số điện thoại của bạn",
+            "Báo tài xế cho xe lăn bánh"
+          ],
+          "on_success": {
+            "an_toan": 3,
+            "hai_long": 2
+          },
+          "on_fail": {
+            "an_toan": -3
+          }
+        }
+      },
+      {
+        "id": "hd2-soat-chuong-trinh",
+        "time": "08:30",
+        "title": "Soát chương trình tour",
+        "narrative": "Trên xe, bạn so tờ chương trình mới in với hợp đồng công ty đã ký với đoàn. Có vài dòng không khớp.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hợp đồng lữ hành phải mô tả rõ dịch vụ, thời gian và có điều khoản bảo hiểm; hướng dẫn viên phải dẫn khách đúng chương trình; luật cấm nài ép khách mua hàng hóa, dịch vụ.",
+          "source_ids": [
+            "S1"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 39 khoản 3; Điều 65 khoản 2 điểm d; Điều 9 khoản 4; Điều 11 khoản 4. Chỉ đánh lỗi hai dòng có quy định rõ (SPEC-023 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng trong chương trình trái quy định",
+          "document": [
+            "CHƯƠNG TRÌNH — Di tích Vạn Lâm 1 ngày (hư cấu)",
+            "Hợp đồng ghi: ăn trưa nhà hàng, hướng dẫn viên suốt tuyến",
+            "Bản in: bỏ bữa trưa, khách tự túc dù hợp đồng có ghi",
+            "Thêm 2 giờ ở cửa hàng đối tác, khách bắt buộc vào mua",
+            "Đã mua bảo hiểm du lịch cho cả đoàn",
+            "Giờ về dự kiến 18:00, như hợp đồng"
+          ],
+          "errors": [
+            {
+              "line": 2,
+              "explain": "Khách được bảo đảm quyền lợi theo hợp đồng; hướng dẫn viên phải dẫn đúng chương trình đã ký."
+            },
+            {
+              "line": 3,
+              "explain": "Ép khách vào cửa hàng để mua là nài ép khách mua hàng — hành vi Luật Du lịch cấm."
+            }
+          ],
+          "on_success": {
+            "hai_long": 4
+          },
+          "on_fail": {
+            "hai_long": -4
+          }
+        }
+      },
+      {
+        "id": "hd3-yeu-cau-khach",
+        "time": "09:30",
+        "title": "Khách có nhiều yêu cầu ở cổng di tích",
+        "narrative": "Vừa tới cổng di tích, khách hỏi han, nhờ vả đủ thứ. Bạn phải nhanh chóng biết việc nào làm được.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm xâm hại tài nguyên, môi trường du lịch; hướng dẫn viên phải hướng dẫn khách tuân thủ nội quy nơi tham quan. Hướng dẫn viên kể phải khéo dung hòa cả đoàn khách với tính cách, nhu cầu khác nhau.",
+          "source_ids": [
+            "S1",
+            "S6"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 9 khoản 3; Điều 65 khoản 2 điểm b (verified). Trải nghiệm dẫn đoàn: S6."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp yêu cầu của khách: đáp ứng được hay vi phạm quy định",
+          "buckets": [
+            "Đáp ứng được",
+            "Vi phạm quy định"
+          ],
+          "items": [
+            {
+              "text": "Xin dừng 15 phút chụp ảnh ở sân chính",
+              "bucket": "Đáp ứng được"
+            },
+            {
+              "text": "Nhờ đổi chỗ ngồi đầu xe cho bác hay say xe",
+              "bucket": "Đáp ứng được"
+            },
+            {
+              "text": "Hỏi thêm câu chuyện về ngôi đền trong quần thể",
+              "bucket": "Đáp ứng được"
+            },
+            {
+              "text": "Khắc tên lên cột đá để làm kỷ niệm",
+              "bucket": "Vi phạm quy định"
+            },
+            {
+              "text": "Trèo qua dây chắn có biển cấm để chụp ảnh",
+              "bucket": "Vi phạm quy định"
+            },
+            {
+              "text": "Bẻ cành hoa trong vườn di tích mang về",
+              "bucket": "Vi phạm quy định"
+            }
+          ],
+          "on_success": {
+            "an_toan": 3,
+            "hai_long": 1
+          },
+          "on_fail": {
+            "an_toan": -3
+          }
+        }
+      },
+      {
+        "id": "hd4-lac-doan",
+        "time": "11:30",
+        "title": "Một khách lạc đoàn",
+        "narrative": "Tới giờ hẹn ở sân chính, bạn đếm thiếu một người: bác Tư, 70 tuổi, không nghe máy.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hướng dẫn viên có trách nhiệm hỗ trợ bảo đảm an toàn tính mạng, sức khỏe, tài sản của khách; khách được cứu hộ, cứu nạn trong trường hợp khẩn cấp.",
+          "source_ids": [
+            "S1"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 65 khoản 2 điểm đ; Điều 11 khoản 5."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý thế nào khi bác Tư lạc đoàn?",
+          "options": [
+            {
+              "text": "Giữ đoàn ở chỗ mát, nhờ trưởng đoàn trông, bạn cùng bảo vệ di tích đi tìm",
+              "effect": {
+                "an_toan": 5,
+                "nang_luong": -3
+              },
+              "feedback": "Giữ cả đoàn an toàn tại chỗ rồi mới tách đi tìm giúp không để lạc thêm ai."
+            },
+            {
+              "text": "Cho cả đoàn tản ra đi tìm cho nhanh",
+              "effect": {
+                "an_toan": -4,
+                "nang_luong": -2
+              },
+              "feedback": "Cả đoàn tản ra dễ khiến thêm người lạc và bạn mất kiểm soát."
+            },
+            {
+              "text": "Để đoàn đi ăn trước, chiều tính sau",
+              "effect": {
+                "an_toan": -6,
+                "hai_long": -2
+              },
+              "feedback": "Bỏ mặc một khách lớn tuổi là không làm tròn trách nhiệm bảo đảm an toàn cho khách."
+            }
+          ]
+        }
+      },
+      {
+        "id": "hd5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Giờ nghỉ trưa của đoàn",
+        "narrative": "Đã tìm được bác Tư. Đoàn ăn trưa ở nhà hàng, bạn có 2 giờ và cả chục việc cần lo.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hướng dẫn viên kể một người kiêm nhiều việc: liên hệ nhà hàng, khách sạn, chuẩn bị thực đơn, thuyết minh, trò chuyện và hoạt náo để giữ không khí cho đoàn.",
+          "source_ids": [
+            "S5"
+          ],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 2 giờ nghỉ trưa của đoàn",
+          "budget_min": 120,
+          "activities": [
+            {
+              "label": "Thuyết minh, trò chuyện",
+              "effect_per_30min": {
+                "hai_long": 2,
+                "nang_luong": -2
+              }
+            },
+            {
+              "label": "Làm việc với nhà hàng",
+              "effect_per_30min": {
+                "hai_long": 1,
+                "nang_luong": -1
+              }
+            },
+            {
+              "label": "Chăm khách lớn tuổi",
+              "effect_per_30min": {
+                "an_toan": 2,
+                "nang_luong": -1
+              }
+            },
+            {
+              "label": "Ăn trưa, nghỉ ngơi",
+              "effect_per_30min": {
+                "nang_luong": 3
+              }
+            }
+          ]
+        }
+      },
+      {
+        "id": "hd6-hoa-hong",
+        "time": "15:30",
+        "title": "Lời mời ăn hoa hồng",
+        "narrative": "Ở khu bán hàng, chủ một cửa hàng lưu niệm kéo bạn ra một góc nói chuyện riêng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm nài ép khách du lịch mua hàng hóa, dịch vụ và thu lợi bất hợp pháp từ khách; hướng dẫn viên phải dẫn khách đúng chương trình.",
+          "source_ids": [
+            "S1"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 9 khoản 4; Điều 65 khoản 2 điểm d."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời chủ cửa hàng lưu niệm",
+          "npc": "Chủ cửa hàng lưu niệm",
+          "turns": [
+            {
+              "npc_line": "Em dẫn cả đoàn vào đây ngồi một tiếng, chị chia em 20% tiền khách mua.",
+              "replies": [
+                {
+                  "text": "Em cảm ơn chị, nhưng chương trình không có giờ mua sắm nên em không dẫn đoàn vào được.",
+                  "effect": {
+                    "hai_long": 3
+                  },
+                  "feedback": "Giữ đúng chương trình là bảo vệ quyền lợi của khách."
+                },
+                {
+                  "text": "Được chị, để em bảo cả đoàn vào hết.",
+                  "effect": {
+                    "hai_long": -4
+                  },
+                  "feedback": "Ép cả đoàn vào cửa hàng ngoài chương trình là nài ép khách mua hàng."
+                }
+              ]
+            },
+            {
+              "npc_line": "Em cứ nói với khách là hàng ở đây rẻ nhất vùng, khách tin em mà.",
+              "replies": [
+                {
+                  "text": "Em không nói điều em không biết chắc được chị ạ.",
+                  "effect": {
+                    "hai_long": 2
+                  },
+                  "feedback": "Nói thật với khách giữ được niềm tin lâu dài cho bạn và công ty."
+                },
+                {
+                  "text": "Vâng, em sẽ khen khéo giúp chị.",
+                  "effect": {
+                    "hai_long": -3
+                  },
+                  "feedback": "Lợi dụng lòng tin của khách để bán hàng là thu lợi không chính đáng từ khách."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế khách nào tự muốn mua thì em chỉ đường cho chị nhé.",
+              "replies": [
+                {
+                  "text": "Dạ, ai hỏi chỗ mua quà thì em chỉ, còn mua hay không là khách tự chọn ạ.",
+                  "effect": {
+                    "hai_long": 1,
+                    "nang_luong": 1
+                  },
+                  "feedback": "Giúp khách khi họ hỏi, nhưng để họ tự quyết là cách làm đúng."
+                },
+                {
+                  "text": "Em sẽ đứng cửa giục khách vào mua cho chị.",
+                  "effect": {
+                    "hai_long": -3,
+                    "nang_luong": -1
+                  },
+                  "feedback": "Giục khách mua hàng là bước đầu của nài ép khách."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "hd7-mua-lon",
+        "time": "17:30",
+        "title": "Mưa lớn cuối chiều",
+        "narrative": "Trời đổ mưa to, sấm chớp. Còn một điểm ngắm cảnh trên đồi trong chương trình, nhiều khách vẫn muốn đi.",
+        "basis": {
+          "kind": "fact",
+          "text": "Trong trường hợp khẩn cấp hoặc bất khả kháng, hướng dẫn viên được thay đổi chương trình; phải thông tin cho khách và báo người phụ trách lữ hành khi chương trình thay đổi theo yêu cầu.",
+          "source_ids": [
+            "S1"
+          ],
+          "confidence": "verified",
+          "note": "Luật Du lịch Điều 65 khoản 1 điểm d; khoản 2 điểm c, d."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn quyết định thế nào với điểm cuối?",
+          "options": [
+            {
+              "text": "Bỏ điểm trên đồi vì không an toàn, giải thích cho khách và báo công ty",
+              "effect": {
+                "an_toan": 5,
+                "hai_long": -1,
+                "nang_luong": -1
+              },
+              "feedback": "Khi bất khả kháng bạn được đổi chương trình; giải thích rõ giúp khách thông cảm."
+            },
+            {
+              "text": "Vẫn đưa khách lên đồi cho đúng lịch trình",
+              "effect": {
+                "an_toan": -6
+              },
+              "feedback": "Lên đồi giữa sấm chớp đặt cả đoàn vào nguy hiểm."
+            },
+            {
+              "text": "Lặng lẽ cho xe về, không giải thích gì",
+              "effect": {
+                "hai_long": -4
+              },
+              "feedback": "Đổi chương trình mà không thông tin cho khách dễ gây bức xúc và khiếu nại."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có chịu được cảnh xa nhà nhiều ngày, nhất là dịp lễ, Tết không?",
+      "Khi khách mắng mỏ vô lý, bạn có giữ được bình tĩnh và lịch sự không?",
+      "Bạn có dám từ chối tiền hoa hồng để giữ đúng chương trình cho khách không?",
+      "Bạn muốn dẫn khách trong nước, khách quốc tế hay làm hướng dẫn viên tại một điểm?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-du-lich",
+        "title": "Sinh viên ngành Hướng dẫn du lịch, Lữ hành",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Nhận dẫn các tour ngắn, đơn giản từ khi còn học để quen việc và có người giới thiệu."
+          }
+        ]
+      },
+      {
+        "id": "hdv-tai-diem",
+        "title": "Hướng dẫn viên tại điểm",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Cần đạt yêu cầu kiểm tra nghiệp vụ hướng dẫn tại điểm do cơ quan du lịch cấp tỉnh tổ chức; chỉ được hướng dẫn trong khu, điểm du lịch.",
+            "source_ids": [
+              "S1"
+            ],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "hdv-noi-dia",
+        "title": "Hướng dẫn viên nội địa",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tốt nghiệp trung cấp trở lên chuyên ngành hướng dẫn du lịch, hoặc ngành khác kèm chứng chỉ nghiệp vụ nội địa.",
+            "source_ids": [
+              "S1"
+            ],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "hdv-quoc-te",
+        "title": "Hướng dẫn viên quốc tế",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tốt nghiệp cao đẳng trở lên chuyên ngành phù hợp (hoặc kèm chứng chỉ nghiệp vụ quốc tế) và thành thạo ngoại ngữ đăng ký hành nghề.",
+            "source_ids": [
+              "S1"
+            ],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "dieu-hanh-tour",
+        "title": "Điều hành tour / quản lý lữ hành",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Kinh nghiệm dẫn đoàn giúp bạn chuyển sang thiết kế, điều hành chương trình tour ở văn phòng."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      {
+        "from": "sinh-vien-du-lich",
+        "to": "hdv-tai-diem",
+        "type": "lateral"
+      },
+      {
+        "from": "sinh-vien-du-lich",
+        "to": "hdv-noi-dia",
+        "type": "promotion"
+      },
+      {
+        "from": "hdv-noi-dia",
+        "to": "hdv-quoc-te",
+        "type": "promotion"
+      },
+      {
+        "from": "hdv-noi-dia",
+        "to": "dieu-hanh-tour",
+        "type": "management"
+      }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Xa nhà thường xuyên: mùa cao điểm có người gần như không ở nhà quá 2 ngày, ngày lễ càng khó về.",
+      "source_ids": [
+        "S6",
+        "S5"
+      ],
+      "confidence": "single_source",
+      "note": "Hai lời kể ở hai tờ báo cùng mô tả; mỗi chi tiết dựa trên một người."
+    },
+    {
+      "kind": "fact",
+      "text": "Thu nhập theo mùa và không ổn định: hướng dẫn viên tự do có thể không có lương cứng; khi du lịch đóng cửa vì dịch, có người phải làm việc khác để sống.",
+      "source_ids": [
+        "S5"
+      ],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Phải giữ bình tĩnh, lịch sự với khách đòi hỏi vô lý vì khách có thể phản hồi xấu về công ty.",
+      "source_ids": [
+        "S6"
+      ],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Trách nhiệm lớn: hướng dẫn viên phải hỗ trợ bảo đảm an toàn tính mạng, sức khỏe, tài sản của cả đoàn khách.",
+      "source_ids": [
+        "S1"
+      ],
+      "confidence": "verified"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/7/2026, thủ tục cấp, cấp đổi, cấp lại thẻ hướng dẫn viên được đơn giản hóa theo Nghị quyết 66.18/2026; điều kiện cấp thẻ vẫn theo Luật Du lịch.",
+      "source_ids": [
+        "S2",
+        "S1"
+      ],
+      "confidence": "single_source",
+      "note": "Chưa đọc toàn văn nghị quyết; dựa trên ghi chú của LuatVietnam. Luật Du lịch đang có dự thảo sửa đổi."
+    },
+    {
+      "kind": "advice",
+      "text": "Thêm một ngoại ngữ và kỹ năng kể chuyện, quay video sẽ giúp bạn có nhiều tour và nhiều lựa chọn hơn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, vanban.chinhphu.vn, TopCV, Thanh Niên, Giáo dục và Thời đại)",
+    "scope_note": "Di tích Vạn Lâm, công ty, khách đều hư cấu; không đưa dữ kiện lịch sử, văn hóa về địa danh thật (SPEC-023 R-2). Luật Du lịch đang có dự thảo sửa đổi — cần rà lại khi luật mới thông qua."
+  }
+}

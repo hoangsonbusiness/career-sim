@@ -904,4 +904,70 @@ const reporterWorld = {
 };
 writeFileSync(out("content/worlds/phong-vien.json"), JSON.stringify(reporterWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien}.json");
+// ---------- Hướng dẫn viên du lịch (SPEC-023): một quần thể di tích hư cấu ----------
+// Nhà hàng trái, sân chính giữa (lối vào qua cổng di tích), khu bán hàng phải; đường lớn và bãi xe phía dưới.
+const DIEM_THAM_QUAN = [
+  "##############################",
+  "#,,,,,,,#gggggggggggg#.......#",
+  "#,,,,,,,#gggggggggggg#.......#",
+  "#,,,,,,,#gggggggggggg#.......#",
+  "#,,,,,,,#gggggggggggg#.......#",
+  "#,,,,,,,#gggggggggggg#.......#",
+  "####D####ggggg=gggggg####D####",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#============================#",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#ggggggggggggg=gggggggggggggg#",
+  "#============================#",
+  "##############################",
+];
+const DIEM_THAM_QUAN_PROPS = [
+  // Nhà hàng: bàn dài, ghế, cây
+  [2, 2, 0, 1], [3, 2, 1, 1], [4, 2, 2, 1],
+  [2, 3, 162, 1], [3, 3, 163, 1], [4, 3, 164, 1],
+  [7, 1, 16, 1],
+  // Sân chính của di tích: cây cảnh hai bên
+  [10, 1, 16, 1], [19, 1, 17, 1], [10, 5, 17, 1], [19, 5, 16, 1],
+  // Khu bán hàng: kệ hàng lưu niệm, quầy
+  [22, 1, 329, 1], [23, 1, 330, 1], [27, 1, 329, 1],
+  [25, 3, 85, 1], [26, 3, 86, 1],
+  // Bãi xe: cây ven đường
+  [2, 11, 17, 1], [27, 11, 16, 1],
+];
+const DIEM_THAM_QUAN_DECOR = [
+  // Đồ lưu niệm trên quầy, thực đơn trên bàn nhà hàng.
+  [26, 3, 18], [3, 2, 18],
+];
+
+const guideWorld = {
+  profession_id: "huong-dan-vien-du-lich",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("diem-tham-quan", DIEM_THAM_QUAN, DIEM_THAM_QUAN_PROPS, DIEM_THAM_QUAN_DECOR, { x: 14, y: 13 }),
+  ],
+  npcs: [
+    { id: "tai-xe", map: "diem-tham-quan", x: 17, y: 12, name: "Anh Toàn (tài xế)", sprite: C(54, 17, 22) },
+    { id: "truong-doan", map: "diem-tham-quan", x: 11, y: 12, name: "Chú Bình (trưởng đoàn khách)", sprite: C(433) },
+    { id: "truong-doan-san", map: "diem-tham-quan", x: 12, y: 3, name: "Chú Bình (trưởng đoàn khách)", sprite: C(433) },
+    { id: "bao-ve", map: "diem-tham-quan", x: 15, y: 7, name: "Bảo vệ di tích", sprite: C(379) },
+    { id: "bac-tu", map: "diem-tham-quan", x: 18, y: 4, name: "Bác Tư (khách)", sprite: C(1, 13, 76) },
+    { id: "chu-cua-hang", map: "diem-tham-quan", x: 25, y: 4, name: "Chủ cửa hàng lưu niệm", sprite: C(1, 125, 20) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "hd1-xuat-phat": { map: "diem-tham-quan", target: { x: 17, y: 12 }, npc: "tai-xe", quest: "Ra bãi xe gặp tài xế, chuẩn bị đón đoàn" },
+    "hd2-soat-chuong-trinh": { map: "diem-tham-quan", target: { x: 11, y: 12 }, npc: "truong-doan", quest: "Cùng trưởng đoàn xem lại chương trình tour" },
+    "hd3-yeu-cau-khach": { map: "diem-tham-quan", target: { x: 15, y: 7 }, npc: "bao-ve", quest: "Dẫn đoàn tới cổng di tích" },
+    "hd4-lac-doan": { map: "diem-tham-quan", target: { x: 18, y: 4 }, npc: "bac-tu", quest: "Thiếu một khách! Tìm quanh sân chính" },
+    "hd5-chia-thoi-gian": { map: "diem-tham-quan", target: { x: 4, y: 4 }, quest: "Đưa đoàn vào nhà hàng ăn trưa" },
+    "hd6-hoa-hong": { map: "diem-tham-quan", target: { x: 25, y: 4 }, npc: "chu-cua-hang", quest: "Chủ cửa hàng lưu niệm đang vẫy bạn" },
+    "hd7-mua-lon": { map: "diem-tham-quan", target: { x: 12, y: 3 }, npc: "truong-doan-san", quest: "Trời mưa to, bàn với trưởng đoàn về điểm cuối" },
+  },
+};
+writeFileSync(out("content/worlds/huong-dan-vien-du-lich.json"), JSON.stringify(guideWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich}.json");
