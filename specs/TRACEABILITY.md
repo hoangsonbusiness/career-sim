@@ -17,8 +17,8 @@
 | [SPEC-011](SPEC-011-ke-toan.md) Gói nghề Kế toán (nội dung + bản đồ văn phòng doanh nghiệp) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-012](SPEC-012-ky-su-xay-dung.md) Gói nghề Kỹ sư xây dựng (nội dung + bản đồ công trường) | 2 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 3 | approved | ✓ Son 2026-11-04 | [F3] | 11/11 |
-| [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 3 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 3 | implemented | ✓ Son 2026-11-04 | [F3] | 11/11 |
+| [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 3 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 | [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 | [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |

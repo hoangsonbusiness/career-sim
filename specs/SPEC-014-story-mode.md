@@ -2,7 +2,7 @@
 id: SPEC-014
 title: Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề
 version: 3
-status: approved
+status: implemented
 features: [F3]
 owns: [src/game/story.ts, src/game/GamePlayer.tsx, src/game/scene.ts, src/game/types.ts]
 owner: anh Son
