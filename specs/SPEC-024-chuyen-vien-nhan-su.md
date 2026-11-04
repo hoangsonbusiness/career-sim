@@ -2,11 +2,14 @@
 id: SPEC-024
 title: Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/chuyen-vien-nhan-su.json, content/worlds/chuyen-vien-nhan-su.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: a1959dfdaf882484
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-024 — Gói nghề Chuyên viên nhân sự

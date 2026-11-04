@@ -2,11 +2,14 @@
 id: SPEC-025
 title: Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ)
 version: 1
-status: draft
+status: approved
 features: [F2, F3, F4, F5]
 owns: [content/professions/ky-thuat-vien-o-to.json, content/worlds/ky-thuat-vien-o-to.json]
 owner: anh Son
 created: 2026-11-04
+approved_hash: bb309c42af2dc24b
+approved_by: Son
+approved_at: 2026-11-04
 ---
 
 # SPEC-025 — Gói nghề Kỹ thuật viên ô tô
