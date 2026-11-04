@@ -545,4 +545,53 @@ const pharmacyWorld = {
 };
 writeFileSync(out("content/worlds/duoc-si.json"), JSON.stringify(pharmacyWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si}.json");
+// ---------- Luật sư (SPEC-016): một văn phòng luật ----------
+// Phòng tiếp khách trái, phòng hồ sơ hẹp ở giữa, phòng luật sư điều hành phải, khu bàn làm việc phía dưới.
+const VAN_PHONG_LUAT = AGENCY;
+const VAN_PHONG_LUAT_PROPS = [
+  // Phòng tiếp khách: bàn, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng hồ sơ: kệ tài liệu
+  [13, 1, 329, 1], [15, 1, 329, 1], [13, 5, 330, 1], [15, 5, 330, 1],
+  // Phòng luật sư điều hành: bàn, kệ sách, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn làm việc: bàn của bạn, bàn thư ký, góc nước
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [5, 10, 85, 1], [6, 10, 86, 1],
+  [1, 13, 324, 1], [2, 13, 325, 1], [3, 13, 326, 1], [28, 14, 17, 1],
+];
+const VAN_PHONG_LUAT_DECOR = [
+  // Giấy tờ trên bàn và lịch phiên tòa trên tường.
+  [15, 10, 18], [6, 10, 18], [24, 1, 18],
+];
+
+const lawWorld = {
+  profession_id: "luat-su",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("van-phong-luat", VAN_PHONG_LUAT, VAN_PHONG_LUAT_PROPS, VAN_PHONG_LUAT_DECOR, { x: 15, y: 13 }),
+  ],
+  npcs: [
+    { id: "luat-su-dieu-hanh", map: "van-phong-luat", x: 22, y: 4, name: "Luật sư điều hành", sprite: C(379) },
+    { id: "khach-hang", map: "van-phong-luat", x: 3, y: 4, name: "Khách hàng", sprite: C(54, 17, 22) },
+    { id: "nguoi-ben-kia", map: "van-phong-luat", x: 9, y: 4, name: "Chủ nhà (bên kia)", sprite: C(433) },
+    { id: "thu-ky", map: "van-phong-luat", x: 5, y: 11, name: "Thư ký", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "ls1-chuan-bi-ho-so": { map: "van-phong-luat", target: { x: 22, y: 4 }, npc: "luat-su-dieu-hanh", quest: "Sang phòng luật sư điều hành nhận việc chuẩn bị hồ sơ" },
+    "ls2-ra-hop-dong": { map: "van-phong-luat", target: { x: 15, y: 10 }, quest: "Về bàn làm việc, rà hợp đồng dịch vụ pháp lý" },
+    "ls3-xep-tai-lieu": { map: "van-phong-luat", target: { x: 14, y: 3 }, quest: "Vào phòng hồ sơ, chọn tài liệu nộp cho tòa" },
+    "ls4-khach-noi-sai": { map: "van-phong-luat", target: { x: 3, y: 4 }, npc: "khach-hang", quest: "Khách hàng đang chờ ở phòng tiếp khách" },
+    "ls5-sap-het-han": { map: "van-phong-luat", target: { x: 15, y: 10 }, quest: "Về bàn, xử lý giấy tờ còn thiếu trước hạn nộp" },
+    "ls6-chia-thoi-gian": { map: "van-phong-luat", target: { x: 15, y: 10 }, quest: "Chia thời gian cho các việc cuối chiều" },
+    "ls7-xung-dot-loi-ich": { map: "van-phong-luat", target: { x: 9, y: 4 }, npc: "nguoi-ben-kia", quest: "Có người lạ chờ bạn ở phòng tiếp khách" },
+  },
+};
+writeFileSync(out("content/worlds/luat-su.json"), JSON.stringify(lawWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su}.json");

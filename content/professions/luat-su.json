@@ -1,0 +1,587 @@
+{
+  "id": "luat-su",
+  "name": "Luật sư",
+  "aliases": ["Luật sư tranh tụng", "Lawyer", "Attorney"],
+  "group": { "label": "Pháp luật & Dịch vụ pháp lý" },
+  "holland": ["E", "S", "I"],
+  "summary": "Nghiên cứu hồ sơ, soạn văn bản, gặp khách hàng và đại diện hoặc bảo vệ quyền lợi của khách trong các vụ việc, theo Luật Luật sư và quy tắc đạo đức nghề nghiệp.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Luật sư số 65/2006/QH11, sửa đổi bởi Luật số 20/2012/QH13 (Văn bản hợp nhất 03/VBHN-VPQH)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/tu-phap/van-ban-hop-nhat-03-vbhn-vpqh-2015-hop-nhat-luat-luat-su-151098-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2006-06-29",
+      "effective_date": "2013-07-01",
+      "note": "Luật gốc có hiệu lực từ 01/01/2007; bản sửa đổi 2012 có hiệu lực từ 01/7/2013. Đã đọc Điều 5, 9, 10, 11, 12, 14, 21, 22, 26. Đến 10/2026 vẫn là văn bản đang áp dụng; dự thảo Luật Luật sư (sửa đổi) đang được xem xét (S4)."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Bộ luật Tố tụng dân sự số 92/2015/QH13",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/hanh-chinh/bo-luat-to-tung-dan-su-2015-so-92-2015-qh13-101332-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2015-11-25",
+      "effective_date": "2016-07-01",
+      "note": "Đã đọc Điều 96 khoản 4 (thời hạn giao nộp tài liệu, chứng cứ). Đã đối chiếu danh sách điều bị sửa trong Luật 85/2025/QH15 (S3): Điều 96 không bị sửa."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Luật số 85/2025/QH15 sửa đổi, bổ sung một số điều của Bộ luật Tố tụng dân sự và các luật liên quan",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/doanh-nghiep/luat-so-85-2025-qh15-sua-doi-bo-luat-to-tung-dan-su-luat-to-tung-hanh-chinh-404075-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-25",
+      "effective_date": "2025-07-01",
+      "note": "Dùng để kiểm tra Điều 96 của Bộ luật Tố tụng dân sự không bị sửa."
+    },
+    {
+      "id": "S4",
+      "type": "official_stat",
+      "title": "Dự án Luật Luật sư (sửa đổi) rút gọn quy trình trở thành luật sư từ 4 bước xuống còn 2 bước",
+      "publisher": "Bộ Tư pháp (moj.gov.vn)",
+      "url": "https://moj.gov.vn/portal/tin-tuc/chi-tiet/du-an-luat-luat-su-sua-oi-rut-gon-quy-trinh-tro-thanh-luat-su-tu-4-buoc-xuong-con-2-buoc-tkfor88183.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-27",
+      "note": "Tin về phiên họp Ủy ban Thường vụ Quốc hội cho ý kiến dự án luật; đây là dự thảo, chưa phải luật có hiệu lực."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Mức lương ngành Luật: bảng chi tiết theo vị trí và mảng",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-luong/muc-luong-nganh-luat/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-18"
+    },
+    {
+      "id": "S6",
+      "type": "press",
+      "title": "Đề xuất giảm một nửa quy trình trở thành luật sư",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/de-xuat-giam-mot-nua-quy-trinh-tro-thanh-luat-su-5082042.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-05",
+      "note": "Dẫn thống kê của Bộ Tư pháp về số luật sư."
+    },
+    {
+      "id": "S7",
+      "type": "press",
+      "title": "Đại học Luật Hà Nội tính điểm 10 tiếng Anh với IELTS 7.5",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/dai-hoc-luat-ha-noi-tinh-diem-10-tieng-anh-voi-ielts-7-5-5068501.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-05-01"
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Học nghề luật phải biết hít không khí sống qua ngày?",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/hoc-nghe-luat-phai-biet-hit-khong-khi-song-qua-ngay-185251111152319126.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-11-11",
+      "note": "Lời kể của luật sư Trương Văn Tuấn (Trưởng Văn phòng luật sư Trạng Sài Gòn) và chia sẻ của sinh viên luật tại buổi giao lưu."
+    },
+    {
+      "id": "S9",
+      "type": "testimony",
+      "title": "Liên đoàn Luật sư Việt Nam: 'Bản chất của nghề luật sư là nghề phải dạy nghề'",
+      "publisher": "Tuổi Trẻ Online (Pháp Luật TP.HCM)",
+      "url": "https://tuoitre.vn/plo/lien-doan-luat-su-viet-nam-ban-chat-cua-nghe-luat-su-la-nghe-phai-day-nghe-109911294.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-04",
+      "note": "Quan điểm chính thức của Ban Thường vụ Liên đoàn Luật sư Việt Nam (tổ chức nghề nghiệp), không phải lời kể của một cá nhân."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Đọc nhiều và tập viết bài nghị luận có lập luận rõ ràng; nghề này viết và trình bày mỗi ngày.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tham gia câu lạc bộ tranh biện hoặc thuyết trình để quen nói trước đông người và lắng nghe ý trái chiều.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Năm 2026, Trường Đại học Luật Hà Nội tuyển 2.850 sinh viên theo ba phương thức: xét tuyển thẳng, điểm thi tốt nghiệp THPT và xét học bạ.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "audience": ["thpt"],
+        "note": "Thông tin của một trường; trường khác có chỉ tiêu và phương thức khác."
+      },
+      {
+        "kind": "advice",
+        "text": "Mỗi trường có tổ hợp và cách quy đổi chứng chỉ khác nhau; hãy đọc đề án tuyển sinh của chính trường bạn nhắm tới.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Theo luật hiện hành, để trở thành luật sư bạn cần bằng cử nhân luật, hoàn thành khóa đào tạo nghề luật sư, qua thời gian tập sự và có sức khỏe bảo đảm hành nghề.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 10. Dự thảo luật mới có thể thay đổi quy trình (S4)."
+      },
+      {
+        "kind": "fact",
+        "text": "Khóa đào tạo nghề luật sư kéo dài mười hai tháng; sau đó tập sự mười hai tháng tại một tổ chức hành nghề luật sư, dưới sự hướng dẫn của luật sư có ít nhất ba năm kinh nghiệm.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 12 khoản 2 và Điều 14 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Muốn hành nghề, bạn phải có Chứng chỉ hành nghề luật sư và gia nhập một Đoàn luật sư.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 11."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Luật sư có thể tham gia tố tụng để đại diện hoặc bảo vệ quyền lợi cho khách trong các vụ án hình sự, dân sự, lao động, kinh doanh, hành chính.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 22 khoản 1, 2."
+      },
+      {
+        "kind": "fact",
+        "text": "Hợp đồng dịch vụ pháp lý phải làm bằng văn bản, ghi rõ nội dung dịch vụ, thời hạn, quyền và nghĩa vụ các bên, mức thù lao cụ thể và cách giải quyết tranh chấp.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 26 khoản 2."
+      },
+      {
+        "kind": "fact",
+        "text": "Luật sư có nghĩa vụ tham gia bồi dưỡng bắt buộc về chuyên môn, nghiệp vụ và tuân theo Quy tắc đạo đức và ứng xử nghề nghiệp luật sư.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 5 khoản 2 và Điều 21 khoản 2."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Luật sư phải tham gia tố tụng đầy đủ, kịp thời trong các vụ án do cơ quan tiến hành tố tụng yêu cầu, nên lịch làm việc phụ thuộc nhiều vào lịch của tòa.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Luật sư Điều 21 khoản 2 điểm c; phần \"lịch phụ thuộc lịch tòa\" là diễn giải."
+      },
+      {
+        "kind": "fact",
+        "text": "Tài liệu, chứng cứ phải nộp trong thời hạn Thẩm phán ấn định; nộp chậm thì phải chứng minh lý do chính đáng.",
+        "source_ids": ["S2", "S3"],
+        "confidence": "verified"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một bảng lương năm 2026, trợ lý luật sư mới vào nghề, chưa có chứng chỉ, nhận khoảng 8–12 triệu đồng/tháng; luật sư 1–3 năm kinh nghiệm khoảng 15–25 triệu đồng/tháng.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "Tổng hợp từ dữ liệu tuyển dụng; chênh lệch lớn theo loại tổ chức và mảng chuyên môn."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Cả nước có hơn 21.000 luật sư vào cuối năm 2025.",
+        "source_ids": ["S6", "S9"],
+        "confidence": "needs_verification",
+        "note": "Hai nguồn lệch nhau: S6 dẫn Bộ Tư pháp là 22.098 luật sư cuối 2025; S9 dẫn Liên đoàn Luật sư là 21.746 luật sư tại 31/12/2025. Cần tìm số liệu gốc của Bộ Tư pháp."
+      },
+      {
+        "kind": "fact",
+        "text": "Liên đoàn Luật sư Việt Nam đánh giá chất lượng luật sư chưa đồng đều giữa các lĩnh vực và vùng miền.",
+        "source_ids": ["S9"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Minh — luật sư 2 năm sau khi có chứng chỉ hành nghề, làm tại Văn phòng Luật Bình An (hư cấu), phụ trách một vụ tranh chấp hợp đồng thuê nhà.",
+    "setting": "Một ngày ở văn phòng luật: chuẩn bị hồ sơ, rà hợp đồng dịch vụ, chọn tài liệu nộp tòa, khách muốn nói sai sự thật, sắp hết hạn nộp chứng cứ và người bên kia xin tư vấn.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "chat_che", "label": "Chặt chẽ", "initial": 70 },
+      { "id": "tin_nhiem", "label": "Tin nhiệm", "initial": 60 }
+    ],
+    "segments": [
+      {
+        "id": "ls1-chuan-bi-ho-so",
+        "time": "08:00",
+        "title": "Chuẩn bị hồ sơ vụ tranh chấp",
+        "narrative": "Sáng sớm, luật sư điều hành nhắc bạn chuẩn bị hồ sơ vụ tranh chấp thuê nhà trước buổi làm việc ở tòa.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật sư đại diện hoặc bảo vệ quyền lợi đương sự trong tranh chấp dân sự; đương sự phải giao nộp tài liệu, chứng cứ cho Tòa án trong thời hạn được ấn định.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified",
+          "note": "Luật Luật sư Điều 22 khoản 2; Bộ luật Tố tụng dân sự Điều 96 khoản 4."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước chuẩn bị hồ sơ",
+          "steps": [
+            "Đọc lại yêu cầu của khách và hợp đồng dịch vụ",
+            "Rà các tài liệu, chứng cứ khách đã gửi",
+            "Đối chiếu với quy định pháp luật liên quan",
+            "Lập danh mục tài liệu cần nộp cho Tòa án",
+            "Trao đổi hướng xử lý với luật sư điều hành"
+          ],
+          "on_success": { "chat_che": 4, "nang_luong": -1 },
+          "on_fail": { "chat_che": -3 }
+        }
+      },
+      {
+        "id": "ls2-ra-hop-dong",
+        "time": "09:30",
+        "title": "Rà hợp đồng dịch vụ pháp lý",
+        "narrative": "Thư ký đưa bản hợp đồng dịch vụ với khách mới. Trước khi hai bên ký, bạn rà lại từng mục bắt buộc.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hợp đồng dịch vụ pháp lý phải có địa chỉ khách hàng, thời hạn, mức thù lao cụ thể và cách giải quyết tranh chấp. Một luật sư kể từng bị khách quịt thù lao.",
+          "source_ids": ["S1", "S8"],
+          "confidence": "verified",
+          "note": "Mục bắt buộc: Luật Luật sư Điều 26 khoản 2. Chuyện bị quịt thù lao: lời kể của luật sư Trương Văn Tuấn (S8)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng hợp đồng còn thiếu nội dung bắt buộc",
+          "document": [
+            "HỢP ĐỒNG DỊCH VỤ PHÁP LÝ — VP Luật Bình An (hư cấu)",
+            "Khách hàng: bà Lê Thu H. — địa chỉ: (để trống)",
+            "Nội dung dịch vụ: đại diện tranh chấp hợp đồng thuê nhà",
+            "Thời hạn thực hiện hợp đồng: (để trống)",
+            "Thù lao: \"hai bên sẽ thỏa thuận sau\"",
+            "Quyền, nghĩa vụ của các bên: xem mục 3",
+            "Cách giải quyết tranh chấp: (không ghi)",
+            "Hai bên ký, ghi rõ họ tên"
+          ],
+          "errors": [
+            { "line": 1, "explain": "Hợp đồng phải ghi tên và địa chỉ của khách hàng." },
+            { "line": 3, "explain": "Hợp đồng phải ghi thời hạn thực hiện." },
+            { "line": 4, "explain": "Hợp đồng phải ghi phương thức tính và mức thù lao cụ thể." },
+            { "line": 6, "explain": "Hợp đồng phải ghi phương thức giải quyết tranh chấp." }
+          ],
+          "on_success": { "chat_che": 5, "tin_nhiem": 1 },
+          "on_fail": { "chat_che": -4 }
+        }
+      },
+      {
+        "id": "ls3-xep-tai-lieu",
+        "time": "11:00",
+        "title": "Chọn tài liệu nộp cho tòa",
+        "narrative": "Khách gửi cả một túi giấy tờ. Bạn ở phòng hồ sơ, tách những gì liên quan tới vụ tranh chấp ra khỏi phần còn lại.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật sư bảo vệ quyền lợi của đương sự trong tranh chấp dân sự, còn đương sự phải giao nộp tài liệu, chứng cứ cho Tòa án.",
+          "source_ids": ["S1", "S2"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp giấy tờ: liên quan tới vụ hay không",
+          "buckets": ["Liên quan tới vụ tranh chấp", "Không liên quan"],
+          "items": [
+            { "text": "Hợp đồng thuê nhà có chữ ký của hai bên", "bucket": "Liên quan tới vụ tranh chấp" },
+            { "text": "Biên lai chuyển tiền thuê nhà hằng tháng", "bucket": "Liên quan tới vụ tranh chấp" },
+            { "text": "Tin nhắn chủ nhà báo tăng giá thuê", "bucket": "Liên quan tới vụ tranh chấp" },
+            { "text": "Ảnh chụp căn nhà lúc nhận bàn giao", "bucket": "Liên quan tới vụ tranh chấp" },
+            { "text": "Bài đăng mạng xã hội chê khu phố ồn ào", "bucket": "Không liên quan" },
+            { "text": "Hóa đơn điện thoại di động của khách", "bucket": "Không liên quan" }
+          ],
+          "on_success": { "chat_che": 4, "nang_luong": -1 },
+          "on_fail": { "chat_che": -3 }
+        }
+      },
+      {
+        "id": "ls4-khach-noi-sai",
+        "time": "13:30",
+        "title": "Khách muốn luật sư nói điều không đúng sự thật",
+        "narrative": "Đầu giờ chiều, khách tới phòng tiếp khách, nhờ bạn \"nói giúp\" với tòa một điều không đúng sự thật.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm luật sư cố ý cung cấp hoặc hướng dẫn khách cung cấp tài liệu giả, sai sự thật, xúi giục khai sai, và cấm lừa dối khách hàng.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Luật sư Điều 9 khoản 1 điểm b, d; nguyên tắc trung thực tại Điều 5 khoản 3."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với khách về yêu cầu của họ",
+          "npc": "Khách hàng",
+          "turns": [
+            {
+              "npc_line": "Luật sư cứ nói với tòa là tôi trả đủ tiền, dù thật ra còn thiếu hai tháng.",
+              "replies": [
+                {
+                  "text": "Em không thể nói điều sai sự thật; mình bảo vệ chị bằng chứng cứ thật.",
+                  "effect": { "chat_che": 2, "tin_nhiem": 1 },
+                  "feedback": "Luật cấm luật sư xúi giục khách khai sai hay cung cấp tài liệu sai sự thật."
+                },
+                {
+                  "text": "Được, chị cứ khai vậy, em không hỏi thêm.",
+                  "effect": { "chat_che": -5, "tin_nhiem": -1 },
+                  "feedback": "Làm ngơ hoặc khuyến khích khách khai sai là hành vi luật sư bị cấm."
+                }
+              ]
+            },
+            {
+              "npc_line": "Hay làm thêm một tờ biên lai cho chắc?",
+              "replies": [
+                {
+                  "text": "Không được chị ạ. Em xem lại các biên lai thật nào giúp được chị.",
+                  "effect": { "chat_che": 2, "nang_luong": -1 },
+                  "feedback": "Hướng dẫn khách đưa tài liệu giả là vi phạm nghiêm trọng nguyên tắc nghề."
+                },
+                {
+                  "text": "Chị tự làm, em coi như không biết.",
+                  "effect": { "chat_che": -5 },
+                  "feedback": "Biết mà vẫn để khách dùng tài liệu giả trái nguyên tắc trung thực của nghề."
+                }
+              ]
+            },
+            {
+              "npc_line": "Vậy tôi có thắng không?",
+              "replies": [
+                {
+                  "text": "Em chưa hứa trước kết quả, nhưng sẽ trình bày rõ phần đúng của chị.",
+                  "effect": { "tin_nhiem": 3 },
+                  "feedback": "Nói thật về khả năng thắng thua giữ được niềm tin lâu dài."
+                },
+                {
+                  "text": "Chị yên tâm, chắc chắn thắng.",
+                  "effect": { "tin_nhiem": -3 },
+                  "feedback": "Hứa chắc kết quả dễ thành lừa dối khách hàng, điều luật sư bị cấm."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "ls5-sap-het-han",
+        "time": "15:00",
+        "title": "Sắp hết hạn nộp chứng cứ",
+        "narrative": "Hạn nộp chứng cứ thẩm phán ấn định sắp tới, nhưng khách vẫn chưa gửi bản gốc một giấy tờ quan trọng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Thời hạn giao nộp tài liệu, chứng cứ do Thẩm phán ấn định; nộp chậm thì đương sự phải chứng minh được lý do chính đáng.",
+          "source_ids": ["S2", "S3"],
+          "confidence": "verified",
+          "note": "Bộ luật Tố tụng dân sự Điều 96 khoản 4, không bị Luật 85/2025 sửa."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý giấy tờ còn thiếu thế nào?",
+          "options": [
+            {
+              "text": "Gọi khách ngay, nộp phần đã có đúng hạn và ghi rõ giấy tờ nào còn thiếu",
+              "effect": { "chat_che": 3, "nang_luong": -1 },
+              "feedback": "Nộp đúng hạn phần đã có; phần chậm phải chứng minh được lý do chính đáng."
+            },
+            {
+              "text": "Chờ đủ giấy tờ rồi nộp một lần, trễ vài hôm cũng không sao",
+              "effect": { "chat_che": -4, "tin_nhiem": -2 },
+              "feedback": "Nộp chậm buộc phải chứng minh lý do chính đáng, nên trễ hạn là rủi ro cho khách."
+            },
+            {
+              "text": "Tự soạn một bản thay thế cho giấy tờ còn thiếu",
+              "effect": { "chat_che": -6 },
+              "feedback": "Tự tạo giấy tờ thay bản thật là cung cấp tài liệu sai sự thật, điều luật sư bị cấm."
+            }
+          ]
+        }
+      },
+      {
+        "id": "ls6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia thời gian cuối chiều",
+        "narrative": "Còn vài giờ trước khi tan. Bạn chia thời gian giữa nghiên cứu luật, soạn văn bản và gọi cập nhật cho khách.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật sư có nghĩa vụ bồi dưỡng chuyên môn; Liên đoàn Luật sư Việt Nam cho rằng nghề luật sư phải được dạy và rèn qua thực hành.",
+          "source_ids": ["S1", "S9"],
+          "confidence": "verified",
+          "note": "Luật Luật sư Điều 21 khoản 2 điểm đ; quan điểm của Liên đoàn Luật sư (S9)."
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian cuối chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Nghiên cứu luật, án lệ", "effect_per_30min": { "chat_che": 2, "nang_luong": -2 } },
+            { "label": "Soạn văn bản cho khách", "effect_per_30min": { "chat_che": 1, "tin_nhiem": 1, "nang_luong": -1 } },
+            { "label": "Gọi điện cập nhật khách", "effect_per_30min": { "tin_nhiem": 2, "nang_luong": -1 } },
+            { "label": "Nghỉ ngơi, ăn tối", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "ls7-xung-dot-loi-ich",
+        "time": "18:30",
+        "title": "Người bên kia xin tư vấn cùng vụ",
+        "narrative": "Cuối ngày, chính chủ nhà, bên đang tranh chấp với khách của bạn, tới văn phòng xin bạn tư vấn cho vụ này.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm luật sư cung cấp dịch vụ cho các khách hàng có quyền lợi đối lập trong cùng vụ việc, và cấm tiết lộ thông tin khách hàng khi chưa được đồng ý bằng văn bản.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Luật sư Điều 9 khoản 1 điểm a, c."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn trả lời người bên kia thế nào?",
+          "options": [
+            {
+              "text": "Từ chối nhận vụ, nói rõ bạn đang đại diện bên kia và không tiết lộ gì thêm",
+              "effect": { "chat_che": 3, "tin_nhiem": 2 },
+              "feedback": "Luật cấm nhận khách có quyền lợi đối lập trong cùng vụ và cấm tiết lộ thông tin khách hàng."
+            },
+            {
+              "text": "Nhận tư vấn thêm, miễn hai bên không biết",
+              "effect": { "chat_che": -6, "tin_nhiem": -3 },
+              "feedback": "Phục vụ cả hai bên đối lập trong cùng vụ là hành vi luật sư bị cấm."
+            },
+            {
+              "text": "Từ chối, nhưng kể sơ cho ông ấy biết khách mình định làm gì",
+              "effect": { "chat_che": -5, "tin_nhiem": -3 },
+              "feedback": "Tiết lộ thông tin vụ việc khi khách chưa đồng ý bằng văn bản là bị cấm."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có dám nói \"không\" với chính khách hàng đang trả tiền cho mình khi họ muốn làm sai không?",
+      "Bạn thấy mình hợp với việc đọc tài liệu dày và soạn văn bản nhiều giờ liền không?",
+      "Hai năm đào tạo và tập sự sau đại học có làm bạn nản, hay bạn thấy đó là thời gian cần thiết?",
+      "Ngoài tranh tụng ở tòa, bạn muốn tìm hiểu thêm hướng nào của nghề luật?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-luat",
+        "title": "Sinh viên / cử nhân luật",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Đi thực tập từ năm hai, năm ba để quen hồ sơ và cách làm việc với khách."
+          }
+        ]
+      },
+      {
+        "id": "dao-tao-tap-su",
+        "title": "Học viên đào tạo nghề, người tập sự hành nghề luật sư",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Đào tạo nghề luật sư mười hai tháng, rồi tập sự mười hai tháng tại tổ chức hành nghề luật sư.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "luat-su",
+        "title": "Luật sư",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có Chứng chỉ hành nghề luật sư và gia nhập một Đoàn luật sư.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "luat-su-dieu-hanh",
+        "title": "Luật sư điều hành / luật sư thành viên",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm, chuyên sâu một vài mảng và khả năng dẫn dắt nhóm, giữ khách hàng."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-luat", "to": "dao-tao-tap-su", "type": "promotion" },
+      { "from": "dao-tao-tap-su", "to": "luat-su", "type": "promotion" },
+      { "from": "luat-su", "to": "luat-su-dieu-hanh", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Sau khi có bằng cử nhân luật, bạn còn mười hai tháng đào tạo nghề và mười hai tháng tập sự, rồi phải qua kiểm tra mới được cấp chứng chỉ hành nghề.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Luật sư Điều 12, 14, 15, 17. Dự thảo luật mới đề xuất rút gọn quy trình (S4)."
+    },
+    {
+      "kind": "fact",
+      "text": "Áp lực thời hạn thường trực: tài liệu, chứng cứ phải nộp đúng thời hạn Thẩm phán ấn định, nộp chậm phải chứng minh lý do chính đáng.",
+      "source_ids": ["S2", "S3"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "fact",
+      "text": "Một luật sư kể từng bị khách quịt phần thù lao cuối dù đã làm xong việc, và vẫn phải tự đóng thuế, bù phần còn lại.",
+      "source_ids": ["S8"],
+      "confidence": "single_source",
+      "note": "Lời kể của luật sư Trương Văn Tuấn; không phải tỷ lệ đại diện."
+    },
+    {
+      "kind": "fact",
+      "text": "Thu nhập lúc mới vào nghề, khi chưa có chứng chỉ, thấp hơn nhiều so với luật sư đã hành nghề vài năm.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Sinh viên luật kể nhiều nơi kiến tập, thực tập yêu cầu làm toàn thời gian nhưng không có hợp đồng, không lương.",
+      "source_ids": ["S8"],
+      "confidence": "single_source",
+      "note": "Chia sẻ của sinh viên tại buổi giao lưu; không đại diện cho mọi nơi."
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Dự thảo Luật Luật sư (sửa đổi), được Ủy ban Thường vụ Quốc hội cho ý kiến tháng 8/2026, đề xuất rút quy trình trở thành luật sư từ 4 bước xuống 2 bước, có kỳ thi quốc gia cấp chứng chỉ.",
+      "source_ids": ["S4", "S6"],
+      "confidence": "verified",
+      "note": "Đây là dự thảo; khi luật mới được thông qua phải cập nhật lại phần yêu cầu và lộ trình."
+    },
+    {
+      "kind": "advice",
+      "text": "Tiếng Anh pháp lý và khả năng làm việc với công nghệ, dữ liệu sẽ giúp bạn có thêm lựa chọn trong nghề."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, moj.gov.vn, CareerLink, VnExpress, Thanh Niên, Tuổi Trẻ)",
+    "scope_note": "Bối cảnh luật sư tranh tụng dân sự 1–2 năm sau khi có chứng chỉ, làm tại văn phòng luật; không gồm luật sư hình sự, pháp chế doanh nghiệp. Không đưa lời khuyên pháp lý cho vụ việc thật (SPEC-016 R-3)."
+  }
+}

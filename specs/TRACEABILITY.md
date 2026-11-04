@@ -19,11 +19,11 @@
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 3 | implemented | ✓ Son 2026-11-04 | [F3] | 11/11 |
 | [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 3 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
-| [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
-| [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | draft | — | [F2, F3, F4, F5] | 0/8 |
-| [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
+| [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
+| [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -270,60 +270,60 @@
 
 | AC | Test |
 |---|---|
-| AC-016-01 | ❌ chưa có |
-| AC-016-02 | ❌ chưa có |
-| AC-016-03 | ❌ chưa có |
-| AC-016-04 | ❌ chưa có |
-| AC-016-05 | ❌ chưa có |
-| AC-016-06 | ❌ chưa có |
-| AC-016-07 | ❌ chưa có |
+| AC-016-01 | tests\spec-016\luat-su.test.mjs — "AC-016-01 hồ sơ Luật sư qua validate" |
+| AC-016-02 | tests\spec-016\luat-su.test.mjs — "AC-016-02 bản đồ Luật sư qua validate:world và chỉ có một bả" |
+| AC-016-03 | tests\spec-016\luat-su.test.mjs — "AC-016-03 gói Luật sư đạt check:pack" |
+| AC-016-04 | tests\spec-016\luat-su.test.mjs — "AC-016-04 chơi hết ngày Luật sư tới done" |
+| AC-016-05 | tests\spec-016\luat-su.test.mjs — "AC-016-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-016-06 | tests\spec-016\luat-su.test.mjs — "AC-016-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-016-07 | tests\spec-016\luat-su.test.mjs — "AC-016-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-017 — Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio)
 
 | AC | Test |
 |---|---|
-| AC-017-01 | ❌ chưa có |
-| AC-017-02 | ❌ chưa có |
-| AC-017-03 | ❌ chưa có |
-| AC-017-04 | ❌ chưa có |
-| AC-017-05 | ❌ chưa có |
-| AC-017-06 | ❌ chưa có |
-| AC-017-07 | ❌ chưa có |
+| AC-017-01 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-01 hồ sơ Thiết kế đồ họa qua validate" |
+| AC-017-02 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-02 bản đồ Thiết kế đồ họa qua validate:world và chỉ c" |
+| AC-017-03 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-03 gói Thiết kế đồ họa đạt check:pack" |
+| AC-017-04 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-04 chơi hết ngày Thiết kế đồ họa tới done" |
+| AC-017-05 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-05 có nguồn law có effective_date và market có issued" |
+| AC-017-06 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-017-07 | tests\spec-017\thiet-ke-do-hoa.test.mjs — "AC-017-07 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-018 — Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh)
 
 | AC | Test |
 |---|---|
-| AC-018-01 | ❌ chưa có |
-| AC-018-02 | ❌ chưa có |
-| AC-018-03 | ❌ chưa có |
-| AC-018-04 | ❌ chưa có |
-| AC-018-05 | ❌ chưa có |
-| AC-018-06 | ❌ chưa có |
-| AC-018-07 | ❌ chưa có |
-| AC-018-08 | ❌ chưa có |
+| AC-018-01 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-01 hồ sơ Giao dịch viên ngân hàng qua validate" |
+| AC-018-02 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-02 bản đồ Giao dịch viên ngân hàng qua validate:world" |
+| AC-018-03 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-03 gói Giao dịch viên ngân hàng đạt check:pack" |
+| AC-018-04 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-04 chơi hết ngày Giao dịch viên ngân hàng tới done" |
+| AC-018-05 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-018-06 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-018-07 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-07 phần 5 có lựa chọn vì khách hàng không bị trừ chin" |
+| AC-018-08 | tests\spec-018\giao-dich-vien-ngan-hang.test.mjs — "AC-018-08 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-019 — Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp)
 
 | AC | Test |
 |---|---|
-| AC-019-01 | ❌ chưa có |
-| AC-019-02 | ❌ chưa có |
-| AC-019-03 | ❌ chưa có |
-| AC-019-04 | ❌ chưa có |
-| AC-019-05 | ❌ chưa có |
-| AC-019-06 | ❌ chưa có |
-| AC-019-07 | ❌ chưa có |
-| AC-019-08 | ❌ chưa có |
+| AC-019-01 | tests\spec-019\dau-bep.test.mjs — "AC-019-01 hồ sơ Đầu bếp qua validate" |
+| AC-019-02 | tests\spec-019\dau-bep.test.mjs — "AC-019-02 bản đồ Đầu bếp qua validate:world và chỉ có một bả" |
+| AC-019-03 | tests\spec-019\dau-bep.test.mjs — "AC-019-03 gói Đầu bếp đạt check:pack" |
+| AC-019-04 | tests\spec-019\dau-bep.test.mjs — "AC-019-04 chơi hết ngày Đầu bếp tới done" |
+| AC-019-05 | tests\spec-019\dau-bep.test.mjs — "AC-019-05 có nguồn law có effective_date và market có issued" |
+| AC-019-06 | tests\spec-019\dau-bep.test.mjs — "AC-019-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-019-07 | tests\spec-019\dau-bep.test.mjs — "AC-019-07 phần 4 không lựa chọn bỏ qua dị ứng nào làm tăng v" |
+| AC-019-08 | tests\spec-019\dau-bep.test.mjs — "AC-019-08 bản build có trang hồ sơ và trang màn chơi" |
 
 ## SPEC-020 — Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc)
 
 | AC | Test |
 |---|---|
-| AC-020-01 | ❌ chưa có |
-| AC-020-02 | ❌ chưa có |
-| AC-020-03 | ❌ chưa có |
-| AC-020-04 | ❌ chưa có |
-| AC-020-05 | ❌ chưa có |
-| AC-020-06 | ❌ chưa có |
-| AC-020-07 | ❌ chưa có |
+| AC-020-01 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-01 hồ sơ Kiến trúc sư qua validate" |
+| AC-020-02 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-02 bản đồ Kiến trúc sư qua validate:world và chỉ có m" |
+| AC-020-03 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-03 gói Kiến trúc sư đạt check:pack" |
+| AC-020-04 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-04 chơi hết ngày Kiến trúc sư tới done" |
+| AC-020-05 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-020-06 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-06 phần 6 chia đúng 180 phút bằng time_budget" |
+| AC-020-07 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-07 bản build có trang hồ sơ và trang màn chơi" |
