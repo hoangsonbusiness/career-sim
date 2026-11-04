@@ -970,4 +970,54 @@ const guideWorld = {
 };
 writeFileSync(out("content/worlds/huong-dan-vien-du-lich.json"), JSON.stringify(guideWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich}.json");
+// ---------- Chuyên viên nhân sự (SPEC-024): phòng nhân sự của một công ty sản xuất ----------
+// Phòng phỏng vấn trái, hành lang có bảng công việc giữa, phòng trưởng phòng phải; khu bàn nhân sự và phòng đào tạo phía dưới.
+const PHONG_NHAN_SU = AGENCY;
+const PHONG_NHAN_SU_PROPS = [
+  // Phòng phỏng vấn: bàn, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng trưởng phòng: bàn, tủ hồ sơ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn nhân sự: bàn của bạn, bàn đồng nghiệp C&B, tủ hồ sơ
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [24, 10, 85, 1], [25, 10, 86, 1], [27, 13, 329, 1],
+  // Phòng đào tạo: dãy bàn học viên
+  [2, 10, 5, 1], [4, 10, 5, 1], [6, 10, 5, 1], [2, 12, 5, 1], [4, 12, 5, 1], [6, 12, 5, 1],
+];
+const PHONG_NHAN_SU_DECOR = [
+  // Bảng công việc trên tường hành lang; hồ sơ trên bàn.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [25, 10, 18],
+];
+
+const hrWorld = {
+  profession_id: "chuyen-vien-nhan-su",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("phong-nhan-su", PHONG_NHAN_SU, PHONG_NHAN_SU_PROPS, PHONG_NHAN_SU_DECOR, { x: 15, y: 12 }),
+  ],
+  npcs: [
+    { id: "truong-phong-ns", map: "phong-nhan-su", x: 22, y: 4, name: "Chị Mai (trưởng phòng nhân sự)", sprite: C(379) },
+    { id: "ung-vien", map: "phong-nhan-su", x: 3, y: 4, name: "Chị Hoa (ứng viên)", sprite: C(433) },
+    { id: "truong-xuong", map: "phong-nhan-su", x: 14, y: 3, name: "Anh Dũng (trưởng xưởng)", sprite: C(54, 17, 22) },
+    { id: "cong-nhan-tam", map: "phong-nhan-su", x: 24, y: 4, name: "Anh Tâm (công nhân tổ tiện)", sprite: C(1, 13, 76) },
+    { id: "dong-nghiep-cb", map: "phong-nhan-su", x: 24, y: 11, name: "Đồng nghiệp lương thưởng", sprite: C(1, 125, 20) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "ns1-tuyen-dung": { map: "phong-nhan-su", target: { x: 22, y: 4 }, npc: "truong-phong-ns", quest: "Trưởng phòng gọi bạn bàn việc tuyển công nhân" },
+    "ns2-tin-tuyen-dung": { map: "phong-nhan-su", target: { x: 15, y: 11 }, quest: "Về bàn, soát tin tuyển dụng trước khi đăng" },
+    "ns3-hop-dong": { map: "phong-nhan-su", target: { x: 15, y: 11 }, quest: "Mở bản nháp hợp đồng trưởng phòng vừa gửi" },
+    "ns4-phong-van": { map: "phong-nhan-su", target: { x: 3, y: 4 }, npc: "ung-vien", quest: "Ứng viên đang chờ ở phòng phỏng vấn" },
+    "ns5-yeu-cau-truong-bo-phan": { map: "phong-nhan-su", target: { x: 14, y: 3 }, npc: "truong-xuong", quest: "Trưởng xưởng đứng chờ bạn ở bảng công việc" },
+    "ns6-chia-thoi-gian": { map: "phong-nhan-su", target: { x: 15, y: 11 }, quest: "Về bàn, xử lý việc cuối chiều" },
+    "ns7-phan-anh": { map: "phong-nhan-su", target: { x: 24, y: 4 }, npc: "cong-nhan-tam", quest: "Có công nhân xin gặp ở phòng trưởng phòng" },
+  },
+};
+writeFileSync(out("content/worlds/chuyen-vien-nhan-su.json"), JSON.stringify(hrWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non,phong-vien,huong-dan-vien-du-lich,chuyen-vien-nhan-su}.json");
