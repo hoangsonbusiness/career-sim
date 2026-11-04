@@ -739,4 +739,53 @@ const kitchenWorld = {
 };
 writeFileSync(out("content/worlds/dau-bep.json"), JSON.stringify(kitchenWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep}.json");
+// ---------- Kiến trúc sư (SPEC-020): một văn phòng kiến trúc ----------
+// Phòng họp trái, hành lang có bảng phương án giữa, phòng kiến trúc sư chủ trì phải, khu bàn vẽ và bàn mô hình phía dưới.
+const VAN_PHONG_KIEN_TRUC = AGENCY;
+const VAN_PHONG_KIEN_TRUC_PROPS = [
+  // Phòng họp: bàn dài, ghế, cây
+  [4, 2, 0, 1], [5, 2, 1, 1], [6, 2, 2, 1],
+  [4, 3, 162, 1], [5, 3, 163, 1], [6, 3, 164, 1],
+  [1, 1, 16, 1], [10, 1, 17, 1],
+  // Phòng kiến trúc sư chủ trì: bàn, kệ hồ sơ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [26, 5, 330, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu bàn vẽ: bàn của bạn, bàn đồng nghiệp dựng hình
+  [14, 10, 85, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  [24, 10, 85, 1], [25, 10, 86, 1],
+  // Bàn mô hình
+  [4, 12, 85, 1], [5, 12, 86, 1], [6, 12, 97, 1], [28, 14, 17, 1],
+];
+const VAN_PHONG_KIEN_TRUC_DECOR = [
+  // Bảng phương án ghim bản vẽ trên tường hành lang; mô hình trên bàn.
+  [12, 2, 18], [12, 3, 18], [12, 4, 18],
+  [15, 10, 18], [5, 12, 18],
+];
+
+const architectWorld = {
+  profession_id: "kien-truc-su",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("van-phong-kien-truc", VAN_PHONG_KIEN_TRUC, VAN_PHONG_KIEN_TRUC_PROPS, VAN_PHONG_KIEN_TRUC_DECOR, { x: 15, y: 13 }),
+  ],
+  npcs: [
+    { id: "kts-chu-tri", map: "van-phong-kien-truc", x: 22, y: 4, name: "Kiến trúc sư chủ trì", sprite: C(379) },
+    { id: "chu-nha", map: "van-phong-kien-truc", x: 3, y: 4, name: "Anh Lâm (chủ nhà)", sprite: C(433) },
+    { id: "ky-su-ket-cau", map: "van-phong-kien-truc", x: 9, y: 4, name: "Kỹ sư kết cấu", sprite: C(54, 17, 22) },
+    { id: "dong-nghiep-dung-hinh", map: "van-phong-kien-truc", x: 24, y: 11, name: "Đồng nghiệp dựng hình", sprite: C(1, 13, 76) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "kt1-khao-sat": { map: "van-phong-kien-truc", target: { x: 22, y: 4 }, npc: "kts-chu-tri", quest: "Sang phòng kiến trúc sư chủ trì nhận dự án" },
+    "kt2-soat-ban-ve": { map: "van-phong-kien-truc", target: { x: 15, y: 10 }, quest: "Về bàn vẽ, soát bộ bản vẽ trình" },
+    "kt3-yeu-cau-chu-nha": { map: "van-phong-kien-truc", target: { x: 12, y: 3 }, quest: "Tới bảng phương án, xếp các yêu cầu của chủ nhà" },
+    "kt4-vuot-giay-phep": { map: "van-phong-kien-truc", target: { x: 3, y: 4 }, npc: "chu-nha", quest: "Anh Lâm đang chờ trong phòng họp" },
+    "kt5-cat-ngan-sach": { map: "van-phong-kien-truc", target: { x: 3, y: 4 }, npc: "chu-nha", quest: "Chủ nhà muốn bàn lại ngân sách" },
+    "kt6-chia-thoi-gian": { map: "van-phong-kien-truc", target: { x: 5, y: 12 }, quest: "Tới bàn mô hình, chia thời gian cuối chiều" },
+    "kt7-ket-cau": { map: "van-phong-kien-truc", target: { x: 9, y: 4 }, npc: "ky-su-ket-cau", quest: "Kỹ sư kết cấu muốn trao đổi về phương án" },
+  },
+};
+writeFileSync(out("content/worlds/kien-truc-su.json"), JSON.stringify(architectWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su}.json");

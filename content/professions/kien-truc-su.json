@@ -1,0 +1,577 @@
+{
+  "id": "kien-truc-su",
+  "name": "Kiến trúc sư",
+  "aliases": ["Architect", "Kiến trúc sư thiết kế"],
+  "group": { "label": "Kiến trúc & Xây dựng" },
+  "holland": ["A", "I", "R"],
+  "summary": "Biến nhu cầu của chủ nhà thành phương án và bản vẽ công trình, cân bằng ý tưởng với ngân sách, quy chuẩn bắt buộc và phối hợp với kỹ sư; được quyền từ chối yêu cầu trái pháp luật của chủ đầu tư.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Kiến trúc số 40/2019/QH14",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/xay-dung/luat-kien-truc-2019-so-40-2019-qh14-175009-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2019-06-13",
+      "effective_date": "2020-07-01",
+      "note": "Đã đọc Điều 22, 28, 32, 33. LuatVietnam ghi chú: theo Nghị quyết 66.18/2026/NQ-CP (S3), không thực hiện các điều kiện tại Điều 28 và thủ tục tại Điều 29. Luật 19/2026/QH16 (S2) sửa nhiều điều và bãi bỏ Điều 26, 28, 29 từ 01/3/2027."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật số 19/2026/QH16 sửa đổi, bổ sung một số điều của Luật Kiến trúc",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/xay-dung/luat-kien-truc-sua-doi-2026-so-19-2026-qh16-447618-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-24",
+      "effective_date": "2027-03-01",
+      "note": "Đã đọc Điều 1 khoản 9 (Điều 21 mới: tiêu chuẩn năng lực hành nghề) và khoản 15 (bãi bỏ Điều 26, 28, 29). Ngày 24/8/2026 là ngày Quốc hội thông qua."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Nghị quyết 66.18/2026/NQ-CP về phân quyền, cắt giảm, đơn giản hóa thủ tục hành chính, điều kiện kinh doanh",
+      "publisher": "Chính phủ / vanban.chinhphu.vn",
+      "url": "https://vanban.chinhphu.vn/?pageid=27160&docid=218181",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-05-18",
+      "effective_date": "2026-07-01",
+      "note": "Ngày ban hành, ngày hiệu lực lấy từ cổng văn bản Chính phủ; toàn văn ở file PDF chưa đọc được. Nội dung về chứng chỉ hành nghề kiến trúc lấy theo ghi chú dẫn Phụ lục I.8 của nghị quyết trên LuatVietnam (S1)."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Sửa đổi 1:2023 QCVN 06:2022/BXD Quy chuẩn kỹ thuật quốc gia về an toàn cháy cho nhà và công trình (Thông tư 09/2023/TT-BXD)",
+      "publisher": "Bộ Xây dựng / LuatVietnam",
+      "url": "https://luatvietnam.vn/dat-dai/thong-tu-09-2023-tt-bxd-sua-quy-chuan-ky-thuat-quoc-gia-ve-an-toan-chay-cho-nha-va-cong-trinh-271728-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-10-16",
+      "effective_date": "2023-12-01",
+      "note": "Đã đọc điểm 1.1.2 sửa đổi (phạm vi áp dụng với nhà ở riêng lẻ). Bộ Xây dựng có văn bản hợp nhất 92/2026/VBHN-TT-BXD ngày 28/09/2026; chưa đối chiếu xem có sửa đổi mới hay không."
+    },
+    {
+      "id": "S5",
+      "type": "law",
+      "title": "Luật Xây dựng số 135/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/xay-dung/luat-xay-dung-2025-so-135-2025-qh15-422277-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-07-01",
+      "note": "Đã đọc Điều 15 (hành vi bị nghiêm cấm) và Điều 54 khoản 1 điểm d (phá dỡ công trình xây sai giấy phép, sai quy hoạch)."
+    },
+    {
+      "id": "S6",
+      "type": "law",
+      "title": "Luật Sở hữu trí tuệ số 50/2005/QH11 (Văn bản hợp nhất 155/VBHN-VPQH năm 2025)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/so-huu-tri-tue/van-ban-hop-nhat-155-vbhn-vpqh-nam-2025-do-van-phong-quoc-hoi-ban-hanh-hop-nhat-luat-so-huu-tri-tue-411282-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2005-11-29",
+      "effective_date": "2006-07-01",
+      "note": "Điều 14 khoản 1 điểm i (tác phẩm kiến trúc được bảo hộ), Điều 20 (quyền tài sản). Luật 131/2025/QH15 không sửa các điều này."
+    },
+    {
+      "id": "S7",
+      "type": "market",
+      "title": "Có nên học ngành Kiến trúc? Góc nhìn thực tế cho người trẻ",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-viec-lam/tu-van-nghe-nghiep/co-nen-hoc-nganh-kien-truc",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-02-25",
+      "note": "Bài đăng trước khi Nghị quyết 66.18/2026 có hiệu lực; phần nói chứng chỉ hành nghề là bắt buộc không còn đúng với giai đoạn từ 01/7/2026, nên nội dung không dùng ý đó."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Áp lực nào khi học ngành thiết kế - mỹ thuật - kiến trúc?",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/ap-luc-nao-khi-hoc-nganh-thiet-ke-my-thuat-kien-truc-185260324204050028.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-25",
+      "note": "Chia sẻ của TS Nguyễn Thị Ngọc Quyên (Trưởng khoa Kiến trúc Mỹ thuật, ĐH Công nghệ TP.HCM) và KTS Nguyễn Ngọc Uyên (giảng viên ĐH Mở TP.HCM)."
+    },
+    {
+      "id": "S9",
+      "type": "testimony",
+      "title": "Kiến trúc sư bỏ 20 năm làm nghề để khởi nghiệp logistics",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/kien-truc-su-bo-20-nam-lam-nghe-de-khoi-nghiep-logistics-4300942.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2021-06-30",
+      "note": "Lời kể của anh Thưởng, kiến trúc sư 20 năm; bài có thể mang tính giới thiệu doanh nghiệp, chỉ dùng câu kể về thời gian dành cho dự án."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Vẽ phác thảo nhà cửa, đường phố quanh bạn và học chắc Toán, Vật lý; nghề này cần cả mắt thẩm mỹ lẫn tư duy kỹ thuật.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập dựng mô hình bằng giấy, bìa để quen nghĩ về không gian ba chiều.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Ngành Kiến trúc thường xét tổ hợp có môn năng khiếu vẽ, như V00 hoặc V01, và học khoảng 5 năm.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "audience": ["thpt"],
+        "note": "Tổng quan từ một trang tuyển dụng; xem đề án tuyển sinh chính thức của từng trường."
+      },
+      {
+        "kind": "advice",
+        "text": "Luyện vẽ năng khiếu từ sớm và hỏi kỹ trường bạn nhắm tới thi những môn gì.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Theo Luật Kiến trúc 2019, muốn được cấp chứng chỉ hành nghề phải có bằng đại học về kiến trúc, ít nhất 03 năm kinh nghiệm tham gia dịch vụ kiến trúc và đạt sát hạch.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Kiến trúc Điều 28 khoản 1. Từ 01/7/2026, theo Nghị quyết 66.18/2026 (S3), các điều kiện và thủ tục này không được thực hiện."
+      },
+      {
+        "kind": "fact",
+        "text": "Từ 01/7/2026, theo Nghị quyết 66.18/2026, không thực hiện các điều kiện và thủ tục cấp, gia hạn chứng chỉ hành nghề kiến trúc.",
+        "source_ids": ["S1", "S3"],
+        "confidence": "verified",
+        "note": "Giai đoạn áp dụng của nghị quyết được Sở Quy hoạch – Kiến trúc TP.HCM thông báo là đến hết 28/02/2027, nhưng trang của Sở không mở được để kiểm tra; cần đối chiếu toàn văn nghị quyết."
+      },
+      {
+        "kind": "fact",
+        "text": "Từ 01/3/2027, chứng chỉ hành nghề chỉ bắt buộc với kiến trúc sư chủ trì thiết kế, chủ nhiệm thiết kế và kiến trúc sư hành nghề độc lập; người khác cần có trình độ đào tạo về kiến trúc, xây dựng phù hợp với công việc.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Luật 19/2026/QH16, Điều 21 mới khoản 2."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Kiến trúc sư có quyền yêu cầu chủ đầu tư cung cấp tài liệu cho nhiệm vụ thiết kế, yêu cầu thi công đúng thiết kế đã duyệt và từ chối yêu cầu trái pháp luật của chủ đầu tư.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Kiến trúc Điều 32 khoản 1 điểm c, d, đ (bản hiện hành; Luật 19/2026 sửa Điều 32 từ 01/3/2027)."
+      },
+      {
+        "kind": "fact",
+        "text": "Quy tắc ứng xử nghề nghiệp của kiến trúc sư gồm nguyên tắc hành nghề, cạnh tranh, bình đẳng giới, quyền sở hữu trí tuệ và ứng xử với đồng nghiệp, khách hàng.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Kiến trúc Điều 22 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Nhà ở riêng lẻ cao từ 7 tầng trở lên, hoặc chiều cao PCCC từ 25 m, khối tích từ 5.000 m3, hoặc có hơn 1 tầng hầm thuộc phạm vi áp dụng quy chuẩn an toàn cháy QCVN 06.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "QCVN 06:2022/BXD điểm 1.1.2, theo Sửa đổi 1:2023."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Nghề kiến trúc có deadline cứng và áp lực dự án, nhất là vào các tháng cao điểm thi công hay phát triển dự án.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một trang tuyển dụng năm 2026, lương khởi điểm tham khảo của ngành kiến trúc khoảng 8–12 triệu đồng/tháng, tùy quy mô công ty, vị trí và năng lực.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Giảng viên ngành kiến trúc cho biết nhu cầu nhân lực lớn nhưng ra trường phải chịu nhiều áp lực về tiến độ, chất lượng và trách nhiệm với công trình.",
+        "source_ids": ["S8"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "An — kiến trúc sư 3 năm kinh nghiệm tại Văn phòng Kiến trúc Mây Trắng (hư cấu), đang thiết kế nhà phố cho gia đình anh Lâm (hư cấu).",
+    "setting": "Một ngày ở văn phòng kiến trúc: từ khảo sát tới phương án, soát bản vẽ, chọn yêu cầu làm được, chủ nhà muốn xây vượt giấy phép, ngân sách bị cắt và kỹ sư kết cấu góp ý.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "sang_tao", "label": "Sáng tạo", "initial": 65 },
+      { "id": "tuan_thu", "label": "Tuân thủ", "initial": 70 }
+    ],
+    "segments": [
+      {
+        "id": "kt1-khao-sat",
+        "time": "08:30",
+        "title": "Từ khảo sát tới phương án sơ bộ",
+        "narrative": "Sáng nay bạn bắt đầu dự án nhà phố cho gia đình anh Lâm. Kiến trúc sư chủ trì nhắc bạn đi đúng từng bước.",
+        "basis": {
+          "kind": "fact",
+          "text": "Kiến trúc sư có quyền yêu cầu chủ đầu tư cung cấp thông tin, tài liệu liên quan tới nhiệm vụ thiết kế được giao.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Kiến trúc Điều 32 khoản 1 điểm c."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước từ khảo sát tới phương án",
+          "steps": [
+            "Gặp chủ nhà, ghi lại nhu cầu và ngân sách",
+            "Xin chủ nhà giấy tờ đất, giấy phép, bản đồ khu đất",
+            "Khảo sát hiện trạng khu đất",
+            "Phác các phương án mặt bằng sơ bộ",
+            "Trình chủ trì và chủ nhà chọn phương án"
+          ],
+          "on_success": { "tuan_thu": 3, "sang_tao": 2 },
+          "on_fail": { "tuan_thu": -3 }
+        }
+      },
+      {
+        "id": "kt2-soat-ban-ve",
+        "time": "09:30",
+        "title": "Soát bản vẽ trước khi trình",
+        "narrative": "Đồng nghiệp dựng hình gửi bộ bản vẽ trình. Nhà cao 7 tầng nổi, nên bạn soát kỹ từng ghi chú trước khi gửi đi.",
+        "basis": {
+          "kind": "fact",
+          "text": "Nhà ở riêng lẻ cao từ 7 tầng trở lên thuộc phạm vi quy chuẩn an toàn cháy QCVN 06; tác phẩm kiến trúc được bảo hộ quyền tác giả.",
+          "source_ids": ["S4", "S6"],
+          "confidence": "verified",
+          "note": "QCVN 06:2022/BXD điểm 1.1.2 (Sửa đổi 1:2023); Luật Sở hữu trí tuệ Điều 14 khoản 1 điểm i, Điều 20. Chỉ đánh lỗi hai dòng có quy định rõ (SPEC-020 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng bản vẽ trái quy định",
+          "document": [
+            "BẢN VẼ TRÌNH — Nhà phố gia đình anh Lâm (hư cấu)",
+            "Quy mô: 7 tầng nổi, 1 tầng hầm",
+            "Ghi chú: nhà ở riêng lẻ nên không cần áp dụng QCVN 06",
+            "Mặt đứng: chép nguyên phương án của văn phòng khác, chưa xin phép",
+            "Hồ sơ ghi tên kiến trúc sư chủ trì thiết kế",
+            "Thuyết minh: nêu rõ tiêu chuẩn chọn áp dụng cho công trình"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Nhà ở riêng lẻ cao từ 7 tầng trở lên thuộc phạm vi áp dụng của QCVN 06 về an toàn cháy." },
+            { "line": 3, "explain": "Tác phẩm kiến trúc được bảo hộ quyền tác giả; dùng lại phải được chủ sở hữu cho phép." }
+          ],
+          "on_success": { "tuan_thu": 5 },
+          "on_fail": { "tuan_thu": -5 }
+        }
+      },
+      {
+        "id": "kt3-yeu-cau-chu-nha",
+        "time": "11:00",
+        "title": "Xếp yêu cầu của chủ nhà",
+        "narrative": "Chủ nhà gửi một danh sách mong muốn. Ở bảng phương án, bạn tách điều làm được khỏi điều trái quy định.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm xây công trình không phù hợp quy chuẩn, vi phạm quy định phòng cháy chữa cháy, cơi nới lấn chiếm không gian công cộng; sao chép tác phẩm kiến trúc phải được phép.",
+          "source_ids": ["S5", "S6"],
+          "confidence": "verified",
+          "note": "Luật Xây dựng 2025 Điều 15 khoản 2, 5, 6; Luật Sở hữu trí tuệ Điều 20."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp yêu cầu: làm được hay trái quy định",
+          "buckets": ["Làm được", "Trái quy định"],
+          "items": [
+            { "text": "Thêm giếng trời lấy sáng giữa nhà", "bucket": "Làm được" },
+            { "text": "Bố trí phòng ngủ cho ông bà ở tầng một", "bucket": "Làm được" },
+            { "text": "Thêm nhiều cây xanh ở ban công", "bucket": "Làm được" },
+            { "text": "Cơi nới ban công lấn ra không gian vỉa hè", "bucket": "Trái quy định" },
+            { "text": "Bỏ qua yêu cầu an toàn cháy dù nhà cao 7 tầng", "bucket": "Trái quy định" },
+            { "text": "Chép nguyên thiết kế nhà hàng xóm cho nhanh", "bucket": "Trái quy định" }
+          ],
+          "on_success": { "tuan_thu": 4, "sang_tao": 1 },
+          "on_fail": { "tuan_thu": -4 }
+        }
+      },
+      {
+        "id": "kt4-vuot-giay-phep",
+        "time": "13:30",
+        "title": "Chủ nhà muốn xây vượt giấy phép",
+        "narrative": "Đầu giờ chiều, anh Lâm tới phòng họp, muốn vẽ thêm một tầng dù giấy phép không cho phép.",
+        "basis": {
+          "kind": "fact",
+          "text": "Công trình xây sai nội dung giấy phép xây dựng thuộc trường hợp phải phá dỡ; kiến trúc sư có quyền từ chối yêu cầu trái pháp luật của chủ đầu tư.",
+          "source_ids": ["S1", "S5"],
+          "confidence": "verified",
+          "note": "Luật Xây dựng 2025 Điều 54 khoản 1 điểm d; Luật Kiến trúc Điều 32 khoản 1 điểm đ."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với chủ nhà về yêu cầu thêm tầng",
+          "npc": "Anh Lâm (chủ nhà)",
+          "turns": [
+            {
+              "npc_line": "Em vẽ thêm cho anh một tầng nữa, giấy phép cho bao nhiêu thì kệ nó.",
+              "replies": [
+                {
+                  "text": "Xây sai giấy phép có thể bị buộc phá dỡ, nên em không vẽ vượt được ạ.",
+                  "effect": { "tuan_thu": 3 },
+                  "feedback": "Công trình xây sai nội dung giấy phép thuộc diện phải phá dỡ; bạn có quyền từ chối yêu cầu trái luật."
+                },
+                {
+                  "text": "Dạ em vẽ thêm, giấy tờ anh tự lo nhé.",
+                  "effect": { "tuan_thu": -5 },
+                  "feedback": "Vẽ vượt giấy phép đẩy chủ nhà vào nguy cơ công trình bị buộc phá dỡ."
+                }
+              ]
+            },
+            {
+              "npc_line": "Nhà hàng xóm cũng làm thế mà có sao đâu.",
+              "replies": [
+                {
+                  "text": "Em hiểu, nhưng mình nên hỏi cơ quan cấp phép trước để yên tâm lâu dài.",
+                  "effect": { "tuan_thu": 2, "nang_luong": -1 },
+                  "feedback": "Chỉ ra con đường đúng giúp chủ nhà đạt mong muốn mà không gặp rủi ro."
+                },
+                {
+                  "text": "Vậy thôi, anh muốn sao em làm vậy.",
+                  "effect": { "tuan_thu": -4 },
+                  "feedback": "Chiều theo khách mà làm sai luật không phải là phục vụ khách tốt."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế em có cách nào cho nhà rộng hơn không?",
+              "replies": [
+                {
+                  "text": "Em sắp xếp lại không gian trong phạm vi được phép cho thoáng hơn, anh xem nhé.",
+                  "effect": { "sang_tao": 3, "nang_luong": -1 },
+                  "feedback": "Sáng tạo trong khuôn khổ cho phép mới là giá trị của kiến trúc sư."
+                },
+                {
+                  "text": "Không có cách nào đâu anh.",
+                  "effect": { "sang_tao": -2 },
+                  "feedback": "Từ chối mà không đưa giải pháp khác khiến chủ nhà mất niềm tin."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "kt5-cat-ngan-sach",
+        "time": "15:00",
+        "title": "Ngân sách bị cắt",
+        "narrative": "Chủ nhà báo phải cắt bớt ngân sách, nhờ bạn bỏ bớt hạng mục mà nhà vẫn ở được lâu dài.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người làm kiến trúc chịu áp lực về tiến độ, chất lượng và trách nhiệm với công trình; luật cấm vi phạm quy định phòng cháy chữa cháy trong xây dựng.",
+          "source_ids": ["S8", "S5"],
+          "confidence": "verified",
+          "note": "Áp lực nghề: S8. Điều cấm: Luật Xây dựng 2025 Điều 15 khoản 5."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn cắt ngân sách thế nào?",
+          "options": [
+            {
+              "text": "Cùng chủ nhà xếp ưu tiên: giữ kết cấu và an toàn, giảm vật liệu trang trí",
+              "effect": { "tuan_thu": 2, "sang_tao": 1, "nang_luong": -1 },
+              "feedback": "Giữ phần an toàn, cắt phần trang trí giúp vừa ngân sách mà không đánh đổi chất lượng."
+            },
+            {
+              "text": "Cắt bớt các hạng mục an toàn cháy cho rẻ",
+              "effect": { "tuan_thu": -6 },
+              "feedback": "Vi phạm quy định phòng cháy chữa cháy trong xây dựng là hành vi luật cấm."
+            },
+            {
+              "text": "Giữ nguyên thiết kế, để chủ nhà tự xoay tiền",
+              "effect": { "sang_tao": 1, "nang_luong": -1 },
+              "feedback": "Không điều chỉnh theo ngân sách dễ khiến dự án dừng giữa chừng."
+            }
+          ]
+        }
+      },
+      {
+        "id": "kt6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia thời gian cuối chiều",
+        "narrative": "Còn vài giờ trước hạn gửi bản sửa. Bạn chia thời gian giữa dựng mô hình, sửa bản vẽ và họp kỹ sư kết cấu.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một kiến trúc sư 20 năm kể theo nghề là gắn với dự án, không có nhiều thời gian cho gia đình.",
+          "source_ids": ["S9"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian cuối chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Dựng mô hình 3D", "effect_per_30min": { "sang_tao": 2, "nang_luong": -2 } },
+            { "label": "Sửa bản vẽ kỹ thuật", "effect_per_30min": { "tuan_thu": 2, "nang_luong": -1 } },
+            { "label": "Họp với kỹ sư kết cấu", "effect_per_30min": { "tuan_thu": 1, "sang_tao": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ ngơi, đi lại", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "kt7-ket-cau",
+        "time": "18:30",
+        "title": "Kỹ sư kết cấu báo phương án khó thi công",
+        "narrative": "Cuối ngày, kỹ sư kết cấu báo khoảng đua ban công bạn thích nhất rất khó làm an toàn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm tự ý thay đổi thiết kế đã thẩm định, phê duyệt làm ảnh hưởng tới an toàn xây dựng; người làm kiến trúc phải chịu trách nhiệm với chất lượng công trình.",
+          "source_ids": ["S5", "S8"],
+          "confidence": "verified",
+          "note": "Luật Xây dựng 2025 Điều 15 khoản 10; S8 về trách nhiệm với công trình."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý góp ý của kỹ sư kết cấu thế nào?",
+          "options": [
+            {
+              "text": "Ngồi lại với kỹ sư, chỉnh phương án để vừa đẹp vừa an toàn",
+              "effect": { "sang_tao": 2, "tuan_thu": 2, "nang_luong": -2 },
+              "feedback": "Phối hợp kiến trúc – kết cấu giúp giữ ý tưởng mà công trình vẫn an toàn."
+            },
+            {
+              "text": "Giữ nguyên ý tưởng, bảo kỹ sư tự tìm cách",
+              "effect": { "sang_tao": 1, "tuan_thu": -3 },
+              "feedback": "Bỏ qua cảnh báo kết cấu đặt an toàn công trình vào rủi ro."
+            },
+            {
+              "text": "Bỏ hẳn ý tưởng, không bàn thêm",
+              "effect": { "sang_tao": -3 },
+              "feedback": "An toàn nhưng bỏ phí cơ hội tìm một giải pháp vừa đẹp vừa khả thi."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có dám nói \"không\" với chủ nhà khi họ muốn làm sai giấy phép không?",
+      "Bạn thấy mình hợp với việc sửa đi sửa lại một phương án nhiều lần không?",
+      "Học 5 năm và còn tích lũy kinh nghiệm sau đó có làm bạn nản không?",
+      "Ngoài thiết kế nhà ở, bạn muốn tìm hiểu thêm quy hoạch, nội thất hay BIM?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-kien-truc",
+        "title": "Sinh viên ngành Kiến trúc",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Làm đồ án nghiêm túc và đi thực tập ở văn phòng thiết kế để quen hồ sơ thật."
+          }
+        ]
+      },
+      {
+        "id": "kts-thiet-ke",
+        "title": "Kiến trúc sư thiết kế",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Từ 01/3/2027, cần trình độ đào tạo về kiến trúc, xây dựng phù hợp với công việc đảm nhận.",
+            "source_ids": ["S2"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "kts-chu-tri",
+        "title": "Kiến trúc sư chủ trì / chủ nhiệm thiết kế",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Từ 01/3/2027, phải có chứng chỉ hành nghề kiến trúc.",
+            "source_ids": ["S2"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "kts-doc-lap",
+        "title": "Kiến trúc sư hành nghề độc lập / mở văn phòng",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Từ 01/3/2027, kiến trúc sư hành nghề độc lập phải có chứng chỉ hành nghề kiến trúc.",
+            "source_ids": ["S2"],
+            "confidence": "verified"
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-kien-truc", "to": "kts-thiet-ke", "type": "promotion" },
+      { "from": "kts-thiet-ke", "to": "kts-chu-tri", "type": "promotion" },
+      { "from": "kts-chu-tri", "to": "kts-doc-lap", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Thời gian học dài: ngành Kiến trúc thường học khoảng 5 năm, ra trường muộn hơn nhiều ngành khác.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Quy định về chứng chỉ hành nghề đang thay đổi liên tục: tạm không thực hiện từ 01/7/2026 và áp dụng cách quản lý mới từ 01/3/2027.",
+      "source_ids": ["S1", "S2", "S3"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "fact",
+      "text": "Deadline cứng và áp lực dự án, nhất là các tháng cao điểm; sinh viên kể năm cuối là năm thức khuya nhiều nhất.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Ra trường phải chịu nhiều áp lực về tiến độ, chất lượng và trách nhiệm với công trình.",
+      "source_ids": ["S8"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Một kiến trúc sư 20 năm kể gần như ăn ở cùng dự án, ít thời gian cho gia đình.",
+      "source_ids": ["S9"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 01/3/2027, Luật Kiến trúc sửa đổi quản lý hành nghề theo tiêu chuẩn năng lực, chỉ bắt buộc chứng chỉ với một số chức danh và người hành nghề độc lập.",
+      "source_ids": ["S2"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "fact",
+      "text": "Ngành kiến trúc đang dịch chuyển mạnh sang BIM và phần mềm mô phỏng, đòi hỏi học công nghệ liên tục.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Rèn tư duy thiết kế, kỹ năng giao tiếp với chủ nhà và học thêm công cụ số sẽ giúp bạn đi xa trong nghề."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, vanban.chinhphu.vn, CareerLink, Thanh Niên, VnExpress)",
+    "scope_note": "Bối cảnh kiến trúc sư nhà ở tại văn phòng hư cấu; không đưa thông số quy chuẩn ra ngoài basis (SPEC-020 R-2). Quy định về chứng chỉ hành nghề đang chuyển tiếp (Nghị quyết 66.18/2026, Luật 19/2026) — cần cập nhật sau 01/3/2027."
+  }
+}
