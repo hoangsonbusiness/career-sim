@@ -1,0 +1,537 @@
+{
+  "id": "nhan-vien-logistics",
+  "name": "Nhân viên logistics",
+  "aliases": ["Nhân viên chứng từ xuất nhập khẩu", "Nhân viên giao nhận", "Nhân viên điều phối vận tải", "Logistics staff"],
+  "group": { "label": "Kinh doanh & Dịch vụ" },
+  "holland": ["C", "E", "S"],
+  "summary": "Điều phối vận chuyển hàng hóa, làm chứng từ và thủ tục hải quan cho hàng xuất nhập khẩu, làm việc với khách hàng, hãng vận chuyển và kho bãi; công việc gắn với thời hạn chặt, giấy tờ phải khớp từng con số và thường cần ngoại ngữ.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Hải quan số 54/2014/QH13 (Văn bản hợp nhất 156/2026/VBHN-LQ-VPQH)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/xuat-nhap-khau/van-ban-hop-nhat-156-2026-vbhn-lq-vpqh-2026-luat-hai-quan-449806-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2014-06-23",
+      "effective_date": "2015-01-01",
+      "note": "Đã đọc Điều 18, 24, 25, 29. Điều 24, 25 sẽ được Luật 11/2026/QH16 sửa từ 01/03/2027; đã đối chiếu bản gốc 2014 (hethongphapluat.com): danh sách chứng từ và thời hạn 04 giờ trước khi phương tiện xuất cảnh giống nhau ở cả hai bản."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Nghị định 163/2017/NĐ-CP quy định về kinh doanh dịch vụ logistics",
+      "publisher": "Chính phủ / LuatVietnam",
+      "url": "https://luatvietnam.vn/thuong-mai/nghi-dinh-163-2017-nd-cp-chinh-phu-156955-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2017-12-30",
+      "effective_date": "2018-02-20",
+      "note": "Đã đọc Điều 3 (phân loại dịch vụ logistics). Một trang tư vấn năm 2026 vẫn dẫn Nghị định này cùng Nghị định 96/2026/NĐ-CP, nhưng chưa xác minh được trên cổng chính phủ là Nghị định còn hiệu lực nguyên vẹn (SPEC-028 R-5)."
+    },
+    {
+      "id": "S3",
+      "type": "official_stat",
+      "title": "Chuyên ngành Logistics và chuỗi cung ứng (D407) — Tuyển sinh 2026, Trường Đại học Hàng hải Việt Nam",
+      "publisher": "Trường Đại học Hàng hải Việt Nam",
+      "url": "https://tuyensinh.vimaru.edu.vn/chuongtrinhdaotao/logistics-va-chuoi-cung-ung.vmu",
+      "accessed": "2026-11-04",
+      "note": "Thuộc ngành Logistics và quản lý chuỗi cung ứng; học chứng từ vận tải biển, bộ, sắt, hàng không, hợp đồng thương mại và vận tải, có 2 đợt thực tập tại doanh nghiệp. Chỉ là một trường, dùng để minh họa."
+    },
+    {
+      "id": "S4",
+      "type": "market",
+      "title": "Tin tuyển dụng Nhân viên chứng từ xuất nhập khẩu trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-nhan-vien-chung-tu-xuat-nhap-khau",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "Đọc 20 tin đầu: tin dưới 1 năm kinh nghiệm ghi 8–15 triệu; tin 1–2 năm phần nhiều ghi 9–15 triệu; vài tin cần thông thạo tiếng Trung ghi tới 25–30 triệu đồng/tháng; nhiều tin ghi thỏa thuận."
+    },
+    {
+      "id": "S5",
+      "type": "testimony",
+      "title": "Người trẻ 'quay xe' về học logistics dù đã đi làm công ty gần 10 năm",
+      "publisher": "Báo Tuổi Trẻ",
+      "url": "https://tuoitre.vn/nguoi-tre-quay-xe-ve-hoc-logistics-du-da-di-lam-cong-ty-gan-10-nam-20250801101438626.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-08-01",
+      "note": "Lời kể của sinh viên Vũ Minh Trang, Phạm Văn Quý (Trường Cao đẳng Hàng hải và Đường thủy I), ThS Đỗ Hồng Hải (phó hiệu trưởng) và ông Trần Văn Thành (tổng giám đốc một công ty vận chuyển). Không dùng số lương khởi điểm do trường tự công bố."
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Khởi nghiệp ngành logistics bắt đầu từ đâu?",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/khoi-nghiep-nganh-logistics-bat-dau-tu-dau-185836885.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2019-03-28",
+      "note": "Lời kể của chị Phạm Thị Bích Huệ (20 năm trong ngành), anh Vũ Đức Thịnh (CEO một công ty giao hàng), chị Lê Anh Thiên Thư (giám đốc logistics một tập đoàn). Bài năm 2019, chỉ dùng phần trải nghiệm."
+    },
+    {
+      "id": "S7",
+      "type": "press",
+      "title": "Nhân sự logistics Việt Nam: Giỏi nghiệp vụ nhưng yếu tiếng Anh",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/nhan-su-logistics-viet-nam-gioi-nghiep-vu-nhung-yeu-tieng-anh-185250815173604732.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-08-15",
+      "note": "Bài dẫn ý kiến lãnh đạo doanh nghiệp cảng và giảng viên: doanh nghiệp cần tiếng Anh chuyên ngành; phần lớn sinh viên học bằng tiếng Việt nên khó làm việc trong môi trường quốc tế."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học tốt Tiếng Anh và Toán từ sớm; công việc logistics có nhiều con số, đơn vị đo và giấy tờ tiếng Anh.",
+        "audience": ["thcs", "thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Tập sắp xếp đồ đạc, lập danh sách việc cần làm theo hạn chót; đó là kỹ năng hằng ngày của người làm logistics.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Tìm hiểu cả đường cao đẳng (thực hành kho, giao nhận) lẫn đại học (quản lý chuỗi cung ứng) trước khi chọn.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Ở đại học có ngành Logistics và quản lý chuỗi cung ứng; ví dụ một trường năm 2026 dạy chứng từ vận tải biển, bộ, sắt, hàng không, hợp đồng thương mại và có 2 đợt thực tập tại doanh nghiệp.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Trang tuyển sinh chính thức của Trường Đại học Hàng hải Việt Nam."
+      },
+      {
+        "kind": "fact",
+        "text": "Ở trường cao đẳng, sinh viên logistics được thực hành đọc chứng từ, kiểm đếm, quản lý kho, giao nhận và khai báo hải quan.",
+        "source_ids": ["S5"],
+        "confidence": "single_source"
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Người khai hải quan phải khai đầy đủ, chính xác, rõ ràng các thông tin trên tờ khai và chịu trách nhiệm trước pháp luật về sự xác thực của nội dung đã khai, chứng từ đã nộp.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Hải quan Điều 29 khoản 1; Điều 18 khoản 2 điểm c."
+      },
+      {
+        "kind": "fact",
+        "text": "Dịch vụ logistics gồm nhiều mảng như kho bãi, đại lý vận tải hàng hóa, đại lý làm thủ tục hải quan, chuẩn bị chứng từ vận tải và vận tải đa phương thức.",
+        "source_ids": ["S2"],
+        "confidence": "needs_verification",
+        "note": "Nghị định 163/2017/NĐ-CP Điều 3; chưa xác minh được Nghị định còn hiệu lực nguyên vẹn hay đã bị sửa."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Hồ sơ hải quan của hàng xuất khẩu phải nộp sau khi tập kết hàng và chậm nhất 04 giờ trước khi phương tiện vận tải xuất cảnh, nên lịch làm việc chạy theo lịch tàu, lịch bay.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Hải quan Điều 25 (bản gốc 2014 khoản 1 điểm a; bản sửa đổi hiệu lực 2027 khoản 1)."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Tháng 11/2026, tin tuyển nhân viên chứng từ xuất nhập khẩu trên TopCV cho người dưới 1 năm kinh nghiệm ghi khoảng 8–15 triệu đồng/tháng; vài tin cần thông thạo tiếng Trung ghi tới 25–30 triệu.",
+        "source_ids": ["S4"],
+        "confidence": "single_source",
+        "note": "Đọc 20 tin tại một thời điểm; nhiều tin ghi thỏa thuận."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Một lãnh đạo doanh nghiệp vận chuyển kể ngành logistics có rất nhiều bộ phận, từ kho bãi, bốc xếp tới vận chuyển, trung chuyển; mỗi người chỉ là một mắt xích nhỏ trong chuỗi.",
+        "source_ids": ["S5"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Nhiều doanh nghiệp logistics là công ty nhỏ; người trong nghề khuyên bạn trẻ đi thực tập ở doanh nghiệp để học việc trước.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Hà — nhân viên chứng từ, điều phối 1 năm kinh nghiệm của Công ty giao nhận Sao Biển (hư cấu), làm cùng một trưởng nhóm và một nhân viên kho.",
+    "setting": "Một ngày ở văn phòng và kho: nhận một đơn hàng xuất khẩu, phân loại giấy tờ, soát tờ khai nháp, lô hàng bị báo trễ, buổi chiều nhiều việc, lời nhờ khai giá thấp và số kiện trong kho lệch chứng từ.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "dung_han", "label": "Đúng hạn", "initial": 65 },
+      { "id": "chinh_xac", "label": "Chính xác", "initial": 70 }
+    ],
+    "segments": [
+      {
+        "id": "lg1-don-hang",
+        "time": "08:00",
+        "title": "Nhận một đơn hàng xuất khẩu",
+        "narrative": "Khách quen gửi yêu cầu xuất một lô hàng gốm. Trưởng nhóm ghé bàn, giao bạn lo từ đầu đến cuối.",
+        "basis": {
+          "kind": "fact",
+          "text": "Công việc ở công ty logistics gồm nhận hàng, kiểm đếm, đóng hàng vào kho, lưu hồ sơ tới xuất hàng lên container; ngành có nhiều bộ phận từ kho bãi tới vận chuyển, trung chuyển.",
+          "source_ids": ["S5"],
+          "confidence": "single_source",
+          "note": "Thứ tự các bước trong game là minh họa khái quát, không phải quy trình bắt buộc."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước xử lý đơn hàng",
+          "steps": [
+            "Hỏi rõ khách: hàng gì, bao nhiêu, đi đâu, khi nào",
+            "Báo giá và chốt lịch với hãng vận chuyển",
+            "Nhận hợp đồng, hóa đơn, danh sách hàng từ khách",
+            "Làm tờ khai hải quan và nộp đúng hạn",
+            "Theo dõi hàng lên phương tiện, báo lại khách"
+          ],
+          "on_success": { "dung_han": 4 },
+          "on_fail": { "dung_han": -4 }
+        }
+      },
+      {
+        "id": "lg2-ho-so",
+        "time": "09:00",
+        "title": "Phân loại giấy tờ",
+        "narrative": "Khách gửi một tập file lẫn lộn. Bạn cần tách ra giấy tờ nào thuộc hồ sơ hải quan của lô hàng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Hồ sơ hải quan gồm tờ khai hải quan và chứng từ có liên quan; tùy trường hợp phải nộp hoặc xuất trình hợp đồng mua bán, hóa đơn thương mại, chứng từ vận tải, chứng từ chứng nhận xuất xứ, giấy phép xuất nhập khẩu.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Hải quan Điều 24 khoản 1 (giống nhau ở bản gốc 2014 và bản sửa đổi hiệu lực 2027). Thẻ 'Không thuộc' không bị gọi là vi phạm."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp giấy tờ: thuộc hồ sơ hải quan hay không",
+          "buckets": ["Thuộc hồ sơ hải quan", "Không thuộc"],
+          "items": [
+            { "text": "Tờ khai hải quan của lô hàng", "bucket": "Thuộc hồ sơ hải quan" },
+            { "text": "Hóa đơn thương mại", "bucket": "Thuộc hồ sơ hải quan" },
+            { "text": "Chứng từ vận tải của lô hàng", "bucket": "Thuộc hồ sơ hải quan" },
+            { "text": "Chứng nhận xuất xứ hàng hóa", "bucket": "Thuộc hồ sơ hải quan" },
+            { "text": "Bảng chấm công của nhân viên kho", "bucket": "Không thuộc" },
+            { "text": "Ảnh chụp văn phòng công ty khách", "bucket": "Không thuộc" }
+          ],
+          "on_success": { "chinh_xac": 5 },
+          "on_fail": { "chinh_xac": -5 }
+        }
+      },
+      {
+        "id": "lg3-to-khai",
+        "time": "10:00",
+        "title": "Soát tờ khai nháp",
+        "narrative": "Đồng nghiệp làm sẵn bản nháp tờ khai cho lô gốm. Trước khi gửi, bạn đối chiếu lại với hóa đơn và chứng từ vận tải.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người khai hải quan phải khai đầy đủ, chính xác, rõ ràng các tiêu chí trên tờ khai, chịu trách nhiệm về sự xác thực của nội dung đã khai và sự thống nhất giữa hồ sơ lưu ở doanh nghiệp với hồ sơ ở cơ quan hải quan.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Hải quan Điều 29 khoản 1; Điều 18 khoản 2 điểm c. Không có mã HS hay thuế suất trong game (SPEC-028 R-3)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng khai chưa chính xác",
+          "document": [
+            "TỜ KHAI NHÁP — Lô gốm của Công ty Gốm Hòa An (hư cấu)",
+            "Người xuất khẩu: đúng tên trên hợp đồng",
+            "Số kiện: 120 kiện (chứng từ vận tải ghi 100 kiện)",
+            "Trị giá: ghi bằng một nửa số tiền trên hóa đơn",
+            "Nơi đến: khớp với hợp đồng và chứng từ vận tải",
+            "Mô tả hàng: gốm sứ gia dụng, khớp hóa đơn"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Số kiện khai lệch chứng từ vận tải; tờ khai phải chính xác và thống nhất với hồ sơ." },
+            { "line": 3, "explain": "Trị giá khai khác hóa đơn là khai không chính xác; người khai chịu trách nhiệm trước pháp luật." }
+          ],
+          "on_success": { "chinh_xac": 5 },
+          "on_fail": { "chinh_xac": -5 }
+        }
+      },
+      {
+        "id": "lg4-hang-tre",
+        "time": "11:00",
+        "title": "Lô hàng bị báo trễ",
+        "narrative": "Hãng vận chuyển báo chuyến của một lô hàng nhập bị lùi hai ngày. Khách đang chờ hàng để kịp sản xuất.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người trong nghề kể logistics là chuỗi gồm nhiều mắt xích như kho bãi, vận chuyển, trung chuyển; bộ phận vận hành xuất nhập khẩu đòi hỏi nghiệp vụ cao và người làm phải năng động, tích cực.",
+          "source_ids": ["S5", "S6"],
+          "confidence": "verified",
+          "note": "Hai nguồn ở hai báo khác nhau."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý thế nào?",
+          "options": [
+            {
+              "text": "Báo khách ngay, nói rõ lý do và đưa phương án, rồi báo trưởng nhóm",
+              "effect": { "dung_han": 3, "chinh_xac": 2, "nang_luong": -2 },
+              "feedback": "Báo sớm kèm phương án giúp khách kịp xoay xở và giữ được lòng tin."
+            },
+            {
+              "text": "Im lặng, chờ khách hỏi rồi tính",
+              "effect": { "dung_han": -4 },
+              "feedback": "Khách biết muộn sẽ khó xoay xở và mất niềm tin vào công ty."
+            },
+            {
+              "text": "Hứa với khách hàng sẽ tới đúng hẹn cho khách yên tâm",
+              "effect": { "chinh_xac": -4, "dung_han": -2 },
+              "feedback": "Hứa điều mình không kiểm soát được chỉ làm khách thất vọng hơn."
+            }
+          ]
+        }
+      },
+      {
+        "id": "lg5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều nhiều việc",
+        "narrative": "Còn 3 giờ chiều: chứng từ lô gốm chưa xong, phải gọi thêm hai hãng vận chuyển, và kho nhờ bạn xuống kiểm hàng.",
+        "basis": {
+          "kind": "fact",
+          "text": "Công việc logistics gồm đọc chứng từ, kiểm đếm hàng, quản lý kho, giao nhận và khai báo hải quan.",
+          "source_ids": ["S5"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Làm chứng từ", "effect_per_30min": { "chinh_xac": 2, "nang_luong": -2 } },
+            { "label": "Liên hệ hãng vận chuyển", "effect_per_30min": { "dung_han": 2, "nang_luong": -1 } },
+            { "label": "Xuống kho kiểm hàng", "effect_per_30min": { "chinh_xac": 1, "dung_han": 1, "nang_luong": -2 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "lg6-khai-gia-thap",
+        "time": "15:30",
+        "title": "Lời nhờ khai giá thấp",
+        "narrative": "Đại diện khách hàng gọi bạn vào phòng họp, nhờ một chuyện 'nhỏ' với tờ khai lô hàng nhập tuần sau.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người khai hải quan phải khai đầy đủ, chính xác các thông tin trên tờ khai và chịu trách nhiệm trước pháp luật về sự xác thực của nội dung đã khai, chứng từ đã nộp.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Hải quan Điều 29 khoản 1; Điều 18 khoản 2 điểm c. Narrative không nêu mức phạt hay thuế suất (SPEC-028 R-3)."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời khách hàng",
+          "npc": "Anh Tuấn (đại diện khách hàng)",
+          "turns": [
+            {
+              "npc_line": "Em khai trị giá lô máy tuần sau thấp đi một nửa giúp anh nhé, cho đỡ tiền thuế.",
+              "replies": [
+                {
+                  "text": "Em xin lỗi anh, tờ khai phải ghi đúng trị giá trên hóa đơn ạ.",
+                  "effect": { "chinh_xac": 4 },
+                  "feedback": "Khai đúng là nghĩa vụ của người khai hải quan, cũng là bảo vệ chính khách hàng."
+                },
+                {
+                  "text": "Dạ vâng, em sửa số cho anh.",
+                  "effect": { "chinh_xac": -6 },
+                  "feedback": "Khai sai trị giá là vi phạm pháp luật; cả bạn và công ty đều phải chịu trách nhiệm."
+                }
+              ]
+            },
+            {
+              "npc_line": "Hải quan đâu kiểm tra hết được, mấy công ty khác vẫn làm mà.",
+              "replies": [
+                {
+                  "text": "Chứng từ còn phải lưu và có thể bị kiểm tra lại, em không dám làm sai anh ạ.",
+                  "effect": { "chinh_xac": 3, "nang_luong": -1 },
+                  "feedback": "Hồ sơ phải thống nhất giữa doanh nghiệp và hải quan, sai một chỗ là lộ."
+                },
+                {
+                  "text": "Thôi để em làm hóa đơn khác cho khớp.",
+                  "effect": { "chinh_xac": -5 },
+                  "feedback": "Làm chứng từ không đúng sự thật còn nghiêm trọng hơn khai sai."
+                }
+              ]
+            },
+            {
+              "npc_line": "Vậy em giúp được gì cho anh?",
+              "replies": [
+                {
+                  "text": "Em kiểm tra xem lô hàng có được hưởng ưu đãi hợp pháp nào không rồi báo anh nhé.",
+                  "effect": { "chinh_xac": 2, "dung_han": 1 },
+                  "feedback": "Tìm cách hợp pháp để giúp khách là cách giữ khách lâu dài."
+                },
+                {
+                  "text": "Anh tự tính đi, em không biết đâu.",
+                  "effect": { "chinh_xac": -1, "dung_han": -2 },
+                  "feedback": "Từ chối điều sai là đúng, nhưng bỏ mặc khách thì dễ mất khách."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "lg7-lech-so-kien",
+        "time": "17:30",
+        "title": "Số kiện trong kho lệch chứng từ",
+        "narrative": "Gần hết giờ, nhân viên kho báo lô gốm chỉ đếm được 100 kiện, trong khi giấy tờ khách gửi ghi 120. Tối nay phải chốt hồ sơ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người khai hải quan chịu trách nhiệm về sự xác thực của nội dung đã khai và sự thống nhất thông tin giữa hồ sơ lưu ở doanh nghiệp với hồ sơ ở cơ quan hải quan; hồ sơ phải nộp sau khi đã tập kết hàng.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật Hải quan Điều 18 khoản 2 điểm c; Điều 25."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì?",
+          "options": [
+            {
+              "text": "Cùng kho đếm lại, báo trưởng nhóm và khách, chỉ chốt hồ sơ khi số liệu đã khớp",
+              "effect": { "chinh_xac": 5, "dung_han": -1, "nang_luong": -2 },
+              "feedback": "Chậm một chút nhưng hồ sơ khớp thực tế thì không ai phải chịu trách nhiệm oan."
+            },
+            {
+              "text": "Cứ nộp theo giấy tờ của khách cho kịp giờ",
+              "effect": { "chinh_xac": -5, "dung_han": 2 },
+              "feedback": "Khai số kiện không đúng thực tế là khai không chính xác."
+            },
+            {
+              "text": "Tự sửa số trên giấy tờ cho khớp, không báo ai",
+              "effect": { "chinh_xac": -4 },
+              "feedback": "Tự sửa chứng từ khi chưa rõ nguyên nhân có thể che mất một sai sót lớn hơn."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có thích làm việc với nhiều giấy tờ, con số và kiểm tra chi tiết không?",
+      "Bạn có giữ được bình tĩnh khi hàng trễ mà khách liên tục gọi không?",
+      "Bạn sẵn sàng học thêm tiếng Anh hay tiếng Trung để làm việc với đối tác nước ngoài không?",
+      "Nếu khách nhờ khai sai để đỡ tiền thuế, bạn sẽ từ chối thế nào?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "hoc-logistics",
+        "title": "Sinh viên ngành logistics",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có thể học ngành Logistics và quản lý chuỗi cung ứng ở đại học hoặc học thực hành ở trường cao đẳng.",
+            "source_ids": ["S3", "S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "nhan-vien-chung-tu",
+        "title": "Nhân viên chứng từ / giao nhận",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tháng 11/2026 có tin tuyển nhân viên chứng từ cho người dưới 1 năm kinh nghiệm hoặc không yêu cầu kinh nghiệm.",
+            "source_ids": ["S4"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "chuyen-vien-dieu-phoi",
+        "title": "Chuyên viên điều phối / khai báo hải quan",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Nắm chắc thủ tục hải quan, giỏi một ngoại ngữ và giữ quan hệ tốt với hãng vận chuyển."
+          }
+        ]
+      },
+      {
+        "id": "truong-nhom-logistics",
+        "title": "Trưởng nhóm / trưởng phòng chứng từ",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm, biết kèm người mới và xử lý các lô hàng gặp sự cố."
+          }
+        ]
+      },
+      {
+        "id": "quan-ly-chuoi-cung-ung",
+        "title": "Quản lý chuỗi cung ứng / tự kinh doanh logistics",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Hiểu cả chuỗi từ kho, vận tải tới thủ tục giúp bạn chuyển sang quản lý hoặc mở công ty riêng."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "hoc-logistics", "to": "nhan-vien-chung-tu", "type": "promotion" },
+      { "from": "nhan-vien-chung-tu", "to": "chuyen-vien-dieu-phoi", "type": "promotion" },
+      { "from": "chuyen-vien-dieu-phoi", "to": "truong-nhom-logistics", "type": "management" },
+      { "from": "chuyen-vien-dieu-phoi", "to": "quan-ly-chuoi-cung-ung", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Áp lực thời hạn: hồ sơ hải quan hàng xuất khẩu phải nộp chậm nhất 04 giờ trước khi phương tiện xuất cảnh, nên một chậm trễ nhỏ có thể làm lỡ cả chuyến hàng.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Hải quan Điều 25."
+    },
+    {
+      "kind": "fact",
+      "text": "Chịu trách nhiệm pháp lý: người khai hải quan phải chịu trách nhiệm trước pháp luật về sự xác thực của nội dung đã khai và chứng từ đã nộp.",
+      "source_ids": ["S1"],
+      "confidence": "verified",
+      "note": "Luật Hải quan Điều 18 khoản 2 điểm c."
+    },
+    {
+      "kind": "fact",
+      "text": "Cần ngoại ngữ: doanh nghiệp cần tiếng Anh chuyên ngành, nhiều tin tuyển chứng từ còn đòi thông thạo tiếng Trung; người giỏi nghiệp vụ mà yếu ngoại ngữ dễ gặp khó.",
+      "source_ids": ["S7", "S4"],
+      "confidence": "verified",
+      "note": "Hai nguồn độc lập (báo chí và tin tuyển dụng) khớp nhau."
+    },
+    {
+      "kind": "fact",
+      "text": "Thu nhập lúc mới vào nghề ở mức vừa phải: tin cho người dưới 1 năm kinh nghiệm thường ghi 8–15 triệu đồng/tháng.",
+      "source_ids": ["S4"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Một số trường đại học đã mở chương trình logistics dạy một phần hoặc toàn bộ bằng tiếng Anh để đáp ứng doanh nghiệp quốc tế.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Rèn ngoại ngữ, kỹ năng dùng phần mềm quản lý kho và hiểu thủ tục điện tử sẽ giúp bạn có lợi thế."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, hethongphapluat.com, tuyensinh.vimaru.edu.vn, TopCV, Tuổi Trẻ, Thanh Niên)",
+    "scope_note": "Công ty, khách, hãng vận chuyển đều hư cấu; không có tên hãng tàu, cảng thật (SPEC-028 R-2); không có mã HS, thuế suất hay mức phạt (R-3). Nghị định 163/2017 chưa xác minh được hiệu lực nên fact dựa vào nó để needs_verification (R-5). Chưa tìm được nguồn chính thống về làm ngoài giờ trong nghề; mặt khó về thời hạn dựa vào Luật Hải quan."
+  }
+}
