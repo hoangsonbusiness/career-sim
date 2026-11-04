@@ -493,4 +493,56 @@ const marketingWorld = {
 };
 writeFileSync(out("content/worlds/nhan-vien-marketing.json"), JSON.stringify(marketingWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing}.json");
+// ---------- Dược sĩ nhà thuốc (SPEC-015): một nhà thuốc ----------
+// Kho nhỏ trái, tủ thuốc kê đơn sau quầy ở giữa, phòng dược sĩ phụ trách phải, khu bán hàng phía dưới.
+const NHA_THUOC = AGENCY;
+const NHA_THUOC_PROPS = [
+  // Kho: kệ hàng, thùng thuốc, tủ lạnh bảo quản
+  [2, 1, 329, 1], [4, 1, 329, 1], [6, 1, 329, 1], [8, 1, 330, 1],
+  [2, 5, 330, 1], [9, 5, 330, 1],
+  // Tủ thuốc kê đơn phía sau quầy
+  [13, 1, 329, 1], [15, 1, 329, 1],
+  // Phòng dược sĩ phụ trách: bàn, kệ hồ sơ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Quầy tư vấn
+  [12, 9, 85, 1], [13, 9, 86, 1], [14, 9, 86, 1], [15, 9, 86, 1], [16, 9, 97, 1],
+  // Kệ thuốc không kê đơn hai bên, ghế chờ, cây
+  [3, 10, 329, 1], [4, 10, 330, 1], [25, 10, 329, 1], [26, 10, 330, 1],
+  [1, 13, 162, 1], [2, 13, 163, 1], [3, 13, 164, 1], [28, 14, 17, 1],
+];
+const NHA_THUOC_DECOR = [
+  // Nhiệt kế, ẩm kế và sổ theo dõi trên tường kho.
+  [3, 3, 18], [5, 3, 18],
+  // Bảng hướng dẫn trên quầy.
+  [14, 9, 18],
+];
+
+const pharmacyWorld = {
+  profession_id: "duoc-si",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("nha-thuoc", NHA_THUOC, NHA_THUOC_PROPS, NHA_THUOC_DECOR, { x: 14, y: 12 }),
+  ],
+  npcs: [
+    { id: "duoc-si-phu-trach", map: "nha-thuoc", x: 5, y: 4, name: "Dược sĩ phụ trách", sprite: C(379) },
+    { id: "me-be", map: "nha-thuoc", x: 13, y: 10, name: "Mẹ bé K.", sprite: C(54, 17, 22) },
+    { id: "khach-quen", map: "nha-thuoc", x: 15, y: 10, name: "Khách quen", sprite: C(433) },
+    { id: "khach-quay-lai", map: "nha-thuoc", x: 11, y: 11, name: "Khách quay lại", sprite: C(1, 13, 76) },
+    { id: "khach-mua-do", map: "nha-thuoc", x: 4, y: 11, name: "Khách mua đồ", sprite: C(1, 125, 20) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "d1-mo-cua": { map: "nha-thuoc", target: { x: 5, y: 4 }, npc: "duoc-si-phu-trach", quest: "Vào kho, kiểm nhiệt kế, ẩm kế cùng dược sĩ phụ trách" },
+    "d2-soat-don": { map: "nha-thuoc", target: { x: 13, y: 10 }, npc: "me-be", quest: "Ra quầy, soát đơn thuốc của mẹ bé K." },
+    "d3-xep-yeu-cau": { map: "nha-thuoc", target: { x: 14, y: 9 }, quest: "Quầy đông khách, xử lý từng yêu cầu mua thuốc" },
+    "d4-khach-doi-mua": { map: "nha-thuoc", target: { x: 15, y: 10 }, npc: "khach-quen", quest: "Khách quen đang chờ ở quầy" },
+    "d5-thuoc-het-han": { map: "nha-thuoc", target: { x: 5, y: 4 }, npc: "duoc-si-phu-trach", quest: "Vào kho kiểm hàng, báo dược sĩ phụ trách" },
+    "d6-chia-thoi-gian": { map: "nha-thuoc", target: { x: 14, y: 9 }, quest: "Về quầy, chia thời gian ca chiều" },
+    "d7-khach-quay-lai": { map: "nha-thuoc", target: { x: 11, y: 11 }, npc: "khach-quay-lai", quest: "Một khách quay lại quầy, trông không khỏe" },
+  },
+};
+writeFileSync(out("content/worlds/duoc-si.json"), JSON.stringify(pharmacyWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si}.json");
