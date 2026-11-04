@@ -24,6 +24,11 @@
 | [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
 | [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-021](SPEC-021-giao-vien-mam-non.md) Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-022](SPEC-022-phong-vien.md) Gói nghề Phóng viên (nội dung + bản đồ tòa soạn) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-023](SPEC-023-huong-dan-vien-du-lich.md) Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-024](SPEC-024-chuyen-vien-nhan-su.md) Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
+| [SPEC-025](SPEC-025-ky-thuat-vien-o-to.md) Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ) | 1 | draft | — | [F2, F3, F4, F5] | 0/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -327,3 +332,63 @@
 | AC-020-05 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-05 có ≥ 2 nguồn law có effective_date và market có is" |
 | AC-020-06 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-06 phần 6 chia đúng 180 phút bằng time_budget" |
 | AC-020-07 | tests\spec-020\kien-truc-su.test.mjs — "AC-020-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-021 — Gói nghề Giáo viên mầm non (nội dung + bản đồ lớp mẫu giáo)
+
+| AC | Test |
+|---|---|
+| AC-021-01 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-01 hồ sơ Giáo viên mầm non qua validate" |
+| AC-021-02 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-02 bản đồ Giáo viên mầm non qua validate:world và chỉ" |
+| AC-021-03 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-03 gói Giáo viên mầm non đạt check:pack" |
+| AC-021-04 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-04 chơi hết ngày Giáo viên mầm non tới done" |
+| AC-021-05 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-05 có ≥ 2 nguồn law có effective_date và market có is" |
+| AC-021-06 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-06 phần 5 chia đúng 120 phút bằng time_budget" |
+| AC-021-07 | tests\spec-021\giao-vien-mam-non.test.mjs — "AC-021-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-022 — Gói nghề Phóng viên (nội dung + bản đồ tòa soạn)
+
+| AC | Test |
+|---|---|
+| AC-022-01 | ❌ chưa có |
+| AC-022-02 | ❌ chưa có |
+| AC-022-03 | ❌ chưa có |
+| AC-022-04 | ❌ chưa có |
+| AC-022-05 | ❌ chưa có |
+| AC-022-06 | ❌ chưa có |
+| AC-022-07 | ❌ chưa có |
+
+## SPEC-023 — Gói nghề Hướng dẫn viên du lịch (nội dung + bản đồ điểm tham quan)
+
+| AC | Test |
+|---|---|
+| AC-023-01 | ❌ chưa có |
+| AC-023-02 | ❌ chưa có |
+| AC-023-03 | ❌ chưa có |
+| AC-023-04 | ❌ chưa có |
+| AC-023-05 | ❌ chưa có |
+| AC-023-06 | ❌ chưa có |
+| AC-023-07 | ❌ chưa có |
+
+## SPEC-024 — Gói nghề Chuyên viên nhân sự (nội dung + bản đồ phòng nhân sự)
+
+| AC | Test |
+|---|---|
+| AC-024-01 | ❌ chưa có |
+| AC-024-02 | ❌ chưa có |
+| AC-024-03 | ❌ chưa có |
+| AC-024-04 | ❌ chưa có |
+| AC-024-05 | ❌ chưa có |
+| AC-024-06 | ❌ chưa có |
+| AC-024-07 | ❌ chưa có |
+
+## SPEC-025 — Gói nghề Kỹ thuật viên ô tô (nội dung + bản đồ xưởng dịch vụ)
+
+| AC | Test |
+|---|---|
+| AC-025-01 | ❌ chưa có |
+| AC-025-02 | ❌ chưa có |
+| AC-025-03 | ❌ chưa có |
+| AC-025-04 | ❌ chưa có |
+| AC-025-05 | ❌ chưa có |
+| AC-025-06 | ❌ chưa có |
+| AC-025-07 | ❌ chưa có |

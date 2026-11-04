@@ -788,4 +788,71 @@ const architectWorld = {
 };
 writeFileSync(out("content/worlds/kien-truc-su.json"), JSON.stringify(architectWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su}.json");
+// ---------- Giáo viên mầm non (SPEC-021): một trường mầm non ----------
+// Lớp mẫu giáo (bàn giáo viên, góc chơi) trái, khu ăn phải, hành lang có cửa lớp giữa, sân chơi cỏ phía dưới.
+const TRUONG_MAM_NON = [
+  "##############################",
+  "#.................#..........#",
+  "#.................#..........#",
+  "#.................#..........#",
+  "#.................#..........#",
+  "#.................#..........#",
+  "#.................#..........#",
+  "#########D############D#######",
+  "#............................#",
+  "#............................#",
+  "#######=######################",
+  "#gggggg=ggggggggggggggggggggg#",
+  "#gggggg=ggggggggggggggggggggg#",
+  "#gggggg=ggggggggggggggggggggg#",
+  "#gggggg=ggggggggggggggggggggg#",
+  "##############################",
+];
+const TRUONG_MAM_NON_PROPS = [
+  // Lớp: bàn giáo viên, kệ đồ chơi góc chơi, bàn nhỏ của trẻ, cây
+  [2, 2, 85, 1], [3, 2, 86, 1], [4, 2, 97, 1],
+  [14, 1, 329, 1], [15, 1, 330, 1], [16, 1, 329, 1],
+  [8, 4, 5, 1], [10, 4, 5, 1], [12, 4, 5, 1], [1, 6, 16, 1], [16, 6, 17, 1],
+  // Khu ăn: bàn dài, ghế, cây
+  [21, 3, 0, 1], [22, 3, 1, 1], [23, 3, 1, 1], [24, 3, 2, 1],
+  [21, 4, 162, 1], [22, 4, 163, 1], [23, 4, 163, 1], [24, 4, 164, 1],
+  [28, 1, 16, 1],
+  // Sân chơi: cây
+  [3, 12, 17, 1], [27, 12, 17, 1], [18, 14, 16, 1],
+];
+const TRUONG_MAM_NON_DECOR = [
+  // Sổ theo dõi trên bàn giáo viên, tranh của trẻ trên kệ góc chơi.
+  [3, 2, 18], [15, 1, 18],
+];
+const KID = C(1, 13, 76);
+
+const preschoolWorld = {
+  profession_id: "giao-vien-mam-non",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("truong-mam-non", TRUONG_MAM_NON, TRUONG_MAM_NON_PROPS, TRUONG_MAM_NON_DECOR, { x: 9, y: 8 }),
+  ],
+  npcs: [
+    { id: "co-lan", map: "truong-mam-non", x: 11, y: 8, name: "Cô Lan (giáo viên cùng lớp)", sprite: C(379) },
+    { id: "hieu-pho-lop", map: "truong-mam-non", x: 5, y: 3, name: "Cô hiệu phó chuyên môn", sprite: C(54, 17, 22) },
+    { id: "hieu-pho-san", map: "truong-mam-non", x: 14, y: 12, name: "Cô hiệu phó chuyên môn", sprite: C(54, 17, 22) },
+    { id: "cap-duong", map: "truong-mam-non", x: 25, y: 4, name: "Cô cấp dưỡng", sprite: C(433) },
+    { id: "me-be-su", map: "truong-mam-non", x: 7, y: 8, name: "Chị Mai (mẹ bé Su)", sprite: C(1, 125, 20) },
+    { id: "tre-1", map: "truong-mam-non", x: 9, y: 5, name: "Một bạn nhỏ", sprite: KID },
+    { id: "tre-2", map: "truong-mam-non", x: 20, y: 12, name: "Một bạn nhỏ", sprite: KID },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "mn1-don-tre": { map: "truong-mam-non", target: { x: 11, y: 8 }, npc: "co-lan", quest: "Ra cửa lớp cùng cô Lan đón trẻ" },
+    "mn2-ke-hoach": { map: "truong-mam-non", target: { x: 5, y: 3 }, npc: "hieu-pho-lop", quest: "Về bàn giáo viên, soát kế hoạch ngày" },
+    "mn3-goc-choi": { map: "truong-mam-non", target: { x: 15, y: 2 }, quest: "Tới góc chơi, kiểm tra đồ dùng" },
+    "mn4-gio-an": { map: "truong-mam-non", target: { x: 25, y: 4 }, npc: "cap-duong", quest: "Sang khu ăn, giờ ăn trưa đã tới" },
+    "mn5-chia-thoi-gian": { map: "truong-mam-non", target: { x: 3, y: 3 }, quest: "Trẻ ngủ rồi, về bàn giáo viên làm việc" },
+    "mn6-va-cham": { map: "truong-mam-non", target: { x: 14, y: 12 }, npc: "hieu-pho-san", quest: "Ra sân chơi, có bé vừa bị ngã" },
+    "mn7-tra-tre": { map: "truong-mam-non", target: { x: 7, y: 8 }, npc: "me-be-su", quest: "Giờ trả trẻ, mẹ bé Su đang chờ ở cửa lớp" },
+  },
+};
+writeFileSync(out("content/worlds/giao-vien-mam-non.json"), JSON.stringify(preschoolWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep,kien-truc-su,giao-vien-mam-non}.json");

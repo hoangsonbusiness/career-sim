@@ -1,0 +1,625 @@
+{
+  "id": "giao-vien-mam-non",
+  "name": "Giáo viên mầm non",
+  "aliases": ["Cô giáo mầm non", "Giáo viên mẫu giáo", "Preschool teacher"],
+  "group": { "label": "Giáo dục" },
+  "holland": ["S", "A", "C"],
+  "summary": "Nuôi dưỡng, chăm sóc và tổ chức hoạt động giáo dục cho trẻ từ 3 tháng tới 6 tuổi theo chương trình giáo dục mầm non; trách nhiệm đầu tiên là giữ an toàn cho trẻ suốt thời gian ở trường và phối hợp với gia đình.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật Nhà giáo số 73/2025/QH15",
+      "publisher": "Quốc hội / Báo điện tử Chính phủ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-luat-nha-giao-119250703171419548.htm",
+      "accessed": "2026-11-04",
+      "effective_date": "2026-01-01",
+      "note": "Đã đọc toàn văn: Điều 9 (nghĩa vụ), Điều 11 (những việc không được làm), Điều 28 (trình độ chuẩn được đào tạo). Ngày hiệu lực ghi trong luật."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Thông tư 11/2026/TT-BGDĐT quy định chế độ làm việc đối với giáo viên mầm non",
+      "publisher": "Bộ Giáo dục và Đào tạo / Báo điện tử Chính phủ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-thong-tu-11-2026-tt-bgddt-quy-dinh-che-do-lam-viec-voi-giao-vien-mam-non-119260305102619461.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-04",
+      "effective_date": "2026-03-04",
+      "note": "Thay Thông tư 48/2011/TT-BGDĐT. Đã đọc Điều 2 (đối tượng: trường công lập; trường ngoài công lập vận dụng) và Điều 4 (40 giờ/tuần; phân công đón, trả, trông trẻ buổi trưa). Chưa đọc chi tiết Điều 7 (định mức giờ dạy)."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Văn bản hợp nhất 09/2026/VBHN-TT-BGDĐT ban hành Điều lệ Trường mầm non",
+      "publisher": "Bộ Giáo dục và Đào tạo / LuatVietnam",
+      "url": "https://luatvietnam.vn/giao-duc/van-ban-hop-nhat-09-2026-vbhn-tt-bgddt-2026-hop-nhat-dieu-le-truong-mam-non-441791-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-07-23",
+      "effective_date": "2021-03-31",
+      "note": "Hợp nhất Thông tư 52/2020/TT-BGDĐT (hiệu lực 31/3/2021) và các thông tư sửa đổi, trong đó có Thông tư 51/2026/TT-BGDĐT. effective_date là ngày hiệu lực của Điều lệ gốc theo văn bản hợp nhất. Đã đọc Điều 16, 19, 27 (nhiệm vụ của giáo viên), 31 (những điều giáo viên không được làm), 32."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Thông tư 45/2021/TT-BGDĐT quy định về xây dựng trường học an toàn, phòng, chống tai nạn thương tích trong cơ sở giáo dục mầm non",
+      "publisher": "Bộ Giáo dục và Đào tạo / LuatVietnam",
+      "url": "https://luatvietnam.vn/giao-duc/thong-tu-45-2021-tt-bgddt-215326-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2021-12-31",
+      "effective_date": "2022-02-15",
+      "note": "Thay Thông tư 13/2010/TT-BGDĐT. Đã đọc Điều 4, 5 và bảng tiêu chí trường học an toàn (mục 13, 15, 24, 25, 26, 28, 45). Chưa tìm thấy văn bản thay thế tính tới 04/11/2026."
+    },
+    {
+      "id": "S5",
+      "type": "law",
+      "title": "Thông tư 31/2026/TT-BGDĐT quy định mã số, bổ nhiệm chức danh và xếp lương đối với nhà giáo trong cơ sở giáo dục công lập",
+      "publisher": "Bộ Giáo dục và Đào tạo / Báo điện tử Chính phủ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-thong-tu-31-2026-tt-bgddt-quy-dinh-ma-so-bo-nhiem-chuc-danh-va-xep-luong-doi-voi-nha-giao-119260416154454555.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-04-14",
+      "effective_date": "2026-04-14",
+      "note": "Đã đọc Điều 6 (giáo viên mầm non hạng III, II, I và hệ số lương). Bản toàn văn trên trang này để trống ngày hiệu lực ở Điều 17; ngày 14/4/2026 lấy theo ngày ban hành do trang đăng và theo thuvienphapluat.vn — cần đối chiếu Công báo."
+    },
+    {
+      "id": "S6",
+      "type": "law",
+      "title": "Nghị định 161/2026/NĐ-CP quy định mức lương cơ sở và chế độ tiền thưởng đối với cán bộ, công chức, viên chức và lực lượng vũ trang",
+      "publisher": "Chính phủ / Công báo",
+      "url": "https://congbao.chinhphu.vn/van-ban/nghi-dinh-so-161-2026-nd-cp-469550.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-05-15",
+      "effective_date": "2026-07-01",
+      "note": "Ngày ban hành, hiệu lực lấy từ trang Công báo. Mức lương cơ sở 2.530.000 đồng/tháng (Điều 3) lấy theo thuvienphapluat.vn, hoatieu.vn và careerviet.vn, ba nguồn khớp nhau; chưa đọc toàn văn nghị định."
+    },
+    {
+      "id": "S7",
+      "type": "market",
+      "title": "Tin tuyển dụng Giáo viên mầm non trên TopCV (xem ngày 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/giao-vien-mam-non-la-gi",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "issued_date là ngày các tin được đăng (trang ghi 'đăng X phút/giờ trước' lúc truy cập). Ví dụ: Huế 4,5–6,5 triệu; Hà Nội 8–12 triệu; TP.HCM 7–18 triệu, đều yêu cầu 1 năm kinh nghiệm. Tin tuyển dụng thay đổi hằng ngày."
+    },
+    {
+      "id": "S8",
+      "type": "market",
+      "title": "Báo cáo lương vị trí Giáo viên mầm non tại Việt Nam 2026",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tra-cuu-muc-luong-tai-viet-nam/giao-vien-mam-non",
+      "accessed": "2026-11-04",
+      "note": "Trang tra cứu lương năm 2026, tổng hợp từ tin tuyển dụng trên TopCV, không ghi ngày cập nhật; chủ yếu phản ánh khu vực tư."
+    },
+    {
+      "id": "S9",
+      "type": "press",
+      "title": "Giáo viên trường tư đồng loạt bỏ dạy vì 'lương không đủ sống'",
+      "publisher": "VnExpress",
+      "url": "https://vnexpress.net/giao-vien-truong-tu-dong-loat-bo-day-vi-luong-khong-du-song-5104290.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-02",
+      "note": "Một trường mầm non tư thục ở Hà Tĩnh; bài dẫn khảo sát lương giáo viên, nhân viên trường tư tại Hà Tĩnh phổ biến 5–10 triệu đồng/tháng."
+    },
+    {
+      "id": "S10",
+      "type": "press",
+      "title": "Giáo viên mầm non phải làm việc 10 tiếng mỗi ngày",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/giao-vien-mam-non-phai-lam-viec-10-tieng-moi-ngay-185260408184857676.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-04-08",
+      "note": "GS-TS Lê Anh Vinh (Viện trưởng Viện Khoa học giáo dục Việt Nam) dẫn khảo sát tại hội thảo ngày 8/4/2026; bài cũng dẫn số liệu của Ngân hàng Thế giới về dịch vụ mầm non."
+    },
+    {
+      "id": "S11",
+      "type": "testimony",
+      "title": "Chuyện nghề giáo viên mầm non: áp lực và hạnh phúc giản đơn",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-viec-lam/ke-cau-chuyen-nghe/chuyen-nghe-giao-vien-mam-non-ap-luc-va-hanh-phuc-gian-don",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-03-06",
+      "note": "Lời kể của chị Hồng Hạnh (15 năm), chị Yến Nhi (5 năm), chị Thu Hằng; bài không ghi đơn vị công tác. Chỉ dùng cho mô tả trải nghiệm."
+    },
+    {
+      "id": "S12",
+      "type": "testimony",
+      "title": "Nhóm trao đổi giáo viên - phụ huynh trên mạng xã hội: Mệt mỏi vì sai mục đích",
+      "publisher": "Báo Giáo dục và Thời đại",
+      "url": "https://giaoducthoidai.vn/nhom-trao-doi-giao-vien-phu-huynh-tren-mang-xa-hoi-met-moi-vi-sai-muc-dich-post662271.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2023-11-24",
+      "note": "Chia sẻ của cô Nông Thúy Lành, giáo viên một trường mầm non tư thục tại TP Thủ Đức (TP.HCM)."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Thử trông em nhỏ, tham gia sinh hoạt hè hay hoạt động tình nguyện với trẻ em để xem bạn có kiên nhẫn với trẻ nhỏ cả ngày không.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Học hát, kể chuyện, vẽ, làm đồ thủ công: đây là những việc giáo viên mầm non dùng hằng ngày.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Ngành Giáo dục Mầm non ở nhiều trường có môn năng khiếu; hãy đọc kỹ đề án tuyển sinh của trường bạn nhắm tới để biết thi gì.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Theo Luật Nhà giáo 2025, giáo viên mầm non phải có bằng tốt nghiệp cao đẳng sư phạm trở lên.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật Nhà giáo Điều 28 khoản 1 điểm a. Chính phủ quy định lộ trình với giáo viên đang làm mà chưa đạt chuẩn (khoản 3)."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Nhiệm vụ đầu tiên của giáo viên mầm non là bảo vệ an toàn về thể chất, tinh thần và tính mạng của trẻ trong thời gian trẻ ở trường.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Điều lệ Trường mầm non, Điều 27 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Giáo viên mầm non không được xúc phạm, xâm phạm thân thể trẻ, đối xử không công bằng với trẻ, tùy tiện cắt xén chương trình hay làm việc riêng khi đang tổ chức hoạt động cho trẻ.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Điều lệ Trường mầm non, Điều 31 khoản 1 điểm a, b, d, đ."
+      },
+      {
+        "kind": "fact",
+        "text": "Giáo viên mầm non có nhiệm vụ phổ biến kiến thức nuôi dạy trẻ cho cha mẹ và chủ động phối hợp với gia đình.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Điều lệ Trường mầm non, Điều 27 khoản 4."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Ở trường công lập, thời gian làm việc của giáo viên mầm non là 40 giờ/tuần; giáo viên có thể được phân công đón trẻ, trả trẻ hoặc trông trẻ buổi trưa.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Thông tư 11/2026/TT-BGDĐT Điều 4 khoản 1, 3. Trường ngoài công lập tự quy định, bảo đảm phù hợp thông tư này và luật lao động (Điều 2 khoản 3)."
+      },
+      {
+        "kind": "fact",
+        "text": "Một khảo sát được Viện Khoa học giáo dục Việt Nam nêu năm 2026 cho thấy nhiều giáo viên mầm non làm khoảng 10 tiếng/ngày, đến từ lúc trường mở cửa tới khi đóng cửa.",
+        "source_ids": ["S10"],
+        "confidence": "single_source"
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Ở trường công lập, giáo viên mầm non hạng III có hệ số lương từ 2,10 tới 4,89; mức khởi điểm khoảng 5,3 triệu đồng/tháng, chưa tính phụ cấp.",
+        "source_ids": ["S5", "S6"],
+        "confidence": "verified",
+        "note": "Tự tính: hệ số 2,10 (Thông tư 31/2026 Điều 6) × lương cơ sở 2.530.000 đồng (Nghị định 161/2026, từ 01/7/2026) = 5.313.000 đồng/tháng, chưa gồm phụ cấp ưu đãi và chưa trừ bảo hiểm."
+      },
+      {
+        "kind": "fact",
+        "text": "Ở khu vực tư, tin tuyển dụng giáo viên mầm non có 1 năm kinh nghiệm trên TopCV tháng 11/2026 ghi mức lương từ khoảng 4,5 tới 18 triệu đồng/tháng, chênh nhiều theo nơi làm.",
+        "source_ids": ["S7", "S8"],
+        "confidence": "single_source",
+        "note": "S8 (trang tra cứu lương của TopCV) ghi trung bình 10 triệu, khoảng phổ biến 8–12 triệu đồng/tháng. Cả hai cùng là dữ liệu TopCV nên không tính là hai nguồn độc lập."
+      },
+      {
+        "kind": "fact",
+        "text": "Năm 2026, tại một trường mầm non tư thục ở Hà Tĩnh, giáo viên nhận khoảng 6,3–9 triệu đồng/tháng và hơn 50 người bỏ dạy vì cho rằng lương không đủ sống.",
+        "source_ids": ["S9"],
+        "confidence": "single_source"
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Giáo viên mầm non kể ngoài chăm trẻ và dạy học, phải dành nhiều thời gian soạn giáo án, lưu hồ sơ, liên lạc phụ huynh và tự làm đồ chơi, đồ dùng.",
+        "source_ids": ["S11"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Một giáo viên mầm non tư thục ở TP.HCM kể phụ huynh nhắn tin hỏi qua nhóm Zalo bất kể ngày đêm, có lúc gây áp lực.",
+        "source_ids": ["S12"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Hà — giáo viên mầm non 2 năm kinh nghiệm, cùng cô Lan phụ trách lớp mẫu giáo 4–5 tuổi Hoa Sen ở Trường Mầm non Sơn Ca (hư cấu, công lập).",
+    "setting": "Một ngày ở lớp mẫu giáo: đón trẻ, soát kế hoạch, kiểm tra góc chơi an toàn, giờ ăn, giờ trẻ ngủ trưa, một va chạm nhỏ ở sân và cuộc nói chuyện với phụ huynh lúc trả trẻ.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "an_toan", "label": "An toàn", "initial": 70 },
+      { "id": "gan_ket", "label": "Gắn kết", "initial": 65 }
+    ],
+    "segments": [
+      {
+        "id": "mn1-don-tre",
+        "time": "06:45",
+        "title": "Đón trẻ đầu ngày",
+        "narrative": "Trời còn sớm, phụ huynh đã đưa con tới cửa lớp. Cô Lan nhắc bạn đón trẻ đúng từng bước để không sót bé nào.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên phải bảo vệ an toàn cho trẻ trong thời gian ở trường; cơ sở mầm non phải có quy định đón, trả trẻ để phòng tránh trẻ bị thất lạc.",
+          "source_ids": ["S3", "S4"],
+          "confidence": "verified",
+          "note": "Điều lệ Trường mầm non Điều 27 khoản 1; Thông tư 45/2021 bảng tiêu chí mục 45."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước đón trẻ đầu ngày",
+          "steps": [
+            "Mở lớp, đi một vòng xem đồ đạc có gì hư hỏng",
+            "Nhận trẻ trực tiếp từ tay phụ huynh, chào hỏi",
+            "Nhìn sức khỏe, hỏi phụ huynh có dặn dò gì không",
+            "Ghi tên trẻ vào sổ theo dõi trẻ đến lớp",
+            "Cho trẻ cất đồ dùng cá nhân rồi vào góc chơi"
+          ],
+          "on_success": { "an_toan": 3, "gan_ket": 2 },
+          "on_fail": { "an_toan": -3 }
+        }
+      },
+      {
+        "id": "mn2-ke-hoach",
+        "time": "08:00",
+        "title": "Soát kế hoạch hoạt động trong ngày",
+        "narrative": "Trước giờ học, bạn đọc lại kế hoạch ngày cô Lan nhờ một bạn thực tập viết. Có vài dòng làm bạn chột dạ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên không được tùy tiện cắt xén chương trình hay làm việc riêng khi đang tổ chức hoạt động cho trẻ; đồ dễ gây mất an toàn như kéo chỉ cho trẻ dùng khi có giáo viên hướng dẫn, giám sát.",
+          "source_ids": ["S3", "S4"],
+          "confidence": "verified",
+          "note": "Điều lệ Trường mầm non Điều 31 khoản 1 điểm d, đ (hoạt động phải theo Chương trình giáo dục mầm non, Điều 16, 19); Thông tư 45/2021 bảng tiêu chí mục 28. Chỉ đánh lỗi hai dòng có quy định rõ (SPEC-021 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng trái quy định trong kế hoạch ngày",
+          "document": [
+            "KẾ HOẠCH NGÀY — Lớp mẫu giáo Hoa Sen (hư cấu)",
+            "Thể dục sáng ngoài sân cùng cả lớp",
+            "Bỏ giờ chơi ngoài trời để luyện viết chữ cho kịp lớp 1",
+            "Tạo hình: trẻ tự lấy kéo cắt giấy, cô ngồi nhắn tin riêng",
+            "Kể chuyện và trò chuyện về chủ đề gia đình",
+            "Vệ sinh tay, chuẩn bị bàn ghế cho bữa trưa"
+          ],
+          "errors": [
+            { "line": 2, "explain": "Tự ý bỏ hoạt động trong chương trình là cắt xén chương trình, điều giáo viên không được làm." },
+            { "line": 3, "explain": "Kéo chỉ được dùng khi có cô hướng dẫn, giám sát; làm việc riêng khi đang tổ chức hoạt động là bị cấm." }
+          ],
+          "on_success": { "an_toan": 4 },
+          "on_fail": { "an_toan": -4 }
+        }
+      },
+      {
+        "id": "mn3-goc-choi",
+        "time": "09:30",
+        "title": "Kiểm tra góc chơi",
+        "narrative": "Giữa buổi sáng, bạn dạo một vòng góc chơi và sân trước khi cho trẻ ra chơi tự do.",
+        "basis": {
+          "kind": "fact",
+          "text": "Tiêu chí trường học an toàn: đồ chơi gãy hỏng không được dùng; ổ cắm điện đặt ngoài tầm với của trẻ hoặc có nắp; tủ kệ có chốt cố định; góc chơi không đặt ở cửa nhà vệ sinh; kéo, hột hạt chỉ dùng khi có giáo viên giám sát.",
+          "source_ids": ["S4"],
+          "confidence": "verified",
+          "note": "Thông tư 45/2021/TT-BGDĐT, bảng tiêu chí mục 13, 15, 24, 25, 26, 28."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp các thứ bạn thấy: an toàn hay không an toàn cho trẻ",
+          "buckets": ["An toàn", "Không an toàn"],
+          "items": [
+            { "text": "Kệ đồ chơi được bắt vít cố định vào tường", "bucket": "An toàn" },
+            { "text": "Bình nước uống đặt ở chỗ trẻ dễ lấy", "bucket": "An toàn" },
+            { "text": "Kéo cất trong tủ, chỉ lấy ra khi cô hướng dẫn", "bucket": "An toàn" },
+            { "text": "Cầu trượt ngoài sân gãy tay vịn vẫn cho trẻ chơi", "bucket": "Không an toàn" },
+            { "text": "Ổ cắm điện thấp ngang tầm tay trẻ, không có nắp", "bucket": "Không an toàn" },
+            { "text": "Góc chơi xếp hình kê ngay cửa nhà vệ sinh", "bucket": "Không an toàn" }
+          ],
+          "on_success": { "an_toan": 5 },
+          "on_fail": { "an_toan": -5 }
+        }
+      },
+      {
+        "id": "mn4-gio-an",
+        "time": "11:00",
+        "title": "Một bé không chịu ăn",
+        "narrative": "Giờ ăn trưa, bé Na ngồi khóc đòi mẹ, đẩy bát ra. Cả lớp đang ăn, bạn phải xử lý ngay.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên thực hiện nuôi dưỡng, chăm sóc trẻ và tôn trọng nhân cách trẻ; không được xúc phạm danh dự, xâm phạm thân thể trẻ; phải phối hợp với gia đình.",
+          "source_ids": ["S3"],
+          "confidence": "verified",
+          "note": "Điều lệ Trường mầm non Điều 27 khoản 2, 3, 4; Điều 31 khoản 1 điểm a."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với bé Na?",
+          "options": [
+            {
+              "text": "Ngồi cạnh dỗ bé, cho ăn từ từ; nếu bé bỏ ăn nhiều ngày thì báo phụ huynh",
+              "effect": { "gan_ket": 4, "nang_luong": -2 },
+              "feedback": "Kiên nhẫn chăm sóc và phối hợp với gia đình là đúng nhiệm vụ của giáo viên mầm non."
+            },
+            {
+              "text": "Nghiêm giọng dọa bé, ép ăn cho nhanh để kịp giờ ngủ",
+              "effect": { "an_toan": -5, "gan_ket": -4 },
+              "feedback": "Dọa nạt, ép ăn có thể xúc phạm, xâm phạm thân thể trẻ — điều giáo viên không được làm."
+            },
+            {
+              "text": "Cất bát đi, để bé nhịn bữa này cho biết",
+              "effect": { "gan_ket": -3 },
+              "feedback": "Bỏ mặc bé không ăn là chưa làm tròn việc nuôi dưỡng, chăm sóc trẻ."
+            }
+          ]
+        }
+      },
+      {
+        "id": "mn5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Giờ trẻ ngủ trưa",
+        "narrative": "Trẻ đã ngủ, cô Lan trực ở phòng ngủ. Bạn có 2 giờ ở bàn giáo viên và một danh sách việc dài.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên mầm non kể phải dành nhiều thời gian soạn giáo án, lưu hồ sơ, liên lạc phụ huynh và tự làm đồ chơi từ vật liệu tái chế; giáo viên có thể được phân công trông trẻ buổi trưa.",
+          "source_ids": ["S11", "S2"],
+          "confidence": "single_source",
+          "note": "Trải nghiệm: S11. Phân công trông trẻ buổi trưa: Thông tư 11/2026 Điều 4 khoản 3."
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 2 giờ trong lúc trẻ ngủ trưa",
+          "budget_min": 120,
+          "activities": [
+            { "label": "Làm đồ dùng dạy học", "effect_per_30min": { "gan_ket": 2, "nang_luong": -2 } },
+            { "label": "Ghi sổ theo dõi trẻ", "effect_per_30min": { "an_toan": 2, "nang_luong": -1 } },
+            { "label": "Trang trí lớp", "effect_per_30min": { "gan_ket": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ ngơi, ăn trưa", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "mn6-va-cham",
+        "time": "15:30",
+        "title": "Va chạm ở sân chơi",
+        "narrative": "Giờ chơi chiều, bé Bin xô bé Su ngã, Su bị trầy nhẹ ở tay và khóc to.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên phải bảo vệ an toàn cho trẻ và phối hợp với gia đình; cơ sở mầm non phải kịp thời thông tin cho cha mẹ về những khó khăn của trẻ ở trường.",
+          "source_ids": ["S3", "S4"],
+          "confidence": "verified",
+          "note": "Điều lệ Trường mầm non Điều 27 khoản 1, 4; Điều 31 khoản 1 điểm a; Thông tư 45/2021 Điều 5 khoản 6."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý vết trầy và hai bé thế nào?",
+          "options": [
+            {
+              "text": "Đưa Su tới nhân viên y tế, dỗ cả hai bé, ghi sổ và báo phụ huynh lúc đón",
+              "effect": { "an_toan": 4, "gan_ket": 2, "nang_luong": -2 },
+              "feedback": "Chăm vết thương trước, minh bạch với gia đình sau giúp giữ an toàn và niềm tin."
+            },
+            {
+              "text": "Lau qua vết trầy, không kể với phụ huynh cho đỡ rắc rối",
+              "effect": { "an_toan": -3, "gan_ket": -4 },
+              "feedback": "Giấu sự cố làm mất niềm tin; phụ huynh cần được thông tin về những gì xảy ra với con."
+            },
+            {
+              "text": "Mắng Bin thật to trước cả lớp cho các bạn sợ",
+              "effect": { "gan_ket": -4 },
+              "feedback": "Xúc phạm trẻ trước đám đông là điều giáo viên không được làm, dù bé có lỗi."
+            }
+          ]
+        }
+      },
+      {
+        "id": "mn7-tra-tre",
+        "time": "16:45",
+        "title": "Phụ huynh phàn nàn khi đón con",
+        "narrative": "Giờ trả trẻ, mẹ bé Su thấy vết trầy trên tay con và hỏi bạn ngay ở cửa lớp.",
+        "basis": {
+          "kind": "fact",
+          "text": "Giáo viên phải chủ động phối hợp với gia đình trẻ; giáo viên mầm non kể phụ huynh nhắn tin hỏi qua nhóm Zalo bất kể ngày đêm, có lúc gây áp lực.",
+          "source_ids": ["S3", "S12"],
+          "confidence": "single_source",
+          "note": "Điều lệ Trường mầm non Điều 27 khoản 4 (verified); trải nghiệm áp lực tin nhắn: S12."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Nói chuyện với mẹ bé Su lúc trả trẻ",
+          "npc": "Chị Mai (mẹ bé Su)",
+          "turns": [
+            {
+              "npc_line": "Sao con chị bị trầy tay mà cô không báo gì?",
+              "replies": [
+                {
+                  "text": "Em xin lỗi chị. Chiều nay bé ngã ở sân, em đã đưa bé đi y tế và đang định báo chị.",
+                  "effect": { "gan_ket": 3 },
+                  "feedback": "Kể rõ chuyện đã xảy ra và đã xử lý ra sao giúp phụ huynh yên tâm."
+                },
+                {
+                  "text": "Trẻ con chơi thì ngã là chuyện thường chị ạ.",
+                  "effect": { "gan_ket": -4 },
+                  "feedback": "Xem nhẹ lo lắng của phụ huynh làm mất niềm tin, dù vết thương nhẹ."
+                }
+              ]
+            },
+            {
+              "npc_line": "Thế sau này cô phải gửi ảnh con chị lên nhóm mỗi giờ cho chị xem.",
+              "replies": [
+                {
+                  "text": "Em sẽ báo chị việc quan trọng, nhưng trong giờ học em cần để mắt tới các bé ạ.",
+                  "effect": { "an_toan": 2, "gan_ket": 1 },
+                  "feedback": "Giải thích nhẹ nhàng rằng việc trông trẻ phải đặt lên trước việc chụp ảnh."
+                },
+                {
+                  "text": "Vâng ạ, em sẽ chụp liên tục cho chị.",
+                  "effect": { "an_toan": -3, "nang_luong": -2 },
+                  "feedback": "Mải chụp ảnh khi đang tổ chức hoạt động dễ làm lơ là việc giữ an toàn cho trẻ."
+                }
+              ]
+            },
+            {
+              "npc_line": "Tối nay chị nhắn cô hỏi thêm được không?",
+              "replies": [
+                {
+                  "text": "Dạ chị cứ nhắn, sáng mai đầu giờ em trả lời kỹ, nếu bé sốt thì chị gọi trường ngay nhé.",
+                  "effect": { "gan_ket": 2, "nang_luong": 1 },
+                  "feedback": "Thống nhất cách và giờ liên lạc giúp phối hợp tốt mà bạn vẫn giữ được sức."
+                },
+                {
+                  "text": "Chị nhắn lúc nào em cũng trả lời ngay.",
+                  "effect": { "gan_ket": 1, "nang_luong": -3 },
+                  "feedback": "Trả lời mọi tin nhắn ngày đêm dễ khiến bạn kiệt sức sau giờ làm."
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có đủ kiên nhẫn ở bên hơn hai chục trẻ nhỏ từ sáng sớm tới chiều muộn không?",
+      "Khi phụ huynh trách mình, bạn sẽ giữ bình tĩnh và giải thích thế nào?",
+      "Mức thu nhập khởi điểm của nghề có làm bạn đắn đo không?",
+      "Bạn thích phần nào hơn: chăm sóc trẻ, tổ chức trò chơi hay làm đồ dùng sáng tạo?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "sinh-vien-gdmn",
+        "title": "Sinh viên ngành Giáo dục Mầm non",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Cần tốt nghiệp cao đẳng sư phạm trở lên để đạt trình độ chuẩn giáo viên mầm non.",
+            "source_ids": ["S1"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "gvmn-hang-iii",
+        "title": "Giáo viên mầm non hạng III (trường công lập)",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Áp dụng hệ số lương viên chức loại A0, từ 2,10 tới 4,89.",
+            "source_ids": ["S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "gvmn-hang-ii",
+        "title": "Giáo viên mầm non hạng II",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Áp dụng hệ số lương viên chức loại A1, từ 2,34 tới 4,98.",
+            "source_ids": ["S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "gvmn-hang-i",
+        "title": "Giáo viên mầm non hạng I",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Áp dụng hệ số lương viên chức loại A2 nhóm A2.2, từ 4,00 tới 6,38.",
+            "source_ids": ["S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "gvmn-tu-thuc",
+        "title": "Giáo viên mầm non trường tư thục, quốc tế",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Nhiều trường tư cần ngoại ngữ hoặc phương pháp riêng; lương do thỏa thuận nên hãy hỏi kỹ hợp đồng."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "sinh-vien-gdmn", "to": "gvmn-hang-iii", "type": "promotion" },
+      { "from": "gvmn-hang-iii", "to": "gvmn-hang-ii", "type": "promotion" },
+      { "from": "gvmn-hang-ii", "to": "gvmn-hang-i", "type": "promotion" },
+      { "from": "sinh-vien-gdmn", "to": "gvmn-tu-thuc", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Ngày làm việc dài: khảo sát được nêu năm 2026 cho thấy nhiều giáo viên mầm non làm khoảng 10 tiếng/ngày, ít thời gian cho con và gia đình mình.",
+      "source_ids": ["S10"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Lương khởi điểm ở trường công lập khoảng 5,3 triệu đồng/tháng, chưa tính phụ cấp.",
+      "source_ids": ["S5", "S6"],
+      "confidence": "verified",
+      "note": "Tự tính: hệ số khởi điểm hạng III 2,10 (Thông tư 31/2026 Điều 6) × 2.530.000 đồng (Nghị định 161/2026) = 5.313.000 đồng/tháng."
+    },
+    {
+      "kind": "fact",
+      "text": "Lương ở nhiều trường tư không cao; năm 2026, hơn 50 giáo viên một trường mầm non tư ở Hà Tĩnh bỏ dạy vì cho rằng lương không đủ sống.",
+      "source_ids": ["S9"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Nhiều việc ngoài giờ dạy: soạn giáo án, hồ sơ, liên lạc phụ huynh và tự làm đồ dùng, đồ chơi.",
+      "source_ids": ["S11"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Áp lực từ phụ huynh: tin nhắn hỏi han có thể tới bất kể ngày đêm.",
+      "source_ids": ["S12"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Từ 2026, Luật Nhà giáo có hiệu lực, quy định chung về chuẩn nghề nghiệp, tuyển dụng, tiền lương và đãi ngộ cho nhà giáo, trong đó có giáo viên mầm non.",
+      "source_ids": ["S1"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "fact",
+      "text": "Theo số liệu Ngân hàng Thế giới nêu năm 2026, nhu cầu gửi trẻ dưới 3 tuổi lớn nhưng số cơ sở nhận trẻ nhỏ còn ít, nhất là khu công nghiệp.",
+      "source_ids": ["S10"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm kỹ năng sơ cứu, ngoại ngữ và cách trò chuyện với phụ huynh sẽ giúp bạn vững nghề hơn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (xaydungchinhsach.chinhphu.vn, luatvietnam.vn, congbao.chinhphu.vn, TopCV, VnExpress, Thanh Niên, CareerLink, Giáo dục và Thời đại)",
+    "scope_note": "Bối cảnh lớp mẫu giáo 4–5 tuổi ở trường công lập hư cấu (SPEC-021 3.1). Không đưa hướng dẫn y tế hay khẩu phần ăn; sự cố chỉ ở mức trầy nhẹ (R-2). Cần đối chiếu ngày hiệu lực Thông tư 31/2026 và toàn văn Nghị định 161/2026."
+  }
+}
