@@ -690,4 +690,53 @@ const bankWorld = {
 };
 writeFileSync(out("content/worlds/giao-dich-vien-ngan-hang.json"), JSON.stringify(bankWorld) + "\n");
 
-console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang}.json");
+// ---------- Đầu bếp nhà hàng (SPEC-019): một bếp nhà hàng ----------
+// Kho lạnh trái, khu sơ chế giữa, phòng bếp trưởng phải, khu món nóng và quầy ra món phía dưới.
+const BEP_NHA_HANG = AGENCY;
+const BEP_NHA_HANG_PROPS = [
+  // Kho lạnh: tủ, kệ nguyên liệu
+  [2, 1, 329, 1], [4, 1, 329, 1], [6, 1, 329, 1], [8, 1, 330, 1],
+  [2, 5, 330, 1], [9, 5, 330, 1],
+  // Khu sơ chế: bàn sơ chế
+  [13, 2, 85, 1], [14, 2, 86, 1], [15, 2, 97, 1],
+  // Phòng bếp trưởng: bàn, kệ, cây
+  [21, 2, 85, 1], [22, 2, 86, 1], [23, 2, 97, 1],
+  [27, 1, 329, 1], [18, 1, 16, 1], [28, 5, 17, 1],
+  // Khu món nóng: dãy bếp
+  [12, 10, 85, 1], [13, 10, 86, 1], [14, 10, 86, 1], [15, 10, 86, 1], [16, 10, 97, 1],
+  // Quầy ra món
+  [22, 12, 85, 1], [23, 12, 86, 1], [24, 12, 97, 1],
+  [1, 13, 324, 1], [2, 13, 325, 1], [28, 14, 17, 1],
+];
+const BEP_NHA_HANG_DECOR = [
+  // Phiếu order và bảng thực đơn trên tường.
+  [23, 12, 18], [14, 10, 18], [12, 3, 18],
+];
+
+const kitchenWorld = {
+  profession_id: "dau-bep",
+  tile_size: 16,
+  tilesets: world.tilesets,
+  maps: [
+    buildMap("bep-nha-hang", BEP_NHA_HANG, BEP_NHA_HANG_PROPS, BEP_NHA_HANG_DECOR, { x: 14, y: 12 }),
+  ],
+  npcs: [
+    { id: "bep-truong", map: "bep-nha-hang", x: 22, y: 4, name: "Bếp trưởng", sprite: C(379) },
+    { id: "bep-truong-kho", map: "bep-nha-hang", x: 5, y: 3, name: "Bếp trưởng", sprite: C(379) },
+    { id: "phuc-vu", map: "bep-nha-hang", x: 23, y: 13, name: "Nhân viên phục vụ", sprite: C(1, 13, 76) },
+    { id: "phu-bep", map: "bep-nha-hang", x: 14, y: 4, name: "Phụ bếp", sprite: C(54, 17, 22) },
+  ],
+  player_sprite: C(1, 125, 20),
+  segments: {
+    "db1-dau-ca": { map: "bep-nha-hang", target: { x: 22, y: 4 }, npc: "bep-truong", quest: "Gặp bếp trưởng nhận việc đầu ca" },
+    "db2-soat-ve-sinh": { map: "bep-nha-hang", target: { x: 14, y: 2 }, quest: "Đi một vòng khu sơ chế, soát lỗi vệ sinh" },
+    "db3-xep-nguyen-lieu": { map: "bep-nha-hang", target: { x: 4, y: 1 }, quest: "Vào kho lạnh, loại nguyên liệu không đạt" },
+    "db4-khach-di-ung": { map: "bep-nha-hang", target: { x: 23, y: 13 }, npc: "phuc-vu", quest: "Phục vụ đang gọi bạn ở quầy ra món" },
+    "db5-do-thua": { map: "bep-nha-hang", target: { x: 5, y: 3 }, npc: "bep-truong-kho", quest: "Bếp trưởng gọi bạn vào kho lạnh" },
+    "db6-chia-thoi-gian": { map: "bep-nha-hang", target: { x: 14, y: 10 }, quest: "Về khu món nóng, chuẩn bị cho ca tối" },
+    "db7-gio-cao-diem": { map: "bep-nha-hang", target: { x: 23, y: 12 }, quest: "Giờ cao điểm tối, ra quầy xem phiếu order" },
+  },
+};
+writeFileSync(out("content/worlds/dau-bep.json"), JSON.stringify(kitchenWorld) + "\n");
+
+console.log("✓ public/game/ và content/worlds/{giao-vien-thpt,dieu-duong,lap-trinh-vien,ke-toan,ky-su-xay-dung,nhan-vien-marketing,duoc-si,luat-su,thiet-ke-do-hoa,giao-dich-vien-ngan-hang,dau-bep}.json");

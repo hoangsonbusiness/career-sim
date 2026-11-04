@@ -1,0 +1,538 @@
+{
+  "id": "dau-bep",
+  "name": "Đầu bếp nhà hàng",
+  "aliases": ["Đầu bếp", "Chef", "Cook"],
+  "group": { "label": "Du lịch, Nhà hàng & Khách sạn" },
+  "holland": ["R", "A", "E"],
+  "summary": "Sơ chế, nấu và ra món trong bếp nhà hàng; giữ an toàn thực phẩm từ nguyên liệu tới đĩa ăn, chạy nhịp giờ cao điểm và làm việc theo ca, kể cả cuối tuần, ngày lễ.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "Luật An toàn thực phẩm số 55/2010/QH12",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/y-te/luat-an-toan-thuc-pham-2010-so-55-2010-qh12-53460-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2010-06-17",
+      "effective_date": "2011-07-01",
+      "note": "Đã đọc Điều 5, 28, 29, 30. Luật đã được sửa bởi Luật 28/2018/QH14 và Luật Thanh tra 2025 (chưa đối chiếu từng điều); dự án Luật An toàn thực phẩm (sửa đổi) đang được Quốc hội thảo luận (S3)."
+    },
+    {
+      "id": "S2",
+      "type": "official_stat",
+      "title": "Thông tin báo chí về một số thay thế, sửa đổi, bổ sung hướng dẫn Luật An toàn thực phẩm",
+      "publisher": "Cục An toàn thực phẩm — Bộ Y tế (vfa.gov.vn)",
+      "url": "https://vfa.gov.vn/tin-tuc/thong-tin-bao-chi-ve-mot-so-thay-the-sua-doi-bo-sung-huong-dan-luat-an-toan-thuc-pham-va-quy-dinh-ve-cong-bo-dang-ky-san-pham-thuc-pham.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-01-30",
+      "note": "Nghị định 46/2026/NĐ-CP hướng dẫn Luật An toàn thực phẩm có hiệu lực từ 26/01/2026."
+    },
+    {
+      "id": "S3",
+      "type": "official_stat",
+      "title": "Dự án Luật An toàn thực phẩm (sửa đổi): siết quản lý trên nền tảng số, làm rõ trách nhiệm quản lý",
+      "publisher": "Báo Điện tử Chính phủ (chinhphu.vn)",
+      "url": "https://baochinhphu.vn/du-an-luat-an-toan-thuc-pham-sua-doi-sua-luat-an-toan-thuc-pham-siet-quan-ly-tren-nen-tang-so-lam-ro-trach-nhiem-quan-ly-10226102410125712.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-10-24",
+      "note": "Đây là dự thảo đang được Quốc hội thảo luận; chưa phải luật có hiệu lực."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Luật Giáo dục nghề nghiệp số 124/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/giao-duc/luat-giao-duc-nghe-nghiep-2025-so-124-2025-qh15-422919-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-01-01",
+      "supersedes": "Luật Giáo dục nghề nghiệp số 74/2014/QH13",
+      "note": "Đã đọc Điều 6 (chương trình, mục tiêu đào tạo)."
+    },
+    {
+      "id": "S5",
+      "type": "market",
+      "title": "Mức lương ngành F&B theo vị trí và kinh nghiệm",
+      "publisher": "CareerLink",
+      "url": "https://www.careerlink.vn/cam-nang-luong/muc-luong-nganh-f-b/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-03-20"
+    },
+    {
+      "id": "S6",
+      "type": "testimony",
+      "title": "Sức mạnh nghề đầu bếp nhìn từ 12 năm làm nhà hàng của tôi",
+      "publisher": "VnExpress (Ý kiến)",
+      "url": "https://vnexpress.net/suc-manh-nghe-dau-bep-nhin-tu-12-nam-lam-nha-hang-cua-toi-5110677.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-08-20",
+      "note": "Bài chia sẻ của tác giả ký tên Tuyen Thanh, người có 12 năm làm nhà hàng."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Từ bán cá viên chiên tới bếp trưởng nhà hàng",
+      "publisher": "Báo Thanh Niên",
+      "url": "https://thanhnien.vn/tu-ban-ca-vien-chien-toi-bep-truong-nha-hang-1851469095.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2022-06-16",
+      "note": "Lời kể của bếp trưởng Vũ Nhất Thông, TP.HCM; chuyện từ năm 2008 nên không dùng số tiền lương trong bài."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Vào bếp phụ gia đình: rửa, cắt, nêm nếm, dọn dẹp; nghề bếp bắt đầu từ những việc nhỏ và sạch sẽ.",
+        "audience": ["thcs"]
+      },
+      {
+        "kind": "advice",
+        "text": "Rèn sức khỏe và thói quen làm việc nhanh mà gọn gàng.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "fact",
+        "text": "Từ năm 2026, giáo dục nghề nghiệp gồm các chương trình cao đẳng, trung cấp, trung học nghề, sơ cấp và các chương trình đào tạo nghề khác.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "audience": ["thcs", "thpt"],
+        "note": "Luật Giáo dục nghề nghiệp 2025 Điều 6 khoản 1."
+      },
+      {
+        "kind": "advice",
+        "text": "Tìm hiểu trường cao đẳng, trung cấp có ngành chế biến món ăn gần bạn và hỏi kỹ thời gian thực hành trong bếp thật.",
+        "audience": ["thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Chương trình cao đẳng nhằm giúp người học giải quyết được việc phức tạp, khó dự báo trước của nghề và hướng dẫn, giám sát người khác trong nhóm.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "Luật Giáo dục nghề nghiệp 2025 Điều 6 khoản 2 điểm a."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Bếp phải bố trí không nhiễm chéo giữa đồ sống và đồ đã chế biến, có dụng cụ riêng cho thực phẩm sống và chín, và phải lưu mẫu thức ăn.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật An toàn thực phẩm Điều 28 khoản 1, Điều 29 khoản 1, Điều 30 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Luật cấm dùng nguyên liệu quá hạn, không rõ nguồn gốc, thịt chưa qua kiểm tra thú y hay thực phẩm đã biến chất.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật An toàn thực phẩm Điều 5 khoản 2 và khoản 5."
+      },
+      {
+        "kind": "fact",
+        "text": "Người trực tiếp chế biến phải tuân thủ quy định về sức khỏe, kiến thức và thực hành an toàn thực phẩm.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "Luật An toàn thực phẩm Điều 29 khoản 4."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Một bếp trưởng kể hồi làm phụ bếp ca chiều kéo dài tới nửa đêm, có giai đoạn làm hai nhà hàng cùng lúc từ sáng sớm tới khuya.",
+        "source_ids": ["S7"],
+        "confidence": "single_source",
+        "note": "Lời kể cá nhân, không đại diện cho mọi nhà hàng."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Theo một bảng lương năm 2026, phụ bếp mới vào nghề nhận khoảng 5–9 triệu đồng/tháng; đầu bếp 3–5 năm kinh nghiệm khoảng 12–30 triệu đồng/tháng.",
+        "source_ids": ["S5"],
+        "confidence": "single_source",
+        "note": "Trong cùng bài, bảng ghi nhân viên 0–1 năm (gồm phụ bếp) 5–8 triệu, phần mô tả ghi phụ bếp 6–9 triệu; nội dung gộp thành 5–9 triệu. Thu nhập còn có tip, phí phục vụ, phụ cấp ca đêm."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Người làm bếp lâu năm kể nghề bếp cực: đứng nhiều giờ, nóng, áp lực và giờ giấc không giống văn phòng.",
+        "source_ids": ["S6"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Khoa — đầu bếp 2 năm kinh nghiệm sau khi tốt nghiệp cao đẳng nghề, phụ trách khu món nóng tại Nhà hàng Bếp Nhà (hư cấu).",
+    "setting": "Một ca trưa – tối trong bếp nhà hàng: chuẩn bị đầu ca, soát vệ sinh, loại nguyên liệu không đạt, khách dị ứng, bếp trưởng muốn dùng lại đồ cũ và giờ cao điểm buổi tối.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "the_luc", "label": "Thể lực", "initial": 80 },
+      { "id": "ve_sinh", "label": "An toàn thực phẩm", "initial": 70 },
+      { "id": "toc_do", "label": "Nhịp bếp", "initial": 60 }
+    ],
+    "segments": [
+      {
+        "id": "db1-dau-ca",
+        "time": "10:00",
+        "title": "Chuẩn bị đầu ca",
+        "narrative": "Ca trưa sắp bắt đầu. Bếp trưởng giao việc, bạn chuẩn bị khu sơ chế và nguyên liệu trước khi khách đến.",
+        "basis": {
+          "kind": "fact",
+          "text": "Bếp phải bố trí không nhiễm chéo giữa đồ sống và đồ đã chế biến, dùng nguyên liệu rõ nguồn gốc và người chế biến phải thực hành an toàn thực phẩm.",
+          "source_ids": ["S1"],
+          "confidence": "verified"
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước chuẩn bị đầu ca",
+          "steps": [
+            "Rửa tay, mặc tạp dề, đội mũ bếp",
+            "Kiểm nguyên liệu nhận sáng nay và giấy tờ đi kèm",
+            "Tách khu sơ chế đồ sống với khu đồ chín",
+            "Sơ chế rau, thịt theo danh sách món trong ngày",
+            "Báo bếp trưởng những gì còn thiếu hoặc không đạt"
+          ],
+          "on_success": { "ve_sinh": 4, "toc_do": 2 },
+          "on_fail": { "ve_sinh": -3, "toc_do": -2 }
+        }
+      },
+      {
+        "id": "db2-soat-ve-sinh",
+        "time": "10:45",
+        "title": "Soát lỗi vệ sinh trong bếp",
+        "narrative": "Trước giờ mở cửa, bạn đi một vòng khu bếp với phiếu kiểm tra và đánh dấu những chỗ chưa đạt.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật quy định nơi chế biến phải có dụng cụ riêng cho đồ sống và chín, cống rãnh thông thoát, chỗ rửa tay, nước đạt chuẩn và phải lưu mẫu thức ăn.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn thực phẩm Điều 28 khoản 2, 4, 6; Điều 29 khoản 1, 3; Điều 30 khoản 1."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng chưa đạt yêu cầu an toàn thực phẩm",
+          "document": [
+            "PHIẾU KIỂM TRA KHU BẾP — Nhà hàng Bếp Nhà (hư cấu)",
+            "Thớt dùng chung cho thịt sống và đồ đã nấu chín",
+            "Rác thải để trong thùng có nắp, đổ hằng ngày",
+            "Cống thoát nước khu rửa bị tắc, nước ứ đọng",
+            "Khu bếp không có chỗ rửa tay cho nhân viên",
+            "Hôm nay chưa lưu mẫu thức ăn đã nấu",
+            "Nước nấu ăn lấy từ nguồn đạt quy chuẩn",
+            "Bát đĩa rửa sạch, úp khô trên giá"
+          ],
+          "errors": [
+            { "line": 1, "explain": "Phải có dụng cụ, đồ chứa đựng riêng cho thực phẩm sống và thực phẩm chín." },
+            { "line": 3, "explain": "Cống rãnh khu nhà bếp phải thông thoát, không ứ đọng." },
+            { "line": 4, "explain": "Nơi chế biến phải có chỗ rửa tay." },
+            { "line": 5, "explain": "Luật yêu cầu lưu mẫu thức ăn." }
+          ],
+          "on_success": { "ve_sinh": 5 },
+          "on_fail": { "ve_sinh": -5 }
+        }
+      },
+      {
+        "id": "db3-xep-nguyen-lieu",
+        "time": "11:15",
+        "title": "Loại nguyên liệu không đạt",
+        "narrative": "Trong kho lạnh, bạn kiểm từng thùng nguyên liệu và tách những thứ không được phép đưa vào chế biến.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm dùng nguyên liệu quá hạn, không rõ nguồn gốc, thịt chưa qua kiểm tra thú y, và thực phẩm có bao gói vỡ, rách, biến dạng gây ô nhiễm.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn thực phẩm Điều 5 khoản 2, khoản 5 điểm đ, e."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp nguyên liệu: dùng được hay phải loại",
+          "buckets": ["Dùng được", "Phải loại"],
+          "items": [
+            { "text": "Thịt có giấy kiểm tra thú y, giao sáng nay", "bucket": "Dùng được" },
+            { "text": "Rau của nhà cung cấp có hóa đơn, ghi rõ nguồn gốc", "bucket": "Dùng được" },
+            { "text": "Gói gia vị đã quá hạn sử dụng in trên bao bì", "bucket": "Phải loại" },
+            { "text": "Thùng hải sản không rõ nguồn gốc, không giấy tờ", "bucket": "Phải loại" },
+            { "text": "Thịt chưa qua kiểm tra thú y", "bucket": "Phải loại" },
+            { "text": "Hộp sữa bị phồng, bao bì biến dạng", "bucket": "Phải loại" }
+          ],
+          "on_success": { "ve_sinh": 4, "the_luc": -1 },
+          "on_fail": { "ve_sinh": -4 }
+        }
+      },
+      {
+        "id": "db4-khach-di-ung",
+        "time": "12:30",
+        "title": "Khách dị ứng, xin đổi món giờ cao điểm",
+        "narrative": "Giữa giờ cao điểm, phục vụ chạy vào báo một khách dị ứng tôm, xin đổi món dù đơn đang dồn rất nhiều.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người trực tiếp chế biến phải tuân thủ quy định về kiến thức, thực hành an toàn thực phẩm, và thực phẩm phải được chế biến bảo đảm an toàn.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn thực phẩm Điều 29 khoản 4, Điều 30 khoản 2. Chưa tìm được quy định riêng về thông tin chất gây dị ứng với món ăn tại nhà hàng (cần kiểm chứng thêm); vì vậy lời kể chỉ nói về việc nấu an toàn, không nêu quy định cụ thể."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trao đổi với phục vụ về món cho khách dị ứng",
+          "npc": "Nhân viên phục vụ",
+          "turns": [
+            {
+              "npc_line": "Anh ơi, bàn 5 dị ứng tôm, xin đổi món. Mà bếp đang dồn đơn quá.",
+              "replies": [
+                {
+                  "text": "Ừ, anh làm lại món mới, dùng dụng cụ sạch riêng, không dính tôm.",
+                  "effect": { "ve_sinh": 3, "toc_do": -1 },
+                  "feedback": "Chậm một chút nhưng giữ an toàn cho khách là ưu tiên của người nấu."
+                },
+                {
+                  "text": "Gạt tôm ra khỏi đĩa rồi mang lại cho khách cũng được.",
+                  "effect": { "ve_sinh": -6 },
+                  "feedback": "Gạt tôm ra không làm món ăn an toàn với người dị ứng; nước sốt và dụng cụ vẫn dính tôm.",
+                  "note": "ignores_allergy: true"
+                }
+              ]
+            },
+            {
+              "npc_line": "Khách hỏi chảo xào có chung với món tôm không?",
+              "replies": [
+                {
+                  "text": "Có, nên anh rửa chảo và dùng dụng cụ riêng trước khi xào món này.",
+                  "effect": { "ve_sinh": 2, "the_luc": -1 },
+                  "feedback": "Nói thật và xử lý dụng cụ giúp tránh nhiễm chéo."
+                },
+                {
+                  "text": "Cứ bảo khách là không, cho nhanh.",
+                  "effect": { "ve_sinh": -5 },
+                  "feedback": "Nói sai về cách chế biến đặt khách dị ứng vào nguy cơ.",
+                  "note": "ignores_allergy: true"
+                }
+              ]
+            },
+            {
+              "npc_line": "Bao lâu thì có món mới ạ?",
+              "replies": [
+                {
+                  "text": "Khoảng vài phút nữa, em báo khách giúp anh nhé.",
+                  "effect": { "toc_do": 2 },
+                  "feedback": "Báo rõ thời gian giúp phục vụ giữ được sự thông cảm của khách."
+                },
+                {
+                  "text": "Không biết, lúc nào xong thì xong.",
+                  "effect": { "toc_do": -2 },
+                  "feedback": "Không phối hợp với phục vụ làm cả quầy ra món rối hơn."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "db5-do-thua",
+        "time": "14:30",
+        "title": "Bếp trưởng muốn dùng lại đồ từ hôm qua",
+        "narrative": "Sau giờ trưa, bếp trưởng chỉ vào khay đồ nấu sẵn từ hôm qua, bảo bạn tận dụng cho món ăn tối nay.",
+        "basis": {
+          "kind": "fact",
+          "text": "Luật cấm kinh doanh thực phẩm đã biến chất; thực phẩm phải được chế biến bảo đảm an toàn, hợp vệ sinh.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "Luật An toàn thực phẩm Điều 5 khoản 5 điểm c, Điều 30 khoản 2."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý khay đồ cũ thế nào?",
+          "options": [
+            {
+              "text": "Kiểm tra kỹ; có dấu hiệu biến chất hay không rõ cách bảo quản thì bỏ và báo bếp trưởng",
+              "effect": { "ve_sinh": 4, "toc_do": -1 },
+              "feedback": "Thực phẩm đã biến chất thì luật cấm dùng; không chắc chắn thì không đưa cho khách."
+            },
+            {
+              "text": "Hâm nóng lại rồi trộn vào món mới cho đỡ phí",
+              "effect": { "ve_sinh": -5, "toc_do": 1 },
+              "feedback": "Hâm nóng không biến đồ đã biến chất thành an toàn; trộn vào món mới còn khó kiểm soát hơn."
+            },
+            {
+              "text": "Dùng luôn, khách không biết đâu",
+              "effect": { "ve_sinh": -6 },
+              "feedback": "Đánh cược sức khỏe của khách là trái với trách nhiệm của người nấu."
+            }
+          ]
+        }
+      },
+      {
+        "id": "db6-chia-thoi-gian",
+        "time": "16:00",
+        "title": "Chia thời gian trước ca tối",
+        "narrative": "Còn vài giờ trước giờ cao điểm tối. Bạn chia thời gian giữa sơ chế, vệ sinh khu bếp và thử một món mới.",
+        "basis": {
+          "kind": "fact",
+          "text": "Người làm bếp lâu năm kể nghề này đứng nhiều giờ, nóng và áp lực; tay nghề tốt lên nhờ làm tốt hơn mỗi ngày.",
+          "source_ids": ["S6"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia quỹ thời gian trước ca tối",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Sơ chế cho ca tối", "effect_per_30min": { "toc_do": 2, "the_luc": -2 } },
+            { "label": "Vệ sinh khu bếp", "effect_per_30min": { "ve_sinh": 2, "the_luc": -1 } },
+            { "label": "Thử món mới", "effect_per_30min": { "toc_do": 1, "the_luc": -1 } },
+            { "label": "Nghỉ ngồi, ăn uống", "effect_per_30min": { "the_luc": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "db7-gio-cao-diem",
+        "time": "19:30",
+        "title": "Đơn dồn dập, một món bị trả lại",
+        "narrative": "Giờ cao điểm tối, phiếu order dồn kín quầy. Đúng lúc đó, một món bị khách trả lại vì nguội và mặn.",
+        "basis": {
+          "kind": "fact",
+          "text": "Một bếp trưởng kể có giai đoạn làm từ sáng sớm tới khuya đến kiệt sức; người làm bếp lâu năm nói nghề này rất áp lực.",
+          "source_ids": ["S6", "S7"],
+          "confidence": "single_source",
+          "note": "Hai lời kể khác nhau, mỗi lời kể nói một khía cạnh."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn xử lý món bị trả lại thế nào?",
+          "options": [
+            {
+              "text": "Làm lại món mới, báo phục vụ thời gian, rồi xem vì sao món bị mặn",
+              "effect": { "toc_do": -1, "ve_sinh": 1, "the_luc": -1 },
+              "feedback": "Làm lại và tìm nguyên nhân giúp món sau không lặp lỗi, dù ca tối chậm thêm một chút."
+            },
+            {
+              "text": "Hâm nóng đĩa cũ, thêm chút nước cho bớt mặn rồi gửi lại",
+              "effect": { "toc_do": 1, "ve_sinh": -2 },
+              "feedback": "Sửa tạm đĩa đã ra khỏi bếp khó bảo đảm chất lượng, khách dễ phàn nàn lần nữa."
+            },
+            {
+              "text": "Bỏ qua, ưu tiên các đơn mới trước",
+              "effect": { "toc_do": 1, "the_luc": -1 },
+              "feedback": "Để khách chờ quá lâu với món lỗi làm nhà hàng mất khách, dù bếp chạy nhanh hơn."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có chịu được cái nóng và việc đứng nhiều giờ liền trong bếp không?",
+      "Nếu người phụ trách bảo bạn làm điều có thể hại sức khỏe khách, bạn sẽ nói gì?",
+      "Làm việc khi người khác nghỉ (tối, cuối tuần, ngày lễ) có hợp với bạn không?",
+      "Bạn thấy học nghề sau lớp 9 hoặc lớp 12 có phải là một lựa chọn nghiêm túc không?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "hoc-nghe-bep",
+        "title": "Học sinh / sinh viên nghề bếp",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có thể học theo các chương trình sơ cấp, trung cấp, trung học nghề hoặc cao đẳng.",
+            "source_ids": ["S4"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "phu-bep",
+        "title": "Phụ bếp (Commis)",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Vị trí khởi đầu phổ biến trong bếp nhà hàng.",
+            "source_ids": ["S5"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "dau-bep-chinh",
+        "title": "Đầu bếp phụ trách khu / Chef de Partie",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Làm chủ một khu bếp, giữ chất lượng món ổn định và kèm được phụ bếp mới."
+          }
+        ]
+      },
+      {
+        "id": "bep-truong",
+        "title": "Bếp phó / Bếp trưởng",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Quản lý ca bếp, nguyên liệu, chi phí, thực đơn và chịu trách nhiệm an toàn thực phẩm của cả bếp."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "hoc-nghe-bep", "to": "phu-bep", "type": "promotion" },
+      { "from": "phu-bep", "to": "dau-bep-chinh", "type": "promotion" },
+      { "from": "dau-bep-chinh", "to": "bep-truong", "type": "management" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Nghề bếp cực: đứng nhiều giờ, nóng, áp lực và giờ giấc khác hẳn văn phòng.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Ca làm có thể kéo dài tới khuya; một bếp trưởng kể có giai đoạn làm hai nơi từ sáng sớm tới nửa đêm, kiệt sức và ít thời gian cho bản thân.",
+      "source_ids": ["S7"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Lương phụ bếp lúc mới vào nghề thấp hơn nhiều so với đầu bếp có kinh nghiệm.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Người chế biến phải tuân thủ nghiêm quy định an toàn thực phẩm; dùng nguyên liệu quá hạn, không rõ nguồn gốc hay đã biến chất là hành vi bị cấm.",
+      "source_ids": ["S1"],
+      "confidence": "verified"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Quy định an toàn thực phẩm đang thay đổi: Nghị định 46/2026 hướng dẫn luật có hiệu lực từ 26/01/2026, và dự án Luật An toàn thực phẩm (sửa đổi) đang được Quốc hội thảo luận.",
+      "source_ids": ["S2", "S3"],
+      "confidence": "verified"
+    },
+    {
+      "kind": "fact",
+      "text": "Một người làm bếp 12 năm cho rằng nghề bếp khó bị công nghệ thay thế hoàn toàn và có thị trường lao động rộng.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm ngoại ngữ và cập nhật kỹ thuật nấu mới sẽ mở thêm cơ hội ở khách sạn, resort và nhà hàng lớn."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua web (luatvietnam.vn, vfa.gov.vn, baochinhphu.vn, CareerLink, VnExpress, Thanh Niên)",
+    "scope_note": "Bối cảnh đầu bếp khu món nóng ca trưa – tối tại nhà hàng hư cấu; không nêu công thức, nhiệt độ hay thời gian bảo quản cụ thể (SPEC-019 R-2). Lựa chọn bỏ qua dị ứng được gắn note ignores_allergy: true (AC-019-07)."
+  }
+}
