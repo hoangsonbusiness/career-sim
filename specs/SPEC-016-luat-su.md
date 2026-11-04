@@ -80,9 +80,9 @@ Như SPEC-009 mục 5; test trong `tests/spec-016/`. R-3 do người duyệt và
 
 ## 6. Câu hỏi mở
 Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: luật sư tranh tụng dân sự ở văn phòng luật (không phải hình sự, pháp chế doanh nghiệp).
-- [ ] R-8: phiên ở tòa chỉ là cảnh chuyển, không làm bản đồ tòa án.
-- [ ] 3.3: kế hoạch 7 phần như bảng.
+- [x] 3.1: luật sư tranh tụng dân sự ở văn phòng luật (không phải hình sự, pháp chế doanh nghiệp).
+- [x] R-8: phiên ở tòa chỉ là cảnh chuyển, không làm bản đồ tòa án.
+- [x] 3.3: kế hoạch 7 phần như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

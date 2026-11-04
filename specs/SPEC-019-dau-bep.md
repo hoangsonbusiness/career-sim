@@ -81,9 +81,9 @@ Như SPEC-009 mục 5; test trong `tests/spec-019/`.
 
 ## 6. Câu hỏi mở
 Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: đầu bếp nhà hàng ca trưa–tối, học cao đẳng nghề.
-- [ ] AC-019-07: dùng dấu hiệu trong `note` để test nhận ra lựa chọn bỏ qua dị ứng (hay anh muốn thêm trường vào schema bằng spec riêng?).
-- [ ] 3.3: kế hoạch 7 phần như bảng.
+- [x] 3.1: đầu bếp nhà hàng ca trưa–tối, học cao đẳng nghề.
+- [x] AC-019-07: dùng dấu hiệu trong `note` để test nhận ra lựa chọn bỏ qua dị ứng (hay anh muốn thêm trường vào schema bằng spec riêng?).
+- [x] 3.3: kế hoạch 7 phần như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

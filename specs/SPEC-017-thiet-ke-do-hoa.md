@@ -78,9 +78,9 @@ Như SPEC-009 mục 5; test trong `tests/spec-017/`.
 
 ## 6. Câu hỏi mở
 Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: designer ở studio (không phải freelance tại nhà), cả ngày một bản đồ.
-- [ ] R-2: ranh giới "lấy cảm hứng" không có đáp án đúng/sai.
-- [ ] 3.3: kế hoạch 7 phần như bảng.
+- [x] 3.1: designer ở studio (không phải freelance tại nhà), cả ngày một bản đồ.
+- [x] R-2: ranh giới "lấy cảm hứng" không có đáp án đúng/sai.
+- [x] 3.3: kế hoạch 7 phần như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |

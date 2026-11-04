@@ -80,9 +80,9 @@ Như SPEC-009 mục 5; test trong `tests/spec-018/`. Phần không có liều/l�
 
 ## 6. Câu hỏi mở
 Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng ở mục 3.
-- [ ] 3.1: giao dịch viên (không phải chuyên viên tín dụng), một bản đồ chi nhánh.
-- [ ] R-3: lựa chọn vì khách hàng ở phần 5 không bị trừ điểm.
-- [ ] 3.3: kế hoạch 7 phần như bảng.
+- [x] 3.1: giao dịch viên (không phải chuyên viên tín dụng), một bản đồ chi nhánh.
+- [x] R-3: lựa chọn vì khách hàng ở phần 5 không bị trừ điểm.
+- [x] 3.3: kế hoạch 7 phần như bảng.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
