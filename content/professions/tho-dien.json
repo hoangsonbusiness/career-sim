@@ -1,0 +1,568 @@
+{
+  "id": "tho-dien",
+  "name": "Thợ điện",
+  "aliases": ["Thợ điện công nghiệp", "Thợ điện dân dụng", "Kỹ thuật viên điện", "Electrician"],
+  "group": { "label": "Kỹ thuật & Sản xuất" },
+  "holland": ["R", "C", "I"],
+  "summary": "Đọc bản vẽ, đi dây, lắp đặt thiết bị điện, đo kiểm và sửa sự cố ở công trình, nhà máy hay lưới điện; luôn phải tuân thủ quy chuẩn an toàn điện vì một sơ suất nhỏ có thể gây tai nạn chết người.",
+  "sources": [
+    {
+      "id": "S1",
+      "type": "law",
+      "title": "QCVN 25:2025/BCT Quy chuẩn kỹ thuật quốc gia về an toàn điện (ban hành kèm Thông tư 41/2025/TT-BCT)",
+      "publisher": "Bộ Công Thương / LuatVietnam",
+      "url": "https://luatvietnam.vn/dien-luc/thong-tu-41-2025-tt-bct-quy-chuan-ky-thuat-quoc-gia-ve-an-toan-dien-cua-bo-cong-thuong-403895-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-06-22",
+      "effective_date": "2025-08-08",
+      "note": "Thay Thông tư 39/2020/TT-BCT (QCVN 01:2020/BCT). Đã đọc các mục 3, 4, 9.1, 16.2, 22.2, 24, 41.2, 42, 46, 70.2 của Quy chuẩn."
+    },
+    {
+      "id": "S2",
+      "type": "law",
+      "title": "Luật Điện lực số 61/2024/QH15 (Văn bản hợp nhất 07/VBHN-VPQH năm 2026)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/linh-vuc-khac/van-ban-hop-nhat-07-vbhn-vpqh-2026-ve-luat-dien-luc-426046-d5.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2024-11-30",
+      "effective_date": "2025-02-01",
+      "note": "Bản hợp nhất ngày 05/02/2026 (sửa bởi Luật Năng lượng nguyên tử 94/2025, Luật An ninh mạng 116/2025, Luật Xây dựng 135/2025); Điều 69 khoản 1 giống bản gốc. Đã đọc Điều 69."
+    },
+    {
+      "id": "S3",
+      "type": "law",
+      "title": "Luật An toàn, vệ sinh lao động số 84/2015/QH13 (Văn bản hợp nhất 14/VBHN-VPQH năm 2024)",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/lao-dong/van-ban-hop-nhat-14-vbhn-vpqh-2024-hop-nhat-luat-an-toan-ve-sinh-lao-dong-375139-d5.html",
+      "accessed": "2026-11-04",
+      "effective_date": "2016-07-01",
+      "note": "Đã đọc Điều 6 (dùng chung với gói SPEC-025). Chính phủ đã đưa Luật sửa đổi vào chương trình lập pháp 2026 (Nghị quyết 117/NQ-CP), chưa thông qua."
+    },
+    {
+      "id": "S4",
+      "type": "law",
+      "title": "Luật Giáo dục nghề nghiệp số 124/2025/QH15",
+      "publisher": "Quốc hội / LuatVietnam",
+      "url": "https://luatvietnam.vn/giao-duc/luat-giao-duc-nghe-nghiep-2025-so-124-2025-qh15-422919-d1.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-10",
+      "effective_date": "2026-01-01",
+      "note": "Điều 44: hiệu lực từ 01/01/2026, một số điều từ 01/7/2026; 10/12/2025 là ngày Quốc hội thông qua (đã đối chiếu khi làm SPEC-025)."
+    },
+    {
+      "id": "S5",
+      "type": "official_stat",
+      "title": "Thông báo tuyển sinh Cao đẳng Điện công nghiệp năm 2026 — Trường Cao đẳng Bách khoa Sài Gòn",
+      "publisher": "Trường Cao đẳng Bách khoa Sài Gòn",
+      "url": "https://caodangbachkhoasaigon.com/thong-bao-tuyen-sinh-cao-dang-dien-cong-nghiep-nam-2026/",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-01-14",
+      "note": "Hệ chính quy, học 2,5–3 năm, tuyển người tốt nghiệp THPT; môn học có An toàn điện, đọc bản vẽ, lắp đặt và bảo trì thiết bị điện. Bài có giọng quảng bá; chỉ dùng thông tin về khóa học."
+    },
+    {
+      "id": "S6",
+      "type": "market",
+      "title": "Tin tuyển dụng Thợ điện trên TopCV (cập nhật 04/11/2026)",
+      "publisher": "TopCV",
+      "url": "https://www.topcv.vn/tim-viec-lam-tho-dien",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-11-04",
+      "note": "Đọc 25 tin đầu: các tin không yêu cầu kinh nghiệm ghi 6–12, 8–15, 11–12, 10–20, 12–20 triệu đồng/tháng; tin yêu cầu 1–2 năm phần nhiều ghi 11–20 triệu; nhiều tin ghi thỏa thuận. Gồm cả thợ điện lạnh, cơ điện."
+    },
+    {
+      "id": "S7",
+      "type": "testimony",
+      "title": "Những người thợ giữ nguồn điện an toàn giữa thời tiết khắc nghiệt",
+      "publisher": "Báo VnExpress",
+      "url": "https://vnexpress.net/nhung-nguoi-tho-giu-nguon-dien-an-toan-giua-thoi-tiet-khac-nghiet-4996773.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2025-12-22",
+      "note": "Lời kể của anh Trần Thanh Sơn, anh Nguyễn Minh Đức (Điện lực Sóc Sơn), ông Nguyễn Thành Lộc (Điện lực Sơn Tây) — công nhân vận hành lưới điện ở Hà Nội. Bài viết về thợ điện lực, không phải thợ điện công trình."
+    },
+    {
+      "id": "S8",
+      "type": "testimony",
+      "title": "Nghề thợ điện - nghề hiểm nguy",
+      "publisher": "Báo PetroTimes",
+      "url": "https://petrotimes.vn/nghe-tho-dien-nghe-hiem-nguy-577837.html",
+      "accessed": "2026-11-04",
+      "issued_date": "2020-09-08",
+      "note": "Lời kể của anh Phạm Quốc Chín, anh Nguyễn Thế Hải, anh Lê Văn Tuấn, anh Đào Duy Tiệp (Công ty Điện lực Thường Tín, Hà Nội). Bài năm 2020, chỉ dùng phần mô tả trải nghiệm."
+    },
+    {
+      "id": "S9",
+      "type": "press",
+      "title": "Phạt tù chuyên viên kỹ thuật điện lực để xảy ra điện giật chết người",
+      "publisher": "Báo Tuổi Trẻ",
+      "url": "https://tuoitre.vn/phat-tu-chuyen-vien-ky-thuat-dien-luc-de-xay-ra-dien-giat-chet-nguoi-100260629111537741.htm",
+      "accessed": "2026-11-04",
+      "issued_date": "2026-06-29",
+      "note": "Vụ một thợ điện tử vong do chạm điện khi đang lắp thiết bị trên trụ điện ở Khánh Hòa (12/2025); tòa xác định có người không làm đúng thủ tục đóng cắt điện. Không nêu tên nạn nhân trong app."
+    }
+  ],
+  "requirements": {
+    "thcs": [
+      {
+        "kind": "advice",
+        "text": "Học tốt phần điện trong môn Vật lý và Công nghệ; đó là nền tảng để hiểu mạch điện sau này.",
+        "audience": ["thcs", "thpt"]
+      },
+      {
+        "kind": "advice",
+        "text": "Không tự sửa điện ở nhà khi chưa được đào tạo; hãy quan sát người có nghề làm và hỏi họ về an toàn.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "thpt": [
+      {
+        "kind": "advice",
+        "text": "Sau lớp 9 hay lớp 12 bạn đều có thể học nghề điện; hãy so sánh chương trình của vài trường trước khi chọn.",
+        "audience": ["thcs", "thpt"]
+      }
+    ],
+    "higher_ed": [
+      {
+        "kind": "fact",
+        "text": "Đường giáo dục nghề nghiệp có các trình độ sơ cấp, trung cấp, cao đẳng và chương trình giáo dục trung học nghề.",
+        "source_ids": ["S4"],
+        "confidence": "verified",
+        "note": "Luật Giáo dục nghề nghiệp 2025."
+      },
+      {
+        "kind": "fact",
+        "text": "Ví dụ năm 2026, một trường cao đẳng tuyển ngành Điện công nghiệp hệ chính quy cho người tốt nghiệp THPT, học 2,5–3 năm, có môn An toàn điện và đọc bản vẽ điện.",
+        "source_ids": ["S5"],
+        "confidence": "verified",
+        "note": "Thông báo tuyển sinh của một trường; các trường khác xem thông báo riêng."
+      }
+    ],
+    "on_the_job": [
+      {
+        "kind": "fact",
+        "text": "Người trực tiếp xây dựng, sửa chữa, vận hành hệ thống điện phải được huấn luyện, sát hạch và cấp thẻ an toàn điện.",
+        "source_ids": ["S2"],
+        "confidence": "verified",
+        "note": "Luật Điện lực Điều 69 khoản 1."
+      },
+      {
+        "kind": "fact",
+        "text": "Người làm việc có điện phải được đào tạo, huấn luyện phù hợp với thiết bị, quy trình và công nghệ được trang bị.",
+        "source_ids": ["S1"],
+        "confidence": "verified",
+        "note": "QCVN 25:2025/BCT mục 22.2."
+      },
+      {
+        "kind": "fact",
+        "text": "Người lao động được từ chối làm việc hoặc rời nơi làm việc mà vẫn được trả lương khi thấy rõ nguy cơ tai nạn đe dọa nghiêm trọng tính mạng, nhưng phải báo ngay cho người quản lý.",
+        "source_ids": ["S3"],
+        "confidence": "verified",
+        "note": "Luật An toàn, vệ sinh lao động Điều 6 khoản 1 điểm đ."
+      }
+    ]
+  },
+  "working_conditions": {
+    "schedule": [
+      {
+        "kind": "fact",
+        "text": "Thợ điện lực kể khi có sự cố là cả đội phải đi ngay, có ngày làm liên tục tới khuya; mùa mưa bão phải ứng trực ngày đêm.",
+        "source_ids": ["S7", "S8"],
+        "confidence": "verified",
+        "note": "Hai bài ở hai báo khác nhau, kể về thợ điện lực (lưới điện), có thể khác với thợ điện công trình."
+      }
+    ],
+    "income": [
+      {
+        "kind": "fact",
+        "text": "Tháng 11/2026, nhiều tin tuyển thợ điện trên TopCV không yêu cầu kinh nghiệm ghi lương khoảng 6–20 triệu đồng/tháng; tin yêu cầu 1–2 năm phần nhiều ghi 11–20 triệu.",
+        "source_ids": ["S6"],
+        "confidence": "single_source",
+        "note": "Đọc 25 tin đầu tại một thời điểm, gồm cả điện lạnh và cơ điện; nhiều tin ghi thỏa thuận."
+      }
+    ],
+    "environment": [
+      {
+        "kind": "fact",
+        "text": "Thợ điện làm ngoài trời cả lúc nắng gắt lẫn mưa ngập, có khi phải lội nước kiểm tra trạm, đo kiểm cách điện trước khi đóng điện lại.",
+        "source_ids": ["S7"],
+        "confidence": "single_source"
+      },
+      {
+        "kind": "fact",
+        "text": "Thợ điện kể phải mang vác thiết bị nặng, làm việc trên cao chỉ với dây an toàn, và nhiều lúc bỏ bữa vì mải xử lý sự cố.",
+        "source_ids": ["S8"],
+        "confidence": "single_source"
+      }
+    ]
+  },
+  "day_simulation": {
+    "persona": "Tài — thợ điện 2 năm kinh nghiệm của Công ty Cơ điện Hòa Bình (hư cấu), đang thi công hệ thống điện trong một tòa nhà văn phòng, cùng một đội trưởng và một giám sát kỹ thuật.",
+    "setting": "Một ngày ở công trình: các bước an toàn trước khi làm, chuyện an toàn và nguy hiểm quanh kho, soát phiếu công tác, một tầng mất điện, chiều thi công, lời giục bỏ bước cắt điện và một mạch đo kiểm chưa đạt.",
+    "time_is_illustrative": true,
+    "stats": [
+      { "id": "nang_luong", "label": "Năng lượng", "initial": 80 },
+      { "id": "an_toan", "label": "An toàn", "initial": 70 },
+      { "id": "chat_luong", "label": "Chất lượng", "initial": 65 }
+    ],
+    "segments": [
+      {
+        "id": "td1-truoc-khi-lam",
+        "time": "07:30",
+        "title": "Trước khi chạm vào mạch điện",
+        "narrative": "Hôm nay đội bạn sửa một nhánh điện ở tủ tầng 5. Đội trưởng nhắc làm đủ các bước an toàn theo phiếu công tác.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quy chuẩn an toàn điện quy định trình tự trước khi làm việc: cắt điện và ngăn có điện trở lại, kiểm tra xác định không còn điện, nối đất, đặt rào chắn và treo biển báo.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "QCVN 25:2025/BCT mục 4, 42, 45. Các bước trong game chỉ ở mức khái quát, không phải hướng dẫn thao tác (SPEC-027 R-2)."
+        },
+        "task": {
+          "type": "sequence",
+          "prompt": "Sắp xếp các bước an toàn trước khi làm việc",
+          "steps": [
+            "Nhận phiếu công tác, nghe đội trưởng phân công",
+            "Cắt điện, khóa để không ai đóng điện lại",
+            "Kiểm tra chắc chắn nơi làm việc không còn điện",
+            "Nối đất theo đúng phiếu công tác",
+            "Đặt rào chắn, treo biển báo rồi mới làm"
+          ],
+          "on_success": { "an_toan": 5 },
+          "on_fail": { "an_toan": -5 }
+        }
+      },
+      {
+        "id": "td2-kho-vat-tu",
+        "time": "08:30",
+        "title": "Chuyện quanh kho vật tư",
+        "narrative": "Ở kho vật tư, bạn để ý vài chuyện anh em làm sáng nay. Có chuyện an toàn, có chuyện nguy hiểm.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quy chuẩn an toàn điện cấm dùng dụng cụ, phương tiện bảo vệ quá hạn kiểm tra hoặc có dấu hiệu bất thường; cấm làm ngoài trời khi mưa nước chảy thành dòng; không được dỡ rào chắn, biển báo vùng làm việc an toàn; phải kiểm tra không còn điện và che phủ phần có điện xung quanh.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "QCVN 25:2025/BCT mục 9.1, 16.2.2, 24.1, 24.2, 41.2, 70.2. Mỗi thẻ 'Nguy hiểm' đều có mục quy chuẩn tương ứng (SPEC-027 R-1)."
+        },
+        "task": {
+          "type": "drag_sort",
+          "prompt": "Xếp các chuyện bạn thấy: an toàn hay nguy hiểm",
+          "buckets": ["An toàn", "Nguy hiểm"],
+          "items": [
+            { "text": "Kiểm tra lại không còn điện trước khi bắt tay làm", "bucket": "An toàn" },
+            { "text": "Che phủ các phần còn điện ở xung quanh chỗ làm", "bucket": "An toàn" },
+            { "text": "Dùng găng, ủng cách điện còn hạn kiểm tra", "bucket": "An toàn" },
+            { "text": "Dùng găng cách điện đã quá hạn kiểm tra", "bucket": "Nguy hiểm" },
+            { "text": "Dời biển báo vùng làm việc cho dễ đi lại", "bucket": "Nguy hiểm" },
+            { "text": "Làm ngoài trời khi mưa to, nước chảy thành dòng", "bucket": "Nguy hiểm" }
+          ],
+          "on_success": { "an_toan": 5 },
+          "on_fail": { "an_toan": -5 }
+        }
+      },
+      {
+        "id": "td3-phieu-cong-tac",
+        "time": "10:00",
+        "title": "Soát phiếu công tác",
+        "narrative": "Giám sát kỹ thuật đưa phiếu công tác cho việc chiều nay. Bạn đọc kỹ trước khi ký nhận.",
+        "basis": {
+          "kind": "fact",
+          "text": "Phiếu công tác phải có các thông tin chính như người cấp phiếu, người chỉ huy trực tiếp, nội dung và địa điểm làm việc, điều kiện tiến hành (cắt điện hay không) và biện pháp an toàn tại nơi làm việc.",
+          "source_ids": ["S1"],
+          "confidence": "verified",
+          "note": "QCVN 25:2025/BCT mục 46 (46.2, 46.6, 46.8, 46.9, 46.11, 46.13). Chỉ đánh lỗi hai mục quy chuẩn bắt buộc (SPEC-027 R-1)."
+        },
+        "task": {
+          "type": "spot_error",
+          "prompt": "Khoanh các dòng còn thiếu theo quy chuẩn",
+          "document": [
+            "PHIẾU CÔNG TÁC số 12 — Tòa nhà An Lạc (hư cấu)",
+            "Người cấp phiếu: anh Phúc. Chỉ huy trực tiếp: anh Bình",
+            "Nội dung: sửa nhánh điện chiếu sáng tầng 5",
+            "Điều kiện làm việc (cắt điện hay không): để trống",
+            "Biện pháp an toàn tại nơi làm việc: để trống",
+            "Danh sách người làm: anh Bình, bạn, thợ phụ Long"
+          ],
+          "errors": [
+            { "line": 3, "explain": "Phiếu công tác phải ghi rõ có cắt điện hay làm gần nơi có điện." },
+            { "line": 4, "explain": "Phiếu công tác phải ghi biện pháp an toàn được thực hiện tại nơi làm việc." }
+          ],
+          "on_success": { "an_toan": 4, "chat_luong": 2 },
+          "on_fail": { "an_toan": -4 }
+        }
+      },
+      {
+        "id": "td4-mat-dien",
+        "time": "11:00",
+        "title": "Một tầng mất điện",
+        "narrative": "Văn phòng tầng 3 báo mất điện cả tầng. Giám sát nhờ bạn đi xem trước khi đội tới.",
+        "basis": {
+          "kind": "fact",
+          "text": "Thợ điện lực kể việc khắc phục sự cố phải nhanh nhưng vẫn tuân thủ quy trình an toàn, đo kiểm và đánh giá an toàn trước khi đóng điện trở lại; quy chuẩn yêu cầu kiểm tra xác định không còn điện trước khi làm.",
+          "source_ids": ["S7", "S1"],
+          "confidence": "verified",
+          "note": "QCVN 25:2025/BCT mục 9.1."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn bắt đầu từ đâu?",
+          "options": [
+            {
+              "text": "Hỏi chuyện gì xảy ra, báo giám sát, cùng đội xem tủ điện tầng theo đúng quy trình",
+              "effect": { "an_toan": 4, "chat_luong": 3, "nang_luong": -2 },
+              "feedback": "Thu thập thông tin và làm theo quy trình giúp tìm đúng nguyên nhân mà không gặp nguy hiểm."
+            },
+            {
+              "text": "Đóng lại aptomat ngay cho có điện, rồi tính sau",
+              "effect": { "an_toan": -5 },
+              "feedback": "Chưa rõ vì sao mất điện mà đóng lại có thể gây chập cháy hay tai nạn."
+            },
+            {
+              "text": "Mở tủ điện tự sửa một mình cho nhanh",
+              "effect": { "an_toan": -4, "chat_luong": -1 },
+              "feedback": "Làm một mình khi chưa có phân công và biện pháp an toàn là tự đặt mình vào rủi ro."
+            }
+          ]
+        }
+      },
+      {
+        "id": "td5-chia-thoi-gian",
+        "time": "13:30",
+        "title": "Buổi chiều thi công",
+        "narrative": "Còn 3 giờ chiều. Sàn tầng 5 cần đi dây, lắp thiết bị, và mọi thứ phải được đo kiểm trước khi bàn giao.",
+        "basis": {
+          "kind": "fact",
+          "text": "Thợ điện kể nghề vất vả: mang vác thiết bị nặng, làm việc trên cao, nhiều hôm bỏ bữa vì mải việc.",
+          "source_ids": ["S8"],
+          "confidence": "single_source"
+        },
+        "task": {
+          "type": "time_budget",
+          "prompt": "Chia 3 giờ buổi chiều",
+          "budget_min": 180,
+          "activities": [
+            { "label": "Đi dây theo bản vẽ", "effect_per_30min": { "chat_luong": 2, "nang_luong": -2 } },
+            { "label": "Lắp thiết bị điện", "effect_per_30min": { "chat_luong": 2, "nang_luong": -2 } },
+            { "label": "Đo kiểm, ghi kết quả", "effect_per_30min": { "an_toan": 2, "chat_luong": 1, "nang_luong": -1 } },
+            { "label": "Nghỉ, uống nước", "effect_per_30min": { "nang_luong": 3 } }
+          ]
+        }
+      },
+      {
+        "id": "td6-bo-buoc",
+        "time": "15:30",
+        "title": "Lời giục bỏ bước cắt điện",
+        "narrative": "Chủ đầu tư hối thúc, đội trưởng kéo bạn ra một góc, muốn làm luôn cho kịp tiến độ.",
+        "basis": {
+          "kind": "fact",
+          "text": "Quy chuẩn yêu cầu cắt điện, kiểm tra không còn điện, nối đất, rào chắn trước khi làm; người lao động được từ chối làm khi thấy rõ nguy cơ tai nạn nghiêm trọng và phải báo ngay người quản lý.",
+          "source_ids": ["S1", "S3"],
+          "confidence": "verified",
+          "note": "QCVN 25:2025/BCT mục 4; Luật An toàn, vệ sinh lao động Điều 6 khoản 1 điểm đ."
+        },
+        "task": {
+          "type": "dialogue",
+          "prompt": "Trả lời đội trưởng",
+          "npc": "Anh Bình (đội trưởng)",
+          "turns": [
+            {
+              "npc_line": "Nhánh này nhỏ thôi, khỏi cắt điện, em làm luôn cho kịp nhé.",
+              "replies": [
+                {
+                  "text": "Anh ơi, chưa cắt điện và kiểm tra thì em không làm được, nguy hiểm lắm.",
+                  "effect": { "an_toan": 4 },
+                  "feedback": "Bạn có quyền từ chối khi thấy rõ nguy cơ tai nạn nghiêm trọng."
+                },
+                {
+                  "text": "Vâng, em cẩn thận là được.",
+                  "effect": { "an_toan": -6 },
+                  "feedback": "Bỏ bước cắt điện là nguyên nhân của nhiều vụ tai nạn chết người."
+                }
+              ]
+            },
+            {
+              "npc_line": "Cắt điện thì cả tầng phải báo, mất cả tiếng đấy.",
+              "replies": [
+                {
+                  "text": "Mình báo giám sát xin cắt theo đúng phiếu, em tranh thủ chuẩn bị vật tư trước ạ.",
+                  "effect": { "an_toan": 3, "chat_luong": 1, "nang_luong": -1 },
+                  "feedback": "Vừa giữ an toàn vừa tận dụng thời gian chờ là cách làm chuyên nghiệp."
+                },
+                {
+                  "text": "Thôi em đeo găng làm luôn vậy.",
+                  "effect": { "an_toan": -4 },
+                  "feedback": "Găng tay không thay được việc cắt điện và kiểm tra không còn điện."
+                }
+              ]
+            },
+            {
+              "npc_line": "Chậm tiến độ là chủ đầu tư phạt cả đội đấy.",
+              "replies": [
+                {
+                  "text": "Em hiểu, nhưng mất an toàn thì còn thiệt hơn. Em sẽ làm nhanh khi đã cắt điện.",
+                  "effect": { "an_toan": 3 },
+                  "feedback": "Giữ vững nguyên tắc an toàn bảo vệ cả bạn lẫn đồng đội."
+                },
+                {
+                  "text": "Thôi anh quyết sao em làm vậy.",
+                  "effect": { "an_toan": -3 },
+                  "feedback": "Tính mạng của bạn không nên phụ thuộc vào áp lực tiến độ."
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "id": "td7-do-kiem",
+        "time": "17:00",
+        "title": "Một mạch đo kiểm chưa đạt",
+        "narrative": "Gần hết giờ, bạn đo kiểm lại các mạch vừa lắp. Một mạch cho kết quả chưa đạt, mà mai đã bàn giao.",
+        "basis": {
+          "kind": "fact",
+          "text": "Thợ điện lực kể phải đo kiểm cách điện, đánh giá mức độ an toàn trước khi đóng điện trở lại; người lao động phải báo ngay cho người có trách nhiệm khi phát hiện nguy cơ mất an toàn.",
+          "source_ids": ["S7", "S3"],
+          "confidence": "verified",
+          "note": "Luật An toàn, vệ sinh lao động Điều 6 khoản 2 điểm c."
+        },
+        "task": {
+          "type": "choice",
+          "prompt": "Bạn làm gì với mạch chưa đạt?",
+          "options": [
+            {
+              "text": "Ghi rõ kết quả, báo giám sát, khoanh vùng và hẹn kiểm tra lại trước khi bàn giao",
+              "effect": { "an_toan": 4, "chat_luong": 4, "nang_luong": -2 },
+              "feedback": "Ghi trung thực và báo ngay giúp sửa kịp, tránh nguy hiểm cho người dùng."
+            },
+            {
+              "text": "Ghi là đạt, mai sửa sau cũng được",
+              "effect": { "an_toan": -5, "chat_luong": -4 },
+              "feedback": "Ghi sai kết quả đo kiểm có thể dẫn tới tai nạn cho người dùng sau này."
+            },
+            {
+              "text": "Để đấy, mai ai trực thì người đó lo",
+              "effect": { "an_toan": -3, "chat_luong": -2 },
+              "feedback": "Không báo lại khiến người sau không biết có rủi ro."
+            }
+          ]
+        }
+      }
+    ],
+    "reflection_questions": [
+      "Bạn có thích làm việc bằng tay, ở công trình hay ngoài trời không?",
+      "Bạn có đủ kiên nhẫn làm đủ từng bước an toàn dù bị giục không?",
+      "Bạn có ngại làm việc trên cao, trong thời tiết nắng nóng hay mưa bão không?",
+      "Bạn muốn học điện dân dụng, điện công nghiệp hay vào ngành điện lực?"
+    ]
+  },
+  "career_ladder": {
+    "nodes": [
+      {
+        "id": "hoc-nghe-dien",
+        "title": "Học viên trường nghề ngành điện",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Có thể học theo các trình độ của giáo dục nghề nghiệp; ví dụ cao đẳng Điện công nghiệp học 2,5–3 năm sau THPT.",
+            "source_ids": ["S4", "S5"],
+            "confidence": "verified"
+          }
+        ]
+      },
+      {
+        "id": "tho-phu-dien",
+        "title": "Thợ phụ điện",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Tháng 11/2026 có nhiều tin tuyển thợ điện, thợ phụ điện không yêu cầu kinh nghiệm.",
+            "source_ids": ["S6"],
+            "confidence": "single_source"
+          }
+        ]
+      },
+      {
+        "id": "tho-dien",
+        "title": "Thợ điện có thẻ an toàn điện",
+        "requirements": [
+          {
+            "kind": "fact",
+            "text": "Phải được huấn luyện, sát hạch và cấp thẻ an toàn điện khi trực tiếp làm việc với hệ thống điện.",
+            "source_ids": ["S2"],
+            "confidence": "verified",
+            "note": "Luật Điện lực Điều 69 khoản 1."
+          }
+        ]
+      },
+      {
+        "id": "doi-truong",
+        "title": "Đội trưởng / chỉ huy trực tiếp",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Cần nhiều năm kinh nghiệm, nắm chắc quy chuẩn an toàn và biết phân công, giám sát đồng đội."
+          }
+        ]
+      },
+      {
+        "id": "ky-thuat-vien-dien",
+        "title": "Kỹ thuật viên / giám sát kỹ thuật điện",
+        "requirements": [
+          {
+            "kind": "advice",
+            "text": "Học liên thông lên cao đẳng, đại học giúp bạn chuyển sang thiết kế, giám sát hoặc bảo trì hệ thống lớn."
+          }
+        ]
+      }
+    ],
+    "edges": [
+      { "from": "hoc-nghe-dien", "to": "tho-phu-dien", "type": "promotion" },
+      { "from": "tho-phu-dien", "to": "tho-dien", "type": "promotion" },
+      { "from": "tho-dien", "to": "doi-truong", "type": "management" },
+      { "from": "tho-dien", "to": "ky-thuat-vien-dien", "type": "lateral" }
+    ]
+  },
+  "downsides": [
+    {
+      "kind": "fact",
+      "text": "Rủi ro tai nạn điện có thể gây chết người: tháng 12/2025 một thợ điện tử vong khi đang lắp thiết bị trên trụ điện vì thủ tục đóng cắt điện không được làm đúng.",
+      "source_ids": ["S9"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Thợ điện lâu năm kể hầu như ai trong nghề cũng từng ít nhất một lần bị điện giật; làm trên cao dễ té ngã nếu giật mình.",
+      "source_ids": ["S8"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "fact",
+      "text": "Làm ngoài trời cả lúc nắng gắt lẫn mưa bão, có ca phải làm tới khuya hoặc ứng trực ngày đêm khi có sự cố.",
+      "source_ids": ["S7", "S8"],
+      "confidence": "verified",
+      "note": "Hai nguồn ở hai báo khác nhau khớp nhau."
+    },
+    {
+      "kind": "fact",
+      "text": "Thu nhập lúc mới vào nghề không cao: nhiều tin không yêu cầu kinh nghiệm chỉ ghi từ 6–12 hay 8–15 triệu đồng/tháng.",
+      "source_ids": ["S6"],
+      "confidence": "single_source"
+    }
+  ],
+  "future_outlook": [
+    {
+      "kind": "fact",
+      "text": "Chương trình cao đẳng điện công nghiệp hiện nay đã dạy cả điều khiển tự động, PLC bên cạnh lắp đặt điện truyền thống.",
+      "source_ids": ["S5"],
+      "confidence": "single_source"
+    },
+    {
+      "kind": "advice",
+      "text": "Học thêm về tự động hóa, điện mặt trời và đọc bản vẽ sẽ giúp bạn không bị giới hạn ở công việc đi dây."
+    }
+  ],
+  "meta": {
+    "status": "draft",
+    "researched_at": "2026-11-04",
+    "researched_by": "Claude Code — research qua trình duyệt (luatvietnam.vn, caodangbachkhoasaigon.com, TopCV, VnExpress, PetroTimes, Tuổi Trẻ)",
+    "scope_note": "Công ty, công trình đều hư cấu, không có tên thương hiệu thiết bị (SPEC-027 R-3); không có hướng dẫn đấu nối hay thông số (R-2). Hai lời kể đều về thợ điện lực (lưới điện), chưa tìm được lời kể có tên của thợ điện công trình. Chưa đọc quy định riêng về bậc an toàn và nội dung huấn luyện."
+  }
+}
