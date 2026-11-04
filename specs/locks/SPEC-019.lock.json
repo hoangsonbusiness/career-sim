@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-019",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-019\\dau-bep.test.mjs": "3b5c2248eb6e1fcb"
+  }
+}

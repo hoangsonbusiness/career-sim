@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-020",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-020\\kien-truc-su.test.mjs": "c1409e178071a0c8"
+  }
+}

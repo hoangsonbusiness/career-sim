@@ -2,7 +2,7 @@
 id: SPEC-018
 title: Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/giao-dich-vien-ngan-hang.json, content/worlds/giao-dich-vien-ngan-hang.json]
 owner: anh Son

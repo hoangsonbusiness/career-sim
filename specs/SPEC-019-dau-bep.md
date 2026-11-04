@@ -2,7 +2,7 @@
 id: SPEC-019
 title: Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/dau-bep.json, content/worlds/dau-bep.json]
 owner: anh Son

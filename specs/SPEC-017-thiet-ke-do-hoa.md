@@ -2,7 +2,7 @@
 id: SPEC-017
 title: Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio)
 version: 1
-status: approved
+status: implemented
 features: [F2, F3, F4, F5]
 owns: [content/professions/thiet-ke-do-hoa.json, content/worlds/thiet-ke-do-hoa.json]
 owner: anh Son

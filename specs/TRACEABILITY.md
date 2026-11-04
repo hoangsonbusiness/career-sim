@@ -19,11 +19,11 @@
 | [SPEC-013](SPEC-013-nhan-vien-marketing.md) Gói nghề Nhân viên Marketing (nội dung + bản đồ agency) | 1 | implemented | ✓ Son 2026-11-03 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-014](SPEC-014-story-mode.md) Chế độ "xem và nghe kể" — bỏ quiz khỏi game một ngày làm nghề | 3 | implemented | ✓ Son 2026-11-04 | [F3] | 11/11 |
 | [SPEC-015](SPEC-015-duoc-si.md) Gói nghề Dược sĩ nhà thuốc (nội dung + bản đồ nhà thuốc) | 3 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
-| [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
-| [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | approved | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-016](SPEC-016-luat-su.md) Gói nghề Luật sư (nội dung + bản đồ văn phòng luật) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-017](SPEC-017-thiet-ke-do-hoa.md) Gói nghề Nhà thiết kế đồ họa (nội dung + bản đồ studio) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-018](SPEC-018-giao-dich-vien-ngan-hang.md) Gói nghề Giao dịch viên ngân hàng (nội dung + bản đồ chi nhánh) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
+| [SPEC-019](SPEC-019-dau-bep.md) Gói nghề Đầu bếp nhà hàng (nội dung + bản đồ bếp) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 8/8 |
+| [SPEC-020](SPEC-020-kien-truc-su.md) Gói nghề Kiến trúc sư (nội dung + bản đồ văn phòng kiến trúc) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 

@@ -1,0 +1,8 @@
+{
+  "spec": "SPEC-016",
+  "locked_by": "complete 2026-11-04",
+  "locked_at": "2026-11-04",
+  "files": {
+    "tests\\spec-016\\luat-su.test.mjs": "a4a9c5cf077a8887"
+  }
+}
