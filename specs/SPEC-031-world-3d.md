@@ -1,7 +1,7 @@
 ---
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
-version: 2
+version: 3
 status: implemented
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
@@ -87,6 +87,7 @@ interface World3D {
     floor: { default: FloorMaterial; regions: { x: number; y: number; w: number; h: number; material: FloorMaterial }[] };
     wall: { material: "plaster" | "brick" | "hedge"; height: number };   // height (m), 0.5 ≤ height ≤ 4
     props: { model: string; x: number; y: number; rot: Rot; blocks: boolean }[];
+    scenery?: { model: string; x: number; y: number; rot: Rot }[];    // cảnh nền NGOÀI lưới (R-3b); thiếu = []
   }>;
 }
 ```
@@ -122,13 +123,14 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
 
 **File thế giới 3D (validate:world3d).** Mọi vi phạm PHẢI in lỗi kèm tên file và exit 1.
 - R-1. File PHẢI hợp lệ theo schema. `profession_id` PHẢI bằng stem tên file, và PHẢI có `content/worlds/<id>.json` cùng tên.
-- R-2. Khóa của `maps` PHẢI trùng **đúng tập** `maps[].id` của file 2D. Khóa của `npc_models` PHẢI trùng đúng tập `npcs[].id`. Mọi giá trị `model`, `player_model` và `npc_models[*]` PHẢI là khóa có trong `models`. *Lý do: bản 3D phủ kín bản 2D, không có bản đồ hay NPC nào bị bỏ sót.*
+- R-2. Khóa của `maps` PHẢI trùng **đúng tập** `maps[].id` của file 2D. Khóa của `npc_models` PHẢI trùng đúng tập `npcs[].id`. Mọi giá trị `model` (của `props` và `scenery`), `player_model` và `npc_models[*]` PHẢI là khóa có trong `models`. *Lý do: bản 3D phủ kín bản 2D, không có bản đồ hay NPC nào bị bỏ sót.*
 - R-3. Với mỗi map, đối chiếu với lưới 2D cùng id:
   - mỗi prop và mỗi region PHẢI nằm trọn trong `[0, width) × [0, height)`;
   - prop có `blocks: true` PHẢI đặt trên ô `solid = 1`;
   - prop có `blocks: false` KHÔNG ĐƯỢC đặt trên ô là `target` của một segment, cũng không trên ô đứng đầu tiên (`standSpots[0]`) của target đó.
 
   *Lý do: lưới 2D vẫn là nguồn chân lý về va chạm; đồ trang trí không được che chỗ làm việc.*
+- R-3b. Mỗi mục `scenery` PHẢI có `x`, `y` nguyên, nằm **ngoài** lưới (không thuộc `[0, width) × [0, height)`), và nằm trong vùng viền `[-12, width + 12) × [-12, height + 12)`. Cảnh nền KHÔNG ĐƯỢC chặn đường và không tham gia tìm đường; nó chỉ để vẽ. Toạ độ cảnh nền đổi sang mét bằng cùng công thức `tileToWorld` (R-4b); ví dụ ô `(-1, 0)` có tâm ở `x = -0.5`. *Lý do: người chơi không bao giờ tới được ngoài lưới; vì vậy cây cối bao quanh trường không ảnh hưởng tới luật đi lại; viền 12 ô đủ phủ tới vùng sương xa (R-12) mà vẫn giới hạn số model phải vẽ.*
 - R-4. Với mỗi file GLB trong `models`:
   - file PHẢI tồn tại trong `public/`, và `license` PHẢI trỏ tới một file có thật;
   - mỗi file ≤ 2097152 byte (2 MB);
@@ -190,7 +192,7 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
   | plaster | `#efe6d6` |
   | hedge | `#5f8f3e` |
 
-  Mỗi ô `solid = 1` không có prop `blocks: true` được dựng thành một khối tường 1 × `wall.height` × 1 m. Model GLB giữ nguyên vật liệu gốc. *Lý do: màu cố định giúp hai bản implement cho ra cùng một khung hình, và tông màu đồng bộ với HUD.*
+  Mục `scenery` được vẽ giống prop (cùng cách đặt và xoay). Nền đất ngoài lưới PHẢI phủ tới hết vùng viền của R-3b, dùng vật liệu `floor.default` của map. Mỗi ô `solid = 1` không có prop `blocks: true` được dựng thành một khối tường 1 × `wall.height` × 1 m. Model GLB giữ nguyên vật liệu gốc. *Lý do: màu cố định giúp hai bản implement cho ra cùng một khung hình, và tông màu đồng bộ với HUD.*
 - R-13. Mức `"high"`:
   - bóng đổ từ đèn mặt trời, shadow map 2048 px, lọc mềm (PCF soft);
   - hậu kỳ bloom với `strength = 0.25`;
@@ -300,6 +302,7 @@ Spec này không thêm trạng thái mới. Vòng mode vẫn theo SPEC-014. Tr�
 | AC-031-17 | `public/game3d/` | Liệt kê | Mỗi `models[].file` và `license` của mọi file 3D đều tồn tại; mỗi thư mục bộ asset có `License.txt` |
 | AC-031-18 | `src/game3d/scene3d.ts` | Typecheck | `mountGame3D` trả về `Promise<GameHandle>` với `GameHandle` import từ `src/game/scene` (không khai báo lại) |
 | AC-031-19 | Engine + vòng kể chuyện chạy không giao diện, dùng `rotateDir` với `q` lần lượt 0..3 để đi tới từng target (đổi hướng phím trước khi `step`) | Chạy hết ngày giáo viên | Mỗi `q` đều tới được mọi target và kết thúc ở `done` |
+| AC-031-20 | Thế giới 3D mẫu (AC-031-08) thêm `scenery` | `validate:world3d` lần lượt với: một mục ở `(-1, 0)` và một ở `(width + 11, height + 11)`; một mục ở `(0, 0)` (trong lưới); một mục ở `(-13, 0)`; một mục có model không có trong `models` | Ca đầu exit 0; ba ca sau mỗi ca exit 1, thông báo có tên file |
 
 ## 5. Ghi chú kiểm thử
 - Dùng `node:test`. `layout.ts` và `validate-world3d.mjs` test thuần, không mock.
@@ -322,3 +325,4 @@ Em đề xuất sẵn theo các quy tắc ở mục 3. Anh đồng ý thì đán
 |---|---|---|---|
 | 1 | 2026-11-05 | Bản nháp đầu | Anh Son: giao diện 2D quá đơn giản, muốn theo mẫu duyentu.io.vn; ADR-006 |
 | 2 | 2026-11-05 | Lệnh `validate:world3d` chạy ngay sau `check:pack` thay vì ngay sau `validate:world` (mục 3.2, AC-031-12) | Xung đột với test đã khóa AC-008-09 phát hiện khi chạy `npm run check` |
+| 3 | 2026-11-05 | Thêm `scenery` (cảnh nền ngoài lưới, R-3b), nền đất phủ vùng viền (R-12), AC-031-20 | Anh Son: muốn trồng cây bao quanh trường như trang mẫu; R-3 v2 chỉ cho đặt đồ trong lưới |
