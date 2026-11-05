@@ -674,6 +674,584 @@
           "rot": 0,
           "blocks": false
         }
+      ],
+      "scenery": [
+        {
+          "model": "tree-detailed",
+          "x": -4,
+          "y": -6,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": -3,
+          "y": -6,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": -2,
+          "y": -6,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 2,
+          "y": -6,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 4,
+          "y": -6,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": 10,
+          "y": -6,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 14,
+          "y": -6,
+          "rot": 0
+        },
+        {
+          "model": "tree-oak",
+          "x": 15,
+          "y": -6,
+          "rot": 90
+        },
+        {
+          "model": "tree-oak",
+          "x": 35,
+          "y": -6,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": -6,
+          "y": -5,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": -1,
+          "y": -5,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": 17,
+          "y": -5,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 22,
+          "y": -5,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": 35,
+          "y": -5,
+          "rot": 180
+        },
+        {
+          "model": "tree-detailed",
+          "x": -2,
+          "y": -4,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": 3,
+          "y": -4,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": 4,
+          "y": -4,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 10,
+          "y": -4,
+          "rot": 180
+        },
+        {
+          "model": "tree-oak",
+          "x": 25,
+          "y": -4,
+          "rot": 90
+        },
+        {
+          "model": "tree-round",
+          "x": 28,
+          "y": -4,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 30,
+          "y": -4,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": -5,
+          "y": -3,
+          "rot": 0
+        },
+        {
+          "model": "tree-oak",
+          "x": -2,
+          "y": -3,
+          "rot": 90
+        },
+        {
+          "model": "tree-round",
+          "x": -1,
+          "y": -3,
+          "rot": 0
+        },
+        {
+          "model": "tree-oak",
+          "x": 6,
+          "y": -3,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 8,
+          "y": -3,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 14,
+          "y": -3,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 16,
+          "y": -3,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 26,
+          "y": -3,
+          "rot": 90
+        },
+        {
+          "model": "tree-round",
+          "x": 27,
+          "y": -3,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 28,
+          "y": -3,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": -1,
+          "y": -2,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 9,
+          "y": -2,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": 10,
+          "y": -2,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 12,
+          "y": -2,
+          "rot": 180
+        },
+        {
+          "model": "tree-oak",
+          "x": 23,
+          "y": -2,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 29,
+          "y": -2,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": -5,
+          "y": -1,
+          "rot": 180
+        },
+        {
+          "model": "tree-detailed",
+          "x": -6,
+          "y": 0,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": 35,
+          "y": 0,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": -6,
+          "y": 1,
+          "rot": 90
+        },
+        {
+          "model": "tree-detailed",
+          "x": -3,
+          "y": 1,
+          "rot": 180
+        },
+        {
+          "model": "tree-oak",
+          "x": -5,
+          "y": 2,
+          "rot": 90
+        },
+        {
+          "model": "tree-oak",
+          "x": 35,
+          "y": 2,
+          "rot": 90
+        },
+        {
+          "model": "tree-round",
+          "x": -4,
+          "y": 4,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": -2,
+          "y": 4,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": 31,
+          "y": 4,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": 31,
+          "y": 5,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 32,
+          "y": 5,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 34,
+          "y": 5,
+          "rot": 90
+        },
+        {
+          "model": "tree-round",
+          "x": -2,
+          "y": 6,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 33,
+          "y": 7,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": -6,
+          "y": 8,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": -5,
+          "y": 8,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 33,
+          "y": 8,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": -4,
+          "y": 9,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": -2,
+          "y": 10,
+          "rot": 0
+        },
+        {
+          "model": "tree-oak",
+          "x": 31,
+          "y": 10,
+          "rot": 90
+        },
+        {
+          "model": "tree-oak",
+          "x": -3,
+          "y": 12,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": -4,
+          "y": 13,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": -6,
+          "y": 14,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": -2,
+          "y": 15,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": 31,
+          "y": 15,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": -5,
+          "y": 16,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 33,
+          "y": 16,
+          "rot": 90
+        },
+        {
+          "model": "tree-detailed",
+          "x": -3,
+          "y": 17,
+          "rot": 180
+        },
+        {
+          "model": "tree-detailed",
+          "x": 9,
+          "y": 17,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": 15,
+          "y": 17,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 16,
+          "y": 17,
+          "rot": 270
+        },
+        {
+          "model": "tree-thin",
+          "x": 20,
+          "y": 17,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": 25,
+          "y": 17,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": 31,
+          "y": 17,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": -2,
+          "y": 18,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 2,
+          "y": 18,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 22,
+          "y": 18,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 32,
+          "y": 18,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": -3,
+          "y": 19,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 10,
+          "y": 19,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 24,
+          "y": 19,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 30,
+          "y": 19,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": -6,
+          "y": 20,
+          "rot": 180
+        },
+        {
+          "model": "tree-round",
+          "x": 4,
+          "y": 20,
+          "rot": 0
+        },
+        {
+          "model": "tree-thin",
+          "x": 7,
+          "y": 20,
+          "rot": 270
+        },
+        {
+          "model": "tree-thin",
+          "x": 11,
+          "y": 20,
+          "rot": 270
+        },
+        {
+          "model": "tree-detailed",
+          "x": 14,
+          "y": 20,
+          "rot": 180
+        },
+        {
+          "model": "tree-thin",
+          "x": 23,
+          "y": 20,
+          "rot": 270
+        },
+        {
+          "model": "tree-oak",
+          "x": 25,
+          "y": 20,
+          "rot": 90
+        },
+        {
+          "model": "tree-thin",
+          "x": 0,
+          "y": 21,
+          "rot": 270
+        },
+        {
+          "model": "tree-round",
+          "x": 23,
+          "y": 21,
+          "rot": 0
+        },
+        {
+          "model": "tree-round",
+          "x": 31,
+          "y": 21,
+          "rot": 0
+        },
+        {
+          "model": "tree-detailed",
+          "x": 33,
+          "y": 21,
+          "rot": 180
+        },
+        {
+          "model": "bush",
+          "x": 30,
+          "y": 12,
+          "rot": 0
+        },
+        {
+          "model": "flower-red",
+          "x": 30,
+          "y": 15,
+          "rot": 0
+        },
+        {
+          "model": "bush-small",
+          "x": -1,
+          "y": 15,
+          "rot": 0
+        },
+        {
+          "model": "flower-yellow",
+          "x": 12,
+          "y": 16,
+          "rot": 0
+        },
+        {
+          "model": "bush",
+          "x": 25,
+          "y": 16,
+          "rot": 0
+        }
       ]
     },
     "nha": {
