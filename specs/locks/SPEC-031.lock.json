@@ -3,6 +3,7 @@
   "locked_by": "complete 2026-11-05",
   "locked_at": "2026-11-05",
   "files": {
+    "tests\\spec-031\\bug-005.test.mjs": "3ef89982f0e3978a",
     "tests\\spec-031\\build.test.mjs": "99456316e7ca78c4",
     "tests\\spec-031\\content.test.mjs": "08c240ba922122d9",
     "tests\\spec-031\\layout.test.mjs": "516ae7b5079a02b0",
