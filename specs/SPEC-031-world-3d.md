@@ -1,7 +1,7 @@
 ---
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
-version: 3
+version: 4
 status: implemented
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
@@ -108,6 +108,7 @@ export function stepPose(from: Pos, to: Pos, t: number): { x: number; z: number;
 export function chooseQuality(fps: number[], current: "high" | "low"): "high" | "low";  // R-14
 export function chooseRenderer(has3d: boolean, caps: { webgl2: boolean }): "three" | "phaser";  // R-16
 export function isTap(dxPx: number, dyPx: number, ms: number): boolean;            // R-9
+export function keyAction(code: string): Dir | "interact" | null;                  // R-6b
 ```
 
 **Cảnh 3D** `src/game3d/scene3d.ts`:
@@ -147,6 +148,12 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
 
   Trong lúc đi, nhân vật chạy hoạt cảnh `Walk`; khi đứng yên thì `Idle`, chuyển giữa hai hoạt cảnh mất 150 ms.
 - R-6. `rotateDir(d, q)` = `DIRS[(DIRS.indexOf(d) + q) % 4]` với `DIRS = ["up","right","down","left"]`. Phím di chuyển (SPEC-006 R-14) PHẢI đi qua `rotateDir(phím, q)` trước khi gọi `step`. *Lý do: "lên" luôn nghĩa là "đi xa khỏi camera", dù camera đang quay hướng nào.*
+- R-6b. Bàn phím của game PHẢI đọc **vị trí phím vật lý** `KeyboardEvent.code`, KHÔNG ĐƯỢC đọc `KeyboardEvent.key`. Áp dụng cho cả cảnh 3D (`scene3d.ts`) và cảnh Phaser (`src/game/scene.ts`). `keyAction(code)`:
+  - `KeyW`, `ArrowUp` → `"up"`; `KeyD`, `ArrowRight` → `"right"`; `KeyS`, `ArrowDown` → `"down"`; `KeyA`, `ArrowLeft` → `"left"`;
+  - `KeyE`, `Space`, `Enter`, `NumpadEnter` → `"interact"`;
+  - mọi `code` khác, kể cả chuỗi rỗng, → `null` (sự kiện bị bỏ qua, không đổi trạng thái phím).
+
+  Nhả phím cũng tra theo `code`. Sự kiện có `repeat = true` bị bỏ qua (như BUG-004). Khi cửa sổ mất focus hoặc trang bị ẩn (`visibilitychange` với `document.hidden = true`), mọi phím đang giữ PHẢI được nhả. *Lý do (BUG-005): bộ gõ tiếng Việt kiểu Telex (Unikey, EVKey) dùng W/A/S/D để bỏ dấu, nên nó đổi `key`, chèn sự kiện giả có `code` rỗng và làm mất sự kiện nhả phím. `code` thì luôn là vị trí phím thật, không phụ thuộc bộ gõ hay bàn phím.*
 
 **Camera và điều khiển**
 - R-7. Camera là phối cảnh, `fov = 45°`, bám theo nhân vật, cách 9 m, góc chúc xuống 35°, góc ngang `q × 90°`.
@@ -303,6 +310,7 @@ Spec này không thêm trạng thái mới. Vòng mode vẫn theo SPEC-014. Tr�
 | AC-031-18 | `src/game3d/scene3d.ts` | Typecheck | `mountGame3D` trả về `Promise<GameHandle>` với `GameHandle` import từ `src/game/scene` (không khai báo lại) |
 | AC-031-19 | Engine + vòng kể chuyện chạy không giao diện, dùng `rotateDir` với `q` lần lượt 0..3 để đi tới từng target (đổi hướng phím trước khi `step`) | Chạy hết ngày giáo viên | Mỗi `q` đều tới được mọi target và kết thúc ở `done` |
 | AC-031-20 | Thế giới 3D mẫu (AC-031-08) thêm `scenery` | `validate:world3d` lần lượt với: một mục ở `(-1, 0)` và một ở `(width + 11, height + 11)`; một mục ở `(0, 0)` (trong lưới); một mục ở `(-13, 0)`; một mục có model không có trong `models` | Ca đầu exit 0; ba ca sau mỗi ca exit 1, thông báo có tên file |
+| AC-031-21 | — | `keyAction` với `"KeyW"`, `"KeyA"`, `"ArrowDown"`, `"KeyD"`, `"Space"`, `"NumpadEnter"`, `"KeyE"`, `""`, `"KeyQ"`, `"Backspace"` | Lần lượt `"up"`, `"left"`, `"down"`, `"right"`, `"interact"`, `"interact"`, `"interact"`, `null`, `null`, `null`; mã nguồn `scene3d.ts` và `src/game/scene.ts` không còn đọc `e.key` trong bộ xử lý phím di chuyển/tương tác |
 
 ## 5. Ghi chú kiểm thử
 - Dùng `node:test`. `layout.ts` và `validate-world3d.mjs` test thuần, không mock.
@@ -326,3 +334,4 @@ Em đề xuất sẵn theo các quy tắc ở mục 3. Anh đồng ý thì đán
 | 1 | 2026-11-05 | Bản nháp đầu | Anh Son: giao diện 2D quá đơn giản, muốn theo mẫu duyentu.io.vn; ADR-006 |
 | 2 | 2026-11-05 | Lệnh `validate:world3d` chạy ngay sau `check:pack` thay vì ngay sau `validate:world` (mục 3.2, AC-031-12) | Xung đột với test đã khóa AC-008-09 phát hiện khi chạy `npm run check` |
 | 3 | 2026-11-05 | Thêm `scenery` (cảnh nền ngoài lưới, R-3b), nền đất phủ vùng viền (R-12), AC-031-20 | Anh Son: muốn trồng cây bao quanh trường như trang mẫu; R-3 v2 chỉ cho đặt đồ trong lưới |
+| 4 | 2026-11-05 | R-6b: phím đọc theo `KeyboardEvent.code`, nhả phím khi mất focus/ẩn trang; hàm `keyAction`; AC-031-21 | BUG-005: Unikey bật làm WASD trễ, đi quá, sai hướng |
