@@ -2,7 +2,7 @@
 id: BUG-005
 spec: SPEC-031
 ac: AC-031-21
-status: open
+status: fixed
 reported: 2026-11-05
 ---
 
@@ -35,3 +35,8 @@ Sau khi đổi sang `e.code` (SPEC-031 v4), anh Son vẫn gặp lỗi: đi lên 
 - Có lần Unikey cho `keydown` thật đi qua bình thường.
 
 Bản sửa 1 bỏ qua sự kiện `code = ""`, nên lần bấm bị nuốt mất hẳn. Bản sửa 2 (SPEC-031 v5 R-6c, R-6d): tracker bắt lần bấm qua `keyup` (thành một bước), và hiện gợi ý tắt bộ gõ. Vector lấy từ log thật: `tests/spec-031/vectors-keys.json`.
+
+## Kiểm chứng bản sửa 2 (2026-11-05)
+Gửi phím thật bằng `SendInput` qua Unikey (Telex) vào trang game chạy trong Edge, đọc vị trí nhân vật qua cổng debug. Xuất phát (6,3) trong bản đồ nhà:
+- W → (6,2); W sát tường → đứng yên; A → (5,2); A → (4,2); D → (5,2); S → (5,3); A ×3 từ (5,2) → (4,2) rồi dừng vì (3,2) là bàn.
+- Giữ W 700 ms chỉ đi 1 ô (Unikey nuốt cả các keydown lặp lại). Đây là giới hạn đã nêu ở R-6d; game hiện dòng gợi ý tắt bộ gõ.

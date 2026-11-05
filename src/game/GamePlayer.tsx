@@ -76,6 +76,8 @@ export function GamePlayer({ professionId, name, sim, world, world3d = null, cre
   const [loadError, setLoadError] = useState(false);
   const [renderer, setRenderer] = useState<"three" | "phaser" | null>(null);
   const [coarse, setCoarse] = useState(false);
+  // SPEC-031 R-6d: phát hiện bộ gõ tiếng Việt (keydown giả code rỗng, keyCode 229/231); giữ tới hết phiên.
+  const [imeOn, setImeOn] = useState(false);
   useEffect(() => { try { setCoarse(window.matchMedia("(pointer: coarse)").matches); } catch { /* giữ mặc định */ } }, []);
 
   const dispatch = useCallback((a: StoryAction) => {
@@ -145,6 +147,13 @@ export function GamePlayer({ professionId, name, sim, world, world3d = null, cre
     if (s.mode === "walk") await enterSegment(s);
   }, [dispatch, enterSegment]);
 
+  useEffect(() => {
+    if (mode !== "walk" || imeOn) return;
+    const onKey = (e: KeyboardEvent) => { if (e.code === "" && (e.keyCode === 229 || e.keyCode === 231)) setImeOn(true); };
+    window.addEventListener("keydown", onKey, true);
+    return () => window.removeEventListener("keydown", onKey, true);
+  }, [mode, imeOn]);
+
   // R-7: phím Space/Enter/E cũng là "Tiếp tục" khi đang xem cảnh.
   useEffect(() => {
     if (mode !== "scene") return;
@@ -192,7 +201,7 @@ export function GamePlayer({ professionId, name, sim, world, world3d = null, cre
       {/* SPEC-031 R-22: thanh gợi ý phím */}
       {mode === "walk" && renderer && (
         <div className="pointer-events-none absolute bottom-2 left-2">
-          <div className={`${frame} flex flex-wrap items-center gap-x-4 gap-y-1 px-3 py-1.5 text-xs`}>
+          <div className={`${frame} flex max-w-[min(36rem,90vw)] flex-wrap items-center gap-x-4 gap-y-1 px-3 py-1.5 text-xs`}>
             {coarse ? (
               <>
                 <span><span className="hud-key">Chạm</span>Đi tới</span>
@@ -205,6 +214,7 @@ export function GamePlayer({ professionId, name, sim, world, world3d = null, cre
                 {renderer === "three" && <span><span className="hud-key">Kéo chuột</span>Xoay camera</span>}
               </>
             )}
+            {imeOn && <span className="w-full text-[var(--hud-accent)]">⚠ Bộ gõ tiếng Việt đang bật: tắt bộ gõ (thường là Ctrl + Shift) hoặc dùng phím mũi tên để giữ phím đi liên tục.</span>}
           </div>
         </div>
       )}

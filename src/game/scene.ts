@@ -4,7 +4,7 @@ import * as Phaser from "phaser";
 import { findPath, standSpots, step, type Dir, type Pos } from "./grid";
 import { canInteract } from "./quest";
 import { MoveInput } from "./input";
-import { keyAction } from "../game3d/layout"; // SPEC-031 R-6b (BUG-005)
+import { createKeyTracker, keyAction, type KeyEffect } from "../game3d/layout"; // SPEC-031 R-6b, R-6c (BUG-005)
 import type { WorldData, WorldMap } from "./types";
 
 export interface GameCallbacks {
@@ -52,6 +52,7 @@ class WorldScene extends Phaser.Scene {
   route: Pos[] = [];
   autoInteract: { face: Dir } | null = null;
   keys = new MoveInput();
+  keyTracker = createKeyTracker(); // SPEC-031 R-6c
   baseZoom = 2;
   focused = false;
 
@@ -79,23 +80,21 @@ class WorldScene extends Phaser.Scene {
     // Mũi tên ở mép khung nhìn, chỉ về điểm việc khi điểm việc nằm ngoài màn hình.
     this.edgeArrow = this.add.text(0, 0, "➤", { fontSize: "12px", color: "#ffd23f", stroke: "#3a2a00", strokeThickness: 3 }).setOrigin(0.5).setDepth(1000).setVisible(false);
 
+    // R-14 + SPEC-031 R-6b, R-6c: phím theo vị trí vật lý; lần bấm bị bộ gõ nuốt keydown được bắt ở keyup.
     this.input.keyboard?.on("keydown", (e: KeyboardEvent) => {
+      if (e.repeat) { if (this.walkEnabled && this.keyTracker.down(e.code, e.keyCode)) e.preventDefault(); return; } // BUG-004
+      const fx = this.keyTracker.down(e.code, e.keyCode);
       // Ngoài mode walk để nguyên phím cho bảng task (radio, nút) dùng.
-      if (!this.walkEnabled) return;
-      const act = keyAction(e.code); // R-14 + SPEC-031 R-6b: theo vị trí phím, không theo ký tự
-      if (!act) return;
-      if (act === "interact") { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
-      const dir = act;
+      if (!this.walkEnabled || !fx) return;
       e.preventDefault();
-      if (e.repeat) return; // BUG-004: không dựa vào lặp phím của hệ điều hành
-      this.route = [];
-      this.autoInteract = null;
-      this.keys.press(dir);
-      if (!this.moving) this.continueWalking();
+      this.applyKey(fx);
     });
     this.input.keyboard?.on("keyup", (e: KeyboardEvent) => {
-      const a = keyAction(e.code);
-      if (a && a !== "interact") this.keys.release(a);
+      if (keyAction(e.code) === null) return; // R-6b: chỉ phím game, tra theo vị trí phím
+      const fx = this.keyTracker.up(e.code);
+      if (!fx) return;
+      if (fx.kind === "release") { this.keys.release(fx.dir); return; }
+      if (this.walkEnabled) this.applyKey(fx);
     });
     // Mất focus thì coi như nhả mọi phím, tránh nhân vật tự đi mãi.
     this.game.events.on(Phaser.Core.Events.BLUR, () => this.keys.clear());
@@ -119,6 +118,17 @@ class WorldScene extends Phaser.Scene {
     const x = Phaser.Math.Clamp(t.x, view.x + m, view.right - m);
     const y = Phaser.Math.Clamp(t.y, view.y + m, view.bottom - m);
     this.edgeArrow.setPosition(x, y).setRotation(Math.atan2(t.y - this.player.y, t.x - this.player.x)).setVisible(true);
+  }
+
+  /** SPEC-031 R-6c */
+  applyKey(fx: NonNullable<KeyEffect>) {
+    if (fx.kind === "interact") { this.tryInteract(); return; }
+    if (fx.kind === "release") { this.keys.release(fx.dir); return; }
+    this.route = [];
+    this.autoInteract = null;
+    this.keys.press(fx.dir);
+    if (fx.kind === "tap") this.keys.release(fx.dir);
+    if (!this.moving) this.continueWalking();
   }
 
   /** Ghép nhiều lớp ô thành một nhân vật. */

@@ -11,7 +11,7 @@ import { canInteract } from "../game/quest";
 import { MoveInput } from "../game/input";
 import type { GameCallbacks, GameHandle } from "../game/scene";
 import type { WorldData, WorldMap } from "../game/types";
-import { chooseQuality, isTap, keyAction, pickTile, rotateDir, snapQuarter, stepPose, tileToWorld, type Quarter } from "./layout";
+import { chooseQuality, createKeyTracker, isTap, keyAction, pickTile, rotateDir, snapQuarter, stepPose, tileToWorld, type KeyEffect, type Quarter } from "./layout";
 import type { FloorMaterial, Lighting, Map3D, WallMaterial, World3D } from "./types";
 
 const STEP_MS = 150; // R-5 (= SPEC-006 R-8)
@@ -111,6 +111,7 @@ class World3DScene {
   route: Pos[] = [];
   autoInteract: { face: Dir } | null = null;
   keys = new MoveInput();
+  keyTracker = createKeyTracker(); // R-6c (BUG-005)
 
   // Camera: góc ngang hiện tại (độ), góc dừng q, khoảng cách và điểm nhìn có tween.
   yaw = 0;
@@ -344,19 +345,19 @@ class World3DScene {
 
   bindInput() {
     const onKeyDown = (e: KeyboardEvent) => {
-      if (!this.walkEnabled) return; // ngoài mode walk để nguyên phím cho bảng task
-      const act = keyAction(e.code); // R-6b (BUG-005): theo vị trí phím, không theo ký tự
-      if (!act) return;
-      if (act === "interact") { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
-      const dir = act;
+      if (e.repeat) { if (this.walkEnabled && this.keyTracker.down(e.code, e.keyCode)) e.preventDefault(); return; } // BUG-004
+      const fx = this.keyTracker.down(e.code, e.keyCode); // R-6c: luôn cập nhật tracker
+      if (!this.walkEnabled || !fx) return; // ngoài mode walk để nguyên phím cho bảng task
       e.preventDefault();
-      if (e.repeat) return; // BUG-004
-      this.route = [];
-      this.autoInteract = null;
-      this.keys.press(dir);
-      if (!this.moveFrom) this.continueWalking();
+      this.applyKey(fx);
     };
-    const onKeyUp = (e: KeyboardEvent) => { const a = keyAction(e.code); if (a && a !== "interact") this.keys.release(a); };
+    const onKeyUp = (e: KeyboardEvent) => {
+      if (keyAction(e.code) === null) return; // R-6b: chỉ phím game, tra theo vị trí phím
+      const fx = this.keyTracker.up(e.code);
+      if (!fx) return;
+      if (fx.kind === "release") { this.keys.release(fx.dir); return; }
+      if (this.walkEnabled) this.applyKey(fx);
+    };
     const onBlur = () => this.keys.clear();
     const onVisibility = () => { if (document.hidden) this.keys.clear(); }; // R-6b
 
@@ -401,6 +402,17 @@ class World3DScene {
       document.removeEventListener("visibilitychange", onVisibility);
       ro.disconnect();
     });
+  }
+
+  /** R-6c: press = giữ phím; tap = một bước (phím bị bộ gõ nuốt keydown); interact = thử tương tác. */
+  applyKey(fx: NonNullable<KeyEffect>) {
+    if (fx.kind === "interact") { this.tryInteract(); return; }
+    if (fx.kind === "release") { this.keys.release(fx.dir); return; }
+    this.route = [];
+    this.autoInteract = null;
+    this.keys.press(fx.dir);
+    if (fx.kind === "tap") this.keys.release(fx.dir); // hướng đệm của MoveInput → đúng một bước
+    if (!this.moveFrom) this.continueWalking();
   }
 
   /** R-7: thả chuột → về góc q gần nhất trong 250 ms. */

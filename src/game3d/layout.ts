@@ -84,3 +84,33 @@ const KEY_CODES: Record<string, Dir | "interact"> = {
 export function keyAction(code: string): Dir | "interact" | null {
   return Object.prototype.hasOwnProperty.call(KEY_CODES, code) ? KEY_CODES[code] : null;
 }
+
+export type KeyEffect = { kind: "press" | "release" | "tap"; dir: Dir } | { kind: "interact" } | null;
+export interface KeyTracker { down(code: string, keyCode: number): KeyEffect; up(code: string): KeyEffect; imeSeen(): boolean }
+
+/**
+ * R-6c (BUG-005): Unikey/EVKey hay nuốt keydown thật của W/A/S/D và chèn sự kiện giả code = "", keyCode = 231;
+ * keyup thật vẫn tới đúng code. Phím nhả mà chưa từng thấy keydown → coi là một lần bấm (tap).
+ */
+export function createKeyTracker(): KeyTracker {
+  const down = new Set<string>();
+  let ime = false;
+  return {
+    down(code, keyCode) {
+      const a = keyAction(code);
+      if (a === null) {
+        if (code === "" && (keyCode === 229 || keyCode === 231)) ime = true;
+        return null;
+      }
+      down.add(code);
+      return a === "interact" ? { kind: "interact" } : { kind: "press", dir: a };
+    },
+    up(code) {
+      const a = keyAction(code);
+      if (a === null) return null;
+      if (down.delete(code)) return a === "interact" ? null : { kind: "release", dir: a };
+      return a === "interact" ? { kind: "interact" } : { kind: "tap", dir: a };
+    },
+    imeSeen: () => ime,
+  };
+}
