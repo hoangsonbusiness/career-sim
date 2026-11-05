@@ -153,7 +153,7 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
   - `KeyE`, `Space`, `Enter`, `NumpadEnter` → `"interact"`;
   - mọi `code` khác, kể cả chuỗi rỗng, → `null` (sự kiện bị bỏ qua, không đổi trạng thái phím).
 
-  Nhả phím cũng tra theo `code`. Sự kiện có `repeat = true` bị bỏ qua (như BUG-004). Khi cửa sổ mất focus hoặc trang bị ẩn (`visibilitychange` với `document.hidden = true`), mọi phím đang giữ PHẢI được nhả. *Lý do (BUG-005): bộ gõ tiếng Việt kiểu Telex (Unikey, EVKey) dùng W/A/S/D để bỏ dấu, nên nó đổi `key`, chèn sự kiện giả có `code` rỗng và làm mất sự kiện nhả phím. `code` thì luôn là vị trí phím thật, không phụ thuộc bộ gõ hay bàn phím.*
+  Nhả phím cũng tra theo `code`. Sự kiện có `repeat = true` bị bỏ qua (như BUG-004). Khi cửa sổ mất focus hoặc trang bị ẩn (`visibilitychange` với `document.hidden = true`), mọi phím đang giữ PHẢI được nhả. *Lý do (BUG-005): bộ gõ tiếng Việt kiểu Telex (Unikey, EVKey) dùng W/A/S/D để bỏ dấu; bộ gõ đổi `key`, chèn sự kiện giả có `code` rỗng và làm mất sự kiện nhả phím. `code` thì luôn là vị trí phím thật, không phụ thuộc bộ gõ hay bàn phím.*
 
 **Camera và điều khiển**
 - R-7. Camera là phối cảnh, `fov = 45°`, bám theo nhân vật, cách 9 m, góc chúc xuống 35°, góc ngang `q × 90°`.
