@@ -68,6 +68,20 @@
               "height": { "type": "number", "minimum": 0.5, "maximum": 4 }
             }
           },
+          "scenery": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["model", "x", "y", "rot"],
+              "properties": {
+                "model": { "type": "string" },
+                "x": { "type": "integer" },
+                "y": { "type": "integer" },
+                "rot": { "enum": [0, 90, 180, 270] }
+              }
+            }
+          },
           "props": {
             "type": "array",
             "items": {

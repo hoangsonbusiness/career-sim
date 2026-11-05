@@ -10,6 +10,7 @@ export interface Map3D {
   floor: { default: FloorMaterial; regions: { x: number; y: number; w: number; h: number; material: FloorMaterial }[] };
   wall: { material: WallMaterial; height: number };
   props: { model: string; x: number; y: number; rot: Rot; blocks: boolean }[];
+  scenery?: { model: string; x: number; y: number; rot: Rot }[];
 }
 
 export interface World3D {

@@ -56,6 +56,7 @@ function check(file) {
     ["player_model", w.player_model],
     ...Object.entries(w.npc_models).map(([k, v]) => [`npc_models.${k}`, v]),
     ...Object.entries(w.maps).flatMap(([id, m]) => m.props.map((p, i) => [`maps.${id}.props[${i}]`, p.model])),
+    ...Object.entries(w.maps).flatMap(([id, m]) => (m.scenery ?? []).map((p, i) => [`maps.${id}.scenery[${i}]`, p.model])),
   ];
   for (const [where, key] of refs) if (!(key in w.models)) errs.push(`R-2 ${where}: không có model "${key}"`);
   if (errs.length) return errs;
@@ -79,6 +80,13 @@ function check(file) {
       const solid = m2.solid[p.y * m2.width + p.x] === 1;
       if (p.blocks && !solid) errs.push(`${at}: blocks=true nhưng ô đi được`);
       if (!p.blocks && reserved.some((r) => r.x === p.x && r.y === p.y)) errs.push(`${at}: đồ trang trí che target hoặc chỗ đứng`);
+    });
+    // R-3b: cảnh nền nằm ngoài lưới, trong viền 12 ô.
+    const MARGIN = 12;
+    (m.scenery ?? []).forEach((p, i) => {
+      const at = `R-3b map ${m2.id} scenery[${i}] (${p.x},${p.y})`;
+      if (inside(p.x, p.y)) errs.push(`${at} nằm trong lưới`);
+      else if (p.x < -MARGIN || p.y < -MARGIN || p.x >= m2.width + MARGIN || p.y >= m2.height + MARGIN) errs.push(`${at} quá viền ${MARGIN} ô`);
     });
   }
 

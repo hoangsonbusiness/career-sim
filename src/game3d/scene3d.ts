@@ -273,12 +273,14 @@ class World3DScene {
       this.wallMesh = mesh;
       this.mapGroup.add(mesh);
     }
-    // Nền mở rộng ra ngoài lưới bằng vật liệu sàn mặc định, để mép bản đồ không lơ lửng giữa trời.
+    // R-12 (v3): nền đất ngoài lưới bằng vật liệu sàn mặc định, phủ hết viền 12 ô của R-3b (thừa ra 40 ô mỗi phía).
     const ground = new THREE.InstancedMesh(new THREE.BoxGeometry(m.width + 80, 0.1, m.height + 80), new THREE.MeshToonMaterial({ color: COLORS[m3.floor.default] }), 1);
     ground.setMatrixAt(0, mat4.makeTranslation(m.width / 2, -0.06, m.height / 2));
     ground.receiveShadow = true;
     this.mapGroup.add(ground);
     for (const p of m3.props) this.mapGroup.add(this.instance(p.model, p, p.rot).root);
+    // R-3b: cảnh nền ngoài lưới, chỉ để vẽ (không vào lưới va chạm).
+    for (const p of m3.scenery ?? []) this.mapGroup.add(this.instance(p.model, p, p.rot).root);
 
     for (const n of this.world.npcs.filter((n) => n.map === mapId)) {
       const a = this.instance(this.world3d.npc_models[n.id], n, 0); // NPC nhìn về "down"
