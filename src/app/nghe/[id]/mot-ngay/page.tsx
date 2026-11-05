@@ -5,6 +5,7 @@ import { buildProfileView, type CitationView } from "../../../../profile/view";
 import { DayPlayer, type PlayerSimulation } from "../../../../sim/DayPlayer";
 import { GamePlayer } from "../../../../game/GamePlayer";
 import { loadWorld } from "../../../../game/worldData";
+import { assetCredits, loadWorld3D } from "../../../../game3d/worldData3d";
 
 export const dynamicParams = false;
 
@@ -27,12 +28,15 @@ export default async function DayPage({ params }: { params: Promise<{ id: string
   const sim = p.day_simulation as unknown as PlayerSimulation;
   // SPEC-005 R-10b: nghề có bản đồ dùng game 2D (SPEC-006), chưa có thì dùng giao diện biểu mẫu.
   const world = loadWorld(p.id);
+  // SPEC-031: nghề có file thế giới 3D thì chơi bằng Three.js (R-16).
+  const world3d = world ? loadWorld3D(p.id) : null;
+  const credits3d = world3d ? assetCredits(world3d) : [];
 
   return (
     <main className="space-y-6">
       <h1 className="text-2xl font-bold">Một ngày làm {p.name}</h1>
       {world
-        ? <GamePlayer professionId={p.id} name={p.name} sim={sim} world={world} citations={citations} />
+        ? <GamePlayer professionId={p.id} name={p.name} sim={sim} world={world} world3d={world3d} credits3d={credits3d} citations={citations} />
         : <DayPlayer professionId={p.id} sim={sim} citations={citations} />}
     </main>
   );

@@ -1,1 +1,59 @@
 @import "tailwindcss";
+
+/* SPEC-031 R-20: theme HUD của game (tông gỗ, viền vàng nhạt, font Lora tự host). */
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --hud-bg: rgba(59, 42, 31, 0.92);
+  --hud-border: #c9a45c;
+  --hud-text: #f5ead6;
+  --hud-muted: #cbb89a;
+  --hud-accent: #f2c14e;
+  --hud-radius: 10px;
+  --hud-font: "Lora", "Palatino Linotype", Georgia, serif;
+}
+
+/* R-21: khung HUD dùng chung. */
+.hud {
+  background: var(--hud-bg);
+  border: 1px solid var(--hud-border);
+  border-radius: var(--hud-radius);
+  color: var(--hud-text);
+  font-family: var(--hud-font);
+  box-shadow: 0 6px 18px rgba(20, 12, 6, 0.35);
+}
+.hud-muted { color: var(--hud-muted); }
+.hud-btn {
+  border: 1px solid var(--hud-border);
+  border-radius: calc(var(--hud-radius) - 4px);
+  background: var(--hud-accent);
+  color: #3b2a1f;
+  font-family: var(--hud-font);
+  font-weight: 700;
+  padding: 0.375rem 1rem;
+}
+.hud-btn:active { transform: translateY(1px); }
+.hud-btn:disabled { opacity: 0.4; }
+.hud-key {
+  display: inline-block;
+  border: 1px solid var(--hud-border);
+  border-radius: 4px;
+  padding: 0 0.35rem;
+  margin-right: 0.35rem;
+  color: var(--hud-accent);
+  font-size: 0.7rem;
+  line-height: 1.3rem;
+}
