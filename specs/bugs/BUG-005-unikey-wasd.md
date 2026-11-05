@@ -2,7 +2,7 @@
 id: BUG-005
 spec: SPEC-031
 ac: AC-031-21
-status: fixed
+status: open
 reported: 2026-11-05
 ---
 
@@ -25,3 +25,13 @@ Cả `scene3d.ts` và `src/game/scene.ts` tra phím bằng `KeyboardEvent.key`. 
 
 ## Cách sửa
 SPEC-031 v4 R-6b: hàm thuần `keyAction(code)` trong `src/game3d/layout.ts`; hai cảnh dùng `e.code` cho cả nhấn và nhả; nhả mọi phím khi `blur` hoặc trang bị ẩn.
+
+## Lần sửa 1 chưa đủ (2026-11-05)
+Sau khi đổi sang `e.code` (SPEC-031 v4), anh Son vẫn gặp lỗi: đi lên sát tường bằng W rồi bấm A thì không đi.
+
+Đo bằng phím thật qua Unikey trên máy anh Son: gửi phím bằng `SendInput` (scancode) tới một trang ghi sự kiện ở localhost.
+- Phần lớn lần bấm, Unikey **nuốt `keydown` thật** và chèn sự kiện giả `code = ""`, `keyCode = 231`, `key` là `a`, `â`, `ư` hoặc `·`, có khi kèm 2 lần `Backspace`.
+- `keyup` thật vẫn tới với đúng `code` (`KeyA`, `KeyW`…).
+- Có lần Unikey cho `keydown` thật đi qua bình thường.
+
+Bản sửa 1 bỏ qua sự kiện `code = ""`, nên lần bấm bị nuốt mất hẳn. Bản sửa 2 (SPEC-031 v5 R-6c, R-6d): tracker bắt lần bấm qua `keyup` (thành một bước), và hiện gợi ý tắt bộ gõ. Vector lấy từ log thật: `tests/spec-031/vectors-keys.json`.

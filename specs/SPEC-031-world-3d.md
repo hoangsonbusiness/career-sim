@@ -1,7 +1,7 @@
 ---
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
-version: 4
+version: 5
 status: implemented
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
@@ -109,6 +109,9 @@ export function chooseQuality(fps: number[], current: "high" | "low"): "high" | 
 export function chooseRenderer(has3d: boolean, caps: { webgl2: boolean }): "three" | "phaser";  // R-16
 export function isTap(dxPx: number, dyPx: number, ms: number): boolean;            // R-9
 export function keyAction(code: string): Dir | "interact" | null;                  // R-6b
+export type KeyEffect = { kind: "press" | "release" | "tap"; dir: Dir } | { kind: "interact" } | null;
+export interface KeyTracker { down(code: string, keyCode: number): KeyEffect; up(code: string): KeyEffect; imeSeen(): boolean }
+export function createKeyTracker(): KeyTracker;                                    // R-6c
 ```
 
 **Cảnh 3D** `src/game3d/scene3d.ts`:
@@ -153,7 +156,12 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
   - `KeyE`, `Space`, `Enter`, `NumpadEnter` → `"interact"`;
   - mọi `code` khác, kể cả chuỗi rỗng, → `null` (sự kiện bị bỏ qua, không đổi trạng thái phím).
 
-  Nhả phím cũng tra theo `code`. Sự kiện có `repeat = true` bị bỏ qua (như BUG-004). Khi cửa sổ mất focus hoặc trang bị ẩn (`visibilitychange` với `document.hidden = true`), mọi phím đang giữ PHẢI được nhả. *Lý do (BUG-005): bộ gõ tiếng Việt kiểu Telex (Unikey, EVKey) dùng W/A/S/D để bỏ dấu; bộ gõ đổi `key`, chèn sự kiện giả có `code` rỗng và làm mất sự kiện nhả phím. `code` thì luôn là vị trí phím thật, không phụ thuộc bộ gõ hay bàn phím.*
+  Nhả phím cũng tra theo `code`. Sự kiện có `repeat = true` bị bỏ qua (như BUG-004). Khi cửa sổ mất focus hoặc trang bị ẩn (`visibilitychange` với `document.hidden = true`), mọi phím đang giữ PHẢI được nhả. *Lý do (BUG-005): bộ gõ tiếng Việt kiểu Telex (Unikey, EVKey) dùng W/A/S/D để bỏ dấu; bộ gõ đổi `key`, chèn sự kiện giả có `code` rỗng và làm mất sự kiện nhả phím. `code` thì luôn là vị trí phím thật, không phụ thuộc bộ gõ hay bàn phím.*- R-6c. Hai cảnh PHẢI xử lý phím qua `createKeyTracker()`. Tracker giữ tập `code` đã nhận `keydown` mà chưa nhận `keyup`:
+  - `down(code, keyCode)`: nếu `keyAction(code)` là một hướng `d` → thêm `code` vào tập, trả `{ kind: "press", dir: d }`; là `"interact"` → thêm `code` vào tập, trả `{ kind: "interact" }`. Nếu `code === ""` và `keyCode` là 229 hoặc 231 → đánh dấu `imeSeen` = true, trả `null`. Còn lại trả `null`.
+  - `up(code)`: nếu `keyAction(code)` là `null` → `null`. Nếu `code` có trong tập → xóa khỏi tập; hướng `d` → `{ kind: "release", dir: d }`, `"interact"` → `null`. Nếu `code` **không** có trong tập (keydown đã bị bộ gõ nuốt) → hướng `d` → `{ kind: "tap", dir: d }`, `"interact"` → `{ kind: "interact" }`.
+
+  Cảnh xử lý hiệu ứng: `press` → `MoveInput.press`; `release` → `MoveInput.release`; `tap` → `press` rồi `release` ngay (đi đúng một ô qua hướng đệm của BUG-004); `interact` → thử tương tác. *Lý do (BUG-005, đo bằng phím thật qua Unikey 2026-11-05): Unikey thường nuốt `keydown` thật của W/A/S/D và chèn sự kiện giả `code = ""`, `keyCode = 231`; `keyup` thật vẫn tới đúng `code`. Bắt lần bấm qua `keyup` thì mỗi lần bấm vẫn đi đúng một ô.*
+- R-6d. Khi `imeSeen` lần đầu thành true trong mode `walk`, thanh gợi ý phím (R-22) PHẢI thêm một dòng: `Bộ gõ tiếng Việt đang bật: tắt bộ gõ (thường là Ctrl + Shift) hoặc dùng phím mũi tên để giữ phím đi liên tục.` Dòng này giữ nguyên tới hết phiên chơi. GamePlayer tự phát hiện bằng bộ nghe `keydown` của riêng nó theo đúng điều kiện ở R-6c; KHÔNG ĐƯỢC đổi `GameHandle` hay `GameCallbacks`. *Lý do: với bộ gõ bật, giữ phím có thể không đi liên tục được vì `keydown` lặp lại cũng bị nuốt; người chơi cần biết cách khắc phục.*
 
 **Camera và điều khiển**
 - R-7. Camera là phối cảnh, `fov = 45°`, bám theo nhân vật, cách 9 m, góc chúc xuống 35°, góc ngang `q × 90°`.
@@ -311,6 +319,8 @@ Spec này không thêm trạng thái mới. Vòng mode vẫn theo SPEC-014. Tr�
 | AC-031-19 | Engine + vòng kể chuyện chạy không giao diện, dùng `rotateDir` với `q` lần lượt 0..3 để đi tới từng target (đổi hướng phím trước khi `step`) | Chạy hết ngày giáo viên | Mỗi `q` đều tới được mọi target và kết thúc ở `done` |
 | AC-031-20 | Thế giới 3D mẫu (AC-031-08) thêm `scenery` | `validate:world3d` lần lượt với: một mục ở `(-1, 0)` và một ở `(width + 11, height + 11)`; một mục ở `(0, 0)` (trong lưới); một mục ở `(-13, 0)`; một mục có model không có trong `models` | Ca đầu exit 0; ba ca sau mỗi ca exit 1, thông báo có tên file |
 | AC-031-21 | — | `keyAction` với `"KeyW"`, `"KeyA"`, `"ArrowDown"`, `"KeyD"`, `"Space"`, `"NumpadEnter"`, `"KeyE"`, `""`, `"KeyQ"`, `"Backspace"` | Lần lượt `"up"`, `"left"`, `"down"`, `"right"`, `"interact"`, `"interact"`, `"interact"`, `null`, `null`, `null`; mã nguồn `scene3d.ts` và `src/game/scene.ts` không còn đọc `e.key` trong bộ xử lý phím di chuyển/tương tác |
+| AC-031-22 | `tests/spec-031/vectors-keys.json`: các chuỗi sự kiện ghi thật từ Unikey (keydown bị nuốt, Backspace và ký tự giả `code = ""`, keyup thật) và chuỗi bàn phím thường | Đưa lần lượt từng sự kiện vào một tracker mới | Dãy hiệu ứng khớp đúng vector; với chuỗi Unikey bấm `A` một lần → đúng một `{ kind: "tap", dir: "left" }` và `imeSeen() = true`; chuỗi thường `KeyA` xuống rồi lên → `press` rồi `release` |
+| AC-031-23 | `src/game/GamePlayer.tsx`, `scene3d.ts`, `src/game/scene.ts` | Đọc mã nguồn | Hai cảnh gọi `createKeyTracker()`; GamePlayer có đúng câu gợi ý của R-6d |
 
 ## 5. Ghi chú kiểm thử
 - Dùng `node:test`. `layout.ts` và `validate-world3d.mjs` test thuần, không mock.
@@ -334,4 +344,4 @@ Em đề xuất sẵn theo các quy tắc ở mục 3. Anh đồng ý thì đán
 | 1 | 2026-11-05 | Bản nháp đầu | Anh Son: giao diện 2D quá đơn giản, muốn theo mẫu duyentu.io.vn; ADR-006 |
 | 2 | 2026-11-05 | Lệnh `validate:world3d` chạy ngay sau `check:pack` thay vì ngay sau `validate:world` (mục 3.2, AC-031-12) | Xung đột với test đã khóa AC-008-09 phát hiện khi chạy `npm run check` |
 | 3 | 2026-11-05 | Thêm `scenery` (cảnh nền ngoài lưới, R-3b), nền đất phủ vùng viền (R-12), AC-031-20 | Anh Son: muốn trồng cây bao quanh trường như trang mẫu; R-3 v2 chỉ cho đặt đồ trong lưới |
-| 4 | 2026-11-05 | R-6b: phím đọc theo `KeyboardEvent.code`, nhả phím khi mất focus/ẩn trang; hàm `keyAction`; AC-031-21 | BUG-005: Unikey bật làm WASD trễ, đi quá, sai hướng |
+| 4 | 2026-11-05 | R-6b: phím đọc theo `KeyboardEvent.code`, nhả phím khi mất focus/ẩn trang; hàm `keyAction`; AC-031-21 | BUG-005: Unikey bật làm WASD trễ, đi quá, sai hướng || 5 | 2026-11-05 | R-6c: tracker bắt lần bấm bị bộ gõ nuốt qua keyup; R-6d: gợi ý tắt bộ gõ; AC-031-22, AC-031-23 | BUG-005 chưa hết: đo phím thật qua Unikey thấy keydown bị nuốt, chỉ keyup còn `code` |
