@@ -4,10 +4,12 @@
   "locked_at": "2026-11-05",
   "files": {
     "tests\\spec-031\\bug-005.test.mjs": "3ef89982f0e3978a",
+    "tests\\spec-031\\bug-005b.test.mjs": "e06c0dcbaa66a387",
     "tests\\spec-031\\build.test.mjs": "99456316e7ca78c4",
     "tests\\spec-031\\content.test.mjs": "08c240ba922122d9",
     "tests\\spec-031\\layout.test.mjs": "516ae7b5079a02b0",
     "tests\\spec-031\\scenery.test.mjs": "9e54d35f2cbdcda3",
+    "tests\\spec-031\\vectors-keys.json": "f9d229eb52330b44",
     "tests\\spec-031\\vectors.json": "9e1bc64ca98f43c5",
     "tests\\spec-031\\world3d.test.mjs": "e6120acf1eaff93a"
   }
