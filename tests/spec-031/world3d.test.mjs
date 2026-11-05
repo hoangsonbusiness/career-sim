@@ -120,9 +120,9 @@ test("AC-031-10 thiếu hoạt cảnh Walk hoặc GLB quá 2 MB → exit 1", () 
   assert.equal(r.code, 0, r.out);
 });
 
-test("AC-031-12 check chạy validate:world3d ngay sau validate:world; three ghim chính xác ≥ 0.187", () => {
+test("AC-031-12 check chạy validate:world3d ngay sau check:pack; three ghim chính xác ≥ 0.187", () => {
   const pkg = JSON.parse(readFileSync(join(root, "package.json"), "utf8"));
-  assert.match(pkg.scripts.check, /npm run validate:world && npm run validate:world3d && /);
+  assert.match(pkg.scripts.check, /npm run check:pack && npm run validate:world3d && /);
   assert.equal(pkg.scripts["validate:world3d"], "node scripts/validate-world3d.mjs");
   const v = pkg.dependencies.three;
   assert.match(v, /^\d+\.\d+\.\d+$/);

@@ -1,13 +1,13 @@
 ---
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
-version: 1
+version: 2
 status: approved
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
 owner: anh Son
 created: 2026-11-05
-approved_hash: 8949c5142b5158d3
+approved_hash: d01abb55f16e03f9
 approved_by: Son
 approved_at: 2026-11-05
 ---
@@ -116,7 +116,7 @@ export function mountGame3D(host: HTMLElement, world: WorldData, world3d: World3
 ```
 `GameHandle` và `GameCallbacks` là đúng kiểu đang xuất ra từ `src/game/scene.ts` (SPEC-006, SPEC-007). KHÔNG ĐƯỢC thêm, bớt hay đổi chữ ký phương thức.
 
-**Lệnh mới**: `npm run validate:world3d` (`scripts/validate-world3d.mjs`), chạy trong `npm run check` ngay sau `validate:world`.
+**Lệnh mới**: `npm run validate:world3d` (`scripts/validate-world3d.mjs`), chạy trong `npm run check` ngay sau `check:pack`. *Lý do: SPEC-008 AC-008-09 (test đã khóa) giữ `check:pack` ngay sau `validate:world`.*
 
 ### 3.3 Quy tắc hành vi
 
@@ -292,7 +292,7 @@ Spec này không thêm trạng thái mới. Vòng mode vẫn theo SPEC-014. Tr�
 | AC-031-09 | Lần lượt từng ca: thiếu map; thừa khóa NPC; model không có trong `models`; prop ngoài lưới; prop `blocks: true` trên ô đi được; prop `blocks: false` đè lên target; file GLB không tồn tại; thiếu `License.txt` | `validate:world3d` | Mỗi ca exit 1, thông báo có tên file |
 | AC-031-10 | GLB fixture của người chơi chỉ có hoạt cảnh `Idle`; GLB fixture 2097153 byte | `validate:world3d` | Mỗi ca exit 1 (R-4) |
 | AC-031-11 | `content/worlds3d/giao-vien-thpt.json` | `validate:world3d` | Exit 0; có đủ mọi map và NPC của file 2D |
-| AC-031-12 | `package.json` | Đọc script `check`; đọc `dependencies.three` | Có `validate:world3d` ngay sau `validate:world`; `three` ghim phiên bản chính xác (không có `^` hay `~`), major/minor ≥ 0.187 |
+| AC-031-12 | `package.json` | Đọc script `check`; đọc `dependencies.three` | Có `validate:world3d` ngay sau `check:pack`; `three` ghim phiên bản chính xác (không có `^` hay `~`), major/minor ≥ 0.187 |
 | AC-031-13 | Bản build, trang `/nghe/giao-vien-thpt/mot-ngay/` | Đọc HTML và các `<script src>` | Không file nào chứa `__THREE__` |
 | AC-031-14 | Bản build | Cộng gzip mức 9 các chunk JS chứa `__THREE__` và chunk của `src/game3d/` | ≤ 716800 byte |
 | AC-031-15 | Bản build | Tìm chunk chứa `__THREE__` và chunk chứa `Phaser` | Không chunk nào chứa cả hai chuỗi (R-17: hai đường tải tách biệt) |
@@ -321,3 +321,4 @@ Em đề xuất sẵn theo các quy tắc ở mục 3. Anh đồng ý thì đán
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
 |---|---|---|---|
 | 1 | 2026-11-05 | Bản nháp đầu | Anh Son: giao diện 2D quá đơn giản, muốn theo mẫu duyentu.io.vn; ADR-006 |
+| 2 | 2026-11-05 | Lệnh `validate:world3d` chạy ngay sau `check:pack` thay vì ngay sau `validate:world` (mục 3.2, AC-031-12) | Xung đột với test đã khóa AC-008-09 phát hiện khi chạy `npm run check` |
