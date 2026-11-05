@@ -34,6 +34,7 @@
 | [SPEC-028](SPEC-028-nhan-vien-logistics.md) Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-029](SPEC-029-chuyen-vien-phan-tich-du-lieu.md) Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-030](SPEC-030-chien-si-chua-chay.md) Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
+| [SPEC-031](SPEC-031-world-3d.md) Thế giới 3D stylized và HUD mới cho game một ngày làm nghề | 1 | approved | ✓ Son 2026-11-05 | [F3] | 19/19 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -457,3 +458,27 @@
 | AC-030-05 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-05 có ≥ 2 nguồn law có effective_date và market có is" |
 | AC-030-06 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-06 phần 5 chia đúng 180 phút bằng time_budget" |
 | AC-030-07 | tests\spec-030\chien-si-chua-chay.test.mjs — "AC-030-07 bản build có trang hồ sơ và trang màn chơi" |
+
+## SPEC-031 — Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
+
+| AC | Test |
+|---|---|
+| AC-031-01 | tests\spec-031\layout.test.mjs — "AC-031-01 toàn bộ conformance vectors đạt" |
+| AC-031-02 | tests\spec-031\layout.test.mjs — "AC-031-02 worldToTile ở biên lưới" |
+| AC-031-03 | tests\spec-031\layout.test.mjs — "AC-031-03 camera q=2 đảo phím up/right" |
+| AC-031-04 | tests\spec-031\layout.test.mjs — "AC-031-04 pickTile trả null khi tia không chạm đất hoặc chạm" |
+| AC-031-05 | tests\spec-031\layout.test.mjs — "AC-031-05 chooseQuality theo trung vị 120 khung cuối" |
+| AC-031-06 | tests\spec-031\layout.test.mjs — "AC-031-06 chooseRenderer chỉ chọn three khi có file 3D và We" |
+| AC-031-07 | tests\spec-031\layout.test.mjs — "AC-031-07 isTap phân biệt chạm và kéo" |
+| AC-031-08 | tests\spec-031\world3d.test.mjs — "AC-031-08 thế giới 3D mẫu hợp lệ → exit 0" |
+| AC-031-09 | tests\spec-031\world3d.test.mjs — "AC-031-09 các lỗi dữ liệu 3D → exit 1, có tên file" |
+| AC-031-10 | tests\spec-031\world3d.test.mjs — "AC-031-10 thiếu hoạt cảnh Walk hoặc GLB quá 2 MB → exit 1" |
+| AC-031-11 | tests\spec-031\content.test.mjs — "AC-031-11 thế giới 3D giáo viên THPT hợp lệ, phủ đủ map và N" |
+| AC-031-12 | tests\spec-031\world3d.test.mjs — "AC-031-12 check chạy validate:world3d ngay sau validate:worl" |
+| AC-031-13 | tests\spec-031\build.test.mjs — "AC-031-13 HTML trang một ngày và script ban đầu không chứa T" |
+| AC-031-14 | tests\spec-031\build.test.mjs — "AC-031-14 JS tải lười của đường 3D ≤ 700 KB gzip" |
+| AC-031-15 | tests\spec-031\build.test.mjs — "AC-031-15 không chunk nào chứa cả Three.js và Phaser" |
+| AC-031-16 | tests\spec-031\content.test.mjs — "AC-031-16 theme HUD: 7 biến, font Lora tự host" |
+| AC-031-17 | tests\spec-031\content.test.mjs — "AC-031-17 mọi model và license tồn tại; mỗi bộ asset có Lice" |
+| AC-031-18 | tests\spec-031\content.test.mjs — "AC-031-18 mountGame3D trả về Promise<GameHandle> import từ s" |
+| AC-031-19 | tests\spec-031\content.test.mjs — "AC-031-19 chơi hết ngày giáo viên với camera q = 0..3, phím " |

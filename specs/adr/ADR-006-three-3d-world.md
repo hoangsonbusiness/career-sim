@@ -32,6 +32,14 @@ Phương án 5:
 - **Không** dùng Rapier: va chạm đã do lưới `solid` xử lý. **Không** dùng Colyseus: app không có multiplayer.
 - HUD giữ HTML/React và đổi sang theme mới (tông gỗ, viền vàng nhạt, font Lora tự host). HUD không vẽ trong canvas.
 
+## Ghi lúc implement (2026-11-05)
+- Ghim `three@0.187.0` và `@types/three@0.187.0` (bản mới nhất trên npm ngày implement).
+- Hậu kỳ dùng `THREE.RenderPipeline` (r183 đổi tên từ `PostProcessing`) với `bloom` của `three/addons/tsl/display/BloomNode.js`.
+- Chunk JS của đường 3D đo được 264 928 byte gzip mức 9, nằm trong ngân sách 716 800 byte (SPEC-031 R-18).
+- Asset bước 1 lấy từ bộ Kenney có sẵn trong `assets-src/`: Furniture Kit 2.0 (15 model) và Mini Characters 1.0 (10 nhân vật), đều CC0. Tên hoạt cảnh `idle`/`walk` của Mini Characters được đổi thành `Idle`/`Walk` lúc chép sang `public/game3d/`. Đổi cùng độ dài byte nên cấu trúc GLB không đổi.
+- Chưa có bộ cây cối/ngoại cảnh, nên sân trường hiện mới là bãi cỏ, lối gạch và tường thấp.
+- Font Lora lấy từ repo google/fonts (OFL 1.1), tách 2 độ đậm 400/700 từ bản variable rồi nén woff2. Font có đủ dấu tiếng Việt.
+
 ## Lý do chính
 - Thay đúng một module render, giữ nguyên hợp đồng `GameHandle`. Hơn 30 spec đã khóa test không bị ảnh hưởng.
 - Three.js là thư viện chính của trang mẫu, đã chứng minh làm ra được chất lượng anh muốn.
