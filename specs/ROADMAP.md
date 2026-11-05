@@ -16,7 +16,7 @@ Quy ước:
 | APP | Khung app: Next.js, routing, nạp content JSON, sinh type từ schema | — | P0 | — | SPEC-003 |
 | CAT | Danh mục nghề: lưới thẻ, lọc, tìm kiếm | F1 | P0 | APP | — |
 | PRO | Trang hồ sơ nghề + popover nguồn trích dẫn | F2, F5 | P0 | APP, CNT | SPEC-004 |
-| SIM | Màn chơi: render engine bằng Phaser, 6 loại mini-game | F3 | P0 | APP, ENG | SPEC-005, SPEC-006, SPEC-007 |
+| SIM | Màn chơi: render engine bằng Phaser, 6 loại mini-game | F3 | P0 | APP, ENG | SPEC-005, SPEC-006, SPEC-007, SPEC-031 |
 | LAD | Lộ trình thăng tiến (đồ thị) | F4 | P0 | PRO | — |
 | REF | Tổng kết sau mô phỏng + lưu tín hiệu hành vi | F7 | P1 | SIM | — |
 | HOL | Trắc nghiệm Holland + gợi ý top 3 nghề | F6 | P1 | REF, CAT | — |
