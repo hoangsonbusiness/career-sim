@@ -1,0 +1,72 @@
+{
+  "$comment": "Conformance vectors SPEC-031 cho src/game3d/layout.ts. Toạ độ ô [x,y]; Vec3 {x,y,z}.",
+  "tileToWorld": [
+    { "p": [0, 0], "expect": { "x": 0.5, "z": 0.5 } },
+    { "p": [3, 7], "expect": { "x": 3.5, "z": 7.5 } }
+  ],
+  "worldToTile": [
+    { "x": 0, "z": 0, "w": 10, "h": 10, "expect": [0, 0] },
+    { "x": 9.99, "z": 0, "w": 10, "h": 10, "expect": [9, 0] },
+    { "x": 10, "z": 0, "w": 10, "h": 10, "expect": null },
+    { "x": -0.01, "z": 5, "w": 10, "h": 10, "expect": null },
+    { "x": 2.5, "z": 9.999, "w": 10, "h": 10, "expect": [2, 9] },
+    { "x": 2.5, "z": 10, "w": 10, "h": 10, "expect": null }
+  ],
+  "rotateDir": [
+    { "d": "up", "q": 0, "expect": "up" },
+    { "d": "up", "q": 1, "expect": "right" },
+    { "d": "up", "q": 2, "expect": "down" },
+    { "d": "right", "q": 2, "expect": "left" },
+    { "d": "left", "q": 1, "expect": "up" },
+    { "d": "left", "q": 3, "expect": "down" },
+    { "d": "down", "q": 3, "expect": "right" }
+  ],
+  "snapQuarter": [
+    { "yaw": 0, "expect": 0 },
+    { "yaw": 44, "expect": 0 },
+    { "yaw": 46, "expect": 1 },
+    { "yaw": 180, "expect": 2 },
+    { "yaw": 270, "expect": 3 },
+    { "yaw": 360, "expect": 0 },
+    { "yaw": 405, "expect": 1 },
+    { "yaw": -100, "expect": 3 },
+    { "yaw": -180, "expect": 2 }
+  ],
+  "pickTile": [
+    { "origin": { "x": 2.5, "y": 9, "z": 12 }, "dir": { "x": 0, "y": -1, "z": -1 }, "w": 10, "h": 10, "expect": [2, 3] },
+    { "origin": { "x": 5, "y": 4, "z": 5 }, "dir": { "x": 0, "y": -2, "z": 0 }, "w": 10, "h": 10, "expect": [5, 5] },
+    { "origin": { "x": 2, "y": 5, "z": 2 }, "dir": { "x": 0, "y": 0, "z": -1 }, "w": 10, "h": 10, "expect": null },
+    { "origin": { "x": 2, "y": 5, "z": 2 }, "dir": { "x": 0, "y": 1, "z": 0 }, "w": 10, "h": 10, "expect": null },
+    { "origin": { "x": 2, "y": 5, "z": 2 }, "dir": { "x": -1, "y": -1, "z": 0 }, "w": 10, "h": 10, "expect": null }
+  ],
+  "stepPose": [
+    { "from": [0, 0], "to": [1, 0], "t": 0.5, "expect": { "x": 1, "z": 0.5, "yawDeg": 90 } },
+    { "from": [0, 0], "to": [1, 0], "t": 2, "expect": { "x": 1.5, "z": 0.5, "yawDeg": 90 } },
+    { "from": [0, 0], "to": [1, 0], "t": -1, "expect": { "x": 0.5, "z": 0.5, "yawDeg": 90 } },
+    { "from": [2, 2], "to": [2, 1], "t": 0.25, "expect": { "x": 2.5, "z": 2.25, "yawDeg": 0 } },
+    { "from": [2, 2], "to": [2, 3], "t": 1, "expect": { "x": 2.5, "z": 3.5, "yawDeg": 180 } },
+    { "from": [2, 2], "to": [1, 2], "t": 0, "expect": { "x": 2.5, "z": 2.5, "yawDeg": 270 } },
+    { "from": [4, 4], "to": [4, 4], "t": 0.5, "expect": { "x": 4.5, "z": 4.5, "yawDeg": 180 } }
+  ],
+  "chooseQuality": [
+    { "fps": [[119, 10]], "current": "high", "expect": "high" },
+    { "fps": [[120, 44]], "current": "high", "expect": "low" },
+    { "fps": [[120, 60]], "current": "low", "expect": "low" },
+    { "fps": [[60, 30], [60, 60]], "current": "high", "expect": "high" },
+    { "fps": [[61, 30], [59, 60]], "current": "high", "expect": "low" },
+    { "fps": [[100, 10], [120, 60]], "current": "high", "expect": "high" }
+  ],
+  "chooseRenderer": [
+    { "has3d": true, "webgl2": true, "expect": "three" },
+    { "has3d": true, "webgl2": false, "expect": "phaser" },
+    { "has3d": false, "webgl2": true, "expect": "phaser" },
+    { "has3d": false, "webgl2": false, "expect": "phaser" }
+  ],
+  "isTap": [
+    { "dx": 5, "dy": 5, "ms": 200, "expect": true },
+    { "dx": 8, "dy": 0, "ms": 100, "expect": false },
+    { "dx": 0, "dy": 0, "ms": 300, "expect": false },
+    { "dx": 0, "dy": 0, "ms": 299, "expect": true },
+    { "dx": -5, "dy": -6, "ms": 10, "expect": true }
+  ]
+}
