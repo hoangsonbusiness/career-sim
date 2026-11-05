@@ -2,7 +2,7 @@
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
 version: 2
-status: approved
+status: implemented
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
 owner: anh Son

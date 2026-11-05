@@ -34,7 +34,7 @@
 | [SPEC-028](SPEC-028-nhan-vien-logistics.md) Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-029](SPEC-029-chuyen-vien-phan-tich-du-lieu.md) Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-030](SPEC-030-chien-si-chua-chay.md) Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-031](SPEC-031-world-3d.md) Thế giới 3D stylized và HUD mới cho game một ngày làm nghề | 1 | approved | ✓ Son 2026-11-05 | [F3] | 19/19 |
+| [SPEC-031](SPEC-031-world-3d.md) Thế giới 3D stylized và HUD mới cho game một ngày làm nghề | 2 | implemented | ✓ Son 2026-11-05 | [F3] | 19/19 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -474,7 +474,7 @@
 | AC-031-09 | tests\spec-031\world3d.test.mjs — "AC-031-09 các lỗi dữ liệu 3D → exit 1, có tên file" |
 | AC-031-10 | tests\spec-031\world3d.test.mjs — "AC-031-10 thiếu hoạt cảnh Walk hoặc GLB quá 2 MB → exit 1" |
 | AC-031-11 | tests\spec-031\content.test.mjs — "AC-031-11 thế giới 3D giáo viên THPT hợp lệ, phủ đủ map và N" |
-| AC-031-12 | tests\spec-031\world3d.test.mjs — "AC-031-12 check chạy validate:world3d ngay sau validate:worl" |
+| AC-031-12 | tests\spec-031\world3d.test.mjs — "AC-031-12 check chạy validate:world3d ngay sau check:pack; t" |
 | AC-031-13 | tests\spec-031\build.test.mjs — "AC-031-13 HTML trang một ngày và script ban đầu không chứa T" |
 | AC-031-14 | tests\spec-031\build.test.mjs — "AC-031-14 JS tải lười của đường 3D ≤ 700 KB gzip" |
 | AC-031-15 | tests\spec-031\build.test.mjs — "AC-031-15 không chunk nào chứa cả Three.js và Phaser" |
