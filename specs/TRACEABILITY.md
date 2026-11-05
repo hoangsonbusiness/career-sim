@@ -34,7 +34,7 @@
 | [SPEC-028](SPEC-028-nhan-vien-logistics.md) Gói nghề Nhân viên logistics (nội dung + bản đồ văn phòng và kho vận) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-029](SPEC-029-chuyen-vien-phan-tich-du-lieu.md) Gói nghề Chuyên viên phân tích dữ liệu (nội dung + bản đồ văn phòng công ty thương mại điện tử) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
 | [SPEC-030](SPEC-030-chien-si-chua-chay.md) Gói nghề Chiến sĩ chữa cháy và cứu nạn, cứu hộ (nội dung + bản đồ đội chữa cháy và cứu nạn, cứu hộ) | 1 | implemented | ✓ Son 2026-11-04 | [F2, F3, F4, F5] | 7/7 |
-| [SPEC-031](SPEC-031-world-3d.md) Thế giới 3D stylized và HUD mới cho game một ngày làm nghề | 3 | approved | ✓ Son 2026-11-05 | [F3] | 20/20 |
+| [SPEC-031](SPEC-031-world-3d.md) Thế giới 3D stylized và HUD mới cho game một ngày làm nghề | 4 | approved | ✓ Son 2026-11-05 | [F3] | 21/21 |
 
 ## SPEC-001 — Kiểm tra tự động nội dung nghề (schema + luật trích nguồn)
 
@@ -483,3 +483,4 @@
 | AC-031-18 | tests\spec-031\content.test.mjs — "AC-031-18 mountGame3D trả về Promise<GameHandle> import từ s" |
 | AC-031-19 | tests\spec-031\content.test.mjs — "AC-031-19 chơi hết ngày giáo viên với camera q = 0..3, phím " |
 | AC-031-20 | tests\spec-031\scenery.test.mjs — "AC-031-20 scenery hợp lệ ở viền; trong lưới, quá viền, model" |
+| AC-031-21 | tests\spec-031\bug-005.test.mjs — "BUG-005 AC-031-21 keyAction theo code, không phụ thuộc bộ gõ"<br>tests\spec-031\bug-005.test.mjs — "BUG-005 AC-031-21 hai cảnh không còn tra phím bằng e.key" |

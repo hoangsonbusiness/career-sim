@@ -2,7 +2,7 @@
 id: BUG-005
 spec: SPEC-031
 ac: AC-031-21
-status: open
+status: fixed
 reported: 2026-11-05
 ---
 

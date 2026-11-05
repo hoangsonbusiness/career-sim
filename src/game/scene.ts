@@ -4,6 +4,7 @@ import * as Phaser from "phaser";
 import { findPath, standSpots, step, type Dir, type Pos } from "./grid";
 import { canInteract } from "./quest";
 import { MoveInput } from "./input";
+import { keyAction } from "../game3d/layout"; // SPEC-031 R-6b (BUG-005)
 import type { WorldData, WorldMap } from "./types";
 
 export interface GameCallbacks {
@@ -29,11 +30,6 @@ export interface GameHandle {
 
 const T = 16;
 const STEP_MS = 150; // R-8
-const KEY_DIR: Record<string, Dir> = {
-  ArrowUp: "up", ArrowRight: "right", ArrowDown: "down", ArrowLeft: "left",
-  w: "up", d: "right", s: "down", a: "left", W: "up", D: "right", S: "down", A: "left",
-};
-const INTERACT_KEYS = new Set([" ", "Enter", "e", "E"]); // R-14
 
 const center = (p: Pos) => ({ x: p.x * T + T / 2, y: p.y * T + T / 2 });
 
@@ -86,9 +82,10 @@ class WorldScene extends Phaser.Scene {
     this.input.keyboard?.on("keydown", (e: KeyboardEvent) => {
       // Ngoài mode walk để nguyên phím cho bảng task (radio, nút) dùng.
       if (!this.walkEnabled) return;
-      if (INTERACT_KEYS.has(e.key)) { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
-      const dir = KEY_DIR[e.key];
-      if (!dir) return;
+      const act = keyAction(e.code); // R-14 + SPEC-031 R-6b: theo vị trí phím, không theo ký tự
+      if (!act) return;
+      if (act === "interact") { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
+      const dir = act;
       e.preventDefault();
       if (e.repeat) return; // BUG-004: không dựa vào lặp phím của hệ điều hành
       this.route = [];
@@ -97,11 +94,14 @@ class WorldScene extends Phaser.Scene {
       if (!this.moving) this.continueWalking();
     });
     this.input.keyboard?.on("keyup", (e: KeyboardEvent) => {
-      const dir = KEY_DIR[e.key];
-      if (dir) this.keys.release(dir);
+      const a = keyAction(e.code);
+      if (a && a !== "interact") this.keys.release(a);
     });
     // Mất focus thì coi như nhả mọi phím, tránh nhân vật tự đi mãi.
     this.game.events.on(Phaser.Core.Events.BLUR, () => this.keys.clear());
+    const onVisibility = () => { if (document.hidden) this.keys.clear(); }; // SPEC-031 R-6b
+    document.addEventListener("visibilitychange", onVisibility);
+    this.events.once(Phaser.Scenes.Events.DESTROY, () => document.removeEventListener("visibilitychange", onVisibility));
     this.input.on("pointerdown", (p: Phaser.Input.Pointer) => this.onTap(p));
     this.scale.on("resize", () => this.fitCamera());
     // Chỉ bản dev: cho phép đọc trạng thái cảnh khi chơi thử bằng công cụ trình duyệt.

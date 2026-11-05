@@ -11,18 +11,13 @@ import { canInteract } from "../game/quest";
 import { MoveInput } from "../game/input";
 import type { GameCallbacks, GameHandle } from "../game/scene";
 import type { WorldData, WorldMap } from "../game/types";
-import { chooseQuality, isTap, pickTile, rotateDir, snapQuarter, stepPose, tileToWorld, type Quarter } from "./layout";
+import { chooseQuality, isTap, keyAction, pickTile, rotateDir, snapQuarter, stepPose, tileToWorld, type Quarter } from "./layout";
 import type { FloorMaterial, Lighting, Map3D, WallMaterial, World3D } from "./types";
 
 const STEP_MS = 150; // R-5 (= SPEC-006 R-8)
 const FADE_MS = 300; // R-11
 const CAM = { fov: 45, dist: 9, focusDist: 5, pitchDeg: 35, degPerPx: 0.4, snapMs: 250, focusMs: 400 }; // R-7, R-10
 const ANIM_FADE_S = 0.15; // R-5
-const KEY_DIR: Record<string, Dir> = {
-  ArrowUp: "up", ArrowRight: "right", ArrowDown: "down", ArrowLeft: "left",
-  w: "up", d: "right", s: "down", a: "left", W: "up", D: "right", S: "down", A: "left",
-};
-const INTERACT_KEYS = new Set([" ", "Enter", "e", "E"]);
 
 // R-12: preset ánh sáng
 const LIGHTING: Record<Lighting, {
@@ -350,9 +345,10 @@ class World3DScene {
   bindInput() {
     const onKeyDown = (e: KeyboardEvent) => {
       if (!this.walkEnabled) return; // ngoài mode walk để nguyên phím cho bảng task
-      if (INTERACT_KEYS.has(e.key)) { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
-      const dir = KEY_DIR[e.key];
-      if (!dir) return;
+      const act = keyAction(e.code); // R-6b (BUG-005): theo vị trí phím, không theo ký tự
+      if (!act) return;
+      if (act === "interact") { e.preventDefault(); if (!e.repeat) this.tryInteract(); return; }
+      const dir = act;
       e.preventDefault();
       if (e.repeat) return; // BUG-004
       this.route = [];
@@ -360,8 +356,9 @@ class World3DScene {
       this.keys.press(dir);
       if (!this.moveFrom) this.continueWalking();
     };
-    const onKeyUp = (e: KeyboardEvent) => { const d = KEY_DIR[e.key]; if (d) this.keys.release(d); };
+    const onKeyUp = (e: KeyboardEvent) => { const a = keyAction(e.code); if (a && a !== "interact") this.keys.release(a); };
     const onBlur = () => this.keys.clear();
+    const onVisibility = () => { if (document.hidden) this.keys.clear(); }; // R-6b
 
     // R-9: một lần nhấn là chạm hoặc kéo, không cả hai.
     const canvas = this.renderer.domElement;
@@ -392,6 +389,7 @@ class World3DScene {
     window.addEventListener("keydown", onKeyDown);
     window.addEventListener("keyup", onKeyUp);
     window.addEventListener("blur", onBlur);
+    document.addEventListener("visibilitychange", onVisibility);
     canvas.addEventListener("pointerdown", onPointerDown);
     canvas.addEventListener("pointermove", onPointerMove);
     canvas.addEventListener("pointerup", onPointerUp);
@@ -400,6 +398,7 @@ class World3DScene {
       window.removeEventListener("keydown", onKeyDown);
       window.removeEventListener("keyup", onKeyUp);
       window.removeEventListener("blur", onBlur);
+      document.removeEventListener("visibilitychange", onVisibility);
       ro.disconnect();
     });
   }

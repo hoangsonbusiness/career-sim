@@ -73,3 +73,14 @@ export function chooseRenderer(has3d: boolean, caps: { webgl2: boolean }): "thre
 export function isTap(dxPx: number, dyPx: number, ms: number): boolean {
   return Math.hypot(dxPx, dyPx) < 8 && ms < 300;
 }
+
+const KEY_CODES: Record<string, Dir | "interact"> = {
+  KeyW: "up", ArrowUp: "up", KeyD: "right", ArrowRight: "right",
+  KeyS: "down", ArrowDown: "down", KeyA: "left", ArrowLeft: "left",
+  KeyE: "interact", Space: "interact", Enter: "interact", NumpadEnter: "interact",
+};
+
+/** R-6b (BUG-005): tra theo vị trí phím vật lý, không theo ký tự — bộ gõ Telex không làm sai được. */
+export function keyAction(code: string): Dir | "interact" | null {
+  return Object.prototype.hasOwnProperty.call(KEY_CODES, code) ? KEY_CODES[code] : null;
+}
