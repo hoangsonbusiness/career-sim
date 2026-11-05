@@ -90,6 +90,61 @@
       "file": "/game3d/kenney-mini/male-d.glb",
       "scale": 1.6,
       "license": "/game3d/kenney-mini/License.txt"
+    },
+    "tree-round": {
+      "file": "/game3d/kenney-nature/tree_default.glb",
+      "scale": 2.2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "tree-oak": {
+      "file": "/game3d/kenney-nature/tree_oak.glb",
+      "scale": 2.6,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "tree-detailed": {
+      "file": "/game3d/kenney-nature/tree_detailed.glb",
+      "scale": 2.4,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "tree-thin": {
+      "file": "/game3d/kenney-nature/tree_thin.glb",
+      "scale": 2.3,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "bush": {
+      "file": "/game3d/kenney-nature/plant_bushDetailed.glb",
+      "scale": 2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "bush-small": {
+      "file": "/game3d/kenney-nature/plant_bush.glb",
+      "scale": 2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "flower-red": {
+      "file": "/game3d/kenney-nature/flower_redA.glb",
+      "scale": 2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "flower-yellow": {
+      "file": "/game3d/kenney-nature/flower_yellowA.glb",
+      "scale": 2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "flower-purple": {
+      "file": "/game3d/kenney-nature/flower_purpleA.glb",
+      "scale": 2,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "grass-tuft": {
+      "file": "/game3d/kenney-nature/grass_large.glb",
+      "scale": 1.8,
+      "license": "/game3d/kenney-nature/License.txt"
+    },
+    "rock": {
+      "file": "/game3d/kenney-nature/rock_smallA.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-nature/License.txt"
     }
   },
   "player_model": "char-female-b",
@@ -331,6 +386,293 @@
           "y": 11,
           "rot": 0,
           "blocks": true
+        },
+        {
+          "model": "tree-round",
+          "x": 29,
+          "y": 10,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "tree-oak",
+          "x": 29,
+          "y": 11,
+          "rot": 90,
+          "blocks": true
+        },
+        {
+          "model": "tree-detailed",
+          "x": 29,
+          "y": 12,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "tree-thin",
+          "x": 29,
+          "y": 13,
+          "rot": 270,
+          "blocks": true
+        },
+        {
+          "model": "tree-round",
+          "x": 29,
+          "y": 14,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "flower-yellow",
+          "x": 19,
+          "y": 10,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "flower-purple",
+          "x": 21,
+          "y": 10,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "flower-purple",
+          "x": 19,
+          "y": 11,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "flower-red",
+          "x": 21,
+          "y": 11,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "flower-red",
+          "x": 19,
+          "y": 12,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "flower-yellow",
+          "x": 21,
+          "y": 12,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "flower-yellow",
+          "x": 19,
+          "y": 13,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "flower-purple",
+          "x": 21,
+          "y": 13,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "flower-purple",
+          "x": 19,
+          "y": 14,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "flower-red",
+          "x": 21,
+          "y": 14,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 10,
+          "y": 10,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 10,
+          "y": 14,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "bush-small",
+          "x": 28,
+          "y": 10,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 28,
+          "y": 14,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 14,
+          "y": 12,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 16,
+          "y": 10,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 24,
+          "y": 12,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 26,
+          "y": 14,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "rock",
+          "x": 12,
+          "y": 13,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "rock",
+          "x": 25,
+          "y": 10,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "bush-small",
+          "x": 3,
+          "y": 15,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 7,
+          "y": 15,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 0,
+          "y": 15,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 11,
+          "y": 10,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "bush-small",
+          "x": 14,
+          "y": 10,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 17,
+          "y": 10,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "flower-red",
+          "x": 23,
+          "y": 10,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "flower-yellow",
+          "x": 26,
+          "y": 10,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 12,
+          "y": 12,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "flower-purple",
+          "x": 15,
+          "y": 12,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 18,
+          "y": 12,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "bush",
+          "x": 27,
+          "y": 12,
+          "rot": 0,
+          "blocks": false
+        },
+        {
+          "model": "bush-small",
+          "x": 11,
+          "y": 14,
+          "rot": 90,
+          "blocks": false
+        },
+        {
+          "model": "grass-tuft",
+          "x": 14,
+          "y": 14,
+          "rot": 180,
+          "blocks": false
+        },
+        {
+          "model": "flower-red",
+          "x": 17,
+          "y": 14,
+          "rot": 270,
+          "blocks": false
+        },
+        {
+          "model": "flower-yellow",
+          "x": 23,
+          "y": 14,
+          "rot": 0,
+          "blocks": false
         }
       ]
     },
