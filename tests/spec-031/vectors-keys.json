@@ -1,0 +1,59 @@
+{
+  "$comment": "SPEC-031 R-6c. Sự kiện: [\"down\", code, keyCode] hoặc [\"up\", code]. Chuỗi 'unikey-*' ghi thật từ Unikey (Telex) ngày 2026-11-05 bằng SendInput scancode.",
+  "cases": [
+    {
+      "name": "bàn phím thường: KeyA xuống rồi lên",
+      "events": [["down", "KeyA", 65], ["up", "KeyA"]],
+      "expect": [{ "kind": "press", "dir": "left" }, { "kind": "release", "dir": "left" }],
+      "imeSeen": false
+    },
+    {
+      "name": "unikey-w-dau: keydown bị nuốt, ký tự giả ư, keyup thật",
+      "events": [["down", "", 231], ["up", ""], ["up", "KeyW"]],
+      "expect": [null, null, { "kind": "tap", "dir": "up" }],
+      "imeSeen": true
+    },
+    {
+      "name": "unikey-ww: ký tự · và Backspace giả, rồi w giả, keyup thật",
+      "events": [["down", "", 231], ["up", "Backspace"], ["up", ""], ["down", "Backspace", 8], ["down", "Backspace", 8], ["up", "Backspace"], ["down", "", 231], ["up", ""], ["up", "KeyW"]],
+      "expect": [null, null, null, null, null, null, null, null, { "kind": "tap", "dir": "up" }],
+      "imeSeen": true
+    },
+    {
+      "name": "unikey cho keydown thật đi qua khi giữ W",
+      "events": [["down", "KeyW", 87], ["up", "KeyW"]],
+      "expect": [{ "kind": "press", "dir": "up" }, { "kind": "release", "dir": "up" }],
+      "imeSeen": false
+    },
+    {
+      "name": "unikey-a sau w (ca anh Son): a giả, keyup thật",
+      "events": [["down", "", 231], ["up", ""], ["up", "KeyA"]],
+      "expect": [null, null, { "kind": "tap", "dir": "left" }],
+      "imeSeen": true
+    },
+    {
+      "name": "unikey-aa: · giả, 2 Backspace, â giả, keyup thật",
+      "events": [["down", "", 231], ["up", ""], ["down", "Backspace", 8], ["up", "Backspace"], ["down", "Backspace", 8], ["up", "Backspace"], ["down", "", 231], ["up", ""], ["up", "KeyA"]],
+      "expect": [null, null, null, null, null, null, null, null, { "kind": "tap", "dir": "left" }],
+      "imeSeen": true
+    },
+    {
+      "name": "unikey-d và s",
+      "events": [["down", "", 231], ["up", ""], ["up", "KeyD"], ["down", "", 231], ["up", ""], ["up", "KeyS"]],
+      "expect": [null, null, { "kind": "tap", "dir": "right" }, null, null, { "kind": "tap", "dir": "down" }],
+      "imeSeen": true
+    },
+    {
+      "name": "E bị nuốt → tương tác khi keyup; E thường → tương tác khi keydown",
+      "events": [["down", "", 229], ["up", "KeyE"], ["down", "KeyE", 69], ["up", "KeyE"]],
+      "expect": [null, { "kind": "interact" }, { "kind": "interact" }, null],
+      "imeSeen": true
+    },
+    {
+      "name": "phím lạ và code rỗng với keyCode khác 229/231",
+      "events": [["down", "KeyQ", 81], ["up", "KeyQ"], ["down", "", 0], ["up", "Backspace"]],
+      "expect": [null, null, null, null],
+      "imeSeen": false
+    }
+  ]
+}
