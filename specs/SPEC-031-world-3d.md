@@ -7,7 +7,7 @@ features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
 owner: anh Son
 created: 2026-11-05
-approved_hash: d01abb55f16e03f9
+approved_hash: ef7d2fe7a6f87314
 approved_by: Son
 approved_at: 2026-11-05
 ---
