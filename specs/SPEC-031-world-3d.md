@@ -2,11 +2,14 @@
 id: SPEC-031
 title: Thế giới 3D stylized và HUD mới cho game một ngày làm nghề
 version: 1
-status: draft
+status: approved
 features: [F3]
 owns: [src/game3d/**, content/worlds3d/**, schema/world3d.schema.json, scripts/validate-world3d.mjs, public/game3d/**, public/fonts/**]
 owner: anh Son
 created: 2026-11-05
+approved_hash: 8949c5142b5158d3
+approved_by: Son
+approved_at: 2026-11-05
 ---
 
 # SPEC-031 — Thế giới 3D stylized và HUD mới
@@ -307,12 +310,12 @@ Spec này không thêm trạng thái mới. Vòng mode vẫn theo SPEC-014. Tr�
 
 ## 6. Câu hỏi mở
 Em đề xuất sẵn theo các quy tắc ở mục 3. Anh đồng ý thì đánh `[x]`, không đồng ý thì sửa quy tắc tương ứng.
-- [ ] Asset: dùng các bộ CC0 của **Quaternius** (nhân vật có sẵn hoạt cảnh Idle/Walk; cây, đồ nội thất) và **Kenney** (Furniture Kit, Nature Kit). Anh tải về `assets-src/`, em chọn lọc, nén bằng `gltfpack` rồi đưa vào `public/game3d/`. Nhân vật mặc áo dài như trang mẫu thì phải tự dựng hoặc đặt làm, nên em để ngoài phạm vi bước 1.
-- [ ] R-5/R-6: giữ **di chuyển theo ô** (chuyển động mượt giữa các ô) thay vì đi tự do. Lý do: không phải đổi logic lưới và 30 file thế giới đã kiểm. Trang mẫu đi tự do, cảm giác sẽ khác một chút.
-- [ ] R-7: camera **dừng ở 4 hướng** sau khi thả chuột, không xoay tự do 360°.
-- [ ] R-18: ngân sách JS cho đường 3D là ≤ 700 KB gzip; model ≤ 2 MB mỗi file, ≤ 12 MB mỗi nghề. Con số chính xác của three r18x sẽ đo khi implement; nếu vượt, em dừng lại báo anh chứ không tự nới.
-- [ ] R-20: theme HUD tông gỗ nâu, viền vàng nhạt, font Lora, áp dụng cho game. Trang hồ sơ nghề và trang chủ giữ nguyên (spec sau nếu anh muốn đồng bộ).
-- [ ] Phạm vi bước 1 chỉ có giáo viên THPT; 29 nghề còn lại chuyển dần ở các spec sau, trong lúc đó vẫn chạy Phaser.
+- [x] Asset: dùng các bộ CC0 của **Quaternius** (nhân vật có sẵn hoạt cảnh Idle/Walk; cây, đồ nội thất) và **Kenney** (Furniture Kit, Nature Kit). Anh tải về `assets-src/`, em chọn lọc, nén bằng `gltfpack` rồi đưa vào `public/game3d/`. Nhân vật mặc áo dài như trang mẫu thì phải tự dựng hoặc đặt làm, nên em để ngoài phạm vi bước 1.
+- [x] R-5/R-6: giữ **di chuyển theo ô** (chuyển động mượt giữa các ô) thay vì đi tự do. Lý do: không phải đổi logic lưới và 30 file thế giới đã kiểm. Trang mẫu đi tự do, cảm giác sẽ khác một chút.
+- [x] R-7: camera **dừng ở 4 hướng** sau khi thả chuột, không xoay tự do 360°.
+- [x] R-18: ngân sách JS cho đường 3D là ≤ 700 KB gzip; model ≤ 2 MB mỗi file, ≤ 12 MB mỗi nghề. Con số chính xác của three r18x sẽ đo khi implement; nếu vượt, em dừng lại báo anh chứ không tự nới.
+- [x] R-20: theme HUD tông gỗ nâu, viền vàng nhạt, font Lora, áp dụng cho game. Trang hồ sơ nghề và trang chủ giữ nguyên (spec sau nếu anh muốn đồng bộ).
+- [x] Phạm vi bước 1 chỉ có giáo viên THPT; 29 nghề còn lại chuyển dần ở các spec sau, trong lúc đó vẫn chạy Phaser.
 
 ## 7. Lịch sử thay đổi
 | Version | Ngày | Thay đổi | Lý do (BUG/ADR nếu có) |
