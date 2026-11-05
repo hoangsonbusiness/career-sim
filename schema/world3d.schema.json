@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world3d.schema.json",
+  "title": "SPEC-031 — dữ liệu thế giới 3D của một nghề",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["profession_id", "models", "player_model", "npc_models", "maps"],
+  "$defs": {
+    "floor": { "enum": ["grass", "brick", "tile", "wood", "concrete", "sand"] },
+    "int0": { "type": "integer", "minimum": 0 }
+  },
+  "properties": {
+    "profession_id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "models": {
+      "type": "object",
+      "minProperties": 1,
+      "propertyNames": { "pattern": "^[a-z0-9-]+$" },
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["file", "scale", "license"],
+        "properties": {
+          "file": { "type": "string", "pattern": "^/game3d/.+\\.glb$" },
+          "scale": { "type": "number", "exclusiveMinimum": 0 },
+          "license": { "type": "string", "pattern": "^/game3d/.+" }
+        }
+      }
+    },
+    "player_model": { "type": "string" },
+    "npc_models": { "type": "object", "additionalProperties": { "type": "string" } },
+    "maps": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["lighting", "floor", "wall", "props"],
+        "properties": {
+          "lighting": { "enum": ["day", "evening", "indoor"] },
+          "floor": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["default", "regions"],
+            "properties": {
+              "default": { "$ref": "#/$defs/floor" },
+              "regions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["x", "y", "w", "h", "material"],
+                  "properties": {
+                    "x": { "$ref": "#/$defs/int0" },
+                    "y": { "$ref": "#/$defs/int0" },
+                    "w": { "type": "integer", "minimum": 1 },
+                    "h": { "type": "integer", "minimum": 1 },
+                    "material": { "$ref": "#/$defs/floor" }
+                  }
+                }
+              }
+            }
+          },
+          "wall": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["material", "height"],
+            "properties": {
+              "material": { "enum": ["plaster", "brick", "hedge"] },
+              "height": { "type": "number", "minimum": 0.5, "maximum": 4 }
+            }
+          },
+          "props": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["model", "x", "y", "rot", "blocks"],
+              "properties": {
+                "model": { "type": "string" },
+                "x": { "$ref": "#/$defs/int0" },
+                "y": { "$ref": "#/$defs/int0" },
+                "rot": { "enum": [0, 90, 180, 270] },
+                "blocks": { "type": "boolean" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

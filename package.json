@@ -9,7 +9,7 @@
     "spec:lint": "node scripts/spec.mjs lint",
     "approve": "node scripts/spec.mjs approve",
     "next": "node scripts/spec.mjs next",
-    "check": "npm run validate && npm run validate:world && npm run check:pack && npm run spec:lint && npm run types:check && npm run typecheck && npm test && node scripts/trace.mjs --check",
+    "check": "npm run validate && npm run validate:world && npm run validate:world3d && npm run check:pack && npm run spec:lint && npm run types:check && npm run typecheck && npm test && node scripts/trace.mjs --check",
     "complete": "node scripts/spec.mjs complete",
     "scope": "node scripts/scope.mjs",
     "dev": "next dev",
@@ -18,13 +18,15 @@
     "types:check": "node scripts/gen-types.mjs --check",
     "typecheck": "tsc --noEmit",
     "validate:world": "node scripts/validate-world.mjs",
-    "check:pack": "node scripts/check-pack.mjs"
+    "check:pack": "node scripts/check-pack.mjs",
+    "validate:world3d": "node scripts/validate-world3d.mjs"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "4.3.3",
     "@types/node": "22.20.5",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
+    "@types/three": "0.187.0",
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
     "json-schema-to-typescript": "16.0.0",
@@ -35,6 +37,7 @@
     "next": "16.4.4",
     "phaser": "4.2.1",
     "react": "19.3.1",
-    "react-dom": "19.3.1"
+    "react-dom": "19.3.1",
+    "three": "0.187.0"
   }
 }
