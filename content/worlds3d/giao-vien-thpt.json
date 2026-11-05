@@ -1,0 +1,421 @@
+{
+  "profession_id": "giao-vien-thpt",
+  "models": {
+    "table": {
+      "file": "/game3d/kenney-furniture/table.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "desk": {
+      "file": "/game3d/kenney-furniture/desk.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "potted-plant": {
+      "file": "/game3d/kenney-furniture/pottedPlant.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "trashcan": {
+      "file": "/game3d/kenney-furniture/trashcan.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "bookcase-wide": {
+      "file": "/game3d/kenney-furniture/bookcaseClosedWide.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "bookcase-open": {
+      "file": "/game3d/kenney-furniture/bookcaseOpen.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "side-table": {
+      "file": "/game3d/kenney-furniture/sideTable.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "bed": {
+      "file": "/game3d/kenney-furniture/bedSingle.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "bed-drawer": {
+      "file": "/game3d/kenney-furniture/cabinetBedDrawer.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "rug": {
+      "file": "/game3d/kenney-furniture/rugRectangle.glb",
+      "scale": 1.3,
+      "license": "/game3d/kenney-furniture/License.txt"
+    },
+    "char-female-b": {
+      "file": "/game3d/kenney-mini/female-b.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-male-a": {
+      "file": "/game3d/kenney-mini/male-a.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-female-c": {
+      "file": "/game3d/kenney-mini/female-c.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-male-b": {
+      "file": "/game3d/kenney-mini/male-b.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-female-d": {
+      "file": "/game3d/kenney-mini/female-d.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-male-c": {
+      "file": "/game3d/kenney-mini/male-c.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-female-e": {
+      "file": "/game3d/kenney-mini/female-e.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    },
+    "char-male-d": {
+      "file": "/game3d/kenney-mini/male-d.glb",
+      "scale": 1.6,
+      "license": "/game3d/kenney-mini/License.txt"
+    }
+  },
+  "player_model": "char-female-b",
+  "npc_models": {
+    "hs-11a2": "char-male-a",
+    "hs-11a2-b": "char-female-c",
+    "hs-11a2-c": "char-male-b",
+    "hs-10a5": "char-female-d",
+    "hs-10a5-b": "char-male-c",
+    "to-truong": "char-female-e",
+    "dong-nghiep": "char-male-d"
+  },
+  "maps": {
+    "truong": {
+      "lighting": "day",
+      "floor": {
+        "default": "grass",
+        "regions": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 30,
+            "h": 10,
+            "material": "tile"
+          },
+          {
+            "x": 0,
+            "y": 7,
+            "w": 30,
+            "h": 2,
+            "material": "concrete"
+          },
+          {
+            "x": 0,
+            "y": 10,
+            "w": 10,
+            "h": 5,
+            "material": "tile"
+          },
+          {
+            "x": 20,
+            "y": 9,
+            "w": 1,
+            "h": 7,
+            "material": "brick"
+          }
+        ]
+      },
+      "wall": {
+        "material": "plaster",
+        "height": 1.4
+      },
+      "props": [
+        {
+          "model": "potted-plant",
+          "x": 1,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "trashcan",
+          "x": 8,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "potted-plant",
+          "x": 17,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bookcase-wide",
+          "x": 19,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bookcase-open",
+          "x": 20,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "potted-plant",
+          "x": 28,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 2,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 4,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 6,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 11,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 13,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 15,
+          "y": 3,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 21,
+          "y": 3,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 22,
+          "y": 3,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 23,
+          "y": 3,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 24,
+          "y": 3,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 2,
+          "y": 5,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 6,
+          "y": 5,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 11,
+          "y": 5,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 13,
+          "y": 5,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "trashcan",
+          "x": 19,
+          "y": 5,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "side-table",
+          "x": 27,
+          "y": 5,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bookcase-wide",
+          "x": 1,
+          "y": 10,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "potted-plant",
+          "x": 8,
+          "y": 10,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 3,
+          "y": 11,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 4,
+          "y": 11,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "table",
+          "x": 5,
+          "y": 11,
+          "rot": 0,
+          "blocks": true
+        }
+      ]
+    },
+    "nha": {
+      "lighting": "indoor",
+      "floor": {
+        "default": "wood",
+        "regions": []
+      },
+      "wall": {
+        "material": "plaster",
+        "height": 1.4
+      },
+      "props": [
+        {
+          "model": "potted-plant",
+          "x": 1,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bookcase-wide",
+          "x": 5,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bookcase-open",
+          "x": 6,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "bed",
+          "x": 9,
+          "y": 1,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 2,
+          "y": 2,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "desk",
+          "x": 3,
+          "y": 2,
+          "rot": 180,
+          "blocks": true
+        },
+        {
+          "model": "bed-drawer",
+          "x": 9,
+          "y": 2,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "side-table",
+          "x": 8,
+          "y": 5,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "trashcan",
+          "x": 10,
+          "y": 6,
+          "rot": 0,
+          "blocks": true
+        },
+        {
+          "model": "rug",
+          "x": 5,
+          "y": 4,
+          "rot": 0,
+          "blocks": false
+        }
+      ]
+    }
+  }
+}
