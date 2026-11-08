@@ -20,7 +20,7 @@ src/                            # Next.js app + Phaser engine (logic engine tác
 - `npm run next`: việc đang chờ ai làm gì. **Chạy đầu mỗi phiên.**
 - `npm run check`: **cổng duy nhất trước commit** (validate + spec:lint + test + trace --check).
 - `npm run spec:lint`: kiểm tra spec theo `specs/STANDARD.md`.
-- `npm run approve SPEC-NNN -- --by "Tên"`: **chỉ dành cho con người**.
+- `npm run approve SPEC-NNN -- --by "agent"`: agent tự duyệt spec (chế độ tự chủ); người dùng khi muốn ghi đè.
 - `npm run complete SPEC-NNN`: agent dùng khi đã xong spec (D9).
 - `npm run scope [base]`: kiểm tra phạm vi thay đổi so với nhánh gốc (mặc định `origin/main`).
 - Roadmap & thứ tự ưu tiên: `specs/ROADMAP.md`. Khi viết spec mới cho một hạng mục, điền mã SPEC vào cột Spec.
@@ -86,13 +86,31 @@ Nội dung tiếng Việt, có dấu, giọng thân thiện với học sinh. D�
 
 ---
 
+## CHẾ ĐỘ TỰ CHỦ (mặc định)
+
+Mục tiêu là ship nhanh. Agent **tự quyết và tự duyệt**, không chờ người.
+
+- Tự chạy `npm run approve SPEC-NNN -- --by "agent"` sau khi `npm run spec:lint` sạch. Câu hỏi mở: tự trả lời, ghi rõ dưới nhãn **"Giả định của agent"** trong mục 6 của spec.
+- Tự `npm run complete`, tự `approve` để mở khóa test khi test cũ sai thật — kèm lý do trong "Lịch sử thay đổi" của spec và BUG/ADR liên quan.
+- Tự chọn hạng mục kế tiếp từ `npm run next` / `specs/ROADMAP.md`, tự tạo spec mới khi cần.
+- Vẫn giữ nguyên các cổng cứng: `npm run check` xanh trước commit, không sửa tay `status`/`approved_*`, không sửa `specs/locks/`, không commit khi `validate` lỗi, R1–R8 bắt buộc.
+
+### Chỉ hỏi anh Son khi
+
+1. **Ý tưởng mơ hồ**: nhiều hướng đi khác nhau rõ rệt (đổi PRD, thêm luồng người dùng mới, đổi mô hình dữ liệu lớn).
+2. **Không có nguồn đạt R1–R4** cho dữ kiện pháp lý/số liệu quan trọng mà vẫn muốn đăng.
+3. **Hành động không thể undo**: xoá dữ liệu, đổi remote/CI/domain, publish, chi tiền, đổi API key.
+4. **Phải phá luật cứng** ở trên.
+
+Hỏi một lần, kèm 2–3 phương án và khuyến nghị. Không hỏi lại điều đã tự quyết.
+
 ## QUY TRÌNH PHÁT TRIỂN: SDD + TDD (bắt buộc)
 
 Chi tiết ở `specs/README.md`. Tóm tắt luật cứng:
 
-- **D0. Đầu mỗi phiên: đọc kết quả `npm run next`** (hook SessionStart trong `.claude/settings.json` tự chạy; nếu không thấy thì tự chạy). Mục "Chờ AGENT" là việc của bạn, theo thứ tự in ra. Mục "Chờ ANH SON" thì không được làm thay.
-- **D1. Không spec, không code.** Mọi thay đổi hành vi trong `src/` hoặc `scripts/` phải thuộc một `SPEC-NNN` đã được duyệt (`approved_hash` khớp). Chưa có spec → viết spec từ `specs/_template.md` **theo `specs/STANDARD.md`**, chạy `npm run spec:lint` cho sạch, rồi DỪNG và báo anh Son duyệt. **Agent KHÔNG ĐƯỢC chạy `npm run approve`, không sửa tay các trường `status: approved`, `approved_hash`, `approved_by`, `approved_at`.**
-- **D1b. Phân loại yêu cầu mới trước khi làm**: tính năng mới → SPEC mới; đổi hành vi đã có → sửa spec cũ (tăng `version`, ghi lịch sử, cần duyệt lại); bug → `BUG-NNN`; nội dung nghề → chỉ cần `npm run check`; refactor → không cần spec nhưng không được sửa test cũ. Mỗi spec là một **khả năng của hệ thống**, không phải một lần yêu cầu.
+- **D0. Đầu mỗi phiên: đọc kết quả `npm run next`** (hook SessionStart trong `.claude/settings.json` tự chạy; nếu không thấy thì tự chạy). Toàn bộ mục "Chờ AGENT" là việc của bạn, theo thứ tự in ra. Không chờ ai duyệt.
+- **D1. Không spec, không code.** Mọi thay đổi hành vi trong `src/` hoặc `scripts/` phải thuộc một `SPEC-NNN` đã được duyệt (`approved_hash` khớp). Chưa có spec → viết spec từ `specs/_template.md` **theo `specs/STANDARD.md`**, chạy `npm run spec:lint` cho sạch, rồi **tự duyệt**: `npm run approve SPEC-NNN -- --by "agent"`. Được chạy `approve`, nhưng **không sửa tay** các trường `status`, `approved_hash`, `approved_by`, `approved_at`.
+- **D1b. Phân loại yêu cầu mới trước khi làm**: tính năng mới → SPEC mới; đổi hành vi đã có → sửa spec cũ (tăng `version`, ghi lịch sử, agent tự duyệt lại); bug → `BUG-NNN`; nội dung nghề → chỉ cần `npm run check`; refactor → không cần spec nhưng không được sửa test cũ. Mỗi spec là một **khả năng của hệ thống**, không phải một lần yêu cầu.
 - **D1c. Spec phải đủ chặt để agent khác implement ra cùng kết quả**: tuân thủ `specs/STANDARD.md` (ST-01..ST-14). Spec có logic tính toán phải có conformance vectors.
 - **D2. Red trước Green.** Với mỗi AC: viết test trước, chạy và **xác nhận test đỏ vì đúng lý do**, rồi mới viết code. Không viết test sau code rồi tuyên bố "đã TDD".
 - **D3. Tên test mang mã truy vết**: `test("AC-002-03 mô tả")` hoặc `test("BUG-004 AC-002-03 mô tả")`. Script `trace.mjs` dựa vào quy ước này.
@@ -104,9 +122,9 @@ Chi tiết ở `specs/README.md`. Tóm tắt luật cứng:
 - **D5. Sửa bug = tái hiện bằng test trước.** Tạo `specs/bugs/BUG-NNN-*.md` → test đỏ tái hiện → sửa → xanh. Nếu không AC nào bao phủ bug, thêm AC vào spec trước (đó là lỗ hổng của spec), ghi vào "Lịch sử thay đổi" của spec.
 - **D6. Spec và code không được lệch nhau.** Nếu khi implement thấy spec sai hoặc thiếu: dừng lại, sửa spec (ghi lịch sử), rồi mới sửa code. Không âm thầm làm khác spec.
 - **D7. Quyết định kiến trúc** (chọn thư viện, đổi cấu trúc dữ liệu, đánh đổi hiệu năng) ghi thành `specs/adr/ADR-NNN-*.md`: bối cảnh, các phương án, lựa chọn, hệ quả.
-- **D8. Cổng kiểm tra**: `npm run check` (= validate + spec:lint + test + trace --check) phải xanh trước mỗi commit. `npm run trace` sinh lại `specs/TRACEABILITY.md`; commit file này cùng code. Check sẽ FAIL nếu phần quy phạm (mục 2–4) của một spec đã duyệt bị sửa — đó là tín hiệu phải dừng và xin duyệt lại, **không được tìm cách vượt qua**.
+- **D8. Cổng kiểm tra**: `npm run check` (= validate + spec:lint + test + trace --check) phải xanh trước mỗi commit. `npm run trace` sinh lại `specs/TRACEABILITY.md`; commit file này cùng code. Check sẽ FAIL nếu phần quy phạm (mục 2–4) của một spec đã duyệt bị sửa — đó là tín hiệu phải cập nhật spec (ghi lịch sử) rồi **tự duyệt lại**; không được tắt/vượt cổng.
 - **D9. Hoàn tất spec bằng `npm run complete SPEC-NNN`** (không sửa tay `status`). Lệnh kiểm tra mọi AC đã có test, test xanh, rồi chuyển sang `implemented` và **khóa toàn bộ file trong `tests/spec-NNN/`** (`specs/locks/SPEC-NNN.lock.json`).
-- **D10. Test đã khóa là bất khả xâm phạm.** KHÔNG ĐƯỢC sửa hay xóa file test đã khóa, kể cả khi nó "sai", "cũ" hay "cản đường". Nếu bạn cho rằng test sai: dừng lại, báo anh Son kèm lý do. Chỉ người duyệt mới mở khóa (`npm run approve`). Tuyệt đối không sửa `specs/locks/`.
+- **D10. Test đã khóa là bất khả xâm phạm.** KHÔNG ĐƯỢC sửa tay hay xóa file test đã khóa; chỉ mở khóa qua `approve` có ghi lý do. Nếu test đã khóa sai hoặc lỗi thời: ghi lý do vào "Lịch sử thay đổi" của spec + BUG/ADR, rồi `npm run approve SPEC-NNN -- --by "agent"` để mở khóa, sửa test, `complete` lại. Tuyệt đối không sửa tay `specs/locks/`.
 - **D11. Test cho bug nằm trong FILE MỚI** `tests/spec-NNN/bug-NNN.test.*`. Thêm file mới vào thư mục đã khóa là hợp lệ.
 - **D12. Giữ đúng phạm vi.** Commit cho SPEC/BUG nào thì chỉ chạm file trong `owns` của spec đó. Nếu buộc phải sửa file của spec khác, ghi cả hai mã vào commit message và giải thích trong body. `npm run scope` (CI cũng chạy) sẽ cảnh báo mọi lần sửa lan.
 - **D13. Tên test phải là chuỗi cố định** chứa mã AC. Không dựng tên test bằng biến hay template literal, vì công cụ truy vết không đọc được.
@@ -119,4 +137,4 @@ Chi tiết ở `specs/README.md`. Tóm tắt luật cứng:
 - Mỗi PR: `npm run validate && npm run build` phải xanh.
 
 ## Phân vai với Codex
-Claude Code: research, nội dung, engine. Codex: review PR, viết test, **kiểm tra chéo nguồn** (mở URL, đối chiếu dữ kiện). Không agent nào tự review nội dung do chính nó viết.
+Claude Code: research, nội dung, engine. Codex: review PR, viết test, **kiểm tra chéo nguồn** (mở URL, đối chiếu dữ kiện). Được tự review code của mình. Nội dung nghề có số liệu/pháp lý: nếu không có agent thứ hai, tự mở URL kiểm chéo và ghi `note` cho chỗ chưa chắc.

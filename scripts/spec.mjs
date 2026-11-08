@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // CLI quản lý vòng đời spec.
 //   lint                          — lint mọi spec theo specs/STANDARD.md
-//   approve SPEC-NNN [--by Tên]   — CHỈ CON NGƯỜI. Duyệt phần quy phạm; nếu spec đã implemented thì khóa lại test hiện tại
+//   approve SPEC-NNN [--by Tên]   — agent tự duyệt (chế độ tự chủ) hoặc người ghi đè. Duyệt phần quy phạm; nếu spec đã implemented thì khóa lại test hiện tại
 //   complete SPEC-NNN             — AGENT dùng khi xong: kiểm tra đủ test + test xanh → implemented + khóa test
 //   next                          — việc đang chờ ai + gợi ý hạng mục tiếp theo từ ROADMAP
 import { spawnSync } from "node:child_process";
@@ -50,8 +50,8 @@ if (cmd === "approve") {
 if (cmd === "complete") {
   const s = find(arg);
   if (s.fm.status !== "approved") die(`${arg} đang ở '${s.fm.status}', chỉ spec 'approved' mới complete được`);
-  if (s.fm.approved_hash !== normativeHash(s)) die(`${arg} đã đổi sau khi duyệt — cần người duyệt lại`);
-  if (readLock(arg)) die(`${arg} đã có khóa test; chỉ người duyệt mới khóa lại được (npm run approve)`);
+  if (s.fm.approved_hash !== normativeHash(s)) die(`${arg} đã đổi sau khi duyệt — cần duyệt lại (npm run approve)`);
+  if (readLock(arg)) die(`${arg} đã có khóa test; mở khóa qua npm run approve ${arg} -- --by "agent" kèm lý do trong spec`);
   const tested = testedAcs();
   const missing = s.acs.filter((a) => !tested.has(a));
   if (missing.length) die(`Còn AC chưa có test: ${missing.join(", ")}`);
@@ -68,7 +68,7 @@ if (cmd === "complete") {
 if (cmd === "next") {
   const specs = listSpecs();
   const tested = testedAcs();
-  const human = [], agent = [], done = [];
+  const agent = [], done = [];
   for (const s of specs) {
     const { id, version, title, status, approved_hash, approved_at } = s.fm;
     if (status === "deprecated") continue;
@@ -77,11 +77,11 @@ if (cmd === "next") {
     const lockCheck = verifyLock(id);
     if (status === "draft") {
       const qs = openQuestions(s);
-      human.push(`${tag}\n      DUYỆT: đọc spec${qs.length ? `, trả lời ${qs.length} câu hỏi mở` : ""} → npm run approve ${id} -- --by "Tên"`);
+      agent.push(`${tag}\n      TỰ DUYỆT: trả lời ${qs.length} câu hỏi mở (ghi "Giả định của agent") → npm run approve ${id} -- --by "agent"`);
     } else if (approved_hash !== normativeHash(s)) {
-      human.push(`${tag}\n      DUYỆT LẠI: phần quy phạm đã đổi sau lần duyệt ${approved_at}`);
+      agent.push(`${tag}\n      TỰ DUYỆT LẠI: quy phạm đổi sau lần duyệt ${approved_at} → npm run approve ${id} -- --by "agent"`);
     } else if (status === "implemented" && lockCheck?.violations.length) {
-      human.push(`${tag}\n      XEM XÉT: test đã khóa bị thay đổi (${lockCheck.violations.join("; ")}). Nếu chấp nhận → npm run approve ${id}; nếu không → git checkout file đó`);
+      agent.push(`${tag}\n      QUYẾT: test đã khóa bị thay đổi (${lockCheck.violations.join("; ")}). Test đúng → git checkout file đó; test sai thật → ghi lý do vào spec rồi npm run approve ${id} -- --by "agent"`);
     } else if (missing.length) {
       agent.push(`${tag}\n      IMPLEMENT (TDD): ${missing.length} AC chưa có test: ${missing.join(", ")}`);
     } else if (status === "approved") {
@@ -89,7 +89,6 @@ if (cmd === "next") {
     } else done.push(tag);
   }
   const show = (title, xs) => console.log(`\n${title} (${xs.length})\n` + (xs.length ? xs.map((x) => "  • " + x).join("\n") : "  —"));
-  show("⏳ Chờ ANH SON", human);
   show("🤖 Chờ AGENT", agent);
   show("✅ Đã xong", done);
 

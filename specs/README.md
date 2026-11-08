@@ -24,15 +24,15 @@ PRD (F1..F8)  →  SPEC-NNN  →  AC-NNN-MM  →  test có tên chứa AC-NNN-MM
 
 | Loại | Sinh ra gì | Cần duyệt? |
 |---|---|---|
-| Tính năng mới | `SPEC-NNN` mới | Có |
-| Đổi hành vi đã có | Sửa spec cũ, tăng `version`, ghi lịch sử | Có (hash đổi → check fail tới khi duyệt lại) |
-| Bug | `BUG-NNN`, trỏ tới AC bị vi phạm | Chỉ khi phải thêm/sửa AC |
+| Tính năng mới | `SPEC-NNN` mới | Agent tự duyệt |
+| Đổi hành vi đã có | Sửa spec cũ, tăng `version`, ghi lịch sử | Agent tự duyệt lại (hash đổi → check fail tới khi duyệt) |
+| Bug | `BUG-NNN`, trỏ tới AC bị vi phạm | Agent tự quyết; hỏi người nếu phải đổi AC đã duyệt vì lý do nghiệp vụ |
 | Nội dung nghề | Không | Không (chỉ `npm run check`) |
 | Refactor | Không | Không, nhưng không được sửa test cũ |
 
 ## Cổng duyệt bằng hash
 
-Khi chạy `npm run approve SPEC-NNN -- --by "Tên"`, script sẽ: (1) lint spec theo `STANDARD.md`, (2) từ chối nếu còn câu hỏi mở `- [ ]`, (3) tính hash SHA-256 của phần **quy phạm** (mục 2 Phạm vi, 3 Thiết kế, 4 AC) và ghi vào `approved_hash`.
+Khi chạy `npm run approve SPEC-NNN -- --by "agent"` (agent tự duyệt, mặc định trong chế độ tự chủ), script sẽ: (1) lint spec theo `STANDARD.md`, (2) từ chối nếu còn câu hỏi mở `- [ ]`, (3) tính hash SHA-256 của phần **quy phạm** (mục 2 Phạm vi, 3 Thiết kế, 4 AC) và ghi vào `approved_hash`.
 
 Về sau, nếu ai đó (người hay agent) sửa mục 2–4 mà không duyệt lại, `npm run check` sẽ fail với thông báo "đã thay đổi sau lần duyệt". Sửa mục 1, 5, 6, 7 (bối cảnh, ghi chú, lịch sử) không làm đổi hash.
 
@@ -47,9 +47,9 @@ draft ──approve──▶ approved ──(mọi AC có test + check xanh)─�
 
 Duyệt spec chỉ khóa **văn bản**; test mới là thứ biến spec thành ràng buộc. Vì vậy có thêm 3 lớp:
 
-1. **Khóa test** — `npm run complete` (agent, khi xong) hoặc `npm run approve` (người) ghi SHA-256 của mọi file trong `tests/spec-NNN/` vào `specs/locks/`. Sửa/xóa file đã khóa → `npm run check` FAIL dù test vẫn xanh. Thêm file mới (test bug) → hợp lệ. Muốn đổi test đã khóa → người duyệt chạy lại `approve`.
+1. **Khóa test** — `npm run complete` ghi SHA-256 của mọi file trong `tests/spec-NNN/` vào `specs/locks/`. Sửa/xóa file đã khóa → `npm run check` FAIL dù test vẫn xanh. Thêm file mới (test bug) → hợp lệ. Muốn đổi test đã khóa → ghi lý do vào spec rồi `npm run approve SPEC-NNN -- --by "agent"` (người review sau).
 2. **Phạm vi sở hữu** — mỗi spec khai báo `owns`. `npm run scope` đọc commit message (mã SPEC/BUG) và git diff: sửa test đã khóa của spec khác → LỖI; sửa file `owns` của spec khác hoặc file hạ tầng → CẢNH BÁO.
-3. **Chốt ngoài tầm tay agent** — `.gitlab-ci.yml` chạy `check` + `scope` trên server; `CODEOWNERS` bắt người duyệt cho mọi thay đổi trong `specs/`, `tests/`, `scripts/`. Mọi lớp chạy trên máy local đều chỉ chặn được *nhầm lẫn*; agent có quyền ghi mọi file thì về lý thuyết sửa được cả script kiểm tra. Lớp 3 mới chặn được điều đó.
+3. **Chốt ngoài tầm tay agent** — `.gitlab-ci.yml` chạy `check` + `scope` trên server. `CODEOWNERS` là tuỳ chọn: bật thì chặn agent merge, đổi lại là chậm ship — chỉ bật khi cần kiểm soát chặt.
 
 Khi review merge request, nhìn **diff của `tests/`, `specs/`, `scripts/` trước tiên**.
 
@@ -57,12 +57,12 @@ Khi review merge request, nhìn **diff của `tests/`, `specs/`, `scripts/` trư
 
 `specs/ROADMAP.md` liệt kê mọi hạng mục kèm ưu tiên và phụ thuộc. `npm run next` gợi ý hạng mục **ưu tiên cao nhất đã đủ phụ thuộc mà chưa có spec**.
 
-`npm run next` in ra việc đang chờ: **⏳ Chờ ANH SON** (duyệt / duyệt lại) và **🤖 Chờ AGENT** (AC chưa có test = việc phải implement).
+`npm run next` in ra việc đang chờ: **🤖 Chờ AGENT** (tự duyệt spec draft, duyệt lại khi hash lệch, implement AC chưa có test, `complete`). Mục **🚩 Cần ANH SON** chỉ xuất hiện khi có việc con người buộc phải quyết.
 
 ## Vòng làm việc cho một tính năng
 
 1. **Spec**: copy `_template.md` → `SPEC-NNN-<slug>.md`, trạng thái `draft`, viết theo `STANDARD.md`. `npm run spec:lint` phải sạch.
-2. **Duyệt spec**: anh Son trả lời câu hỏi mở, rồi `npm run approve SPEC-NNN -- --by "Son"`. **Agent không được tự duyệt.**
+2. **Duyệt spec**: agent trả lời câu hỏi mở (ghi "Giả định của agent"), rồi `npm run approve SPEC-NNN -- --by "agent"`. Không chờ người.
 3. **Red**: mỗi AC phải có ít nhất 1 test, tên test bắt đầu bằng mã AC: `test("AC-002-03 ...")`. Chạy test → **phải đỏ**. Commit `test(SPEC-002): red for AC-002-03`.
 4. **Green**: viết code tối thiểu để test xanh. Commit `feat(SPEC-002): ... Refs: AC-002-03`.
 5. **Refactor**: dọn code, test vẫn xanh.
